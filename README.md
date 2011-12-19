@@ -2,7 +2,7 @@
 
 This package contains C# and VB.NET Example Projects for [Aspose.Tasks for .NET](http://www.aspose.com/categories/.net-components/aspose.tasks-for-.net/default.aspx).
 
-Aspose.Tasks for .NET is a .NET Project management component that enables .NET applications to not only read and manipulate Microsoft Project® documents in MPP and XML formats but to also write Microsoft Project® documents in Project XML format - all without using Microsoft Project®.
+Aspose.Tasks for .NET is a .NET Project management component that enables .NET applications to not only read and manipulate Microsoft Project documents in MPP and XML formats but to also write Microsoft Project documents in Project XML format - all without using Microsoft Project.
 
 Using Aspose.Tasks for .NET in your project gives you the following benefits:
 
