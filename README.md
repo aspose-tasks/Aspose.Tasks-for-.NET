@@ -29,6 +29,9 @@ All examples are each contained in separate folders at the root of the repositor
   <tr><th>Example<th>Description</th></tr>
   <tr><td>ArrangeWBS</td><td>Demonstrates how to arrange tasks by WBS codes</td></tr>
   <tr><td>CombineConditions</td><td>Demonstrates how to search a task by providing more than one search conditions.</td></tr>
+  <tr><td>FindTaskByName</td><td>Demonstrates how to search a task by providing name of the task.</td></tr>
+  <tr><td>FilterTasksByName</td><td>Demonstrates how to filter full hierarchy of a task by providing name of the task.</td></tr>
+  <tr><td>RenderingProject</td><td>Demonstrates how to render a project to Image or HTML and show columns of your choice in the output.</td></tr>
 </table>
 
 

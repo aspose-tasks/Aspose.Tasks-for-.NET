@@ -1,0 +1,7 @@
+D:\Testing\Aspose.Tasks\GitHub\CombineConditions\C#\CombineConditions\bin\Debug\Aspose.Tasks.CombineConditions.exe
+D:\Testing\Aspose.Tasks\GitHub\CombineConditions\C#\CombineConditions\bin\Debug\Aspose.Tasks.CombineConditions.pdb
+D:\Testing\Aspose.Tasks\GitHub\CombineConditions\C#\CombineConditions\bin\Debug\Aspose.Tasks.dll
+D:\Testing\Aspose.Tasks\GitHub\CombineConditions\C#\CombineConditions\bin\Debug\Aspose.Tasks.xml
+D:\Testing\Aspose.Tasks\GitHub\CombineConditions\C#\CombineConditions\obj\Debug\ResolveAssemblyReference.cache
+D:\Testing\Aspose.Tasks\GitHub\CombineConditions\C#\CombineConditions\obj\Debug\Aspose.Tasks.CombineConditions.exe
+D:\Testing\Aspose.Tasks\GitHub\CombineConditions\C#\CombineConditions\obj\Debug\Aspose.Tasks.CombineConditions.pdb
