@@ -18,6 +18,18 @@ Using Aspose.Tasks for .NET in your project gives you the following benefits:
 
 These example projects provide helpful demonstrations and code when using Aspose.Tasks for .NET .
 
+##Open Source Feel of Aspose.Tasks
+
+Aspose.Tasks for .NET is a successful commercial product, but our philosophy is to develop it using our unique "open-source feel" approach. In other words, we at Aspose are extremely customer driven and this shows in:
++ Frequent releases (at least 1 a month).
++ Features are prioritized according to your requests.
++ Unlimited free technical support for anyone.
++ Helpful support in the forums and answers within 12-24 hours.
++ Live chat with experienced technical advisors.
+ 
+We think that customers who use our products feel that they use an open source product because of the extent they can influence the project, but with the security of a fully committed talented team working on the project.
+
+The Aspose.Tasks for .NET examples published here at GitHub is a part of the above effort.
 
 ##What's included in this examples repository?
 
