@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Data>
+  <Folders>
+    <Folder>
+      <Title>Programmers Guide</Title>
+      <Description>This section includes the examples related to following topics: 
+
+- Working with Projects
+- Working with Calendars
+- Working with Calendar Exceptions
+- Working with Tasks
+- Working with Task Links
+- Working with Task Baselines
+- Working with Resources
+- Working with Resource Assignments
+- Working with Currencies
+- Miscellaneous
+- Using Aspose.Tasks for .NET in other programming languages</Description>
+      <FolderName>ProgrammersGuide</FolderName>
+      <Order>1</Order>
+      <Folders>
+        <Folder>
+          <Title>Working with Projects</Title>
+          <Description>This section includes the examples related to following topics: 
+
+- Creating an Empty Project File
+- Reading a Project File
+- Determining Project Version
+- General Project Properties
+- Default Project Properties
+- Writing MPP Project Summary Information
+- Fiscal Year Properties
+- Weekday Properties
+- Currency Properties
+- Retrieving Calendar Information
+- Setting Attributes for New Tasks
+- Retrieving Task Information
+- Adding and Removing Tasks
+- Writing Tasks to Project
+- Retrieving Task Links
+- Adding and Removing Task Links
+- Defining Root Task
+- Retrieving Resource Information
+- Adding and Removing Resources
+- Writing Resources to Project
+- Retrieving Resource Assignment Information
+- Adding and Removing Resource Assignments
+- Writing Resource Assignments to Project
+- Performing Recalculations
+- Verifying Project Structure
+- Remove Methods
+- GetObjectByField Methods
+- Replacing a Calendar
+- Extended Attributes
+- Calculate Critical Path
+- Recaclulating Project Data
+- Printing the TaskWritingException
+- Microsoft Project 2010 MPP File Update
+- Writing Updated Extended Attribute Definitions and Values to MPP
+- Saving a Project as PDF
+- Get Number of Pages in Project
+- Retrieving Outline Codes</Description>
+          <FolderName>WorkingWithProjects</FolderName>
+          <Order>1</Order>
+          <Examples>
+            <Example>
+              <Title>Creating an Empty Project File</Title>
+              <Description>Aspose.Tasks can open existing files, but it can also create new files. This example explains how to create a new and empty project file from stream or using the ProjectWriter class.</Description>
+              <FolderName>CreatingEmptyProjectFile</FolderName>
+              <Order>1</Order>
+              <DocLink>
+                <DisplayName>Creating an Empty Project File</DisplayName>
+                <Url>Creating+an+Empty+Project+File</Url>
+              </DocLink>
+              <OutputFiles>
+                <DataFile>
+                  <Path>..\Data\Project2.xml</Path>
+                </DataFile>
+                <DataFile>
+                  <Path>..\Data\Project1.xml</Path>
+                </DataFile>
+              </OutputFiles>
+              <Type>Console</Type>
+            </Example>
+            <Example>
+              <Title>Setting Attributes for New Tasks</Title>
+              <Description>With ASpose.Tasks, it is easy to add tasks to projects. This example explains how to add task and set the default start date for new tasks.</Description>
+              <FolderName>SettingAttributesForNewTasks</FolderName>
+              <Order>2</Order>
+              <DocLink>
+                <DisplayName>Setting Attributes for New Tasks</DisplayName>
+                <Url>Setting+Attributes+for+New+Tasks</Url>
+              </DocLink>
+              <OutputFiles>
+                <DataFile>
+                  <Path>..\Data\project1.xml</Path>
+                </DataFile>
+              </OutputFiles>
+              <Type>Console</Type>
+            </Example>
+            <Example>
+              <Title>Adding and Removing Tasks</Title>
+              <Description>Projects are made up by a series of tasks with resources (staff or equipment) assigned to them. Aspose.Tasks lets you work with tasks in many different ways. A lot of the time, when you're creating a project, you'll want to add tasks. This example explains how to add and remove tasks from a project.</Description>
+              <FolderName>AddRemoveTasks</FolderName>
+              <Order>3</Order>
+              <DocLink>
+                <DisplayName>Adding and Removing Tasks</DisplayName>
+                <Url>Adding+and+Removing+Tasks</Url>
+              </DocLink>
+              <Type>Console</Type>
+            </Example>
+          </Examples>
+        </Folder>
+      </Folders>
+    </Folder>
+  </Folders>
+</Data>

@@ -1,7 +1,0 @@
-D:\Testing\Aspose.Tasks\GitHub\Aspose.Tasks for .NET Examples\FilterTasksByName\C#\FilterTasksByName\bin\Debug\Aspose.Tasks.CombineConditions.exe
-D:\Testing\Aspose.Tasks\GitHub\Aspose.Tasks for .NET Examples\FilterTasksByName\C#\FilterTasksByName\bin\Debug\Aspose.Tasks.CombineConditions.pdb
-D:\Testing\Aspose.Tasks\GitHub\Aspose.Tasks for .NET Examples\FilterTasksByName\C#\FilterTasksByName\bin\Debug\Aspose.Tasks.dll
-D:\Testing\Aspose.Tasks\GitHub\Aspose.Tasks for .NET Examples\FilterTasksByName\C#\FilterTasksByName\bin\Debug\Aspose.Tasks.xml
-D:\Testing\Aspose.Tasks\GitHub\Aspose.Tasks for .NET Examples\FilterTasksByName\C#\FilterTasksByName\obj\Debug\ResolveAssemblyReference.cache
-D:\Testing\Aspose.Tasks\GitHub\Aspose.Tasks for .NET Examples\FilterTasksByName\C#\FilterTasksByName\obj\Debug\Aspose.Tasks.CombineConditions.exe
-D:\Testing\Aspose.Tasks\GitHub\Aspose.Tasks for .NET Examples\FilterTasksByName\C#\FilterTasksByName\obj\Debug\Aspose.Tasks.CombineConditions.pdb

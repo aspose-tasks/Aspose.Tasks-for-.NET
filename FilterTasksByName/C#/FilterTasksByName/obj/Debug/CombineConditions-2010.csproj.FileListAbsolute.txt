@@ -1,4 +1,0 @@
-D:\Testing\Aspose.Tasks\GitHub\CombineConditions\C#\CombineConditions\obj\Debug\Aspose.Tasks.CombineConditions.exe
-D:\Testing\Aspose.Tasks\GitHub\CombineConditions\C#\CombineConditions\obj\Debug\Aspose.Tasks.CombineConditions.pdb
-D:\Testing\Aspose.Tasks\GitHub\Aspose.Tasks for .NET Examples\FindTaskByName\C#\FindTaskByName\obj\Debug\Aspose.Tasks.CombineConditions.exe
-D:\Testing\Aspose.Tasks\GitHub\Aspose.Tasks for .NET Examples\FindTaskByName\C#\FindTaskByName\obj\Debug\Aspose.Tasks.CombineConditions.pdb
