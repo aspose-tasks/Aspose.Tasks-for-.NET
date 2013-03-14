@@ -77,7 +77,7 @@ Please [Download the Aspose.Tasks for .NET Examples](https://github.com/asposeta
 - Start Debugging
 - Start Without Debugging
 
-Note: Output dates can be incorrect without licene file. You can request a temporary license [by following these guidelines](http://www.aspose.com/corporate/purchase/faqs/temporary-license.aspx)
+Note: Output dates can be incorrect without a license file. You can request a temporary license [by following these guidelines](http://www.aspose.com/corporate/purchase/faqs/temporary-license.aspx)
 
 ##Contact Us
 
