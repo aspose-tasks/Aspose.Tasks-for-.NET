@@ -109,6 +109,127 @@
               </DocLink>
               <Type>Console</Type>
             </Example>
+            <Example>
+              <Title>Determining Project Version</Title>
+              <Description>Aspose.Tasks lets you retrieve project file information such as the version of Microsoft Project that the file was created with. This example shows how.</Description>
+              <FolderName>DeterminingProjectVersion</FolderName>
+              <Order>4</Order>
+              <DocLink>
+                <DisplayName>Determining Project Version</DisplayName>
+                <Url>Determining+Project+Version</Url>
+              </DocLink>
+              <InputFiles>
+                <DataFile>
+                  <Path>..\Data\input.xml</Path>
+                </DataFile>
+              </InputFiles>
+              <Type>Console</Type>
+            </Example>
+            <Example>
+              <Title>General Project Properties</Title>
+              <Description>Microsoft Project saves project properties, metadata, for every project. The properties include the project's start and end dates, the current date and the status date, the type of calendar used and when a project is scheduled from. Aspose.Tasks lets you read and set project properties. This example shows how.</Description>
+              <FolderName>GeneralProjectProperties</FolderName>
+              <Order>5</Order>
+              <DocLink>
+                <DisplayName>General Project Properties</DisplayName>
+                <Url>General+Project+Properties</Url>
+              </DocLink>
+              <InputFiles>
+                <DataFile>
+                  <Path>..\Data\project.mpp</Path>
+                </DataFile>
+              </InputFiles>
+              <OutputFiles>
+                <DataFile>
+                  <Path>..\Data\project.xml</Path>
+                </DataFile>
+              </OutputFiles>
+              <Type>Console</Type>
+            </Example>
+            <Example>
+              <Title>Default Project Properties</Title>
+              <Description>Microsoft Project lets users set default project properties that speed up the process of setting up a project. The default properties define when a new task starts and finishes, sets the default overtime and standard pay rates and more. Aspose.Tasks supports these features. This example explains both how to read default properties and how to write default properties to a project file.</Description>
+              <FolderName>DefaultProjectProperties</FolderName>
+              <Order>6</Order>
+              <DocLink>
+                <DisplayName>Default Project Properties</DisplayName>
+                <Url>Default+Project+Properties</Url>
+              </DocLink>
+              <InputFiles>
+                <DataFile>
+                  <Path>..\Data\project.mpp</Path>
+                </DataFile>
+              </InputFiles>
+              <OutputFiles>
+                <DataFile>
+                  <Path>..\Data\project.xml</Path>
+                </DataFile>
+              </OutputFiles>
+              <Type>Console</Type>
+            </Example>
+            <Example>
+              <Title>Writing MPP Project Summary Information</Title>
+              <Description>Most programs save summary information with the files they save. Microsoft Project is no different. As well as the name of the author, the date the project was created and the last time it was edited and saved, it saves keywords, subject, comments and more. Aspose.Tasks lets you both read and write this type of information. This example explains how to open a project file, set the summary information and save it again.</Description>
+              <FolderName>WriteMPPProjectSummary</FolderName>
+              <Order>7</Order>
+              <DocLink>
+                <DisplayName>Writing MPP Project Summary Information</DisplayName>
+                <Url>Writing+MPP+Project+Summary+Information</Url>
+              </DocLink>
+              <InputFiles>
+                <DataFile>
+                  <Path>..\Data\project.mpp</Path>
+                </DataFile>
+              </InputFiles>
+              <OutputFiles>
+                <DataFile>
+                  <Path>..\Data\MPPAspose.xml</Path>
+                </DataFile>
+              </OutputFiles>
+              <Type>Console</Type>
+            </Example>
+            <Example>
+              <Title>Fiscal Year Properties</Title>
+              <Description>The fiscal year is the same as a financial year, or budget year. It is the dates between which an country, an organization or an individual calculates budgets and taxes. Microsoft Project lets users define a fiscal year for projects. Aspose.Tasks supports this functionality with properties that allow developers to both read fiscal year properties from existing projects, and set fiscal year properties when creating or working with projects.</Description>
+              <FolderName>FiscalYearProperties</FolderName>
+              <Order>8</Order>
+              <DocLink>
+                <DisplayName>Fiscal Year Properties</DisplayName>
+                <Url>Fiscal+Year+Properties</Url>
+              </DocLink>
+              <InputFiles>
+                <DataFile>
+                  <Path>..\Data\project.mpp</Path>
+                </DataFile>
+              </InputFiles>
+              <OutputFiles>
+                <DataFile>
+                  <Path>..\Data\savedProject.xml</Path>
+                </DataFile>
+              </OutputFiles>
+              <Type>Console</Type>
+            </Example>
+            <Example>
+              <Title>Weekday Properties</Title>
+              <Description>Microsoft Project lets users set a number of different weekday properties, for example what day a week starts on and how many working days are in a month. Aspose.Tasks support these features through a number of properties that can be used both to read weekday properties and to write them to a project.</Description>
+              <FolderName>WeekdayProperties</FolderName>
+              <Order>9</Order>
+              <DocLink>
+                <DisplayName>Weekday Properties</DisplayName>
+                <Url>Weekday+Properties</Url>
+              </DocLink>
+              <InputFiles>
+                <DataFile>
+                  <Path>..\Data\project.mpp</Path>
+                </DataFile>
+              </InputFiles>
+              <OutputFiles>
+                <DataFile>
+                  <Path>..\Data\savedProject.xml</Path>
+                </DataFile>
+              </OutputFiles>
+              <Type>Console</Type>
+            </Example>
           </Examples>
         </Folder>
       </Folders>

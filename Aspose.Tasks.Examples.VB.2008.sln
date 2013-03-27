@@ -8,6 +8,14 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CreatingEmptyProjectFile", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SettingAttributesForNewTasks", "ProgrammersGuide\WorkingWithProjects\SettingAttributesForNewTasks\VisualBasic\SettingAttributesForNewTasks.vbproj", "{B9F35AEE-9298-4844-8FD7-AF3D60852D77}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AddRemoveTasks", "ProgrammersGuide\WorkingWithProjects\AddRemoveTasks\VisualBasic\AddRemoveTasks.vbproj", "{452D4ED4-F7AB-44F9-A287-25408DBB23DF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeterminingProjectVersion", "ProgrammersGuide\WorkingWithProjects\DeterminingProjectVersion\VisualBasic\DeterminingProjectVersion.vbproj", "{8B3445EA-46FF-42B0-859C-2F6C09FFE139}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeneralProjectProperties", "ProgrammersGuide\WorkingWithProjects\GeneralProjectProperties\VisualBasic\GeneralProjectProperties.vbproj", "{993B9A9B-3FC2-4443-BAED-5AC7793521C8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DefaultProjectProperties", "ProgrammersGuide\WorkingWithProjects\DefaultProjectProperties\VisualBasic\DefaultProjectProperties.vbproj", "{003FAABF-448D-414D-97DC-5F6AF3E1A01B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,6 +31,24 @@ Global
 		{452D4ED4-F7AB-44F9-A287-25408DBB23DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{452D4ED4-F7AB-44F9-A287-25408DBB23DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{452D4ED4-F7AB-44F9-A287-25408DBB23DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8B3445EA-46FF-42B0-859C-2F6C09FFE139}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8B3445EA-46FF-42B0-859C-2F6C09FFE139}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8B3445EA-46FF-42B0-859C-2F6C09FFE139}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{993B9A9B-3FC2-4443-BAED-5AC7793521C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{993B9A9B-3FC2-4443-BAED-5AC7793521C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{993B9A9B-3FC2-4443-BAED-5AC7793521C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{003FAABF-448D-414D-97DC-5F6AF3E1A01B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{003FAABF-448D-414D-97DC-5F6AF3E1A01B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{003FAABF-448D-414D-97DC-5F6AF3E1A01B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{40C29FA4-5A9E-4228-9E6D-BD078B22B3F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{40C29FA4-5A9E-4228-9E6D-BD078B22B3F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{40C29FA4-5A9E-4228-9E6D-BD078B22B3F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B464FA2C-A108-4D76-B78E-F37B46B237D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B464FA2C-A108-4D76-B78E-F37B46B237D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B464FA2C-A108-4D76-B78E-F37B46B237D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D4CDA452-CD8F-4046-BF94-B5BF48A4156B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D4CDA452-CD8F-4046-BF94-B5BF48A4156B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D4CDA452-CD8F-4046-BF94-B5BF48A4156B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -32,5 +58,11 @@ Global
 		{0DD9E251-2571-4EF5-8471-0918E6074279} = {D28AB132-8430-48CE-BFA0-F1D1553CF067}
 		{B9F35AEE-9298-4844-8FD7-AF3D60852D77} = {D28AB132-8430-48CE-BFA0-F1D1553CF067}
 		{452D4ED4-F7AB-44F9-A287-25408DBB23DF} = {D28AB132-8430-48CE-BFA0-F1D1553CF067}
+		{8B3445EA-46FF-42B0-859C-2F6C09FFE139} = {D28AB132-8430-48CE-BFA0-F1D1553CF067}
+		{993B9A9B-3FC2-4443-BAED-5AC7793521C8} = {D28AB132-8430-48CE-BFA0-F1D1553CF067}
+		{003FAABF-448D-414D-97DC-5F6AF3E1A01B} = {D28AB132-8430-48CE-BFA0-F1D1553CF067}
+		{40C29FA4-5A9E-4228-9E6D-BD078B22B3F1} = {D28AB132-8430-48CE-BFA0-F1D1553CF067}
+		{B464FA2C-A108-4D76-B78E-F37B46B237D8} = {D28AB132-8430-48CE-BFA0-F1D1553CF067}
+		{D4CDA452-CD8F-4046-BF94-B5BF48A4156B} = {D28AB132-8430-48CE-BFA0-F1D1553CF067}
 	EndGlobalSection
 EndGlobal
