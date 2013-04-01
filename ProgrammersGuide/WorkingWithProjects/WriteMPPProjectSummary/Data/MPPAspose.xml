@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Project xmlns="http://schemas.microsoft.com/project">
-  <!--Published by Aspose.Tasks 2009 for .NET 5.1.0.0-->
+  <!--Published by Aspose.Tasks 2009 for .NET 4.9.0.0-->
   <SaveVersion>12</SaveVersion>
   <Name>TestViews</Name>
   <Title>TestViews</Title>
@@ -202,7 +202,6 @@
       <Start>2000-06-08T08:00:00</Start>
       <Finish>2000-07-16T17:00:00</Finish>
       <Duration>PT232H0M0S</Duration>
-      <DurationFormat>21</DurationFormat>
       <Work>PT408H0M0S</Work>
       <Stop>2000-01-01T00:00:00</Stop>
       <Resume>2000-01-01T00:00:00</Resume>
@@ -240,7 +239,7 @@
       <ActualOvertimeCost>0</ActualOvertimeCost>
       <ActualWork>PT0H0M0S</ActualWork>
       <ActualOvertimeWork>PT0H0M0S</ActualOvertimeWork>
-      <RegularWork>PT408H0M0S</RegularWork>
+      <RegularWork>PT0H0M0S</RegularWork>
       <RemainingDuration>PT232H0M0S</RemainingDuration>
       <RemainingCost>0</RemainingCost>
       <RemainingWork>PT408H0M0S</RemainingWork>
@@ -298,7 +297,6 @@
       <Start>2000-06-08T08:00:00</Start>
       <Finish>2000-07-16T17:00:00</Finish>
       <Duration>PT232H0M0S</Duration>
-      <DurationFormat>21</DurationFormat>
       <Work>PT408H0M0S</Work>
       <Stop>2000-01-01T00:00:00</Stop>
       <Resume>2000-01-01T00:00:00</Resume>
@@ -336,7 +334,7 @@
       <ActualOvertimeCost>0</ActualOvertimeCost>
       <ActualWork>PT0H0M0S</ActualWork>
       <ActualOvertimeWork>PT0H0M0S</ActualOvertimeWork>
-      <RegularWork>PT408H0M0S</RegularWork>
+      <RegularWork>PT0H0M0S</RegularWork>
       <RemainingDuration>PT232H0M0S</RemainingDuration>
       <RemainingCost>0</RemainingCost>
       <RemainingWork>PT408H0M0S</RemainingWork>
@@ -395,7 +393,6 @@
       <Start>2000-06-08T08:00:00</Start>
       <Finish>2000-06-08T17:00:00</Finish>
       <Duration>PT8H0M0S</Duration>
-      <DurationFormat>7</DurationFormat>
       <Work>PT0H0M0S</Work>
       <Stop>2000-01-01T00:00:00</Stop>
       <Resume>2000-01-01T00:00:00</Resume>
@@ -494,7 +491,6 @@
       <Start>2000-06-08T08:00:00</Start>
       <Finish>2000-06-09T17:00:00</Finish>
       <Duration>PT16H0M0S</Duration>
-      <DurationFormat>7</DurationFormat>
       <Work>PT16H0M0S</Work>
       <Stop>2000-01-01T00:00:00</Stop>
       <Resume>2000-01-01T00:00:00</Resume>
@@ -532,7 +528,7 @@
       <ActualOvertimeCost>0</ActualOvertimeCost>
       <ActualWork>PT0H0M0S</ActualWork>
       <ActualOvertimeWork>PT0H0M0S</ActualOvertimeWork>
-      <RegularWork>PT16H0M0S</RegularWork>
+      <RegularWork>PT0H0M0S</RegularWork>
       <RemainingDuration>PT16H0M0S</RemainingDuration>
       <RemainingCost>0</RemainingCost>
       <RemainingWork>PT16H0M0S</RemainingWork>
@@ -591,7 +587,6 @@
       <Start>2000-06-10T08:00:00</Start>
       <Finish>2000-06-23T17:00:00</Finish>
       <Duration>PT80H0M0S</Duration>
-      <DurationFormat>7</DurationFormat>
       <Work>PT160H0M0S</Work>
       <Stop>2000-01-01T00:00:00</Stop>
       <Resume>2000-01-01T00:00:00</Resume>
@@ -629,7 +624,7 @@
       <ActualOvertimeCost>0</ActualOvertimeCost>
       <ActualWork>PT0H0M0S</ActualWork>
       <ActualOvertimeWork>PT0H0M0S</ActualOvertimeWork>
-      <RegularWork>PT160H0M0S</RegularWork>
+      <RegularWork>PT0H0M0S</RegularWork>
       <RemainingDuration>PT80H0M0S</RemainingDuration>
       <RemainingCost>0</RemainingCost>
       <RemainingWork>PT160H0M0S</RemainingWork>
@@ -695,7 +690,6 @@
       <Start>2000-06-24T08:00:00</Start>
       <Finish>2000-07-08T17:00:00</Finish>
       <Duration>PT88H0M0S</Duration>
-      <DurationFormat>21</DurationFormat>
       <Work>PT176H0M0S</Work>
       <Stop>2000-01-01T00:00:00</Stop>
       <Resume>2000-01-01T00:00:00</Resume>
@@ -733,7 +727,7 @@
       <ActualOvertimeCost>0</ActualOvertimeCost>
       <ActualWork>PT0H0M0S</ActualWork>
       <ActualOvertimeWork>PT0H0M0S</ActualOvertimeWork>
-      <RegularWork>PT176H0M0S</RegularWork>
+      <RegularWork>PT0H0M0S</RegularWork>
       <RemainingDuration>PT88H0M0S</RemainingDuration>
       <RemainingCost>0</RemainingCost>
       <RemainingWork>PT176H0M0S</RemainingWork>
@@ -799,7 +793,6 @@
       <Start>2000-06-24T08:00:00</Start>
       <Finish>2000-07-07T17:00:00</Finish>
       <Duration>PT80H0M0S</Duration>
-      <DurationFormat>7</DurationFormat>
       <Work>PT0H0M0S</Work>
       <Stop>2000-01-01T00:00:00</Stop>
       <Resume>2000-01-01T00:00:00</Resume>
@@ -898,7 +891,6 @@
       <Start>2000-06-24T08:00:00</Start>
       <Finish>2000-07-08T17:00:00</Finish>
       <Duration>PT88H0M0S</Duration>
-      <DurationFormat>7</DurationFormat>
       <Work>PT88H0M0S</Work>
       <Stop>2000-01-01T00:00:00</Stop>
       <Resume>2000-01-01T00:00:00</Resume>
@@ -936,7 +928,7 @@
       <ActualOvertimeCost>0</ActualOvertimeCost>
       <ActualWork>PT0H0M0S</ActualWork>
       <ActualOvertimeWork>PT0H0M0S</ActualOvertimeWork>
-      <RegularWork>PT88H0M0S</RegularWork>
+      <RegularWork>PT0H0M0S</RegularWork>
       <RemainingDuration>PT88H0M0S</RemainingDuration>
       <RemainingCost>0</RemainingCost>
       <RemainingWork>PT88H0M0S</RemainingWork>
@@ -994,7 +986,6 @@
       <Start>2000-07-09T08:00:00</Start>
       <Finish>2000-07-12T17:00:00</Finish>
       <Duration>PT16H0M0S</Duration>
-      <DurationFormat>7</DurationFormat>
       <Work>PT32H0M0S</Work>
       <Stop>2000-01-01T00:00:00</Stop>
       <Resume>2000-01-01T00:00:00</Resume>
@@ -1032,7 +1023,7 @@
       <ActualOvertimeCost>0</ActualOvertimeCost>
       <ActualWork>PT0H0M0S</ActualWork>
       <ActualOvertimeWork>PT0H0M0S</ActualOvertimeWork>
-      <RegularWork>PT32H0M0S</RegularWork>
+      <RegularWork>PT0H0M0S</RegularWork>
       <RemainingDuration>PT16H0M0S</RemainingDuration>
       <RemainingCost>0</RemainingCost>
       <RemainingWork>PT32H0M0S</RemainingWork>
@@ -1098,7 +1089,6 @@
       <Start>2000-07-13T08:00:00</Start>
       <Finish>2000-07-13T17:00:00</Finish>
       <Duration>PT8H0M0S</Duration>
-      <DurationFormat>7</DurationFormat>
       <Work>PT0H0M0S</Work>
       <Stop>2000-01-01T00:00:00</Stop>
       <Resume>2000-01-01T00:00:00</Resume>
@@ -1202,7 +1192,6 @@
       <Start>2000-07-14T08:00:00</Start>
       <Finish>2000-07-16T17:00:00</Finish>
       <Duration>PT24H0M0S</Duration>
-      <DurationFormat>7</DurationFormat>
       <Work>PT24H0M0S</Work>
       <Stop>2000-01-01T00:00:00</Stop>
       <Resume>2000-01-01T00:00:00</Resume>
@@ -1240,7 +1229,7 @@
       <ActualOvertimeCost>0</ActualOvertimeCost>
       <ActualWork>PT0H0M0S</ActualWork>
       <ActualOvertimeWork>PT0H0M0S</ActualOvertimeWork>
-      <RegularWork>PT24H0M0S</RegularWork>
+      <RegularWork>PT0H0M0S</RegularWork>
       <RemainingDuration>PT24H0M0S</RemainingDuration>
       <RemainingCost>0</RemainingCost>
       <RemainingWork>PT24H0M0S</RemainingWork>
