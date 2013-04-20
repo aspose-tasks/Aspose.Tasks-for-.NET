@@ -1,22 +1,20 @@
 #Aspose.Tasks for .NET Examples Repository
 
-This package contains C# and VB.NET Example Projects for [Aspose.Tasks for .NET](http://www.aspose.com/categories/.net-components/aspose.tasks-for-.net/default.aspx).
+This repository contains C# and VB.NET Example Projects for [Aspose.Tasks for .NET](http://www.aspose.com/categories/.net-components/aspose.tasks-for-.net/default.aspx).
 
-Aspose.Tasks for .NET is a .NET Project management component that enables .NET applications to not only read and manipulate Microsoft Project documents in MPP and XML formats but to also write Microsoft Project documents in Project XML format - all without using Microsoft Project.
+##How to use the Examples?
 
-Using Aspose.Tasks for .NET in your project gives you the following benefits:
+###With the Examples Dashboard
 
-+ Rich Set of Features
+Download the [Aspose Examples Dashboard for .NET](http://www.aspose.com/community/files/51/.net-components/aspose-examples-for-.net/default.aspx) to view and run all these examples on your PC. It updates itself with the latest dependency libraries and examples.
 
-+ Platform Independence
+![Aspose Examples Dashboard](http://www.aspose.com/blogs/wp-content/uploads/2013/04/Dotnet-Dashboard.png "Aspose Examples Dashboard")
 
-+ No Microsoft Project Automation
+###With IDE
 
-+ Performance and Scalability
+Clone or Download the ZIP and extract the contents to your local hard drive. It has Solution (SLN) files for Microsoft Visual Studio 2005, 2008 and 2010.
 
-+ Minimal Learning Curve
-
-These example projects provide helpful demonstrations and code when using Aspose.Tasks for .NET .
+Also download the [latest version](http://www.aspose.com/community/files/51/.net-components/aspose.tasks-for-.net/default.aspx) of Aspose.Tasks for .NET and set/fix dll references.
 
 ##Open Source Feel of Aspose.Tasks
 
@@ -45,39 +43,6 @@ All examples are each contained in separate folders at the root of the repositor
   <tr><td>FilterTasksByName</td><td>Demonstrates how to filter full hierarchy of a task by providing name of the task.</td></tr>
   <tr><td>RenderingProject</td><td>Demonstrates how to render a project to Image or HTML and show columns of your choice in the output.</td></tr>
 </table>
-
-
-###Output
-
-+ Some examples generate output documents which can be found in Output folder.
-
-+ Other examples print output to the console.
-
-
-###Help Material
-
-For further details on setting up the examples and any requirements refer to the readme.txt found in the root of the repository.
-
-
-##Download the Examples
-
-Please [Download the Aspose.Tasks for .NET Examples](https://github.com/asposetasks/Aspose_Tasks_NET/downloads) to try them at your end.
-
-
-##How to use the Examples?
-
-1. Firstly make sure that you have downloaded and installed the latest version of [Aspose.Tasks for .NET](http://www.aspose.com/community/files/51/.net-components/aspose.tasks-for-.net/default.aspx). We recommend using the .MSI installer for fast installation and seamless intergration with the examples.
-
-2. Download the examples from the above link. The solution files for Microsoft Visual Studio 2005, 2008 and 2010 are provided with the examples.
-
-3. Once downloaded you can open the examples by opening the appropriate solution file (.sln) according to the version of Visual Studio installed on your system.
-
-4. Update arguments and click on "Debug" menu and choose one of the following menu items to start the example:
-
-- Start Debugging
-- Start Without Debugging
-
-Note: Output dates can be incorrect without a license file. You can request a temporary license [by following these guidelines](http://www.aspose.com/corporate/purchase/faqs/temporary-license.aspx)
 
 ##Contact Us
 
