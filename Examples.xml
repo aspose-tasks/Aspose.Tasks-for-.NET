@@ -230,7 +230,118 @@
               </OutputFiles>
               <Type>Console</Type>
             </Example>
+            <Example>
+              <Title>Reading Project Files</Title>
+              <Description>The Read method exposed by the ProjectReader class is used to read project files. The Read method accepts a valid FileStream object in MPP or XML format and returns a Project object which can be used to manipulate project data.</Description>
+              <FolderName>ReadingProjectFiles</FolderName>
+              <Order>10</Order>
+              <DocLink>
+                <DisplayName>Reading Project Files</DisplayName>
+                <Url>Reading+a+Project+File</Url>
+              </DocLink>
+              <InputFiles>
+                <DataFile>
+                  <Path>..\Data\project.mpp</Path>
+                </DataFile>
+              </InputFiles>
+              <Type>Console</Type>
+            </Example>
+            <Example>
+              <Title>Retrieving Calendar Information</Title>
+              <Description>Microsoft Project lets users associate a variety of different calendars with working time, tasks and resources. These features are also available in Aspose.Tasks. This example explains how to retrieve information about which calendars are used in a project. Aspose.Tasks can retrieve calendar information for all versions of Microsoft Project: 2003, 2007, 2010, and 2013.</Description>
+              <FolderName>RetrievingCalendarInformation</FolderName>
+              <Order>12</Order>
+              <DocLink>
+                <DisplayName>Retrieving Calendar Information</DisplayName>
+                <Url>Retrieving+Calendar+Information</Url>
+              </DocLink>
+              <InputFiles>
+                <DataFile>
+                  <Path>..\Data\project.mpp</Path>
+                </DataFile>
+              </InputFiles>
+              <Type>Console</Type>
+            </Example>
+            <Example>
+              <Title>Retrieving Task Information</Title>
+              <Description>Projects are typically broken down into tasks, discreet units of work. Microsoft Project stored information about tasks, the task's name, when it will start and when it will finish. This example explains how to retrieve information for all the tasks in a project.</Description>
+              <FolderName>RetrievingTaskInformation</FolderName>
+              <Order>13</Order>
+              <DocLink>
+                <DisplayName>Retrieving Task Information</DisplayName>
+                <Url>Retrieving+Task+Information</Url>
+              </DocLink>
+              <InputFiles>
+                <DataFile>
+                  <Path>..\Data\project.mpp</Path>
+                </DataFile>
+              </InputFiles>
+              <Type>Console</Type>
+            </Example>
+            <Example>
+              <Title>Writing Tasks to Project</Title>
+              <Description>Projects are made up by tasks. This example explains how to write tasks to a project with Aspose.Tasks for .NET.</Description>
+              <FolderName>WritingTasksToProject</FolderName>
+              <Order>14</Order>
+              <DocLink>
+                <DisplayName>Writing Tasks to Project</DisplayName>
+                <Url>Writing+Tasks+to+Project</Url>
+              </DocLink>
+              <OutputFiles>
+                <DataFile>
+                  <Path>..\Data\project.xml</Path>
+                </DataFile>
+              </OutputFiles>
+              <Type>Console</Type>
+            </Example>
           </Examples>
+          <Folders>
+            <Folder>
+              <Title>Currency Properties</Title>
+              <Description>Microsoft Project lets users set which currency costs are shown in, in a project. They can define set the currency code, numbers after the decimal point and currency symbol so that costs show in an easy to read and intuitive way. Aspose.Tasks supports these features and provides a series of properties that help developers set and control currency properties. 
+
+This section include the following examples:
+
+1: Read Currency Properties
+2: Set Currecncy Properties</Description>
+              <FolderName>CurrencyProperties</FolderName>
+              <Order>11</Order>
+              <Examples>
+                <Example>
+                  <Title>Reading Currency Properties</Title>
+                  <Description>The example explains how to read a project's currency properties using Aspose.Tasks</Description>
+                  <FolderName>ReadingCurrencyProperties</FolderName>
+                  <Order>1</Order>
+                  <DocLink>
+                    <DisplayName>Currency Properties</DisplayName>
+                    <Url>Currency+Properties</Url>
+                  </DocLink>
+                  <InputFiles>
+                    <DataFile>
+                      <Path>..\Data\project.mpp</Path>
+                    </DataFile>
+                  </InputFiles>
+                  <Type>Console</Type>
+                </Example>
+                <Example>
+                  <Title>Set Currency Properties</Title>
+                  <Description>The example explains how to set currency properties using Aspose.Tasks</Description>
+                  <FolderName>SetCurrencyProperties</FolderName>
+                  <Order>2</Order>
+                  <DocLink>
+                    <DisplayName>Currency Properties</DisplayName>
+                    <Url>Currency+Properties</Url>
+                  </DocLink>
+                  <OutputFiles>
+                    <DataFile>
+                      <Path>..\Data\project.xml</Path>
+                    </DataFile>
+                  </OutputFiles>
+                  <Type>Console</Type>
+                </Example>
+              </Examples>
+            </Folder>
+          </Folders>
         </Folder>
       </Folders>
     </Folder>

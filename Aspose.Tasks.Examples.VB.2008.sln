@@ -16,6 +16,24 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeneralProjectProperties", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DefaultProjectProperties", "ProgrammersGuide\WorkingWithProjects\DefaultProjectProperties\VisualBasic\DefaultProjectProperties.vbproj", "{003FAABF-448D-414D-97DC-5F6AF3E1A01B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WriteMPPProjectSummary", "ProgrammersGuide\WorkingWithProjects\WriteMPPProjectSummary\VisualBasic\WriteMPPProjectSummary.vbproj", "{40C29FA4-5A9E-4228-9E6D-BD078B22B3F1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FiscalYearProperties", "ProgrammersGuide\WorkingWithProjects\FiscalYearProperties\VisualBasic\FiscalYearProperties.vbproj", "{B464FA2C-A108-4D76-B78E-F37B46B237D8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeekdayProperties", "ProgrammersGuide\WorkingWithProjects\WeekdayProperties\VisualBasic\WeekdayProperties.vbproj", "{D4CDA452-CD8F-4046-BF94-B5BF48A4156B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReadingProjectFiles", "ProgrammersGuide\WorkingWithProjects\ReadingProjectFiles\VisualBasic\ReadingProjectFiles.vbproj", "{9946EE96-62A5-4CCD-913D-38D54E2871A8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RetrievingCalendarInformation", "ProgrammersGuide\WorkingWithProjects\RetrievingCalendarInformation\VisualBasic\RetrievingCalendarInformation.vbproj", "{4FDB8A5E-A42D-4909-98E0-1FC4A8CA12B5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RetrievingTaskInformation", "ProgrammersGuide\WorkingWithProjects\RetrievingTaskInformation\VisualBasic\RetrievingTaskInformation.vbproj", "{3DF47A63-F4B4-4D86-9B1C-D6D39E4F2DBF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CurrencyProperties", "CurrencyProperties", "{EA48BCFE-D82E-4ABF-ABD7-753A38BC3091}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReadingCurrencyProperties", "ProgrammersGuide\WorkingWithProjects\CurrencyProperties\ReadingCurrencyProperties\VisualBasic\ReadingCurrencyProperties.vbproj", "{4C51CCEF-D8AE-48ED-8BAC-501E1F64B089}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SetCurrencyProperties", "ProgrammersGuide\WorkingWithProjects\CurrencyProperties\SetCurrencyProperties\VisualBasic\SetCurrencyProperties.vbproj", "{C6DA2044-5336-4040-899C-C203BA1AE31A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -49,6 +67,24 @@ Global
 		{D4CDA452-CD8F-4046-BF94-B5BF48A4156B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{D4CDA452-CD8F-4046-BF94-B5BF48A4156B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D4CDA452-CD8F-4046-BF94-B5BF48A4156B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9946EE96-62A5-4CCD-913D-38D54E2871A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9946EE96-62A5-4CCD-913D-38D54E2871A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9946EE96-62A5-4CCD-913D-38D54E2871A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4FDB8A5E-A42D-4909-98E0-1FC4A8CA12B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4FDB8A5E-A42D-4909-98E0-1FC4A8CA12B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4FDB8A5E-A42D-4909-98E0-1FC4A8CA12B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3DF47A63-F4B4-4D86-9B1C-D6D39E4F2DBF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3DF47A63-F4B4-4D86-9B1C-D6D39E4F2DBF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3DF47A63-F4B4-4D86-9B1C-D6D39E4F2DBF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7AC545C8-0CAF-4007-BD40-77806B868B2E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7AC545C8-0CAF-4007-BD40-77806B868B2E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7AC545C8-0CAF-4007-BD40-77806B868B2E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C51CCEF-D8AE-48ED-8BAC-501E1F64B089}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C51CCEF-D8AE-48ED-8BAC-501E1F64B089}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C51CCEF-D8AE-48ED-8BAC-501E1F64B089}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C6DA2044-5336-4040-899C-C203BA1AE31A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C6DA2044-5336-4040-899C-C203BA1AE31A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C6DA2044-5336-4040-899C-C203BA1AE31A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -64,5 +100,12 @@ Global
 		{40C29FA4-5A9E-4228-9E6D-BD078B22B3F1} = {D28AB132-8430-48CE-BFA0-F1D1553CF067}
 		{B464FA2C-A108-4D76-B78E-F37B46B237D8} = {D28AB132-8430-48CE-BFA0-F1D1553CF067}
 		{D4CDA452-CD8F-4046-BF94-B5BF48A4156B} = {D28AB132-8430-48CE-BFA0-F1D1553CF067}
+		{9946EE96-62A5-4CCD-913D-38D54E2871A8} = {D28AB132-8430-48CE-BFA0-F1D1553CF067}
+		{4FDB8A5E-A42D-4909-98E0-1FC4A8CA12B5} = {D28AB132-8430-48CE-BFA0-F1D1553CF067}
+		{3DF47A63-F4B4-4D86-9B1C-D6D39E4F2DBF} = {D28AB132-8430-48CE-BFA0-F1D1553CF067}
+		{7AC545C8-0CAF-4007-BD40-77806B868B2E} = {D28AB132-8430-48CE-BFA0-F1D1553CF067}
+		{EA48BCFE-D82E-4ABF-ABD7-753A38BC3091} = {D28AB132-8430-48CE-BFA0-F1D1553CF067}
+		{4C51CCEF-D8AE-48ED-8BAC-501E1F64B089} = {EA48BCFE-D82E-4ABF-ABD7-753A38BC3091}
+		{C6DA2044-5336-4040-899C-C203BA1AE31A} = {EA48BCFE-D82E-4ABF-ABD7-753A38BC3091}
 	EndGlobalSection
 EndGlobal
