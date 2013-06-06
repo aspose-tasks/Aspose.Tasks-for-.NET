@@ -294,6 +294,91 @@
               </OutputFiles>
               <Type>Console</Type>
             </Example>
+            <Example>
+              <Title>Retrieving Task Links</Title>
+              <Description>Task links indicate that one task depends on another. In Microsoft Project Gantt charts, links are shown by lines that links two tasks together, or as a list of precedents. Aspose.Tasks support task links and you can use the API to add and remove task links. This article shows how to retrieve task links, essentially a list of predecessors and successors, and write them to a console window. Aspose.Tasks can retrieve Task Links information for all versions of Microsoft Project: 2003, 2007, 2010, and 2013.</Description>
+              <FolderName>RetrievingTaskLinks</FolderName>
+              <Order>15</Order>
+              <DocLink>
+                <DisplayName>Retrieving Task Links</DisplayName>
+                <Url>Retrieving+Task+Links</Url>
+              </DocLink>
+              <InputFiles>
+                <DataFile>
+                  <Path>..\Data\project.mpp</Path>
+                </DataFile>
+              </InputFiles>
+              <Type>Console</Type>
+            </Example>
+            <Example>
+              <Title>Adding and Removing Task Links</Title>
+              <Description>Tasks are linked to show that tasks are dependent on each other. For example, task 2 cannot start until task 1 has been completed. In Microsoft Project, task links are shown as lines that connect links in a Gantt chart, or as a list of predecessors. Aspose.Tasks fully supports task links. This article explains how to add and remove task links with Aspose.Tasks.</Description>
+              <FolderName>AddingAndRemovingTaskLinks</FolderName>
+              <Order>16</Order>
+              <DocLink>
+                <DisplayName>Adding and Removing Task Links</DisplayName>
+                <Url>Adding+and+Removing+Task+Links</Url>
+              </DocLink>
+              <InputFiles>
+                <DataFile>
+                  <Path>..\Data\project.mpp</Path>
+                </DataFile>
+              </InputFiles>
+              <OutputFiles>
+                <DataFile>
+                  <Path>..\Data\project.xml</Path>
+                </DataFile>
+              </OutputFiles>
+              <Type>Console</Type>
+            </Example>
+            <Example>
+              <Title>Defining Root Task</Title>
+              <Description>In Microsoft Project, the root task is the parent task of all other tasks in a project. It is central to managing tasks. Aspose.Tasks lets you define a root task in a project and work with its children.</Description>
+              <FolderName>DefiningRootTask</FolderName>
+              <Order>17</Order>
+              <DocLink>
+                <DisplayName>Defining Root Task</DisplayName>
+                <Url>Defining+Root+Task</Url>
+              </DocLink>
+              <OutputFiles>
+                <DataFile>
+                  <Path>..\Data\project.xml</Path>
+                </DataFile>
+              </OutputFiles>
+              <Type>Console</Type>
+            </Example>
+            <Example>
+              <Title>Adding and Removing Resources</Title>
+              <Description>In Microsoft Project, resources are the staff and equipment needed to complete a task. Aspose.Tasks lets you work with resources from within your own applications. This article explains how to add and remove resources from a project file.</Description>
+              <FolderName>AddingAndRemovingResources</FolderName>
+              <Order>18</Order>
+              <DocLink>
+                <DisplayName>Adding and Removing Resources</DisplayName>
+                <Url>Adding+and+Removing+Resources</Url>
+              </DocLink>
+              <InputFiles>
+                <DataFile>
+                  <Path>..\Data\project.mpp</Path>
+                </DataFile>
+              </InputFiles>
+              <Type>Console</Type>
+            </Example>
+            <Example>
+              <Title>Writing Resources to Project</Title>
+              <Description>In Microsoft Project, resources are the staff or equipment needed to complete a task. Aspose.Tasks has many features that lets you work with resources. This article focuses on how to write resources to a project.</Description>
+              <FolderName>WritingResourcesToProject</FolderName>
+              <Order>19</Order>
+              <DocLink>
+                <DisplayName>Writing Resources to Project</DisplayName>
+                <Url>Writing+Resources+to+Project</Url>
+              </DocLink>
+              <OutputFiles>
+                <DataFile>
+                  <Path>..\Data\project.xml</Path>
+                </DataFile>
+              </OutputFiles>
+              <Type>Console</Type>
+            </Example>
           </Examples>
           <Folders>
             <Folder>
