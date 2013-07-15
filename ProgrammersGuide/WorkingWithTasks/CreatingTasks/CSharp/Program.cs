@@ -10,7 +10,7 @@ using System.IO;
 using Aspose.Tasks;
 using System;
 
-namespace DefiningRootTask
+namespace CreatingTasks
 {
     public class Program
     {
@@ -24,29 +24,35 @@ namespace DefiningRootTask
             if (!IsExists)
                 System.IO.Directory.CreateDirectory(dataDir);
 
-            //Create a project instance
-            Project prj = new Project();
+            Project project = new Project();
+            project.MinutesPerDay = 60 * 8;
 
-            //Define a Task and set it as Root Task
-            Task rootTsk = new Task();
-            prj.RootTask = rootTsk;
+            //Set project Start and Finish Date
+            project.StartDate = new DateTime(2012, 07, 16);
+            project.FinishDate = new DateTime(2012, 07, 20);
 
-            //Define Tasks
-            Task tsk1 = new Task("Task1");
-            tsk1.Start = DateTime.Now;
-            Task tsk2 = new Task("Task2");
-            tsk2.Start = DateTime.Now;
+            //Add root task
+            Task root = new Task();
+            project.RootTask = root;
 
-            //Add tsk1 and tsk2 to the rootTsk
-            rootTsk.Children.Add(tsk1);
-            rootTsk.Children.Add(tsk2);
+            Task tsk = new Task();
+            tsk.Id = 1;
+            tsk.Uid = 1;
+            tsk.Name = "Default Const";
 
-            //Perform recalculations
-            prj.CalcTaskIds();
-            prj.CalcTaskUids();
+            root.Children.Add(tsk);
 
-            //Save the project as XML project file
-            prj.Save(dataDir + "project.xml", Aspose.Tasks.Saving.SaveFileFormat.XML);
+            //We need to recalculate the IDs only as UIDs were set correctly.
+            project.CalcTaskIds();
+            project.CalcTaskUids();
+
+            project.UpdateReferences();
+
+            //Save the Project
+            project.Save(dataDir + "Project.Xml", Aspose.Tasks.Saving.SaveFileFormat.XML);
+
+
+
         }
     }
 }

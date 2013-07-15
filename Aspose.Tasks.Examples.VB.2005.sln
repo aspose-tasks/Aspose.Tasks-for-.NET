@@ -38,11 +38,37 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DefiningRootTask", "Program
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AddingAndRemovingResources", "ProgrammersGuide\WorkingWithProjects\AddingAndRemovingResources\VisualBasic\AddingAndRemovingResources.vbproj", "{2A2D26CA-AF71-499D-8EA4-AB5C357320B4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WritingResourcesToProject", "ProgrammersGuide\WorkingWithProjects\WritingResourcesToProject\VisualBasic\WritingResourcesToProject.vbproj", "{DD42C848-70D8-4408-B49A-E248866EB4B9}"
+EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CurrencyProperties", "CurrencyProperties", "{EA48BCFE-D82E-4ABF-ABD7-753A38BC3091}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReadingCurrencyProperties", "ProgrammersGuide\WorkingWithProjects\CurrencyProperties\ReadingCurrencyProperties\VisualBasic\ReadingCurrencyProperties.vbproj", "{4C51CCEF-D8AE-48ED-8BAC-501E1F64B089}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SetCurrencyProperties", "ProgrammersGuide\WorkingWithProjects\CurrencyProperties\SetCurrencyProperties\VisualBasic\SetCurrencyProperties.vbproj", "{C6DA2044-5336-4040-899C-C203BA1AE31A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WorkingWithTasks", "WorkingWithTasks", "{66245B4B-F49D-44B1-B628-0609B22A17C3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CreatingTasks", "ProgrammersGuide\WorkingWithTasks\CreatingTasks\VisualBasic\CreatingTasks.vbproj", "{E253443F-51D1-44F6-9D56-02BB9B59ADE5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AddingNewTask", "ProgrammersGuide\WorkingWithTasks\AddingNewTask\VisualBasic\AddingNewTask.vbproj", "{9DB5A0BC-2A15-47FC-B822-2C1BDED318ED}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ReadingAndWritingGeneralProperties", "ReadingAndWritingGeneralProperties", "{3526873F-AD47-4344-BAC2-A434C74817A9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SettingGeneralProperties", "ProgrammersGuide\WorkingWithTasks\ReadingAndWritingGeneralProperties\SettingGeneralProperties\VisualBasic\SettingGeneralProperties.vbproj", "{D70F5C2B-B057-4221-9673-0445FF7B39AE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GettingGeneralProperties", "ProgrammersGuide\WorkingWithTasks\ReadingAndWritingGeneralProperties\GettingGeneralProperties\VisualBasic\GettingGeneralProperties.vbproj", "{C9A69BA0-FE1E-4A4F-A5CB-3E54A587FED7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "TasksAndCalendars", "TasksAndCalendars", "{AA068BAA-36C8-4B77-95C4-0DA0374904A7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SettingTaskCalendar", "ProgrammersGuide\WorkingWithTasks\TasksAndCalendars\SettingTaskCalendar\VisualBasic\SettingTaskCalendar.vbproj", "{A6D253BA-B80D-49A3-AD22-A4FD0527A8EA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GettingTaskCalendar", "ProgrammersGuide\WorkingWithTasks\TasksAndCalendars\GettingTaskCalendar\VisualBasic\GettingTaskCalendar.vbproj", "{3A70AB1A-0064-4C30-BD39-EFBBE5A676A1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "HandlingTaskConstraints", "HandlingTaskConstraints", "{33062EAF-111F-40AE-9063-15D7CAA108FE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SettingConstraints", "ProgrammersGuide\WorkingWithTasks\HandlingTaskConstraints\SettingConstraints\VisualBasic\SettingConstraints.vbproj", "{6B9D1A7E-E980-400E-ACA5-52ABBF3E9E86}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GettingConstraints", "ProgrammersGuide\WorkingWithTasks\HandlingTaskConstraints\GettingConstraints\VisualBasic\GettingConstraints.vbproj", "{4DADDCBD-22D1-4D4A-8FD5-4C42E86714AD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -110,6 +136,33 @@ Global
 		{C6DA2044-5336-4040-899C-C203BA1AE31A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{C6DA2044-5336-4040-899C-C203BA1AE31A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C6DA2044-5336-4040-899C-C203BA1AE31A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E253443F-51D1-44F6-9D56-02BB9B59ADE5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E253443F-51D1-44F6-9D56-02BB9B59ADE5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E253443F-51D1-44F6-9D56-02BB9B59ADE5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9DB5A0BC-2A15-47FC-B822-2C1BDED318ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9DB5A0BC-2A15-47FC-B822-2C1BDED318ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9DB5A0BC-2A15-47FC-B822-2C1BDED318ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{004DE56D-E005-4013-8113-DF04D58EDBFB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{004DE56D-E005-4013-8113-DF04D58EDBFB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{004DE56D-E005-4013-8113-DF04D58EDBFB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D70F5C2B-B057-4221-9673-0445FF7B39AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D70F5C2B-B057-4221-9673-0445FF7B39AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D70F5C2B-B057-4221-9673-0445FF7B39AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C9A69BA0-FE1E-4A4F-A5CB-3E54A587FED7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C9A69BA0-FE1E-4A4F-A5CB-3E54A587FED7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C9A69BA0-FE1E-4A4F-A5CB-3E54A587FED7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A6D253BA-B80D-49A3-AD22-A4FD0527A8EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A6D253BA-B80D-49A3-AD22-A4FD0527A8EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A6D253BA-B80D-49A3-AD22-A4FD0527A8EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3A70AB1A-0064-4C30-BD39-EFBBE5A676A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A70AB1A-0064-4C30-BD39-EFBBE5A676A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A70AB1A-0064-4C30-BD39-EFBBE5A676A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6B9D1A7E-E980-400E-ACA5-52ABBF3E9E86}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6B9D1A7E-E980-400E-ACA5-52ABBF3E9E86}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6B9D1A7E-E980-400E-ACA5-52ABBF3E9E86}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4DADDCBD-22D1-4D4A-8FD5-4C42E86714AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4DADDCBD-22D1-4D4A-8FD5-4C42E86714AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4DADDCBD-22D1-4D4A-8FD5-4C42E86714AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -137,5 +190,18 @@ Global
 		{EA48BCFE-D82E-4ABF-ABD7-753A38BC3091} = {D28AB132-8430-48CE-BFA0-F1D1553CF067}
 		{4C51CCEF-D8AE-48ED-8BAC-501E1F64B089} = {EA48BCFE-D82E-4ABF-ABD7-753A38BC3091}
 		{C6DA2044-5336-4040-899C-C203BA1AE31A} = {EA48BCFE-D82E-4ABF-ABD7-753A38BC3091}
+		{66245B4B-F49D-44B1-B628-0609B22A17C3} = {43C85F10-E68B-4718-9F8B-1C72C601906D}
+		{E253443F-51D1-44F6-9D56-02BB9B59ADE5} = {66245B4B-F49D-44B1-B628-0609B22A17C3}
+		{9DB5A0BC-2A15-47FC-B822-2C1BDED318ED} = {66245B4B-F49D-44B1-B628-0609B22A17C3}
+		{004DE56D-E005-4013-8113-DF04D58EDBFB} = {66245B4B-F49D-44B1-B628-0609B22A17C3}
+		{3526873F-AD47-4344-BAC2-A434C74817A9} = {66245B4B-F49D-44B1-B628-0609B22A17C3}
+		{D70F5C2B-B057-4221-9673-0445FF7B39AE} = {3526873F-AD47-4344-BAC2-A434C74817A9}
+		{C9A69BA0-FE1E-4A4F-A5CB-3E54A587FED7} = {3526873F-AD47-4344-BAC2-A434C74817A9}
+		{AA068BAA-36C8-4B77-95C4-0DA0374904A7} = {66245B4B-F49D-44B1-B628-0609B22A17C3}
+		{A6D253BA-B80D-49A3-AD22-A4FD0527A8EA} = {AA068BAA-36C8-4B77-95C4-0DA0374904A7}
+		{3A70AB1A-0064-4C30-BD39-EFBBE5A676A1} = {AA068BAA-36C8-4B77-95C4-0DA0374904A7}
+		{33062EAF-111F-40AE-9063-15D7CAA108FE} = {66245B4B-F49D-44B1-B628-0609B22A17C3}
+		{6B9D1A7E-E980-400E-ACA5-52ABBF3E9E86} = {33062EAF-111F-40AE-9063-15D7CAA108FE}
+		{4DADDCBD-22D1-4D4A-8FD5-4C42E86714AD} = {33062EAF-111F-40AE-9063-15D7CAA108FE}
 	EndGlobalSection
 EndGlobal

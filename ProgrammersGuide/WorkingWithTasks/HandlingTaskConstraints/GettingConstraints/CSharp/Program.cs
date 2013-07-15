@@ -8,9 +8,10 @@
 using System.IO;
 
 using Aspose.Tasks;
+using Aspose.Tasks.Util;
 using System;
 
-namespace DefiningRootTask
+namespace GettingConstraints
 {
     public class Program
     {
@@ -24,29 +25,28 @@ namespace DefiningRootTask
             if (!IsExists)
                 System.IO.Directory.CreateDirectory(dataDir);
 
-            //Create a project instance
-            Project prj = new Project();
+            ProjectReader rdr = new ProjectReader();
+            FileStream St = new FileStream(dataDir + "project.mpp", FileMode.Open);
+            Project prj = rdr.Read(St);
+            St.Close();
 
-            //Define a Task and set it as Root Task
-            Task rootTsk = new Task();
-            prj.RootTask = rootTsk;
+            // Create a ChildTasksCollector instance
+            ChildTasksCollector collector = new ChildTasksCollector();
 
-            //Define Tasks
-            Task tsk1 = new Task("Task1");
-            tsk1.Start = DateTime.Now;
-            Task tsk2 = new Task("Task2");
-            tsk2.Start = DateTime.Now;
+            // Collect all the tasks from RootTask using TaskUtils
+            TaskUtils.Apply(prj.RootTask, collector, 0);
 
-            //Add tsk1 and tsk2 to the rootTsk
-            rootTsk.Children.Add(tsk1);
-            rootTsk.Children.Add(tsk2);
+            // Parse through all the collected tasks
+            foreach (Task tsk in collector.Tasks)
+            {
+                if (tsk.ConstraintDate.ToShortDateString() == "1/1/2000")
+                    Console.WriteLine("NA");
+                else
+                    Console.WriteLine(tsk.ConstraintDate.ToShortDateString());
+                Console.WriteLine(tsk.ConstraintType.ToString());
 
-            //Perform recalculations
-            prj.CalcTaskIds();
-            prj.CalcTaskUids();
+            }
 
-            //Save the project as XML project file
-            prj.Save(dataDir + "project.xml", Aspose.Tasks.Saving.SaveFileFormat.XML);
         }
     }
 }

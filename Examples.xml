@@ -428,6 +428,211 @@ This section include the following examples:
             </Folder>
           </Folders>
         </Folder>
+        <Folder>
+          <Title>Working with Tasks</Title>
+          <Description>This section includes the following examples:
+
+1: Creating tasks
+2: Reading and writing general properties
+3: Tasks and calendars
+4: Handling constraints on tasks
+5: Actual properties
+6: Managing durations
+7: Calculating split task finish date
+8: Managing estimated / milestone tasks
+9: Handling critical / effort driven tasks
+10:Outline properties of a task
+11:Handling priorities
+12:Stop and resume a task
+13:WBS associated with a task
+14:Handling variances
+15:Managing task costs
+16:Parent / child tasks
+17:Split tasks
+18:Overtimes in tasks
+19:Percentages calculations
+20:Extended attributes of a task
+21:Calculate Duration in Different Formats
+22:Read Timephased Data of a Task
+23:Change Progress of a Task</Description>
+          <FolderName>WorkingWithTasks</FolderName>
+          <Order>2</Order>
+          <Examples>
+            <Example>
+              <Title>Creating Tasks</Title>
+              <Description>A project is, essentially, made up by a number of tasks, each of which has to be completed for the project to be completed. When working with project files, adding tasks is an important activity. Tasks are often linked to other tasks, to indicate dependency, and typically have a set duration. Aspose.Project lets developers create tasks and define, at the time of creation, their name, and children or duration.</Description>
+              <FolderName>CreatingTasks</FolderName>
+              <Order>1</Order>
+              <DocLink>
+                <DisplayName>Creating Tasks</DisplayName>
+                <Url>Creating+Tasks</Url>
+              </DocLink>
+              <OutputFiles>
+                <DataFile>
+                  <Path>..\Data\Project.Xml</Path>
+                </DataFile>
+              </OutputFiles>
+              <Type>Console</Type>
+            </Example>
+            <Example>
+              <Title>Adding a New Task</Title>
+              <Description>Projects are made up of tasks and resources. Once you have created a project, add tasks to it to start building up the complete project plan.</Description>
+              <FolderName>AddingNewTask</FolderName>
+              <Order>2</Order>
+              <DocLink>
+                <DisplayName>Adding a New Task</DisplayName>
+                <Url>Adding+a+New+Task</Url>
+              </DocLink>
+              <OutputFiles>
+                <DataFile>
+                  <Path>..\Data\Project.Xml</Path>
+                </DataFile>
+              </OutputFiles>
+              <Type>Console</Type>
+            </Example>
+            <Example>
+              <Title>Managing Durations</Title>
+              <Description>Tasks take time: they have a duration. Realistic task durations help give a realistic project end date. Aspose.Tasks allows developers set task durations in projects.</Description>
+              <FolderName>ManagingDurations</FolderName>
+              <Order>6</Order>
+              <DocLink>
+                <DisplayName>Managing Durations</DisplayName>
+                <Url>Managing+Durations</Url>
+              </DocLink>
+              <OutputFiles>
+                <DataFile>
+                  <Path>..\Data\Project.Xml</Path>
+                </DataFile>
+              </OutputFiles>
+              <Type>Console</Type>
+            </Example>
+          </Examples>
+          <Folders>
+            <Folder>
+              <Title>Reading and Writing General Properties</Title>
+              <Description>Tasks can be identified by a number of general properties, such as name, ID, start and finish date. Aspose.Tasks can be used to get and set task properties when working with projects. This section includes the following examples:
+
+1: Setting General Properties
+2: Getting General Properties</Description>
+              <FolderName>ReadingAndWritingGeneralProperties</FolderName>
+              <Order>3</Order>
+              <Examples>
+                <Example>
+                  <Title>Setting General Properties</Title>
+                  <Description>The Task exposes a number of general properties. This example shows how to set some of those properties using Aspose.Tasks.</Description>
+                  <FolderName>SettingGeneralProperties</FolderName>
+                  <Order>1</Order>
+                  <DocLink>
+                    <DisplayName>Reading and Writing General Properties</DisplayName>
+                    <Url>Reading+and+Writing+General+Properties</Url>
+                  </DocLink>
+                  <OutputFiles>
+                    <DataFile>
+                      <Path>..\Data\Project.Xml</Path>
+                    </DataFile>
+                  </OutputFiles>
+                  <Type>Console</Type>
+                </Example>
+                <Example>
+                  <Title>Getting General Properties</Title>
+                  <Description>In this example we will get task's properties by traversing the children of the project's RootTask property.</Description>
+                  <FolderName>GettingGeneralProperties</FolderName>
+                  <Order>2</Order>
+                  <DocLink>
+                    <DisplayName>Reading and Writing General Properties</DisplayName>
+                    <Url>Reading+and+Writing+General+Properties</Url>
+                  </DocLink>
+                  <InputFiles>
+                    <DataFile>
+                      <Path>..\Data\project.mpp</Path>
+                    </DataFile>
+                  </InputFiles>
+                  <Type>Console</Type>
+                </Example>
+              </Examples>
+            </Folder>
+            <Folder>
+              <Title>Tasks and Calendars</Title>
+              <Description>It is possible to associate calendars with particular tasks in Microsoft Project. Aspose.Task supports this functionality as well. The Task class exposes the Calendar property, used to set or get the calendar associated with a task. This property accepts or returns an Aspose.Tasks.Calendar object.</Description>
+              <FolderName>TasksAndCalendars</FolderName>
+              <Order>4</Order>
+              <Examples>
+                <Example>
+                  <Title>Setting Task Calendar</Title>
+                  <Description>Using Aspose.Tasks, create a standard calendar and create a task. Assign the Calendar to the task.</Description>
+                  <FolderName>SettingTaskCalendar</FolderName>
+                  <Order>1</Order>
+                  <DocLink>
+                    <DisplayName>Tasks and Calendars</DisplayName>
+                    <Url>Tasks+and+Calendars</Url>
+                  </DocLink>
+                  <OutputFiles>
+                    <DataFile>
+                      <Path>..\Data\Project.Xml</Path>
+                    </DataFile>
+                  </OutputFiles>
+                  <Type>Console</Type>
+                </Example>
+                <Example>
+                  <Title>Getting Task Calendar</Title>
+                  <Description>To get a task calendar, traverse the tasks in a project using Aspose.Tasks.</Description>
+                  <FolderName>GettingTaskCalendar</FolderName>
+                  <Order>2</Order>
+                  <DocLink>
+                    <DisplayName>Tasks and Calendars</DisplayName>
+                    <Url>Tasks+and+Calendars</Url>
+                  </DocLink>
+                  <InputFiles>
+                    <DataFile>
+                      <Path>..\Data\project.mpp</Path>
+                    </DataFile>
+                  </InputFiles>
+                  <Type>Console</Type>
+                </Example>
+              </Examples>
+            </Folder>
+            <Folder>
+              <Title>Handling Task Constraints</Title>
+              <Description>Task constraints are used to define a Microsoft Project project's schedule and define when tasks should be started or finished. Constraints can be flexible - start or end as soon as possible or as late as possible - or inflexible. Inflexible constraints are tied to specific dates.</Description>
+              <FolderName>HandlingTaskConstraints</FolderName>
+              <Order>5</Order>
+              <Examples>
+                <Example>
+                  <Title>Setting Constraints</Title>
+                  <Description>In this example, we will see how to apply different constraints on tasks using Aspose.Tasks.</Description>
+                  <FolderName>SettingConstraints</FolderName>
+                  <Order>1</Order>
+                  <DocLink>
+                    <DisplayName>Handling Task Constraints</DisplayName>
+                    <Url>Handling+Task+Constraints</Url>
+                  </DocLink>
+                  <InputFiles>
+                    <DataFile>
+                      <Path>..\Data\project.mpp</Path>
+                    </DataFile>
+                  </InputFiles>
+                  <Type>Console</Type>
+                </Example>
+                <Example>
+                  <Title>Getting Constraints</Title>
+                  <Description>In this example we demonstrate how to get the constraint information of a task using Aspose.Tasks.</Description>
+                  <FolderName>GettingConstraints</FolderName>
+                  <Order>2</Order>
+                  <DocLink>
+                    <DisplayName>Handling Task Constraints</DisplayName>
+                    <Url>Handling+Task+Constraints</Url>
+                  </DocLink>
+                  <InputFiles>
+                    <DataFile>
+                      <Path>..\Data\project.mpp</Path>
+                    </DataFile>
+                  </InputFiles>
+                  <Type>Console</Type>
+                </Example>
+              </Examples>
+            </Folder>
+          </Folders>
+        </Folder>
       </Folders>
     </Folder>
   </Folders>

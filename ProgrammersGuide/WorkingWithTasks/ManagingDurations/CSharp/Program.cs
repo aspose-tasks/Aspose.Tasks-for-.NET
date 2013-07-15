@@ -10,7 +10,7 @@ using System.IO;
 using Aspose.Tasks;
 using System;
 
-namespace DefiningRootTask
+namespace ManagingDurations
 {
     public class Program
     {
@@ -26,27 +26,26 @@ namespace DefiningRootTask
 
             //Create a project instance
             Project prj = new Project();
-
-            //Define a Task and set it as Root Task
-            Task rootTsk = new Task();
-            prj.RootTask = rootTsk;
-
+            prj.MinutesPerDay = 480;
             //Define Tasks
+            Task rootTsk = new Task();
             Task tsk1 = new Task("Task1");
-            tsk1.Start = DateTime.Now;
-            Task tsk2 = new Task("Task2");
-            tsk2.Start = DateTime.Now;
 
-            //Add tsk1 and tsk2 to the rootTsk
+            tsk1.ActualStart = DateTime.Parse("01-Jun-00 8:00 AM");
+            tsk1.Duration = new TimeSpan(8, 0, 0);
+            tsk1.DurationFormat = TimeUnitType.Day;
+
+            //Add tsk1 to the rootTsk
             rootTsk.Children.Add(tsk1);
-            rootTsk.Children.Add(tsk2);
-
+            //Set rootTsk as root task of the project
+            prj.RootTask = rootTsk;
             //Perform recalculations
             prj.CalcTaskIds();
             prj.CalcTaskUids();
 
-            //Save the project as XML project file
-            prj.Save(dataDir + "project.xml", Aspose.Tasks.Saving.SaveFileFormat.XML);
+            //Save the Project
+            prj.Save(dataDir + "Project.Xml", Aspose.Tasks.Saving.SaveFileFormat.XML);
+
         }
     }
 }
