@@ -52,6 +52,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CreatingTasks", "Programmer
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AddingNewTask", "ProgrammersGuide\WorkingWithTasks\AddingNewTask\VisualBasic\AddingNewTask.vbproj", "{9DB5A0BC-2A15-47FC-B822-2C1BDED318ED}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ManagingDurations", "ProgrammersGuide\WorkingWithTasks\ManagingDurations\VisualBasic\ManagingDurations.vbproj", "{004DE56D-E005-4013-8113-DF04D58EDBFB}"
+EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ReadingAndWritingGeneralProperties", "ReadingAndWritingGeneralProperties", "{3526873F-AD47-4344-BAC2-A434C74817A9}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SettingGeneralProperties", "ProgrammersGuide\WorkingWithTasks\ReadingAndWritingGeneralProperties\SettingGeneralProperties\VisualBasic\SettingGeneralProperties.vbproj", "{D70F5C2B-B057-4221-9673-0445FF7B39AE}"
