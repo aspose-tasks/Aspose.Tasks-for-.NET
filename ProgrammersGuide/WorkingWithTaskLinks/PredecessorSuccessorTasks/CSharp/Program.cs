@@ -8,11 +8,10 @@
 using System.IO;
 
 using Aspose.Tasks;
-using Aspose.Tasks.Saving;
-using Aspose.Tasks.Visualization;
+using System.Collections;
 using System;
 
-namespace SettingConstraints
+namespace PredecessorSuccessorTasks
 {
     public class Program
     {
@@ -21,26 +20,17 @@ namespace SettingConstraints
             // The path to the documents directory.
             string dataDir = Path.GetFullPath("../../../Data/");
 
-            //Reading a project file
             ProjectReader rdr = new ProjectReader();
             FileStream St = new FileStream(dataDir + "project.mpp", FileMode.Open);
-            Project project = rdr.Read(St);
+            Project prj = rdr.Read(St);
             St.Close();
+            ArrayList allinks = prj.TaskLinks;
+            foreach (TaskLink tsklnk in allinks)
+            {
+                Console.WriteLine("Predecessor " + tsklnk.PredTask.Name);
+                Console.WriteLine("Successor " + tsklnk.SuccTask.Name);
+            }
 
-            //Setting Save Option
-            SaveOptions o = new PdfSaveOptions();
-            o.StartDate = project.StartDate;
-            o.Timescale = Timescale.ThirdsOfMonths;
-            
-            //Get Task by ID
-            Task summary = project.GetTaskById(7);
-
-            //Set Constraint
-            summary.ConstraintType = ConstraintType.StartNoEarlierThan;
-            summary.ConstraintDate = new DateTime(2013, 6, 3, 9, 0, 0);
-                        
-            //Save to PDF file
-            project.Save(dataDir + "output.pdf", o);
         }
     }
 }

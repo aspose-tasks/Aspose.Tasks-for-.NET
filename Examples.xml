@@ -107,6 +107,11 @@
                 <DisplayName>Adding and Removing Tasks</DisplayName>
                 <Url>Adding+and+Removing+Tasks</Url>
               </DocLink>
+              <InputFiles>
+                <DataFile>
+                  <Path>..\Data\project.mpp</Path>
+                </DataFile>
+              </InputFiles>
               <Type>Console</Type>
             </Example>
             <Example>
@@ -506,6 +511,22 @@ This section include the following examples:
               </OutputFiles>
               <Type>Console</Type>
             </Example>
+            <Example>
+              <Title>Actual Properties</Title>
+              <Description>The actual properties are used to find out how much time or money has been sent on a task to date.</Description>
+              <FolderName>ActualProperties</FolderName>
+              <Order>7</Order>
+              <DocLink>
+                <DisplayName>Actual Properties</DisplayName>
+                <Url>Actual+Properties</Url>
+              </DocLink>
+              <InputFiles>
+                <DataFile>
+                  <Path>..\Data\project.mpp</Path>
+                </DataFile>
+              </InputFiles>
+              <Type>Console</Type>
+            </Example>
           </Examples>
           <Folders>
             <Folder>
@@ -611,6 +632,11 @@ This section include the following examples:
                       <Path>..\Data\project.mpp</Path>
                     </DataFile>
                   </InputFiles>
+                  <OutputFiles>
+                    <DataFile>
+                      <Path>..\Data\output.pdf</Path>
+                    </DataFile>
+                  </OutputFiles>
                   <Type>Console</Type>
                 </Example>
                 <Example>
@@ -632,6 +658,168 @@ This section include the following examples:
               </Examples>
             </Folder>
           </Folders>
+        </Folder>
+        <Folder>
+          <Title>Working with Calendars</Title>
+          <Description>This section includes the following examples: 
+
+- Creating a Calendar
+- Making a Standard Calendar
+- General Calendar Properties
+- Defining Weekdays for Calendar
+- Getting Working Hours On or Between Dates
+- Writing Updated Calendar Data to MPP</Description>
+          <FolderName>WorkingWithCalendars</FolderName>
+          <Order>3</Order>
+          <Examples>
+            <Example>
+              <Title>Creating a Calendar</Title>
+              <Description>Calendars, and other information, is used by Microsoft Project to build project schedules. With Aspose.Tasks, adding a calendar to a project is easy. The Calendar class constructors allow you to assign an ID or a calendar name to the calendar, or use the default constructor.</Description>
+              <FolderName>CreatingACalendar</FolderName>
+              <Order>1</Order>
+              <DocLink>
+                <DisplayName>Creating a Calendar</DisplayName>
+                <Url>Creating+a+Calendar</Url>
+              </DocLink>
+              <OutputFiles>
+                <DataFile>
+                  <Path>..\Data\Project.Xml</Path>
+                </DataFile>
+              </OutputFiles>
+              <Type>Console</Type>
+            </Example>
+            <Example>
+              <Title>Making a Standard Calendar</Title>
+              <Description>A standard calendar provides the most common work days, work hours and holidays. By default, a standard calendar is added whenever a project is created using Microsoft Project. Aspose.Tasks has features for defining a standard calendar for a project.</Description>
+              <FolderName>MakingAStandardCalendar</FolderName>
+              <Order>2</Order>
+              <DocLink>
+                <DisplayName>Making a Standard Calendar</DisplayName>
+                <Url>Making+a+Standard+Calendar</Url>
+              </DocLink>
+              <OutputFiles>
+                <DataFile>
+                  <Path>..\Data\Project.Xml</Path>
+                </DataFile>
+              </OutputFiles>
+              <Type>Console</Type>
+            </Example>
+            <Example>
+              <Title>Defining Weekdays for Calendar</Title>
+              <Description>Microsoft Project keeps track of which days are considered weekdays in a calendar so that it can calculate project end dates and so on. Aspose.Tasks allows developers to define weekdays for a calendar associated with a project.</Description>
+              <FolderName>DefiningWeekdays</FolderName>
+              <Order>3</Order>
+              <DocLink>
+                <DisplayName>Defining Weekdays for Calendar</DisplayName>
+                <Url>Defining+Weekdays+for+Calendar</Url>
+              </DocLink>
+              <OutputFiles>
+                <DataFile>
+                  <Path>..\Data\Project.Xml</Path>
+                </DataFile>
+              </OutputFiles>
+              <Type>Console</Type>
+            </Example>
+            <Example>
+              <Title>Getting Working Hours On or Between Dates</Title>
+              <Description>Working hours are typically defined as a range of hours over a day, on specific days of the week. For example, 09:00 – 17:00, Monday to Friday. With Aspose.Tasks, it is possible to calculate the number of working hours that fall on a date, or between two dates. Finding out the number of working dates between two dates help project managers figure out whether there are enough hours to get work done, or if they need to find more resources to complete a task.</Description>
+              <FolderName>GettingWorkingHours</FolderName>
+              <Order>4</Order>
+              <DocLink>
+                <DisplayName>Getting Working Hours On or Between Dates</DisplayName>
+                <Url>Getting+Working+Hours+On+or+Between+Dates</Url>
+              </DocLink>
+              <InputFiles>
+                <DataFile>
+                  <Path>..\Data\project.mpp</Path>
+                </DataFile>
+              </InputFiles>
+              <Type>Console</Type>
+            </Example>
+          </Examples>
+        </Folder>
+        <Folder>
+          <Title>Working with Task Links</Title>
+          <Description>This section includes the following examples:
+
+
+- Creating a task link
+- Defining link type
+- Predecessor / successor tasks
+- Cross project predecessors
+- Identify tasks through cross projects</Description>
+          <FolderName>WorkingWithTaskLinks</FolderName>
+          <Order>4</Order>
+          <Examples>
+            <Example>
+              <Title>Creating a task link</Title>
+              <Description>A task link is created using the default constructor (TaskLink) which accepts three parameters:
+ 
+1.The first parameter defines the predecessor Task,
+2.the second parameter defines the successor Task and, finally,
+3.the third parameter defines the task link type from values specified by the TaskLinkType enumeration type.</Description>
+              <FolderName>CreatingATaskLink</FolderName>
+              <Order>1</Order>
+              <DocLink>
+                <DisplayName>Creating a task link</DisplayName>
+                <Url>Creating+a+Task+Link</Url>
+              </DocLink>
+              <OutputFiles>
+                <DataFile>
+                  <Path>..\Data\Project.Xml</Path>
+                </DataFile>
+              </OutputFiles>
+              <Type>Console</Type>
+            </Example>
+            <Example>
+              <Title>Defining link type</Title>
+              <Description>The LinkType property exposed by the TaskLink class is used to retrieve or define the type of link between two tasks. It reads and writes one of the values defined by the TaskLinkType enumeration type.</Description>
+              <FolderName>DefiningLinkType</FolderName>
+              <Order>2</Order>
+              <DocLink>
+                <DisplayName>Defining link type</DisplayName>
+                <Url>Defining+Link+Type</Url>
+              </DocLink>
+              <OutputFiles>
+                <DataFile>
+                  <Path>..\Data\Project.xml</Path>
+                </DataFile>
+              </OutputFiles>
+              <Type>Console</Type>
+            </Example>
+            <Example>
+              <Title>Predecessor and successor tasks</Title>
+              <Description>The PredTask and SuccTask properties exposed by the TaskLink class are used to define the predecessor and successor tasks for a TaskLink. Both of these properties read and write a Task object.</Description>
+              <FolderName>PredecessorSuccessorTasks</FolderName>
+              <Order>3</Order>
+              <DocLink>
+                <DisplayName>Predecessor and successor tasks</DisplayName>
+                <Url>Predecessor+and+Successor+Tasks</Url>
+              </DocLink>
+              <InputFiles>
+                <DataFile>
+                  <Path>..\Data\project.mpp</Path>
+                </DataFile>
+              </InputFiles>
+              <Type>Console</Type>
+            </Example>
+            <Example>
+              <Title>Cross Project Predecessors</Title>
+              <Description>Microsoft Project lets users link tasks within the current project, or to external projects. Cross project predecessors are predecessors from another project. Aspose.Tasks support these too.</Description>
+              <FolderName>CrossProjectPredecessors</FolderName>
+              <Order>4</Order>
+              <DocLink>
+                <DisplayName>Cross Project Predecessors</DisplayName>
+                <Url>Cross+Project+Predecessors</Url>
+              </DocLink>
+              <InputFiles>
+                <DataFile>
+                  <Path>..\Data\project.mpp</Path>
+                </DataFile>
+              </InputFiles>
+              <Type>Console</Type>
+            </Example>
+          </Examples>
         </Folder>
       </Folders>
     </Folder>
