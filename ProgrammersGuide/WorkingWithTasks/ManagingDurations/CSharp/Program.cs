@@ -44,7 +44,7 @@ namespace ManagingDurations
             prj.CalcTaskUids();
 
             //Save the Project
-            prj.Save(dataDir + "Project.Xml", Aspose.Tasks.Saving.SaveFileFormat.XML);
+            prj.Save(dataDir + "ManagaingDurations.Xml", Aspose.Tasks.Saving.SaveFileFormat.XML);
 
         }
     }

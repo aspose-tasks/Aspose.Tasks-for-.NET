@@ -5,10 +5,13 @@
 ' is only intended as a supplement to the documentation, and is provided
 ' "as is", without warranty of any kind, either expressed or implied.
 '////////////////////////////////////////////////////////////////////////
+
+Imports Microsoft.VisualBasic
 Imports System.IO
 
 Imports Aspose.Tasks
 Imports Aspose.Tasks.Util
+Imports System
 
 Namespace AddRemoveTasks
 	Public Class Program
@@ -31,8 +34,8 @@ Namespace AddRemoveTasks
 
 			'Add a task
 			Dim tskADD As New Task("Added")
-			tskADD.Start = New Date(2009, 8, 1)
-			tskADD.Finish = New Date(2009, 8, 5)
+			tskADD.Start = New System.DateTime(2009, 8, 1)
+			tskADD.Finish = New DateTime(2009, 8, 5)
 			prj.RootTask.Children.Add(tskADD)
 
 			'Display task

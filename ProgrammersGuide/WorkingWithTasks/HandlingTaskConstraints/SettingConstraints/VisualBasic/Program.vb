@@ -37,10 +37,9 @@ Namespace SettingConstraints
 			'Set Constraint
 			summary.ConstraintType = ConstraintType.StartNoEarlierThan
 			summary.ConstraintDate = New DateTime(2013, 6, 3, 9, 0, 0)
-			Task.Recalculate(project.RootTask)
 
 			'Save to PDF file
-			project.Save(dataDir & "summary SNET June 3.pdf", o)
+			project.Save(dataDir & "output.pdf", o)
 		End Sub
 	End Class
 End Namespace

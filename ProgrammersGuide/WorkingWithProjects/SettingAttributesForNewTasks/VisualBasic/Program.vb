@@ -5,6 +5,8 @@
 ' is only intended as a supplement to the documentation, and is provided
 ' "as is", without warranty of any kind, either expressed or implied.
 '////////////////////////////////////////////////////////////////////////
+
+Imports Microsoft.VisualBasic
 Imports System.IO
 
 Imports Aspose.Tasks
@@ -17,10 +19,10 @@ Namespace SettingAttributesForNewTasks
 
 			' Create directory if it is not already present.
 			Dim IsExists As Boolean = System.IO.Directory.Exists(dataDir)
-			If Not IsExists Then
+			If (Not IsExists) Then
 				System.IO.Directory.CreateDirectory(dataDir)
 			End If
-			
+
 			'Create a project instance
 			Dim prj As New Project()
 

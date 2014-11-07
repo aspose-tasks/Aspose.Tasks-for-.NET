@@ -5,9 +5,12 @@
 ' is only intended as a supplement to the documentation, and is provided
 ' "as is", without warranty of any kind, either expressed or implied.
 '////////////////////////////////////////////////////////////////////////
+
+Imports Microsoft.VisualBasic
 Imports System.IO
 
 Imports Aspose.Tasks
+Imports System
 
 Namespace DefaultProjectProperties
 	Public Class Program
@@ -42,7 +45,7 @@ Namespace DefaultProjectProperties
 
 			'Set default properties
 			prj1.IsScheduleFromStart = True
-			prj1.StartDate = Date.Now
+			prj1.StartDate = DateTime.Now
 			prj1.DefaultStartTime = prj.StartDate
 			prj1.DefaultTaskType = TaskType.FixedDuration
 			prj1.DefaultStandardRate = 15

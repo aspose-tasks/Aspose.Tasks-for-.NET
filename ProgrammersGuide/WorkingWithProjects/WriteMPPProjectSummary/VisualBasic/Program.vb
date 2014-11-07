@@ -5,9 +5,12 @@
 ' is only intended as a supplement to the documentation, and is provided
 ' "as is", without warranty of any kind, either expressed or implied.
 '////////////////////////////////////////////////////////////////////////
+
+Imports Microsoft.VisualBasic
 Imports System.IO
 
 Imports Aspose.Tasks
+Imports System
 Imports Aspose.Tasks.Saving
 
 Namespace WriteMPPProjectSummary
@@ -26,10 +29,10 @@ Namespace WriteMPPProjectSummary
 			project.Author = "Muhammad Sabir"
 			project.LastAuthor = "Sergey Polshkov"
 			project.Revision = 15
-			project.CreationDate = New Date(2010, 4, 15)
-			project.LastSaved = New Date(2010, 4, 15)
+			project.CreationDate = New DateTime(2010, 4, 15)
+			project.LastSaved = New DateTime(2010, 4, 15)
 			project.Keywords = "MPP Aspose"
-			project.LastPrinted = New Date(2010, 4, 16)
+			project.LastPrinted = New DateTime(2010, 4, 16)
 			project.Subject = "Aspose Subject"
 			project.Template = "Aspose Template"
 			project.Comments = "Aspose Comments"
