@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{26B64ED3-EB9B-40FA-ACB6-519C0A9DEE64}</ProjectGuid>
+    <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Examples</RootNamespace>
+    <AssemblyName>Aspose.Tasks.Examples</AssemblyName>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <StartupObject>Examples.ProgrammersGuide.WorkingWithProjects.AsposeExamples</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Test\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Test\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Aspose.Tasks">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Bin\net2.0\Aspose.Tasks.dll</HintPath>
+    </Reference>
+    <Reference Include="Helpers">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Helpers\Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Helpers\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ProgrammersGuide\WorkingWithProjects\CalculateCriticalPath\CSharp\Program.cs" />
+    <Compile Include="ProgrammersGuide\WorkingWithProjects\CreatingEmptyProjectFile\CreateEmptyProjectAndSaveXMLFile\CSharp\Program.cs" />
+    <Compile Include="ProgrammersGuide\WorkingWithProjects\CreatingEmptyProjectFile\CreateEmptyProjectSavetoStream\CSharp\Program.cs" />
+    <Compile Include="ProgrammersGuide\WorkingWithProjects\CreatingEmptyProjectFile\CreatingEmptyProjectFileExamples.cs" />
+    <Compile Include="ProgrammersGuide\WorkingWithProjects\CurrencyProperties\CurrencyPropertiesExamples.cs" />
+    <Compile Include="ProgrammersGuide\WorkingWithProjects\CurrencyProperties\ReadingCurrencyProperties\CSharp\Program.cs" />
+    <Compile Include="ProgrammersGuide\WorkingWithProjects\CurrencyProperties\WritingCurrencyProperties\CSharp\Program.cs" />
+    <Compile Include="ProgrammersGuide\WorkingWithProjects\DefaultProjectProperties\CSharp\Program.cs" />
+    <Compile Include="ProgrammersGuide\WorkingWithProjects\DeterminingProjectVersion\CSharp\Program.cs" />
+    <Compile Include="ProgrammersGuide\WorkingWithProjects\ExtendedAttributes\CSharp\Program.cs" />
+    <Compile Include="ProgrammersGuide\WorkingWithProjects\FiscalYearProperties\FiscalYearPropertiesExamples.cs" />
+    <Compile Include="ProgrammersGuide\WorkingWithProjects\FiscalYearProperties\ReadingFiscalYearProperties\CSharp\Program.cs" />
+    <Compile Include="ProgrammersGuide\WorkingWithProjects\FiscalYearProperties\WritingFiscalYearProperties\CSharp\Program.cs" />
+    <Compile Include="ProgrammersGuide\WorkingWithProjects\GeneralProjectProperties\GeneralProjectPropertiesExamples.cs" />
+    <Compile Include="ProgrammersGuide\WorkingWithProjects\GeneralProjectProperties\ReadingProjectInformation\CSharp\Program.cs" />
+    <Compile Include="ProgrammersGuide\WorkingWithProjects\GeneralProjectProperties\WritingProjectInformation\CSharp\Program.cs" />
+    <Compile Include="ProgrammersGuide\WorkingWithProjects\GetNumberOfPagesInProject\GetNumberOfPages\CSharp\Program.cs" />
+    <Compile Include="ProgrammersGuide\WorkingWithProjects\GetNumberOfPagesInProject\GetNumberOfPagesForDifferentViews\CSharp\Program.cs" />
+    <Compile Include="ProgrammersGuide\WorkingWithProjects\GetNumberOfPagesInProject\GetNumberOfPagesInProjectExamples.cs" />
+    <Compile Include="ProgrammersGuide\WorkingWithProjects\GetObjectByFieldMethods\CSharp\Program.cs" />
+    <Compile Include="ProgrammersGuide\WorkingWithProjects\MicrosoftProjectMPPFileUpdate\CSharp\Program.cs" />
+    <Compile Include="ProgrammersGuide\WorkingWithProjects\PrintingTaskWritingException\CSharp\Program.cs" />
+    <Compile Include="ProgrammersGuide\WorkingWithProjects\ReadingProjectFiles\CSharp\Program.cs" />
+    <Compile Include="ProgrammersGuide\WorkingWithProjects\ReplacingACalendar\CSharp\Program.cs" />
+    <Compile Include="ProgrammersGuide\WorkingWithProjects\RetrievingCalendarInformation\CSharp\Program.cs" />
+    <Compile Include="ProgrammersGuide\WorkingWithProjects\SettingAttributesForNewTasks\CSharp\Program.cs" />
+    <Compile Include="ProgrammersGuide\WorkingWithProjects\WeekdayProperties\ReadingWeekdayProperties\CSharp\Program.cs" />
+    <Compile Include="ProgrammersGuide\WorkingWithProjects\WeekdayProperties\WeekdayPropertiesExamples.cs" />
+    <Compile Include="ProgrammersGuide\WorkingWithProjects\WeekdayProperties\WritingWeekdayProperties\CSharp\Program.cs" />
+    <Compile Include="ProgrammersGuide\WorkingWithProjects\WorkingWithProjectsExamples.cs" />
+    <Compile Include="ProgrammersGuide\WorkingWithProjects\WriteMPPProjectSummary\CSharp\Program.cs" />
+    <Compile Include="ProgrammersGuide\WorkingWithProjects\WritingUpdatedExtendedAttributeDefinitions\CSharp\Program.cs" />
+  </ItemGroup>
+  <ItemGroup>
+
+  </ItemGroup>
+  <!-- Conditional build path import - added for VS2005 compatibility (since there is no MSBuildToolsPath in VS2005) -->
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" Condition="$(MSBuildToolsPath) != ''" />
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" Condition="$(MSBuildToolsPath) == ''" />
+  <PropertyGroup>
+    <DefineConstants Condition=" '$(TargetFrameworkVersion)' == 'v2.0' ">NET20</DefineConstants>
+  </PropertyGroup>
+</Project>
