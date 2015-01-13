@@ -21,25 +21,14 @@ namespace WriteMPPProjectSummary
             string dataDir = Path.GetFullPath("../../../Data/");
 
             //Instantiate ProjectReader class
-            ProjectReader reader = new ProjectReader();
+            Project project = new Project(dataDir+ "project.mpp");
+            project.Set(Prj.Author, "Author");
+            project.Set(Prj.LastAuthor, "Last Author");
+            project.Set(Prj.Revision, 15);
+            project.Set(Prj.Keywords, "MSP Aspose");
+            project.Set(Prj.Comments, "Comments");
 
-            //Load an existing MPP file
-            Project project = reader.Read(dataDir + "project.mpp");
-
-            //Set some summary information about the project
-            project.Author = "Muhammad Sabir";
-            project.LastAuthor = "Sergey Polshkov";
-            project.Revision = 15;
-            project.CreationDate = new DateTime(2010, 4, 15);
-            project.LastSaved = new DateTime(2010, 4, 15);
-            project.Keywords = "MPP Aspose";
-            project.LastPrinted = new DateTime(2010, 4, 16);
-            project.Subject = "Aspose Subject";
-            project.Template = "Aspose Template";
-            project.Comments = "Aspose Comments";
-
-            //Save the Project back in MPP format
-            project.Save(dataDir + "MPPAspose.xml", SaveFileFormat.XML);
+            project.Save(dataDir+ "saved.mpp", SaveFileFormat.MPP);
         }
     }
 }

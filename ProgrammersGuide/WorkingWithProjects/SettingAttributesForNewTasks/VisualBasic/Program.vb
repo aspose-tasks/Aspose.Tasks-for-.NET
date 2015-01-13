@@ -17,20 +17,15 @@ Namespace SettingAttributesForNewTasks
 			' The path to the documents directory.
 			Dim dataDir As String = Path.GetFullPath("../../../Data/")
 
-			' Create directory if it is not already present.
-			Dim IsExists As Boolean = System.IO.Directory.Exists(dataDir)
-			If (Not IsExists) Then
-				System.IO.Directory.CreateDirectory(dataDir)
-			End If
-
-			'Create a project instance
+			'''Create a project instance
 			Dim prj As New Project()
 
 			'Set new task property
-			prj.NewTaskStartDate = TaskStartDateType.CurrentDate
+			prj.Set(Prj.NewTaskStartDate, TaskStartDateType.CurrentDate)
 
 			'Save the project as XML project file
-			prj.Save(dataDir & "project1.xml", Aspose.Tasks.Saving.SaveFileFormat.XML)
+			prj.Save(dataDir & "project.xml", Aspose.Tasks.Saving.SaveFileFormat.XML)
+
 
 			' Display Status.
 			System.Console.WriteLine("New Task created with start date successfully.")

@@ -18,24 +18,17 @@ Namespace ReadingProjectInformationExample
 			Dim dataDir As String = Path.GetFullPath("../../../Data/")
 
 			'Create a project reader instance
-			Dim rdr As New ProjectReader()
-
-			'Call the read method of project reader object to get project object
-			Dim St As New FileStream(dataDir & "input.xml", FileMode.Open)
-			Dim prj As Project = rdr.Read(St)
-			St.Close()
-			Dim cal As Aspose.Tasks.Calendar = Aspose.Tasks.Calendar.Make24HourCalendar()
-
-			If prj.IsScheduleFromStart Then
-				Console.WriteLine("Project Finish Date : " & prj.StartDate.ToShortDateString())
+			Dim project As New Project(dataDir & "project.mpp")
+			If project.Get(Prj.ScheduleFromStart) Then
+				Console.WriteLine("Project Finish Date : " & project.Get(Prj.StartDate).ToShortDateString())
 			Else
-				Console.WriteLine("Project Finish Date : " & prj.FinishDate.ToShortDateString())
+				Console.WriteLine("Project Finish Date : " & project.Get(Prj.FinishDate).ToShortDateString())
 			End If
-			Dim strSchdl As String = If((prj.IsScheduleFromStart), "Project Start Date", "Project Finish Date")
-			Console.WriteLine("Project Schedule From : " & strSchdl)
-			Console.WriteLine("Current Date : " & prj.CurrentDate.ToShortDateString())
-			Console.WriteLine("Status Date : " & prj.StatusDate.ToShortDateString())
-			Console.WriteLine("Calendar : " & cal.Name)
+			Console.WriteLine(project.Get(Prj.Author))
+			Console.WriteLine(project.Get(Prj.LastAuthor))
+			Console.WriteLine(project.Get(Prj.Revision))
+			Console.WriteLine(project.Get(Prj.Keywords))
+			Console.WriteLine(project.Get(Prj.Comments))
 			Console.WriteLine("The program has run successfully")
 
 		End Sub

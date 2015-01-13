@@ -13,24 +13,10 @@ Namespace Examples.ProgrammersGuide.WorkingWithProjects
 	<TestClass, TestFixture> _
 	Public Class WorkingWithProjectsExamples
         <TestMethod(), Test(), Owner("Console")> _
-	        Public Sub CreatingEmptyProjectFile()
-	            TestHelper.SetDataDir("ProgrammersGuide/WorkingWithProjects/CreatingEmptyProjectFile")
-	
-	            CreatingEmptyProjectFileExample.Program.Main()
-        End Sub
-
-        <TestMethod(), Test(), Owner("Console")> _
 	        Public Sub SettingAttributesForNewTasks()
 	            TestHelper.SetDataDir("ProgrammersGuide/WorkingWithProjects/SettingAttributesForNewTasks")
 	
 	            SettingAttributesForNewTasksExample.Program.Main()
-        End Sub
-
-        <TestMethod(), Test(), Owner("Console")> _
-	        Public Sub AddRemoveTasks()
-	            TestHelper.SetDataDir("ProgrammersGuide/WorkingWithProjects/AddRemoveTasks")
-	
-	            AddRemoveTasksExample.Program.Main()
         End Sub
 
         <TestMethod(), Test(), Owner("Console")> _
@@ -55,20 +41,6 @@ Namespace Examples.ProgrammersGuide.WorkingWithProjects
         End Sub
 
         <TestMethod(), Test(), Owner("Console")> _
-	        Public Sub FiscalYearProperties()
-	            TestHelper.SetDataDir("ProgrammersGuide/WorkingWithProjects/FiscalYearProperties")
-	
-	            FiscalYearPropertiesExample.Program.Main()
-        End Sub
-
-        <TestMethod(), Test(), Owner("Console")> _
-	        Public Sub WeekdayProperties()
-	            TestHelper.SetDataDir("ProgrammersGuide/WorkingWithProjects/WeekdayProperties")
-	
-	            WeekdayPropertiesExample.Program.Main()
-        End Sub
-
-        <TestMethod(), Test(), Owner("Console")> _
 	        Public Sub ReadingProjectFiles()
 	            TestHelper.SetDataDir("ProgrammersGuide/WorkingWithProjects/ReadingProjectFiles")
 	
@@ -83,52 +55,52 @@ Namespace Examples.ProgrammersGuide.WorkingWithProjects
         End Sub
 
         <TestMethod(), Test(), Owner("Console")> _
-	        Public Sub RetrievingTaskInformation()
-	            TestHelper.SetDataDir("ProgrammersGuide/WorkingWithProjects/RetrievingTaskInformation")
+	        Public Sub GetObjectByFieldMethods()
+	            TestHelper.SetDataDir("ProgrammersGuide/WorkingWithProjects/GetObjectByFieldMethods")
 	
-	            RetrievingTaskInformationExample.Program.Main()
+	            GetObjectByFieldMethodsExample.Program.Main()
         End Sub
 
         <TestMethod(), Test(), Owner("Console")> _
-	        Public Sub WritingTasksToProject()
-	            TestHelper.SetDataDir("ProgrammersGuide/WorkingWithProjects/WritingTasksToProject")
+	        Public Sub ExtendedAttributes()
+	            TestHelper.SetDataDir("ProgrammersGuide/WorkingWithProjects/ExtendedAttributes")
 	
-	            WritingTasksToProjectExample.Program.Main()
+	            ExtendedAttributesExample.Program.Main()
         End Sub
 
         <TestMethod(), Test(), Owner("Console")> _
-	        Public Sub RetrievingTaskLinks()
-	            TestHelper.SetDataDir("ProgrammersGuide/WorkingWithProjects/RetrievingTaskLinks")
+	        Public Sub CalculateCriticalPath()
+	            TestHelper.SetDataDir("ProgrammersGuide/WorkingWithProjects/CalculateCriticalPath")
 	
-	            RetrievingTaskLinksExample.Program.Main()
+	            CalculateCriticalPathExample.Program.Main()
         End Sub
 
         <TestMethod(), Test(), Owner("Console")> _
-	        Public Sub AddingAndRemovingTaskLinks()
-	            TestHelper.SetDataDir("ProgrammersGuide/WorkingWithProjects/AddingAndRemovingTaskLinks")
+	        Public Sub ReplacingACalendar()
+	            TestHelper.SetDataDir("ProgrammersGuide/WorkingWithProjects/ReplacingACalendar")
 	
-	            AddingAndRemovingTaskLinksExample.Program.Main()
+	            ReplacingACalendarExample.Program.Main()
         End Sub
 
         <TestMethod(), Test(), Owner("Console")> _
-	        Public Sub DefiningRootTask()
-	            TestHelper.SetDataDir("ProgrammersGuide/WorkingWithProjects/DefiningRootTask")
+	        Public Sub PrintingTaskWritingException()
+	            TestHelper.SetDataDir("ProgrammersGuide/WorkingWithProjects/PrintingTaskWritingException")
 	
-	            DefiningRootTaskExample.Program.Main()
+	            PrintingTaskWritingExceptionExample.Program.Main()
         End Sub
 
         <TestMethod(), Test(), Owner("Console")> _
-	        Public Sub AddingAndRemovingResources()
-	            TestHelper.SetDataDir("ProgrammersGuide/WorkingWithProjects/AddingAndRemovingResources")
+	        Public Sub MicrosoftProjectMPPFileUpdate()
+	            TestHelper.SetDataDir("ProgrammersGuide/WorkingWithProjects/MicrosoftProjectMPPFileUpdate")
 	
-	            AddingAndRemovingResourcesExample.Program.Main()
+	            MicrosoftProjectMPPFileUpdateExample.Program.Main()
         End Sub
 
         <TestMethod(), Test(), Owner("Console")> _
-	        Public Sub WritingResourcesToProject()
-	            TestHelper.SetDataDir("ProgrammersGuide/WorkingWithProjects/WritingResourcesToProject")
+	        Public Sub WritingUpdatedExtendedAttributeDefinitions()
+	            TestHelper.SetDataDir("ProgrammersGuide/WorkingWithProjects/WritingUpdatedExtendedAttributeDefinitions")
 	
-	            WritingResourcesToProjectExample.Program.Main()
+	            WritingUpdatedExtendedAttributeDefinitionsExample.Program.Main()
         End Sub
 
 	End Class

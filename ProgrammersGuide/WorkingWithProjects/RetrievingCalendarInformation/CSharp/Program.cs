@@ -10,6 +10,7 @@ using System.IO;
 using Aspose.Tasks;
 using System.Collections;
 using System;
+using System.Collections.Generic;
 
 namespace RetrievingCalendarInformation
 {
@@ -21,22 +22,18 @@ namespace RetrievingCalendarInformation
             string dataDir = Path.GetFullPath("../../../Data/");
 
             //Create a project reader instance
-            ProjectReader rdr = new ProjectReader();
-
-            //Call the Read method of project reader object to get project object
-            FileStream St = new FileStream(dataDir + "project.mpp", FileMode.Open);
-            Project prj = rdr.Read(St);
-            St.Close();
+            Project project = new Project(dataDir + "project.mpp");
 
             //Retrieve Calendars Information
-            ArrayList alCals = prj.Calendars;
+            CalendarCollection alCals = project.Calendars;
             foreach (Aspose.Tasks.Calendar cal in alCals)
             {
                 if (cal.Name != null)
                 {
                     Console.WriteLine("Calendar UID : " + cal.Uid);
                     Console.WriteLine("Calendar Name : " + cal.Name);
-                    ArrayList alDays = cal.Days;
+
+                    WeekDayCollection alDays = cal.WeekDays;
                     foreach (WeekDay wd in alDays)
                     {
                         TimeSpan ts = wd.GetWorkingTime();
@@ -47,6 +44,8 @@ namespace RetrievingCalendarInformation
                         }
                     }
                 }
+
+
             }
         }
     }

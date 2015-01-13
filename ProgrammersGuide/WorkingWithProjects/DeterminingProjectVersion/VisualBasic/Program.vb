@@ -17,18 +17,9 @@ Namespace DeterminingProjectVersion
 		Public Shared Sub Main(ByVal args() As String)
 			' The path to the documents directory.
 			Dim dataDir As String = Path.GetFullPath("../../../Data/")
-
-			'Create a project reader instance
-			Dim rdr As New ProjectReader()
-
-			'Call read method of project reader object to get project object
-			Dim st As New FileStream(dataDir & "input.xml", FileMode.Open)
-			Dim prj As Project = rdr.Read(st)
-			st.Close()
-
-			'Display project version property
-			Console.WriteLine("Project Version : " & prj.SaveVersion.ToString())
-			Console.WriteLine("Last Saved : " & prj.LastSaved.ToShortDateString())
+			Dim project As New Project(dataDir & "project.mpp")
+			Console.WriteLine("Project Version : " & project.Get(Prj.SaveVersion).ToString())
+			Console.WriteLine("Last Saved : " & project.Get(Prj.LastSaved).ToShortDateString())
 		End Sub
 	End Class
 End Namespace

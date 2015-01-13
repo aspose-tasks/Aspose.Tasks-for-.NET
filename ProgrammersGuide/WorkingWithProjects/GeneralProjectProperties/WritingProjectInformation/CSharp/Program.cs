@@ -8,6 +8,7 @@
 using System.IO;
 
 using Aspose.Tasks;
+using Aspose.Tasks.Saving;
 
 namespace WritingProjectInformationExample
 {
@@ -17,20 +18,14 @@ namespace WritingProjectInformationExample
         {
             // The path to the documents directory.
             string dataDir = Path.GetFullPath("../../../Data/");
-            //Create a project instance
-            Project prj = new Project();
+            Project project = new Project(dataDir+ "project.mpp");
+            project.Set(Prj.Author, "Author");
+            project.Set(Prj.LastAuthor, "Last Author");
+            project.Set(Prj.Revision, 15);
+            project.Set(Prj.Keywords, "MSP Aspose");
+            project.Set(Prj.Comments, "Comments");
 
-            //Set project information properties
-            prj.IsScheduleFromStart = true;
-            prj.StartDate = new System.DateTime(2009, 8, 10);
-            prj.CurrentDate = new System.DateTime(2009, 8, 10);
-            prj.StatusDate = new System.DateTime(2009, 8, 10);
-            Aspose.Tasks.Calendar cal = Aspose.Tasks.Calendar.MakeStandardCalendar();
-            cal.Name = "Standard";
-            prj.Calendars.Add(cal);
-
-            //Save the Project as XML
-            prj.Save(dataDir+ "project3.xml", Aspose.Tasks.Saving.SaveFileFormat.XML);
+            project.Save(dataDir+ "saved.mpp", SaveFileFormat.MPP);
             
         }
     }

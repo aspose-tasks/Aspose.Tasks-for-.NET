@@ -19,23 +19,16 @@ namespace ReadingProjectInformationExample
             string dataDir = Path.GetFullPath("../../../Data/");
 
             //Create a project reader instance
-            ProjectReader rdr = new ProjectReader();
-
-            //Call the read method of project reader object to get project object
-            FileStream St = new FileStream(dataDir+ "input.xml", FileMode.Open);
-            Project prj = rdr.Read(St);
-            St.Close();
-            Aspose.Tasks.Calendar cal = Aspose.Tasks.Calendar.Make24HourCalendar();
-
-            if (prj.IsScheduleFromStart)
-                Console.WriteLine("Project Finish Date : " + prj.StartDate.ToShortDateString());
+            Project project = new Project(dataDir+ "project.mpp");
+            if (project.Get(Prj.ScheduleFromStart))
+                Console.WriteLine("Project Finish Date : " + project.Get(Prj.StartDate).ToShortDateString());
             else
-                Console.WriteLine("Project Finish Date : " + prj.FinishDate.ToShortDateString());
-            string strSchdl = (prj.IsScheduleFromStart) ? "Project Start Date" : "Project Finish Date";
-            Console.WriteLine("Project Schedule From : " + strSchdl);
-            Console.WriteLine("Current Date : " + prj.CurrentDate.ToShortDateString());
-            Console.WriteLine("Status Date : " + prj.StatusDate.ToShortDateString());
-            Console.WriteLine("Calendar : " + cal.Name);
+                Console.WriteLine("Project Finish Date : " + project.Get(Prj.FinishDate).ToShortDateString());
+            Console.WriteLine(project.Get(Prj.Author));
+            Console.WriteLine(project.Get(Prj.LastAuthor));
+            Console.WriteLine(project.Get(Prj.Revision));
+            Console.WriteLine(project.Get(Prj.Keywords));
+            Console.WriteLine(project.Get(Prj.Comments));
             Console.WriteLine("The program has run successfully");
            
         }

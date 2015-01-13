@@ -60,51 +60,32 @@
 - Get Number of Pages in Project
 - Retrieving Outline Codes</Description>
           <FolderName>WorkingWithProjects</FolderName>
-          <Order>2</Order>
+          <Order>1</Order>
           <Examples>
-            <Example>
-              <Title>Creating an Empty Project File</Title>
-              <Description>Aspose.Tasks can open existing files, but it can also create new files. This example explains how to create a new and empty project file from stream or using the ProjectWriter class.</Description>
-              <FolderName>CreatingEmptyProjectFile</FolderName>
-              <Order>1</Order>
-              <DocLink>
-                <DisplayName>Creating an Empty Project File</DisplayName>
-                <Url>Creating+an+Empty+Project+File</Url>
-              </DocLink>
-              <OutputFiles>
-                <DataFile>
-                  <Path>..\Data\Project2.xml</Path>
-                </DataFile>
-                <DataFile>
-                  <Path>..\Data\Project1.xml</Path>
-                </DataFile>
-              </OutputFiles>
-              <Type>Console</Type>
-            </Example>
             <Example>
               <Title>Setting Attributes for New Tasks</Title>
               <Description>With ASpose.Tasks, it is easy to add tasks to projects. This example explains how to add task and set the default start date for new tasks.</Description>
               <FolderName>SettingAttributesForNewTasks</FolderName>
-              <Order>2</Order>
+              <Order>1</Order>
               <DocLink>
                 <DisplayName>Setting Attributes for New Tasks</DisplayName>
                 <Url>Setting+Attributes+for+New+Tasks</Url>
               </DocLink>
-              <OutputFiles>
+              <InputFiles>
                 <DataFile>
-                  <Path>..\Data\project1.xml</Path>
+                  <Path>..\Data\project.xml</Path>
                 </DataFile>
-              </OutputFiles>
+              </InputFiles>
               <Type>Console</Type>
             </Example>
             <Example>
-              <Title>Adding and Removing Tasks</Title>
-              <Description>Projects are made up by a series of tasks with resources (staff or equipment) assigned to them. Aspose.Tasks lets you work with tasks in many different ways. A lot of the time, when you're creating a project, you'll want to add tasks. This example explains how to add and remove tasks from a project.</Description>
-              <FolderName>AddRemoveTasks</FolderName>
-              <Order>3</Order>
+              <Title>Determining Project Version</Title>
+              <Description>Aspose.Tasks lets you retrieve project file information such as the version of Microsoft Project that the file was created with. This example shows how.</Description>
+              <FolderName>DeterminingProjectVersion</FolderName>
+              <Order>2</Order>
               <DocLink>
-                <DisplayName>Adding and Removing Tasks</DisplayName>
-                <Url>Adding+and+Removing+Tasks</Url>
+                <DisplayName>Determining Project Version</DisplayName>
+                <Url>Determining+Project+Version</Url>
               </DocLink>
               <InputFiles>
                 <DataFile>
@@ -114,26 +95,10 @@
               <Type>Console</Type>
             </Example>
             <Example>
-              <Title>Determining Project Version</Title>
-              <Description>Aspose.Tasks lets you retrieve project file information such as the version of Microsoft Project that the file was created with. This example shows how.</Description>
-              <FolderName>DeterminingProjectVersion</FolderName>
-              <Order>4</Order>
-              <DocLink>
-                <DisplayName>Determining Project Version</DisplayName>
-                <Url>Determining+Project+Version</Url>
-              </DocLink>
-              <InputFiles>
-                <DataFile>
-                  <Path>..\Data\input.xml</Path>
-                </DataFile>
-              </InputFiles>
-              <Type>Console</Type>
-            </Example>
-            <Example>
               <Title>Default Project Properties</Title>
               <Description>Microsoft Project lets users set default project properties that speed up the process of setting up a project. The default properties define when a new task starts and finishes, sets the default overtime and standard pay rates and more. Aspose.Tasks supports these features. This example explains both how to read default properties and how to write default properties to a project file.</Description>
               <FolderName>DefaultProjectProperties</FolderName>
-              <Order>6</Order>
+              <Order>4</Order>
               <DocLink>
                 <DisplayName>Default Project Properties</DisplayName>
                 <Url>Default+Project+Properties</Url>
@@ -143,18 +108,13 @@
                   <Path>..\Data\project.mpp</Path>
                 </DataFile>
               </InputFiles>
-              <OutputFiles>
-                <DataFile>
-                  <Path>..\Data\project.xml</Path>
-                </DataFile>
-              </OutputFiles>
               <Type>Console</Type>
             </Example>
             <Example>
               <Title>Writing MPP Project Summary Information</Title>
               <Description>Most programs save summary information with the files they save. Microsoft Project is no different. As well as the name of the author, the date the project was created and the last time it was edited and saved, it saves keywords, subject, comments and more. Aspose.Tasks lets you both read and write this type of information. This example explains how to open a project file, set the summary information and save it again.</Description>
               <FolderName>WriteMPPProjectSummary</FolderName>
-              <Order>7</Order>
+              <Order>5</Order>
               <DocLink>
                 <DisplayName>Writing MPP Project Summary Information</DisplayName>
                 <Url>Writing+MPP+Project+Summary+Information</Url>
@@ -166,49 +126,7 @@
               </InputFiles>
               <OutputFiles>
                 <DataFile>
-                  <Path>..\Data\MPPAspose.xml</Path>
-                </DataFile>
-              </OutputFiles>
-              <Type>Console</Type>
-            </Example>
-            <Example>
-              <Title>Fiscal Year Properties</Title>
-              <Description>The fiscal year is the same as a financial year, or budget year. It is the dates between which an country, an organization or an individual calculates budgets and taxes. Microsoft Project lets users define a fiscal year for projects. Aspose.Tasks supports this functionality with properties that allow developers to both read fiscal year properties from existing projects, and set fiscal year properties when creating or working with projects.</Description>
-              <FolderName>FiscalYearProperties</FolderName>
-              <Order>8</Order>
-              <DocLink>
-                <DisplayName>Fiscal Year Properties</DisplayName>
-                <Url>Fiscal+Year+Properties</Url>
-              </DocLink>
-              <InputFiles>
-                <DataFile>
-                  <Path>..\Data\project.mpp</Path>
-                </DataFile>
-              </InputFiles>
-              <OutputFiles>
-                <DataFile>
-                  <Path>..\Data\savedProject.xml</Path>
-                </DataFile>
-              </OutputFiles>
-              <Type>Console</Type>
-            </Example>
-            <Example>
-              <Title>Weekday Properties</Title>
-              <Description>Microsoft Project lets users set a number of different weekday properties, for example what day a week starts on and how many working days are in a month. Aspose.Tasks support these features through a number of properties that can be used both to read weekday properties and to write them to a project.</Description>
-              <FolderName>WeekdayProperties</FolderName>
-              <Order>9</Order>
-              <DocLink>
-                <DisplayName>Weekday Properties</DisplayName>
-                <Url>Weekday+Properties</Url>
-              </DocLink>
-              <InputFiles>
-                <DataFile>
-                  <Path>..\Data\project.mpp</Path>
-                </DataFile>
-              </InputFiles>
-              <OutputFiles>
-                <DataFile>
-                  <Path>..\Data\savedProject.xml</Path>
+                  <Path>..\Data\saved.mpp</Path>
                 </DataFile>
               </OutputFiles>
               <Type>Console</Type>
@@ -217,7 +135,7 @@
               <Title>Reading Project Files</Title>
               <Description>The Read method exposed by the ProjectReader class is used to read project files. The Read method accepts a valid FileStream object in MPP or XML format and returns a Project object which can be used to manipulate project data.</Description>
               <FolderName>ReadingProjectFiles</FolderName>
-              <Order>10</Order>
+              <Order>6</Order>
               <DocLink>
                 <DisplayName>Reading Project Files</DisplayName>
                 <Url>http://www.aspose.com/docs/display/tasksnet/Reading+a+Project+File</Url>
@@ -233,7 +151,7 @@
               <Title>Retrieving Calendar Information</Title>
               <Description>Microsoft Project lets users associate a variety of different calendars with working time, tasks and resources. These features are also available in Aspose.Tasks. This example explains how to retrieve information about which calendars are used in a project. Aspose.Tasks can retrieve calendar information for all versions of Microsoft Project: 2003, 2007, 2010, and 2013.</Description>
               <FolderName>RetrievingCalendarInformation</FolderName>
-              <Order>12</Order>
+              <Order>8</Order>
               <DocLink>
                 <DisplayName>Retrieving Calendar Information</DisplayName>
                 <Url>Retrieving+Calendar+Information</Url>
@@ -246,13 +164,24 @@
               <Type>Console</Type>
             </Example>
             <Example>
-              <Title>Retrieving Task Information</Title>
-              <Description>Projects are typically broken down into tasks, discreet units of work. Microsoft Project stored information about tasks, the task's name, when it will start and when it will finish. This example explains how to retrieve information for all the tasks in a project.</Description>
-              <FolderName>RetrievingTaskInformation</FolderName>
+              <Title>GetObjectByField Methods</Title>
+              <Description>In this example, we will see how we can use a series of methods exposed by the Project class that let you get an object - a calendar, task or resource, - by a given field - name, UID or ID using Aspose.Tasks for .NET.</Description>
+              <FolderName>GetObjectByFieldMethods</FolderName>
+              <Order>12</Order>
+              <DocLink>
+                <DisplayName>GetObjectByField Methods</DisplayName>
+                <Url>http://www.aspose.com/docs/display/tasksnet/GetObjectByField+Methods</Url>
+              </DocLink>
+              <Type>Console</Type>
+            </Example>
+            <Example>
+              <Title>Extended Attributes</Title>
+              <Description>In this example, we will see how we can set the extended attributes of a resource using Aspose.Tasks for .NET.</Description>
+              <FolderName>ExtendedAttributes</FolderName>
               <Order>13</Order>
               <DocLink>
-                <DisplayName>Retrieving Task Information</DisplayName>
-                <Url>Retrieving+Task+Information</Url>
+                <DisplayName>Extended Attributes</DisplayName>
+                <Url>http://www.aspose.com/docs/display/tasksnet/Extended+Attributes</Url>
               </DocLink>
               <InputFiles>
                 <DataFile>
@@ -262,102 +191,90 @@
               <Type>Console</Type>
             </Example>
             <Example>
-              <Title>Writing Tasks to Project</Title>
-              <Description>Projects are made up by tasks. This example explains how to write tasks to a project with Aspose.Tasks for .NET.</Description>
-              <FolderName>WritingTasksToProject</FolderName>
+              <Title>Calculate Critical Path</Title>
+              <Description>The critical path are the tasks, or task, that ultimately determine when your project will end. Keeping track of the critical path and the resources assigned to them helps keep the project on time.
+
+In this example, we will see how we can calculate the critical path of the project using Aspose.Tasks for .NET.</Description>
+              <FolderName>CalculateCriticalPath</FolderName>
               <Order>14</Order>
               <DocLink>
-                <DisplayName>Writing Tasks to Project</DisplayName>
-                <Url>Writing+Tasks+to+Project</Url>
+                <DisplayName>Calculate Critical Path</DisplayName>
+                <Url>http://www.aspose.com/docs/display/tasksnet/Calculate+Critical+Path</Url>
               </DocLink>
-              <OutputFiles>
+              <InputFiles>
                 <DataFile>
-                  <Path>..\Data\project.xml</Path>
+                  <Path>..\Data\project.mpp</Path>
                 </DataFile>
-              </OutputFiles>
+              </InputFiles>
               <Type>Console</Type>
             </Example>
             <Example>
-              <Title>Retrieving Task Links</Title>
-              <Description>Task links indicate that one task depends on another. In Microsoft Project Gantt charts, links are shown by lines that links two tasks together, or as a list of precedents. Aspose.Tasks support task links and you can use the API to add and remove task links. This article shows how to retrieve task links, essentially a list of predecessors and successors, and write them to a console window. Aspose.Tasks can retrieve Task Links information for all versions of Microsoft Project: 2003, 2007, 2010, and 2013.</Description>
-              <FolderName>RetrievingTaskLinks</FolderName>
+              <Title>Replacing A Calendar</Title>
+              <Description>Calendars are used to see whether resources are available, and when tasks are scheduled. There are different types of calendars. This article looks at how to replace a base calendar, that is, the calendar used for projects and tasks, with another one. 
+
+In this example, we will see how we can replace an existing calendar with a new standard calendar using Aspose.Tasks for .NET.</Description>
+              <FolderName>ReplacingACalendar</FolderName>
               <Order>15</Order>
               <DocLink>
-                <DisplayName>Retrieving Task Links</DisplayName>
-                <Url>Retrieving+Task+Links</Url>
+                <DisplayName>Replacing a Calendar</DisplayName>
+                <Url>http://www.aspose.com/docs/display/tasksnet/Replacing+a+Calendar</Url>
               </DocLink>
-              <InputFiles>
-                <DataFile>
-                  <Path>..\Data\project.mpp</Path>
-                </DataFile>
-              </InputFiles>
               <Type>Console</Type>
             </Example>
             <Example>
-              <Title>Adding and Removing Task Links</Title>
-              <Description>Tasks are linked to show that tasks are dependent on each other. For example, task 2 cannot start until task 1 has been completed. In Microsoft Project, task links are shown as lines that connect links in a Gantt chart, or as a list of predecessors. Aspose.Tasks fully supports task links. This article explains how to add and remove task links with Aspose.Tasks.</Description>
-              <FolderName>AddingAndRemovingTaskLinks</FolderName>
+              <Title>Printing The TaskWritingException</Title>
+              <Description>In this example, we will see how we can print a message when there's an exception writing a task using Aspose.Tasks for .NET.</Description>
+              <FolderName>PrintingTaskWritingException</FolderName>
               <Order>16</Order>
               <DocLink>
-                <DisplayName>Adding and Removing Task Links</DisplayName>
-                <Url>Adding+and+Removing+Task+Links</Url>
+                <DisplayName>Printing the TaskWritingException</DisplayName>
+                <Url>http://www.aspose.com/docs/display/tasksnet/Printing+the+TaskWritingException</Url>
               </DocLink>
               <InputFiles>
                 <DataFile>
                   <Path>..\Data\project.mpp</Path>
                 </DataFile>
               </InputFiles>
-              <OutputFiles>
-                <DataFile>
-                  <Path>..\Data\project.xml</Path>
-                </DataFile>
-              </OutputFiles>
               <Type>Console</Type>
             </Example>
             <Example>
-              <Title>Defining Root Task</Title>
-              <Description>In Microsoft Project, the root task is the parent task of all other tasks in a project. It is central to managing tasks. Aspose.Tasks lets you define a root task in a project and work with its children.</Description>
-              <FolderName>DefiningRootTask</FolderName>
+              <Title>Microsoft Project MPP File Update</Title>
+              <Description>In this example, we will see how we can add a new task to an existing Microsoft Project 2010 file and save it back to the same file using Aspose.Tasks for .NET.</Description>
+              <FolderName>MicrosoftProjectMPPFileUpdate</FolderName>
               <Order>17</Order>
               <DocLink>
-                <DisplayName>Defining Root Task</DisplayName>
-                <Url>Defining+Root+Task</Url>
-              </DocLink>
-              <OutputFiles>
-                <DataFile>
-                  <Path>..\Data\project.xml</Path>
-                </DataFile>
-              </OutputFiles>
-              <Type>Console</Type>
-            </Example>
-            <Example>
-              <Title>Adding and Removing Resources</Title>
-              <Description>In Microsoft Project, resources are the staff and equipment needed to complete a task. Aspose.Tasks lets you work with resources from within your own applications. This article explains how to add and remove resources from a project file.</Description>
-              <FolderName>AddingAndRemovingResources</FolderName>
-              <Order>18</Order>
-              <DocLink>
-                <DisplayName>Adding and Removing Resources</DisplayName>
-                <Url>Adding+and+Removing+Resources</Url>
+                <DisplayName>Microsoft Project MPP File Update</DisplayName>
+                <Url>http://www.aspose.com/docs/display/tasksnet/Microsoft+Project+MPP+File+Update</Url>
               </DocLink>
               <InputFiles>
                 <DataFile>
                   <Path>..\Data\project.mpp</Path>
                 </DataFile>
               </InputFiles>
+              <OutputFiles>
+                <DataFile>
+                  <Path>..\Data\AfterLinking.Mpp</Path>
+                </DataFile>
+              </OutputFiles>
               <Type>Console</Type>
             </Example>
             <Example>
-              <Title>Writing Resources to Project</Title>
-              <Description>In Microsoft Project, resources are the staff or equipment needed to complete a task. Aspose.Tasks has many features that lets you work with resources. This article focuses on how to write resources to a project.</Description>
-              <FolderName>WritingResourcesToProject</FolderName>
-              <Order>19</Order>
+              <Title>Writing Updated Extended Attribute Definitions And Values To MPP</Title>
+              <Description>In this example, we will see how we can set the extended attributes of a resource using Aspose.Tasks for .NET.</Description>
+              <FolderName>WritingUpdatedExtendedAttributeDefinitions</FolderName>
+              <Order>18</Order>
               <DocLink>
-                <DisplayName>Writing Resources to Project</DisplayName>
-                <Url>Writing+Resources+to+Project</Url>
+                <DisplayName>Writing Updated Extended Attribute Definitions and Values to MPP</DisplayName>
+                <Url>http://www.aspose.com/docs/display/tasksnet/Writing+Updated+Extended+Attribute+Definitions+and+Values+to+MPP</Url>
               </DocLink>
+              <InputFiles>
+                <DataFile>
+                  <Path>..\Data\project.mpp</Path>
+                </DataFile>
+              </InputFiles>
               <OutputFiles>
                 <DataFile>
-                  <Path>..\Data\project.xml</Path>
+                  <Path>..\Data\Output.mpp</Path>
                 </DataFile>
               </OutputFiles>
               <Type>Console</Type>
@@ -373,11 +290,11 @@ This section include the following examples:
 1: Read Currency Properties
 2: Set Currecncy Properties</Description>
               <FolderName>CurrencyProperties</FolderName>
-              <Order>11</Order>
+              <Order>3</Order>
               <Examples>
                 <Example>
                   <Title>Reading Currency Properties</Title>
-                  <Description>The example explains how to read a project's currency properties using Aspose.Tasks</Description>
+                  <Description>The example explains how to read a project's currency properties using Aspose.Tasks for .NET.</Description>
                   <FolderName>ReadingCurrencyProperties</FolderName>
                   <Order>1</Order>
                   <DocLink>
@@ -392,14 +309,19 @@ This section include the following examples:
                   <Type>Console</Type>
                 </Example>
                 <Example>
-                  <Title>Set Currency Properties</Title>
+                  <Title>Writing Currency Properties</Title>
                   <Description>The example explains how to set currency properties using Aspose.Tasks</Description>
-                  <FolderName>SetCurrencyProperties</FolderName>
+                  <FolderName>WritingCurrencyProperties</FolderName>
                   <Order>2</Order>
                   <DocLink>
                     <DisplayName>Currency Properties</DisplayName>
                     <Url>Currency+Properties</Url>
                   </DocLink>
+                  <InputFiles>
+                    <DataFile>
+                      <Path>..\Data\project.mpp</Path>
+                    </DataFile>
+                  </InputFiles>
                   <OutputFiles>
                     <DataFile>
                       <Path>..\Data\project.xml</Path>
@@ -416,7 +338,7 @@ This section include the following examples:
  - Reading Project Information
  - Writing Project Information</Description>
               <FolderName>GeneralProjectProperties</FolderName>
-              <Order>5</Order>
+              <Order>7</Order>
               <Examples>
                 <Example>
                   <Title>Reading Project Information</Title>
@@ -429,7 +351,7 @@ This section include the following examples:
                   </DocLink>
                   <InputFiles>
                     <DataFile>
-                      <Path>..\Data\input.xml</Path>
+                      <Path>..\Data\project.mpp</Path>
                     </DataFile>
                   </InputFiles>
                   <Type>Console</Type>
@@ -443,891 +365,195 @@ This section include the following examples:
                     <DisplayName>General Project Properties</DisplayName>
                     <Url>http://www.aspose.com/docs/display/tasksnet/General+Project+Properties</Url>
                   </DocLink>
+                  <InputFiles>
+                    <DataFile>
+                      <Path>..\Data\project.mpp</Path>
+                    </DataFile>
+                  </InputFiles>
                   <OutputFiles>
                     <DataFile>
                       <Path>..\Data\project3.xml</Path>
                     </DataFile>
-                  </OutputFiles>
-                  <Type>Console</Type>
-                </Example>
-              </Examples>
-            </Folder>
-          </Folders>
-        </Folder>
-        <Folder>
-          <Title>Working with Tasks</Title>
-          <Description>This section includes the following examples:
-
-1: Creating tasks
-2: Reading and writing general properties
-3: Tasks and calendars
-4: Handling constraints on tasks
-5: Actual properties
-6: Managing durations
-7: Calculating split task finish date
-8: Managing estimated / milestone tasks
-9: Handling critical / effort driven tasks
-10:Outline properties of a task
-11:Handling priorities
-12:Stop and resume a task
-13:WBS associated with a task
-14:Handling variances
-15:Managing task costs
-16:Parent / child tasks
-17:Split tasks
-18:Overtimes in tasks
-19:Percentages calculations
-20:Extended attributes of a task
-21:Calculate Duration in Different Formats
-22:Read Timephased Data of a Task
-23:Change Progress of a Task</Description>
-          <FolderName>WorkingWithTasks</FolderName>
-          <Order>3</Order>
-          <Examples>
-            <Example>
-              <Title>Creating Tasks</Title>
-              <Description>A project is, essentially, made up by a number of tasks, each of which has to be completed for the project to be completed. When working with project files, adding tasks is an important activity. Tasks are often linked to other tasks, to indicate dependency, and typically have a set duration. Aspose.Project lets developers create tasks and define, at the time of creation, their name, and children or duration.</Description>
-              <FolderName>CreatingTasks</FolderName>
-              <Order>1</Order>
-              <DocLink>
-                <DisplayName>Creating Tasks</DisplayName>
-                <Url>Creating+Tasks</Url>
-              </DocLink>
-              <OutputFiles>
-                <DataFile>
-                  <Path>..\Data\Project.Xml</Path>
-                </DataFile>
-              </OutputFiles>
-              <Type>Console</Type>
-            </Example>
-            <Example>
-              <Title>Adding a New Task</Title>
-              <Description>Projects are made up of tasks and resources. Once you have created a project, add tasks to it to start building up the complete project plan.</Description>
-              <FolderName>AddingNewTask</FolderName>
-              <Order>2</Order>
-              <DocLink>
-                <DisplayName>Adding a New Task</DisplayName>
-                <Url>http://www.aspose.com/docs/display/tasksnet/Adding+a+New+Task</Url>
-              </DocLink>
-              <OutputFiles>
-                <DataFile>
-                  <Path>..\Data\AddingANewTask.Xml</Path>
-                </DataFile>
-              </OutputFiles>
-              <Type>Console</Type>
-            </Example>
-            <Example>
-              <Title>Managing Durations</Title>
-              <Description>Tasks take time: they have a duration. Realistic task durations help give a realistic project end date. Aspose.Tasks allows developers set task durations in projects.</Description>
-              <FolderName>ManagingDurations</FolderName>
-              <Order>6</Order>
-              <DocLink>
-                <DisplayName>Managing Durations</DisplayName>
-                <Url>http://www.aspose.com/docs/display/tasksnet/Managing+Durations</Url>
-              </DocLink>
-              <OutputFiles>
-                <DataFile>
-                  <Path>..\Data\ManagaingDurations.Xml</Path>
-                </DataFile>
-              </OutputFiles>
-              <Type>Console</Type>
-            </Example>
-            <Example>
-              <Title>Actual Properties</Title>
-              <Description>The actual properties are used to find out how much time or money has been sent on a task to date.</Description>
-              <FolderName>ActualProperties</FolderName>
-              <Order>7</Order>
-              <DocLink>
-                <DisplayName>Actual Properties</DisplayName>
-                <Url>Actual+Properties</Url>
-              </DocLink>
-              <InputFiles>
-                <DataFile>
-                  <Path>..\Data\project.mpp</Path>
-                </DataFile>
-              </InputFiles>
-              <Type>Console</Type>
-            </Example>
-          </Examples>
-          <Folders>
-            <Folder>
-              <Title>Reading and Writing General Properties</Title>
-              <Description>Tasks can be identified by a number of general properties, such as name, ID, start and finish date. Aspose.Tasks can be used to get and set task properties when working with projects. This section includes the following examples:
-
-1: Setting General Properties
-2: Getting General Properties</Description>
-              <FolderName>ReadingAndWritingGeneralProperties</FolderName>
-              <Order>3</Order>
-              <Examples>
-                <Example>
-                  <Title>Setting General Properties</Title>
-                  <Description>The Task exposes a number of general properties. This example shows how to set some of those properties using Aspose.Tasks.</Description>
-                  <FolderName>SettingGeneralProperties</FolderName>
-                  <Order>1</Order>
-                  <DocLink>
-                    <DisplayName>Reading and Writing General Properties</DisplayName>
-                    <Url>Reading+and+Writing+General+Properties</Url>
-                  </DocLink>
-                  <OutputFiles>
                     <DataFile>
-                      <Path>..\Data\Project.Xml</Path>
+                      <Path>..\Data\saved.mpp</Path>
                     </DataFile>
                   </OutputFiles>
-                  <Type>Console</Type>
-                </Example>
-                <Example>
-                  <Title>Getting General Properties</Title>
-                  <Description>In this example we will get task's properties by traversing the children of the project's RootTask property.</Description>
-                  <FolderName>GettingGeneralProperties</FolderName>
-                  <Order>2</Order>
-                  <DocLink>
-                    <DisplayName>Reading and Writing General Properties</DisplayName>
-                    <Url>Reading+and+Writing+General+Properties</Url>
-                  </DocLink>
-                  <InputFiles>
-                    <DataFile>
-                      <Path>..\Data\project.mpp</Path>
-                    </DataFile>
-                  </InputFiles>
                   <Type>Console</Type>
                 </Example>
               </Examples>
             </Folder>
             <Folder>
-              <Title>Tasks and Calendars</Title>
-              <Description>It is possible to associate calendars with particular tasks in Microsoft Project. Aspose.Task supports this functionality as well. The Task class exposes the Calendar property, used to set or get the calendar associated with a task. This property accepts or returns an Aspose.Tasks.Calendar object.</Description>
-              <FolderName>TasksAndCalendars</FolderName>
-              <Order>4</Order>
+              <Title>Creating An Empty Project File</Title>
+              <Description>This section includes the following topics:
+
+ - Create an Empty Project And Saving as XML File
+ - Create an Emptry Project and Save to Stream</Description>
+              <FolderName>CreatingEmptyProjectFile</FolderName>
+              <Order>9</Order>
               <Examples>
                 <Example>
-                  <Title>Setting Task Calendar</Title>
-                  <Description>Using Aspose.Tasks, create a standard calendar and create a task. Assign the Calendar to the task.</Description>
-                  <FolderName>SettingTaskCalendar</FolderName>
+                  <Title>Create An Empty Project And Saving As XML File</Title>
+                  <Description>In this example, we will see how we can create a new and empty project file using Aspose.Tasks for .NET.</Description>
+                  <FolderName>CreateEmptyProjectAndSaveXMLFile</FolderName>
                   <Order>1</Order>
                   <DocLink>
-                    <DisplayName>Tasks and Calendars</DisplayName>
-                    <Url>Tasks+and+Calendars</Url>
+                    <DisplayName>Creating an Empty Project File</DisplayName>
+                    <Url>http://www.aspose.com/docs/display/tasksnet/Creating+an+Empty+Project+File</Url>
                   </DocLink>
                   <OutputFiles>
                     <DataFile>
-                      <Path>..\Data\Project.Xml</Path>
+                      <Path>..\Data\saved.xml</Path>
                     </DataFile>
                   </OutputFiles>
                   <Type>Console</Type>
                 </Example>
                 <Example>
-                  <Title>Getting Task Calendar</Title>
-                  <Description>To get a task calendar, traverse the tasks in a project using Aspose.Tasks.</Description>
-                  <FolderName>GettingTaskCalendar</FolderName>
+                  <Title>Create An Empty Project And Save To Stream</Title>
+                  <Description>In this example, we will see how we can create an empty project and save the file to stream using Aspsoe.Tasks for .NET.</Description>
+                  <FolderName>CreateEmptyProjectSavetoStream</FolderName>
                   <Order>2</Order>
                   <DocLink>
-                    <DisplayName>Tasks and Calendars</DisplayName>
-                    <Url>Tasks+and+Calendars</Url>
+                    <DisplayName>Creating an Empty Project File</DisplayName>
+                    <Url>http://www.aspose.com/docs/display/tasksnet/Creating+an+Empty+Project+File</Url>
                   </DocLink>
-                  <InputFiles>
+                  <OutputFiles>
                     <DataFile>
-                      <Path>..\Data\project.mpp</Path>
+                      <Path>..\Data\Project1.xml</Path>
                     </DataFile>
-                  </InputFiles>
+                  </OutputFiles>
                   <Type>Console</Type>
                 </Example>
               </Examples>
             </Folder>
             <Folder>
-              <Title>Handling Task Constraints</Title>
-              <Description>Task constraints are used to define a Microsoft Project project's schedule and define when tasks should be started or finished. Constraints can be flexible - start or end as soon as possible or as late as possible - or inflexible. Inflexible constraints are tied to specific dates.</Description>
-              <FolderName>HandlingTaskConstraints</FolderName>
-              <Order>5</Order>
-              <Examples>
-                <Example>
-                  <Title>Setting Constraints</Title>
-                  <Description>In this example, we will see how to apply different constraints on tasks using Aspose.Tasks.</Description>
-                  <FolderName>SettingConstraints</FolderName>
-                  <Order>1</Order>
-                  <DocLink>
-                    <DisplayName>Handling Task Constraints</DisplayName>
-                    <Url>Handling+Task+Constraints</Url>
-                  </DocLink>
-                  <InputFiles>
-                    <DataFile>
-                      <Path>..\Data\project.mpp</Path>
-                    </DataFile>
-                  </InputFiles>
-                  <OutputFiles>
-                    <DataFile>
-                      <Path>..\Data\output.pdf</Path>
-                    </DataFile>
-                  </OutputFiles>
-                  <Type>Console</Type>
-                </Example>
-                <Example>
-                  <Title>Getting Constraints</Title>
-                  <Description>In this example we demonstrate how to get the constraint information of a task using Aspose.Tasks.</Description>
-                  <FolderName>GettingConstraints</FolderName>
-                  <Order>2</Order>
-                  <DocLink>
-                    <DisplayName>Handling Task Constraints</DisplayName>
-                    <Url>Handling+Task+Constraints</Url>
-                  </DocLink>
-                  <InputFiles>
-                    <DataFile>
-                      <Path>..\Data\project.mpp</Path>
-                    </DataFile>
-                  </InputFiles>
-                  <Type>Console</Type>
-                </Example>
-              </Examples>
-            </Folder>
-          </Folders>
-        </Folder>
-        <Folder>
-          <Title>Working with Calendars</Title>
-          <Description>This section includes the following examples: 
+              <Title>Fiscal Year Properties</Title>
+              <Description>This section includes the following topics:
 
-- Creating a Calendar
-- Making a Standard Calendar
-- General Calendar Properties
-- Defining Weekdays for Calendar
-- Getting Working Hours On or Between Dates
-- Writing Updated Calendar Data to MPP</Description>
-          <FolderName>WorkingWithCalendars</FolderName>
-          <Order>4</Order>
-          <Examples>
-            <Example>
-              <Title>Creating a Calendar</Title>
-              <Description>Calendars, and other information, is used by Microsoft Project to build project schedules. With Aspose.Tasks, adding a calendar to a project is easy. The Calendar class constructors allow you to assign an ID or a calendar name to the calendar, or use the default constructor.</Description>
-              <FolderName>CreatingACalendar</FolderName>
-              <Order>1</Order>
-              <DocLink>
-                <DisplayName>Creating a Calendar</DisplayName>
-                <Url>Creating+a+Calendar</Url>
-              </DocLink>
-              <OutputFiles>
-                <DataFile>
-                  <Path>..\Data\Project.Xml</Path>
-                </DataFile>
-              </OutputFiles>
-              <Type>Console</Type>
-            </Example>
-            <Example>
-              <Title>Making a Standard Calendar</Title>
-              <Description>A standard calendar provides the most common work days, work hours and holidays. By default, a standard calendar is added whenever a project is created using Microsoft Project. Aspose.Tasks has features for defining a standard calendar for a project.</Description>
-              <FolderName>MakingAStandardCalendar</FolderName>
-              <Order>2</Order>
-              <DocLink>
-                <DisplayName>Making a Standard Calendar</DisplayName>
-                <Url>Making+a+Standard+Calendar</Url>
-              </DocLink>
-              <OutputFiles>
-                <DataFile>
-                  <Path>..\Data\Project.Xml</Path>
-                </DataFile>
-              </OutputFiles>
-              <Type>Console</Type>
-            </Example>
-            <Example>
-              <Title>Defining Weekdays for Calendar</Title>
-              <Description>Microsoft Project keeps track of which days are considered weekdays in a calendar so that it can calculate project end dates and so on. Aspose.Tasks allows developers to define weekdays for a calendar associated with a project.</Description>
-              <FolderName>DefiningWeekdays</FolderName>
-              <Order>3</Order>
-              <DocLink>
-                <DisplayName>Defining Weekdays for Calendar</DisplayName>
-                <Url>Defining+Weekdays+for+Calendar</Url>
-              </DocLink>
-              <OutputFiles>
-                <DataFile>
-                  <Path>..\Data\Project.Xml</Path>
-                </DataFile>
-              </OutputFiles>
-              <Type>Console</Type>
-            </Example>
-            <Example>
-              <Title>Getting Working Hours On or Between Dates</Title>
-              <Description>Working hours are typically defined as a range of hours over a day, on specific days of the week. For example, 09:00 – 17:00, Monday to Friday. With Aspose.Tasks, it is possible to calculate the number of working hours that fall on a date, or between two dates. Finding out the number of working dates between two dates help project managers figure out whether there are enough hours to get work done, or if they need to find more resources to complete a task.</Description>
-              <FolderName>GettingWorkingHours</FolderName>
-              <Order>4</Order>
-              <DocLink>
-                <DisplayName>Getting Working Hours On or Between Dates</DisplayName>
-                <Url>Getting+Working+Hours+On+or+Between+Dates</Url>
-              </DocLink>
-              <InputFiles>
-                <DataFile>
-                  <Path>..\Data\project.mpp</Path>
-                </DataFile>
-              </InputFiles>
-              <Type>Console</Type>
-            </Example>
-          </Examples>
-        </Folder>
-        <Folder>
-          <Title>Working with Task Links</Title>
-          <Description>This section includes the following examples:
-
-
-- Creating a task link
-- Defining link type
-- Predecessor / successor tasks
-- Cross project predecessors
-- Identify tasks through cross projects</Description>
-          <FolderName>WorkingWithTaskLinks</FolderName>
-          <Order>5</Order>
-          <Examples>
-            <Example>
-              <Title>Creating a task link</Title>
-              <Description>A task link is created using the default constructor (TaskLink) which accepts three parameters:
- 
-1.The first parameter defines the predecessor Task,
-2.the second parameter defines the successor Task and, finally,
-3.the third parameter defines the task link type from values specified by the TaskLinkType enumeration type.</Description>
-              <FolderName>CreatingATaskLink</FolderName>
-              <Order>1</Order>
-              <DocLink>
-                <DisplayName>Creating a task link</DisplayName>
-                <Url>Creating+a+Task+Link</Url>
-              </DocLink>
-              <OutputFiles>
-                <DataFile>
-                  <Path>..\Data\Project.Xml</Path>
-                </DataFile>
-              </OutputFiles>
-              <Type>Console</Type>
-            </Example>
-            <Example>
-              <Title>Defining link type</Title>
-              <Description>The LinkType property exposed by the TaskLink class is used to retrieve or define the type of link between two tasks. It reads and writes one of the values defined by the TaskLinkType enumeration type.</Description>
-              <FolderName>DefiningLinkType</FolderName>
-              <Order>2</Order>
-              <DocLink>
-                <DisplayName>Defining link type</DisplayName>
-                <Url>Defining+Link+Type</Url>
-              </DocLink>
-              <OutputFiles>
-                <DataFile>
-                  <Path>..\Data\Project.xml</Path>
-                </DataFile>
-              </OutputFiles>
-              <Type>Console</Type>
-            </Example>
-            <Example>
-              <Title>Predecessor and successor tasks</Title>
-              <Description>The PredTask and SuccTask properties exposed by the TaskLink class are used to define the predecessor and successor tasks for a TaskLink. Both of these properties read and write a Task object.</Description>
-              <FolderName>PredecessorSuccessorTasks</FolderName>
-              <Order>3</Order>
-              <DocLink>
-                <DisplayName>Predecessor and successor tasks</DisplayName>
-                <Url>Predecessor+and+Successor+Tasks</Url>
-              </DocLink>
-              <InputFiles>
-                <DataFile>
-                  <Path>..\Data\project.mpp</Path>
-                </DataFile>
-              </InputFiles>
-              <Type>Console</Type>
-            </Example>
-            <Example>
-              <Title>Cross Project Predecessors</Title>
-              <Description>Microsoft Project lets users link tasks within the current project, or to external projects. Cross project predecessors are predecessors from another project. Aspose.Tasks support these too.</Description>
-              <FolderName>CrossProjectPredecessors</FolderName>
-              <Order>4</Order>
-              <DocLink>
-                <DisplayName>Cross Project Predecessors</DisplayName>
-                <Url>Cross+Project+Predecessors</Url>
-              </DocLink>
-              <InputFiles>
-                <DataFile>
-                  <Path>..\Data\project.mpp</Path>
-                </DataFile>
-              </InputFiles>
-              <Type>Console</Type>
-            </Example>
-            <Example>
-              <Title>Identify Cross-Project Tasks</Title>
-              <Description>In this example, we will see that how to find the original and external ID of a task using Aspose.Tasks.</Description>
-              <FolderName>IdentifyCrossProjectTasks</FolderName>
-              <Order>5</Order>
-              <DocLink>
-                <DisplayName>Identify Cross-Project Tasks</DisplayName>
-                <Url>Identify+Cross-Project+Tasks</Url>
-              </DocLink>
-              <InputFiles>
-                <DataFile>
-                  <Path>..\Data\project.mpp</Path>
-                </DataFile>
-              </InputFiles>
-              <Type>Console</Type>
-            </Example>
-          </Examples>
-        </Folder>
-        <Folder>
-          <Title>Working With Task Baselines</Title>
-          <Description>This section includes the following topics:
-
- - Creating a Task Baseline
- - Task Baseline Duration
- - Baseline Task Scheduling</Description>
-          <FolderName>WorkingWithTaskBaselines</FolderName>
-          <Order>6</Order>
-          <Examples>
-            <Example>
-              <Title>Creating A Task Baseline</Title>
-              <Description>In this example, we will see how to create a task baseline using Aspose.Tasks.</Description>
-              <FolderName>CreatingATaskBaseline</FolderName>
-              <Order>1</Order>
-              <DocLink>
-                <DisplayName>Creating a Task Baseline</DisplayName>
-                <Url>Creating+a+Task+Baseline</Url>
-              </DocLink>
-              <Type>Console</Type>
-            </Example>
-            <Example>
-              <Title>Task Baseline Duration</Title>
-              <Description>In this example, we will see that how we can get task baseline duration using Aspose.Tasks</Description>
-              <FolderName>TaskBaselineDuration</FolderName>
-              <Order>2</Order>
-              <DocLink>
-                <DisplayName>Task Baseline Duration</DisplayName>
-                <Url>Task+Baseline+Duration</Url>
-              </DocLink>
-              <InputFiles>
-                <DataFile>
-                  <Path>..\Data\project.mpp</Path>
-                </DataFile>
-              </InputFiles>
-              <Type>Console</Type>
-            </Example>
-            <Example>
-              <Title>Baseline Task Scheduling</Title>
-              <Description>In this example, we will see that how we can get task baseline schedule using Aspose.Tasks.</Description>
-              <FolderName>BaselineTaskScheduling</FolderName>
-              <Order>3</Order>
-              <DocLink>
-                <DisplayName>Baseline Task Scheduling</DisplayName>
-                <Url>Baseline+Task+Scheduling</Url>
-              </DocLink>
-              <InputFiles>
-                <DataFile>
-                  <Path>..\Data\project.mpp</Path>
-                </DataFile>
-              </InputFiles>
-              <Type>Console</Type>
-            </Example>
-          </Examples>
-        </Folder>
-        <Folder>
-          <Title>Working With Resources</Title>
-          <Description>This section includes the following topics:
-
- - Creating Resources
- - Reading and Writing General Resource Properties
- - Resource and Calendars
- - Overtimes for a Resource
- - Resource Cost
- - Percentage Calculations
- - Extended Resource Attributes
- - Read Timephased Data of a Resource
- - Writing Updated Resource Data Back to MPP
- - Rendering Resource Usage View
- - Rendering Resource Sheet View</Description>
-          <FolderName>WorkingWithResources</FolderName>
-          <Order>7</Order>
-          <Examples>
-            <Example>
-              <Title>Overtimes For A Resource</Title>
-              <Description>In this example, we will see how we can get the resource overtimes using Aspose.Tasks.</Description>
-              <FolderName>OvertimesResource</FolderName>
-              <Order>1</Order>
-              <DocLink>
-                <DisplayName>Overtimes for a Resource</DisplayName>
-                <Url>hhttp://www.aspose.com/docs/display/tasksjava/Overtimes+for+a+Resource</Url>
-              </DocLink>
-              <Type>Console</Type>
-            </Example>
-            <Example>
-              <Title>Resource Cost</Title>
-              <Description>In this example, we will see how we can get the resource costs using Aspose.Tasks.</Description>
-              <FolderName>ResourceCost</FolderName>
-              <Order>2</Order>
-              <DocLink>
-                <DisplayName>Resource Cost</DisplayName>
-                <Url>Resource+Cost</Url>
-              </DocLink>
-              <InputFiles>
-                <DataFile>
-                  <Path>..\Data\project.mpp</Path>
-                </DataFile>
-              </InputFiles>
-              <Type>Console</Type>
-            </Example>
-            <Example>
-              <Title>Percentage Calculations</Title>
-              <Description>In this example, we will see how we can calculate percentage of the work across all assignments a resource has completed using Aspose.Tasks.</Description>
-              <FolderName>PercentageCalculations</FolderName>
-              <Order>3</Order>
-              <DocLink>
-                <DisplayName>Percentage Calculations</DisplayName>
-                <Url>Percentage+Calculations</Url>
-              </DocLink>
-              <Type>Console</Type>
-            </Example>
-            <Example>
-              <Title>Writing Updated Resource Data Back To MPP</Title>
-              <Description>In this example, we will see how we can update a Microsoft Project MPP file's resource data and save it data back to the MPP file using Aspose.Tasks.</Description>
-              <FolderName>WritingUpdatedResourceData</FolderName>
-              <Order>4</Order>
-              <DocLink>
-                <DisplayName>Writing Updated Resource Data Back to MPP</DisplayName>
-                <Url>Writing+Updated+Resource+Data+Back+to+MPP</Url>
-              </DocLink>
-              <Type>Console</Type>
-            </Example>
-            <Example>
-              <Title>Read Timephased Data Of A Resource</Title>
-              <Description>In this example, we will see how we can read a resource's timephased data from Microsoft Project (MPP) files using Aspose.Tasks.</Description>
-              <FolderName>ReadTimephasedData</FolderName>
-              <Order>5</Order>
-              <DocLink>
-                <DisplayName>Read Timephased Data of a Resource</DisplayName>
-                <Url>Read+Timephased+Data+of+a+Resource</Url>
-              </DocLink>
-              <Type>Console</Type>
-            </Example>
-            <Example>
-              <Title>Extended Resource Attributes</Title>
-              <Description>In this example, we will see how we can set a resource's extended attributes using Aspose.Tasks.</Description>
-              <FolderName>ExtendedResourceAttributes</FolderName>
-              <Order>6</Order>
-              <DocLink>
-                <DisplayName>Extended Resource Attributes</DisplayName>
-                <Url>Extended+Resource+Attributes</Url>
-              </DocLink>
-              <Type>Console</Type>
-            </Example>
-            <Example>
-              <Title>Rendering Resource Usage View</Title>
-              <Description>Being able to render individual project views, for example resource usage against tasks, is a common requirement for developer who work with Microsoft Project files. Aspose.Tasks supports this requirements and lets you render project resources to various formats, for example PDF. Resource usage can be rendered using Aspose.Tasks' PresentationFormat with different timescale settings like Days, ThirdofMonths and Months.</Description>
-              <FolderName>ResourceUsageView</FolderName>
+ - Reading Fiscal Year Properties
+ - Writing Fiscal Year Properties</Description>
+              <FolderName>FiscalYearProperties</FolderName>
               <Order>10</Order>
-              <DocLink>
-                <DisplayName>Rendering Resource Usage View</DisplayName>
-                <Url>Rendering+Resource+Usage+View</Url>
-              </DocLink>
-              <Type>Console</Type>
-            </Example>
-            <Example>
-              <Title>Rendering Resource Sheet View</Title>
-              <Description>Microsoft Project's Resource Sheet view provides details about all a project's resources. Resource information such as name, type, standard and overtime rates, costs, and calendar can be viewed using this view. Aspose.Tasks supports rendering the Resource Sheet to PDF using the PresentationFormat enumerator.</Description>
-              <FolderName>ResourceSheetView</FolderName>
+              <Examples>
+                <Example>
+                  <Title>Reading Fiscal Year Properties</Title>
+                  <Description>In this example, we will see how we can read a project's fiscal year properties and display them in a console window using Aspose.Tasks for.NET.</Description>
+                  <FolderName>ReadingFiscalYearProperties</FolderName>
+                  <Order>1</Order>
+                  <DocLink>
+                    <DisplayName>Fiscal Year Properties</DisplayName>
+                    <Url>http://www.aspose.com/docs/display/tasksnet/Fiscal+Year+Properties</Url>
+                  </DocLink>
+                  <InputFiles>
+                    <DataFile>
+                      <Path>..\Data\project.mpp</Path>
+                    </DataFile>
+                  </InputFiles>
+                  <Type>Console</Type>
+                </Example>
+                <Example>
+                  <Title>Writing Fiscal Year Properties</Title>
+                  <Description>In this example, we will see how we can write fiscal year properties of the project using Aspose.Tasks for .NET.</Description>
+                  <FolderName>WritingFiscalYearProperties</FolderName>
+                  <Order>2</Order>
+                  <DocLink>
+                    <DisplayName>Fiscal Year Propertie</DisplayName>
+                    <Url>http://www.aspose.com/docs/display/tasksnet/Fiscal+Year+Properties</Url>
+                  </DocLink>
+                  <InputFiles>
+                    <DataFile>
+                      <Path>..\Data\project.mpp</Path>
+                    </DataFile>
+                  </InputFiles>
+                  <OutputFiles>
+                    <DataFile>
+                      <Path>..\Data\saved.mpp</Path>
+                    </DataFile>
+                  </OutputFiles>
+                  <Type>Console</Type>
+                </Example>
+              </Examples>
+            </Folder>
+            <Folder>
+              <Title>Weekday Properties</Title>
+              <Description>This section includes the following topics:
+
+ - Reading Weekday Properties
+ - Writing Weekday Properties</Description>
+              <FolderName>WeekdayProperties</FolderName>
               <Order>11</Order>
-              <DocLink>
-                <DisplayName>Rendering Resource Sheet View</DisplayName>
-                <Url>Rendering+Resource+Sheet+View</Url>
-              </DocLink>
-              <Type>Console</Type>
-            </Example>
-          </Examples>
-          <Folders>
-            <Folder>
-              <Title>Creating Resources</Title>
-              <Description>This section includes the following topics:
-
- - Default Constructor
- - Create a Named Resource</Description>
-              <FolderName>CreatingResources</FolderName>
-              <Order>7</Order>
               <Examples>
                 <Example>
-                  <Title>Default Constructor</Title>
-                  <Description>In this example, we will see how we can use the default constructor to create a resource using Aspose.Tasks.</Description>
-                  <FolderName>DefaultConstructor</FolderName>
+                  <Title>Reading Weekday Properties</Title>
+                  <Description>In this example, we will see how we can read a project's weekday properties and write them to a console window using Aspose.Tasks for .NET.</Description>
+                  <FolderName>ReadingWeekdayProperties</FolderName>
                   <Order>1</Order>
                   <DocLink>
-                    <DisplayName>Default Constructor</DisplayName>
-                    <Url>Creating+Resources</Url>
+                    <DisplayName>Weekday Properties</DisplayName>
+                    <Url>http://www.aspose.com/docs/display/tasksnet/Weekday+Properties</Url>
                   </DocLink>
+                  <InputFiles>
+                    <DataFile>
+                      <Path>..\Data\project.mpp</Path>
+                    </DataFile>
+                  </InputFiles>
                   <Type>Console</Type>
                 </Example>
                 <Example>
-                  <Title>Create A Named Resource</Title>
-                  <Description>In this example, we will see how we can create the named resource using Aspose.Tasks.</Description>
-                  <FolderName>CreateANamedResource</FolderName>
+                  <Title>Writing Weekday Properties</Title>
+                  <Description>In this example, we will see how we can write weekday properties to a project using Aspose.Tasks for .NET.</Description>
+                  <FolderName>WritingWeekdayProperties</FolderName>
                   <Order>2</Order>
                   <DocLink>
-                    <DisplayName>Create a Named Resource</DisplayName>
-                    <Url>Creating+Resources</Url>
+                    <DisplayName>Weekday Properties</DisplayName>
+                    <Url>http://www.aspose.com/docs/display/tasksnet/Weekday+Properties</Url>
                   </DocLink>
-                  <Type>Console</Type>
-                </Example>
-              </Examples>
-            </Folder>
-            <Folder>
-              <Title>Reading And Writing General Resource Properties</Title>
-              <Description>This section includes the following topics:
-
- - Setting General Resource Properties using Aspose.Tasks
- - Accessing General Resource Properties using Aspose.Tasks</Description>
-              <FolderName>ReadingAndWritingGeneralResourceProperties</FolderName>
-              <Order>8</Order>
-              <Examples>
-                <Example>
-                  <Title>Setting General Resource Properties Using Aspose.Tasks</Title>
-                  <Description>In this example, we will see how we can set general resource properties using Aspose.Tasks.</Description>
-                  <FolderName>SettingGeneralResourceProperties</FolderName>
-                  <Order>1</Order>
-                  <DocLink>
-                    <DisplayName>Setting General Resource Properties using Aspose.Tasks</DisplayName>
-                    <Url>Reading+and+Writing+General+Resource+Properties</Url>
-                  </DocLink>
-                  <Type>Console</Type>
-                </Example>
-                <Example>
-                  <Title>Accessing General Resource Properties using Aspose.Tasks</Title>
-                  <Description>In this example, we will see how we can get the general resource properties using Aspose.Tasks.</Description>
-                  <FolderName>AccessingGeneralResourceProperties</FolderName>
-                  <Order>2</Order>
-                  <DocLink>
-                    <DisplayName>Reading and Writing General Resource Properties</DisplayName>
-                    <Url>http://support.aspose.dynabic.com/wiki/display/demos/.NET+Dashboard+Examples+-+2014.03</Url>
-                  </DocLink>
-                  <Type>Console</Type>
-                </Example>
-              </Examples>
-            </Folder>
-            <Folder>
-              <Title>Resource And Calendars</Title>
-              <Description>This topic includes the following examples:
-
- - Setting Resource Calendar using Aspose.Tasks
- - Getting Resource Calendar using Aspose.Tasks</Description>
-              <FolderName>ResourceAndCalendars</FolderName>
-              <Order>9</Order>
-              <Examples>
-                <Example>
-                  <Title>Setting Resource Calendar Using Aspose.Tasks</Title>
-                  <Description>In this example, we will see how we can set the resorce calendar using Aspose.Tasks.</Description>
-                  <FolderName>SettingResourceCalendar</FolderName>
-                  <Order>1</Order>
-                  <DocLink>
-                    <DisplayName>Resource and Calendars</DisplayName>
-                    <Url>Resource+and+Calendars</Url>
-                  </DocLink>
-                  <Type>Console</Type>
-                </Example>
-                <Example>
-                  <Title>Getting Resource Calendar using Aspose.Tasks</Title>
-                  <Description>In this example, we will see how we can get the resource calendar using Aspose.Tasks.</Description>
-                  <FolderName>GettingResourceCalendar</FolderName>
-                  <Order>2</Order>
-                  <DocLink>
-                    <DisplayName>Resource and Calendars</DisplayName>
-                    <Url>Resource+and+Calendars</Url>
-                  </DocLink>
-                  <Type>Console</Type>
-                </Example>
-              </Examples>
-            </Folder>
-          </Folders>
-        </Folder>
-        <Folder>
-          <Title>Working with Resource Assignments</Title>
-          <Description>This section includes the following examples:
-
-- Creating Resource Assignments
- - General Resource Assignment Properties
- - Managing Assignment Cost
- - Assignment Budget
- - Handling Overtime, Remaining Costs and Work
- - Calculating Percentages
- - Dealing Variances
- - Stop or Resume an Assignment
- - Timephased Data Generation for Different Work Contours
- - Saving Updated Resource Assignment to MPP</Description>
-          <FolderName>ResourceAssignments</FolderName>
-          <Order>1</Order>
-          <Examples>
-            <Example>
-              <Title>Creating Resource Assignments</Title>
-              <Description>Resource assignments links a task and a resource. In this example, we will see how we can create resource assignments using Aspose.Tasks.</Description>
-              <FolderName>ResourceAssignments</FolderName>
-              <Order>1</Order>
-              <DocLink>
-                <DisplayName>Creating Resource Assignments</DisplayName>
-                <Url>Creating+Resource+Assignments</Url>
-              </DocLink>
-              <OutputFiles>
-                <DataFile>
-                  <Path>..\Data\Project.Xml</Path>
-                </DataFile>
-              </OutputFiles>
-              <Type>Console</Type>
-            </Example>
-            <Example>
-              <Title>Managing Assignment Cost</Title>
-              <Description>In this example, we will see how we can get the cost of the task using Aspose.Tasks.</Description>
-              <FolderName>AssignmentCost</FolderName>
-              <Order>3</Order>
-              <DocLink>
-                <DisplayName>Managing Assignment Cost</DisplayName>
-                <Url>Managing+Assignment+Cost</Url>
-              </DocLink>
-              <InputFiles>
-                <DataFile>
-                  <Path>..\Data\project.mpp</Path>
-                </DataFile>
-              </InputFiles>
-              <Type>Console</Type>
-            </Example>
-            <Example>
-              <Title>Assignment Budget</Title>
-              <Description>In this example, we will see how we can get the assignment budget using Aspose.Tasks.</Description>
-              <FolderName>AssignmentBudget</FolderName>
-              <Order>4</Order>
-              <DocLink>
-                <DisplayName>Assignment Budget</DisplayName>
-                <Url>Assignment+Budget</Url>
-              </DocLink>
-              <InputFiles>
-                <DataFile>
-                  <Path>..\Data\project.mpp</Path>
-                </DataFile>
-              </InputFiles>
-              <Type>Console</Type>
-            </Example>
-            <Example>
-              <Title>Handling Overtime, Remaining Costs And Work</Title>
-              <Description>In this example, we will see how we can get assignment overtimes, remaining costs and work using Aspose.Tasks.</Description>
-              <FolderName>OvertimeRemainingCostsWork</FolderName>
-              <Order>5</Order>
-              <DocLink>
-                <DisplayName>Handling Overtime, Remaining Costs and Work</DisplayName>
-                <Url>Handling+Overtime%2C+Remaining+Costs+and+Work</Url>
-              </DocLink>
-              <InputFiles>
-                <DataFile>
-                  <Path>..\Data\project.mpp</Path>
-                </DataFile>
-              </InputFiles>
-              <Type>Console</Type>
-            </Example>
-            <Example>
-              <Title>Calculating Percentages</Title>
-              <Description>In this example, we will see how we can get the percentage of work completed on an assignment using Aspose.Tasks.</Description>
-              <FolderName>CalculatingPercentages</FolderName>
-              <Order>6</Order>
-              <DocLink>
-                <DisplayName>Calculating Percentages</DisplayName>
-                <Url>Calculating+Percentages</Url>
-              </DocLink>
-              <InputFiles>
-                <DataFile>
-                  <Path>..\Data\project.mpp</Path>
-                </DataFile>
-              </InputFiles>
-              <Type>Console</Type>
-            </Example>
-            <Example>
-              <Title>Dealing Variances</Title>
-              <Description>In this example, we will see how to get the resource work variance using Aspose.Tasks.</Description>
-              <FolderName>DealingVariances</FolderName>
-              <Order>7</Order>
-              <DocLink>
-                <DisplayName>Dealing Variances</DisplayName>
-                <Url>Dealing+Variances</Url>
-              </DocLink>
-              <InputFiles>
-                <DataFile>
-                  <Path>..\Data\project.mpp</Path>
-                </DataFile>
-              </InputFiles>
-              <Type>Console</Type>
-            </Example>
-            <Example>
-              <Title>Stop Or Resume An Assignment</Title>
-              <Description>In this example, we will see how we can stop or resume an assignment using Aspose.Tasks.</Description>
-              <FolderName>StopResumeAssignment</FolderName>
-              <Order>8</Order>
-              <DocLink>
-                <DisplayName>Stop or Resume an Assignment</DisplayName>
-                <Url>Stop+or+Resume+an+Assignment</Url>
-              </DocLink>
-              <InputFiles>
-                <DataFile>
-                  <Path>..\Data\project.mpp</Path>
-                </DataFile>
-              </InputFiles>
-              <Type>Console</Type>
-            </Example>
-            <Example>
-              <Title>Timephased Data Generation For Different Work Contours</Title>
-              <Description>In this example, we will see how to generate timephased data for different work contours of an assigned resource using Aspose.Tasks,.</Description>
-              <FolderName>TimephasedDataGeneration</FolderName>
-              <Order>9</Order>
-              <DocLink>
-                <DisplayName>Timephased Data Generation for Different Work Contours</DisplayName>
-                <Url>Timephased+Data+Generation+for+Different+Work+Contours</Url>
-              </DocLink>
-              <InputFiles>
-                <DataFile>
-                  <Path>..\Data\project.mpp</Path>
-                </DataFile>
-              </InputFiles>
-              <Type>Console</Type>
-            </Example>
-            <Example>
-              <Title>Saving Updated Resource Assignment To MPP</Title>
-              <Description>In this example, we will see how to update resource assignment data and write it back to a MPP file using Aspose.Tasks.</Description>
-              <FolderName>SavingUpdatedResource</FolderName>
-              <Order>10</Order>
-              <DocLink>
-                <DisplayName>Saving Updated Resource Assignment to MPP</DisplayName>
-                <Url>Saving+Updated+Resource+Assignment+to+MPP</Url>
-              </DocLink>
-              <InputFiles>
-                <DataFile>
-                  <Path>..\Data\project.mpp</Path>
-                </DataFile>
-              </InputFiles>
-              <OutputFiles>
-                <DataFile>
-                  <Path>..\Data\Project1.Mpp</Path>
-                </DataFile>
-              </OutputFiles>
-              <Type>Console</Type>
-            </Example>
-          </Examples>
-          <Folders>
-            <Folder>
-              <Title>General Resource Assignment Properties</Title>
-              <Description>An assignment is a resource that has been assigned to a specific task. Each resource has general properties, typically a unique ID, a start and a finish time. This section includes the following topics:
-
- - Setting General Resource Assignment Properties using Aspose.Tasks
- - Getting General Resource Assignment Properties using Aspose.Tasks</Description>
-              <FolderName>ResourceAssignmentProperties</FolderName>
-              <Order>2</Order>
-              <Examples>
-                <Example>
-                  <Title>Setting General Resource Assignment Properties</Title>
-                  <Description>In this example, we will see how we can set the resource assignment properties from scratch using Aspose.Tasks.</Description>
-                  <FolderName>SettingProperties</FolderName>
-                  <Order>1</Order>
-                  <DocLink>
-                    <DisplayName>Setting General Resource Assignment Properties using Aspose.Tasks</DisplayName>
-                    <Url>General+Resource+Assignment+Properties</Url>
-                  </DocLink>
+                  <InputFiles>
+                    <DataFile>
+                      <Path>..\Data\project.mpp</Path>
+                    </DataFile>
+                  </InputFiles>
                   <OutputFiles>
                     <DataFile>
-                      <Path>..\Data\Project.Xml</Path>
+                      <Path>..\Data\saved.xml</Path>
                     </DataFile>
                   </OutputFiles>
                   <Type>Console</Type>
                 </Example>
+              </Examples>
+            </Folder>
+            <Folder>
+              <Title>Get Number Of Pages In Project</Title>
+              <Description>This section includes the following topics:
+
+ - Get Number of Pages in Project
+ - Get number of pages for different Views</Description>
+              <FolderName>GetNumberOfPagesInProject</FolderName>
+              <Order>19</Order>
+              <Examples>
                 <Example>
-                  <Title>Getting General Resource Assignment Properties</Title>
-                  <Description>In  this example, we will see how we can get the resource assignment properties using Aspose.Tasks.</Description>
-                  <FolderName>GettingProperties</FolderName>
+                  <Title>Get Number Of Pages In Project</Title>
+                  <Description>In this example, we will see how we can get the number of pages in project using Aspose.Tasks for .NET.</Description>
+                  <FolderName>GetNumberOfPages</FolderName>
+                  <Order>1</Order>
+                  <DocLink>
+                    <DisplayName>Get Number of Pages in Project</DisplayName>
+                    <Url>http://www.aspose.com/docs/display/tasksnet/Get+Number+of+Pages+in+Project</Url>
+                  </DocLink>
+                  <InputFiles>
+                    <DataFile>
+                      <Path>..\Data\project.mpp</Path>
+                    </DataFile>
+                  </InputFiles>
+                  <Type>Console</Type>
+                </Example>
+                <Example>
+                  <Title>Get Number Of Pages For Different Views</Title>
+                  <Description>In  this example, we will see how we can render a projects' usage view and get the number of pages in the rendered output using Aspose.Tasks for .NET.</Description>
+                  <FolderName>GetNumberOfPagesForDifferentViews</FolderName>
                   <Order>2</Order>
                   <DocLink>
-                    <DisplayName>Getting General Resource Assignment Properties using Aspose.Tasks</DisplayName>
-                    <Url>General+Resource+Assignment+Properties</Url>
+                    <DisplayName>Get Number of Pages in Project</DisplayName>
+                    <Url>http://www.aspose.com/docs/display/tasksnet/Get+Number+of+Pages+in+Project</Url>
                   </DocLink>
                   <InputFiles>
                     <DataFile>
@@ -1339,566 +565,6 @@ This section include the following examples:
               </Examples>
             </Folder>
           </Folders>
-        </Folder>
-        <Folder>
-          <Title>Working With Currencies</Title>
-          <Description>This section includes the following topics: 
-
- - Managing currency codes 
-
- - Managing currency digits 
-
- - Managing currency symbols</Description>
-          <FolderName>WorkingWithCurrencies</FolderName>
-          <Order>8</Order>
-          <Folders>
-            <Folder>
-              <Title>Managing Currency Codes</Title>
-              <Description>This section includes the following topics:
-  - Setting Currency using Aspose.Tasks
-  - Getting Currency using Aspose.Tasks</Description>
-              <FolderName>CurrencyCodes</FolderName>
-              <Order>1</Order>
-              <Examples>
-                <Example>
-                  <Title>Setting Currency</Title>
-                  <Description>In this example, we will see how we can set the currency codes using Aspose.Tasks.</Description>
-                  <FolderName>SettingCurrency</FolderName>
-                  <Order>1</Order>
-                  <DocLink>
-                    <DisplayName>Setting Currency using Aspose.Tasks</DisplayName>
-                    <Url>Managing+Currency+Codes</Url>
-                  </DocLink>
-                  <Type>Console</Type>
-                </Example>
-                <Example>
-                  <Title>Getting Currency</Title>
-                  <Description>In this example, we will see how we can get the currency properties using Aspose.Tasks.</Description>
-                  <FolderName>GettingCurrency</FolderName>
-                  <Order>2</Order>
-                  <DocLink>
-                    <DisplayName>Getting Currency Code using Aspose.Tasks</DisplayName>
-                    <Url>Managing+Currency+Codes</Url>
-                  </DocLink>
-                  <Type>Console</Type>
-                </Example>
-              </Examples>
-            </Folder>
-            <Folder>
-              <Title>Managing Currency Digits</Title>
-              <Description>Currency digits set the number of decimal points (digits after a decimal point) used for currency. 
-This section includes the following topic:
-
- - Setting Currency Digits using Aspose.Tasks
- - Getting Currency Digits using Aspose.Tasks</Description>
-              <FolderName>CurrencyDigits</FolderName>
-              <Order>2</Order>
-              <Examples>
-                <Example>
-                  <Title>Setting Currency Digits</Title>
-                  <Description>In this example, we will see how we can set the currency digits with Aspose.Tasks.</Description>
-                  <FolderName>SettingDigits</FolderName>
-                  <Order>1</Order>
-                  <DocLink>
-                    <DisplayName>Setting Currency Digits using Aspose.Tasks</DisplayName>
-                    <Url>Managing+Currency+Digits</Url>
-                  </DocLink>
-                  <Type>Console</Type>
-                </Example>
-                <Example>
-                  <Title>Getting Currency Digits</Title>
-                  <Description>In this example, we will see how we can get the currency digits using Aspose.Tasks.</Description>
-                  <FolderName>GettingDigits</FolderName>
-                  <Order>2</Order>
-                  <DocLink>
-                    <DisplayName>Getting Currency Digits using Aspose.Tasks</DisplayName>
-                    <Url>Managing+Currency+Digits</Url>
-                  </DocLink>
-                  <Type>Console</Type>
-                </Example>
-              </Examples>
-            </Folder>
-            <Folder>
-              <Title>Managing Currency Symbols</Title>
-              <Description>This section includes the following topics:
-
- - Setting Currency Symbol using Aspose.Tasks 
- - Getting Currency Symbol using Aspose.Tasks</Description>
-              <FolderName>ManagingCurrencySymbols</FolderName>
-              <Order>3</Order>
-              <Examples>
-                <Example>
-                  <Title>Setting Currency Symbol</Title>
-                  <Description>In this example, we will see how we can set a currency symbol for a project.</Description>
-                  <FolderName>SettingSymbol</FolderName>
-                  <Order>1</Order>
-                  <DocLink>
-                    <DisplayName>Setting Currency Symbol using Aspose.Tasks</DisplayName>
-                    <Url>Managing+Currency+Symbols</Url>
-                  </DocLink>
-                  <Type>Console</Type>
-                </Example>
-                <Example>
-                  <Title>Getting Currency Symbol</Title>
-                  <Description>In this example, we will see how we can get the currency symbol using Aspose.Tasks.</Description>
-                  <FolderName>GettingSymbol</FolderName>
-                  <Order>2</Order>
-                  <DocLink>
-                    <DisplayName>Getting Currency Symbol using Aspose.Tasks</DisplayName>
-                    <Url>Managing+Currency+Symbols</Url>
-                  </DocLink>
-                  <Type>Console</Type>
-                </Example>
-              </Examples>
-            </Folder>
-          </Folders>
-        </Folder>
-        <Folder>
-          <Title>Miscellaneous</Title>
-          <Description>This section includes the following topics: 
-
- - Sorting Resources by Name
- - Handling Exceptions
- - Sorting Tasks by Name
- - Writing Updated Outline Code Definitions and Values to MPP
- - Writing Metadata to MPP 
- - Reporting Services</Description>
-          <FolderName>Miscellaneous</FolderName>
-          <Order>9</Order>
-          <Examples>
-            <Example>
-              <Title>Sorting Resources By Name</Title>
-              <Description>In this example, we will see how we can sort the resources by name using Aspose.Tasks.</Description>
-              <FolderName>SortingResources</FolderName>
-              <Order>1</Order>
-              <DocLink>
-                <DisplayName>Sorting Resources by Name</DisplayName>
-                <Url>Sorting+Resources+by+Name</Url>
-              </DocLink>
-              <Type>Console</Type>
-            </Example>
-            <Example>
-              <Title>Handling Exceptions</Title>
-              <Description>In this example, we will see how we can identify the cause of the exception using Aspose.Tasks.</Description>
-              <FolderName>HandlingExceptions</FolderName>
-              <Order>2</Order>
-              <DocLink>
-                <DisplayName>Handling Exceptions</DisplayName>
-                <Url>Handling+Exceptions</Url>
-              </DocLink>
-              <Type>Console</Type>
-            </Example>
-            <Example>
-              <Title>Sorting Tasks By Name</Title>
-              <Description>In this example, we will see how we can sort the tasks by name using Aspose.Tasks</Description>
-              <FolderName>SortingTasks</FolderName>
-              <Order>3</Order>
-              <DocLink>
-                <DisplayName>Sorting Tasks by Name</DisplayName>
-                <Url>Sorting+Tasks+by+Name</Url>
-              </DocLink>
-              <Type>Console</Type>
-            </Example>
-            <Example>
-              <Title>Writing Updated Outline Code Definitions And Values To MPP</Title>
-              <Description>In this example, we will see how we can add new outline code attributes to an existing Microsoft Project MPP file and save it back using Aspose.Tasks,</Description>
-              <FolderName>WritingUpdatedOutlineCode</FolderName>
-              <Order>4</Order>
-              <DocLink>
-                <DisplayName>Writing Updated Outline Code Definitions and Values to MPP</DisplayName>
-                <Url>Writing+Updated+Outline+Code+Definitions+and+Values+to+MPP</Url>
-              </DocLink>
-              <Type>Console</Type>
-            </Example>
-            <Example>
-              <Title>Writing Metadata To MPP</Title>
-              <Description>In this example, we will see how we can write metadata to MPP files for calendars, tasks, task links, resources and resource assignments using Aspose.Tasks</Description>
-              <FolderName>WritingMetadata</FolderName>
-              <Order>5</Order>
-              <DocLink>
-                <DisplayName>Writing Metadata to MPP</DisplayName>
-                <Url>Writing+Metadata+to+MPP</Url>
-              </DocLink>
-              <Type>Console</Type>
-            </Example>
-          </Examples>
-        </Folder>
-      </Folders>
-    </Folder>
-    <Folder>
-      <Title>Technical Articles</Title>
-      <Description>This section includes the following topics:
-
- - Retrieving Embedded Documents from a Task's Notes
- - Display Multiple Columns in Rendered Gantt Chart Image
- - Aspose.Tasks for .NET – Performance Metrics and Benchmarks
- - Rendering Gantt Chart
- - Render Project to Multipage TIFF
- - Rendering Project Data to XAML</Description>
-      <FolderName>TechnicalArticles</FolderName>
-      <Order>2</Order>
-      <Examples>
-        <Example>
-          <Title>Retrieving Embedded Documents From A Task's Notes</Title>
-          <Description>In this example, we will see how we can retrieve the embedded documents from the tasks in a project filr using Aspose.Cells,</Description>
-          <FolderName>RetrievingEmbeddedDocuments</FolderName>
-          <Order>2</Order>
-          <DocLink>
-            <DisplayName>Retrieving Embedded Documents from a Task's Notes</DisplayName>
-            <Url>http://www.aspose.com/docs/display/tasksnet/Retrieving+Embedded+Documents+from+a+Task%27s+Notes</Url>
-          </DocLink>
-          <InputFiles>
-            <DataFile>
-              <Path>..\Data\project.mpp</Path>
-            </DataFile>
-          </InputFiles>
-          <OutputFiles>
-            <DataFile>
-              <Path>..\Data\Notes.rtf</Path>
-            </DataFile>
-          </OutputFiles>
-          <Type>Console</Type>
-        </Example>
-        <Example>
-          <Title>Display Multiple Columns In Rendered Gantt Chart Image</Title>
-          <Description>In this example, we will see how we can select project columns to include in a Gantt chart and how to render the chart to an image using Aspose.Tasks,</Description>
-          <FolderName>DisplayMultipleColumns</FolderName>
-          <Order>3</Order>
-          <DocLink>
-            <DisplayName>Display Multiple Columns in Rendered Gantt Chart Image</DisplayName>
-            <Url>http://www.aspose.com/docs/display/tasksnet/Display+Multiple+Columns+in+Rendered+Gantt+Chart+Image</Url>
-          </DocLink>
-          <InputFiles>
-            <DataFile>
-              <Path>..\Data\Project1.mpp</Path>
-            </DataFile>
-          </InputFiles>
-          <OutputFiles>
-            <DataFile>
-              <Path>..\Data\project.html</Path>
-            </DataFile>
-          </OutputFiles>
-          <Type>Console</Type>
-        </Example>
-      </Examples>
-      <Folders>
-        <Folder>
-          <Title>Rendering Gantt Chart</Title>
-          <Description>This section includes the following topics:
-
- - Setting Timescales and Saving to an Image.
- - Rolling Up Gantt Bars During Rendering.
-   * Gantt Chart Bars Not Rolled Up
-   * Rolling Up Gantt Chart Bars.
- - Customize Text with Task Bars.
- - Align Cell Contents.
- - Changing Gantt Chart Bars Color Gradient</Description>
-          <FolderName>RenderingGanttChart</FolderName>
-          <Order>4</Order>
-          <Examples>
-            <Example>
-              <Title>Setting Timescales And Saving To An Image</Title>
-              <Description>In this example, we will see how we can set the timescales of a project and save to an image using Aspose.Tasks.</Description>
-              <FolderName>SettingTimescales</FolderName>
-              <Order>1</Order>
-              <DocLink>
-                <DisplayName>Rendering Gantt Chart</DisplayName>
-                <Url>http://www.aspose.com/docs/display/tasksnet/Rendering+Gantt+Chart</Url>
-              </DocLink>
-              <InputFiles>
-                <DataFile>
-                  <Path>..\Data\NewProductDev.mpp</Path>
-                </DataFile>
-              </InputFiles>
-              <OutputFiles>
-                <DataFile>
-                  <Path>..\Data\NewProductDevDays.jpeg</Path>
-                </DataFile>
-                <DataFile>
-                  <Path>..\Data\NewProductDevRenderOptions.jpeg</Path>
-                </DataFile>
-                <DataFile>
-                  <Path>..\Data\NewProductDevMonths.jpeg</Path>
-                </DataFile>
-                <DataFile>
-                  <Path>..\Data\NewProductDevThirdsOfMonths.jpeg</Path>
-                </DataFile>
-              </OutputFiles>
-              <Type>Console</Type>
-            </Example>
-            <Example>
-              <Title>Customize Text With Task Bars</Title>
-              <Description>In this example, we will see how we can customize the text on the right of the task bar  by delegate instance using Aspose.Tasks,</Description>
-              <FolderName>CustomizeTextWithTaskBars</FolderName>
-              <Order>3</Order>
-              <DocLink>
-                <DisplayName>Rendering Gantt Chart</DisplayName>
-                <Url>http://www.aspose.com/docs/display/tasksnet/Rendering+Gantt+Chart</Url>
-              </DocLink>
-              <OutputFiles>
-                <DataFile>
-                  <Path>..\Data\result2.pdf</Path>
-                </DataFile>
-              </OutputFiles>
-              <Type>Console</Type>
-            </Example>
-            <Example>
-              <Title>Align Cell Contents</Title>
-              <Description>In this example, we will see how we can align the cell contents in Gantt Chart view using Aspose,Tasks.</Description>
-              <FolderName>AlignCellContents</FolderName>
-              <Order>4</Order>
-              <DocLink>
-                <DisplayName>Rendering Gantt Chart</DisplayName>
-                <Url>http://www.aspose.com/docs/display/tasksnet/Rendering+Gantt+Chart</Url>
-              </DocLink>
-              <InputFiles>
-                <DataFile>
-                  <Path>..\Data\RenderMe.mpp</Path>
-                </DataFile>
-              </InputFiles>
-              <OutputFiles>
-                <DataFile>
-                  <Path>..\Data\result GanttChart.pdf</Path>
-                </DataFile>
-                <DataFile>
-                  <Path>..\Data\result ResourceSheet.pdf</Path>
-                </DataFile>
-              </OutputFiles>
-              <Type>Console</Type>
-            </Example>
-            <Example>
-              <Title>Changing Gantt Chart Bars Color Gradient</Title>
-              <Description>In this example, we will see how we can render the output of Gantt charts using gradients using Aspose.Tasks.</Description>
-              <FolderName>GanttChartBarsColorGradient</FolderName>
-              <Order>5</Order>
-              <DocLink>
-                <DisplayName>Rendering Gantt Chart</DisplayName>
-                <Url>http://www.aspose.com/docs/display/tasksnet/Rendering+Gantt+Chart</Url>
-              </DocLink>
-              <InputFiles>
-                <DataFile>
-                  <Path>..\Data\NewProductDev.mpp</Path>
-                </DataFile>
-              </InputFiles>
-              <OutputFiles>
-                <DataFile>
-                  <Path>..\Data\solid.xaml</Path>
-                </DataFile>
-                <DataFile>
-                  <Path>..\Data\gradient.xaml</Path>
-                </DataFile>
-              </OutputFiles>
-              <Type>Console</Type>
-            </Example>
-            <Example>
-              <Title>Sort Tasks By Column In Gantt Chart</Title>
-              <Description>In this example, we will see how we can sort the tasks by column in Gantt chart using Aspose.Tasks.</Description>
-              <FolderName>SortTasksByColumnInGanttChart</FolderName>
-              <Order>6</Order>
-              <DocLink>
-                <DisplayName>Sort Tasks by Column in Gantt Chart</DisplayName>
-                <Url>http://www.aspose.com/docs/display/tasksnet/Sort+Tasks+by+Column+in+Gantt+Chart</Url>
-              </DocLink>
-              <Type>Console</Type>
-            </Example>
-          </Examples>
-          <Folders>
-            <Folder>
-              <Title>Rolling Up Gantt Bars During Rendering</Title>
-              <Description>This section consists of the following topics:
-
- - Gantt Chart Bars Not Rolled Up
- - Rolling Up Gantt Chart Bars</Description>
-              <FolderName>RollingUpGanttBars</FolderName>
-              <Order>2</Order>
-              <Examples>
-                <Example>
-                  <Title>Gantt Chart Bars Not Rolled Up</Title>
-                  <Description>In this example, we will see how we can render the Gantt Chart Bars without rolling up using Aspose.Tasks.</Description>
-                  <FolderName>GanttChartBarsNotRolledUp</FolderName>
-                  <Order>1</Order>
-                  <DocLink>
-                    <DisplayName>Rendering Gantt Chart</DisplayName>
-                    <Url>http://www.aspose.com/docs/display/tasksnet/Rendering+Gantt+Chart</Url>
-                  </DocLink>
-                  <InputFiles>
-                    <DataFile>
-                      <Path>..\Data\project.mpp</Path>
-                    </DataFile>
-                  </InputFiles>
-                  <OutputFiles>
-                    <DataFile>
-                      <Path>..\Data\output.pdf</Path>
-                    </DataFile>
-                  </OutputFiles>
-                  <Type>Console</Type>
-                </Example>
-                <Example>
-                  <Title>Rolling Up Gantt Chart Bars</Title>
-                  <Description>In this example, we will see how we can render the gantt chart by rolling up the gantt chart bars using Aspose.Tasks.</Description>
-                  <FolderName>RollingUpGanttChartBars</FolderName>
-                  <Order>2</Order>
-                  <DocLink>
-                    <DisplayName>Rendering Gantt Chart</DisplayName>
-                    <Url>http://www.aspose.com/docs/display/tasksnet/Rendering+Gantt+Chart</Url>
-                  </DocLink>
-                  <InputFiles>
-                    <DataFile>
-                      <Path>..\Data\project.mpp</Path>
-                    </DataFile>
-                  </InputFiles>
-                  <OutputFiles>
-                    <DataFile>
-                      <Path>..\Data\output.pdf</Path>
-                    </DataFile>
-                  </OutputFiles>
-                  <Type>Console</Type>
-                </Example>
-              </Examples>
-            </Folder>
-          </Folders>
-        </Folder>
-        <Folder>
-          <Title>Render Project To Multipage TIFF</Title>
-          <Description>This section includes the following topics:
-
- - Render Project to Multipage TIFF
- - Rendering Project Data on Pre-Defined Page sizes</Description>
-          <FolderName>RenderProjectMultipageTIFF</FolderName>
-          <Order>1</Order>
-          <Examples>
-            <Example>
-              <Title>Render Project To Multipage TIFF</Title>
-              <Description>In this example, we will see how we can render the project to multipage TIFF using Aspose.Tasks.</Description>
-              <FolderName>RenderProjectToMultipageTIFF</FolderName>
-              <Order>1</Order>
-              <DocLink>
-                <DisplayName>Render Project To Multipage TIFF</DisplayName>
-                <Url>http://www.aspose.com/docs/display/tasksnet/Render+Project+to+Multipage+TIFF</Url>
-              </DocLink>
-              <InputFiles>
-                <DataFile>
-                  <Path>..\Data\RenderMe.mpp</Path>
-                </DataFile>
-              </InputFiles>
-              <OutputFiles>
-                <DataFile>
-                  <Path>..\Data\RenderMe.tif</Path>
-                </DataFile>
-                <DataFile>
-                  <Path>..\Data\RenderMe_comp_none.tif</Path>
-                </DataFile>
-                <DataFile>
-                  <Path>..\Data\RenderMe_options.tif</Path>
-                </DataFile>
-              </OutputFiles>
-              <Type>Console</Type>
-            </Example>
-            <Example>
-              <Title>Rendering Project Data On Pre-Defined Page Sizes</Title>
-              <Description>In this example, we will see how we can render a project's different views to pre-defined page sizes uisng Aspose.Tasks.</Description>
-              <FolderName>RenderingProjectData</FolderName>
-              <Order>2</Order>
-              <DocLink>
-                <DisplayName>Rendering Project Data on Pre-Defined Page sizes</DisplayName>
-                <Url>Rendering Project Data on Pre-Defined Page sizes</Url>
-              </DocLink>
-              <InputFiles>
-                <DataFile>
-                  <Path>..\Data\RenderMe.mpp</Path>
-                </DataFile>
-              </InputFiles>
-              <OutputFiles>
-                <DataFile>
-                  <Path>..\Data\result_GanttChart_A0.pdf</Path>
-                </DataFile>
-                <DataFile>
-                  <Path>..\Data\result_GanttChart_A1.pdf</Path>
-                </DataFile>
-                <DataFile>
-                  <Path>..\Data\result_GanttChart_A2.pdf</Path>
-                </DataFile>
-                <DataFile>
-                  <Path>..\Data\result_GanttChart_A3.pdf</Path>
-                </DataFile>
-                <DataFile>
-                  <Path>..\Data\result_GanttChart_A4.pdf</Path>
-                </DataFile>
-                <DataFile>
-                  <Path>..\Data\result_GanttChart_Ledger.pdf</Path>
-                </DataFile>
-                <DataFile>
-                  <Path>..\Data\result_GanttChart_Letter.pdf</Path>
-                </DataFile>
-              </OutputFiles>
-              <Type>Console</Type>
-            </Example>
-          </Examples>
-        </Folder>
-        <Folder>
-          <Title>Rendering Project Data To XAML</Title>
-          <Description>This section consists of the following topics:
-
- - Render to XAML
- - Render XAML with Options
- - Render to XAML using Different Presentation Formats</Description>
-          <FolderName>RenderingProjectDataToXAML</FolderName>
-          <Order>5</Order>
-          <Examples>
-            <Example>
-              <Title>Render to XAML</Title>
-              <Description>In this example, we will see how we can render the project data to an XAML file using Aspose.Tasks.</Description>
-              <FolderName>RendertoXAML</FolderName>
-              <Order>1</Order>
-              <DocLink>
-                <DisplayName>Rendering Project Data to XAML</DisplayName>
-                <Url>http://www.aspose.com/docs/display/tasksnet/Rendering+Project+Data+to+XAML</Url>
-              </DocLink>
-              <InputFiles>
-                <DataFile>
-                  <Path>..\Data\NewProductDev.mpp</Path>
-                </DataFile>
-              </InputFiles>
-              <OutputFiles>
-                <DataFile>
-                  <Path>..\Data\NewProductDev.xaml</Path>
-                </DataFile>
-              </OutputFiles>
-              <Type>Console</Type>
-            </Example>
-            <Example>
-              <Title>Render XAML with Options</Title>
-              <Description>In this example, we will see how we can render the project data to XAML file with options using Aspose.Tasks.</Description>
-              <FolderName>RenderXAMLwithOptions</FolderName>
-              <Order>2</Order>
-              <DocLink>
-                <DisplayName>Rendering Project Data to XAML</DisplayName>
-                <Url>http://www.aspose.com/docs/display/tasksnet/Rendering+Project+Data+to+XAML</Url>
-              </DocLink>
-              <InputFiles>
-                <DataFile>
-                  <Path>..\Data\NewProductDev.mpp</Path>
-                </DataFile>
-              </InputFiles>
-              <OutputFiles>
-                <DataFile>
-                  <Path>..\Data\NewProductDev.xaml</Path>
-                </DataFile>
-              </OutputFiles>
-              <Type>Console</Type>
-            </Example>
-            <Example>
-              <Title>Render to XAML Using Different Presentation Formats</Title>
-              <Description>In this example, we will see how we can use different presentation formats to render the project to XAML using Aspose.Tasks.</Description>
-              <FolderName>RendertoXAMLPresentationFormats</FolderName>
-              <Order>3</Order>
-              <DocLink>
-                <DisplayName>Rendering Project Data to XAML</DisplayName>
-                <Url>http://www.aspose.com/docs/display/tasksnet/Rendering+Project+Data+to+XAML</Url>
-              </DocLink>
-              <Type>Console</Type>
-            </Example>
-          </Examples>
         </Folder>
       </Folders>
     </Folder>

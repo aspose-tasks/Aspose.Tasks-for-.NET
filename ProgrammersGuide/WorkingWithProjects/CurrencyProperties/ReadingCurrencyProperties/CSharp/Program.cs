@@ -18,21 +18,13 @@ namespace ReadingCurrencyProperties
         {
             // The path to the documents directory.
             string dataDir = Path.GetFullPath("../../../Data/");
-
-            //Create a project reader instance
-            ProjectReader rdr = new ProjectReader();
-
-            //Call read method of project reader object to get project object
-            FileStream St = new FileStream(dataDir + "project.mpp", FileMode.Open);
-            Project prj = rdr.Read(St);
-            St.Close();
+            Project project = new Project(dataDir+ "project.mpp");
 
             //Display currency properties
-            Console.WriteLine("Currency Code : " + prj.CurrencyCode.ToString());
-            Console.WriteLine("Currency Digits : " + prj.CurrencyDigits.ToString());
-            Console.WriteLine("Currency Symbol : " + prj.CurrencySymbol.ToString());
-            Console.WriteLine("Currency Symbol Position" + prj.CurrencySymbolPosition.ToString());
-            
+            Console.WriteLine("Currency Code : " + project.Get(Prj.CurrencyCode).ToString());
+            Console.WriteLine("<br>Currency Digits : " + project.Get(Prj.CurrencyDigits).ToString());
+            Console.WriteLine("<br>Currency Symbol : " + project.Get(Prj.CurrencySymbol).ToString());
+            Console.WriteLine("Currency Symbol Position" + project.Get(Prj.CurrencySymbolPosition).ToString());
         }
     }
 }

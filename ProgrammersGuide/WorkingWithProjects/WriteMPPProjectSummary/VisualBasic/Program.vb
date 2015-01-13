@@ -20,25 +20,14 @@ Namespace WriteMPPProjectSummary
 			Dim dataDir As String = Path.GetFullPath("../../../Data/")
 
 			'Instantiate ProjectReader class
-			Dim reader As New ProjectReader()
+			Dim project As New Project(dataDir & "project.mpp")
+			project.Set(Prj.Author, "Author")
+			project.Set(Prj.LastAuthor, "Last Author")
+			project.Set(Prj.Revision, 15)
+			project.Set(Prj.Keywords, "MSP Aspose")
+			project.Set(Prj.Comments, "Comments")
 
-			'Load an existing MPP file
-			Dim project As Project = reader.Read(dataDir & "project.mpp")
-
-			'Set some summary information about the project
-			project.Author = "Muhammad Sabir"
-			project.LastAuthor = "Sergey Polshkov"
-			project.Revision = 15
-			project.CreationDate = New DateTime(2010, 4, 15)
-			project.LastSaved = New DateTime(2010, 4, 15)
-			project.Keywords = "MPP Aspose"
-			project.LastPrinted = New DateTime(2010, 4, 16)
-			project.Subject = "Aspose Subject"
-			project.Template = "Aspose Template"
-			project.Comments = "Aspose Comments"
-
-			'Save the Project back in MPP format
-			project.Save(dataDir & "MPPAspose.xml", SaveFileFormat.XML)
+			project.Save(dataDir & "saved.mpp", SaveFileFormat.MPP)
 		End Sub
 	End Class
 End Namespace

@@ -12,6 +12,7 @@ Imports System.IO
 Imports Aspose.Tasks
 Imports System.Collections
 Imports System
+Imports System.Collections.Generic
 
 Namespace RetrievingCalendarInformation
 	Public Class Program
@@ -20,20 +21,16 @@ Namespace RetrievingCalendarInformation
 			Dim dataDir As String = Path.GetFullPath("../../../Data/")
 
 			'Create a project reader instance
-			Dim rdr As New ProjectReader()
-
-			'Call the Read method of project reader object to get project object
-			Dim St As New FileStream(dataDir & "project.mpp", FileMode.Open)
-			Dim prj As Project = rdr.Read(St)
-			St.Close()
+			Dim project As New Project(dataDir & "project.mpp")
 
 			'Retrieve Calendars Information
-			Dim alCals As ArrayList = prj.Calendars
+			Dim alCals As CalendarCollection = project.Calendars
 			For Each cal As Aspose.Tasks.Calendar In alCals
 				If cal.Name IsNot Nothing Then
 					Console.WriteLine("Calendar UID : " & cal.Uid)
 					Console.WriteLine("Calendar Name : " & cal.Name)
-					Dim alDays As ArrayList = cal.Days
+
+					Dim alDays As WeekDayCollection = cal.WeekDays
 					For Each wd As WeekDay In alDays
 						Dim ts As TimeSpan = wd.GetWorkingTime()
 						If wd.DayWorking Then
@@ -42,6 +39,8 @@ Namespace RetrievingCalendarInformation
 						End If
 					Next wd
 				End If
+
+
 			Next cal
 		End Sub
 	End Class

@@ -18,19 +18,15 @@ namespace SettingAttributesForNewTasks
             // The path to the documents directory.
             string dataDir = Path.GetFullPath("../../../Data/");
 
-			// Create directory if it is not already present.
-            bool IsExists = System.IO.Directory.Exists(dataDir);
-            if (!IsExists)
-                System.IO.Directory.CreateDirectory(dataDir);
-				
-            //Create a project instance
+            ///Create a project instance
             Project prj = new Project();
 
             //Set new task property
-            prj.NewTaskStartDate = TaskStartDateType.CurrentDate;
+            prj.Set(Prj.NewTaskStartDate, TaskStartDateType.CurrentDate);
 
             //Save the project as XML project file
-            prj.Save(dataDir + "project1.xml", Aspose.Tasks.Saving.SaveFileFormat.XML);
+            prj.Save(dataDir+ "project.xml", Aspose.Tasks.Saving.SaveFileFormat.XML);
+ 
 
             // Display Status.
             System.Console.WriteLine("New Task created with start date successfully.");

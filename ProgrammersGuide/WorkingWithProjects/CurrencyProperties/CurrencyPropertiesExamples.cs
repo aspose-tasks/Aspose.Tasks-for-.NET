@@ -18,11 +18,11 @@ namespace Examples.ProgrammersGuide.WorkingWithProjects.CurrencyProperties
         }
 
         [TestMethod, Test, Owner("Console")]
-        public void SetCurrencyProperties()
+        public void WritingCurrencyProperties()
         {
-            TestHelper.SetDataDir("ProgrammersGuide/WorkingWithProjects/CurrencyProperties/SetCurrencyProperties");
+            TestHelper.SetDataDir("ProgrammersGuide/WorkingWithProjects/CurrencyProperties/WritingCurrencyProperties");
 
-            SetCurrencyPropertiesExample.Program.Main();
+            WritingCurrencyPropertiesExample.Program.Main();
         }
 
     }

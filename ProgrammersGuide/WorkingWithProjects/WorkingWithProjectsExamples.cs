@@ -15,27 +15,11 @@ namespace Examples.ProgrammersGuide.WorkingWithProjects
     public class WorkingWithProjectsExamples
     {	
         [TestMethod, Test, Owner("Console")]
-        public void CreatingEmptyProjectFile()
-        {
-            TestHelper.SetDataDir("ProgrammersGuide/WorkingWithProjects/CreatingEmptyProjectFile");
-
-            CreatingEmptyProjectFileExample.Program.Main();
-        }
-
-        [TestMethod, Test, Owner("Console")]
         public void SettingAttributesForNewTasks()
         {
             TestHelper.SetDataDir("ProgrammersGuide/WorkingWithProjects/SettingAttributesForNewTasks");
 
             SettingAttributesForNewTasksExample.Program.Main();
-        }
-
-        [TestMethod, Test, Owner("Console")]
-        public void AddRemoveTasks()
-        {
-            TestHelper.SetDataDir("ProgrammersGuide/WorkingWithProjects/AddRemoveTasks");
-
-            AddRemoveTasksExample.Program.Main();
         }
 
         [TestMethod, Test, Owner("Console")]
@@ -63,22 +47,6 @@ namespace Examples.ProgrammersGuide.WorkingWithProjects
         }
 
         [TestMethod, Test, Owner("Console")]
-        public void FiscalYearProperties()
-        {
-            TestHelper.SetDataDir("ProgrammersGuide/WorkingWithProjects/FiscalYearProperties");
-
-            FiscalYearPropertiesExample.Program.Main();
-        }
-
-        [TestMethod, Test, Owner("Console")]
-        public void WeekdayProperties()
-        {
-            TestHelper.SetDataDir("ProgrammersGuide/WorkingWithProjects/WeekdayProperties");
-
-            WeekdayPropertiesExample.Program.Main();
-        }
-
-        [TestMethod, Test, Owner("Console")]
         public void ReadingProjectFiles()
         {
             TestHelper.SetDataDir("ProgrammersGuide/WorkingWithProjects/ReadingProjectFiles");
@@ -95,59 +63,59 @@ namespace Examples.ProgrammersGuide.WorkingWithProjects
         }
 
         [TestMethod, Test, Owner("Console")]
-        public void RetrievingTaskInformation()
+        public void GetObjectByFieldMethods()
         {
-            TestHelper.SetDataDir("ProgrammersGuide/WorkingWithProjects/RetrievingTaskInformation");
+            TestHelper.SetDataDir("ProgrammersGuide/WorkingWithProjects/GetObjectByFieldMethods");
 
-            RetrievingTaskInformationExample.Program.Main();
+            GetObjectByFieldMethodsExample.Program.Main();
         }
 
         [TestMethod, Test, Owner("Console")]
-        public void WritingTasksToProject()
+        public void ExtendedAttributes()
         {
-            TestHelper.SetDataDir("ProgrammersGuide/WorkingWithProjects/WritingTasksToProject");
+            TestHelper.SetDataDir("ProgrammersGuide/WorkingWithProjects/ExtendedAttributes");
 
-            WritingTasksToProjectExample.Program.Main();
+            ExtendedAttributesExample.Program.Main();
         }
 
         [TestMethod, Test, Owner("Console")]
-        public void RetrievingTaskLinks()
+        public void CalculateCriticalPath()
         {
-            TestHelper.SetDataDir("ProgrammersGuide/WorkingWithProjects/RetrievingTaskLinks");
+            TestHelper.SetDataDir("ProgrammersGuide/WorkingWithProjects/CalculateCriticalPath");
 
-            RetrievingTaskLinksExample.Program.Main();
+            CalculateCriticalPathExample.Program.Main();
         }
 
         [TestMethod, Test, Owner("Console")]
-        public void AddingAndRemovingTaskLinks()
+        public void ReplacingACalendar()
         {
-            TestHelper.SetDataDir("ProgrammersGuide/WorkingWithProjects/AddingAndRemovingTaskLinks");
+            TestHelper.SetDataDir("ProgrammersGuide/WorkingWithProjects/ReplacingACalendar");
 
-            AddingAndRemovingTaskLinksExample.Program.Main();
+            ReplacingACalendarExample.Program.Main();
         }
 
         [TestMethod, Test, Owner("Console")]
-        public void DefiningRootTask()
+        public void PrintingTaskWritingException()
         {
-            TestHelper.SetDataDir("ProgrammersGuide/WorkingWithProjects/DefiningRootTask");
+            TestHelper.SetDataDir("ProgrammersGuide/WorkingWithProjects/PrintingTaskWritingException");
 
-            DefiningRootTaskExample.Program.Main();
+            PrintingTaskWritingExceptionExample.Program.Main();
         }
 
         [TestMethod, Test, Owner("Console")]
-        public void AddingAndRemovingResources()
+        public void MicrosoftProjectMPPFileUpdate()
         {
-            TestHelper.SetDataDir("ProgrammersGuide/WorkingWithProjects/AddingAndRemovingResources");
+            TestHelper.SetDataDir("ProgrammersGuide/WorkingWithProjects/MicrosoftProjectMPPFileUpdate");
 
-            AddingAndRemovingResourcesExample.Program.Main();
+            MicrosoftProjectMPPFileUpdateExample.Program.Main();
         }
 
         [TestMethod, Test, Owner("Console")]
-        public void WritingResourcesToProject()
+        public void WritingUpdatedExtendedAttributeDefinitions()
         {
-            TestHelper.SetDataDir("ProgrammersGuide/WorkingWithProjects/WritingResourcesToProject");
+            TestHelper.SetDataDir("ProgrammersGuide/WorkingWithProjects/WritingUpdatedExtendedAttributeDefinitions");
 
-            WritingResourcesToProjectExample.Program.Main();
+            WritingUpdatedExtendedAttributeDefinitionsExample.Program.Main();
         }
 
     }

@@ -10,26 +10,21 @@ Imports Microsoft.VisualBasic
 Imports System.IO
 
 Imports Aspose.Tasks
+Imports Aspose.Tasks.Saving
 
 Namespace WritingProjectInformationExample
 	Public Class Program
 		Public Shared Sub Main()
 			' The path to the documents directory.
 			Dim dataDir As String = Path.GetFullPath("../../../Data/")
-			'Create a project instance
-			Dim prj As New Project()
+			Dim project As New Project(dataDir & "project.mpp")
+			project.Set(Prj.Author, "Author")
+			project.Set(Prj.LastAuthor, "Last Author")
+			project.Set(Prj.Revision, 15)
+			project.Set(Prj.Keywords, "MSP Aspose")
+			project.Set(Prj.Comments, "Comments")
 
-			'Set project information properties
-			prj.IsScheduleFromStart = True
-			prj.StartDate = New System.DateTime(2009, 8, 10)
-			prj.CurrentDate = New System.DateTime(2009, 8, 10)
-			prj.StatusDate = New System.DateTime(2009, 8, 10)
-			Dim cal As Aspose.Tasks.Calendar = Aspose.Tasks.Calendar.MakeStandardCalendar()
-			cal.Name = "Standard"
-			prj.Calendars.Add(cal)
-
-			'Save the Project as XML
-			prj.Save(dataDir & "project3.xml", Aspose.Tasks.Saving.SaveFileFormat.XML)
+			project.Save(dataDir & "saved.mpp", SaveFileFormat.MPP)
 
 		End Sub
 	End Class

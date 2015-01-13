@@ -19,21 +19,7 @@ namespace ReadingProjectFiles
             // The path to the documents directory.
             string dataDir = Path.GetFullPath("../../../Data/");
 
-            //Create a project reader instance
-            ProjectReader projectReader = new ProjectReader();
-
-            //Call the read method of project reader object to get project object
-            FileStream projectStream = new FileStream(dataDir + "Project.mpp", FileMode.Open);
-            Project existingProject = projectReader.Read(projectStream);
-            projectStream.Close();
-
-            //Display default properties
-            Console.WriteLine("New Task Default Start: " + existingProject.DefaultStartTime.ToShortDateString());
-            Console.WriteLine("New Task Default Type: " + existingProject.DefaultTaskType.ToString());
-            Console.WriteLine("Resouce Default Standard Rate: " + existingProject.DefaultStandardRate.ToString());
-            Console.WriteLine("Resource Default Overtime Rate: " + existingProject.DefaultOvertimeRate.ToString());
-            Console.WriteLine("Default Task EV Method: " + existingProject.DefaultTaskEVMethod.ToString());
-            Console.WriteLine("Default Cost Accrual: " + existingProject.DefaultFixedCostAccrual.ToString());
+            Project project = new Project(dataDir + "project.mpp");
         }
     }
 }

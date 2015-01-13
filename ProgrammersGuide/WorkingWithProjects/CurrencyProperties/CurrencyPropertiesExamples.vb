@@ -15,10 +15,10 @@ Namespace Examples.ProgrammersGuide.WorkingWithProjects.CurrencyProperties
         End Sub
 
         <TestMethod(), Test(), Owner("Console")> _
-	        Public Sub SetCurrencyProperties()
-	            TestHelper.SetDataDir("ProgrammersGuide/WorkingWithProjects/CurrencyProperties/SetCurrencyProperties")
+	        Public Sub WritingCurrencyProperties()
+	            TestHelper.SetDataDir("ProgrammersGuide/WorkingWithProjects/CurrencyProperties/WritingCurrencyProperties")
 	
-	            SetCurrencyPropertiesExample.Program.Main()
+	            WritingCurrencyPropertiesExample.Program.Main()
         End Sub
 
 	End Class

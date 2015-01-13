@@ -18,21 +18,7 @@ Namespace ReadingProjectFiles
 			' The path to the documents directory.
 			Dim dataDir As String = Path.GetFullPath("../../../Data/")
 
-			'Create a project reader instance
-			Dim projectReader As New ProjectReader()
-
-			'Call the read method of project reader object to get project object
-			Dim projectStream As New FileStream(dataDir & "Project.mpp", FileMode.Open)
-			Dim existingProject As Project = projectReader.Read(projectStream)
-			projectStream.Close()
-
-			'Display default properties
-			Console.WriteLine("New Task Default Start: " & existingProject.DefaultStartTime.ToShortDateString())
-			Console.WriteLine("New Task Default Type: " & existingProject.DefaultTaskType.ToString())
-			Console.WriteLine("Resouce Default Standard Rate: " & existingProject.DefaultStandardRate.ToString())
-			Console.WriteLine("Resource Default Overtime Rate: " & existingProject.DefaultOvertimeRate.ToString())
-			Console.WriteLine("Default Task EV Method: " & existingProject.DefaultTaskEVMethod.ToString())
-			Console.WriteLine("Default Cost Accrual: " & existingProject.DefaultFixedCostAccrual.ToString())
+			Dim project As New Project(dataDir & "project.mpp")
 		End Sub
 	End Class
 End Namespace
