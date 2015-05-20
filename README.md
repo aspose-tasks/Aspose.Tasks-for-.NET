@@ -4,12 +4,6 @@ This repository contains C# and VB.NET Example Projects for [Aspose.Tasks for .N
 
 ##How to use the Examples?
 
-###With the Examples Dashboard
-
-Download the [Aspose Examples Dashboard for .NET](http://www.aspose.com/community/files/51/.net-components/aspose-examples-for-.net/default.aspx) to view and run all these examples on your PC. It updates itself with the latest dependency libraries and examples.
-
-![Aspose Examples Dashboard](http://www.aspose.com/blogs/wp-content/uploads/2013/04/Dotnet-Dashboard.png "Aspose Examples Dashboard")
-
 ###With IDE
 
 Clone or Download the ZIP and extract the contents to your local hard drive. It has Solution (SLN) files for Microsoft Visual Studio 2005, 2008 and 2010.
