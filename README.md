@@ -1,48 +1,18 @@
-#Aspose.Tasks for .NET Examples Repository
+##Aspose.Tasks for .NET
 
-This repository contains C# and VB.NET Example Projects for [Aspose.Tasks for .NET](http://www.aspose.com/categories/.net-components/aspose.tasks-for-.net/default.aspx).
+This package contains [Examples](https://github.com/asposetasks/Aspose_Tasks_NET/tree/master/Examples) and Showcase projects for [Aspose.Tasks for .NET](http://www.aspose.com/categories/.net-components/aspose.tasks-for-.net/default.aspx) and will help you write your own applications.
 
-##How to use the Examples?
+Aspose.Tasks for .NET is a powerful .NET project management class library. It enables .NET applications to read Microsoft Project documents in MPP and XML formats, and write project documents in XML format without using Microsoft Project.
 
-###With IDE
+<p align="center">
 
-Clone or Download the ZIP and extract the contents to your local hard drive. It has Solution (SLN) files for Microsoft Visual Studio 2005, 2008 and 2010.
+  <a title="Download complete Aspose.Tasks for .NET source code" href="https://github.com/asposetasks/Aspose_Tasks_NET/archive/master.zip">
+	<img src="https://raw.github.com/AsposeExamples/java-examples-dashboard/master/images/downloadZip-Button-Large.png" />
+  </a>
+</p>
 
-Also download the [latest version](http://www.aspose.com/community/files/51/.net-components/aspose.tasks-for-.net/default.aspx) of Aspose.Tasks for .NET and set/fix dll references.
+Directory | Description
+--------- | -----------
+[Examples](https://github.com/asposetasks/Aspose_Tasks_NET/tree/master/Examples)  | A collection of .NET examples that help you learn how to product features
 
-##Open Source Feel of Aspose.Tasks
 
-Aspose.Tasks for .NET is a successful commercial product, but our philosophy is to develop it using our unique "open-source feel" approach. In other words, we at Aspose are extremely customer driven and this shows in:
-+ Frequent releases (at least 1 a month).
-+ Features are prioritized according to your requests.
-+ Unlimited free technical support for anyone.
-+ Helpful support in the forums and answers within 12-24 hours.
-+ Live chat with experienced technical advisors.
- 
-We think that customers who use our products feel that they use an open source product because of the extent they can influence the project, but with the security of a fully committed talented team working on the project.
-
-The Aspose.Tasks for .NET examples published here at GitHub is a part of the above effort.
-
-##What's included in this examples repository?
-
-###Code
-
-All examples are each contained in separate folders at the root of the repository. Each example is provided in both C# and Visual Basic. Each example contains a .cs or .vb code file. The main entry point for the examples is always found in this file.
-
-<table>
-  <tr><th>Example<th>Description</th></tr>
-  <tr><td>ArrangeWBS</td><td>Demonstrates how to arrange tasks by WBS codes</td></tr>
-  <tr><td>CombineConditions</td><td>Demonstrates how to search a task by providing more than one search conditions.</td></tr>
-  <tr><td>FindTaskByName</td><td>Demonstrates how to search a task by providing name of the task.</td></tr>
-  <tr><td>FilterTasksByName</td><td>Demonstrates how to filter full hierarchy of a task by providing name of the task.</td></tr>
-  <tr><td>RenderingProject</td><td>Demonstrates how to render a project to Image or HTML and show columns of your choice in the output.</td></tr>
-</table>
-
-##Contact Us
-
-+ **Website:** [www.aspose.com](http://www.aspose.com)
-+ **Product Home:** [Aspose.Tasks for .NET](http://www.aspose.com/categories/.net-components/aspose.tasks-for-.net/default.aspx)
-+ **Download:** [Download Aspose.Tasks for .NET](http://www.aspose.com/community/files/51/.net-components/aspose.tasks-for-.net/default.aspx)
-+ **Documentation:** [Aspose.Tasks for .NET Documentation](http://www.aspose.com/documentation/.net-components/aspose.tasks-for-.net/index.html)
-+ **Forum:** [Aspose.Tasks for .NET Forum](http://www.aspose.com/community/forums/aspose.tasks-product-family/96/showforum.aspx)
-+ **Blog:** [Aspose.Tasks for .NET Blog](http://www.aspose.com/blogs/aspose-products/aspose-tasks-product-family.html)
