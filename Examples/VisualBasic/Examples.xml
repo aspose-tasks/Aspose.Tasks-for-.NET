@@ -1,0 +1,572 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Data>
+  <Folders>
+    <Folder>
+      <Title>Programmers Guide</Title>
+      <Description>This section includes the examples related to following topics: 
+
+- Working with Projects
+- Working with Calendars
+- Working with Calendar Exceptions
+- Working with Tasks
+- Working with Task Links
+- Working with Task Baselines
+- Working with Resources
+- Working with Resource Assignments
+- Working with Currencies
+- Miscellaneous</Description>
+      <FolderName>ProgrammersGuide</FolderName>
+      <Order>1</Order>
+      <Folders>
+        <Folder>
+          <Title>Working with Projects</Title>
+          <Description>This section includes the examples related to following topics: 
+
+- Creating an Empty Project File
+- Reading a Project File
+- Determining Project Version
+- General Project Properties
+- Default Project Properties
+- Writing MPP Project Summary Information
+- Fiscal Year Properties
+- Weekday Properties
+- Currency Properties
+- Retrieving Calendar Information
+- Setting Attributes for New Tasks
+- Retrieving Task Information
+- Adding and Removing Tasks
+- Writing Tasks to Project
+- Retrieving Task Links
+- Adding and Removing Task Links
+- Defining Root Task
+- Retrieving Resource Information
+- Adding and Removing Resources
+- Writing Resources to Project
+- Retrieving Resource Assignment Information
+- Adding and Removing Resource Assignments
+- Writing Resource Assignments to Project
+- Performing Recalculations
+- Verifying Project Structure
+- Remove Methods
+- GetObjectByField Methods
+- Replacing a Calendar
+- Extended Attributes
+- Calculate Critical Path
+- Recaclulating Project Data
+- Printing the TaskWritingException
+- Microsoft Project 2010 MPP File Update
+- Writing Updated Extended Attribute Definitions and Values to MPP
+- Saving a Project as PDF
+- Get Number of Pages in Project
+- Retrieving Outline Codes</Description>
+          <FolderName>WorkingWithProjects</FolderName>
+          <Order>1</Order>
+          <Examples>
+            <Example>
+              <Title>Setting Attributes for New Tasks</Title>
+              <Description>With ASpose.Tasks, it is easy to add tasks to projects. This example explains how to add task and set the default start date for new tasks.</Description>
+              <FolderName>SettingAttributesForNewTasks</FolderName>
+              <Order>1</Order>
+              <DocLink>
+                <DisplayName>Setting Attributes for New Tasks</DisplayName>
+                <Url>Setting+Attributes+for+New+Tasks</Url>
+              </DocLink>
+              <InputFiles>
+                <DataFile>
+                  <Path>..\Data\project.xml</Path>
+                </DataFile>
+              </InputFiles>
+              <Type>Console</Type>
+            </Example>
+            <Example>
+              <Title>Determining Project Version</Title>
+              <Description>Aspose.Tasks lets you retrieve project file information such as the version of Microsoft Project that the file was created with. This example shows how.</Description>
+              <FolderName>DeterminingProjectVersion</FolderName>
+              <Order>2</Order>
+              <DocLink>
+                <DisplayName>Determining Project Version</DisplayName>
+                <Url>Determining+Project+Version</Url>
+              </DocLink>
+              <InputFiles>
+                <DataFile>
+                  <Path>..\Data\project.mpp</Path>
+                </DataFile>
+              </InputFiles>
+              <Type>Console</Type>
+            </Example>
+            <Example>
+              <Title>Default Project Properties</Title>
+              <Description>Microsoft Project lets users set default project properties that speed up the process of setting up a project. The default properties define when a new task starts and finishes, sets the default overtime and standard pay rates and more. Aspose.Tasks supports these features. This example explains both how to read default properties and how to write default properties to a project file.</Description>
+              <FolderName>DefaultProjectProperties</FolderName>
+              <Order>4</Order>
+              <DocLink>
+                <DisplayName>Default Project Properties</DisplayName>
+                <Url>Default+Project+Properties</Url>
+              </DocLink>
+              <InputFiles>
+                <DataFile>
+                  <Path>..\Data\project.mpp</Path>
+                </DataFile>
+              </InputFiles>
+              <Type>Console</Type>
+            </Example>
+            <Example>
+              <Title>Writing MPP Project Summary Information</Title>
+              <Description>Most programs save summary information with the files they save. Microsoft Project is no different. As well as the name of the author, the date the project was created and the last time it was edited and saved, it saves keywords, subject, comments and more. Aspose.Tasks lets you both read and write this type of information. This example explains how to open a project file, set the summary information and save it again.</Description>
+              <FolderName>WriteMPPProjectSummary</FolderName>
+              <Order>5</Order>
+              <DocLink>
+                <DisplayName>Writing MPP Project Summary Information</DisplayName>
+                <Url>Writing+MPP+Project+Summary+Information</Url>
+              </DocLink>
+              <InputFiles>
+                <DataFile>
+                  <Path>..\Data\project.mpp</Path>
+                </DataFile>
+              </InputFiles>
+              <OutputFiles>
+                <DataFile>
+                  <Path>..\Data\saved.mpp</Path>
+                </DataFile>
+              </OutputFiles>
+              <Type>Console</Type>
+            </Example>
+            <Example>
+              <Title>Reading Project Files</Title>
+              <Description>The Read method exposed by the ProjectReader class is used to read project files. The Read method accepts a valid FileStream object in MPP or XML format and returns a Project object which can be used to manipulate project data.</Description>
+              <FolderName>ReadingProjectFiles</FolderName>
+              <Order>6</Order>
+              <DocLink>
+                <DisplayName>Reading Project Files</DisplayName>
+                <Url>http://www.aspose.com/docs/display/tasksnet/Reading+a+Project+File</Url>
+              </DocLink>
+              <InputFiles>
+                <DataFile>
+                  <Path>..\Data\project.mpp</Path>
+                </DataFile>
+              </InputFiles>
+              <Type>Console</Type>
+            </Example>
+            <Example>
+              <Title>Retrieving Calendar Information</Title>
+              <Description>Microsoft Project lets users associate a variety of different calendars with working time, tasks and resources. These features are also available in Aspose.Tasks. This example explains how to retrieve information about which calendars are used in a project. Aspose.Tasks can retrieve calendar information for all versions of Microsoft Project: 2003, 2007, 2010, and 2013.</Description>
+              <FolderName>RetrievingCalendarInformation</FolderName>
+              <Order>8</Order>
+              <DocLink>
+                <DisplayName>Retrieving Calendar Information</DisplayName>
+                <Url>Retrieving+Calendar+Information</Url>
+              </DocLink>
+              <InputFiles>
+                <DataFile>
+                  <Path>..\Data\project.mpp</Path>
+                </DataFile>
+              </InputFiles>
+              <Type>Console</Type>
+            </Example>
+            <Example>
+              <Title>GetObjectByField Methods</Title>
+              <Description>In this example, we will see how we can use a series of methods exposed by the Project class that let you get an object - a calendar, task or resource, - by a given field - name, UID or ID using Aspose.Tasks for .NET.</Description>
+              <FolderName>GetObjectByFieldMethods</FolderName>
+              <Order>12</Order>
+              <DocLink>
+                <DisplayName>GetObjectByField Methods</DisplayName>
+                <Url>http://www.aspose.com/docs/display/tasksnet/GetObjectByField+Methods</Url>
+              </DocLink>
+              <Type>Console</Type>
+            </Example>
+            <Example>
+              <Title>Extended Attributes</Title>
+              <Description>In this example, we will see how we can set the extended attributes of a resource using Aspose.Tasks for .NET.</Description>
+              <FolderName>ExtendedAttributes</FolderName>
+              <Order>13</Order>
+              <DocLink>
+                <DisplayName>Extended Attributes</DisplayName>
+                <Url>http://www.aspose.com/docs/display/tasksnet/Extended+Attributes</Url>
+              </DocLink>
+              <InputFiles>
+                <DataFile>
+                  <Path>..\Data\project.mpp</Path>
+                </DataFile>
+              </InputFiles>
+              <Type>Console</Type>
+            </Example>
+            <Example>
+              <Title>Calculate Critical Path</Title>
+              <Description>The critical path are the tasks, or task, that ultimately determine when your project will end. Keeping track of the critical path and the resources assigned to them helps keep the project on time.
+
+In this example, we will see how we can calculate the critical path of the project using Aspose.Tasks for .NET.</Description>
+              <FolderName>CalculateCriticalPath</FolderName>
+              <Order>14</Order>
+              <DocLink>
+                <DisplayName>Calculate Critical Path</DisplayName>
+                <Url>http://www.aspose.com/docs/display/tasksnet/Calculate+Critical+Path</Url>
+              </DocLink>
+              <InputFiles>
+                <DataFile>
+                  <Path>..\Data\project.mpp</Path>
+                </DataFile>
+              </InputFiles>
+              <Type>Console</Type>
+            </Example>
+            <Example>
+              <Title>Replacing A Calendar</Title>
+              <Description>Calendars are used to see whether resources are available, and when tasks are scheduled. There are different types of calendars. This article looks at how to replace a base calendar, that is, the calendar used for projects and tasks, with another one. 
+
+In this example, we will see how we can replace an existing calendar with a new standard calendar using Aspose.Tasks for .NET.</Description>
+              <FolderName>ReplacingACalendar</FolderName>
+              <Order>15</Order>
+              <DocLink>
+                <DisplayName>Replacing a Calendar</DisplayName>
+                <Url>http://www.aspose.com/docs/display/tasksnet/Replacing+a+Calendar</Url>
+              </DocLink>
+              <Type>Console</Type>
+            </Example>
+            <Example>
+              <Title>Printing The TaskWritingException</Title>
+              <Description>In this example, we will see how we can print a message when there's an exception writing a task using Aspose.Tasks for .NET.</Description>
+              <FolderName>PrintingTaskWritingException</FolderName>
+              <Order>16</Order>
+              <DocLink>
+                <DisplayName>Printing the TaskWritingException</DisplayName>
+                <Url>http://www.aspose.com/docs/display/tasksnet/Printing+the+TaskWritingException</Url>
+              </DocLink>
+              <InputFiles>
+                <DataFile>
+                  <Path>..\Data\project.mpp</Path>
+                </DataFile>
+              </InputFiles>
+              <Type>Console</Type>
+            </Example>
+            <Example>
+              <Title>Microsoft Project MPP File Update</Title>
+              <Description>In this example, we will see how we can add a new task to an existing Microsoft Project 2010 file and save it back to the same file using Aspose.Tasks for .NET.</Description>
+              <FolderName>MicrosoftProjectMPPFileUpdate</FolderName>
+              <Order>17</Order>
+              <DocLink>
+                <DisplayName>Microsoft Project MPP File Update</DisplayName>
+                <Url>http://www.aspose.com/docs/display/tasksnet/Microsoft+Project+MPP+File+Update</Url>
+              </DocLink>
+              <InputFiles>
+                <DataFile>
+                  <Path>..\Data\project.mpp</Path>
+                </DataFile>
+              </InputFiles>
+              <OutputFiles>
+                <DataFile>
+                  <Path>..\Data\AfterLinking.Mpp</Path>
+                </DataFile>
+              </OutputFiles>
+              <Type>Console</Type>
+            </Example>
+            <Example>
+              <Title>Writing Updated Extended Attribute Definitions And Values To MPP</Title>
+              <Description>In this example, we will see how we can set the extended attributes of a resource using Aspose.Tasks for .NET.</Description>
+              <FolderName>WritingUpdatedExtendedAttributeDefinitions</FolderName>
+              <Order>18</Order>
+              <DocLink>
+                <DisplayName>Writing Updated Extended Attribute Definitions and Values to MPP</DisplayName>
+                <Url>http://www.aspose.com/docs/display/tasksnet/Writing+Updated+Extended+Attribute+Definitions+and+Values+to+MPP</Url>
+              </DocLink>
+              <InputFiles>
+                <DataFile>
+                  <Path>..\Data\project.mpp</Path>
+                </DataFile>
+              </InputFiles>
+              <OutputFiles>
+                <DataFile>
+                  <Path>..\Data\Output.mpp</Path>
+                </DataFile>
+              </OutputFiles>
+              <Type>Console</Type>
+            </Example>
+          </Examples>
+          <Folders>
+            <Folder>
+              <Title>Currency Properties</Title>
+              <Description>Microsoft Project lets users set which currency costs are shown in, in a project. They can define set the currency code, numbers after the decimal point and currency symbol so that costs show in an easy to read and intuitive way. Aspose.Tasks supports these features and provides a series of properties that help developers set and control currency properties. 
+
+This section include the following examples:
+
+1: Read Currency Properties
+2: Set Currecncy Properties</Description>
+              <FolderName>CurrencyProperties</FolderName>
+              <Order>3</Order>
+              <Examples>
+                <Example>
+                  <Title>Reading Currency Properties</Title>
+                  <Description>The example explains how to read a project's currency properties using Aspose.Tasks for .NET.</Description>
+                  <FolderName>ReadingCurrencyProperties</FolderName>
+                  <Order>1</Order>
+                  <DocLink>
+                    <DisplayName>Currency Properties</DisplayName>
+                    <Url>Currency+Properties</Url>
+                  </DocLink>
+                  <InputFiles>
+                    <DataFile>
+                      <Path>..\Data\project.mpp</Path>
+                    </DataFile>
+                  </InputFiles>
+                  <Type>Console</Type>
+                </Example>
+                <Example>
+                  <Title>Writing Currency Properties</Title>
+                  <Description>The example explains how to set currency properties using Aspose.Tasks</Description>
+                  <FolderName>WritingCurrencyProperties</FolderName>
+                  <Order>2</Order>
+                  <DocLink>
+                    <DisplayName>Currency Properties</DisplayName>
+                    <Url>Currency+Properties</Url>
+                  </DocLink>
+                  <InputFiles>
+                    <DataFile>
+                      <Path>..\Data\project.mpp</Path>
+                    </DataFile>
+                  </InputFiles>
+                  <OutputFiles>
+                    <DataFile>
+                      <Path>..\Data\project.xml</Path>
+                    </DataFile>
+                  </OutputFiles>
+                  <Type>Console</Type>
+                </Example>
+              </Examples>
+            </Folder>
+            <Folder>
+              <Title>General Project Properties</Title>
+              <Description>This section includes the following topics:
+
+ - Reading Project Information
+ - Writing Project Information</Description>
+              <FolderName>GeneralProjectProperties</FolderName>
+              <Order>7</Order>
+              <Examples>
+                <Example>
+                  <Title>Reading Project Information</Title>
+                  <Description>In this example, we will see how we can read the project properties using Aspose.Tasks.</Description>
+                  <FolderName>ReadingProjectInformation</FolderName>
+                  <Order>1</Order>
+                  <DocLink>
+                    <DisplayName>General Project Properties</DisplayName>
+                    <Url>http://www.aspose.com/docs/display/tasksnet/General+Project+Properties</Url>
+                  </DocLink>
+                  <InputFiles>
+                    <DataFile>
+                      <Path>..\Data\project.mpp</Path>
+                    </DataFile>
+                  </InputFiles>
+                  <Type>Console</Type>
+                </Example>
+                <Example>
+                  <Title>Writing Project Information</Title>
+                  <Description>In this example, we will see how we can write the project information such as scheduling the start point, the start date, current date, status date and calendar type using Aspose.Tasks,</Description>
+                  <FolderName>WritingProjectInformation</FolderName>
+                  <Order>2</Order>
+                  <DocLink>
+                    <DisplayName>General Project Properties</DisplayName>
+                    <Url>http://www.aspose.com/docs/display/tasksnet/General+Project+Properties</Url>
+                  </DocLink>
+                  <InputFiles>
+                    <DataFile>
+                      <Path>..\Data\project.mpp</Path>
+                    </DataFile>
+                  </InputFiles>
+                  <OutputFiles>
+                    <DataFile>
+                      <Path>..\Data\project3.xml</Path>
+                    </DataFile>
+                    <DataFile>
+                      <Path>..\Data\saved.mpp</Path>
+                    </DataFile>
+                  </OutputFiles>
+                  <Type>Console</Type>
+                </Example>
+              </Examples>
+            </Folder>
+            <Folder>
+              <Title>Creating An Empty Project File</Title>
+              <Description>This section includes the following topics:
+
+ - Create an Empty Project And Saving as XML File
+ - Create an Emptry Project and Save to Stream</Description>
+              <FolderName>CreatingEmptyProjectFile</FolderName>
+              <Order>9</Order>
+              <Examples>
+                <Example>
+                  <Title>Create An Empty Project And Saving As XML File</Title>
+                  <Description>In this example, we will see how we can create a new and empty project file using Aspose.Tasks for .NET.</Description>
+                  <FolderName>CreateEmptyProjectAndSaveXMLFile</FolderName>
+                  <Order>1</Order>
+                  <DocLink>
+                    <DisplayName>Creating an Empty Project File</DisplayName>
+                    <Url>http://www.aspose.com/docs/display/tasksnet/Creating+an+Empty+Project+File</Url>
+                  </DocLink>
+                  <OutputFiles>
+                    <DataFile>
+                      <Path>..\Data\saved.xml</Path>
+                    </DataFile>
+                  </OutputFiles>
+                  <Type>Console</Type>
+                </Example>
+                <Example>
+                  <Title>Create An Empty Project And Save To Stream</Title>
+                  <Description>In this example, we will see how we can create an empty project and save the file to stream using Aspsoe.Tasks for .NET.</Description>
+                  <FolderName>CreateEmptyProjectSavetoStream</FolderName>
+                  <Order>2</Order>
+                  <DocLink>
+                    <DisplayName>Creating an Empty Project File</DisplayName>
+                    <Url>http://www.aspose.com/docs/display/tasksnet/Creating+an+Empty+Project+File</Url>
+                  </DocLink>
+                  <OutputFiles>
+                    <DataFile>
+                      <Path>..\Data\Project1.xml</Path>
+                    </DataFile>
+                  </OutputFiles>
+                  <Type>Console</Type>
+                </Example>
+              </Examples>
+            </Folder>
+            <Folder>
+              <Title>Fiscal Year Properties</Title>
+              <Description>This section includes the following topics:
+
+ - Reading Fiscal Year Properties
+ - Writing Fiscal Year Properties</Description>
+              <FolderName>FiscalYearProperties</FolderName>
+              <Order>10</Order>
+              <Examples>
+                <Example>
+                  <Title>Reading Fiscal Year Properties</Title>
+                  <Description>In this example, we will see how we can read a project's fiscal year properties and display them in a console window using Aspose.Tasks for.NET.</Description>
+                  <FolderName>ReadingFiscalYearProperties</FolderName>
+                  <Order>1</Order>
+                  <DocLink>
+                    <DisplayName>Fiscal Year Properties</DisplayName>
+                    <Url>http://www.aspose.com/docs/display/tasksnet/Fiscal+Year+Properties</Url>
+                  </DocLink>
+                  <InputFiles>
+                    <DataFile>
+                      <Path>..\Data\project.mpp</Path>
+                    </DataFile>
+                  </InputFiles>
+                  <Type>Console</Type>
+                </Example>
+                <Example>
+                  <Title>Writing Fiscal Year Properties</Title>
+                  <Description>In this example, we will see how we can write fiscal year properties of the project using Aspose.Tasks for .NET.</Description>
+                  <FolderName>WritingFiscalYearProperties</FolderName>
+                  <Order>2</Order>
+                  <DocLink>
+                    <DisplayName>Fiscal Year Propertie</DisplayName>
+                    <Url>http://www.aspose.com/docs/display/tasksnet/Fiscal+Year+Properties</Url>
+                  </DocLink>
+                  <InputFiles>
+                    <DataFile>
+                      <Path>..\Data\project.mpp</Path>
+                    </DataFile>
+                  </InputFiles>
+                  <OutputFiles>
+                    <DataFile>
+                      <Path>..\Data\saved.mpp</Path>
+                    </DataFile>
+                  </OutputFiles>
+                  <Type>Console</Type>
+                </Example>
+              </Examples>
+            </Folder>
+            <Folder>
+              <Title>Weekday Properties</Title>
+              <Description>This section includes the following topics:
+
+ - Reading Weekday Properties
+ - Writing Weekday Properties</Description>
+              <FolderName>WeekdayProperties</FolderName>
+              <Order>11</Order>
+              <Examples>
+                <Example>
+                  <Title>Reading Weekday Properties</Title>
+                  <Description>In this example, we will see how we can read a project's weekday properties and write them to a console window using Aspose.Tasks for .NET.</Description>
+                  <FolderName>ReadingWeekdayProperties</FolderName>
+                  <Order>1</Order>
+                  <DocLink>
+                    <DisplayName>Weekday Properties</DisplayName>
+                    <Url>http://www.aspose.com/docs/display/tasksnet/Weekday+Properties</Url>
+                  </DocLink>
+                  <InputFiles>
+                    <DataFile>
+                      <Path>..\Data\project.mpp</Path>
+                    </DataFile>
+                  </InputFiles>
+                  <Type>Console</Type>
+                </Example>
+                <Example>
+                  <Title>Writing Weekday Properties</Title>
+                  <Description>In this example, we will see how we can write weekday properties to a project using Aspose.Tasks for .NET.</Description>
+                  <FolderName>WritingWeekdayProperties</FolderName>
+                  <Order>2</Order>
+                  <DocLink>
+                    <DisplayName>Weekday Properties</DisplayName>
+                    <Url>http://www.aspose.com/docs/display/tasksnet/Weekday+Properties</Url>
+                  </DocLink>
+                  <InputFiles>
+                    <DataFile>
+                      <Path>..\Data\project.mpp</Path>
+                    </DataFile>
+                  </InputFiles>
+                  <OutputFiles>
+                    <DataFile>
+                      <Path>..\Data\saved.xml</Path>
+                    </DataFile>
+                  </OutputFiles>
+                  <Type>Console</Type>
+                </Example>
+              </Examples>
+            </Folder>
+            <Folder>
+              <Title>Get Number Of Pages In Project</Title>
+              <Description>This section includes the following topics:
+
+ - Get Number of Pages in Project
+ - Get number of pages for different Views</Description>
+              <FolderName>GetNumberOfPagesInProject</FolderName>
+              <Order>19</Order>
+              <Examples>
+                <Example>
+                  <Title>Get Number Of Pages In Project</Title>
+                  <Description>In this example, we will see how we can get the number of pages in project using Aspose.Tasks for .NET.</Description>
+                  <FolderName>GetNumberOfPages</FolderName>
+                  <Order>1</Order>
+                  <DocLink>
+                    <DisplayName>Get Number of Pages in Project</DisplayName>
+                    <Url>http://www.aspose.com/docs/display/tasksnet/Get+Number+of+Pages+in+Project</Url>
+                  </DocLink>
+                  <InputFiles>
+                    <DataFile>
+                      <Path>..\Data\project.mpp</Path>
+                    </DataFile>
+                  </InputFiles>
+                  <Type>Console</Type>
+                </Example>
+                <Example>
+                  <Title>Get Number Of Pages For Different Views</Title>
+                  <Description>In  this example, we will see how we can render a projects' usage view and get the number of pages in the rendered output using Aspose.Tasks for .NET.</Description>
+                  <FolderName>GetNumberOfPagesForDifferentViews</FolderName>
+                  <Order>2</Order>
+                  <DocLink>
+                    <DisplayName>Get Number of Pages in Project</DisplayName>
+                    <Url>http://www.aspose.com/docs/display/tasksnet/Get+Number+of+Pages+in+Project</Url>
+                  </DocLink>
+                  <InputFiles>
+                    <DataFile>
+                      <Path>..\Data\project.mpp</Path>
+                    </DataFile>
+                  </InputFiles>
+                  <Type>Console</Type>
+                </Example>
+              </Examples>
+            </Folder>
+          </Folders>
+        </Folder>
+      </Folders>
+    </Folder>
+  </Folders>
+</Data>
