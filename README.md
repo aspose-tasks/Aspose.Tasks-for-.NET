@@ -14,6 +14,7 @@ Aspose.Tasks for .NET is a powerful .NET project management class library. It en
 Directory | Description
 --------- | -----------
 [Examples](https://github.com/asposetasks/Aspose_Tasks_NET/tree/master/Examples)  | A collection of .NET examples that help you learn how to product features
+[Plugins](Plugins)  | Standalone Plugins that will demonstrate one or multiple features on Aspose.Slides for .NET
 
 ## Resources
 

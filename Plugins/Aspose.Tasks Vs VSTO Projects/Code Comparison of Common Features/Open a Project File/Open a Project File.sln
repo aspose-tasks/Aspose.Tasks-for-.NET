@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VSTO Projects", "VSTO Projects\VSTO Projects.csproj", "{DA394FAF-F371-4619-AC7A-CFC1B48B34BB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aspose.Tasks", "Aspose.Tasks\Aspose.Tasks.csproj", "{A5B53404-4471-4B07-BBCD-B7AD5340E78B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DA394FAF-F371-4619-AC7A-CFC1B48B34BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA394FAF-F371-4619-AC7A-CFC1B48B34BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA394FAF-F371-4619-AC7A-CFC1B48B34BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA394FAF-F371-4619-AC7A-CFC1B48B34BB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A5B53404-4471-4B07-BBCD-B7AD5340E78B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A5B53404-4471-4B07-BBCD-B7AD5340E78B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A5B53404-4471-4B07-BBCD-B7AD5340E78B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A5B53404-4471-4B07-BBCD-B7AD5340E78B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
