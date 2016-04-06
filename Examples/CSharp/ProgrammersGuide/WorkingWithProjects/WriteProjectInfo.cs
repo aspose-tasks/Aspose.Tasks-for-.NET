@@ -16,6 +16,7 @@ namespace CSharp.Projects
     {
         public static void Run()
         {
+            //ExStart: WriteProjectInfo
             // The path to the documents directory.
             string dataDir = RunExamples.GetDataDir_Projects();
             Project project = new Project(dataDir+ "WriteProjectInfo.mpp");
@@ -26,7 +27,7 @@ namespace CSharp.Projects
             project.Set(Prj.Comments, "Comments");
 
             project.Save(dataDir+ "saved.mpp", SaveFileFormat.MPP);
-            
+            //ExEnd: WriteProjectInfo
         }
     }
 }

@@ -16,6 +16,7 @@ namespace CSharp.Projects
     {
         public static void Run()
         {
+            //ExStart: WriteFiscalYearProperties
             // The path to the documents directory.
             string dataDir = RunExamples.GetDataDir_Projects();
 
@@ -25,6 +26,7 @@ namespace CSharp.Projects
             prj.Set(Prj.FyStartDate, Month.July);
             prj.Set(Prj.FiscalYearStart, true);
             prj.Save(dataDir+ "saved.mpp", SaveFileFormat.MPP);
+            //ExEnd: WriteFiscalYearProperties
         }
     }
 }

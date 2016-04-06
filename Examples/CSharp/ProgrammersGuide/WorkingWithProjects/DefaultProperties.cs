@@ -16,6 +16,7 @@ namespace CSharp.Projects
     {
         public static void Run()
         {
+            //ExStart: DefaultProperties
             // The path to the documents directory.
             string dataDir = RunExamples.GetDataDir_Projects();
 
@@ -28,6 +29,7 @@ namespace CSharp.Projects
             Console.WriteLine("Resource Default Overtime Rate: " + prj.Get(Prj.DefaultOvertimeRate).ToString());
             Console.WriteLine("Default Task EV Method: " + prj.Get(Prj.DefaultTaskEVMethod).ToString());
             Console.WriteLine("Default Cost Accrual: " + prj.Get(Prj.DefaultFixedCostAccrual).ToString());
+            //ExEnd: DefaultProperties
         }
     }
 }

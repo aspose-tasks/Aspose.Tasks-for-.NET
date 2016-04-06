@@ -16,13 +16,14 @@ namespace CSharp.Projects
     {
         public static void Run()
         {
+            //ExStart: CreateEmptyProjectSaveXML
             // The path to the documents directory.
             string dataDir = RunExamples.GetDataDir_Projects();
 
             Project project = new Project();
 
             project.Save(dataDir+ "saved.xml", SaveFileFormat.XML);
-            
+            //ExEnd: CreateEmptyProjectSaveXML
         }
     }
 }

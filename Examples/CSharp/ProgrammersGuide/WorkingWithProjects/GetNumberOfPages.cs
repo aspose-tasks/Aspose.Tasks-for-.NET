@@ -15,6 +15,7 @@ namespace CSharp.Projects
     {
         public static void Run()
         {
+            //ExStart: GetNumberOfPages
             // The path to the documents directory.
             string dataDir = RunExamples.GetDataDir_Projects();
 
@@ -31,7 +32,7 @@ namespace CSharp.Projects
 
             //Get number of pages (Timescale.ThirdsOfMonths)
             iPages = project.GetPageCount(Aspose.Tasks.Visualization.Timescale.ThirdsOfMonths);
-
+            //ExEnd: GetNumberOfPages
 
         }
     }

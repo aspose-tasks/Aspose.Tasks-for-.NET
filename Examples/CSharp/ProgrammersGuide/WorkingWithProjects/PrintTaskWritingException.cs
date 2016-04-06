@@ -16,6 +16,7 @@ namespace CSharp.Projects
     {
         public static void Run()
         {
+            //ExStart: PrintTaskWritingException
             // The path to the documents directory.
             string dataDir = RunExamples.GetDataDir_Projects();
 
@@ -29,7 +30,7 @@ namespace CSharp.Projects
             {
                 Console.WriteLine(ex.LogText);
             }
-
+            //ExEnd: PrintTaskWritingException
         }
     }
 }

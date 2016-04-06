@@ -15,6 +15,7 @@ namespace CSharp.Projects
     {
         public static void Run()
         {
+            //ExStart: ReadProjectInfo
             // The path to the documents directory.
             string dataDir = RunExamples.GetDataDir_Projects();
 
@@ -30,7 +31,7 @@ namespace CSharp.Projects
             Console.WriteLine(project.Get(Prj.Keywords));
             Console.WriteLine(project.Get(Prj.Comments));
             Console.WriteLine("The program has run successfully");
-           
+            //ExEnd: ReadProjectInfo
         }
     }
 }

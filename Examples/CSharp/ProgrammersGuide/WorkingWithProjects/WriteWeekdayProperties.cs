@@ -16,6 +16,7 @@ namespace CSharp.Projects
     {
         public static void Run()
         {
+            //ExStart: WriteWeekdayProperties
             // The path to the documents directory.
             string dataDir = RunExamples.GetDataDir_Projects();
             //Create a project instance
@@ -28,8 +29,7 @@ namespace CSharp.Projects
             project.Set(Prj.MinutesPerWeek, 3240);
 
             project.Save(dataDir+ "saved.xml", SaveFileFormat.XML);
-            
-            
+            //ExEnd: WriteWeekdayProperties            
         }
     }
 }

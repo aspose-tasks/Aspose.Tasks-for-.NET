@@ -17,6 +17,7 @@ namespace CSharp.Projects
     {
         public static void Run()
         {
+            //ExStart: GetNumberOfPagesForViews
             // The path to the documents directory.
             string dataDir = RunExamples.GetDataDir_Projects();
 
@@ -32,6 +33,7 @@ namespace CSharp.Projects
 
             //Get number of pages (ThirdsOfMonths)
             Console.WriteLine(string.Format("Number of Pages = '{0}'", project.GetPageCount(PresentationFormat.ResourceUsage, Timescale.ThirdsOfMonths)));
+            //ExEnd: GetNumberOfPagesForViews
         }
     }
 }

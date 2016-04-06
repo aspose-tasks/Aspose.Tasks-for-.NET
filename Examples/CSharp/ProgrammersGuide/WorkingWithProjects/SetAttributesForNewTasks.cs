@@ -15,6 +15,7 @@ namespace CSharp.Projects
     {
         public static void Run()
         {
+            //ExStart: SetAttributesForNewTasks
             // The path to the documents directory.
             string dataDir = RunExamples.GetDataDir_Projects();
 
@@ -30,6 +31,7 @@ namespace CSharp.Projects
 
             // Display Status.
             System.Console.WriteLine("New Task created with start date successfully.");
+            //ExEnd: SetAttributesForNewTasks
         }
     }
 }

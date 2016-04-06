@@ -16,6 +16,7 @@ namespace CSharp.Projects
     {
         public static void Run()
         {
+            //ExStart: MPPFileUpdate
             // The path to the documents directory.
             string dataDir = RunExamples.GetDataDir_Projects();
             //Read an existing project
@@ -29,7 +30,7 @@ namespace CSharp.Projects
 
             //Save the project as MPP project file
             project.Save(dataDir+ "AfterLinking.Mpp", Aspose.Tasks.Saving.SaveFileFormat.MPP);
-            
+            //ExEnd: MPPFileUpdate   
         }
     }
 }

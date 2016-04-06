@@ -16,6 +16,7 @@ namespace CSharp.Projects
     {
         public static void Run()
         {
+            //ExStart: WriteUpdatedExtendedAttributeDefinitions
             // The path to the documents directory.
             string dataDir = RunExamples.GetDataDir_Projects();
 
@@ -142,6 +143,7 @@ namespace CSharp.Projects
 
             //Save the project as MPP project file
             project.Save(resultFile, Aspose.Tasks.Saving.SaveFileFormat.MPP);
+            //ExEnd: WriteUpdatedExtendedAttributeDefinitions
         }
     }
 }

@@ -16,6 +16,7 @@ namespace CSharp.Projects
     {
         public static void Run()
         {
+            //Exstart: CalculateCriticalPath
             // The path to the documents directory.
             string dataDir = RunExamples.GetDataDir_Projects();
 
@@ -33,6 +34,7 @@ namespace CSharp.Projects
             {
                 Console.WriteLine(task.Get(Tsk.Name));
             }
+            //ExEnd: CalculateCriticalPath
         }
     }
 }

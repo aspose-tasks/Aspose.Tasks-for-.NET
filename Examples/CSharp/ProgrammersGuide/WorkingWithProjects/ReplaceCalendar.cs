@@ -15,6 +15,7 @@ namespace CSharp.Projects
     {
         public static void Run()
         {
+            //ExStart: ReplaceCalendar
             // The path to the documents directory.
             string dataDir = RunExamples.GetDataDir_Projects();
             Project project = new Project(dataDir+ "ReplaceCalendar.mpp");
@@ -30,7 +31,7 @@ namespace CSharp.Projects
                     break;
                 }
             }
-            
+            //ExEnd: ReplaceCalendar
             
         }
     }

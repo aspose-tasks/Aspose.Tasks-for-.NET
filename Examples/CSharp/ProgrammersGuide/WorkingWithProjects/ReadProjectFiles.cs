@@ -16,10 +16,12 @@ namespace CSharp.Projects
     {
         public static void Run()
         {
+            //ExStart: ReadProjectFiles
             // The path to the documents directory.
             string dataDir = RunExamples.GetDataDir_Projects();
 
             Project project = new Project(dataDir + "ReadProjectFiles.mpp");
+            //ExEnd: ReadProjectFiles
         }
     }
 }

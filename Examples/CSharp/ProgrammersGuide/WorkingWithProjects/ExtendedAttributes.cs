@@ -17,6 +17,7 @@ namespace CSharp.Projects
     {
         public static void Run()
         {
+            //Exstart: ExtendedAttributes
             // The path to the documents directory.
             string dataDir = RunExamples.GetDataDir_Projects();
 
@@ -38,6 +39,7 @@ namespace CSharp.Projects
             ea.FieldId = ead.FieldId;
             ea.Value = XmlConvert.ToString(DateTime.Now, dateTimeFormat);
             eas.Add(ea);
+            //ExEnd: ExtendedAttributes
         }
     }
 }

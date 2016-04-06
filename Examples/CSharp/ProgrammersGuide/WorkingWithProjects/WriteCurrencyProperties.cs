@@ -15,6 +15,7 @@ namespace CSharp.Projects
     {
         public static void Run()
         {
+            //ExStart: WriteCurrencyProperties
             // The path to the documents directory.
             string dataDir = RunExamples.GetDataDir_Projects();
 
@@ -29,7 +30,7 @@ namespace CSharp.Projects
 
             //Save the project as XML project file
             project.Save(dataDir+ "project.xml", Aspose.Tasks.Saving.SaveFileFormat.XML);
-            
+            //ExEnd: WriteCurrencyProperties
         }
     }
 }

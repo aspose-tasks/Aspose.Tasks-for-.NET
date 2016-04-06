@@ -18,6 +18,7 @@ namespace CSharp.Projects
     {
         public static void Run()
         {
+            //ExStart: RetrieveCalendarInfo
             // The path to the documents directory.
             string dataDir = RunExamples.GetDataDir_Projects();
 
@@ -44,9 +45,8 @@ namespace CSharp.Projects
                         }
                     }
                 }
-
-
             }
+            //ExEnd: RetrieveCalendarInfo
         }
     }
 }

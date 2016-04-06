@@ -16,6 +16,7 @@ namespace CSharp.Projects
     {
         public static void Run()
         {
+            //ExStart: ReadCurrencyProperties
             // The path to the documents directory.
             string dataDir = RunExamples.GetDataDir_Projects();
             Project project = new Project(dataDir+ "ReadCurrencyProperties.mpp");
@@ -25,6 +26,7 @@ namespace CSharp.Projects
             Console.WriteLine("<br>Currency Digits : " + project.Get(Prj.CurrencyDigits).ToString());
             Console.WriteLine("<br>Currency Symbol : " + project.Get(Prj.CurrencySymbol).ToString());
             Console.WriteLine("Currency Symbol Position" + project.Get(Prj.CurrencySymbolPosition).ToString());
+            //ExEnd: ReadCurrencyProperties
         }
     }
 }
