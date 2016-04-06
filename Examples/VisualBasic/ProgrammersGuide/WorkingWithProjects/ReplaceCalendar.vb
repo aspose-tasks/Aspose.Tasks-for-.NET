@@ -13,22 +13,23 @@ Imports Aspose.Tasks
 
 Namespace VisualBasic.Projects
 	Public Class ReplaceCalendar
-		Public Shared Sub Run()
-			' The path to the documents directory.
-			Dim dataDir As String = RunExamples.GetDataDir_Projects()
-			Dim project As New Project(dataDir & "ReplaceCalendar.mpp")
+        Public Shared Sub Run()
+            'ExStart: ReplaceCalendar
+            ' The path to the documents directory.
+            Dim dataDir As String = RunExamples.GetDataDir_Projects()
+            Dim project As New Project(dataDir & "ReplaceCalendar.mpp")
 
-			Dim cal As New Aspose.Tasks.Calendar("New Cal")
-			Dim calColl As CalendarCollection = project.Calendars
-			For Each c As Aspose.Tasks.Calendar In calColl
-				If c.Name = "Standard" Then
-					calColl.Remove(c)
-					calColl.Add("Standard", cal)
-					Exit For
-				End If
-			Next c
+            Dim cal As New Aspose.Tasks.Calendar("New Cal")
+            Dim calColl As CalendarCollection = project.Calendars
+            For Each c As Aspose.Tasks.Calendar In calColl
+                If c.Name = "Standard" Then
+                    calColl.Remove(c)
+                    calColl.Add("Standard", cal)
+                    Exit For
+                End If
+            Next c
+            'ExEnd: ReplaceCalendar
 
-
-		End Sub
+        End Sub
 	End Class
 End Namespace

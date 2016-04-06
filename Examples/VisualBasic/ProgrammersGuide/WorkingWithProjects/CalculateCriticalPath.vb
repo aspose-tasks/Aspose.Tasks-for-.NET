@@ -15,6 +15,7 @@ Imports System
 Namespace VisualBasic.Projects
     Public Class CalculateCriticalPath
         Public Shared Sub Run()
+            'ExStart: CalculateCriticalPath
             ' The path to the documents directory.
             Dim dataDir As String = RunExamples.GetDataDir_Projects()
 
@@ -31,6 +32,7 @@ Namespace VisualBasic.Projects
             For Each task As Task In project.CriticalPath
                 Console.WriteLine(task.Get(Tsk.Name))
             Next task
+            'ExEnd: CalculateCriticalPath
         End Sub
     End Class
 End Namespace

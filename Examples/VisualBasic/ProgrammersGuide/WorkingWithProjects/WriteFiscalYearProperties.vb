@@ -14,9 +14,10 @@ Imports Aspose.Tasks.Saving
 
 Namespace VisualBasic.Projects
 	Public Class WriteFiscalYearProperties
-		Public Shared Sub Run()
-			' The path to the documents directory.
-			Dim dataDir As String = RunExamples.GetDataDir_Projects()
+        Public Shared Sub Run()
+            'ExStart: WriteFiscalYearProperties
+            ' The path to the documents directory.
+            Dim dataDir As String = RunExamples.GetDataDir_Projects()
 
             ''Create a project instance
             'Dim prj As New Project(dataDir & "WriteFiscalYearProperties.mpp")
@@ -24,6 +25,7 @@ Namespace VisualBasic.Projects
             '         prj.[Set](prj.FyStartDate, Month.July)
             '         prj.[Set](prj.FiscalYearStart, True)
             '         prj.Save(dataDir & "saved.mpp", SaveFileFormat.MPP)
-		End Sub
+            'ExEnd: WriteFiscalYearProperties
+        End Sub
 	End Class
 End Namespace

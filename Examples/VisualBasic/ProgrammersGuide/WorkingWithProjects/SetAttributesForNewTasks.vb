@@ -13,9 +13,10 @@ Imports Aspose.Tasks
 
 Namespace VisualBasic.Projects
 	Public Class SetAttributesForNewTasks
-		Public Shared Sub Run()
-			' The path to the documents directory.
-			Dim dataDir As String = RunExamples.GetDataDir_Projects()
+        Public Shared Sub Run()
+            'Exstart: SetAttributesForNewTasks
+            ' The path to the documents directory.
+            Dim dataDir As String = RunExamples.GetDataDir_Projects()
 
             'Create a project instance
             Dim project As New Project()
@@ -27,8 +28,9 @@ Namespace VisualBasic.Projects
             project.Save(dataDir & "project.xml", Aspose.Tasks.Saving.SaveFileFormat.XML)
 
 
-			' Display Status.
-			System.Console.WriteLine("New Task created with start date successfully.")
-		End Sub
+            ' Display Status.
+            System.Console.WriteLine("New Task created with start date successfully.")
+            'Exend: SetAttributesForNewTasks
+        End Sub
 	End Class
 End Namespace

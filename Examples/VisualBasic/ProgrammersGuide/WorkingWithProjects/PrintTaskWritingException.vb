@@ -14,18 +14,19 @@ Imports System
 
 Namespace VisualBasic.Projects
 	Public Class PrintTaskWritingException
-		Public Shared Sub Run()
-			' The path to the documents directory.
-			Dim dataDir As String = RunExamples.GetDataDir_Projects()
+        Public Shared Sub Run()
+            'ExStart: PrintTaskWritingException
+            ' The path to the documents directory.
+            Dim dataDir As String = RunExamples.GetDataDir_Projects()
 
-			Dim project As New Project(dataDir & "PrintTaskWritingException.mpp")
+            Dim project As New Project(dataDir & "PrintTaskWritingException.mpp")
 
-			Try
-				project.Save("project.MPP", Aspose.Tasks.Saving.SaveFileFormat.MPP)
-			Catch ex As TasksWritingException
-				Console.WriteLine(ex.LogText)
-			End Try
-
-		End Sub
+            Try
+                project.Save("project.MPP", Aspose.Tasks.Saving.SaveFileFormat.MPP)
+            Catch ex As TasksWritingException
+                Console.WriteLine(ex.LogText)
+            End Try
+            'ExEnd: PrintTaskWritingException
+        End Sub
 	End Class
 End Namespace

@@ -14,21 +14,21 @@ Imports Aspose.Tasks.Saving
 
 Namespace VisualBasic.Projects
 	Public Class WriteWeekdayProperties
-		Public Shared Sub Run()
-			' The path to the documents directory.
-			Dim dataDir As String = RunExamples.GetDataDir_Projects()
-			'Create a project instance
-			Dim project As New Project(dataDir & "WriteWeekdayProperties.mpp")
+        Public Shared Sub Run()
+            'ExStart: WriteWeekdayProperties
+            ' The path to the documents directory.
+            Dim dataDir As String = RunExamples.GetDataDir_Projects()
+            'Create a project instance
+            Dim project As New Project(dataDir & "WriteWeekdayProperties.mpp")
 
-			'Set week days properties
-			project.Set(Prj.WeekStartDay, DayType.Monday)
-			project.Set(Prj.DaysPerMonth, 24)
-			project.Set(Prj.MinutesPerDay, 540)
-			project.Set(Prj.MinutesPerWeek, 3240)
+            'Set week days properties
+            project.Set(Prj.WeekStartDay, DayType.Monday)
+            project.Set(Prj.DaysPerMonth, 24)
+            project.Set(Prj.MinutesPerDay, 540)
+            project.Set(Prj.MinutesPerWeek, 3240)
 
-			project.Save(dataDir & "saved.xml", SaveFileFormat.XML)
-
-
-		End Sub
+            project.Save(dataDir & "saved.xml", SaveFileFormat.XML)
+            'ExEnd: WriteWeekdayProperties
+        End Sub
 	End Class
 End Namespace

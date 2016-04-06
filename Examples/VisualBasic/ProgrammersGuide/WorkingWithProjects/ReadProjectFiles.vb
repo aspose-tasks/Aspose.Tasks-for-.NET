@@ -14,11 +14,13 @@ Imports System
 
 Namespace VisualBasic.Projects
 	Public Class ReadProjectFiles
-		Public Shared Sub Run()
-			' The path to the documents directory.
-			Dim dataDir As String = RunExamples.GetDataDir_Projects()
+        Public Shared Sub Run()
+            'ExStart: ReadProjectFiles
+            ' The path to the documents directory.
+            Dim dataDir As String = RunExamples.GetDataDir_Projects()
 
-			Dim project As New Project(dataDir & "ReadProjectFiles.mpp")
-		End Sub
+            Dim project As New Project(dataDir & "ReadProjectFiles.mpp")
+            'ExEnd: ReadProjectFiles
+        End Sub
 	End Class
 End Namespace

@@ -14,14 +14,15 @@ Imports Aspose.Tasks.Saving
 
 Namespace VisualBasic.Projects
 	Public Class CreateEmptyProjectSaveXML
-		Public Shared Sub Run()
-			' The path to the documents directory.
-			Dim dataDir As String = RunExamples.GetDataDir_Projects()
+        Public Shared Sub Run()
+            'ExStart: CreateEmptyProjectSaveXML
+            ' The path to the documents directory.
+            Dim dataDir As String = RunExamples.GetDataDir_Projects()
 
-			Dim project As New Project()
+            Dim project As New Project()
 
-			project.Save(dataDir & "saved.xml", SaveFileFormat.XML)
-
-		End Sub
+            project.Save(dataDir & "saved.xml", SaveFileFormat.XML)
+            'ExEnd: CreateEmptyProjectSaveXML
+        End Sub
 	End Class
 End Namespace

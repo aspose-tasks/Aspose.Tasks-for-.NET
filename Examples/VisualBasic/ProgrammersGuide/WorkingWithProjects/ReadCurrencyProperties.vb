@@ -14,16 +14,18 @@ Imports System
 
 Namespace VisualBasic.Projects
 	Public Class ReadCurrencyProperties
-		Public Shared Sub Run()
-			' The path to the documents directory.
-			Dim dataDir As String = RunExamples.GetDataDir_Projects()
-			Dim project As New Project(dataDir & "ReadCurrencyProperties.mpp")
+        Public Shared Sub Run()
+            'ExStart: ReadCurrencyProperties
+            ' The path to the documents directory.
+            Dim dataDir As String = RunExamples.GetDataDir_Projects()
+            Dim project As New Project(dataDir & "ReadCurrencyProperties.mpp")
 
-			'Display currency properties
-			Console.WriteLine("Currency Code : " & project.Get(Prj.CurrencyCode).ToString())
-			Console.WriteLine("<br>Currency Digits : " & project.Get(Prj.CurrencyDigits).ToString())
-			Console.WriteLine("<br>Currency Symbol : " & project.Get(Prj.CurrencySymbol).ToString())
-			Console.WriteLine("Currency Symbol Position" & project.Get(Prj.CurrencySymbolPosition).ToString())
-		End Sub
+            'Display currency properties
+            Console.WriteLine("Currency Code : " & project.Get(Prj.CurrencyCode).ToString())
+            Console.WriteLine("<br>Currency Digits : " & project.Get(Prj.CurrencyDigits).ToString())
+            Console.WriteLine("<br>Currency Symbol : " & project.Get(Prj.CurrencySymbol).ToString())
+            Console.WriteLine("Currency Symbol Position" & project.Get(Prj.CurrencySymbolPosition).ToString())
+            'ExEnd: ReadCurrencyProperties
+        End Sub
 	End Class
 End Namespace

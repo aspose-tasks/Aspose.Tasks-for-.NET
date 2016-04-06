@@ -13,25 +13,25 @@ Imports Aspose.Tasks
 
 Namespace VisualBasic.Projects
 	Public Class GetNumberOfPages
-		Public Shared Sub Run()
-			' The path to the documents directory.
-			Dim dataDir As String = RunExamples.GetDataDir_Projects()
+        Public Shared Sub Run()
+            'ExStart: GetNumberOfPages
+            ' The path to the documents directory.
+            Dim dataDir As String = RunExamples.GetDataDir_Projects()
 
 
 
-			'Read the input Project file
-			Dim project As New Project(dataDir & "GetNumberOfPages.mpp")
+            'Read the input Project file
+            Dim project As New Project(dataDir & "GetNumberOfPages.mpp")
 
-			'Get number of pages
-			Dim iPages As Integer = project.GetPageCount()
+            'Get number of pages
+            Dim iPages As Integer = project.GetPageCount()
 
-			'Get number of pages (Timescale.Months)
-			iPages = project.GetPageCount(Aspose.Tasks.Visualization.Timescale.Months)
+            'Get number of pages (Timescale.Months)
+            iPages = project.GetPageCount(Aspose.Tasks.Visualization.Timescale.Months)
 
-			'Get number of pages (Timescale.ThirdsOfMonths)
-			iPages = project.GetPageCount(Aspose.Tasks.Visualization.Timescale.ThirdsOfMonths)
-
-
-		End Sub
+            'Get number of pages (Timescale.ThirdsOfMonths)
+            iPages = project.GetPageCount(Aspose.Tasks.Visualization.Timescale.ThirdsOfMonths)
+            'ExEnd: GetNumberOfPages
+        End Sub
 	End Class
 End Namespace
