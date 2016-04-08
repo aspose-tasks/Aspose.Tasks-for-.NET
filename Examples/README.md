@@ -10,4 +10,4 @@ This package contains C# and VB.NET Example Projects for [Aspose.Tasks for .NET]
 
 ## How to Run the Examples?
 
-There are two Visual projects, one for C# and other for Visual Basic examples. You can just download the repository, browse the folder and open the file in Visual Studio. For more details, visit our [documentation website](http://www.aspose.com/docs/display/slidesnet/How+to+Run+Aspose.Tasks+for+.NET+Examples).
+There are two Visual projects, one for C# and other for Visual Basic examples. You can just download the repository, browse the folder and open the file in Visual Studio. For more details, visit our [documentation website](http://www.aspose.com/docs/display/tasksnet/How+to+Run+Aspose.Tasks+for+.NET+Examples).
