@@ -46,7 +46,8 @@ namespace CSharp
             //WriteProjectInfo.Run();
             //WriteUpdatedExtendedAttributeDefinitions.Run();
             //WriteWeekdayProperties.Run();
-            
+            //TaskSettingStartFinishDates.Run();
+
             // Stop before exiting
             Console.WriteLine("\n\nProgram Finished. Press any key to exit....");
             Console.ReadKey();
