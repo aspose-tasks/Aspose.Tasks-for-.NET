@@ -1,5 +1,5 @@
 '////////////////////////////////////////////////////////////////////////
-' Copyright 2001-2014 Aspose Pty Ltd. All Rights Reserved.
+' Copyright 2001-2016 Aspose Pty Ltd. All Rights Reserved.
 '
 ' This file is part of Aspose.Tasks. The source code in this file
 ' is only intended as a supplement to the documentation, and is provided
@@ -19,35 +19,36 @@ Namespace VisualBasic.Projects
             ' The path to the documents directory.
             Dim dataDir As String = RunExamples.GetDataDir_Projects()
 
-            Dim newFile As String = dataDir & "WriteUpdatedExtendedAttributeDefinitions.mpp"
-            Dim resultFile As String = dataDir & "Output.mpp"
+            Dim newFile As String = dataDir & Convert.ToString("WriteUpdatedExtendedAttributeDefinitions.mpp")
+            Dim resultFile As String = dataDir & Convert.ToString("Output.mpp")
 
-            Dim project As New Project(dataDir & "WriteUpdatedExtendedAttributeDefinitions.mpp")
+            Dim project As New Project(dataDir & newFile)
 
-            '			#Region "task attributes"
+
             ' Add new text3 extended attribute and one text value
             Dim taskTextAttr As New ExtendedAttributeDefinition()
-            taskTextAttr.Alias = "New text3 attribute"
+            taskTextAttr.[Alias] = "New text3 attribute"
             taskTextAttr.FieldName = "Text3"
             taskTextAttr.ElementType = ElementType.Task
             taskTextAttr.CfType = CustomFieldType.Text
-
+            taskTextAttr.FieldId = Convert.ToInt32(ExtendedAttributeTask.Text3).ToString()
+            taskTextAttr.LookupUid = Guid.NewGuid().ToString()
             project.ExtendedAttributes.Add(taskTextAttr)
 
             Dim textVal As New Value()
             textVal.Id = 1
             textVal.Description = "Text value descr"
             textVal.Val = "Text value1"
-
             taskTextAttr.ValueList.Add(textVal)
 
             ' Add new cost1 extended attribute and two cost values
             Dim taskCostAttr As New ExtendedAttributeDefinition()
-            taskCostAttr.Alias = "New cost1 attribute"
+            taskCostAttr.[Alias] = "New cost1 attribute"
             taskCostAttr.FieldName = "Cost1"
             taskCostAttr.ElementType = ElementType.Task
             taskCostAttr.CfType = CustomFieldType.Cost
-
+            taskCostAttr.FieldId = Convert.ToInt32(ExtendedAttributeTask.Cost1).ToString()
+            taskCostAttr.LookupUid = Guid.NewGuid().ToString()
             project.ExtendedAttributes.Add(taskCostAttr)
 
             Dim costVal1 As New Value()
@@ -64,7 +65,7 @@ Namespace VisualBasic.Projects
             taskCostAttr.ValueList.Add(costVal2)
 
             ' Add new task and assign attribute value
-            Dim task As Task = project.RootTask.Children.Add("New task")
+            Dim task As Aspose.Tasks.Task = project.RootTask.Children.Add("New task")
 
             Dim taskAttr As New ExtendedAttribute()
             taskAttr.AttributeDefinition = taskCostAttr
@@ -73,11 +74,12 @@ Namespace VisualBasic.Projects
             task.ExtendedAttributes.Add(taskAttr)
 
             Dim taskStartAttr As New ExtendedAttributeDefinition()
-            taskStartAttr.Alias = "New start 7 attribute"
+            taskStartAttr.[Alias] = "New start 7 attribute"
             taskStartAttr.CfType = CustomFieldType.Start
             taskStartAttr.ElementType = ElementType.Task
             taskStartAttr.FieldName = "Start7"
-
+            taskStartAttr.FieldId = Convert.ToInt32(ExtendedAttributeTask.Start7).ToString()
+            taskStartAttr.LookupUid = Guid.NewGuid().ToString()
             Dim startVal As New Value()
             startVal.Val = DateTime.Now.ToString()
             startVal.Description = "Start 7 value description"
@@ -87,11 +89,12 @@ Namespace VisualBasic.Projects
             project.ExtendedAttributes.Add(taskStartAttr)
 
             Dim taskFinishAttr As New ExtendedAttributeDefinition()
-            taskFinishAttr.Alias = "New finish 4 attribute"
+            taskFinishAttr.[Alias] = "New finish 4 attribute"
             taskFinishAttr.CfType = CustomFieldType.Finish
             taskFinishAttr.ElementType = ElementType.Task
             taskFinishAttr.FieldName = "Finish4"
-
+            taskFinishAttr.FieldId = Convert.ToInt32(ExtendedAttributeTask.Finish4).ToString()
+            taskFinishAttr.LookupUid = Guid.NewGuid().ToString()
             Dim finishVal As New Value()
             finishVal.Val = DateTime.Now.ToString()
             finishVal.Description = "Finish 4 value description"
@@ -101,11 +104,12 @@ Namespace VisualBasic.Projects
             project.ExtendedAttributes.Add(taskFinishAttr)
 
             Dim numberAttr As New ExtendedAttributeDefinition()
-            numberAttr.Alias = "New number attribute"
+            numberAttr.[Alias] = "New number attribute"
             numberAttr.FieldName = "Number20"
             numberAttr.CfType = CustomFieldType.Number
             numberAttr.ElementType = ElementType.Task
-
+            numberAttr.FieldId = Convert.ToInt32(ExtendedAttributeTask.Number20).ToString()
+            numberAttr.LookupUid = Guid.NewGuid().ToString()
             Dim val1 As New Value()
             val1.Val = "1"
             val1.Description = "Number 1 value"
@@ -122,14 +126,17 @@ Namespace VisualBasic.Projects
 
             project.ExtendedAttributes.Add(numberAttr)
 
-            '			#End Region
+
 
             Dim rscStartAttr As New ExtendedAttributeDefinition()
-            rscStartAttr.Alias = "New start5 attribute"
+            rscStartAttr.[Alias] = "New start5 attribute"
             rscStartAttr.FieldName = "Start5"
             rscStartAttr.ElementType = ElementType.Resource
             rscStartAttr.CfType = CustomFieldType.Start
+            rscStartAttr.FieldId = Convert.ToInt32(ExtendedAttributeTask.Start5).ToString()
 
+
+            rscStartAttr.LookupUid = Guid.NewGuid().ToString()
             Dim startVal2 As New Value()
             startVal2.Id = 4
             startVal2.Val = DateTime.Now.ToString()
@@ -142,7 +149,7 @@ Namespace VisualBasic.Projects
 
             'Save the project as MPP project file
             project.Save(resultFile, Aspose.Tasks.Saving.SaveFileFormat.MPP)
-            'ExEnd: WriteUpdatedExtendedAttributeDefinitions
+            'ExEnd: WriteUpdatedExtendedAttributeDefinitions        
         End Sub
-	End Class
+    End Class
 End Namespace

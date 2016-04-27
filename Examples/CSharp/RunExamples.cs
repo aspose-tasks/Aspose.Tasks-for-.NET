@@ -22,7 +22,7 @@ namespace CSharp
             // =====================================================
             // =====================================================
 
-            CalculateCriticalPath.Run();
+            //CalculateCriticalPath.Run();
             //CreateEmptyProjectSaveXML.Run();
             //DefaultProperties.Run();
             //DetermineProjectVersion.Run();
@@ -44,7 +44,7 @@ namespace CSharp
             //WriteFiscalYearProperties.Run();
             //WriteMPPProjectSummary.Run();
             //WriteProjectInfo.Run();
-            //WriteUpdatedExtendedAttributeDefinitions.Run();
+            WriteUpdatedExtendedAttributeDefinitions.Run();
             //WriteWeekdayProperties.Run();
             //TaskSettingStartFinishDates.Run();
 
