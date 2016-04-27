@@ -15,7 +15,8 @@ Imports System
 Imports System.Collections.Generic
 
 Namespace VisualBasic.Projects
-	Public Class RetrieveCalendarInfo
+    Public Class RetrieveCalendarInfo
+
         Public Shared Sub Run()
             'ExStart: RetrieveCalendarInfo
             ' The path to the documents directory.
@@ -43,5 +44,5 @@ Namespace VisualBasic.Projects
             Next cal
             'ExEnd: RetrieveCalendarInfo
         End Sub
-	End Class
+    End Class
 End Namespace

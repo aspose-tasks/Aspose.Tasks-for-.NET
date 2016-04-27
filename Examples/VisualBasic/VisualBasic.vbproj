@@ -45,6 +45,7 @@
   <ItemGroup>
     <Compile Include="ProgrammersGuide\WorkingWithProjects\CalculateCriticalPath.vb" />
     <Compile Include="ProgrammersGuide\WorkingWithProjects\CreateEmptyProjectSaveXML.vb" />
+    <Compile Include="ProgrammersGuide\WorkingWithProjects\TaskSettingStartFinishDates.vb" />
     <Compile Include="ProgrammersGuide\WorkingWithProjects\WriteFiscalYearProperties.vb" />
     <Compile Include="ProgrammersGuide\WorkingWithProjects\ReadCurrencyProperties.vb" />
     <Compile Include="ProgrammersGuide\WorkingWithProjects\WriteCurrencyProperties.vb" />

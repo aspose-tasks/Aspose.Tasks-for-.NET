@@ -12,6 +12,7 @@ namespace CSharp.Projects
         /// </summary>
         public static void Run()
         {
+            //ExStart: TaskSettingStartFinishDates
             Project project = new Project();
             Console.WriteLine(project.Get(Prj.StartDate));
             Console.WriteLine(project.CalculationMode.ToString());
@@ -35,6 +36,8 @@ namespace CSharp.Projects
             Console.WriteLine("*************** After Recalculate *****************");
             Console.WriteLine(task.Get(Tsk.Start));
             Console.WriteLine(task.Get(Tsk.Finish));
+
+            //ExEnd: TaskSettingStartFinishDates
         }
     }
 }
