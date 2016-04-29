@@ -43,6 +43,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ProgrammersGuide\WorkingWithCalendars\CreatingCalendar.vb" />
+    <Compile Include="ProgrammersGuide\WorkingWithCalendars\DefineWeekdaysForCalendar.vb" />
+    <Compile Include="ProgrammersGuide\WorkingWithCalendars\GeneralCalendarProperties.vb" />
+    <Compile Include="ProgrammersGuide\WorkingWithCalendars\MakeAStandardCalendar.vb" />
+    <Compile Include="ProgrammersGuide\WorkingWithCalendars\ReadWorkWeeksInformation.vb" />
+    <Compile Include="ProgrammersGuide\WorkingWithCalendars\WriteUpdatedCalendarDataToMPP.vb" />
     <Compile Include="ProgrammersGuide\WorkingWithProjects\CalculateCriticalPath.vb" />
     <Compile Include="ProgrammersGuide\WorkingWithProjects\CreateEmptyProjectSaveXML.vb" />
     <Compile Include="ProgrammersGuide\WorkingWithProjects\TaskSettingStartFinishDates.vb" />

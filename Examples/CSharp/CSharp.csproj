@@ -42,6 +42,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ProgrammersGuide\WorkingWithCalendars\CreatingCalendar.cs" />
+    <Compile Include="ProgrammersGuide\WorkingWithCalendars\DefineWeekdaysForCalendar.cs" />
+    <Compile Include="ProgrammersGuide\WorkingWithCalendars\GeneralCalendarProperties.cs" />
+    <Compile Include="ProgrammersGuide\WorkingWithCalendars\MakeAStandardCalendar.cs" />
+    <Compile Include="ProgrammersGuide\WorkingWithCalendars\ReadWorkWeeksInformation.cs" />
+    <Compile Include="ProgrammersGuide\WorkingWithCalendars\WriteUpdatedCalendarDataToMPP.cs" />
     <Compile Include="ProgrammersGuide\WorkingWithProjects\CalculateCriticalPath.cs" />
     <Compile Include="ProgrammersGuide\WorkingWithProjects\CreateEmptyProjectSaveXML.cs" />
     <Compile Include="ProgrammersGuide\WorkingWithProjects\TaskSettingStartFinishDates.cs" />
