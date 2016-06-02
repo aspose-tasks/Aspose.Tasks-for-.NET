@@ -1,29 +1,31 @@
-'////////////////////////////////////////////////////////////////////////
-' Copyright 2001-2016 Aspose Pty Ltd. All Rights Reserved.
-'
-' This file is part of Aspose.Tasks. The source code in this file
-' is only intended as a supplement to the documentation, and is provided
-' "as is", without warranty of any kind, either expressed or implied.
-'////////////////////////////////////////////////////////////////////////
+' This project uses Automatic Package Restore feature of NuGet to resolve Aspose.Tasks for .NET API reference 
+' when the project is build. Please check https://docs.nuget.org/consume/nuget-faq for more information. 
+' If you do not wish to use NuGet, you can manually download Aspose.Tasks for .NET API from http://www.aspose.com/downloads, 
+' install it and then add its reference to this project. For any issues, questions or suggestions 
+' please feel free to contact us using http://www.aspose.com/community/forums/default.aspx
 
-Imports Microsoft.VisualBasic
-Imports System.IO
-
-Imports Aspose.Tasks
 Imports System
+Imports Aspose.Tasks
+Imports Aspose.Tasks.Saving
+Imports VisualBasic
 
-Namespace VisualBasic.Projects
-	Public Class WriteUpdatedExtendedAttributeDefinitions
+Namespace CSharp.Projects
+
+    Public Class WriteUpdatedExtendedAttributeDefinitions
         Public Shared Sub Run()
-            'ExStart: WriteUpdatedExtendedAttributeDefinitions
+
+            ' This example requires Aspose.Task for .NET, a trial version can be download from  http://www.aspose.com/corporate/purchase/temporary-license.aspx
+
             ' The path to the documents directory.
             Dim dataDir As String = RunExamples.GetDataDir_Projects()
 
-            Dim newFile As String = dataDir & Convert.ToString("WriteUpdatedExtendedAttributeDefinitions.mpp")
-            Dim resultFile As String = dataDir & Convert.ToString("Output.mpp")
+            Dim project As New Project(dataDir & Convert.ToString("Project1.mpp"))
 
-            Dim project As New Project(dataDir & newFile)
+            ' Apply Aspose.Task API License
+            Dim license As New License()
 
+            ' Place license file in Bin/Debug/Folder
+            license.SetLicense("Aspose.Tasks.lic")
 
             ' Add new text3 extended attribute and one text value
             Dim taskTextAttr As New ExtendedAttributeDefinition()
@@ -65,7 +67,7 @@ Namespace VisualBasic.Projects
             taskCostAttr.ValueList.Add(costVal2)
 
             ' Add new task and assign attribute value
-            Dim task As Aspose.Tasks.Task = project.RootTask.Children.Add("New task")
+            Dim task As Task = project.RootTask.Children.Add("New task")
 
             Dim taskAttr As New ExtendedAttribute()
             taskAttr.AttributeDefinition = taskCostAttr
@@ -126,15 +128,15 @@ Namespace VisualBasic.Projects
 
             project.ExtendedAttributes.Add(numberAttr)
 
-
-
             Dim rscStartAttr As New ExtendedAttributeDefinition()
             rscStartAttr.[Alias] = "New start5 attribute"
             rscStartAttr.FieldName = "Start5"
             rscStartAttr.ElementType = ElementType.Resource
             rscStartAttr.CfType = CustomFieldType.Start
-            rscStartAttr.FieldId = Convert.ToInt32(ExtendedAttributeTask.Start5).ToString()
+            rscStartAttr.CalculationType = CalculationType.Rollup
+            rscStartAttr.RollupType = RollupType.Sum
 
+            rscStartAttr.FieldId = Convert.ToInt32(ExtendedAttributeTask.Start5).ToString()
 
             rscStartAttr.LookupUid = Guid.NewGuid().ToString()
             Dim startVal2 As New Value()
@@ -146,10 +148,29 @@ Namespace VisualBasic.Projects
 
             project.ExtendedAttributes.Add(rscStartAttr)
 
+            Dim myTaskDurattr As New ExtendedAttributeDefinition()
+            myTaskDurattr.[Alias] = "New Duration"
+            myTaskDurattr.CfType = CustomFieldType.Duration
+            myTaskDurattr.FieldId = ExtendedAttributeTask.Duration1.ToString("D")
+            myTaskDurattr.CalculationType = CalculationType.Rollup
+            myTaskDurattr.RollupType = RollupType.Sum
+            myTaskDurattr.ElementType = ElementType.Task
+            project.ExtendedAttributes.Add(myTaskDurattr)
+
+            ' Add new task and assign attribute value
+            Dim timeTask As Task = project.RootTask.Children.Add("New task")
+
+            Dim timeexExtendedAttribute As ExtendedAttribute = myTaskDurattr.CreateExtendedAttribute()
+
+            timeexExtendedAttribute.DurationFormat = TimeUnitType.Hour
+            timeexExtendedAttribute.Value = "PT3H0M0S"
+            timeTask.ExtendedAttributes.Add(timeexExtendedAttribute)
+
+            Dim mppSaveOptions As New MPPSaveOptions()
+            mppSaveOptions.WriteViewData = True
 
             'Save the project as MPP project file
-            project.Save(resultFile, Aspose.Tasks.Saving.SaveFileFormat.MPP)
-            'ExEnd: WriteUpdatedExtendedAttributeDefinitions        
+            project.Save(dataDir & Convert.ToString("ExtendedAttribute.mpp"), mppSaveOptions)
         End Sub
     End Class
 End Namespace
