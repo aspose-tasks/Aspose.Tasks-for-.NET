@@ -19,7 +19,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>bin\Test\Debug\</OutputPath>
+    <OutputPath>bin\Debug\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -33,9 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Aspose.Tasks, Version=9.3.0.0, Culture=neutral, PublicKeyToken=716fcc553a201e56, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Aspose.Tasks.9.3.0\lib\Aspose.Tasks.dll</HintPath>
+    <Reference Include="Aspose.Tasks, Version=9.4.0.0, Culture=neutral, PublicKeyToken=716fcc553a201e56, processorArchitecture=MSIL">
+      <HintPath>..\packages\Aspose.Tasks.9.4.0\lib\net4.0\Aspose.Tasks.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -50,6 +50,10 @@
     <Compile Include="ProgrammersGuide\WorkingWithCalendars\WriteUpdatedCalendarDataToMPP.cs" />
     <Compile Include="ProgrammersGuide\WorkingWithProjects\CalculateCriticalPath.cs" />
     <Compile Include="ProgrammersGuide\WorkingWithProjects\CreateEmptyProjectSaveXML.cs" />
+    <Compile Include="ProgrammersGuide\WorkingWithProjects\ReadModuleAttributesInforamtion.cs" />
+    <Compile Include="ProgrammersGuide\WorkingWithProjects\ReadModulesInformation.cs" />
+    <Compile Include="ProgrammersGuide\WorkingWithProjects\ReadReferencesInformation.cs" />
+    <Compile Include="ProgrammersGuide\WorkingWithProjects\ReadVBAProjectInformation.cs" />
     <Compile Include="ProgrammersGuide\WorkingWithProjects\TaskSettingStartFinishDates.cs" />
     <Compile Include="ProgrammersGuide\WorkingWithProjects\WriteFiscalYearProperties.cs" />
     <Compile Include="ProgrammersGuide\WorkingWithProjects\ReadCurrencyProperties.cs" />
@@ -78,7 +82,9 @@
   <ItemGroup>
     <None Include="packages.config" />
     <None Include="ProgrammersGuide\WorkingWithProjects\Data\CalculateCriticalPath.mpp" />
+    <None Include="ProgrammersGuide\WorkingWithProjects\Data\Project1.mpp" />
     <None Include="ProgrammersGuide\WorkingWithProjects\Data\ReadCurrencyProperties.mpp" />
+    <None Include="ProgrammersGuide\WorkingWithProjects\Data\VbaProject1.mpp" />
     <None Include="ProgrammersGuide\WorkingWithProjects\Data\WriteCurrencyProperties.mpp" />
     <None Include="ProgrammersGuide\WorkingWithProjects\Data\DefaultProperties.mpp" />
     <None Include="ProgrammersGuide\WorkingWithProjects\Data\DetermineProjectVersion.mpp" />

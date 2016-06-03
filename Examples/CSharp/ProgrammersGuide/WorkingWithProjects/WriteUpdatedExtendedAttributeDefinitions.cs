@@ -1,14 +1,14 @@
-//////////////////////////////////////////////////////////////////////////
-// Copyright 2001-2016 Aspose Pty Ltd. All Rights Reserved.
-//
-// This file is part of Aspose.Tasks. The source code in this file
-// is only intended as a supplement to the documentation, and is provided
-// "as is", without warranty of any kind, either expressed or implied.
-//////////////////////////////////////////////////////////////////////////
-using System.IO;
+/*
+This project uses Automatic Package Restore feature of NuGet to resolve Aspose.Tasks for .NET API reference 
+when the project is build. Please check https://docs.nuget.org/consume/nuget-faq for more information. 
+If you do not wish to use NuGet, you can manually download Aspose.Tasks for .NET API from http://www.aspose.com/downloads, 
+install it and then add its reference to this project. For any issues, questions or suggestions 
+please feel free to contact us using http://www.aspose.com/community/forums/default.aspx
+*/
 
 using Aspose.Tasks;
 using System;
+using Aspose.Tasks.Saving;
 
 namespace CSharp.Projects
 {
@@ -16,15 +16,18 @@ namespace CSharp.Projects
     {
         public static void Run()
         {
-            //ExStart: WriteUpdatedExtendedAttributeDefinitions
-            // The path to the documents directory.
+            // This example requires Aspose.Task for .NET, a trial version can be download from  http://www.aspose.com/corporate/purchase/temporary-license.aspx
 
+            // The path to the documents directory.
             string dataDir = RunExamples.GetDataDir_Projects();
 
-            string existingFile = dataDir+ "WriteUpdatedExtendedAttributeDefinitions.mpp";
-            string resultFile = dataDir+ "Output.mpp";
+            Project project = new Project( dataDir + "Project1.mpp");
 
-            Project project = new Project(existingFile);
+            // Apply Aspose.Task API License
+            License license = new License();
+
+            // Place license file in Bin/Debug/Folder
+            license.SetLicense("Aspose.Tasks.lic");
 
             #region task attributes
             // Add new text3 extended attribute and one text value
@@ -67,7 +70,7 @@ namespace CSharp.Projects
             taskCostAttr.ValueList.Add(costVal2);
 
             // Add new task and assign attribute value
-            Aspose.Tasks.Task task = project.RootTask.Children.Add("New task");
+            Task task = project.RootTask.Children.Add("New task");
 
             ExtendedAttribute taskAttr = new ExtendedAttribute();
             taskAttr.AttributeDefinition = taskCostAttr;
@@ -135,6 +138,9 @@ namespace CSharp.Projects
             rscStartAttr.FieldName = "Start5";
             rscStartAttr.ElementType = ElementType.Resource;
             rscStartAttr.CfType = CustomFieldType.Start;
+            rscStartAttr.CalculationType = CalculationType.Rollup;
+            rscStartAttr.RollupType = RollupType.Sum;
+
             rscStartAttr.FieldId = Convert.ToInt32(ExtendedAttributeTask.Start5).ToString(); ;
             rscStartAttr.LookupUid = Guid.NewGuid().ToString();
             Value startVal2 = new Value();
@@ -146,10 +152,29 @@ namespace CSharp.Projects
 
             project.ExtendedAttributes.Add(rscStartAttr);
 
+            ExtendedAttributeDefinition myTaskDurattr = new ExtendedAttributeDefinition();
+            myTaskDurattr.Alias = "New Duration";
+            myTaskDurattr.CfType = CustomFieldType.Duration;
+            myTaskDurattr.FieldId = ExtendedAttributeTask.Duration1.ToString("D");
+            myTaskDurattr.CalculationType = CalculationType.Rollup;
+            myTaskDurattr.RollupType = RollupType.Sum;
+            myTaskDurattr.ElementType = ElementType.Task;
+            project.ExtendedAttributes.Add(myTaskDurattr);
+
+            // Add new task and assign attribute value
+            Task timeTask = project.RootTask.Children.Add("New task");
+
+            ExtendedAttribute timeexExtendedAttribute = myTaskDurattr.CreateExtendedAttribute();
+
+            timeexExtendedAttribute.DurationFormat = TimeUnitType.Hour;
+            timeexExtendedAttribute.Value = "PT3H0M0S";
+            timeTask.ExtendedAttributes.Add(timeexExtendedAttribute);
+
+            MPPSaveOptions mppSaveOptions = new MPPSaveOptions();
+            mppSaveOptions.WriteViewData = true;
 
             //Save the project as MPP project file
-            project.Save(resultFile, Aspose.Tasks.Saving.SaveFileFormat.MPP);
-            //ExEnd: WriteUpdatedExtendedAttributeDefinitions
+            project.Save(dataDir + "ExtendedAttribute.mpp", mppSaveOptions);            
         }
     }
 }
