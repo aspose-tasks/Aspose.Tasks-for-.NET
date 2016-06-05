@@ -30,7 +30,7 @@ namespace CSharp
             // =====================================================
             // =====================================================
 
-            CalculateCriticalPath.Run();
+            //CalculateCriticalPath.Run();
             //CreateEmptyProjectSaveXML.Run();
             //DefaultProperties.Run();
             //DetermineProjectVersion.Run();
