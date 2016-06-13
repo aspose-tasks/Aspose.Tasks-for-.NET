@@ -10,6 +10,7 @@ Imports VisualBasic
 Imports System.Collections.Generic
 Imports System.Linq
 Imports System.Text
+Imports Examples.VisualBasic
 
 Namespace Examples.ProgrammersGuide.WorkingWithCalendars
     Class DefineWeekdaysForCalendar

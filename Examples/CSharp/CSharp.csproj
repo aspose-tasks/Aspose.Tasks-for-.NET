@@ -1,23 +1,22 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>9.0.21022</ProductVersion>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{26B64ED3-EB9B-40FA-ACB6-519C0A9DEE64}</ProjectGuid>
-    <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <ProjectGuid>{D2E76A96-92DA-44F6-AB1D-F8A6FA3B4452}</ProjectGuid>
     <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Examples</RootNamespace>
-    <AssemblyName>Aspose.Tasks.Examples</AssemblyName>
-    <FileUpgradeFlags>
-    </FileUpgradeFlags>
-    <OldToolsVersion>3.5</OldToolsVersion>
-    <StartupObject>CSharp.RunExamples</StartupObject>
-    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
-    <RestorePackages>true</RestorePackages>
+    <AssemblyName>Aspose.Task.Examples</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -26,20 +25,28 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
-    <OutputPath>bin\Test\Release\</OutputPath>
+    <OutputPath>bin\Release\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>CSharp.RunExamples</StartupObject>
+  </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Aspose.Tasks, Version=9.4.0.0, Culture=neutral, PublicKeyToken=716fcc553a201e56, processorArchitecture=MSIL">
-      <HintPath>..\packages\Aspose.Tasks.9.4.0\lib\net4.0\Aspose.Tasks.dll</HintPath>
+    <Reference Include="Aspose.Tasks, Version=9.4.1.0, Culture=neutral, PublicKeyToken=716fcc553a201e56, processorArchitecture=MSIL">
+      <HintPath>..\packages\Aspose.Tasks.9.4.1\lib\net4.0\Aspose.Tasks.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
   </ItemGroup>
@@ -52,65 +59,70 @@
     <Compile Include="ProgrammersGuide\WorkingWithCalendars\WriteUpdatedCalendarDataToMPP.cs" />
     <Compile Include="ProgrammersGuide\WorkingWithProjects\CalculateCriticalPath.cs" />
     <Compile Include="ProgrammersGuide\WorkingWithProjects\CreateEmptyProjectSaveXML.cs" />
-    <Compile Include="ProgrammersGuide\WorkingWithProjects\ReadModuleAttributesInforamtion.cs" />
-    <Compile Include="ProgrammersGuide\WorkingWithProjects\ReadModulesInformation.cs" />
-    <Compile Include="ProgrammersGuide\WorkingWithProjects\ReadReferencesInformation.cs" />
-    <Compile Include="ProgrammersGuide\WorkingWithProjects\ReadVBAProjectInformation.cs" />
-    <Compile Include="ProgrammersGuide\WorkingWithProjects\TaskSettingStartFinishDates.cs" />
-    <Compile Include="ProgrammersGuide\WorkingWithProjects\WriteFiscalYearProperties.cs" />
-    <Compile Include="ProgrammersGuide\WorkingWithProjects\ReadCurrencyProperties.cs" />
-    <Compile Include="ProgrammersGuide\WorkingWithProjects\WriteCurrencyProperties.cs" />
     <Compile Include="ProgrammersGuide\WorkingWithProjects\DefaultProperties.cs" />
     <Compile Include="ProgrammersGuide\WorkingWithProjects\DetermineProjectVersion.cs" />
     <Compile Include="ProgrammersGuide\WorkingWithProjects\ExtendedAttributes.cs" />
-    <Compile Include="ProgrammersGuide\WorkingWithProjects\ReadFiscalYearProperties.cs" />
-    <Compile Include="ProgrammersGuide\WorkingWithProjects\ReadProjectInfo.cs" />
-    <Compile Include="ProgrammersGuide\WorkingWithProjects\WriteProjectInfo.cs" />
     <Compile Include="ProgrammersGuide\WorkingWithProjects\GetNumberOfPages.cs" />
     <Compile Include="ProgrammersGuide\WorkingWithProjects\GetNumberOfPagesForViews.cs" />
     <Compile Include="ProgrammersGuide\WorkingWithProjects\GetObjectByFieldMethods.cs" />
     <Compile Include="ProgrammersGuide\WorkingWithProjects\MPPFileUpdate.cs" />
     <Compile Include="ProgrammersGuide\WorkingWithProjects\PrintTaskWritingException.cs" />
+    <Compile Include="ProgrammersGuide\WorkingWithProjects\ReadCurrencyProperties.cs" />
+    <Compile Include="ProgrammersGuide\WorkingWithProjects\ReadFiscalYearProperties.cs" />
+    <Compile Include="ProgrammersGuide\WorkingWithProjects\ReadModuleAttributesInforamtion.cs" />
+    <Compile Include="ProgrammersGuide\WorkingWithProjects\ReadModulesInformation.cs" />
     <Compile Include="ProgrammersGuide\WorkingWithProjects\ReadProjectFiles.cs" />
+    <Compile Include="ProgrammersGuide\WorkingWithProjects\ReadProjectInfo.cs" />
+    <Compile Include="ProgrammersGuide\WorkingWithProjects\ReadReferencesInformation.cs" />
+    <Compile Include="ProgrammersGuide\WorkingWithProjects\ReadVBAProjectInformation.cs" />
+    <Compile Include="ProgrammersGuide\WorkingWithProjects\ReadWeekdayProperties.cs" />
     <Compile Include="ProgrammersGuide\WorkingWithProjects\ReplaceCalendar.cs" />
     <Compile Include="ProgrammersGuide\WorkingWithProjects\RetrieveCalendarInfo.cs" />
     <Compile Include="ProgrammersGuide\WorkingWithProjects\SetAttributesForNewTasks.cs" />
-    <Compile Include="ProgrammersGuide\WorkingWithProjects\ReadWeekdayProperties.cs" />
-    <Compile Include="ProgrammersGuide\WorkingWithProjects\WriteWeekdayProperties.cs" />
+    <Compile Include="ProgrammersGuide\WorkingWithProjects\TaskSettingStartFinishDates.cs" />
+    <Compile Include="ProgrammersGuide\WorkingWithProjects\WriteCurrencyProperties.cs" />
+    <Compile Include="ProgrammersGuide\WorkingWithProjects\WriteFiscalYearProperties.cs" />
     <Compile Include="ProgrammersGuide\WorkingWithProjects\WriteMPPProjectSummary.cs" />
+    <Compile Include="ProgrammersGuide\WorkingWithProjects\WriteProjectInfo.cs" />
     <Compile Include="ProgrammersGuide\WorkingWithProjects\WriteUpdatedExtendedAttributeDefinitions.cs" />
+    <Compile Include="ProgrammersGuide\WorkingWithProjects\WriteWeekdayProperties.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RunExamples.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="app.config" />
     <None Include="packages.config" />
     <None Include="ProgrammersGuide\WorkingWithProjects\Data\CalculateCriticalPath.mpp" />
-    <None Include="ProgrammersGuide\WorkingWithProjects\Data\Project1.mpp" />
-    <None Include="ProgrammersGuide\WorkingWithProjects\Data\ReadCurrencyProperties.mpp" />
-    <None Include="ProgrammersGuide\WorkingWithProjects\Data\VbaProject1.mpp" />
-    <None Include="ProgrammersGuide\WorkingWithProjects\Data\WriteCurrencyProperties.mpp" />
     <None Include="ProgrammersGuide\WorkingWithProjects\Data\DefaultProperties.mpp" />
     <None Include="ProgrammersGuide\WorkingWithProjects\Data\DetermineProjectVersion.mpp" />
+    <None Include="ProgrammersGuide\WorkingWithProjects\Data\ExtendedAttribute.mpp" />
     <None Include="ProgrammersGuide\WorkingWithProjects\Data\ExtendedAttributes.mpp" />
-    <None Include="ProgrammersGuide\WorkingWithProjects\Data\ReadFiscalYearProperties.mpp" />
-    <None Include="ProgrammersGuide\WorkingWithProjects\Data\WriteFiscalYearProperties.mpp" />
-    <None Include="ProgrammersGuide\WorkingWithProjects\Data\ReadProjectInfo.mpp" />
-    <None Include="ProgrammersGuide\WorkingWithProjects\Data\WriteProjectInfo.mpp" />
-    <None Include="ProgrammersGuide\WorkingWithProjects\Data\GetNumberOfPagesForViews.mpp" />
     <None Include="ProgrammersGuide\WorkingWithProjects\Data\GetNumberOfPages.mpp" />
+    <None Include="ProgrammersGuide\WorkingWithProjects\Data\GetNumberOfPagesForViews.mpp" />
     <None Include="ProgrammersGuide\WorkingWithProjects\Data\MPPFileUpdate.mpp" />
     <None Include="ProgrammersGuide\WorkingWithProjects\Data\PrintTaskWritingException.mpp" />
+    <None Include="ProgrammersGuide\WorkingWithProjects\Data\Project1.mpp" />
+    <None Include="ProgrammersGuide\WorkingWithProjects\Data\ReadCurrencyProperties.mpp" />
+    <None Include="ProgrammersGuide\WorkingWithProjects\Data\ReadFiscalYearProperties.mpp" />
     <None Include="ProgrammersGuide\WorkingWithProjects\Data\ReadProjectFiles.mpp" />
+    <None Include="ProgrammersGuide\WorkingWithProjects\Data\ReadProjectInfo.mpp" />
+    <None Include="ProgrammersGuide\WorkingWithProjects\Data\ReadWeekdayProperties.mpp" />
     <None Include="ProgrammersGuide\WorkingWithProjects\Data\ReplaceCalendar.mpp" />
     <None Include="ProgrammersGuide\WorkingWithProjects\Data\RetrieveCalendarInfo.mpp" />
-    <None Include="ProgrammersGuide\WorkingWithProjects\Data\ReadWeekdayProperties.mpp" />
-    <None Include="ProgrammersGuide\WorkingWithProjects\Data\WriteWeekdayProperties.mpp" />
+    <None Include="ProgrammersGuide\WorkingWithProjects\Data\VbaProject1.mpp" />
+    <None Include="ProgrammersGuide\WorkingWithProjects\Data\WriteCurrencyProperties.mpp" />
+    <None Include="ProgrammersGuide\WorkingWithProjects\Data\WriteFiscalYearProperties.mpp" />
     <None Include="ProgrammersGuide\WorkingWithProjects\Data\WriteMPPProjectSummary.mpp" />
+    <None Include="ProgrammersGuide\WorkingWithProjects\Data\WriteProjectInfo.mpp" />
     <None Include="ProgrammersGuide\WorkingWithProjects\Data\WriteUpdatedExtendedAttributeDefinitions.mpp" />
-    <None Include="README.md" />
+    <None Include="ProgrammersGuide\WorkingWithProjects\Data\WriteWeekdayProperties.mpp" />
   </ItemGroup>
-  <ItemGroup>
-    <Content Include="Examples.xml" />
-  </ItemGroup>
-  <!-- Conditional build path import - added for VS2005 compatibility (since there is no MSBuildToolsPath in VS2005) -->
-  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" Condition="$(MSBuildToolsPath) != ''" />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
 </Project>
