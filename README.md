@@ -22,5 +22,5 @@ Directory | Description
 + **Product Home:** [Aspose.Tasks for .NET](http://www.aspose.com/products/tasks/net)
 + **Download:** [Download Aspose.Tasks for .NET](http://www.aspose.com/downloads/tasks/net)
 + **Documentation:** [Aspose.Tasks for .NET Documentation](http://www.aspose.com/docs/display/tasksnet/Home)
-+ **Forum:** [Aspose.Tasks for .NET Forum](http://www.aspose.com/community/forums/aspose.tasks-product-family/75/showforum.aspx)
++ **Forum:** [Aspose.Tasks for .NET Forum](http://www.aspose.com/community/forums/aspose.tasks-product-family/96/showforum.aspx)
 + **Blog:** [Aspose.Tasks for .NET Blog](http://www.aspose.com/blogs/aspose-products/aspose-tasks-product-family.html)
