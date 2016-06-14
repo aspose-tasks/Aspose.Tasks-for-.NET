@@ -1,18 +1,10 @@
-'////////////////////////////////////////////////////////////////////////
-' Copyright 2001-2014 Aspose Pty Ltd. All Rights Reserved.
-'
-' This file is part of Aspose.Tasks. The source code in this file
-' is only intended as a supplement to the documentation, and is provided
-' "as is", without warranty of any kind, either expressed or implied.
-'////////////////////////////////////////////////////////////////////////
-
 Imports Microsoft.VisualBasic
 Imports System.IO
 Imports System
 Imports Aspose.Tasks
 
-Namespace VisualBasic.Projects
-	Public Class ReadProjectInfo
+Namespace Aspose.Tasks.Examples.VisualBasic.WorkingWithProjects
+    Public Class ReadProjectInfo
         Public Shared Sub Run()
             'ExStart: ReadProjectInfo
             ' The path to the documents directory.
@@ -33,5 +25,5 @@ Namespace VisualBasic.Projects
             Console.WriteLine("The program has run successfully")
             'ExEnd: ReadProjectInfo
         End Sub
-	End Class
+    End Class
 End Namespace

@@ -4,7 +4,7 @@
 ' This file is part of Aspose.Tasks. The source code in this file
 ' is only intended as a supplement to the documentation, and is provided
 ' "as is", without warranty of any kind, either expressed or implied.
-'''///////////////////////////////////////////////////////////////////////using Aspose.Tasks;
+'''///////////////////////////////////////////////////////////////////////using Aspose.Tasks
 Imports Aspose.Tasks
 Imports VisualBasic
 Imports System
@@ -13,7 +13,7 @@ Imports System.Linq
 Imports System.Text
 Imports Examples.VisualBasic
 
-Namespace Examples.ProgrammersGuide.WorkingWithCalendars
+Namespace Aspose.Tasks.Examples.VisualBasic.ProgrammersGuide.WorkingWithCalendars
     Class GeneralCalendarProperties
         Public Shared Sub Run()
             'ExStart: ReadCalendarProps

@@ -10,7 +10,7 @@ using System.IO;
 using Aspose.Tasks;
 using System;
 
-namespace CSharp.Projects
+namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects
 {
     public class DefaultProperties
     {

@@ -1,20 +1,11 @@
-'////////////////////////////////////////////////////////////////////////
-' Copyright 2001-2015 Aspose Pty Ltd. All Rights Reserved.
-'
-' This file is part of Aspose.Tasks. The source code in this file
-' is only intended as a supplement to the documentation, and is provided
-' "as is", without warranty of any kind, either expressed or implied.
-'////////////////////////////////////////////////////////////////////////
-
 Imports Microsoft.VisualBasic
 Imports System.IO
-
 Imports Aspose.Tasks
 Imports System
 Imports Aspose.Tasks.Saving
 
-Namespace VisualBasic.Projects
-	Public Class WriteMPPProjectSummary
+Namespace Aspose.Tasks.Examples.VisualBasic.WorkingWithProjects
+    Public Class WriteMPPProjectSummary
         Public Shared Sub Run()
             'ExStart: WriteMPPProjectSummary
             ' The path to the documents directory.
@@ -31,5 +22,5 @@ Namespace VisualBasic.Projects
             project.Save(dataDir & "saved.mpp", SaveFileFormat.MPP)
             'ExEnd: WriteMPPProjectSummary
         End Sub
-	End Class
+    End Class
 End Namespace

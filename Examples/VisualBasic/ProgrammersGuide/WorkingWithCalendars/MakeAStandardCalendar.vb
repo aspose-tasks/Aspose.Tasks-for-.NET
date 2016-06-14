@@ -13,7 +13,7 @@ Imports System.Linq
 Imports System.Text
 Imports Examples.VisualBasic
 
-Namespace Examples.ProgrammersGuide.WorkingWithCalendars
+Namespace Aspose.Tasks.Examples.VisualBasic.ProgrammersGuide.WorkingWithCalendars
     Class MakeAStandardCalendar
         Public Shared Sub Run()
             'ExStart: MakeAStandardCalendar
