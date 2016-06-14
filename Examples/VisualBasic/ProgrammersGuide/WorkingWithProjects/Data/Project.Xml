@@ -4,8 +4,8 @@
   <SaveVersion>14</SaveVersion>
   <UID>1</UID>
   <Name>Project</Name>
-  <CreationDate>2000-06-15T03:13:05</CreationDate>
-  <LastSaved>2000-06-15T03:13:05</LastSaved>
+  <CreationDate>2000-06-15T03:13:23</CreationDate>
+  <LastSaved>2000-06-15T03:13:23</LastSaved>
   <ScheduleFromStart>1</ScheduleFromStart>
   <StartDate>2000-06-15T08:00:00</StartDate>
   <FinishDate>2000-06-15T08:00:00</FinishDate>
@@ -410,7 +410,7 @@
       <ID>0</ID>
       <Type>0</Type>
       <IsNull>0</IsNull>
-      <CreateDate>2000-06-15T03:13:05</CreateDate>
+      <CreateDate>2000-06-15T03:13:23</CreateDate>
       <WBS>0</WBS>
       <OutlineNumber>0</OutlineNumber>
       <OutlineLevel>0</OutlineLevel>

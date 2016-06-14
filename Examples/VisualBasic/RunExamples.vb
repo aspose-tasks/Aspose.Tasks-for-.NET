@@ -11,7 +11,7 @@ Namespace Aspose.Tasks.Examples.VisualBasic
     Friend Class RunExamples
         <STAThread> _
         Public Shared Sub Main()
-            Console.WriteLine("Open RunExamples.vb. " & vbLf & " In Main() method, uncomment the example that you want to run")
+            Console.WriteLine("Open RunExamples.vb. " & vbLf & "In Main() method, uncomment the example that you want to run")
             Console.WriteLine("=====================================================")
 
             ' Uncomment the one you want to try out
