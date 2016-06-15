@@ -1,7 +1,7 @@
 ﻿using System;
 using Aspose.Tasks;
 
-namespace CSharp.Projects
+namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects
 {
     public class TaskSettingStartFinishDates
     {

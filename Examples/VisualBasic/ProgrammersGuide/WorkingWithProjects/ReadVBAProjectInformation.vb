@@ -1,6 +1,4 @@
 ﻿Imports System
-Imports Examples.VisualBasic
-Imports VisualBasic
 Imports Aspose.Tasks
 
 'This project uses Automatic Package Restore feature of NuGet to resolve Aspose.Tasks for .NET API reference 
@@ -9,7 +7,7 @@ Imports Aspose.Tasks
 'install it and then add its reference to this project. For any issues, questions or suggestions 
 'please feel free to contact us using http://www.aspose.com/community/forums/default.aspx
 
-Namespace CSharp.Projects
+Namespace Aspose.Tasks.Examples.VisualBasic.WorkingWithProjects
     Public Class ReadVBAProjectInformation
         Public Shared Sub Run()
             ' The path to the documents directory.

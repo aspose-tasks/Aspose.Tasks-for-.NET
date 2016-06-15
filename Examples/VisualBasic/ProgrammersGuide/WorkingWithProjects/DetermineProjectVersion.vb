@@ -1,19 +1,10 @@
-'////////////////////////////////////////////////////////////////////////
-' Copyright 2001-2015 Aspose Pty Ltd. All Rights Reserved.
-'
-' This file is part of Aspose.Tasks. The source code in this file
-' is only intended as a supplement to the documentation, and is provided
-' "as is", without warranty of any kind, either expressed or implied.
-'////////////////////////////////////////////////////////////////////////
-
 Imports Microsoft.VisualBasic
 Imports System.IO
-
 Imports Aspose.Tasks
 Imports System
 
-Namespace VisualBasic.Projects
-	Public Class DetermineProjectVersion
+Namespace Aspose.Tasks.Examples.VisualBasic.WorkingWithProjects
+    Public Class DetermineProjectVersion
         Public Shared Sub Run()
             'ExStart: DetermineProjectVersion
             ' The path to the documents directory.
@@ -23,5 +14,5 @@ Namespace VisualBasic.Projects
             Console.WriteLine("Last Saved : " & project.Get(Prj.LastSaved).ToShortDateString())
             'ExEnd:DetermineProjectVersion
         End Sub
-	End Class
+    End Class
 End Namespace

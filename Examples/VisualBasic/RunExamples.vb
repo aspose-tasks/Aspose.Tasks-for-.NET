@@ -3,17 +3,31 @@ Imports System
 Imports System.Collections.Generic
 Imports System.IO
 Imports System.Text
-Imports CSharp.Projects
-Imports Examples.CSharp.Projects
-Imports Examples.VisualBasic.Projects
+Imports Aspose.Tasks.Examples.VisualBasic.ProgrammersGuide.WorkingWithCalendars
+Imports Aspose.Tasks.Examples.VisualBasic.WorkingWithProjects
 
-Namespace VisualBasic
+
+Namespace Aspose.Tasks.Examples.VisualBasic
     Friend Class RunExamples
         <STAThread> _
         Public Shared Sub Main()
-            Console.WriteLine("Open RunExamples.cs. In Main() method, Un-comment the example that you want to run")
+            Console.WriteLine("Open RunExamples.vb. " & vbLf & "In Main() method, uncomment the example that you want to run")
             Console.WriteLine("=====================================================")
-            ' Un-comment the one you want to try out
+
+            ' Uncomment the one you want to try out
+
+            ' =====================================================
+            ' =====================================================
+            ' Working With Calendars
+            ' =====================================================
+            ' =====================================================
+
+            CreatingCalendar.Run()
+            'DefineWeekdaysForCalendar.Run()
+            'GeneralCalendarProperties.Run()
+            'MakeAStandardCalendar.Run()
+            'ReadWorkWeeksInformation.Run()
+            'WriteUpdatedCalendarDataToMPP.Run()
 
             ' =====================================================
             ' =====================================================
@@ -21,7 +35,7 @@ Namespace VisualBasic
             ' =====================================================
             ' =====================================================
 
-            CalculateCriticalPath.Run()
+            'CalculateCriticalPath.Run()
             'CreateEmptyProjectSaveXML.Run()
             'DefaultProperties.Run()
             'DetermineProjectVersion.Run()
@@ -45,10 +59,18 @@ Namespace VisualBasic
             'WriteProjectInfo.Run()
             'WriteUpdatedExtendedAttributeDefinitions.Run()
             'WriteWeekdayProperties.Run()
+            'TaskSettingStartFinishDates.Run()
+            'WriteCurrencyProperties.Run()
+            'WriteFiscalYearProperties.Run()
+            'WriteMPPProjectSummary.Run()
+            'WriteProjectInfo.Run()
+            'WriteUpdatedExtendedAttributeDefinitions.Run()
+            'WriteWeekdayProperties.Run()
+
 
             ' =====================================================
             ' =====================================================
-            ' Working With VBA Examples 
+            ' Working With VBA
             ' =====================================================
             ' =====================================================
 

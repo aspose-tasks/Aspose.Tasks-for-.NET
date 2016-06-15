@@ -12,7 +12,7 @@ Imports System.Linq
 Imports System.Text
 Imports Examples.VisualBasic
 
-Namespace Examples.ProgrammersGuide.WorkingWithCalendars
+Namespace Aspose.Tasks.Examples.VisualBasic.ProgrammersGuide.WorkingWithCalendars
     Class DefineWeekdaysForCalendar
         Public Shared Sub Run()
             'ExStart: DefineWeekdaysForCalendar

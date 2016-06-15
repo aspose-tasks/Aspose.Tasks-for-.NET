@@ -2,19 +2,34 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Text;
+using Aspose.Tasks.Examples.CSharp.ProgrammersGuide.WorkingWithCalendars;
+using Aspose.Tasks.Examples.CSharp.WorkingWithProjects;
 
-using CSharp.Projects;
-
-namespace CSharp
+namespace Aspose.Tasks.Examples.CSharp
 {
     class RunExamples
     {
        
         public static void Main()
         {
-            Console.WriteLine("Open RunExamples.cs. In Main() method, Un-comment the example that you want to run");
+            Console.WriteLine("Open RunExamples.cs. \nIn Main() method, uncomment the example that you want to run");
             Console.WriteLine("=====================================================");
-            // Un-comment the one you want to try out
+         
+            // Uncomment the one you want to try out
+
+
+            // =====================================================
+            // =====================================================
+            // Working With Calendars
+            // =====================================================
+            // =====================================================
+
+            CreatingCalendar.Run();
+            //DefineWeekdaysForCalendar.Run();
+            //GeneralCalendarProperties.Run();
+            //MakeAStandardCalendar.Run();
+            //ReadWorkWeeksInformation.Run();
+            //WriteUpdatedCalendarDataToMPP.Run();
 
             // =====================================================
             // =====================================================
@@ -22,7 +37,7 @@ namespace CSharp
             // =====================================================
             // =====================================================
 
-            CalculateCriticalPath.Run();
+            //CalculateCriticalPath.Run();
             //CreateEmptyProjectSaveXML.Run();
             //DefaultProperties.Run();
             //DetermineProjectVersion.Run();
@@ -47,6 +62,13 @@ namespace CSharp
             //WriteUpdatedExtendedAttributeDefinitions.Run();
             //WriteWeekdayProperties.Run();
             //TaskSettingStartFinishDates.Run();
+            //WriteCurrencyProperties.Run();
+            //WriteFiscalYearProperties.Run();
+            //WriteMPPProjectSummary.Run();
+            //WriteProjectInfo.Run();
+            //WriteUpdatedExtendedAttributeDefinitions.Run();
+            //WriteWeekdayProperties.Run();
+
 
             // =====================================================
             // =====================================================
@@ -56,7 +78,7 @@ namespace CSharp
 
             //ReadVBAProjectInformation.Run();
             //ReadReferencesInformation.Run();
-            //ReadModulesInformation.Run();                     
+            //ReadModulesInformation.Run();
             //ReadModuleAttributesInforamtion.Run();
 
 

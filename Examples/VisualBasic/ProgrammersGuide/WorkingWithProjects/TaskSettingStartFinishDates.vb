@@ -1,14 +1,7 @@
-﻿'////////////////////////////////////////////////////////////////////////
-' Copyright 2001-2015 Aspose Pty Ltd. All Rights Reserved.
-'
-' This file is part of Aspose.Tasks. The source code in this file
-' is only intended as a supplement to the documentation, and is provided
-' "as is", without warranty of any kind, either expressed or implied.
-'////////////////////////////////////////////////////////////////////////
-Imports Aspose.Tasks
+﻿Imports Aspose.Tasks
 Imports System
 
-Namespace VisualBasic.Projects
+Namespace Aspose.Tasks.Examples.VisualBasic.WorkingWithProjects
     Public Class TaskSettingStartFinishDates
         ''' <summary>
         ''' By default, the project calculation mode is set to automatic that recalculates everything and sets the dates. 
