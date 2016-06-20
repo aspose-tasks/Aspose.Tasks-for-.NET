@@ -66,7 +66,9 @@ Namespace Aspose.Tasks.Examples.VisualBasic
             'WriteProjectInfo.Run()
             'WriteUpdatedExtendedAttributeDefinitions.Run()
             'WriteWeekdayProperties.Run()
-
+            'MoveTaskUnderAnotherParent.Run()
+            'MoveTaskUnderSameParent.Run()
+            'MoveTaskAtTheEnd.Run()
 
             ' =====================================================
             ' =====================================================

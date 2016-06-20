@@ -17,14 +17,13 @@ namespace Aspose.Tasks.Examples.CSharp
          
             // Uncomment the one you want to try out
 
-
             // =====================================================
             // =====================================================
             // Working With Calendars
             // =====================================================
             // =====================================================
 
-            CreatingCalendar.Run();
+            //CreatingCalendar.Run();
             //DefineWeekdaysForCalendar.Run();
             //GeneralCalendarProperties.Run();
             //MakeAStandardCalendar.Run();
@@ -68,7 +67,9 @@ namespace Aspose.Tasks.Examples.CSharp
             //WriteProjectInfo.Run();
             //WriteUpdatedExtendedAttributeDefinitions.Run();
             //WriteWeekdayProperties.Run();
-
+            //MoveTaskUnderAnotherParent.Run();
+            //MoveTaskUnderSameParent.Run();
+            //MoveTaskAtTheEnd.Run();
 
             // =====================================================
             // =====================================================
