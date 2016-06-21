@@ -15,7 +15,8 @@
     <FileAlignment>512</FileAlignment>
     <MyType>Console</MyType>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
-    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
     <OptionExplicit>On</OptionExplicit>
     <OptionCompare>Binary</OptionCompare>
     <OptionStrict>Off</OptionStrict>
@@ -96,6 +97,7 @@
     <Compile Include="ProgrammersGuide\WorkingWithProjects\GetNumberOfPages.vb" />
     <Compile Include="ProgrammersGuide\WorkingWithProjects\GetNumberOfPagesForViews.vb" />
     <Compile Include="ProgrammersGuide\WorkingWithProjects\GetObjectByFieldMethods.vb" />
+    <Compile Include="ProgrammersGuide\WorkingWithProjects\MoveTaskUnderAnotherParent.vb" />
     <Compile Include="ProgrammersGuide\WorkingWithProjects\MPPFileUpdate.vb" />
     <Compile Include="ProgrammersGuide\WorkingWithProjects\PrintTaskWritingException.vb" />
     <Compile Include="ProgrammersGuide\WorkingWithProjects\ReadCurrencyProperties.vb" />
@@ -162,6 +164,12 @@
     <None Include="ProgrammersGuide\WorkingWithProjects\Data\WriteProjectInfo.mpp" />
     <None Include="ProgrammersGuide\WorkingWithProjects\Data\WriteUpdatedExtendedAttributeDefinitions.mpp" />
     <None Include="ProgrammersGuide\WorkingWithProjects\Data\WriteWeekdayProperties.mpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ProgrammersGuide\WorkingWithProjects\MoveTaskUnderSameParent.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ProgrammersGuide\WorkingWithProjects\MoveTaskAtTheEnd.vb" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

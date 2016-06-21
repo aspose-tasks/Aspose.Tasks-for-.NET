@@ -4,11 +4,11 @@
   <SaveVersion>14</SaveVersion>
   <UID>1</UID>
   <Name>Project</Name>
-  <CreationDate>2000-06-15T03:13:23</CreationDate>
-  <LastSaved>2000-06-15T03:13:23</LastSaved>
+  <CreationDate>2000-06-20T19:09:06</CreationDate>
+  <LastSaved>2000-06-20T19:09:06</LastSaved>
   <ScheduleFromStart>1</ScheduleFromStart>
-  <StartDate>2000-06-15T08:00:00</StartDate>
-  <FinishDate>2000-06-15T08:00:00</FinishDate>
+  <StartDate>2000-06-20T08:00:00</StartDate>
+  <FinishDate>2000-06-20T08:00:00</FinishDate>
   <FYStartDate>1</FYStartDate>
   <CriticalSlackLimit>0</CriticalSlackLimit>
   <CurrencyDigits>2</CurrencyDigits>
@@ -410,16 +410,16 @@
       <ID>0</ID>
       <Type>0</Type>
       <IsNull>0</IsNull>
-      <CreateDate>2000-06-15T03:13:23</CreateDate>
+      <CreateDate>2000-06-20T19:09:06</CreateDate>
       <WBS>0</WBS>
       <OutlineNumber>0</OutlineNumber>
       <OutlineLevel>0</OutlineLevel>
       <Priority>500</Priority>
-      <Start>2000-06-15T08:00:00</Start>
-      <Finish>2000-06-15T08:00:00</Finish>
+      <Start>2000-06-20T08:00:00</Start>
+      <Finish>2000-06-20T08:00:00</Finish>
       <Duration>PT0H0M0S</Duration>
-      <ManualStart>2000-06-15T08:00:00</ManualStart>
-      <ManualFinish>2000-06-15T08:00:00</ManualFinish>
+      <ManualStart>2000-06-20T08:00:00</ManualStart>
+      <ManualFinish>2000-06-20T08:00:00</ManualFinish>
       <ManualDuration>PT0H0M0S</ManualDuration>
       <DurationFormat>39</DurationFormat>
       <Work>PT0H0M0S</Work>
@@ -436,10 +436,10 @@
       <IsSubproject>0</IsSubproject>
       <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
       <ExternalTask>0</ExternalTask>
-      <EarlyStart>2000-06-15T08:00:00</EarlyStart>
-      <EarlyFinish>2000-06-15T08:00:00</EarlyFinish>
-      <LateStart>2000-06-15T08:00:00</LateStart>
-      <LateFinish>2000-06-15T08:00:00</LateFinish>
+      <EarlyStart>2000-06-20T08:00:00</EarlyStart>
+      <EarlyFinish>2000-06-20T08:00:00</EarlyFinish>
+      <LateStart>2000-06-20T08:00:00</LateStart>
+      <LateFinish>2000-06-20T08:00:00</LateFinish>
       <StartVariance>0</StartVariance>
       <FinishVariance>0</FinishVariance>
       <WorkVariance>0</WorkVariance>

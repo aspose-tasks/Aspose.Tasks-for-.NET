@@ -65,6 +65,9 @@
     <Compile Include="ProgrammersGuide\WorkingWithProjects\GetNumberOfPages.cs" />
     <Compile Include="ProgrammersGuide\WorkingWithProjects\GetNumberOfPagesForViews.cs" />
     <Compile Include="ProgrammersGuide\WorkingWithProjects\GetObjectByFieldMethods.cs" />
+    <Compile Include="ProgrammersGuide\WorkingWithProjects\MoveTaskAtTheEnd.cs" />
+    <Compile Include="ProgrammersGuide\WorkingWithProjects\MoveTaskUnderAnotherParent.cs" />
+    <Compile Include="ProgrammersGuide\WorkingWithProjects\MoveTaskUnderSameParent.cs" />
     <Compile Include="ProgrammersGuide\WorkingWithProjects\MPPFileUpdate.cs" />
     <Compile Include="ProgrammersGuide\WorkingWithProjects\PrintTaskWritingException.cs" />
     <Compile Include="ProgrammersGuide\WorkingWithProjects\ReadCurrencyProperties.cs" />
