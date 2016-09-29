@@ -6,8 +6,9 @@ Namespace Aspose.Tasks.Examples.VisualBasic.WorkingWithProjects
     Public Class ReplaceCalendar
         Public Shared Sub Run()
             'ExStart: ReplaceCalendar
+
             ' The path to the documents directory.
-            Dim dataDir As String = RunExamples.GetDataDir_Projects()
+            Dim dataDir As String = RunExamples.GetDataDir_WorkingWithProjects()
             Dim project As New Project(dataDir + "ReplaceCalendar.mpp")
 
             'Add a new calendar to the project's calendars collection

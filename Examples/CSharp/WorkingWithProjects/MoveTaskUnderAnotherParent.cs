@@ -16,7 +16,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects
         public static void Run()
         {
             // The path to the documents directory.
-            string dataDir = RunExamples.GetDataDir_Projects();
+            string dataDir = RunExamples.GetDataDir_WorkingWithProjects();        
 
             try
             {

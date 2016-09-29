@@ -16,19 +16,28 @@ namespace Aspose.Tasks.Examples.CSharp.CreatingAndSaving
     {
         public static void Run()
         {
-            // ExStart:ImportProjectDataFromDatabase            
-            SqlConnectionStringBuilder sqlConnectionString = new SqlConnectionStringBuilder();
-            sqlConnectionString.DataSource = "192.168.56.2,1433";
-            sqlConnectionString.Encrypt = true;
-            sqlConnectionString.TrustServerCertificate = true;
-            sqlConnectionString.InitialCatalog = "ProjectServer_Published";
-            sqlConnectionString.NetworkLibrary = "DBMSSOCN";
-            sqlConnectionString.UserID = "sa";
-            sqlConnectionString.Password = "*****";
+            // ExStart:ImportProjectDataFromDatabase     
+
+            try
+            {
+                SqlConnectionStringBuilder sqlConnectionString = new SqlConnectionStringBuilder();
+                sqlConnectionString.DataSource = "192.168.56.2,1433";
+                sqlConnectionString.Encrypt = true;
+                sqlConnectionString.TrustServerCertificate = true;
+                sqlConnectionString.InitialCatalog = "ProjectServer_Published";
+                sqlConnectionString.NetworkLibrary = "DBMSSOCN";
+                sqlConnectionString.UserID = "sa";
+                sqlConnectionString.Password = "*****";
+
+                // Use Aspose.Tasks.Connectivity namespace
+                MspDbSettings settings = new MspDbSettings(sqlConnectionString.ConnectionString, new Guid("E6426C44-D6CB-4B9C-AF16-48910ACE0F54"));
+                Project project = new Project(settings);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message + "\nPlease setup proper datasource (DataSource, InitialCatalog etc)");
+            }
             
-            // Use Aspose.Tasks.Connectivity namespace
-            MspDbSettings settings = new MspDbSettings(sqlConnectionString.ConnectionString, new Guid("E6426C44-D6CB-4B9C-AF16-48910ACE0F54"));
-            Project project = new Project(settings);
             // ExEnd:ImportProjectDataFromDatabase
         }
     }

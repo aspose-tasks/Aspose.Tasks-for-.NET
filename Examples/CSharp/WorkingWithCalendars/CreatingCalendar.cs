@@ -22,8 +22,8 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithCalendars
             Aspose.Tasks.Calendar cal3 = project.Calendars.Add("cal3");
 
             // Save the Project
-            string dataDir = RunExamples.GetDataDir_Projects();
-            project.Save(dataDir + "Project.xml", Aspose.Tasks.Saving.SaveFileFormat.XML);
+            string dataDir = RunExamples.GetDataDir_WorkingWithCalendars();
+            project.Save(dataDir + "Project_out.xml", Aspose.Tasks.Saving.SaveFileFormat.XML);
             // ExEnd:CreatingCalendar
         }
     }

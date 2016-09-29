@@ -15,7 +15,7 @@ Namespace Aspose.Tasks.Examples.VisualBasic.CreatingAndSaving
             ' The path to the documents directory.
             Dim dataDir As String = RunExamples.GetDataDir_CreatingAndSaving()
             ' Read the input Project file
-            Dim project As New Project(dataDir & Convert.ToString("Projectask1.mpp"))
+            Dim project As New Project(dataDir & Convert.ToString("Project1.mpp"))
             ' Save the Project as PDF
             project.Save(dataDir & Convert.ToString("SaveProjectAsPDF_out.pdf"), SaveFileFormat.PDF)
             ' ExEnd:SaveProjectAsPDF

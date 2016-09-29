@@ -13,9 +13,9 @@ Imports Aspose.Tasks.Saving
 Namespace Aspose.Tasks.Examples.VisualBasic.WorkingWithProjects
 	Public Class ReadProjectFileFromStream
 		Public Shared Sub Run()
-			' ExStart:ReadProjectFileFromStream
-			' The path to the documents directory.
-			Dim dataDir As String = RunExamples.GetDataDir_Projects()
+            ' ExStart:ReadProjectFileFromStream
+            ' The path to the documents directory.
+            Dim dataDir As String = RunExamples.GetDataDir_WorkingWithProjects()
 			Using filesStream As Stream = New FileStream(dataDir & Convert.ToString("Project.xml"), FileMode.Open)
 				Dim project As New Project(filesStream)
 			End Using

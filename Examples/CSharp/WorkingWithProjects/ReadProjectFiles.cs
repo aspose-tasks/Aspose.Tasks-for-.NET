@@ -6,7 +6,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects
         {
             // ExStart:ReadProjectFiles
             // The path to the documents directory.
-            string dataDir = RunExamples.GetDataDir_Projects();
+            string dataDir = RunExamples.GetDataDir_WorkingWithProjects();        
 
             Project project = new Project(dataDir + "ReadProjectFiles.mpp");
             // ExEnd:ReadProjectFiles

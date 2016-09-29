@@ -11,9 +11,8 @@ Imports Aspose.Tasks
 Namespace Aspose.Tasks.Examples.VisualBasic.WorkingWithProjects
     Public Class ReadReferencesInformation
         Public Shared Sub Run()
-
             ' The path to the documents directory.
-            Dim dataDir As String = RunExamples.GetDataDir_Projects()
+            Dim dataDir As String = RunExamples.GetDataDir_WorkingWithProjects()
 
             Dim project As New Project(dataDir & Convert.ToString("VbaProject1.mpp"))
 

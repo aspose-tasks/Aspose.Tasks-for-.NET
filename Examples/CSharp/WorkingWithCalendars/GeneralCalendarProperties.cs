@@ -14,8 +14,8 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithCalendars
             // This example shows how the API can be used to read calendars information from a MPP/XML file
             
             // Load an existing project
-            string dataDir = RunExamples.GetDataDir_Projects();
-            Project project = new Project("Existing Project.mpp");
+            string dataDir = RunExamples.GetDataDir_WorkingWithCalendars();
+            Project project = new Project(dataDir + "Project.xml");
 
             foreach (Aspose.Tasks.Calendar cal in project.Calendars)
             {

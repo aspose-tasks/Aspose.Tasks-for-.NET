@@ -3,11 +3,13 @@ Imports System
 
 Namespace Aspose.Tasks.Examples.VisualBasic.WorkingWithProjects
     Public Class TaskSettingStartFinishDates
+
         ''' <summary>
         ''' By default, the project calculation mode is set to automatic that recalculates everything and sets the dates. 
         ''' If you are creating a new project, it's start date is as of today and rest of the dates are calculated 
         ''' automatically with reference to this start date. 
         ''' </summary>
+
         Public Shared Sub Run()
             'ExStart: TaskSettingStartFinishDates
             Dim project As New Project()

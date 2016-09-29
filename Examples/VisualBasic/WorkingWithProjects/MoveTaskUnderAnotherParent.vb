@@ -12,11 +12,9 @@ Imports Aspose.Tasks
 Namespace Aspose.Tasks.Examples.VisualBasic.WorkingWithProjects
     Class MoveTaskUnderAnotherParent
         Public Shared Sub Run()
-
-            ' The path to the documents directory.
-            Dim dataDir As String = RunExamples.GetDataDir_Projects()
-
             Try
+                ' The path to the documents directory.
+                Dim dataDir As String = RunExamples.GetDataDir_WorkingWithProjects()
                 ' loading project file
                 Dim project As New Project(dataDir & Convert.ToString("MoveTask.mpp"))
 

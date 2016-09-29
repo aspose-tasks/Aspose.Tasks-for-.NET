@@ -8,7 +8,8 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects
         {
             // ExStart:ReadProjectFileFromStream
             // The path to the documents directory.
-            string dataDir = RunExamples.GetDataDir_Projects();
+            string dataDir = RunExamples.GetDataDir_WorkingWithProjects();        
+
             using (Stream filesStream = new FileStream(dataDir + "Project.xml", FileMode.Open))
             {
                 Project project = new Project(filesStream);

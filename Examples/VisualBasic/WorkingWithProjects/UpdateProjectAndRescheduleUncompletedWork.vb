@@ -17,7 +17,7 @@ Namespace Aspose.Tasks.Examples.VisualBasic.WorkingWithProjects
 
 			' ExStart:UpdateProjectAndRescheduleUncompletedWork
 			' The path to the documents directory.
-			Dim dataDir As String = RunExamples.GetDataDir_Projects()
+            Dim dataDir As String = RunExamples.GetDataDir_WorkingWithProjects()
 
 			Dim project As New Project()
 			project.[Set](Prj.StartDate, New DateTime(2014, 1, 27, 8, 0, 0))
@@ -54,7 +54,7 @@ Namespace Aspose.Tasks.Examples.VisualBasic.WorkingWithProjects
 			task8.[Set](Tsk.IsManual, True)
 			task9.[Set](Tsk.IsManual, True)
 			task10.[Set](Tsk.IsManual, True)
-			project.Save(dataDir & Convert.ToString("not updated.xml"), SaveFileFormat.XML)
+            project.Save(dataDir & Convert.ToString("notUpdated_out.xml"), SaveFileFormat.XML)
 			project.UpdateProjectWorkAsComplete(New DateTime(2014, 1, 28, 17, 0, 0), False)
 			project.Save(dataDir & Convert.ToString("updated_out.xml"), SaveFileFormat.XML)
 			project.RescheduleUncompletedWorkToStartAfter(New DateTime(2014, 2, 7, 8, 0, 0))

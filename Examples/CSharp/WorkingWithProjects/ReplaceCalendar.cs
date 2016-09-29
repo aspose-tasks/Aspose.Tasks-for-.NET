@@ -6,7 +6,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects
         {
             // ExStart:ReplaceCalendar
             // The path to the documents directory.
-            string dataDir = RunExamples.GetDataDir_Projects();
+            string dataDir = RunExamples.GetDataDir_WorkingWithProjects();
             Project project = new Project(dataDir+ "ReplaceCalendar.mpp");
 
             // Add a new calendar to the project's calendars collection

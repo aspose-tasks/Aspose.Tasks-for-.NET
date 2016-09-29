@@ -18,11 +18,18 @@ Namespace Aspose.Tasks.Examples.VisualBasic.PrintingAndExporting
         Public Shared Sub Run()
             ' ExStart:SupportForSQLiteDatabase
             ' The path to the documents directory.
-            Const connectionString As String = "SQLiteDatabaseConnectionString"
-            Const projectId As Integer = 4502
-            Dim primaveraDbSettings As New PrimaveraDbSettings(connectionString, projectId)
-            primaveraDbSettings.ProviderInvariantName = "System.Data.SQLite"
-            Dim project As New Project(primaveraDbSettings)
+            Dim dataDir As String = RunExamples.GetDataDir_PrintingAndExporting()
+
+            Try
+                Const connectionString As String = "SQLiteDatabaseConnectionString"
+                Const projectId As Integer = 4502
+                Dim primaveraDbSettings As New PrimaveraDbSettings(connectionString, projectId)
+                primaveraDbSettings.ProviderInvariantName = "System.Data.SQLite"
+
+                Dim project As New Project(primaveraDbSettings)
+            Catch ex As Exception
+                Console.WriteLine(ex.Message + vbLf & "Please setup proper datasource (connectionString, ProviderInvariantName) etc")
+            End Try
             ' ExEnd:SupportForSQLiteDatabase
         End Sub
     End Class

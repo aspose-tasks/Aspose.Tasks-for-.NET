@@ -12,19 +12,22 @@ Imports Aspose.Tasks.Connectivity
 Namespace Aspose.Tasks.Examples.VisualBasic.CreatingAndSaving
     Public Class ImportProjectDataFromDatabase
         Public Shared Sub Run()
-            ' ExStart:ImportProjectDataFromDatabase            
-            Dim sqlConnectionString As New SqlConnectionStringBuilder()
-            sqlConnectionString.DataSource = "192.168.56.2,1433"
-            sqlConnectionString.Encrypt = True
-            sqlConnectionString.TrustServerCertificate = True
-            sqlConnectionString.InitialCatalog = "ProjectServer_Published"
-            sqlConnectionString.NetworkLibrary = "DBMSSOCN"
-            sqlConnectionString.UserID = "sa"
-            sqlConnectionString.Password = "*****"
-            ' Use Aspose.Tasks.Connectivity namespace
-            Dim settings As New MspDbSettings(sqlConnectionString.ConnectionString, New Guid("E6426C44-D6CB-4B9C-AF16-48910ACE0F54"))
-            Dim project As New Project(settings)
-            ' ExEnd:ImportProjectDataFromDatabase
+            Try
+                Dim sqlConnectionString As New SqlConnectionStringBuilder()
+                sqlConnectionString.DataSource = "192.168.56.2,1433"
+                sqlConnectionString.Encrypt = True
+                sqlConnectionString.TrustServerCertificate = True
+                sqlConnectionString.InitialCatalog = "ProjectServer_Published"
+                sqlConnectionString.NetworkLibrary = "DBMSSOCN"
+                sqlConnectionString.UserID = "sa"
+                sqlConnectionString.Password = "*****"
+
+                ' Use Aspose.Tasks.Connectivity namespace
+                Dim settings As New MspDbSettings(sqlConnectionString.ConnectionString, New Guid("E6426C44-D6CB-4B9C-AF16-48910ACE0F54"))
+                Dim project As New Project(settings)
+            Catch ex As Exception
+                Console.WriteLine(ex.Message + vbLf & "Please setup proper datasource (DataSource, InitialCatalog etc)")
+            End Try
         End Sub
     End Class
 End Namespace

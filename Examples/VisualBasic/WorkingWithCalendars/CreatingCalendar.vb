@@ -21,8 +21,8 @@ Namespace Aspose.Tasks.Examples.VisualBasic.WorkingWithCalendars
             Dim cal3 As Aspose.Tasks.Calendar = project.Calendars.Add("cal3")
 
             'Save the Project
-            Dim dataDir As String = RunExamples.GetDataDir_Projects()
-            project.Save(dataDir & Convert.ToString("Project.Xml"), Aspose.Tasks.Saving.SaveFileFormat.XML)
+            Dim dataDir As String = RunExamples.GetDataDir_WorkingWithCalendars()
+            project.Save(dataDir & Convert.ToString("CreatingCalendar_out.Xml"), Aspose.Tasks.Saving.SaveFileFormat.XML)
             'ExEnd: CreatingCalendar
         End Sub
     End Class
