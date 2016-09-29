@@ -1,3 +1,4 @@
+using System;
 using Aspose.Tasks.Connectivity;
 
 /*
@@ -17,11 +18,20 @@ namespace Aspose.Tasks.Examples.CSharp.PrintingAndExporting
             // ExStart:SupportForSQLiteDatabase
             // The path to the documents directory.
             string dataDir = RunExamples.GetDataDir_PrintingAndExporting();
-            const string connectionString = "SQLiteDatabaseConnectionString";
-            const int projectId = 4502;
-            PrimaveraDbSettings primaveraDbSettings = new PrimaveraDbSettings(connectionString, projectId);
-            primaveraDbSettings.ProviderInvariantName = "System.Data.SQLite";
-            Project project = new Project(primaveraDbSettings);
+
+            try
+            {
+                const string connectionString = "SQLiteDatabaseConnectionString";
+                const int projectId = 4502;
+                PrimaveraDbSettings primaveraDbSettings = new PrimaveraDbSettings(connectionString, projectId);
+                primaveraDbSettings.ProviderInvariantName = "System.Data.SQLite";
+                Project project = new Project(primaveraDbSettings);
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message + "\nPlease setup proper datasource (connectionString, ProviderInvariantName) etc");      
+            }
             // ExEnd:SupportForSQLiteDatabase
         }
     }

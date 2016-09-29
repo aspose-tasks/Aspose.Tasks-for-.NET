@@ -6,6 +6,7 @@ Imports Aspose.Tasks.Examples.VisualBasic.ManipulatingMPPFile
 Imports Aspose.Tasks.Examples.VisualBasic.ModifyingCreatedProject
 Imports Aspose.Tasks.Examples.VisualBasic.PrintingAndExporting
 Imports Aspose.Tasks.Examples.VisualBasic.ReadingData
+Imports Aspose.Tasks.Examples.VisualBasic.WorkingWithCalendars
 Imports Aspose.Tasks.Examples.VisualBasic.WorkingWithProjects
 
 Namespace Aspose.Tasks.Examples.VisualBasic
@@ -33,7 +34,6 @@ Namespace Aspose.Tasks.Examples.VisualBasic
             'SaveProjectAsCSV.Run()
             'SaveProjectAsPDF.Run()
             'SaveProjectAsSVG.Run()
-            'SaveProjectAsText.Run()
             'SaveProjectAsXLSX.Run()
             'SaveProjectDataAsHTML.Run()
             'SaveProjectDataToSpreadsheet2003XML.Run()
@@ -113,13 +113,12 @@ Namespace Aspose.Tasks.Examples.VisualBasic
 
             'ExportProjectDataToPrimaveraMPXFormat.Run()
             'ExportProjectDataToXERFormat.Run()
-            'ExportProjectDataToXMLFormat.Run()            
+            'ExportProjectDataToXMLFormat.Run()
             'ImportDataFromXMLFileFormats.Run()
-            'PrintProject.Run()
             'PrintProjectPagesToSeparateFiles.Run()
             'PrintProjectUsingCustomPrinter.Run()
             'PrintTaskWritingException.Run()
-            'PrintTheProject.Run()          
+            'PrintTheProject.Run()
             'SupportForSQLiteDatabase.Run()
 
 
@@ -166,7 +165,7 @@ Namespace Aspose.Tasks.Examples.VisualBasic
             'ReplaceCalendar.Run()
             'SaveProjectDataAsTemplate.Run()
             'TaskSettingStartFinishDates.Run()
-            ' ReadPasswordProtectedProjectFile.Run()
+            'ReadPasswordProtectedProjectFile.Run()
             'UpdateProjectAndRescheduleUncompletedWork.Run()
 
             ' =====================================================
@@ -194,6 +193,9 @@ Namespace Aspose.Tasks.Examples.VisualBasic
             Return Path.GetFullPath(GetDataDir_Data() & Convert.ToString("ReadingData/"))
         End Function
 
+        Friend Shared Function GetDataDir_WorkingWithCalendars() As String
+            Return Path.GetFullPath(GetDataDir_Data() + "WorkingWithCalendars/")
+        End Function
 
         Friend Shared Function GetDataDir_PrintingAndExporting() As String
             Return Path.GetFullPath(GetDataDir_Data() & Convert.ToString("PrintingAndExporting/"))
@@ -208,6 +210,9 @@ Namespace Aspose.Tasks.Examples.VisualBasic
             Return Path.GetFullPath(GetDataDir_Data() & Convert.ToString("HandlingBasicProperties/"))
         End Function
 
+        Friend Shared Function GetDataDir_WorkingWithProjects() As String
+            Return Path.GetFullPath(GetDataDir_Data() & Convert.ToString("WorkingWithProjects/"))
+        End Function
 
         Friend Shared Function GetDataDir_ManipulatingMPPFile() As String
             Return Path.GetFullPath(GetDataDir_Data() & Convert.ToString("ManipulatingMPPFile/"))

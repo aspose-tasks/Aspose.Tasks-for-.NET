@@ -14,7 +14,7 @@ Namespace Aspose.Tasks.Examples.VisualBasic.ReadingData
             ' ExStart:WriteDefaultProperties			
             ' The path to the documents directory.
             Dim dataDir As String = RunExamples.GetDataDir_ReadingData()
-            Dim project As New Project(dataDir & Convert.ToString("project.mpp"))
+            Dim project As New Project(dataDir & Convert.ToString("Project1.mpp"))
             For Each ocd As OutlineCodeDefinition In project.OutlineCodes
                 Console.WriteLine("Alias = " + ocd.[Alias])
                 If ocd.AllLevelsRequired Then

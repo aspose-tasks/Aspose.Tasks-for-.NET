@@ -9,7 +9,7 @@ Imports Aspose.Tasks.Saving
 '
 
 Namespace Aspose.Tasks.Examples.VisualBasic.CreatingAndSaving
-    Public Class SaveProjectAsXLSX
+    Public Class SaveProjectAsText
         Public Shared Sub Run()
             ' ExStart:SaveProjectAsXLSX
 

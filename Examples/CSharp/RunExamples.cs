@@ -7,6 +7,7 @@ using Aspose.Tasks.Examples.CSharp.ManipulatingMPPFile;
 using Aspose.Tasks.Examples.CSharp.ModifyingCreatedProject;
 using Aspose.Tasks.Examples.CSharp.PrintingAndExporting;
 using Aspose.Tasks.Examples.CSharp.ReadingData;
+using Aspose.Tasks.Examples.CSharp.WorkingWithCalendars;
 using Aspose.Tasks.Examples.CSharp.WorkingWithProjects;
 
 namespace Aspose.Tasks.Examples.CSharp
@@ -133,10 +134,10 @@ namespace Aspose.Tasks.Examples.CSharp
             // =====================================================
             // =====================================================
 
-            GetNumberOfPages.Run();
-            GetNumberOfPagesForViews.Run();
-            ReadOutlineCodes.Run();          
-            ReadTableDataFromProjectFile.Run();
+            //GetNumberOfPages.Run();
+            //GetNumberOfPagesForViews.Run();
+            //ReadOutlineCodes.Run();          
+            //ReadTableDataFromProjectFile.Run();
 
 
 
@@ -152,6 +153,7 @@ namespace Aspose.Tasks.Examples.CSharp
             //MakeAStandardCalendar.Run();
             //ReadWorkWeeksInformation.Run();
             //WriteUpdatedCalendarDataToMPP.Run();
+
 
             // =====================================================
             // =====================================================
@@ -171,7 +173,7 @@ namespace Aspose.Tasks.Examples.CSharp
             //ReplaceCalendar.Run();
             //SaveProjectDataAsTemplate.Run();
             //TaskSettingStartFinishDates.Run();
-            // ReadPasswordProtectedProjectFile.Run();
+            //ReadPasswordProtectedProjectFile.Run();
             //UpdateProjectAndRescheduleUncompletedWork.Run();
 
             // =====================================================
@@ -194,6 +196,16 @@ namespace Aspose.Tasks.Examples.CSharp
         public static String GetDataDir_Projects()
         {
             return Path.GetFullPath("././ProgrammersGuide/WorkingWithProjects/Data/");
+        }
+
+        internal static string GetDataDir_WorkingWithProjects()
+        {
+            return Path.GetFullPath(GetDataDir_Data() + "WorkingWithProjects/");
+        }
+
+        internal static string GetDataDir_WorkingWithCalendars()
+        {
+            return Path.GetFullPath(GetDataDir_Data() + "WorkingWithCalendars/");
         }
 
         internal static string GetDataDir_ReadingData()

@@ -12,13 +12,10 @@ Namespace Aspose.Tasks.Examples.VisualBasic.WorkingWithProjects
         Public Shared Sub Run()
 
             ' The path to the documents directory.
-            Dim dataDir As String = RunExamples.GetDataDir_Projects()
-
+            Dim dataDir As String = RunExamples.GetDataDir_WorkingWithProjects()
             Dim project As New Project(dataDir & Convert.ToString("VbaProject1.mpp"))
-
             Dim vbaProject As VbaProject = project.VbaProject
             Console.WriteLine("Total Modules Count: " & vbaProject.Modules.Count)
-
             Dim vbaModule As IVbaModule = vbaProject.Modules.ToList()(0)
             Console.WriteLine("Module Name: " & vbaModule.Name)
             Console.WriteLine("Source Code: " & vbaModule.SourceCode)

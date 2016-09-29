@@ -1,10 +1,4 @@
-﻿'''///////////////////////////////////////////////////////////////////////
-' Copyright 2001-2016 Aspose Pty Ltd. All Rights Reserved.
-'
-' This file is part of Aspose.Tasks. The source code in this file
-' is only intended as a supplement to the documentation, and is provided
-' "as is", without warranty of any kind, either expressed or implied.
-'''///////////////////////////////////////////////////////////////////////using Aspose.Tasks
+﻿
 Imports Aspose.Tasks
 Imports VisualBasic
 Imports System
@@ -17,11 +11,11 @@ Namespace Aspose.Tasks.Examples.VisualBasic.WorkingWithCalendars
     Class GeneralCalendarProperties
         Public Shared Sub Run()
             'ExStart: ReadCalendarProps
-            'This example shows how the API can be used to read calendars information from a MPP/XML file
 
             'load an existing project
-            Dim dataDir As String = RunExamples.GetDataDir_Projects()
-            Dim project As New Project("Existing Project.mpp")
+            Dim dataDir As String = RunExamples.GetDataDir_WorkingWithCalendars()
+            Dim project As New Project(dataDir & Convert.ToString("Project.xml"))
+
 
             For Each cal As Aspose.Tasks.Calendar In project.Calendars
                 If cal.Name IsNot Nothing Then

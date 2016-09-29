@@ -14,7 +14,7 @@ Namespace Aspose.Tasks.Examples.VisualBasic.ManipulatingMPPFile
             ' ExStart:ReadFilterCriteriaData
             ' The path to the documents directory.
             Dim dataDir As String = RunExamples.GetDataDir_ManipulatingMPPFile()
-            Dim project As New Project(dataDir & Convert.ToString("ReadProjectInfo.mpp"))
+            Dim project As New Project(dataDir & Convert.ToString("Project2003.mpp"))
             Dim filter As Filter = project.TaskFilters.ToList()(1)
             Console.WriteLine(filter.Criteria.CriteriaRows.Count)
             Console.WriteLine(filter.Criteria.Operation.ToString())
@@ -33,14 +33,6 @@ Namespace Aspose.Tasks.Examples.VisualBasic.ManipulatingMPPFile
             Console.WriteLine(criteria22.Test.ToString())
             Console.WriteLine(criteria22.Field.ToString())
             Console.WriteLine(criteria22.Values(0).ToString())
-            Dim criteria23 As FilterCriteria = criteria2.CriteriaRows(2)
-            Console.WriteLine(criteria23.Test.ToString())
-            Console.WriteLine(criteria23.Field.ToString())
-            Console.WriteLine(criteria23.Values(0).ToString())
-            Dim criteria3 As FilterCriteria = filter.Criteria.CriteriaRows(2)
-            Console.WriteLine(criteria3.CriteriaRows.Count)
-            Console.WriteLine(criteria3.Operation.ToString())
-            Console.WriteLine(filter.Criteria)
             ' ExEnd:ReadFilterCriteriaData
         End Sub
     End Class

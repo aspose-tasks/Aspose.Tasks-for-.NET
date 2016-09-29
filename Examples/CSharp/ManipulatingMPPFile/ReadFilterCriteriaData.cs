@@ -18,7 +18,7 @@ namespace Aspose.Tasks.Examples.CSharp.ManipulatingMPPFile
             // The path to the documents directory.
             string dataDir = RunExamples.GetDataDir_ManipulatingMPPFile();
 
-            Project project = new Project(dataDir + "ReadProjectInfo.mpp");
+            Project project = new Project(dataDir + "Project2003.mpp");
             Filter filter = project.TaskFilters.ToList()[1];
             Console.WriteLine(filter.Criteria.CriteriaRows.Count);
             Console.WriteLine(filter.Criteria.Operation.ToString());
@@ -37,13 +37,6 @@ namespace Aspose.Tasks.Examples.CSharp.ManipulatingMPPFile
             Console.WriteLine(criteria22.Test.ToString());
             Console.WriteLine(criteria22.Field.ToString());
             Console.WriteLine(criteria22.Values[0].ToString());            
-            FilterCriteria criteria23 = criteria2.CriteriaRows[2];
-            Console.WriteLine(criteria23.Test.ToString());
-            Console.WriteLine(criteria23.Field.ToString());
-            Console.WriteLine(criteria23.Values[0].ToString());            
-            FilterCriteria criteria3 = filter.Criteria.CriteriaRows[2];
-            Console.WriteLine(criteria3.CriteriaRows.Count);
-            Console.WriteLine(criteria3.Operation.ToString());
             Console.WriteLine(filter.Criteria);
             // ExEnd:ReadFilterCriteriaData
         }

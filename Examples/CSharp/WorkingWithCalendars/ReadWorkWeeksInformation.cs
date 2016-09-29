@@ -13,20 +13,17 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithCalendars
             // ExStart:ReadWorkWeeksInformation
             // This example demonstrates how to read calendar work weeks infomraiton from a Project file
 
-            string dataDir = RunExamples.GetDataDir_Projects();
+            string dataDir = RunExamples.GetDataDir_WorkingWithCalendars();
+            Project project = new Project(dataDir + "project.mpp");
 
-            Project project = new Project("TestWorkWeek.mpp");
-            
             Calendar calendar = project.Calendars.GetByUid(3);
-            
+
             WorkWeekCollection collection = calendar.WorkWeeks;
 
             foreach (WorkWeek workWeek in collection)
             {
                 string Name = workWeek.Name;  // Name
-                
                 DateTime fromDate = workWeek.FromDate;  // Start
-                
                 DateTime toDate = workWeek.ToDate;      // Finish
 
                 // This data is all about "Details." button you can set special working times for special WeekDay or even make nonworking

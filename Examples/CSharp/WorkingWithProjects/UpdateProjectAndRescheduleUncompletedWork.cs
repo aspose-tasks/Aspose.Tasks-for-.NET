@@ -17,7 +17,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects
         {
             // ExStart:UpdateProjectAndRescheduleUncompletedWork
             // The path to the documents directory.
-            string dataDir = RunExamples.GetDataDir_Projects();
+            string dataDir = RunExamples.GetDataDir_WorkingWithProjects();
             Project project = new Project();
             project.Set(Prj.StartDate, new DateTime(2014, 1, 27, 8, 0, 0));
             Task task1 = project.RootTask.Children.Add("Task 1");

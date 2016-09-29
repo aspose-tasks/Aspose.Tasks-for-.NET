@@ -14,27 +14,13 @@ Namespace Aspose.Tasks.Examples.VisualBasic.ManipulatingMPPFile
             ' ExStart:ReadFilterDefinitionData
             ' The path to the documents directory.
             Dim dataDir As String = RunExamples.GetDataDir_ManipulatingMPPFile()
-            Dim project As New Project(dataDir & Convert.ToString("Project1.mpp"))
+            Dim project As New Project(dataDir & Convert.ToString("ReadProjectInfo.mpp"))
             Dim taskFilters As List(Of Filter) = project.TaskFilters.ToList()
-            Console.WriteLine("Task Filters Count: " + taskFilters.Count)
+            Console.WriteLine("Task Filters Count: " + taskFilters.Count.ToString())
             Console.WriteLine("All Tasks: " + taskFilters(0).Name)
-            Console.WriteLine("Task Item: " + taskFilters(0).FilterType)
-            Console.WriteLine("Task Filters Show In Menu: " + taskFilters(0).ShowInMenu)
-            Console.WriteLine("Task filter ShowRelatedSummaryRows: " + taskFilters(0).ShowRelatedSummaryRows)
-            Console.WriteLine("Task filter type: " + taskFilters(1).ShowInMenu)
-            Console.WriteLine("Task Filters Show In Menu: " + taskFilters(1).ShowInMenu)
-            Console.WriteLine("Task filter ShowRelatedSummaryRows: " + taskFilters(1).ShowRelatedSummaryRows)
-            Console.WriteLine("NEW FILTER", taskFilters(2).Name)
-            Console.WriteLine("Task filter type: " + taskFilters(2).ShowInMenu)
-            Console.WriteLine("Task Filters Show In Menu: " + taskFilters(2).ShowInMenu)
-            Console.WriteLine("Task filter ShowRelatedSummaryRows: " + taskFilters(2).ShowRelatedSummaryRows)
-            Console.WriteLine("Task FilterCriteria:m", taskFilters(2).Criteria)
-            Console.WriteLine("(TaskName Contains T)", taskFilters(2).Criteria.ToString())
-            Dim rscFilters As List(Of Filter) = project.ResourceFilters.ToList()
-            Console.WriteLine("Project.ResourceFilters count: " + rscFilters.Count)
-            Console.WriteLine("Resource Filter Item Type: Item.ResourceType: " + rscFilters(0).FilterType)
-            Console.WriteLine("Resource filter ShowInMenu" + rscFilters(0).ShowInMenu)
-            Console.WriteLine("Resource filter ShowRelatedSummaryRows: " + rscFilters(0).ShowRelatedSummaryRows)
+            Console.WriteLine("Task Item: " + taskFilters(0).FilterType.ToString())
+            Console.WriteLine("Task Filters Show In Menu: " + taskFilters(0).ShowInMenu.ToString())
+            Console.WriteLine("Task filter ShowRelatedSummaryRows: " + taskFilters(0).ShowRelatedSummaryRows.ToString())
             ' ExEnd:ReadFilterDefinitionData
         End Sub
     End Class

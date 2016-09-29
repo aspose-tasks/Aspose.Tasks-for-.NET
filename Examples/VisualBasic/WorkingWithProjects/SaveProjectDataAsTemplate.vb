@@ -14,9 +14,9 @@ Imports Aspose.Tasks.Visualization
 Namespace Aspose.Tasks.Examples.VisualBasic.WorkingWithProjects
 	Public Class SaveProjectDataAsTemplate
 		Public Shared Sub Run()
-			' ExStart:SaveProjectDataAsTemplate
+            ' ExStart:SaveProjectDataAsTemplate
 			' The path to the documents directory.
-			Dim dataDir As String = RunExamples.GetDataDir_Projects()
+            Dim dataDir As String = RunExamples.GetDataDir_WorkingWithProjects()
 			Dim project As New Project(dataDir & Convert.ToString("Project2.mpp"))
 			Dim [option] As New HtmlSaveOptions()
 			project.Save(dataDir & Convert.ToString("SaveProjectDataAsHTML_out.html"), [option])

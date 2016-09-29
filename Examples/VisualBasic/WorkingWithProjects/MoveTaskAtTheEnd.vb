@@ -14,13 +14,10 @@ Namespace Aspose.Tasks.Examples.VisualBasic.WorkingWithProjects
     Class MoveTaskAtTheEnd
         Public Shared Sub Run()
             ' The path to the documents directory.
-            Dim dataDir As String = RunExamples.GetDataDir_Projects()
-
             Try
 
-                ' Loading project file
+                Dim dataDir As String = RunExamples.GetDataDir_WorkingWithProjects()
                 Dim project As New Project(dataDir & Convert.ToString("MoveTask.mpp"))
-
                 Dim task As Task = project.RootTask.Children.GetById(2)
 
                 ' Move tasks with id == 2 to the end of the collection
