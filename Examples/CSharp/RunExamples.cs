@@ -20,7 +20,6 @@ namespace Aspose.Tasks.Examples.CSharp
             Console.WriteLine("Open RunExamples.cs. \nIn Main() method, uncomment the example that you want to run");
             Console.WriteLine("=====================================================");
 
-
             // Uncomment the one you want to try out
 
             // =====================================================

@@ -15,7 +15,7 @@ Namespace Aspose.Tasks.Examples.VisualBasic.WorkingWithProjects
 		Public Shared Sub Run()
 			' ExStart:SaveProjectAsXLSX
 			' The path to the documents directory.
-			Dim dataDir As String = RunExamples.GetDataDir_Projects()
+            Dim dataDir As String = RunExamples.GetDataDir_CreatingAndSaving()
 			' Read the input Project file
 			Dim project As New Project(dataDir & Convert.ToString("Project2.mpp"))
 			' Save the Project as XLSX
