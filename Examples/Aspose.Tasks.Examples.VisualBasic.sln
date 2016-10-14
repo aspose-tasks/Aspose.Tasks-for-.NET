@@ -3,23 +3,23 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "VisualBasic", "VisualBasic\VisualBasic.vbproj", "{7BAE0C5B-5F07-4E97-8AF3-75DC71AE6DBD}"
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "VisualBasic", "VisualBasic\VisualBasic.vbproj", "{7A2064A2-909D-47C0-8273-22CABCCEE02B}"
 EndProject
 Global
+	GlobalSection(TestCaseManagementSettings) = postSolution
+		CategoryFile = Aspose.Tasks.Examples.CSharp.vsmdi
+	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x86 = Debug|x86
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{7BAE0C5B-5F07-4E97-8AF3-75DC71AE6DBD}.Debug|x86.ActiveCfg = Debug|x86
-		{7BAE0C5B-5F07-4E97-8AF3-75DC71AE6DBD}.Debug|x86.Build.0 = Debug|x86
-		{7BAE0C5B-5F07-4E97-8AF3-75DC71AE6DBD}.Release|x86.ActiveCfg = Release|x86
-		{7BAE0C5B-5F07-4E97-8AF3-75DC71AE6DBD}.Release|x86.Build.0 = Release|x86
+		{7A2064A2-909D-47C0-8273-22CABCCEE02B}.Debug|x86.ActiveCfg = Debug|x86
+		{7A2064A2-909D-47C0-8273-22CABCCEE02B}.Debug|x86.Build.0 = Debug|x86
+		{7A2064A2-909D-47C0-8273-22CABCCEE02B}.Release|x86.ActiveCfg = Release|x86
+		{7A2064A2-909D-47C0-8273-22CABCCEE02B}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(TestCaseManagementSettings) = postSolution
-		CategoryFile = Aspose.Tasks.Examples.CSharp.vsmdi
 	EndGlobalSection
 EndGlobal
