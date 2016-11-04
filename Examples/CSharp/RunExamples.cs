@@ -1,14 +1,20 @@
 using System;
 using System.IO;
 using Aspose.Tasks.Examples.CSharp.CreatingAndSaving;
-using Aspose.Tasks.Examples.CSharp.CustomizingCreatedProject;
-using Aspose.Tasks.Examples.CSharp.HandlingBasicProperties;
 using Aspose.Tasks.Examples.CSharp.ManipulatingMPPFile;
 using Aspose.Tasks.Examples.CSharp.ModifyingCreatedProject;
-using Aspose.Tasks.Examples.CSharp.PrintingAndExporting;
-using Aspose.Tasks.Examples.CSharp.ReadingData;
 using Aspose.Tasks.Examples.CSharp.WorkingWithCalendars;
 using Aspose.Tasks.Examples.CSharp.WorkingWithProjects;
+using Aspose.Tasks.Examples.CSharp.WorkingWithProjects.CreatingReadingAndSaving;
+using Aspose.Tasks.Examples.CSharp.WorkingWithProjects.WorkingWithProjectProperties;
+using Aspose.Tasks.Examples.CSharp.WorkingWithProjects.WorkingWithExtendedAttributes;
+using Aspose.Tasks.Examples.CSharp.WorkingWithProjects.Miscellaneous;
+using Aspose.Tasks.Examples.CSharp.WorkingWithProjects.Printing;
+using Aspose.Tasks.Examples.CSharp.WorkingWithProjects.Rescheduling;
+using Aspose.Tasks.Examples.CSharp.WorkingWithProjects.ImportingAndExporting;
+using Aspose.Tasks.Examples.CSharp.WorkingWithProjects.WorkingWithProjectViews;
+using Aspose.Tasks.Examples.CSharp.WorkingWithCalendars.CreatingUpdatingAndRemoving;
+using Aspose.Tasks.Examples.CSharp.WorkingWithCalendarExceptions;
 
 namespace Aspose.Tasks.Examples.CSharp
 {
@@ -31,9 +37,6 @@ namespace Aspose.Tasks.Examples.CSharp
             //CustomizeDateFormats.Run();
             //CustomizeTextStyle.Run();
             //FitContentsToCellSize.Run();
-            //IgnoreInvalidCharactersDuringloadingProject.Run();
-            //ImportProjectDataFromDatabase.Run();
-            //ReadPasswordProtectedProjectFile.Run();
             //SaveProjectAsCSV.Run();
             //SaveProjectAsPDF.Run();
             //SaveProjectAsSVG.Run();
@@ -43,57 +46,16 @@ namespace Aspose.Tasks.Examples.CSharp
             //SaveProjectDataToSpreadsheet2003XML.Run();
             //SaveToMultiplePDFFiles.Run();
             //UseSvgOptions.Run();
-            //UsingXlsxOptions.Run();
-
-
-            // =====================================================
-            // =====================================================
-            // Customizing Created Project
-            // =====================================================
-            // =====================================================
-
-            //CalculateCriticalPath.Run();
-            //CreateEmptyProjectSaveXML.Run();            
-            //ReschedueProjectFromFinishDate.Run();
-            //ExtendedAttributes.Run();
-            //ReschedueProjectFromFinishDate.Run();
-            //ReschedueProjectFromStartDate.Run();
-            //RescheduleProjectStartOrFinishDate.Run();
-            //RetrieveCalendarInfo.Run();
-            //SetAttributesForNewTasks.Run();
-
-            // =====================================================
-            // =====================================================
-            // Handling Basic Properties
-            // =====================================================
-            // =====================================================
-
-            //DefaultProperties.Run();
-            //WriteFiscalYearProperties.Run();
-            //WriteDefaultProperties.Run();
-            //WriteWeekdayProperties.Run();
-            //WriteProjectInfo.Run();
-            //WriteCurrencyProperties.Run();
-            //ReadWeekdayProperties.Run();
-            //ReadProjectInfo.Run();
-            //ReadFiscalYearProperties.Run();
-            //ReadCurrencyProperties.Run();
-            //DetermineProjectVersion.Run();
-
-
+            //UsingXlsxOptions.Run();           
+                    
             // =====================================================
             // =====================================================
             // Manipulating MPP File
             // =====================================================
             // =====================================================
 
-            //AddImageToPageHeaderFooter.Run();
             //MPPFileUpdate.Run();
-            //ReadFilterCriteriaData.Run();
-            //ReadFilterDefinitionData.Run();
-            //WriteMPPProjectSummary.Run();
-
-
+            
             // =====================================================
             // =====================================================
             // Modifying Created Project 
@@ -101,44 +63,16 @@ namespace Aspose.Tasks.Examples.CSharp
             // =====================================================
 
             //ConfigureGantChart.Run();
-            //ConfigureTheGantChartViewShowSelectedColumnFields.Run();
-            //CustomizeTimescaleTierLabels.Run();
-            //EmbeddedObjectsCreatedInsideApplication.Run();
             //ReadOnlyAccessToCustomFieldValuesUsingFormulas.Run();
             //RenderProjectDataToFormat24bppRgb.Run();
-            //SetTimeScaleCount.Run();
              
-
             // =====================================================
             // =====================================================
-            // Printing And Exporting
-            // =====================================================
-            // =====================================================
-
-            //ExportProjectDataToPrimaveraMPXFormat.Run();
-            //ExportProjectDataToXERFormat.Run();
-            //ExportProjectDataToXMLFormat.Run();            
-            //ImportDataFromXMLFileFormats.Run();
-            //PrintProject.Run();
-            //PrintProjectPagesToSeparateFiles.Run();
-            //PrintProjectUsingCustomPrinter.Run();
-            //PrintTaskWritingException.Run();
-            //PrintTheProject.Run();          
-            //SupportForSQLiteDatabase.Run();
-
-
-            // =====================================================
-            // =====================================================
-            // Reading Data
+            // Working With Calendar Exceptions
             // =====================================================
             // =====================================================
 
-            //GetNumberOfPages.Run();
-            //GetNumberOfPagesForViews.Run();
-            //ReadOutlineCodes.Run();          
-            //ReadTableDataFromProjectFile.Run();
-
-
+            //RetrieveCalendarExceptions.Run();
 
             // =====================================================
             // =====================================================
@@ -146,13 +80,17 @@ namespace Aspose.Tasks.Examples.CSharp
             // =====================================================
             // =====================================================
 
-            //CreatingCalendar.Run();
             //DefineWeekdaysForCalendar.Run();
             //GeneralCalendarProperties.Run();
+            //RetrieveCalendarInfo.Run();  
+
+            // Creating, Updating and Removing
+            // =====================================================
+
+            //CreatingCalendar.Run();
             //MakeAStandardCalendar.Run();
             //ReadWorkWeeksInformation.Run();
             //WriteUpdatedCalendarDataToMPP.Run();
-
 
             // =====================================================
             // =====================================================
@@ -160,20 +98,98 @@ namespace Aspose.Tasks.Examples.CSharp
             // =====================================================
             // =====================================================
 
-            //GetObjectByFieldMethods.Run();
+
+            //AddImageToPageHeaderFooter.Run();
+            //GetNumberOfPages.Run();
+            //GetNumberOfPagesForViews.Run();
             //MoveTaskAtTheEnd.Run();
             //MoveTaskUnderAnotherParent.Run();
             //MoveTaskUnderSameParent.Run();
             //ReadModuleAttributesInforamtion.Run();
             //ReadModulesInformation.Run();
-            //ReadProjectFileFromStream.Run();
-            //ReadProjectFiles.Run();
+            //ReadOutlineCodes.Run();
             //ReadReferencesInformation.Run();
             //ReplaceCalendar.Run();
             //SaveProjectDataAsTemplate.Run();
             //TaskSettingStartFinishDates.Run();
+
+            // Creating, Reading and Saving
+            // =====================================================
+
+            //CreateEmptyProjectSaveXML.Run();
+            //CreateEmptyProjectSaveStream.Run();
+            //IgnoreInvalidCharactersDuringloadingProject.Run();
+            //ImportProjectDataFromDatabase.Run();
             //ReadPasswordProtectedProjectFile.Run();
+            //ReadProjectFileFromStream.Run();
+            //ReadProjectFiles.Run();
+
+            // Importing and Exporting
+            // =====================================================
+
+            //ExportProjectDataToPrimaveraMPXFormat.Run();
+            //ExportProjectDataToXERFormat.Run();
+            //ExportProjectDataToXMLFormat.Run();
+            //ImportDataFromXMLFileFormats.Run();
+            //SupportForSQLiteDatabase.Run();
+
+            // Miscellaneous
+            // =====================================================
+
+            //CalculateCriticalPath.Run();
+            //EmbeddedObjectsCreatedInsideApplication.Run();
+            //PrintTaskWritingException.Run();
+            //ReadFilterCriteriaData.Run();
+            //ReadFilterDefinitionData.Run();
+            //ReadTableDataFromProjectFile.Run();
+
+            // Printing
+            // =====================================================
+
+            //PrintProjectPagesToSeparateFiles.Run();     
+            //PrintProjectUsingCustomPrinter.Run();
+            //PrintTheProject.Run(); 
+
+            // Rescheduling
+            // =====================================================
+
+            //RescheduleProjectFromFinishDate.Run();
+            //RescheduleProjectFromStartDate.Run();
+            //RescheduleProjectStartOrFinishDate.Run();
             //UpdateProjectAndRescheduleUncompletedWork.Run();
+
+            // Working with Extended Attributes
+            // =====================================================
+
+            //WriteExtendedAttributes.Run();
+            //WriteUpdatedExtendedAttributeDefinitions.Run();
+
+            // Working with Project properties
+            // =====================================================
+
+            //ApplyCalculationModeAuto.Run();
+            //ApplyCalculationModeManual.Run();
+            //ApplyCalculationModeNone.Run();
+            //DetermineProjectVersion.Run();
+            //ReadCurrencyProperties.Run();
+            //ReadDefaultProperties.Run();
+            //ReadFiscalYearProperties.Run();
+            //ReadProjectInfo.Run();
+            //ReadWeekdayProperties.Run();
+            //SetAttributesForNewTasks.Run();
+            //WriteCurrencyProperties.Run();
+            //WriteDefaultProperties.Run();
+            //WriteFiscalYearProperties.Run();
+            //WriteMPPProjectSummary.Run();
+            //WriteProjectInfo.Run();
+            //WriteWeekdayProperties.Run();
+
+            // Working with Project Views
+            // =====================================================
+
+            //ConfigureTheGantChartViewShowSelectedColumnFields.Run();
+            //CustomizeTimescaleTierLabels.Run();
+            //SetTimeScaleCount.Run();
 
             // =====================================================
             // =====================================================
@@ -181,10 +197,10 @@ namespace Aspose.Tasks.Examples.CSharp
             // =====================================================
             // =====================================================
 
-            // ReadVBAProjectInformation.Run();
-            // ReadReferencesInformation.Run();
-            // ReadModulesInformation.Run();
-            // ReadModuleAttributesInforamtion.Run();
+            //ReadVBAProjectInformation.Run();
+            //ReadReferencesInformation.Run();
+            //ReadModulesInformation.Run();
+            //ReadModuleAttributesInforamtion.Run();
 
 
             // Stop before exiting
@@ -223,13 +239,6 @@ namespace Aspose.Tasks.Examples.CSharp
             return Path.GetFullPath(GetDataDir_Data() + "ModifyingCreatedProject/");
         }
 
-
-        internal static string GetDataDir_HandlingBasicProperties()
-        {
-            return Path.GetFullPath(GetDataDir_Data() + "HandlingBasicProperties/");
-        }
-
-
         internal static string GetDataDir_ManipulatingMPPFile()
         {
             return Path.GetFullPath(GetDataDir_Data() + "ManipulatingMPPFile/");
@@ -245,7 +254,31 @@ namespace Aspose.Tasks.Examples.CSharp
             return Path.GetFullPath(GetDataDir_Data() + "CreatingAndSaving/");
         }
 
+        internal static string GetDataDir_CreatingReadingAndSaving()
+        {
+            return Path.GetFullPath(GetDataDir_Data() + "WorkingWithProject/CreatingReadingAndSaving/");
+        }
 
+        public static string GetDataDir(Type t)
+        {
+            string c = t.FullName;
+            c = c.Replace("Aspose.Tasks.Examples.CSharp.", "");
+            c = c.Replace('.', Path.DirectorySeparatorChar);
+            string p = Path.GetFullPath(Path.Combine(Directory.GetCurrentDirectory(), "..", "..", "..", "Data", c));
+            p += Path.DirectorySeparatorChar;
+
+            if (Directory.Exists(p))
+            {
+                Console.WriteLine("Using Data Dir {0}", p);
+            }
+            else
+            {
+                Directory.CreateDirectory(p);
+                Console.WriteLine("Created Data Dir {0}", p);
+            }
+
+            return p;
+        }
         private static string GetDataDir_Data()
         {
             var parent = Directory.GetParent(Directory.GetCurrentDirectory()).Parent;

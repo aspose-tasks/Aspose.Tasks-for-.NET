@@ -4,17 +4,23 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
+/*
+This project uses Automatic Package Restore feature of NuGet to resolve Aspose.Tasks for .NET API reference 
+when the project is build. Please check https:// Docs.nuget.org/consume/nuget-faq for more information. 
+If you do not wish to use NuGet, you can manually download Aspose.Tasks for .NET API from http://www.aspose.com/downloads, 
+install it and then add its reference to this project. For any issues, questions or suggestions 
+please feel free to contact us using http://www.aspose.com/community/forums/default.aspx
+*/
+
 namespace Aspose.Tasks.Examples.CSharp.WorkingWithCalendars
 {
     class GeneralCalendarProperties
     {
         public static void Run()
         {
-            // ExStart:ReadCalendarProps
-            // This example shows how the API can be used to read calendars information from a MPP/XML file
-            
+            // ExStart:ReadCalendarProps            
             // Load an existing project
-            string dataDir = RunExamples.GetDataDir_WorkingWithCalendars();
+            string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
             Project project = new Project(dataDir + "Project.xml");
 
             foreach (Aspose.Tasks.Calendar cal in project.Calendars)

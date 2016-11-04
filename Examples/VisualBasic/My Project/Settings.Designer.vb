@@ -63,10 +63,10 @@ Namespace My
      Global.System.Runtime.CompilerServices.CompilerGeneratedAttribute()>  _
     Friend Module MySettingsProperty
         
-        <Global.System.ComponentModel.Design.HelpKeywordAttribute("My.Settings")>  _
-        Friend ReadOnly Property Settings() As Global.My.MySettings
+        <Global.System.ComponentModel.Design.HelpKeywordAttribute("My.Settings")> _
+        Friend ReadOnly Property Settings() As Global.Aspose.Tasks.Examples.VisualBasic.My.MySettings
             Get
-                Return Global.My.MySettings.Default
+                Return Global.Aspose.Tasks.Examples.VisualBasic.My.MySettings.Default
             End Get
         End Property
     End Module

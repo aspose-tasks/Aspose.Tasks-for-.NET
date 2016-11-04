@@ -10,7 +10,7 @@ Imports Aspose.Tasks.Saving
 'please feel free to contact us using http://www.aspose.com/community/forums/default.aspx
 '
 
-Namespace Aspose.Tasks.Examples.VisualBasic.CreatingAndSaving
+Namespace CreatingAndSaving
     Public Class SaveToMultiplePDFFiles
         Public Shared Sub Run()
             ' ExStart:WriteDefaultProperties

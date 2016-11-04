@@ -11,20 +11,20 @@ Imports Aspose.Tasks.Visualization
 'please feel free to contact us using http://www.aspose.com/community/forums/default.aspx
 '
 
-Namespace Aspose.Tasks.Examples.VisualBasic.WorkingWithProjects
-	Public Class SaveProjectDataAsTemplate
-		Public Shared Sub Run()
+Namespace WorkingWithProjects
+    Public Class SaveProjectDataAsTemplate
+        Public Shared Sub Run()
             ' ExStart:SaveProjectDataAsTemplate
-			' The path to the documents directory.
+            ' The path to the documents directory.
             Dim dataDir As String = RunExamples.GetDataDir_WorkingWithProjects()
-			Dim project As New Project(dataDir & Convert.ToString("Project2.mpp"))
-			Dim [option] As New HtmlSaveOptions()
-			project.Save(dataDir & Convert.ToString("SaveProjectDataAsHTML_out.html"), [option])
-			' OR
-			[option].Pages.Add(2)
-			' Adding only one page (page number 2)
-			project.Save(dataDir & Convert.ToString("SaveProjectDataAsHTML2_out.html"), [option])
-			' ExEnd:SaveProjectDataAsTemplate
-		End Sub
-	End Class
+            Dim project As New Project(dataDir & Convert.ToString("Project2.mpp"))
+            Dim [option] As New HtmlSaveOptions()
+            project.Save(dataDir & Convert.ToString("SaveProjectDataAsHTML_out.html"), [option])
+            ' OR
+            [option].Pages.Add(2)
+            ' Adding only one page (page number 2)
+            project.Save(dataDir & Convert.ToString("SaveProjectDataAsHTML2_out.html"), [option])
+            ' ExEnd:SaveProjectDataAsTemplate
+        End Sub
+    End Class
 End Namespace
