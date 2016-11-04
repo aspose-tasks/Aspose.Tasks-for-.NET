@@ -10,7 +10,7 @@ Imports Aspose.Tasks
 '
 
 
-Namespace Aspose.Tasks.Examples.VisualBasic.WorkingWithProjects
+Namespace WorkingWithProjects
     Class MoveTaskAtTheEnd
         Public Shared Sub Run()
             ' The path to the documents directory.

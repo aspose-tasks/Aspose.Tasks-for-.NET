@@ -1,7 +1,8 @@
 Imports Aspose.Tasks
 Imports System
+Imports Aspose.Tasks.Saving
 
-Namespace Aspose.Tasks.Examples.VisualBasic.ManipulatingMPPFile
+Namespace ManipulatingMPPFile
     Public Class MPPFileUpdate
         Public Shared Sub Run()
             'ExStart: MPPFileUpdate
@@ -17,7 +18,7 @@ Namespace Aspose.Tasks.Examples.VisualBasic.ManipulatingMPPFile
             task.Set(Tsk.Finish, New DateTime(2012, 8, 5))
 
             'Save the project as MPP project file
-            project.Save(dataDir & "AfterLinking.Mpp", Aspose.Tasks.Saving.SaveFileFormat.MPP)
+            project.Save(dataDir & "AfterLinking.Mpp", SaveFileFormat.MPP)
             'ExEnd: MPPFileUpdate
         End Sub
     End Class

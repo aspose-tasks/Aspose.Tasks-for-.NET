@@ -9,7 +9,7 @@ Imports Aspose.Tasks.Saving
 'please feel free to contact us using http://www.aspose.com/community/forums/default.aspx
 '
 
-Namespace Aspose.Tasks.Examples.VisualBasic.ModifyingCreatedProject
+Namespace ModifyingCreatedProject
     Public Class RenderProjectDataToFormat24bppRgb
         Public Shared Sub Run()
             ' ExStart:RenderProjectDataToFormat24bppRgb

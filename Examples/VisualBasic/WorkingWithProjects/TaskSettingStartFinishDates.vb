@@ -1,7 +1,7 @@
 ﻿Imports Aspose.Tasks
 Imports System
 
-Namespace Aspose.Tasks.Examples.VisualBasic.WorkingWithProjects
+Namespace WorkingWithProjects
     Public Class TaskSettingStartFinishDates
 
         ''' <summary>

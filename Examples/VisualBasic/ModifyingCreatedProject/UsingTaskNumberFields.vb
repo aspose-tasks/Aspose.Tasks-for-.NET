@@ -6,7 +6,7 @@
 'please feel free to contact us using http://www.aspose.com/community/forums/default.aspx
 '
 
-Namespace Aspose.Tasks.Examples.VisualBasic.ModifyingCreatedProject
+Namespace ModifyingCreatedProject
     Public Class UsingTaskNumberFields
         Public Shared Sub Run()
             ' ExStart:UsingTaskNumberFields

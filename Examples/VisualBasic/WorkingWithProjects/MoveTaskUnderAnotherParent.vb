@@ -9,7 +9,7 @@ Imports Aspose.Tasks
 'please feel free to contact us using http://www.aspose.com/community/forums/default.aspx
 '
 
-Namespace Aspose.Tasks.Examples.VisualBasic.WorkingWithProjects
+Namespace WorkingWithProjects
     Class MoveTaskUnderAnotherParent
         Public Shared Sub Run()
             Try

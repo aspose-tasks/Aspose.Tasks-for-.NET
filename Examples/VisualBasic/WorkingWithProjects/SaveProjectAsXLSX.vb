@@ -10,17 +10,17 @@ Imports Aspose.Tasks.Saving
 'please feel free to contact us using http://www.aspose.com/community/forums/default.aspx
 '
 
-Namespace Aspose.Tasks.Examples.VisualBasic.WorkingWithProjects
-	Public Class SaveProjectAsXLSX
-		Public Shared Sub Run()
-			' ExStart:SaveProjectAsXLSX
-			' The path to the documents directory.
+Namespace WorkingWithProjects
+    Public Class SaveProjectAsXLSX
+        Public Shared Sub Run()
+            ' ExStart:SaveProjectAsXLSX
+            ' The path to the documents directory.
             Dim dataDir As String = RunExamples.GetDataDir_CreatingAndSaving()
-			' Read the input Project file
-			Dim project As New Project(dataDir & Convert.ToString("Project2.mpp"))
-			' Save the Project as XLSX
-			project.Save(dataDir & Convert.ToString("SaveProjectAsXLSX_out.xlsx"), SaveFileFormat.XLSX)
-			' ExEnd:SaveProjectAsXLSX
-		End Sub
-	End Class
+            ' Read the input Project file
+            Dim project As New Project(dataDir & Convert.ToString("Project2.mpp"))
+            ' Save the Project as XLSX
+            project.Save(dataDir & Convert.ToString("SaveProjectAsXLSX_out.xlsx"), SaveFileFormat.XLSX)
+            ' ExEnd:SaveProjectAsXLSX
+        End Sub
+    End Class
 End Namespace

@@ -5,9 +5,8 @@
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
     <OutputType>Exe</OutputType>
     <StartupObject>Aspose.Tasks.Examples.VisualBasic.RunExamples</StartupObject>
-    <RootNamespace>
-    </RootNamespace>
-    <AssemblyName>Aspose.Task.Examples</AssemblyName>
+    <RootNamespace>Aspose.Tasks.Examples.VisualBasic</RootNamespace>
+    <AssemblyName>Aspose.Tasks.Examples.VisualBasic</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <MyType>Console</MyType>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
@@ -17,6 +16,7 @@
     <OptionCompare>Binary</OptionCompare>
     <OptionStrict>Off</OptionStrict>
     <OptionInfer>On</OptionInfer>
+    <ProjectGuid>{7A2064A2-909D-47C0-8273-22CABCCEE02B}</ProjectGuid>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
     <PlatformTarget>x86</PlatformTarget>
@@ -25,7 +25,7 @@
     <DefineDebug>true</DefineDebug>
     <DefineTrace>true</DefineTrace>
     <OutputPath>bin\Debug\</OutputPath>
-    <DocumentationFile>Aspose.Task.Examples.xml</DocumentationFile>
+    <DocumentationFile>Aspose.Tasks.Examples.VisualBasic.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
@@ -35,7 +35,7 @@
     <DefineTrace>true</DefineTrace>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
-    <DocumentationFile>Aspose.Task.Examples.xml</DocumentationFile>
+    <DocumentationFile>Aspose.Tasks.Examples.VisualBasic.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <ItemGroup>
@@ -65,12 +65,20 @@
     <Import Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CreatingAndSaving\ReadPasswordProtectedProjectFile.vb" />
+    <Compile Include="WorkingWithCalendarExceptions\RetrieveCalendarExceptions.vb" />
+    <Compile Include="WorkingWithCalendars\CalculateWorkHours..vb" />
+    <Compile Include="WorkingWithProjects\CreatingReadingAndSaving\CreateEmptyProjectSaveStream.vb" />
+    <Compile Include="WorkingWithProjects\CreatingReadingAndSaving\ReadPasswordProtectedProjectFile.vb" />
     <Compile Include="CreatingAndSaving\SaveProjectAsText.vb" />
     <Compile Include="CreatingAndSaving\SaveProjectAsSVG.vb" />
     <Compile Include="CreatingAndSaving\UsingXlsxOptions.vb" />
-    <Compile Include="CustomizingCreatedProject\ReplaceCalendarWithNewCalendar.vb" />
-    <Compile Include="HandlingBasicProperties\ReadProjectInfo.vb" />
+    <Compile Include="WorkingWithCalendars\CreatingUpdatingAndRemoving\ReplaceCalendarWithNewCalendar.vb" />
+    <Compile Include="WorkingWithProjects\ImportingAndExporting\ImportProjectFromPrimaveraDB.vb" />
+    <Compile Include="WorkingWithProjects\ReadHeaderFooterInfo.vb" />
+    <Compile Include="WorkingWithProjects\WorkingWithProjectProperties\ApplyCalculationModeAuto.vb" />
+    <Compile Include="WorkingWithProjects\WorkingWithProjectProperties\ApplyCalculationModeManual.vb" />
+    <Compile Include="WorkingWithProjects\WorkingWithProjectProperties\ApplyCalculationModeNone.vb" />
+    <Compile Include="WorkingWithProjects\WorkingWithProjectProperties\ReadProjectInfo.vb" />
     <Compile Include="ModifyingCreatedProject\UsingTaskNumberFields.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
@@ -87,76 +95,75 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="PrintingAndExporting\ExportProjectDataToPrimaveraMPXFormat.vb" />
-    <Compile Include="PrintingAndExporting\ImportProjectDataFromMPDFile.vb" />
-    <Compile Include="WorkingWithCalendars\CreatingCalendar.vb" />
-    <Compile Include="WorkingWithCalendars\DefineWeekdaysForCalendar.vb" />
+    <Compile Include="WorkingWithProjects\ImportingAndExporting\ExportProjectDataToPrimaveraMPXFormat.vb" />
+    <Compile Include="WorkingWithProjects\CreatingReadingAndSaving\ImportProjectDataFromMPDFile.vb" />
+    <Compile Include="WorkingWithCalendars\CreatingUpdatingAndRemoving\CreatingCalendar.vb" />
+    <Compile Include="WorkingWithCalendars\CreatingUpdatingAndRemoving\DefineWeekdaysForCalendar.vb" />
     <Compile Include="WorkingWithCalendars\GeneralCalendarProperties.vb" />
-    <Compile Include="WorkingWithCalendars\MakeAStandardCalendar.vb" />
+    <Compile Include="WorkingWithCalendars\CreatingUpdatingAndRemoving\MakeAStandardCalendar.vb" />
     <Compile Include="WorkingWithCalendars\ReadWorkWeeksInformation.vb" />
-    <Compile Include="WorkingWithCalendars\WriteUpdatedCalendarDataToMPP.vb" />
+    <Compile Include="WorkingWithCalendars\CreatingUpdatingAndRemoving\WriteUpdatedCalendarDataToMPP.vb" />
     <Compile Include="RunExamples.vb" />
-    <Compile Include="ManipulatingMPPFile\AddImageToPageHeaderFooter.vb" />
-    <Compile Include="CustomizingCreatedProject\CalculateCriticalPath.vb" />
-    <Compile Include="ModifyingCreatedProject\ConfigureGantChart.vb" />
-    <Compile Include="ModifyingCreatedProject\ConfigureTheGantChartViewShowSelectedColumnFields.vb" />
-    <Compile Include="CustomizingCreatedProject\CreateEmptyProjectSaveXML.vb" />
+    <Compile Include="WorkingWithProjects\AddImageToPageHeaderFooter.vb" />
+    <Compile Include="WorkingWithProjects\Miscellaneous\CalculateCriticalPath.vb" />
+    <Compile Include="WorkingWithProjects\WorkingWithProjectViews\ConfigureGantChart.vb" />
+    <Compile Include="WorkingWithProjects\WorkingWithProjectViews\ConfigureTheGantChartViewShowSelectedColumnFields.vb" />
+    <Compile Include="WorkingWithProjects\CreatingReadingAndSaving\CreateEmptyProjectSaveXML.vb" />
     <Compile Include="CreatingAndSaving\CustomizeDateFormats.vb" />
     <Compile Include="CreatingAndSaving\CustomizeTextStyle.vb" />
-    <Compile Include="ModifyingCreatedProject\CustomizeTimescaleTierLabels.vb" />
-    <Compile Include="HandlingBasicProperties\DefaultProperties.vb" />
-    <Compile Include="HandlingBasicProperties\DetermineProjectVersion.vb" />
-    <Compile Include="ModifyingCreatedProject\EmbeddedObjectsCreatedInsideApplication.vb" />
-    <Compile Include="PrintingAndExporting\ExportProjectDataToXERFormat.vb" />
-    <Compile Include="PrintingAndExporting\ExportProjectDataToXMLFormat.vb" />
-    <Compile Include="CustomizingCreatedProject\ExtendedAttributes.vb" />
-    <Compile Include="ModifyingCreatedProject\ExtractEmbeddedObjects.vb" />
+    <Compile Include="WorkingWithProjects\WorkingWithProjectViews\CustomizeTimescaleTierLabels.vb" />
+    <Compile Include="WorkingWithProjects\WorkingWithProjectProperties\ReadDefaultProperties.vb" />
+    <Compile Include="WorkingWithProjects\WorkingWithProjectProperties\DetermineProjectVersion.vb" />
+    <Compile Include="WorkingWithProjects\Miscellaneous\EmbeddedObjectsCreatedInsideApplication.vb" />
+    <Compile Include="WorkingWithProjects\ImportingAndExporting\ExportProjectDataToXERFormat.vb" />
+    <Compile Include="WorkingWithProjects\ImportingAndExporting\ExportProjectDataToXMLFormat.vb" />
+    <Compile Include="WorkingWithProjects\WorkingWithExtendedAttributes\WriteExtendedAttributes.vb" />
+    <Compile Include="WorkingWithProjects\Miscellaneous\ExtractEmbeddedObjects.vb" />
     <Compile Include="CreatingAndSaving\FitContentsToCellSize.vb" />
     <Compile Include="ModifyingCreatedProject\FormulaWithBooleanValues.vb" />
     <Compile Include="ModifyingCreatedProject\FormulaWithProjectFields.vb" />
-    <Compile Include="ReadingData\GetNumberOfPages.vb" />
-    <Compile Include="ReadingData\GetNumberOfPagesForViews.vb" />
-    <Compile Include="WorkingWithProjects\GetObjectByFieldMethods.vb" />
-    <Compile Include="CreatingAndSaving\IgnoreInvalidCharactersDuringloadingProject.vb" />
-    <Compile Include="PrintingAndExporting\ImportDataFromMPXFileFormats.vb" />
-    <Compile Include="PrintingAndExporting\ImportDataFromXMLFileFormats.vb" />
-    <Compile Include="CreatingAndSaving\ImportProjectDataFromDatabase.vb" />
+    <Compile Include="WorkingWithProjects\GetNumberOfPages.vb" />
+    <Compile Include="WorkingWithProjects\GetNumberOfPagesForViews.vb" />
+    <Compile Include="WorkingWithProjects\CreatingReadingAndSaving\IgnoreInvalidCharactersDuringloadingProject.vb" />
+    <Compile Include="WorkingWithProjects\ImportingAndExporting\ImportDataFromMPXFileFormats.vb" />
+    <Compile Include="WorkingWithProjects\ImportingAndExporting\ImportDataFromXMLFileFormats.vb" />
+    <Compile Include="WorkingWithProjects\CreatingReadingAndSaving\ImportProjectDataFromDatabase.vb" />
     <Compile Include="WorkingWithProjects\MoveTaskAtTheEnd.vb" />
     <Compile Include="WorkingWithProjects\MoveTaskUnderAnotherParent.vb" />
     <Compile Include="WorkingWithProjects\MoveTaskUnderSameParent.vb" />
     <Compile Include="ManipulatingMPPFile\MPPFileUpdate.vb" />
-    <Compile Include="PrintingAndExporting\PrintLargeFiles.vb" />
-    <Compile Include="PrintingAndExporting\PrintPrintOptionsAndPrinterSettings.vb" />
-    <Compile Include="PrintingAndExporting\PrintProjectPagesToSeparateFiles.vb" />
-    <Compile Include="PrintingAndExporting\PrintProjectUsingCustomPrinter.vb" />
-    <Compile Include="PrintingAndExporting\PrintTaskWritingException.vb" />
-    <Compile Include="PrintingAndExporting\PrintTheProject.vb" />
-    <Compile Include="HandlingBasicProperties\ReadCurrencyProperties.vb" />
-    <Compile Include="ManipulatingMPPFile\ReadFilterCriteriaData.vb" />
-    <Compile Include="ManipulatingMPPFile\ReadFilterDefinitionData.vb" />
-    <Compile Include="HandlingBasicProperties\ReadFiscalYearProperties.vb" />
+    <Compile Include="WorkingWithProjects\Printing\PrintLargeFiles.vb" />
+    <Compile Include="WorkingWithProjects\Printing\PrintPrintOptionsAndPrinterSettings.vb" />
+    <Compile Include="WorkingWithProjects\Printing\PrintProjectPagesToSeparateFiles.vb" />
+    <Compile Include="WorkingWithProjects\Printing\PrintProjectUsingCustomPrinter.vb" />
+    <Compile Include="WorkingWithProjects\Miscellaneous\PrintTaskWritingException.vb" />
+    <Compile Include="WorkingWithProjects\Printing\PrintTheProject.vb" />
+    <Compile Include="WorkingWithProjects\WorkingWithProjectProperties\ReadCurrencyProperties.vb" />
+    <Compile Include="WorkingWithProjects\Miscellaneous\ReadFilterCriteriaData.vb" />
+    <Compile Include="WorkingWithProjects\Miscellaneous\ReadFilterDefinitionData.vb" />
+    <Compile Include="WorkingWithProjects\WorkingWithProjectProperties\ReadFiscalYearProperties.vb" />
     <Compile Include="ModifyingCreatedProject\ReadFormulasInLocalAndEnterpriseExtendedAttributesFromMPPFile.vb" />
-    <Compile Include="ReadingData\ReadGroupDefinitionData.vb" />
+    <Compile Include="WorkingWithProjects\Miscellaneous\ReadGroupDefinitionData.vb" />
     <Compile Include="WorkingWithProjects\ReadModuleAttributesInforamtion.vb" />
     <Compile Include="WorkingWithProjects\ReadModulesInformation.vb" />
     <Compile Include="ModifyingCreatedProject\ReadOnlyAccessToCustomFieldValuesUsingFormulas.vb" />
-    <Compile Include="ReadingData\ReadOutlineCodes.vb" />
-    <Compile Include="WorkingWithProjects\ReadProjectFileFromStream.vb" />
-    <Compile Include="WorkingWithProjects\ReadProjectFiles.vb" />
-    <Compile Include="HandlingBasicProperties\WriteDefaultProperties.vb" />
-    <Compile Include="PrintingAndExporting\ReadProjectUIDsFromXMLFile.vb" />
+    <Compile Include="WorkingWithProjects\ReadOutlineCodes.vb" />
+    <Compile Include="WorkingWithProjects\CreatingReadingAndSaving\ReadProjectFileFromStream.vb" />
+    <Compile Include="WorkingWithProjects\CreatingReadingAndSaving\ReadProjectFiles.vb" />
+    <Compile Include="WorkingWithProjects\WorkingWithProjectProperties\WriteDefaultProperties.vb" />
+    <Compile Include="WorkingWithProjects\ImportingAndExporting\ReadProjectUIDsFromXMLFile.vb" />
     <Compile Include="WorkingWithProjects\ReadReferencesInformation.vb" />
-    <Compile Include="ReadingData\ReadSpecificGantChartViewData.vb" />
-    <Compile Include="ReadingData\ReadTableDataFromProjectFile.vb" />
+    <Compile Include="WorkingWithProjects\WorkingWithProjectViews\ReadSpecificGantChartViewData.vb" />
+    <Compile Include="WorkingWithProjects\Miscellaneous\ReadTableDataFromProjectFile.vb" />
     <Compile Include="WorkingWithProjects\ReadVBAProjectInformation.vb" />
-    <Compile Include="HandlingBasicProperties\ReadWeekdayProperties.vb" />
-    <Compile Include="PrintingAndExporting\ReadXMLFileWithMultipleProjects.vb" />
+    <Compile Include="WorkingWithProjects\WorkingWithProjectProperties\ReadWeekdayProperties.vb" />
+    <Compile Include="WorkingWithProjects\ImportingAndExporting\ReadXMLFileWithMultipleProjects.vb" />
     <Compile Include="ModifyingCreatedProject\RenderProjectDataToFormat24bppRgb.vb" />
-    <Compile Include="WorkingWithProjects\ReplaceCalendar.vb" />
-    <Compile Include="CustomizingCreatedProject\ReschedueProjectFromFinishDate.vb" />
-    <Compile Include="CustomizingCreatedProject\ReschedueProjectFromStartDate.vb" />
-    <Compile Include="CustomizingCreatedProject\RescheduleProjectStartOrFinishDate.vb" />
-    <Compile Include="CustomizingCreatedProject\RetrieveCalendarInfo.vb" />
+    <Compile Include="WorkingWithCalendars\CreatingUpdatingAndRemoving\ReplaceCalendar.vb" />
+    <Compile Include="WorkingWithProjects\Rescheduling\RescheduleProjectFromFinishDate.vb" />
+    <Compile Include="WorkingWithProjects\Rescheduling\RescheduleProjectFromStartDate.vb" />
+    <Compile Include="WorkingWithProjects\Rescheduling\RescheduleProjectStartOrFinishDate.vb" />
+    <Compile Include="WorkingWithCalendars\RetrieveCalendarInfo.vb" />
     <Compile Include="CreatingAndSaving\SaveProjectAsCSV.vb" />
     <Compile Include="CreatingAndSaving\SaveProjectAsPDF.vb" />
     <Compile Include="WorkingWithProjects\SaveProjectAsXLSX.vb" />
@@ -164,20 +171,20 @@
     <Compile Include="WorkingWithProjects\SaveProjectDataAsTemplate.vb" />
     <Compile Include="CreatingAndSaving\SaveProjectDataToSpreadsheet2003XML.vb" />
     <Compile Include="CreatingAndSaving\SaveToMultiplePDFFiles.vb" />
-    <Compile Include="CustomizingCreatedProject\SetAttributesForNewTasks.vb" />
-    <Compile Include="ModifyingCreatedProject\SetTimeScaleCount.vb" />
-    <Compile Include="PrintingAndExporting\SupportForSQLiteDatabase.vb" />
+    <Compile Include="WorkingWithProjects\WorkingWithProjectProperties\SetAttributesForNewTasks.vb" />
+    <Compile Include="WorkingWithProjects\WorkingWithProjectViews\SetTimeScaleCount.vb" />
+    <Compile Include="WorkingWithProjects\ImportingAndExporting\SupportForSQLiteDatabase.vb" />
     <Compile Include="WorkingWithProjects\TaskSettingStartFinishDates.vb" />
-    <Compile Include="WorkingWithProjects\UpdateProjectAndRescheduleUncompletedWork.vb" />
+    <Compile Include="WorkingWithProjects\Rescheduling\UpdateProjectAndRescheduleUncompletedWork.vb" />
     <Compile Include="CreatingAndSaving\UseSvgOptions.vb" />
     <Compile Include="ModifyingCreatedProject\UsingTasksAndResourceFieldsInFormulaCalculations.vb" />
-    <Compile Include="HandlingBasicProperties\WriteCurrencyProperties.vb" />
-    <Compile Include="HandlingBasicProperties\WriteFiscalYearProperties.vb" />
+    <Compile Include="WorkingWithProjects\WorkingWithProjectProperties\WriteCurrencyProperties.vb" />
+    <Compile Include="WorkingWithProjects\WorkingWithProjectProperties\WriteFiscalYearProperties.vb" />
     <Compile Include="ModifyingCreatedProject\WriteFormulasInExtendedAttributesToMPPFileFormats.vb" />
-    <Compile Include="ManipulatingMPPFile\WriteMPPProjectSummary.vb" />
-    <Compile Include="HandlingBasicProperties\WriteProjectInfo.vb" />
-    <Compile Include="ManipulatingMPPFile\WriteUpdatedExtendedAttributeDefinitions.vb" />
-    <Compile Include="HandlingBasicProperties\WriteWeekdayProperties.vb" />
+    <Compile Include="WorkingWithProjects\WorkingWithProjectProperties\WriteMPPProjectSummary.vb" />
+    <Compile Include="WorkingWithProjects\WorkingWithProjectProperties\WriteProjectInfo.vb" />
+    <Compile Include="WorkingWithProjects\WorkingWithExtendedAttributes\WriteUpdatedExtendedAttributeDefinitions.vb" />
+    <Compile Include="WorkingWithProjects\WorkingWithProjectProperties\WriteWeekdayProperties.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="My Project\Resources.resx">

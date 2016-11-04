@@ -11,7 +11,7 @@ Imports Aspose.Tasks.Visualization
 'please feel free to contact us using http://www.aspose.com/community/forums/default.aspx
 '
 
-Namespace Aspose.Tasks.Examples.VisualBasic.CreatingAndSaving
+Namespace CreatingAndSaving
     Public Class CustomizeTextStyle
         Public Shared Sub Run()
             ' ExStart:CustomizeTextStyle
