@@ -33,7 +33,7 @@ Namespace WorkingWithProjects
                 End Using
                 ' ExEnd:AddImageToPageHeaderFooter
             Catch ex As Exception
-                Console.WriteLine(ex.Message + vbLf & "This example will only work if you apply a valid Aspose License. You can purchase full license or get 30 day temporary license from http:// Www.aspose.com/purchase/default.aspx.")
+                Console.WriteLine(ex.Message + vbLf & "This example will only work if you apply a valid Aspose License. You can purchase full license or get 30 day temporary license from http://www.aspose.com/purchase/default.aspx.")
             End Try
         End Sub
     End Class
