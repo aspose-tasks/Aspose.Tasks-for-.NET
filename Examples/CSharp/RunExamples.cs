@@ -15,6 +15,11 @@ using Aspose.Tasks.Examples.CSharp.WorkingWithProjects.ImportingAndExporting;
 using Aspose.Tasks.Examples.CSharp.WorkingWithProjects.WorkingWithProjectViews;
 using Aspose.Tasks.Examples.CSharp.WorkingWithCalendars.CreatingUpdatingAndRemoving;
 using Aspose.Tasks.Examples.CSharp.WorkingWithCalendarExceptions;
+using Aspose.Tasks.Examples.CSharp.WorkingWithTasks;
+using Aspose.Tasks.Examples.CSharp.WorkingWithTasks.WorkingWithTaskConstraints;
+using Aspose.Tasks.Examples.CSharp.WorkingWithTaskLinks;
+using Aspose.Tasks.Examples.CSharp.WorkingWithTaskBaselines;
+using Aspose.Tasks.Examples.CSharp.WorkingWithResources;
 
 namespace Aspose.Tasks.Examples.CSharp
 {
@@ -73,6 +78,9 @@ namespace Aspose.Tasks.Examples.CSharp
             // =====================================================
 
             //RetrieveCalendarExceptions.Run();
+            //AddRemoveCalendarExceptions.Run();
+            //DefineWeekdayExceptions.Run();
+            //HandleExceptionOccurences.Run();
 
             // =====================================================
             // =====================================================
@@ -102,9 +110,6 @@ namespace Aspose.Tasks.Examples.CSharp
             //AddImageToPageHeaderFooter.Run();
             //GetNumberOfPages.Run();
             //GetNumberOfPagesForViews.Run();
-            //MoveTaskAtTheEnd.Run();
-            //MoveTaskUnderAnotherParent.Run();
-            //MoveTaskUnderSameParent.Run();
             //ReadModuleAttributesInforamtion.Run();
             //ReadModulesInformation.Run();
             //ReadOutlineCodes.Run();
@@ -137,10 +142,11 @@ namespace Aspose.Tasks.Examples.CSharp
             // =====================================================
 
             //CalculateCriticalPath.Run();
-            //EmbeddedObjectsCreatedInsideApplication.Run();
+            //EmbeddedObjectsCreatedInsideApplication.Run();            
             //PrintTaskWritingException.Run();
             //ReadFilterCriteriaData.Run();
             //ReadFilterDefinitionData.Run();
+            //ReadGroupDefinitionData.Run();
             //ReadTableDataFromProjectFile.Run();
 
             // Printing
@@ -190,6 +196,85 @@ namespace Aspose.Tasks.Examples.CSharp
             //ConfigureTheGantChartViewShowSelectedColumnFields.Run();
             //CustomizeTimescaleTierLabels.Run();
             //SetTimeScaleCount.Run();
+
+            // =====================================================
+            // =====================================================
+            // Working With Resources
+            // =====================================================
+            // =====================================================
+            
+            //CreateResources.Run();
+            //GetResourceCalendar.Run();
+            //GetResourceOvertime.Run();
+            //SetGeneralResourceProperties.Run();
+            //SetResourceCalendar.Run();
+
+            // =====================================================
+            // =====================================================
+            // Working With Task Baselines
+            // =====================================================
+            // =====================================================
+            
+            //CreateTaskBaseline.Run();
+            //GetTaskBaselineDuration.Run();
+            //GetTaskBaselineSchedule.Run();
+
+            // =====================================================
+            // =====================================================
+            // Working With Task Links
+            // =====================================================
+            // =====================================================
+
+            //CreateTaskLinks.Run();
+            //GetCrossProjectTaskLinks.Run();
+            //GetPredecessorSuccessorTasks.Run();
+            //GetTaskLinkType.Run();
+            //IdentifyCrossProjectTasks.Run();
+            //SetTaskLinkType.Run();
+
+            // =====================================================
+            // =====================================================
+            // Working With Tasks
+            // =====================================================
+            // =====================================================
+                        
+            //CalculateSplitTaskFinishDate.Run();
+            //CalculateTaskDurations.Run();
+            //CreateSplitTasks.Run();
+            //CreateSubProjectTask.Run();
+            //CreateTasks.Run();
+            //FindCriticalEffortDrivenTasks.Run();
+            //FindEstimatedMilestoneTasks.Run();
+            //MoveTaskAtTheEnd.Run();
+            //MoveTaskUnderAnotherParent.Run();
+            //MoveTaskUnderSameParent.Run();
+            //ReadActualTaskProperties.Run();
+            //ReadBudgetWorkAndCost.Run();
+            //ReadParentChildTasks.Run();
+            //ReadStopResumeDates.Run();
+            //ReadTaskCalendar.Run();
+            //ReadTaskCosts.Run();
+            //ReadTaskExtendedAttributes.Run();
+            //ReadTaskOutlineProperties.Run();
+            //ReadTaskOvertimes.Run();
+            //ReadTaskPercentageCompletion.Run();
+            //ReadTaskPriority.Run();
+            //ReadTaskProperties.Run();
+            //ReadTaskWBS.Run();
+            //ReadWriteTimephasedData.Run();
+            //RenderTaskSheetView.Run();
+            //RenderTaskUsageView.Run();
+            //RenderTaskUsageViewWithDetails.Run();
+            //UpdateTaskData.Run();
+            //ViewSplitTasks.Run();
+            //WriteTaskCalendar.Run();
+            //WriteTaskDuration.Run();
+            //WriteTaskProperties.Run();
+
+            // Working with Task Constraints
+            // =====================================================
+
+            //SetConstraintStartNoEarlierThan.Run();
 
             // =====================================================
             // =====================================================

@@ -38,8 +38,8 @@
     <StartupObject>Aspose.Tasks.Examples.CSharp.RunExamples</StartupObject>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Aspose.Tasks, Version=9.4.1.0, Culture=neutral, PublicKeyToken=716fcc553a201e56, processorArchitecture=MSIL">
-      <HintPath>..\packages\Aspose.Tasks.9.4.1\lib\net4.0\Aspose.Tasks.dll</HintPath>
+    <Reference Include="Aspose.Tasks, Version=9.6.0.0, Culture=neutral, PublicKeyToken=716fcc553a201e56, processorArchitecture=MSIL">
+      <HintPath>..\packages\Aspose.Tasks.9.6.0\lib\Aspose.Tasks.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
@@ -53,6 +53,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CreatingAndSaving\SaveProjectAsSVG.cs" />
+    <Compile Include="WorkingWithCalendarExceptions\AddRemoveCalendarExceptions.cs" />
+    <Compile Include="WorkingWithCalendarExceptions\DefineWeekdayExceptions.cs" />
+    <Compile Include="WorkingWithCalendarExceptions\HandleExceptionOccurences.cs" />
     <Compile Include="WorkingWithCalendarExceptions\RetrieveCalendarExceptions.cs" />
     <Compile Include="WorkingWithCalendars\CalculateWorkHours.cs" />
     <Compile Include="WorkingWithProjects\CreatingReadingAndSaving\CreateEmptyProjectSaveStream.cs" />
@@ -98,9 +101,23 @@
     <Compile Include="WorkingWithProjects\GetNumberOfPagesForViews.cs" />
     <Compile Include="WorkingWithProjects\CreatingReadingAndSaving\IgnoreInvalidCharactersDuringloadingProject.cs" />
     <Compile Include="WorkingWithProjects\ImportingAndExporting\ImportDataFromMPXFileFormats.cs" />
-    <Compile Include="WorkingWithProjects\MoveTaskAtTheEnd.cs" />
-    <Compile Include="WorkingWithProjects\MoveTaskUnderAnotherParent.cs" />
-    <Compile Include="WorkingWithProjects\MoveTaskUnderSameParent.cs" />
+    <Compile Include="WorkingWithResources\CreateResources.cs" />
+    <Compile Include="WorkingWithResources\GetResourceCalendar.cs" />
+    <Compile Include="WorkingWithResources\GetResourceOvertime.cs" />
+    <Compile Include="WorkingWithResources\SetGeneralResourceProperties.cs" />
+    <Compile Include="WorkingWithResources\SetResourceCalendar.cs" />
+    <Compile Include="WorkingWithTaskBaselines\CreateTaskBaseline.cs" />
+    <Compile Include="WorkingWithTaskBaselines\GetTaskBaselineDuration.cs" />
+    <Compile Include="WorkingWithTaskBaselines\GetTaskBaselineSchedule.cs" />
+    <Compile Include="WorkingWithTaskLinks\CreateTaskLinks.cs" />
+    <Compile Include="WorkingWithTaskLinks\GetCrossProjectTaskLinks.cs" />
+    <Compile Include="WorkingWithTaskLinks\GetPredecessorSuccessorTasks.cs" />
+    <Compile Include="WorkingWithTaskLinks\GetTaskLinkType.cs" />
+    <Compile Include="WorkingWithTaskLinks\IdentifyCrossProjectTasks.cs" />
+    <Compile Include="WorkingWithTaskLinks\SetTaskLinkType.cs" />
+    <Compile Include="WorkingWithTasks\MoveTaskAtTheEnd.cs" />
+    <Compile Include="WorkingWithTasks\MoveTaskUnderAnotherParent.cs" />
+    <Compile Include="WorkingWithTasks\MoveTaskUnderSameParent.cs" />
     <Compile Include="ManipulatingMPPFile\MPPFileUpdate.cs" />
     <Compile Include="WorkingWithProjects\ImportingAndExporting\ImportDataFromXMLFileFormats.cs" />
     <Compile Include="WorkingWithProjects\ImportingAndExporting\ExportProjectDataToXMLFormat.cs" />
@@ -159,6 +176,41 @@
     <Compile Include="WorkingWithProjects\WorkingWithProjectProperties\WriteWeekdayProperties.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RunExamples.cs" />
+    <Compile Include="WorkingWithTasks\AddTaskExtendedAttributes.cs" />
+    <Compile Include="WorkingWithTasks\CalculateSplitTaskFinishDate.cs" />
+    <Compile Include="WorkingWithTasks\CalculateTaskDurations.cs" />
+    <Compile Include="WorkingWithTasks\CreateSplitTasks.cs" />
+    <Compile Include="WorkingWithTasks\CreateTasks.cs" />
+    <Compile Include="WorkingWithTasks\FindCriticalEffortDrivenTasks.cs" />
+    <Compile Include="WorkingWithTasks\FindEstimatedMilestoneTasks.cs" />
+    <Compile Include="WorkingWithTasks\ReadActualTaskProperties.cs" />
+    <Compile Include="WorkingWithTasks\ReadBudgetWorkAndCost.cs" />
+    <Compile Include="WorkingWithTasks\ReadParentChildTasks.cs" />
+    <Compile Include="WorkingWithTasks\ReadStopResumeDates.cs" />
+    <Compile Include="WorkingWithTasks\ReadTaskCalendar.cs" />
+    <Compile Include="WorkingWithTasks\ReadTaskCosts.cs" />
+    <Compile Include="WorkingWithTasks\ReadTaskExtendedAttributes.cs" />
+    <Compile Include="WorkingWithTasks\ReadTaskOutlineProperties.cs" />
+    <Compile Include="WorkingWithTasks\ReadTaskOvertimes.cs" />
+    <Compile Include="WorkingWithTasks\ReadTaskPercentageCompletion.cs" />
+    <Compile Include="WorkingWithTasks\ReadTaskPriority.cs" />
+    <Compile Include="WorkingWithTasks\ReadTaskProperties.cs" />
+    <Compile Include="WorkingWithTasks\ReadTaskWBS.cs" />
+    <Compile Include="WorkingWithTasks\ReadWriteTimephasedData.cs" />
+    <Compile Include="WorkingWithTasks\RenderTaskSheetView.cs" />
+    <Compile Include="WorkingWithTasks\RenderTaskUsageView.cs" />
+    <Compile Include="WorkingWithTasks\RenderTaskUsageViewWithDetails.cs" />
+    <Compile Include="WorkingWithTasks\UpdateTaskData.cs" />
+    <Compile Include="WorkingWithTasks\ViewSplitTasks.cs" />
+    <Compile Include="WorkingWithTasks\WorkingWithTaskConstraints\SetConstraintAsLateAsPossible.cs" />
+    <Compile Include="WorkingWithTasks\WorkingWithTaskConstraints\SetConstraintFinishNoEarlierThan.cs" />
+    <Compile Include="WorkingWithTasks\WorkingWithTaskConstraints\SetConstraintMustFinishOn.cs" />
+    <Compile Include="WorkingWithTasks\WorkingWithTaskConstraints\SetConstraintMustStartOn.cs" />
+    <Compile Include="WorkingWithTasks\WorkingWithTaskConstraints\SetConstraintStartNoEarlierThan.cs" />
+    <Compile Include="WorkingWithTasks\CreateSubProjectTask.cs" />
+    <Compile Include="WorkingWithTasks\WriteTaskCalendar.cs" />
+    <Compile Include="WorkingWithTasks\WriteTaskDuration.cs" />
+    <Compile Include="WorkingWithTasks\WriteTaskProperties.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />

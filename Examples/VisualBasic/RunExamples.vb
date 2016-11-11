@@ -14,6 +14,11 @@ Imports Aspose.Tasks.Examples.VisualBasic.WorkingWithProjects.ImportingAndExport
 Imports Aspose.Tasks.Examples.VisualBasic.WorkingWithProjects.WorkingWithProjectViews
 Imports Aspose.Tasks.Examples.VisualBasic.WorkingWithCalendars.CreatingUpdatingAndRemoving
 Imports Aspose.Tasks.Examples.VisualBasic.WorkingWithCalendarExceptions
+Imports Aspose.Tasks.Examples.VisualBasic.WorkingWithTasks
+Imports Aspose.Tasks.Examples.VisualBasic.WorkingWithTasks.WorkingWithTaskConstraints
+Imports Aspose.Tasks.Examples.VisualBasic.WorkingWithTaskLinks
+Imports Aspose.Tasks.Examples.VisualBasic.WorkingWithTaskBaselines
+Imports Aspose.Tasks.Examples.VisualBasic.WorkingWithResources
 
 Class RunExamples
 
@@ -68,6 +73,9 @@ Class RunExamples
         ' =====================================================
 
         'RetrieveCalendarExceptions.Run()
+        'AddRemoveCalendarExceptions.Run()
+        'DefineWeekdayExceptions.Run()
+        'HandleExceptionOccurences.Run()
 
         ' =====================================================
         ' =====================================================
@@ -96,9 +104,6 @@ Class RunExamples
         'AddImageToPageHeaderFooter.Run()
         'GetNumberOfPages.Run()
         'GetNumberOfPagesForViews.Run()
-        'MoveTaskAtTheEnd.Run()
-        'MoveTaskUnderAnotherParent.Run()
-        'MoveTaskUnderSameParent.Run()
         'ReadModuleAttributesInforamtion.Run()
         'ReadModulesInformation.Run()
         'ReadOutlineCodes.Run()
@@ -135,6 +140,7 @@ Class RunExamples
         'PrintTaskWritingException.Run()
         'ReadFilterCriteriaData.Run()
         'ReadFilterDefinitionData.Run()
+        'ReadGroupDefinitionData.Run()
         'ReadTableDataFromProjectFile.Run()
 
 
@@ -186,6 +192,84 @@ Class RunExamples
         'CustomizeTimescaleTierLabels.Run()
         'SetTimeScaleCount.Run()
 
+        ' =====================================================
+        ' =====================================================
+        ' Working With Resources
+        ' =====================================================
+        ' =====================================================
+
+        'CreateResources.Run()
+        'GetResourceCalendar.Run()
+        'GetResourceOvertime.Run()
+        'SetGeneralResourceProperties.Run()
+        'SetResourceCalendar.Run()
+
+        ' =====================================================
+        ' =====================================================
+        ' Working With Task Baselines
+        ' =====================================================
+        ' =====================================================
+
+        'CreateTaskBaseline.Run()
+        'GetTaskBaselineDuration.Run()
+        'GetTaskBaselineSchedule.Run()
+
+        ' =====================================================
+        ' =====================================================
+        ' Working With Task Links
+        ' =====================================================
+        ' =====================================================
+
+        'CreateTaskLinks.Run()
+        'GetCrossProjectTaskLinks.Run()
+        'GetPredecessorSuccessorTasks.Run()
+        'GetTaskLinkType.Run()
+        'IdentifyCrossProjectTasks.Run()
+        'SetTaskLinkType.Run()
+
+        ' =====================================================
+        ' =====================================================
+        ' Working With Tasks
+        ' =====================================================
+        ' =====================================================
+
+        'CalculateSplitTaskFinishDate.Run()
+        'CalculateTaskDurations.Run()
+        'CreateSplitTasks.Run()
+        'CreateSubProjectTask.Run()
+        'CreateTasks.Run()
+        'FindCriticalEffortDrivenTasks.Run()
+        'FindEstimatedMilestoneTasks.Run()
+        'MoveTaskAtTheEnd.Run()
+        'MoveTaskUnderAnotherParent.Run()
+        'MoveTaskUnderSameParent.Run()
+        'ReadActualTaskProperties.Run()
+        'ReadBudgetWorkAndCost.Run()
+        'ReadParentChildTasks.Run()
+        'ReadStopResumeDates.Run()
+        'ReadTaskCalendar.Run()
+        'ReadTaskCosts.Run()
+        'ReadTaskExtendedAttributes.Run()
+        'ReadTaskOutlineProperties.Run()
+        'ReadTaskOvertimes.Run()
+        'ReadTaskPercentageCompletion.Run()
+        'ReadTaskPriority.Run()
+        'ReadTaskProperties.Run()
+        'ReadTaskWBS.Run()
+        'ReadWriteTimephasedData.Run()
+        'RenderTaskSheetView.Run()
+        'RenderTaskUsageView.Run()
+        'RenderTaskUsageViewWithDetails.Run()
+        'UpdateTaskData.Run()
+        'ViewSplitTasks.Run()
+        'WriteTaskCalendar.Run()
+        'WriteTaskDuration.Run()
+        'WriteTaskProperties.Run()
+
+        ' Working with Task Constraints
+        ' =====================================================
+
+        'SetConstraintStartNoEarlierThan.Run()
 
         ' =====================================================
         ' =====================================================

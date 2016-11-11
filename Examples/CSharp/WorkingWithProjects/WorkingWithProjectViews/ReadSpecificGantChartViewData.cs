@@ -22,12 +22,12 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.WorkingWithProjectVie
             
             Project project = new Project(dataDir + "Project1.mpp"); 
 
-            GanttChartView view = project.Views.ToList()[1] as GanttChartView;
+            GanttChartView view = project.Views.ToList()[0] as GanttChartView;
             Console.WriteLine("Is Bar Rounding: " + view.BarRounding);
             Console.WriteLine("Show Bar Splits? : " + view.ShowBarSplits);
             Console.WriteLine("Show Drawings? : " + view.ShowDrawings);
             Console.WriteLine("Roll Up Gantt Bars? " + view.RollUpGanttBars);
-            Console.WriteLine("Hide Rollup Bars When Summary Expanded: " + view.HideRollupBarsWhenSummaryExpanded);
+            Console.WriteLine("Hide Rollup Bars When Summary Expa0nded: " + view.HideRollupBarsWhenSummaryExpanded);
             Console.WriteLine("Bar Size: " + view.BarSize.ToString());
             Console.WriteLine("Bar Style: " + view.BarStyles.Count);
             Console.WriteLine("\n************************ RETREIVING BAR STYLES INFORMATION FROM THE VIEW *********************");

@@ -21,8 +21,8 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.Miscellaneous
             Project project = new Project(dataDir + "Project1.mpp"); 
             
             Console.WriteLine("Task Groups Count: " + project.TaskGroups.Count);
-            Group taskGroup = project.TaskGroups.ToList()[0];
-            Console.WriteLine("Percent Complete:", taskGroup.Name);
+            Group taskGroup = project.TaskGroups.ToList()[1];
+            Console.WriteLine("Group Name:", taskGroup.Name);
             Console.WriteLine("Group Criteria count: " + taskGroup.GroupCriteria.Count);
             Console.WriteLine("\n************* Retrieving Task Group's Criterion information *************");
             GroupCriterion criterion = taskGroup.GroupCriteria.ToList()[0];

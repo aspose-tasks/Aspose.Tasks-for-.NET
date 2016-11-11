@@ -40,7 +40,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.Message + "\nThis example will only work if you apply a valid Aspose License. You can purchase full license or get 30 day temporary license from http:// Www.aspose.com/purchase/default.aspx.");
+                Console.WriteLine(ex.Message + "\nThis example will only work if you apply a valid Aspose License. You can purchase full license or get 30 day temporary license from http://www.aspose.com/purchase/default.aspx.");
             }
         }
     }
