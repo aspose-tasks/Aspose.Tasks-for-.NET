@@ -101,6 +101,14 @@
     <Compile Include="WorkingWithProjects\GetNumberOfPagesForViews.cs" />
     <Compile Include="WorkingWithProjects\CreatingReadingAndSaving\IgnoreInvalidCharactersDuringloadingProject.cs" />
     <Compile Include="WorkingWithProjects\ImportingAndExporting\ImportDataFromMPXFileFormats.cs" />
+    <Compile Include="WorkingWithResources\CreateResources.cs" />
+    <Compile Include="WorkingWithResources\GetResourceCalendar.cs" />
+    <Compile Include="WorkingWithResources\GetResourceOvertime.cs" />
+    <Compile Include="WorkingWithResources\SetGeneralResourceProperties.cs" />
+    <Compile Include="WorkingWithResources\SetResourceCalendar.cs" />
+    <Compile Include="WorkingWithTaskBaselines\CreateTaskBaseline.cs" />
+    <Compile Include="WorkingWithTaskBaselines\GetTaskBaselineDuration.cs" />
+    <Compile Include="WorkingWithTaskBaselines\GetTaskBaselineSchedule.cs" />
     <Compile Include="WorkingWithTaskLinks\CreateTaskLinks.cs" />
     <Compile Include="WorkingWithTaskLinks\GetCrossProjectTaskLinks.cs" />
     <Compile Include="WorkingWithTaskLinks\GetPredecessorSuccessorTasks.cs" />

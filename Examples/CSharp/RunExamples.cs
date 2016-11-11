@@ -18,6 +18,8 @@ using Aspose.Tasks.Examples.CSharp.WorkingWithCalendarExceptions;
 using Aspose.Tasks.Examples.CSharp.WorkingWithTasks;
 using Aspose.Tasks.Examples.CSharp.WorkingWithTasks.WorkingWithTaskConstraints;
 using Aspose.Tasks.Examples.CSharp.WorkingWithTaskLinks;
+using Aspose.Tasks.Examples.CSharp.WorkingWithTaskBaselines;
+using Aspose.Tasks.Examples.CSharp.WorkingWithResources;
 
 namespace Aspose.Tasks.Examples.CSharp
 {
@@ -140,10 +142,11 @@ namespace Aspose.Tasks.Examples.CSharp
             // =====================================================
 
             //CalculateCriticalPath.Run();
-            //EmbeddedObjectsCreatedInsideApplication.Run();
+            //EmbeddedObjectsCreatedInsideApplication.Run();            
             //PrintTaskWritingException.Run();
             //ReadFilterCriteriaData.Run();
             //ReadFilterDefinitionData.Run();
+            //ReadGroupDefinitionData.Run();
             //ReadTableDataFromProjectFile.Run();
 
             // Printing
@@ -196,6 +199,28 @@ namespace Aspose.Tasks.Examples.CSharp
 
             // =====================================================
             // =====================================================
+            // Working With Resources
+            // =====================================================
+            // =====================================================
+            
+            //CreateResources.Run();
+            //GetResourceCalendar.Run();
+            //GetResourceOvertime.Run();
+            //SetGeneralResourceProperties.Run();
+            //SetResourceCalendar.Run();
+
+            // =====================================================
+            // =====================================================
+            // Working With Task Baselines
+            // =====================================================
+            // =====================================================
+            
+            //CreateTaskBaseline.Run();
+            //GetTaskBaselineDuration.Run();
+            //GetTaskBaselineSchedule.Run();
+
+            // =====================================================
+            // =====================================================
             // Working With Task Links
             // =====================================================
             // =====================================================
@@ -239,6 +264,7 @@ namespace Aspose.Tasks.Examples.CSharp
             //ReadWriteTimephasedData.Run();
             //RenderTaskSheetView.Run();
             //RenderTaskUsageView.Run();
+            //RenderTaskUsageViewWithDetails.Run();
             //UpdateTaskData.Run();
             //ViewSplitTasks.Run();
             //WriteTaskCalendar.Run();

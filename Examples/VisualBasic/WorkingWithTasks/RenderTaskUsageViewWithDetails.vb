@@ -25,7 +25,7 @@ Namespace WorkingWithTasks
             view.DisplayDetailsHeaderColumn = False
             view.RepeatDetailsHeaderOnAllRows = False
             view.AlignDetailsData = StringAlignment.Near
-            project1.Save(dataDir & "task usage1.pdf", SaveFileFormat.PDF)
+            project1.Save(dataDir & "task usage1_out.pdf", SaveFileFormat.PDF)
 
             ' Display details header column
             view.DisplayDetailsHeaderColumn = True
@@ -33,7 +33,7 @@ Namespace WorkingWithTasks
             ' Repeat details header on all assignments rows
             view.RepeatDetailsHeaderOnAllRows = True
             view.AlignDetailsData = StringAlignment.Far
-            project1.Save(dataDir & "task usage2.pdf", SaveFileFormat.PDF)
+            project1.Save(dataDir & "task usage2_out.pdf", SaveFileFormat.PDF)
             ' ExEnd:RenderTaskUsageViewWithDetails
         End Sub
     End Class

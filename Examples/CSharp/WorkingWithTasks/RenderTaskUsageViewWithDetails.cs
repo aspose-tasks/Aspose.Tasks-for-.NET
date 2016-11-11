@@ -31,7 +31,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithTasks
             view.DisplayDetailsHeaderColumn = false;
             view.RepeatDetailsHeaderOnAllRows = false;
             view.AlignDetailsData = StringAlignment.Near;
-            project1.Save(dataDir + "task usage1.pdf", SaveFileFormat.PDF);
+            project1.Save(dataDir + "task usage1_out.pdf", SaveFileFormat.PDF);
 
             // Display details header column
             view.DisplayDetailsHeaderColumn = true;
@@ -39,7 +39,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithTasks
             // Repeat details header on all assignments rows
             view.RepeatDetailsHeaderOnAllRows = true;
             view.AlignDetailsData = StringAlignment.Far;
-            project1.Save(dataDir + "task usage2.pdf", SaveFileFormat.PDF);
+            project1.Save(dataDir + "task usage2_out.pdf", SaveFileFormat.PDF);
             // ExEnd:RenderTaskUsageViewWithDetails
         }
     }

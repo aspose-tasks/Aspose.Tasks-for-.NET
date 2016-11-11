@@ -17,6 +17,8 @@ Imports Aspose.Tasks.Examples.VisualBasic.WorkingWithCalendarExceptions
 Imports Aspose.Tasks.Examples.VisualBasic.WorkingWithTasks
 Imports Aspose.Tasks.Examples.VisualBasic.WorkingWithTasks.WorkingWithTaskConstraints
 Imports Aspose.Tasks.Examples.VisualBasic.WorkingWithTaskLinks
+Imports Aspose.Tasks.Examples.VisualBasic.WorkingWithTaskBaselines
+Imports Aspose.Tasks.Examples.VisualBasic.WorkingWithResources
 
 Class RunExamples
 
@@ -138,6 +140,7 @@ Class RunExamples
         'PrintTaskWritingException.Run()
         'ReadFilterCriteriaData.Run()
         'ReadFilterDefinitionData.Run()
+        'ReadGroupDefinitionData.Run()
         'ReadTableDataFromProjectFile.Run()
 
 
@@ -191,6 +194,28 @@ Class RunExamples
 
         ' =====================================================
         ' =====================================================
+        ' Working With Resources
+        ' =====================================================
+        ' =====================================================
+
+        'CreateResources.Run()
+        'GetResourceCalendar.Run()
+        'GetResourceOvertime.Run()
+        'SetGeneralResourceProperties.Run()
+        'SetResourceCalendar.Run()
+
+        ' =====================================================
+        ' =====================================================
+        ' Working With Task Baselines
+        ' =====================================================
+        ' =====================================================
+
+        'CreateTaskBaseline.Run()
+        'GetTaskBaselineDuration.Run()
+        'GetTaskBaselineSchedule.Run()
+
+        ' =====================================================
+        ' =====================================================
         ' Working With Task Links
         ' =====================================================
         ' =====================================================
@@ -234,6 +259,7 @@ Class RunExamples
         'ReadWriteTimephasedData.Run()
         'RenderTaskSheetView.Run()
         'RenderTaskUsageView.Run()
+        'RenderTaskUsageViewWithDetails.Run()
         'UpdateTaskData.Run()
         'ViewSplitTasks.Run()
         'WriteTaskCalendar.Run()

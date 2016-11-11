@@ -65,6 +65,12 @@
     <Import Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="WorkingWithResources\CreateResources.vb" />
+    <Compile Include="WorkingWithResources\GetResourceCalendar.vb" />
+    <Compile Include="WorkingWithResources\GetResourceOvertime.vb" />
+    <Compile Include="WorkingWithResources\SetGeneralResourceProperties.vb" />
+    <Compile Include="WorkingWithResources\SetResourceCalendar.vb" />
+    <Compile Include="WorkingWithTaskBaselines\CreateTaskBaseline.vb" />
     <Compile Include="WorkingWithCalendarExceptions\AddRemoveCalendarExceptions.vb" />
     <Compile Include="WorkingWithCalendarExceptions\DefineWeekdayExceptions.vb" />
     <Compile Include="WorkingWithCalendarExceptions\HandleExceptionOccurences.vb" />
@@ -131,6 +137,8 @@
     <Compile Include="WorkingWithProjects\ImportingAndExporting\ImportDataFromMPXFileFormats.vb" />
     <Compile Include="WorkingWithProjects\ImportingAndExporting\ImportDataFromXMLFileFormats.vb" />
     <Compile Include="WorkingWithProjects\CreatingReadingAndSaving\ImportProjectDataFromDatabase.vb" />
+    <Compile Include="WorkingWithTaskBaselines\GetTaskBaselineDuration.vb" />
+    <Compile Include="WorkingWithTaskBaselines\GetTaskBaselineSchedule.vb" />
     <Compile Include="WorkingWithTaskLinks\CreateTaskLinks.vb" />
     <Compile Include="WorkingWithTaskLinks\GetCrossProjectTaskLinks.vb" />
     <Compile Include="WorkingWithTaskLinks\GetPredecessorSuccessorTasks.vb" />

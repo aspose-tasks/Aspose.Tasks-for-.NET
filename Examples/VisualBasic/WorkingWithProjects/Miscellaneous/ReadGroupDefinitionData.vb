@@ -17,26 +17,26 @@ Namespace WorkingWithProjects.Miscellaneous
 
             Dim project As New Project(dataDir & Convert.ToString("Project1.mpp"))
 
-            Console.WriteLine("Task Groups Count: " + project.TaskGroups.Count)
+            Console.WriteLine("Task Groups Count: " & project.TaskGroups.Count)
             Dim taskGroup As Group = project.TaskGroups.ToList()(1)
-            Console.WriteLine("Percent Complete:", taskGroup.Name)
-            Console.WriteLine("Group Criteria count: " + taskGroup.GroupCriteria.Count)
+            Console.WriteLine("Group Name:", taskGroup.Name)
+            Console.WriteLine("Group Criteria count: " & taskGroup.GroupCriteria.Count)
             Console.WriteLine(vbLf & "************* Retrieving Task Group's Criterion information *************")
             Dim criterion As GroupCriterion = taskGroup.GroupCriteria.ToList()(0)
-            Console.WriteLine("Criterion Field: " + criterion.Field.ToString())
-            Console.WriteLine("Criterion GroupOn: " + criterion.GroupOn.ToString())
-            Console.WriteLine("Criterion Cell Color: " + criterion.CellColor.ToString())
-            Console.WriteLine("Criterion Pattern: " + criterion.Pattern.ToString())
+            Console.WriteLine("Criterion Field: " & criterion.Field.ToString())
+            Console.WriteLine("Criterion GroupOn: " & criterion.GroupOn.ToString())
+            Console.WriteLine("Criterion Cell Color: " & criterion.CellColor.ToString())
+            Console.WriteLine("Criterion Pattern: " & criterion.Pattern.ToString())
 
             If taskGroup.Equals(criterion.ParentGroup) Then
                 Console.WriteLine("Parent Group is equval to task Group.")
             End If
 
             Console.WriteLine(vbLf & "*********** Retreivnig Criterion's Font Information ***********")
-            Console.WriteLine("Font Name: " + criterion.Font.Name)
-            Console.WriteLine("Font Size: " + criterion.Font.Size)
-            Console.WriteLine("Font Style: " + criterion.Font.Style)
-            Console.WriteLine("Ascending/Dscending: " + criterion.Ascending)
+            Console.WriteLine("Font Name: " & criterion.Font.Name)
+            Console.WriteLine("Font Size: " & criterion.Font.Size)
+            Console.WriteLine("Font Style: " & criterion.Font.Style)
+            Console.WriteLine("Ascending/Dscending: " & criterion.Ascending)
             ' ExEnd:ReadGroupDefinitionData
         End Sub
     End Class
