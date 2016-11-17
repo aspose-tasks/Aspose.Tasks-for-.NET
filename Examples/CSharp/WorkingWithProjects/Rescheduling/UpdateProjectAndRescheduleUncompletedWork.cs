@@ -17,7 +17,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.Rescheduling
         {
             // ExStart:UpdateProjectAndRescheduleUncompletedWork
             // The path to the documents directory.
-            string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
+            string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
             
             // Create a new project and set start date
             Project project = new Project();
@@ -64,13 +64,13 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.Rescheduling
             task10.Set(Tsk.IsManual, true);
             
             // Save project before and after updating work as completed 
-            project.Save(dataDir + "not updated_out.xml", SaveFileFormat.XML);
+            project.Save(dataDir + "RescheduleUncompletedWork_not updated_out.xml", SaveFileFormat.XML);
             project.UpdateProjectWorkAsComplete(new DateTime(2014, 1, 28, 17, 0, 0), false);
-            project.Save(dataDir + "updated_out.xml", SaveFileFormat.XML);
+            project.Save(dataDir + "RescheduleUncompletedWork_updated_out.xml", SaveFileFormat.XML);
 
             // Save project after rescheduling uncompleted work
             project.RescheduleUncompletedWorkToStartAfter(new DateTime(2014, 2, 7, 8, 0, 0));
-            project.Save(dataDir + "rescheduled_out.xml", SaveFileFormat.XML);
+            project.Save(dataDir + "RescheduleUncompletedWork_rescheduled_out.xml", SaveFileFormat.XML);
             // ExEnd:UpdateProjectAndRescheduleUncompletedWork
         }
     }

@@ -15,7 +15,7 @@ Namespace WorkingWithProjects.Printing
         Public Shared Sub Run()
             ' ExStart:PrintTheProject
             ' The path to the documents directory
-            Dim dataDir As String = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType)
+            Dim dataDir As String = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName)
 
             ' Read the input Project file
             Dim project As New Project(dataDir & Convert.ToString("Project2.mpp"))

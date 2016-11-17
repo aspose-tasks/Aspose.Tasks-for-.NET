@@ -15,7 +15,7 @@ Namespace WorkingWithTasks
             Try
                 ' ExStart:MoveTaskUnderAnotherParent
                 ' The path to the documents directory.
-                Dim dataDir As String = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType)
+                Dim dataDir As String = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName)
 
                 ' Loading project file
                 Dim project As New Project(dataDir & Convert.ToString("MoveTask.mpp"))

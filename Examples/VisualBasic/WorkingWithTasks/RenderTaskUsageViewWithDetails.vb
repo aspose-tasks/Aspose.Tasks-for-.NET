@@ -15,8 +15,8 @@ Namespace WorkingWithTasks
         Public Shared Sub Run()
             ' ExStart:RenderTaskUsageViewWithDetails
             ' Create project instance
-            Dim dataDir As String = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType)
-            Dim project1 As New Project(dataDir & "project.mpp")
+            Dim dataDir As String = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName)
+            Dim project1 As New Project(dataDir & "TaskUsageViewWithDetails.mpp")
 
             ' Get Default view
             Dim view As UsageView = TryCast(project1.DefaultView, TaskUsageView)

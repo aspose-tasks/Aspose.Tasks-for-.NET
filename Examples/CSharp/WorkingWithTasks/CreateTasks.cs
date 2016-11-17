@@ -21,7 +21,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithTasks
             try
             {
                 // The path to the documents directory.
-                string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
+                string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
                 // ExStart:CreateTasks
                 // Create project instance
@@ -30,7 +30,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithTasks
                 // Add task, sub task and save project
                 Task task = project.RootTask.Children.Add("Summary1");
                 Task subtask = task.Children.Add("Subtask1");
-                project.Save(dataDir + "project_out.MPP", SaveFileFormat.MPP);
+                project.Save(dataDir + "CreateTasks_out.MPP", SaveFileFormat.MPP);
                 // ExEnd:CreateTasks
             }
             catch (Exception ex)

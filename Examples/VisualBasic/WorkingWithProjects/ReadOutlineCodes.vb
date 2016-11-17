@@ -13,8 +13,8 @@ Namespace WorkingWithProjects
         Public Shared Sub Run()
             ' ExStart:ReadOutlineCodes		
             ' The path to the documents directory.
-            Dim dataDir As String = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType)
-            Dim project As New Project(dataDir & Convert.ToString("Project1.mpp"))
+            Dim dataDir As String = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName)
+            Dim project As New Project(dataDir & Convert.ToString("OutlineCodes.mpp"))
 
             For Each ocd As OutlineCodeDefinition In project.OutlineCodes
                 Console.WriteLine("Alias = " + ocd.[Alias])

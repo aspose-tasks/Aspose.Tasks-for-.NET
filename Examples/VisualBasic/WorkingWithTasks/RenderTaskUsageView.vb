@@ -14,8 +14,8 @@ Namespace WorkingWithTasks
         Public Shared Sub Run()
             ' ExStart:RenderTaskUsageView
             ' Create project instance
-            Dim dataDir As String = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType)
-            Dim project1 As New Project(dataDir + "project.mpp")
+            Dim dataDir As String = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName)
+            Dim project1 As New Project(dataDir + "TaskUsageView.mpp")
 
             ' Define the SaveOptions with required TimeScale settings as Days
             Dim options As New PdfSaveOptions()
@@ -25,21 +25,21 @@ Namespace WorkingWithTasks
             options.PresentationFormat = PresentationFormat.TaskUsage
 
             ' Save the Project
-            Dim outputProject As String = "project_result_days_out.pdf"
+            Dim outputProject As String = "project_TaskUsageView_result_days_out.pdf"
             project1.Save(dataDir & outputProject, options)
 
             ' Set the Tiemscale settings to ThirdsOfMonths
             options.Timescale = Timescale.ThirdsOfMonths
 
             ' Save the Project
-            outputProject = "project_result_thirdsOfMonths_out.pdf"
+            outputProject = "project_TaskUsageView_result_thirdsOfMonths_out.pdf"
             project1.Save(dataDir & outputProject, options)
 
             ' Set the Timescale settings to Months
             options.Timescale = Timescale.Months
 
             ' Save the project
-            outputProject = "project_result_months_out.pdf"
+            outputProject = "project_TaskUsageView_result_months_out.pdf"
             project1.Save(dataDir & outputProject, options)
             ' ExEnd:RenderTaskUsageView
         End Sub

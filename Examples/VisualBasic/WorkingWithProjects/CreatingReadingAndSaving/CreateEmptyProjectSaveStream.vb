@@ -13,14 +13,14 @@ Namespace WorkingWithProjects.CreatingReadingAndSaving
     Public Class CreateEmptyProjectSaveStream
         Public Shared Sub Run()
             ' The path to the documents directory.
-            Dim dataDir As String = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType)
+            Dim dataDir As String = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName)
 
             ' ExStart:CreateEmptyProjectSaveStream
             ' Create a project instance
             Dim newProject As Project = New Project()
 
             ' Create a file stream
-            Using projectStream As FileStream = New FileStream(dataDir & "Project1_out.xml", FileMode.Create, FileAccess.Write)
+            Using projectStream As FileStream = New FileStream(dataDir & "EmptyProjectSaveStream_out.xml", FileMode.Create, FileAccess.Write)
                 ' Write the stream into XML format
                 newProject.Save(projectStream, SaveFileFormat.XML)
             End Using

@@ -21,8 +21,8 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithTasks
         {
             // ExStart:FindEstimatedMilestoneTasks
             // Read project from file stream
-            string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
-            FileStream fs = new FileStream(dataDir + "project.mpp", FileMode.Open);
+            string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
+            FileStream fs = new FileStream(dataDir + "EstimatedMilestoneTasks.mpp", FileMode.Open);
             Project prj = new Project(fs);
             fs.Close();
 

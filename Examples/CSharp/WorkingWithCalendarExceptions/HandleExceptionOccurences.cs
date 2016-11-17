@@ -9,13 +9,13 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithCalendarExceptions
     {
         public static void Run()
         {            
-            string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
+            string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
             // Create a project instance
-            Project prj = new Project();
+            Project project1 = new Project();
 
             // Define Calendar
-            Aspose.Tasks.Calendar cal = prj.Calendars.Add("Calendar1");
+            Aspose.Tasks.Calendar cal = project1.Calendars.Add("Calendar1");
 
             // ExStart:HandleExceptionOccurences
             // Define week days exception for a holiday
@@ -27,7 +27,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithCalendarExceptions
 
             // Add exception to calendar and save the Project
             cal.Exceptions.Add(except);
-            prj.Save(dataDir + "Project_out.xml", Aspose.Tasks.Saving.SaveFileFormat.XML);
+            project1.Save(dataDir + "Project_HandleExceptionOccurences_out.xml", Aspose.Tasks.Saving.SaveFileFormat.XML);
         }
     }
 }

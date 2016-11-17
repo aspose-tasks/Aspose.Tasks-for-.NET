@@ -14,15 +14,14 @@ Imports Aspose.Tasks.Saving
 Namespace WorkingWithProjects.WorkingWithProjectProperties
     Public Class SetAttributesForNewTasks
         Public Shared Sub Run()
-
             ' Exstart: SetAttributesForNewTasks
             ' The path to the documents directory.
-            Dim dataDir As String = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType)
+            Dim dataDir As String = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName)
 
             ' Create a project instance Set new task property and Save the project as XML project file
             Dim project As New Project()
             project.[Set](Prj.NewTaskStartDate, TaskStartDateType.CurrentDate)
-            project.Save(dataDir & "project.xml", SaveFileFormat.XML)
+            project.Save(dataDir & "SetAttributesForNewTasks_out.xml", SaveFileFormat.XML)
 
             ' Display Status.
             System.Console.WriteLine("New Task created with start date successfully.")

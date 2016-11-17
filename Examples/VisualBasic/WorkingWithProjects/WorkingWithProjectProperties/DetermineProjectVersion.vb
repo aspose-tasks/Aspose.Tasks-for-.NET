@@ -8,7 +8,7 @@ Namespace WorkingWithProjects.WorkingWithProjectProperties
         Public Shared Sub Run()
             ' ExStart: DetermineProjectVersion
             ' The path to the documents directory.
-            Dim dataDir As String = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType)
+            Dim dataDir As String = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName)
 
             ' Read project from template file
             Dim project As New Project(dataDir & "DetermineProjectVersion.mpp")

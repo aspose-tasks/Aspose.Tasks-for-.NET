@@ -13,9 +13,9 @@ Namespace WorkingWithProjects.Rescheduling
         Public Shared Sub Run()
             ' ExStart:RescheduleProjectFromFinishDate
             ' The path to the documents directory.
-            Dim dataDir As String = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType)
+            Dim dataDir As String = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName)
 
-            Dim project As New Project(dataDir & Convert.ToString("Project1.mpp"))
+            Dim project As New Project(dataDir & Convert.ToString("Project2.mpp"))
             project.[Set](Prj.ScheduleFromStart, False)
             project.[Set](Prj.FinishDate, New DateTime(2020, 1, 1))
 

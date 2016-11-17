@@ -13,10 +13,12 @@ Namespace WorkingWithProjects.Rescheduling
         Public Shared Sub Run()
             ' ExStart:RescheduleProjectStartOrFinishDate
             ' The path to the documents directory.
-            Dim dataDir As String = RunExamples.GetDataDir_CustomizingCreatedProject()
+            Dim dataDir As String = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName)
+
             Dim project As New Project(dataDir & Convert.ToString("Project2.mpp"))
             project.[Set](Prj.ScheduleFromStart, False)
             project.[Set](Prj.FinishDate, New DateTime(2020, 1, 1))
+
             ' Now all tasks dates (Start, Finish, EarlyStart, EarlyFinish, LateStart, LateFinish) are calculated. To get the critical path we need to calculate slacks (can be invoked in separate thread, but only after calculation of all early/late dates)
             project.Recalculate()
             Dim criticalPath As TaskCollection = project.CriticalPath

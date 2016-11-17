@@ -37,8 +37,8 @@ Namespace WorkingWithTasks
             ' ExEnd:WriteTaskDuration
 
             ' Save project as PDF
-            Dim dataDir As String = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType)
-            project.Save(dataDir & "project_out.pdf", SaveFileFormat.PDF)
+            Dim dataDir As String = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName)
+            project.Save(dataDir & "WriteTaskDuration_out.pdf", SaveFileFormat.PDF)
         End Sub
     End Class
 End Namespace

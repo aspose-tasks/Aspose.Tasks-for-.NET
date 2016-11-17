@@ -17,7 +17,7 @@ Namespace WorkingWithProjects.WorkingWithProjectProperties
             Try
                 ' ExStart: WriteFiscalYearProperties
                 ' The path to the documents directory.
-                Dim dataDir As String = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType)
+                Dim dataDir As String = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName)
 
                 ' Create a project instance
                 Dim project As New Project(dataDir & "WriteFiscalYearProperties.mpp")
@@ -25,10 +25,10 @@ Namespace WorkingWithProjects.WorkingWithProjectProperties
                 ' Set fiscal year properties
                 project.[Set](Prj.FyStartDate, Month.July)
                 project.[Set](Prj.FiscalYearStart, True)
-                project.Save(dataDir & "saved_out.mpp", SaveFileFormat.MPP)
+                project.Save(dataDir & "WriteFiscalYearProperties_out.mpp", SaveFileFormat.MPP)
                 'ExEnd: WriteFiscalYearProperties
             Catch ex As Exception
-                Console.WriteLine(ex.Message + "\nThis example will only work if you apply a valid Aspose License. You can purchase full license or get 30 day temporary license from http://www.aspose.com/purchase/default.aspx.")
+                Console.WriteLine(ex.Message + vbLf & "This example will only work if you apply a valid Aspose License. You can purchase full license or get 30 day temporary license from http://www.aspose.com/purchase/default.aspx.")
             End Try
         End Sub
     End Class

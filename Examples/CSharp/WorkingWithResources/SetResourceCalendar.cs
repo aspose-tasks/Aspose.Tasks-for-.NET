@@ -19,7 +19,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithResources
         public static void Run()
         {
             // The path to the documents directory.
-            string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
+            string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
             // ExStart:SetResourceCalendar
             // Create project instance and add resource
@@ -32,7 +32,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithResources
             // ExEnd:SetResourceCalendar
 
             // Save project as XML
-            project.Save(dataDir + "project_out.xml", SaveFileFormat.XML);
+            project.Save(dataDir + "SetResourceCalendar_out.xml", SaveFileFormat.XML);
         }
     }
 }

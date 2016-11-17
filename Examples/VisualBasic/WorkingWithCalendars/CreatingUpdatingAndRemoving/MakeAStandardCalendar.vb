@@ -24,8 +24,8 @@ Namespace WorkingWithCalendars.CreatingUpdatingAndRemoving
             Calendar.MakeStandardCalendar(cal1)
 
             ' Save the Project
-            Dim dataDir As String = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType)
-            project.Save(dataDir & "Project_out.xml", SaveFileFormat.XML)
+            Dim dataDir As String = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName)
+            project.Save(dataDir & "Project_MakeStandardCalendar_out.xml", SaveFileFormat.XML)
             ' ExEnd: MakeAStandardCalendar
         End Sub
     End Class

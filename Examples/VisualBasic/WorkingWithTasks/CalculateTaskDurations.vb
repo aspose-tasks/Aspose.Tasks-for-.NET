@@ -4,8 +4,8 @@ Namespace WorkingWithTasks
         Public Shared Sub Run()
             ' ExStart:CalculateTaskDurations
             ' Create project instance
-            Dim dataDir As String = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType)
-            Dim project1 As New Project(dataDir & "project.mpp")
+            Dim dataDir As String = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName)
+            Dim project1 As New Project(dataDir & "TaskDurations.mpp")
 
             ' Get a task to calculate its duration in different formats
             Dim task As Task = project1.RootTask.Children.GetById(1)

@@ -16,8 +16,8 @@ Namespace WorkingWithProjects
             Try
                 ' ExStart:AddImageToPageHeaderFooter
                 ' The path to the documents directory.
-                Dim dataDir As String = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType)
-                Dim project As New Project(dataDir & Convert.ToString("Project1.mpp"))
+                Dim dataDir As String = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName)
+                Dim project As New Project(dataDir & Convert.ToString("AddImageToPageHeaderFooter.mpp"))
 
                 project.RootTask.Children.Add("Task1")
                 Dim pageInfo As PageInfo = project.DefaultView.PageInfo
@@ -29,7 +29,7 @@ Namespace WorkingWithProjects
 
                     Dim saveOptions As New MPPSaveOptions()
                     saveOptions.WriteViewData = True
-                    project.Save(dataDir & Convert.ToString("ReadHeaderAndFooterInformationFromMPPFile1_out.mpp"), saveOptions)
+                    project.Save(dataDir & Convert.ToString("AddImageToPageHeaderFooter_out.mpp"), saveOptions)
                 End Using
                 ' ExEnd:AddImageToPageHeaderFooter
             Catch ex As Exception

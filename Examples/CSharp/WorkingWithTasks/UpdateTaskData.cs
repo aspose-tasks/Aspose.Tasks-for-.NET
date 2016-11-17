@@ -22,8 +22,8 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithTasks
             {
                 // ExStart:UpdateTaskData
                 // Create project instance
-                string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
-                string newProject = "project.mpp";
+                string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
+                string newProject = "UpdateTaskData.mpp";
                 Project project = new Project(dataDir + newProject);
 
                 // Set project start date
@@ -50,7 +50,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithTasks
                 }
 
                 // Save the Project
-                project.Save(dataDir + "project_updated_out.mpp", SaveFileFormat.MPP);
+                project.Save(dataDir + "project_UpdateTaskData_updated_out.mpp", SaveFileFormat.MPP);
                 // ExEnd:UpdateTaskData
             }
             catch (Exception ex)

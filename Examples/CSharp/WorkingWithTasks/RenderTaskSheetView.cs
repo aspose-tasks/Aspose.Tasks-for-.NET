@@ -21,13 +21,13 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithTasks
         {
             // ExStart:RenderTaskSheetView
             // Create project instance
-            string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
-            Project project1 = new Project(dataDir + "project.mpp");
+            string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
+            Project project1 = new Project(dataDir + "TaskSheetView.mpp");
 
             // Set presentation format Task Sheet and save project as PDF
             SaveOptions options = new PdfSaveOptions();
             options.PresentationFormat = PresentationFormat.TaskSheet;
-            project1.Save(dataDir + "taskSheet_out.pdf", options);
+            project1.Save(dataDir + "TaskSheetView_out.pdf", options);
             // ExEnd:RenderTaskSheetView
         }
 

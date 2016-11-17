@@ -18,9 +18,9 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.WorkingWithProjectVie
         {
             // ExStart:ReadSpecificGantChartViewData
             // The path to the documents directory.
-            string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
+            string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
             
-            Project project = new Project(dataDir + "Project1.mpp"); 
+            Project project = new Project(dataDir + "Project2.mpp"); 
 
             GanttChartView view = project.Views.ToList()[0] as GanttChartView;
             Console.WriteLine("Is Bar Rounding: " + view.BarRounding);

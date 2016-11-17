@@ -21,8 +21,8 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects
             {
                 // ExStart:AddImageToPageHeaderFooter
                 // The path to the documents directory.
-                string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
-                Project project = new Project(dataDir + "Project1.mpp");
+                string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
+                Project project = new Project(dataDir + "AddImageToPageHeaderFooter.mpp");
 
                 project.RootTask.Children.Add("Task1");
                 PageInfo pageInfo = project.DefaultView.PageInfo;
@@ -33,8 +33,8 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects
                     pageInfo.Legend.LeftImage = image;
                     pageInfo.Legend.LeftText = string.Empty;
                     MPPSaveOptions saveOptions = new MPPSaveOptions();
-                    saveOptions.WriteViewData = true;                    
-                    project.Save(dataDir + "ReadHeaderAndFooterInformationFromMPPFile1_out.mpp", saveOptions);
+                    saveOptions.WriteViewData = true;
+                    project.Save(dataDir + "AddImageToPageHeaderFooter_out.mpp", saveOptions);
                 }
                 // ExEnd:AddImageToPageHeaderFooter
             }

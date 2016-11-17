@@ -13,9 +13,9 @@ Namespace WorkingWithProjects.Miscellaneous
         Public Shared Sub Run()
             ' ExStart:ReadGroupDefinitionData
             ' The path to the documents directory.
-            Dim dataDir As String = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType)
+            Dim dataDir As String = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName)
 
-            Dim project As New Project(dataDir & Convert.ToString("Project1.mpp"))
+            Dim project As New Project(dataDir & Convert.ToString("ReadGroupDefinitionData.mpp"))
 
             Console.WriteLine("Task Groups Count: " & project.TaskGroups.Count)
             Dim taskGroup As Group = project.TaskGroups.ToList()(1)

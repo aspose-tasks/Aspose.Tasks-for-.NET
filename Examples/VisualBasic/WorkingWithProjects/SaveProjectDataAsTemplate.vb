@@ -16,7 +16,7 @@ Namespace WorkingWithProjects
         Public Shared Sub Run()
             ' ExStart:SaveProjectDataAsTemplate
             ' The path to the documents directory.
-            Dim dataDir As String = RunExamples.GetDataDir_WorkingWithProjects()
+            Dim dataDir As String = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName)
             Dim project As New Project(dataDir & Convert.ToString("Project2.mpp"))
             Dim [option] As New HtmlSaveOptions()
             project.Save(dataDir & Convert.ToString("SaveProjectDataAsHTML_out.html"), [option])

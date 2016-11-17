@@ -14,7 +14,7 @@ Namespace WorkingWithCalendars
         Public Shared Sub Run()
             ' ExStart: RetrieveCalendarInfo
             ' The path to the documents directory.
-            Dim dataDir As String = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType)
+            Dim dataDir As String = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName)
 
             ' Create a project reader instance
             Dim project As New Project(dataDir & "RetrieveCalendarInfo.mpp")

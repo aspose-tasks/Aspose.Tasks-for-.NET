@@ -5,8 +5,8 @@ Namespace WorkingWithTasks
         Public Shared Sub Run()
             ' ExStart:ReadTaskExtendedAttributes
             ' Create project instance
-            Dim dataDir As String = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType)
-            Dim project1 As New Project(dataDir & "project.mpp")
+            Dim dataDir As String = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName)
+            Dim project1 As New Project(dataDir & "ReadTaskExtendedAttributes.mpp")
 
             ' Read extended attributes for tasks
             For Each tsk As Task In project1.RootTask.Children

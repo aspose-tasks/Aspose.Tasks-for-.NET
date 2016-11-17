@@ -17,7 +17,7 @@ Namespace WorkingWithProjects.ImportingAndExporting
         Public Shared Sub Run()
             ' ExStart:ReadProjectUIDsFromXMLFile
             ' The path to the documents directory.
-            Dim dataDir As String = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType)
+            Dim dataDir As String = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName)
 
             Dim reader As New PrimaveraXmlReader(dataDir & Convert.ToString("Project.xml"))
             Dim listOpProjectUids As List(Of Integer) = reader.GetProjectUids()

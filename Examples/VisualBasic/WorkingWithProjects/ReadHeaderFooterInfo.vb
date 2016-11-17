@@ -13,7 +13,7 @@ Namespace WorkingWithProjects
         ' ExStart:ReadHeaderFooterInfo
         Public Shared Sub Run()
             ' The path to the documents directory.
-            Dim dataDir As String = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType)
+            Dim dataDir As String = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName)
 
             ' Create project and project info instances
             Dim project As New Project(dataDir & "HeaderFooter2007_3.mpp")

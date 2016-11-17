@@ -22,8 +22,8 @@ Namespace WorkingWithTasks
             ' ExEnd:WriteTaskProperties
 
             ' Save project
-            Dim dataDir As String = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType)
-            project.Save(dataDir + "project_out.pdf", SaveFileFormat.PDF)
+            Dim dataDir As String = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName)
+            project.Save(dataDir + "WriteTaskProperties_out.pdf", SaveFileFormat.PDF)
         End Sub
     End Class
 End Namespace

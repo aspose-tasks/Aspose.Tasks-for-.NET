@@ -19,8 +19,8 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.Printing
         {
             // ExStart:PrintProjectPagesToSeparateFiles
             // The path to the documents directory.
-            string dataDir = RunExamples.GetDataDir_PrintingAndExporting();
-            Project project = new Project(dataDir + "Project5.mpp");
+            string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName); 
+            Project project = new Project(dataDir + "PrintProject5.mpp");
             ImageSaveOptions saveOptions = new ImageSaveOptions(SaveFileFormat.PNG);
             saveOptions.StartDate = project.Get(Prj.StartDate).AddDays(-3);
             saveOptions.EndDate = project.Get(Prj.FinishDate);
@@ -32,8 +32,10 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.Printing
             gridline.Color = Color.CornflowerBlue;
             gridline.Pattern = LinePattern.Dashed;
             saveOptions.Gridlines.Add(gridline);
+ 
             // Save the whole project layout to one file
             project.Save(dataDir + "CustomerFeedback1_out.png", saveOptions);
+            
             // Save project layout to separate files
             saveOptions.SaveToSeparateFiles = true;
             project.Save(dataDir + "CustomerFeedback2_out.png", saveOptions);

@@ -46,8 +46,8 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithTasks
             splitResourceAssignment.Set(Asn.WorkContour, WorkContourType.Contoured);
 
             // Save the Project
-            string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
-            splitTaskProject.Save(dataDir + "Project_out.xml", SaveFileFormat.XML);
+            string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
+            splitTaskProject.Save(dataDir + "CreateSplitTasks_out.xml", SaveFileFormat.XML);
             // ExEnd:CreateSplitTasks
         }
     }

@@ -29,11 +29,11 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.CreatingReadingAndSav
         private static string GetModifiedXml()
         {
             // The path to the documents directory.
-            string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType); 
+            string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName); 
             string xml;
 
             // Open valid xml file and modify it
-            using (TextReader reader = new StreamReader(dataDir + "Project.xml"))
+            using (TextReader reader = new StreamReader(dataDir + "IgnoreInvalidCharacters.xml"))
                 xml = reader.ReadToEnd();
 
             Regex regex = new Regex("PT(\\d+)H(\\d+)M(\\d+)S");

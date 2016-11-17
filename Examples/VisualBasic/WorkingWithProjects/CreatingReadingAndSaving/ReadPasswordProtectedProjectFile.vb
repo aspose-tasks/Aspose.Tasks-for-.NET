@@ -14,9 +14,9 @@ Namespace WorkingWithProjects.CreatingReadingAndSaving
 
             ' ExStart:ReadingPasswordProtectedProjectFile
             ' The path to the documents directory.
-            Dim dataDir As String = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType)
+            Dim dataDir As String = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName)
 
-            Dim project As New Project(dataDir & Convert.ToString("Project5.mpp"), "password")
+            Dim project As New Project(dataDir & Convert.ToString("PasswordProtectedProject.mpp"), "password")
             ' ExEnd:ReadingPasswordProtectedProjectFile
         End Sub
     End Class

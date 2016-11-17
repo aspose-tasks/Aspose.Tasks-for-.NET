@@ -5,8 +5,8 @@ Namespace WorkingWithTasks
         Public Shared Sub Run()
             ' ExStart:ReadTaskOvertimes
             ' Read project from file stream
-            Dim dataDir As String = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType)
-            Dim fs As New FileStream(dataDir & "project.mpp", FileMode.Open)
+            Dim dataDir As String = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName)
+            Dim fs As New FileStream(dataDir & "TaskOvertimes.mpp", FileMode.Open)
             Dim project1 As New Project(fs)
             fs.Close()
 

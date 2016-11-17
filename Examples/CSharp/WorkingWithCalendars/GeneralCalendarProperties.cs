@@ -20,8 +20,8 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithCalendars
         {
             // ExStart:ReadCalendarProps            
             // Load an existing project
-            string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
-            Project project = new Project(dataDir + "Project.xml");
+            string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
+            Project project = new Project(dataDir + "Project_GeneralCalendarProperties.xml");
 
             foreach (Aspose.Tasks.Calendar cal in project.Calendars)
             {

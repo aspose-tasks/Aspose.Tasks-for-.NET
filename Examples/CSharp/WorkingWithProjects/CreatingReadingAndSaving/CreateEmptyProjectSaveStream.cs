@@ -11,13 +11,13 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.CreatingReadingAndSav
         public static void Run()
         {
             // The path to the documents directory.
-            string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
+            string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
             // Create a project instance
             Project newProject = new Project();
 
             // Create a file stream
-            using (FileStream projectStream = new FileStream(dataDir + "Project1_out.xml", FileMode.Create, FileAccess.Write))
+            using (FileStream projectStream = new FileStream(dataDir + "EmptyProjectSaveStream_out.xml", FileMode.Create, FileAccess.Write))
             {
                 //Write the stream into XML format
                 newProject.Save(projectStream, Aspose.Tasks.Saving.SaveFileFormat.XML);

@@ -3,14 +3,13 @@ Namespace WorkingWithCalendarExceptions
     Public Class RetrieveCalendarExceptions
         Public Shared Sub Run()
             ' ExStart:RetrieveCalendarExceptions
-            Dim dataDir As String = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType)
+            Dim dataDir As String = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName)
 
             ' Create project instance
-            Dim prj As New Project(dataDir + "project_test.mpp")
+            Dim project1 As New Project(dataDir + "project_RetrieveExceptions_test.mpp")
 
             ' Access calendars
-            For Each cal As Calendar In prj.Calendars
-
+            For Each cal As Calendar In project1.Calendars
                 ' Access calendar exceptions
                 For Each calExc As CalendarException In cal.Exceptions
                     Console.WriteLine("From: " + calExc.FromDate.ToShortDateString())

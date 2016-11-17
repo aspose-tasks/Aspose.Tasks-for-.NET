@@ -10,7 +10,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.WorkingWithProjectVie
         {
             // ExStart:CustomizeTimescaleTierLabels
             // The path to the documents directory.
-            string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
+            string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
             
             Project project = new Project(dataDir + "Project5.mpp");
 
@@ -24,8 +24,8 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.WorkingWithProjectVie
             
             // Customize middle tier dates
             view.MiddleTimescaleTier.DateTimeConverter =
-            date => new[] { "Янв.", "Фев.", "Мар.", "Апр.", "Май", "Июнь", "Июль", "Авг.", "Сен.", "Окт.", "Ноя.", "Дек." }[date.Month - 1];            
-            project.Save(dataDir + "Result_out.pdf", SaveFileFormat.PDF);
+            date => new[] { "Янв.", "Фев.", "Мар.", "Апр.", "Май", "Июнь", "Июль", "Авг.", "Сен.", "Окт.", "Ноя.", "Дек." }[date.Month - 1];
+            project.Save(dataDir + "CustomizeTimescaleTierLabels_out.pdf", SaveFileFormat.PDF);
             // ExEnd:CustomizeTimescaleTierLabels
         }
     }

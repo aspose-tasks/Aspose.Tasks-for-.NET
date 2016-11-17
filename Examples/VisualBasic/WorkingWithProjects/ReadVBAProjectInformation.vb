@@ -11,9 +11,9 @@ Namespace WorkingWithProjects
     Public Class ReadVBAProjectInformation
         Public Shared Sub Run()
             ' The path to the documents directory.
-            Dim dataDir As String = RunExamples.GetDataDir_Projects()
+            Dim dataDir As String = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName)
 
-            ' loading project file
+            ' Loading project file
             Dim project As New Project(dataDir & Convert.ToString("VbaProject1.mpp"))
 
             Dim vbaProject As VbaProject = project.VbaProject

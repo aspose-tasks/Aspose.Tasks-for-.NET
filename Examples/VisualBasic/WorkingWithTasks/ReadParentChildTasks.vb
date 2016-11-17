@@ -13,8 +13,8 @@ Namespace WorkingWithTasks
         Public Shared Sub Run()
             ' ExStart:ReadParentChildTasks
             ' Create project instance
-            Dim dataDir As String = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType)
-            Dim project1 As New Project(dataDir & "project.mpp")
+            Dim dataDir As String = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName)
+            Dim project1 As New Project(dataDir & "ParentChildTasks.mpp")
 
             ' Create a ChildTasksCollector instance
             Dim collector As New ChildTasksCollector()

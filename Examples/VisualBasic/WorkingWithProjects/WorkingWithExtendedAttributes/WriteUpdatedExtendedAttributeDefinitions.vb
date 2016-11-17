@@ -16,9 +16,9 @@ Namespace WorkingWithProjects.WorkingWithExtendedAttributes
             Try
                 ' ExStart:WriteUpdatedExtendedAttributeDefinitions
                 ' The path to the documents directory.
-                Dim dataDir As String = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType)
+                Dim dataDir As String = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName)
 
-                Dim project As New Project(dataDir & Convert.ToString("Project1.mpp"))
+                Dim project As New Project(dataDir & Convert.ToString("WriteUpdatedExtendedAttributeDefinitions.mpp"))
 
                 ' Add new text3 extended attribute and one text value
                 Dim taskTextAttr As New ExtendedAttributeDefinition()
@@ -163,10 +163,10 @@ Namespace WorkingWithProjects.WorkingWithExtendedAttributes
                 mppSaveOptions.WriteViewData = True
 
                 ' Save the project as MPP project file
-                project.Save(dataDir & Convert.ToString("ExtendedAttribute.mpp"), mppSaveOptions)
+                project.Save(dataDir & Convert.ToString("WriteUpdatedExtendedAttributeDefinitions_out.mpp"), mppSaveOptions)
                 ' ExEnd:WriteUpdatedExtendedAttributeDefinitions
             Catch ex As Exception
-                Console.Write(ex.Message & "\nThis example will only work if you apply a valid Aspose License. You can purchase full license or get 30 day temporary license from http://www.aspose.com/purchase/default.aspx.")
+                Console.Write(ex.Message + vbLf & "This example will only work if you apply a valid Aspose License. You can purchase full license or get 30 day temporary license from http://www.aspose.com/purchase/default.aspx.")
             End Try
         End Sub
     End Class

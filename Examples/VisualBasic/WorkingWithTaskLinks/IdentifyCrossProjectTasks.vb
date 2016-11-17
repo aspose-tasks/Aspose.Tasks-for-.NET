@@ -4,7 +4,7 @@ Namespace WorkingWithTaskLinks
         Public Shared Sub Run()
             ' ExStart:IdentifyCrossProjectTasks
             ' Create project instance and access task
-            Dim dataDir As String = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType)
+            Dim dataDir As String = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName)
             Dim project1 As New Project(dataDir + "External.mpp")
             Dim externalTask As Task = project1.RootTask.Children.GetByUid(1)
 

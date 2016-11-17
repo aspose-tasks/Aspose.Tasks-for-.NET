@@ -4,7 +4,7 @@ Namespace WorkingWithCalendarExceptions
     Public Class AddRemoveCalendarExceptions
         Public Shared Sub Run()
             ' ExStart:AddRemoveCalendarExceptions
-            Dim dataDir As String = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType)
+            Dim dataDir As String = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName)
 
             Using fs As New FileStream(dataDir + "project_test.mpp", FileMode.Open)
                 ' Create project instance

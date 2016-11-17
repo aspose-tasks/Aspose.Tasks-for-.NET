@@ -16,8 +16,8 @@ Namespace WorkingWithCalendars
         Public Shared Sub Run()
             ' ExStart: ReadCalendarProps
             ' Load an existing project
-            Dim dataDir As String = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType)
-            Dim project As New Project(dataDir & Convert.ToString("Project.xml"))
+            Dim dataDir As String = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName)
+            Dim project As New Project(dataDir & Convert.ToString("Project_GeneralCalendarProperties.xml"))
 
             For Each cal As Calendar In project.Calendars
                 If cal.Name IsNot Nothing Then

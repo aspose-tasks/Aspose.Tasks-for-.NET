@@ -15,7 +15,7 @@ Namespace WorkingWithProjects.WorkingWithProjectViews
         Public Shared Sub Run()
             ' ExStart:CustomizeTimescaleTierLabels
             ' The path to the documents directory.
-            Dim dataDir As String = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType)
+            Dim dataDir As String = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName)
 
             Dim project As New Project(dataDir & Convert.ToString("Project5.mpp"))
 
@@ -29,7 +29,7 @@ Namespace WorkingWithProjects.WorkingWithProjectViews
 
             ' Customize middle tier dates
             view.MiddleTimescaleTier.DateTimeConverter = Function([date]) {"Янв.", "Фев.", "Мар.", "Апр.", "Май", "Июнь", "Июль", "Авг.", "Сен.", "Окт.", "Ноя.", "Дек."}([date].Month - 1)
-            project.Save(dataDir & Convert.ToString("Result_out.pdf"), SaveFileFormat.PDF)
+            project.Save(dataDir & Convert.ToString("CustomizeTimescaleTierLabels_out.pdf"), SaveFileFormat.PDF)
             ' ExEnd:CustomizeTimescaleTierLabels
         End Sub
     End Class

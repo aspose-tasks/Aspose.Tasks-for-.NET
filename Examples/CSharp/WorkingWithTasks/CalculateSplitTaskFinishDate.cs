@@ -11,8 +11,8 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithTasks
         {
             // ExStart:CalculateSplitTaskFinishDate
             // Read project            
-            string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType); 
-            string projectName = "project.mpp";
+            string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
+            string projectName = "SplitTaskFinishDate.mpp";
             Project project = new Project(dataDir + projectName);
 
             // Find a split task

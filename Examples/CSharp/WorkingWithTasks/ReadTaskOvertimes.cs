@@ -12,8 +12,8 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithTasks
         {
             // ExStart:ReadTaskOvertimes
             // Read project from file stream
-            string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
-            FileStream fs = new FileStream(dataDir + "project.mpp", FileMode.Open);
+            string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
+            FileStream fs = new FileStream(dataDir + "TaskOvertimes.mpp", FileMode.Open);
             Project project1 = new Project(fs);
             fs.Close();
 

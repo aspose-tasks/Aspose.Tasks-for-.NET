@@ -13,8 +13,8 @@ Namespace WorkingWithTasks
         Public Shared Sub Run()
             Try
                 ' ExStart:UpdateTaskData
-                Dim dataDir As String = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType)
-                Dim newProject As String = "project.mpp"
+                Dim dataDir As String = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName)
+                Dim newProject As String = "UpdateTaskData.mpp"
                 Dim project As New Project(dataDir + newProject)
 
                 ' Set project start date
@@ -39,7 +39,7 @@ Namespace WorkingWithTasks
                 Next
 
                 ' Save the Project
-                project.Save(dataDir + "project_updated_out.mpp", SaveFileFormat.MPP)
+                project.Save(dataDir + "project_UpdateTaskData_updated_out.mpp", SaveFileFormat.MPP)
                 ' ExEnd:UpdateTaskData
             Catch ex As Exception
                 Console.WriteLine(ex.Message + vbLf & "This example will only work if you apply a valid Aspose License. You can purchase full license or get 30 day temporary license from http://www.aspose.com/purchase/default.aspx.")

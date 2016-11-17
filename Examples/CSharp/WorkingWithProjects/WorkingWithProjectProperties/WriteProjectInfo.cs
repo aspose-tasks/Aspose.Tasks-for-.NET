@@ -19,7 +19,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.WorkingWithProjectPro
             try
             {
                 // The path to the documents directory.
-                string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType); 
+                string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName); 
             
                 // Create project from template file
                 Project project = new Project(dataDir + "WriteProjectInfo.mpp");
@@ -30,7 +30,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.WorkingWithProjectPro
                 project.Set(Prj.Revision, 15);
                 project.Set(Prj.Keywords, "MSP Aspose");
                 project.Set(Prj.Comments, "Comments");
-                project.Save(dataDir + "saved_out.mpp", SaveFileFormat.MPP);
+                project.Save(dataDir + "WriteProjectInfo_out.mpp", SaveFileFormat.MPP);
             }
             catch (Exception ex)
             {

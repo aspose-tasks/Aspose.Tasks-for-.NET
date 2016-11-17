@@ -27,7 +27,7 @@ Namespace WorkingWithCalendars.CreatingUpdatingAndRemoving
             Dim cal3 As Calendar = project.Calendars.Add("cal3")
 
             ' Save the Project
-            Dim dataDir As String = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType)
+            Dim dataDir As String = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName)
             project.Save(dataDir & Convert.ToString("CreatingCalendar_out.Xml"), SaveFileFormat.XML)
             ' ExEnd: CreatingCalendar
         End Sub

@@ -14,8 +14,8 @@ Namespace WorkingWithTasks
         Public Shared Sub Run()
             ' ExStart:FindEstimatedMilestoneTasks
             ' Read project from file stream
-            Dim dataDir As String = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType)
-            Dim fs As New FileStream(dataDir & "project.mpp", FileMode.Open)
+            Dim dataDir As String = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName)
+            Dim fs As New FileStream(dataDir & "EstimatedMilestoneTasks.mpp", FileMode.Open)
             Dim prj As New Project(fs)
             fs.Close()
 

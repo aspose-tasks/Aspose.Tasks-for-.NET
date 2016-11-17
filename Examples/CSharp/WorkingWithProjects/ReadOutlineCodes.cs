@@ -16,9 +16,9 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects
         {
             // ExStart:ReadOutlineCodes
             // The path to the documents directory.
-            string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
+            string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
-            Project project = new Project(dataDir + "project1.mpp");
+            Project project = new Project(dataDir + "OutlineCodes.mpp");
 
             foreach (OutlineCodeDefinition ocd in project.OutlineCodes)
             {

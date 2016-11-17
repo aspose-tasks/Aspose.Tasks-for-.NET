@@ -14,10 +14,10 @@ Namespace WorkingWithTasks.WorkingWithTaskConstraints
         Public Shared Sub Run()
             ' ExStart:SetConstraintMustStartOn
             ' The path to the documents directory.
-            Dim dataDir As String = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType)
+            Dim dataDir As String = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName)
 
             ' Create project instance
-            Dim project As New Project(dataDir & "TestProject.mpp")
+            Dim project As New Project(dataDir & "ConstraintStartNoEarlierThan.mpp")
 
             ' Set constraint Start No Earlier Than on task with Id 1
             Dim summary As Task = project.RootTask.Children.GetById(1)

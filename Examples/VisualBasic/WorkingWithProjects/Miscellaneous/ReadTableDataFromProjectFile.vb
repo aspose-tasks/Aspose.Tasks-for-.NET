@@ -13,10 +13,10 @@ Namespace WorkingWithProjects.Miscellaneous
         Public Shared Sub Run()
             ' ExStart:ReadTableDataFromProjectFile
             ' The path to the documents directory.
-            Dim dataDir As String = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType)
+            Dim dataDir As String = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName)
 
             ' Create project instance
-            Dim project As New Project(dataDir & Convert.ToString("Project1.mpp"))
+            Dim project As New Project(dataDir & Convert.ToString("ReadTableData.mpp"))
 
             ' Access table
             Dim task1 As Table = project.Tables.ToList()(0)

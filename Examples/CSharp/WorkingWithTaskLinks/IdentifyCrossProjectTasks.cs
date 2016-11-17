@@ -11,7 +11,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithTaskLinks
         {
             // ExStart:IdentifyCrossProjectTasks
             // Create project instance and access task
-            string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
+            string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
             Project project1 = new Project(dataDir + "External.mpp");
             Task externalTask = project1.RootTask.Children.GetByUid(1);
 

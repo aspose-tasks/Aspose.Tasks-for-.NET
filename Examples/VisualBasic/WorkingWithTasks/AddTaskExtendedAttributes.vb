@@ -58,8 +58,8 @@ Namespace WorkingWithTasks
                 task.ExtendedAttributes.Add(taskExtendedAttributeFlag1)
 
                 ' Save the Project
-                Dim dataDir As String = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType)
-                project1.Save(dataDir & "project_out.mpp", SaveFileFormat.MPP)
+                Dim dataDir As String = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName)
+                project1.Save(dataDir & "AddTaskExtendedAttributes_out.mpp", SaveFileFormat.MPP)
                 ' ExEnd:AddTaskExtendedAttributes
             Catch ex As Exception
                 Console.WriteLine(ex.Message + vbLf & "This example will only work if you apply a valid Aspose License. You can purchase full license or get 30 day temporary license from http://www.aspose.com/purchase/default.aspx.")

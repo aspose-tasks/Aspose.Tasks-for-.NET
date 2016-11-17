@@ -11,8 +11,8 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithCalendars
         {
             // ExStart:CalculateWorkHours
             // Load an existing project
-            string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
-            Project project = new Project(dataDir + "project_test.mpp");
+            string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
+            Project project = new Project(dataDir + "CalculateWorkHours.mpp");
 
             // Access Task By Id
             Task task = project.RootTask.Children.GetById(4);

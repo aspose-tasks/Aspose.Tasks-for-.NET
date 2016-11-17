@@ -10,13 +10,13 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithCalendarExceptions
         public static void Run()
         {
             // ExStart:RetrieveCalendarExceptions
-            string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
+            string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
             // Create project instance
-            Project prj = new Project(dataDir + "project_test.mpp");
+            Project project1 = new Project(dataDir + "project_RetrieveExceptions_test.mpp");
 
             // Access calendars
-            foreach (Aspose.Tasks.Calendar cal in prj.Calendars)
+            foreach (Aspose.Tasks.Calendar cal in project1.Calendars)
             {
                 // Access calendar exceptions
                 foreach (CalendarException calExc in cal.Exceptions)

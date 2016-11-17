@@ -13,7 +13,7 @@ Namespace WorkingWithProjects.Miscellaneous
         Public Shared Sub Run()
             ' ExStart:ReadFilterCriteriaData
             ' The path to the documents directory.
-            Dim dataDir As String = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType)
+            Dim dataDir As String = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName)
 
             Dim project As New Project(dataDir & Convert.ToString("Project2003.mpp"))
 

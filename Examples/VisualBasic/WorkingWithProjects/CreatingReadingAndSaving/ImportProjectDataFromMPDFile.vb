@@ -13,7 +13,7 @@ Namespace WorkingWithProjects.CreatingReadingAndSaving
         Public Shared Sub Run()
             ' ExStart:ImportProjectDataFromMPDFile 
             ' The path to the documents directory.
-            Dim dataDir As String = RunExamples.GetDataDir_Projects()
+            Dim dataDir As String = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName)
             Dim settings As DbSettings = New MpdSettings((Convert.ToString("Provider=Microsoft.Jet.OLEDB.4.0 Data Source=") & dataDir) + "MpdFileToRead.mpd", 1)
             Dim project As New Project(settings)
             ' ExEnd:ImportProjectDataFromMPDFile

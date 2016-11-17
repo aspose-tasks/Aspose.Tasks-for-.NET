@@ -2,13 +2,13 @@
 Namespace WorkingWithCalendarExceptions
     Public Class HandleExceptionOccurences
         Public Shared Sub Run()
-            Dim dataDir As String = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType)
+            Dim dataDir As String = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName)
 
             ' Create a project instance
-            Dim prj As New Project()
+            Dim project1 As New Project()
 
             ' Define Calendar
-            Dim cal As Aspose.Tasks.Calendar = prj.Calendars.Add("Calendar1")
+            Dim cal As Aspose.Tasks.Calendar = project1.Calendars.Add("Calendar1")
 
             ' ExStart:HandleExceptionOccurences
             ' Define exception and specify occurences
@@ -20,7 +20,7 @@ Namespace WorkingWithCalendarExceptions
 
             ' Add exception to calendar and save the Project
             cal.Exceptions.Add(except)
-            prj.Save(dataDir & "Project_out.xml", Aspose.Tasks.Saving.SaveFileFormat.XML)
+            project1.Save(dataDir & "Project_HandleExceptionOccurences_out.xml", Aspose.Tasks.Saving.SaveFileFormat.XML)
         End Sub
     End Class
 End Namespace

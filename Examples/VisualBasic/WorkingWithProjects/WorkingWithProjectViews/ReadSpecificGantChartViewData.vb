@@ -14,9 +14,9 @@ Namespace WorkingWithProjects.WorkingWithProjectViews
         Public Shared Sub Run()
             ' ExStart:ReadSpecificGantChartViewData
             ' The path to the documents directory.
-            Dim dataDir As String = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType)
+            Dim dataDir As String = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName)
 
-            Dim project As New Project(dataDir & Convert.ToString("Project1.mpp"))
+            Dim project As New Project(dataDir & Convert.ToString("Project2.mpp"))
 
             Dim view As GanttChartView = TryCast(project.Views.ToList()(1), GanttChartView)
             Console.WriteLine("Is Bar Rounding: " + view.BarRounding)

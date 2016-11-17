@@ -4,8 +4,8 @@ Namespace WorkingWithTasks
         Public Shared Sub Run()
             ' ExStart:CalculateSplitTaskFinishDate
             ' Read project
-            Dim dataDir As String = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType)
-            Dim projectName As String = "project.mpp"
+            Dim dataDir As String = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName)
+            Dim projectName As String = "SplitTaskFinishDate.mpp"
             Dim project As New Project(dataDir & projectName)
 
             ' Find a split task

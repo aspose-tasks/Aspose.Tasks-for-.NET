@@ -8,7 +8,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.WorkingWithProjectPro
         {
             // ExStart:WriteCurrencyProperties
             // The path to the documents directory.
-            string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
+            string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
             // Create a project instance
             Project project = new Project(dataDir + "WriteCurrencyProperties.mpp");
@@ -20,7 +20,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.WorkingWithProjectPro
             project.Set(Prj.CurrencySymbolPosition, CurrencySymbolPositionType.After);
 
             // Save the project as XML project file
-            project.Save(dataDir+ "project_out.xml", SaveFileFormat.XML);
+            project.Save(dataDir + "WriteCurrencyProperties_out.xml", SaveFileFormat.XML);
             // ExEnd:WriteCurrencyProperties
         }
     }

@@ -29,8 +29,8 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithTasks
             // ExEnd:WriteTaskProperties
 
             // Save project
-            string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
-            project.Save(dataDir + "project_out.pdf", SaveFileFormat.PDF); 
+            string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
+            project.Save(dataDir + "WriteTaskProperties_out.pdf", SaveFileFormat.PDF); 
         }
     }
 }

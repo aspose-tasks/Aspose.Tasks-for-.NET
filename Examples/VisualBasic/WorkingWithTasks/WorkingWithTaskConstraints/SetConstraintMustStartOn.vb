@@ -14,10 +14,10 @@ Namespace WorkingWithTasks.WorkingWithTaskConstraints
         Public Shared Sub Run()
             ' ExStart:SetConstraintMustStartOn
             ' The path to the documents directory.
-            Dim dataDir As String = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType)
+            Dim dataDir As String = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName)
 
             ' Create project instance
-            Dim project1 As Project = New Project(dataDir + "TestProject.mpp")
+            Dim project1 As Project = New Project(dataDir + "ConstraintMustStartOn.mpp")
 
             ' Set constraint Must Start On for task with Id 5
             Dim roof As Task = project1.RootTask.Children.GetById(5)

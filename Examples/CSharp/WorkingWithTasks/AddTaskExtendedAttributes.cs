@@ -66,8 +66,8 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithTasks
                 task.ExtendedAttributes.Add(taskExtendedAttributeFlag1);
 
                 // Save the Project
-                string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
-                project1.Save(dataDir + "project_out.mpp", SaveFileFormat.MPP);
+                string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
+                project1.Save(dataDir + "AddTaskExtendedAttributes_out.mpp", SaveFileFormat.MPP);
                 // ExEnd:AddTaskExtendedAttributes
             }
             catch (Exception ex)

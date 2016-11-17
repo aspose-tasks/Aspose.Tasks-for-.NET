@@ -20,9 +20,9 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.WorkingWithExtendedAt
             {
                 // ExStart:WriteUpdatedExtendedAttributeDefinitions
                 // The path to the documents directory.
-                string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
+                string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
-                Project project = new Project(dataDir + "Project1.mpp");
+                Project project = new Project(dataDir + "WriteUpdatedExtendedAttributeDefinitions.mpp");
 
                 #region task attributes
                 // Add new text3 extended attribute and one text value
@@ -169,7 +169,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.WorkingWithExtendedAt
                 mppSaveOptions.WriteViewData = true;
 
                 // Save the project as MPP project file
-                project.Save(dataDir + "ExtendedAttribute_out.mpp", mppSaveOptions);
+                project.Save(dataDir + "WriteUpdatedExtendedAttributeDefinitions_out.mpp", mppSaveOptions);
                 // ExEnd:WriteUpdatedExtendedAttributeDefinitions
             }
             catch (Exception ex)

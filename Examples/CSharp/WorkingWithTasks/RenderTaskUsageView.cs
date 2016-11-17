@@ -21,8 +21,8 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithTasks
         {
             // ExStart:RenderTaskUsageView
             // Create project instance
-            string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
-            Project project1 = new Project(dataDir + "project.mpp");
+            string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
+            Project project1 = new Project(dataDir + "TaskUsageView.mpp");
 
             // Define the SaveOptions with required TimeScale settings as Days
             SaveOptions options = new PdfSaveOptions();
@@ -32,21 +32,21 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithTasks
             options.PresentationFormat = PresentationFormat.TaskUsage;
                         
             // Save the Project
-            string outputProject = "project_result_days_out.pdf";
+            string outputProject = "project_TaskUsageView_result_days_out.pdf";
             project1.Save(dataDir + outputProject, options);
 
             // Set the Tiemscale settings to ThirdsOfMonths
             options.Timescale = Timescale.ThirdsOfMonths;            
             
             // Save the Project
-            outputProject = "project_result_thirdsOfMonths_out.pdf";
+            outputProject = "project_TaskUsageView_result_thirdsOfMonths_out.pdf";
             project1.Save(dataDir + outputProject, options);
 
             // Set the Timescale settings to Months
             options.Timescale = Timescale.Months;
             
             // Save the project
-            outputProject = "project_result_months_out.pdf";
+            outputProject = "project_TaskUsageView_result_months_out.pdf";
             project1.Save(dataDir + outputProject, options);
             // ExEnd:RenderTaskUsageView
         }
