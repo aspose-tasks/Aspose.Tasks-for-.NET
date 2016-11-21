@@ -11,8 +11,8 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithTasks
         {
             // ExStart:ReadWriteTimephasedData
             // Create project instance
-            string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
-            Project project1 = new Project(dataDir + "project.mpp");
+            string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
+            Project project1 = new Project(dataDir + "ReadWriteTimephasedData.mpp");
 
             // Set project properties
             project1.Set(Prj.StartDate, new DateTime(2013, 10, 30, 9, 0, 0));

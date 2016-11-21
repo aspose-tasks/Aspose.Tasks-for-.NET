@@ -11,8 +11,8 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithTasks
         {
             // ExStart:ViewSplitTasks
             // Create project instance
-            string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
-            Project project1 = new Project(dataDir + "project.mpp");
+            string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
+            Project project1 = new Project(dataDir + "ViewSplitTasks.mpp");
             
             // Access task 
             Task splitTask = project1.RootTask.Children.GetById(4);

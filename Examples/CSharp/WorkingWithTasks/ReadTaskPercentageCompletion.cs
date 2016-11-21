@@ -11,8 +11,8 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithTasks
         {
             // ExStart:ReadTaskPercentageCompletion
             // Create project instance
-            string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
-            Project project1 = new Project(dataDir + "project.mpp");
+            string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
+            Project project1 = new Project(dataDir + "TaskPercentageCompletion.mpp");
 
             // Access tasks and display percentage completion
             var tasks = project1.RootTask.Children;

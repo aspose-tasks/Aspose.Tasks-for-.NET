@@ -8,7 +8,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.WorkingWithProjectPro
         {
             // ExStart:WriteWeekdayProperties
             // The path to the documents directory.
-            string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
+            string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
             // Create a project instance
             Project project = new Project(dataDir+ "WriteWeekdayProperties.mpp");
@@ -18,7 +18,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.WorkingWithProjectPro
             project.Set(Prj.DaysPerMonth, 24);
             project.Set(Prj.MinutesPerDay, 540);
             project.Set(Prj.MinutesPerWeek, 3240);
-            project.Save(dataDir+ "saved_out.xml", SaveFileFormat.XML);
+            project.Save(dataDir + "WriteWeekdayProperties_out.xml", SaveFileFormat.XML);
             // ExEnd:WriteWeekdayProperties            
         }
     }

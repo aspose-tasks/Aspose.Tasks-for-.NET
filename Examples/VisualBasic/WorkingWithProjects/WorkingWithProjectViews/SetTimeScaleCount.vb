@@ -14,7 +14,7 @@ Namespace WorkingWithProjects.WorkingWithProjectViews
         Public Shared Sub Run()
             ' ExStart:SetTimeScaleCount
             ' The path to the documents directory.
-            Dim dataDir As String = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType)
+            Dim dataDir As String = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName)
 
             ' Create empty project
             Dim project As New Project()

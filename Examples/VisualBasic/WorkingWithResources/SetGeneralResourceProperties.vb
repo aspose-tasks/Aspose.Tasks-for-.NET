@@ -12,7 +12,7 @@ Namespace WorkingWithResources
     Public Class SetGeneralResourceProperties
         Public Shared Sub Run()
             ' The path to the documents directory.
-            Dim dataDir As String = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType)
+            Dim dataDir As String = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName)
 
             ' Create project instance
             Dim project As New Project()
@@ -27,7 +27,7 @@ Namespace WorkingWithResources
             ' ExEnd:SetGeneralResourceProperties
 
             ' Save project
-            project.Save(dataDir & "project_out.xml", SaveFileFormat.XML)
+            project.Save(dataDir & "SetGeneralResourceProperties_out.xml", SaveFileFormat.XML)
         End Sub
     End Class
 End Namespace

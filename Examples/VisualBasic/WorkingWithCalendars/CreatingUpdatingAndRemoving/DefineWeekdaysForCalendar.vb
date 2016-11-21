@@ -15,15 +15,15 @@ Imports System.Text
 Namespace WorkingWithCalendars.CreatingUpdatingAndRemoving
     Class DefineWeekdaysForCalendar
         Public Shared Sub Run()
-            'ExStart: DefineWeekdaysForCalendar
-            'This example shows how Aspose.Tasks API can be used to define a new Calendar, add week days to it and define working times for days
-            'Create a project instance
+            ' ExStart: DefineWeekdaysForCalendar
+            ' This example shows how Aspose.Tasks API can be used to define a new Calendar, add week days to it and define working times for days
+            ' Create a project instance
             Dim project As New Project()
 
-            'Define Calendar
+            ' Define Calendar
             Dim cal As Calendar = project.Calendars.Add("Calendar1")
 
-            'Add working days monday through thursday with default timings
+            ' Add working days monday through thursday with default timings
             cal.WeekDays.Add(WeekDay.CreateDefaultWorkingDay(DayType.Monday))
             cal.WeekDays.Add(WeekDay.CreateDefaultWorkingDay(DayType.Tuesday))
             cal.WeekDays.Add(WeekDay.CreateDefaultWorkingDay(DayType.Wednesday))
@@ -31,10 +31,10 @@ Namespace WorkingWithCalendars.CreatingUpdatingAndRemoving
             cal.WeekDays.Add(New WeekDay(DayType.Saturday))
             cal.WeekDays.Add(New WeekDay(DayType.Sunday))
 
-            'Set friday as short working day
+            ' Set friday as short working day
             Dim myWeekDay As New WeekDay(DayType.Friday)
 
-            'Sets working time. Only time part of DateTime is important
+            ' Sets working time. Only time part of DateTime is important
             Dim wt1 As New WorkingTime()
             wt1.FromTime = New Date(1, 1, 1, 9, 0, 0, _
                 0)
@@ -50,11 +50,10 @@ Namespace WorkingWithCalendars.CreatingUpdatingAndRemoving
             myWeekDay.DayWorking = True
             cal.WeekDays.Add(myWeekDay)
 
-
-            'Save the Project
-            Dim dataDir As String = RunExamples.GetDataDir_Projects()
-            project.Save("Project.Xml", SaveFileFormat.XML)
-            'ExEnd: DefineWeekdaysForCalendar
+            ' Save the Project
+            Dim dataDir As String = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName)
+            project.Save("Project_DefineCalendarWeekdays_out.xml", SaveFileFormat.XML)
+            ' ExEnd: DefineWeekdaysForCalendar
         End Sub
     End Class
 End Namespace

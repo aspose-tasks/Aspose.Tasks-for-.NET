@@ -10,7 +10,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithCalendarExceptions
         public static void Run()
         {
             // ExStart:DefineWeekdayExceptions
-            string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
+            string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
             // Create a project instance
             Project prj = new Project();
@@ -28,7 +28,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithCalendarExceptions
             cal.Exceptions.Add(except);
 
             // Save the Project
-            prj.Save(dataDir + "Project_out.xml", Aspose.Tasks.Saving.SaveFileFormat.XML);
+            prj.Save(dataDir + "Project_DefineWeekDayException_out.xml", Aspose.Tasks.Saving.SaveFileFormat.XML);
             // ExEnd:DefineWeekdayExceptions
 
         }

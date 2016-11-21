@@ -17,12 +17,12 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.WorkingWithProjectPro
         {
             // ExStart:SetAttributesForNewTasks
             // The path to the documents directory.
-            string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType); 
+            string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName); 
 
             // Create a project instance Set new task property and Save the project as XML project file
             Project project = new Project();
             project.Set(Prj.NewTaskStartDate, TaskStartDateType.CurrentDate);
-            project.Save(dataDir + "Project_out.xml", SaveFileFormat.XML);
+            project.Save(dataDir + "SetAttributesForNewTasks_out.xml", SaveFileFormat.XML);
  
             // Display Status.
             Console.WriteLine("New Task created with start date successfully.");

@@ -4,8 +4,8 @@ Namespace WorkingWithTaskLinks
         Public Shared Sub Run()
             ' ExStart:GetPredecessorSuccessorTasks
             ' Create project instance
-            Dim dataDir As String = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType)
-            Dim project1 As New Project(dataDir + "project.mpp")
+            Dim dataDir As String = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName)
+            Dim project1 As New Project(dataDir + "GetPredecessorSuccessorTasks.mpp")
 
             ' Display names of predecessor and successor tasks
             For Each tsklnk As TaskLink In project1.TaskLinks

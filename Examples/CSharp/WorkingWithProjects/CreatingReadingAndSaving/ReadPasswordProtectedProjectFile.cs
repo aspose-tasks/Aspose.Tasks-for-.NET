@@ -17,9 +17,9 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.CreatingReadingAndSav
         {
             // ExStart:ReadingPasswordProtectedProjectFile
             // The path to the documents directory.
-            string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
+            string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
-            Project project = new Project(dataDir + "Project5.mpp", "password");           
+            Project project = new Project(dataDir + "PasswordProtectedProject.mpp", "password");           
             // ExEnd:ReadingPasswordProtectedProjectFile
         }
     }

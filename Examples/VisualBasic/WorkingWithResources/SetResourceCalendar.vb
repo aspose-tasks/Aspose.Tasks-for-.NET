@@ -12,7 +12,7 @@ Namespace WorkingWithResources
     Public Class SetResourceCalendar
         Public Shared Sub Run()
             ' The path to the documents directory.
-            Dim dataDir As String = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType)
+            Dim dataDir As String = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName)
 
             ' ExStart:SetResourceCalendar
             ' Create project instance and add resource
@@ -25,7 +25,7 @@ Namespace WorkingWithResources
             ' ExEnd:SetResourceCalendar
 
             ' Save project as XML
-            project.Save(dataDir + "project_out.xml", SaveFileFormat.XML)
+            project.Save(dataDir + "SetResourceCalendar_out.xml", SaveFileFormat.XML)
         End Sub
     End Class
 End Namespace

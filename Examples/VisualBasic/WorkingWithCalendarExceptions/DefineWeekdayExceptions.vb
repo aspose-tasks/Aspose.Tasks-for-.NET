@@ -3,7 +3,7 @@ Namespace WorkingWithCalendarExceptions
     Public Class DefineWeekdayExceptions
         Public Shared Sub Run()
             ' ExStart:DefineWeekdayExceptions
-            Dim dataDir As String = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType)
+            Dim dataDir As String = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName)
 
             ' Create a project instance
             Dim prj As New Project()
@@ -21,7 +21,7 @@ Namespace WorkingWithCalendarExceptions
             cal.Exceptions.Add(except)
 
             ' Save the Project
-            prj.Save(dataDir & "Project_out.xml", Aspose.Tasks.Saving.SaveFileFormat.XML)
+            prj.Save(dataDir & "Project_DefineWeekDayException_out.xml", Aspose.Tasks.Saving.SaveFileFormat.XML)
             ' ExEnd:DefineWeekdayExceptions
         End Sub
     End Class

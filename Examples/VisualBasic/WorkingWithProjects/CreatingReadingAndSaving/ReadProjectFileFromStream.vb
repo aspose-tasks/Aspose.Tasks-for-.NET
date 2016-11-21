@@ -15,10 +15,10 @@ Namespace WorkingWithProjects.CreatingReadingAndSaving
         Public Shared Sub Run()
             ' ExStart:ReadProjectFileFromStream
             ' The path to the documents directory.
-            Dim dataDir As String = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType)
+            Dim dataDir As String = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName)
 
             ' Read project xml into file stream
-            Using filesStream As Stream = New FileStream(dataDir & Convert.ToString("Project.xml"), FileMode.Open)
+            Using filesStream As Stream = New FileStream(dataDir & Convert.ToString("ReadProjectFileFromStream.xml"), FileMode.Open)
                 ' Create project using file stream
                 Dim project As New Project(filesStream)
             End Using

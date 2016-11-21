@@ -17,9 +17,9 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.Rescheduling
         {
             // ExStart:RescheduleProjectFromFinishDate
             // The path to the documents directory.
-            string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
+            string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
-            Project project = new Project(dataDir + "Project1.mpp");
+            Project project = new Project(dataDir + "Project2.mpp");
             project.Set(Prj.ScheduleFromStart, false);
             project.Set(Prj.FinishDate, new DateTime(2020, 1, 1));
 

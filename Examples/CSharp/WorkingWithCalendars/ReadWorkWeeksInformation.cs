@@ -19,10 +19,10 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithCalendars
         public static void Run()
         {
             // ExStart:ReadWorkWeeksInformation       
-            string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
+            string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
             
             // Create project instance and access calendar and work weeks collection
-            Project project = new Project(dataDir + "project.mpp");
+            Project project = new Project(dataDir + "ReadWorkWeeksInformation.mpp");
             Calendar calendar = project.Calendars.GetByUid(3);
             WorkWeekCollection collection = calendar.WorkWeeks;
 

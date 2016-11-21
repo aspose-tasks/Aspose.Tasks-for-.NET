@@ -4,8 +4,8 @@ Namespace WorkingWithCalendars
         Public Shared Sub Run()
             ' ExStart:CalculateWorkHours
             ' Load an existing project
-            Dim dataDir As String = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType)
-            Dim project As New Project(dataDir + "project_test.mpp")
+            Dim dataDir As String = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName)
+            Dim project As New Project(dataDir + "CalculateWorkHours.mpp")
 
             ' Access Task By Id
             Dim task As Task = project.RootTask.Children.GetById(1)

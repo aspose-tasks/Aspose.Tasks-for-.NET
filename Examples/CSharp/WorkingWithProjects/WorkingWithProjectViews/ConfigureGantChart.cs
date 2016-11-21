@@ -20,7 +20,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.WorkingWithProjectVie
             {
                 // ExStart:ConfigureGantChart
                 // The path to the documents directory.
-                string dataDir = RunExamples.GetDataDir_ModifyingCreatedProject();
+                string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName); 
                 Project project = new Project(dataDir + "Project5.mpp"); // Create a new project task
                 Task task = project.RootTask.Children.Add("New Activity");
 
@@ -40,8 +40,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.WorkingWithProjectVie
 
                 Table table = project.Tables.ToList()[0];
                 table.TableFields.Insert(3, attrField);
-
-                // The result of opening of saved project in MSP2010 is in attached screenshot
+                         
                 project.Save(dataDir + "ConfigureGantChart_out.mpp", SaveFileFormat.MPP);
             }
             catch (Exception ex)

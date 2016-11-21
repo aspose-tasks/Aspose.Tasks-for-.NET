@@ -14,8 +14,8 @@ Namespace WorkingWithTasks
             Try
                 ' ExStart:CreateSubProjectTask
                 ' Create project instance
-                Dim dataDir As String = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType)
-                Dim project As New Project(dataDir & "project.mpp")
+                Dim dataDir As String = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName)
+                Dim project As New Project(dataDir & "SubProjectTask.mpp")
 
                 ' Add Task
                 Dim task As Task = project.RootTask.Children.Add("New Task 1")
@@ -24,7 +24,7 @@ Namespace WorkingWithTasks
                 task.[Set](Tsk.SubprojectName, dataDir & "subProject.mpp")
 
                 ' Save project
-                project.Save(dataDir & "Link_out.mpp", SaveFileFormat.MPP)
+                project.Save(dataDir & "SubProjectTask_out.mpp", SaveFileFormat.MPP)
                 ' ExEnd:CreateSubProjectTask
             Catch ex As Exception
                 Console.WriteLine(ex.Message + vbLf & "This example will only work if you apply a valid Aspose.Tasks License. You can purchase full license or get 30 day temporary license from http://www.aspose.com/purchase/default.aspx.")

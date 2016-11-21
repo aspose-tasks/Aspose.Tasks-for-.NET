@@ -4,8 +4,8 @@ Namespace WorkingWithTasks
         Public Shared Sub Run()
             ' ExStart:ReadBudgetWorkAndCost
             ' Create project instance
-            Dim dataDir As String = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType)
-            Dim project1 As New Project(dataDir & "project.mpp")
+            Dim dataDir As String = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName)
+            Dim project1 As New Project(dataDir & "BudgetWorkAndCost.mpp")
 
             ' Display budget work and budget cost for project summary task
             Dim projSummary As Task = project1.RootTask

@@ -4,8 +4,8 @@ Namespace WorkingWithTaskLinks
         Public Shared Sub Run()
             ' ExStart:GetTaskLinkType
             ' Create project instance
-            Dim dataDir As String = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType)
-            Dim project1 As New Project(dataDir + "project.mpp")
+            Dim dataDir As String = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName)
+            Dim project1 As New Project(dataDir + "GetTaskLinkType.mpp")
 
             ' Display task link types 
             Dim allinks = project1.TaskLinks

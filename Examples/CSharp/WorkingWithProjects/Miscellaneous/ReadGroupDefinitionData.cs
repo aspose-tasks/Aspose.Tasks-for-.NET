@@ -16,9 +16,9 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.Miscellaneous
         {
             // ExStart:ReadGroupDefinitionData
             // The path to the documents directory.
-            string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
+            string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
-            Project project = new Project(dataDir + "Project1.mpp"); 
+            Project project = new Project(dataDir + "ReadGroupDefinitionData.mpp"); 
             
             Console.WriteLine("Task Groups Count: " + project.TaskGroups.Count);
             Group taskGroup = project.TaskGroups.ToList()[1];

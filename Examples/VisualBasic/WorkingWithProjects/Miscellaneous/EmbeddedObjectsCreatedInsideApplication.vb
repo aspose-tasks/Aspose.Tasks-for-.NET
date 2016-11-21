@@ -15,13 +15,13 @@ Namespace WorkingWithProjects.Miscellaneous
             Try
                 ' ExStart:EmbeddedObjectsCreatedInsideApplication
                 ' The path to the documents directory.
-                Dim dataDir As String = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType)
+                Dim dataDir As String = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName)
                 Dim fileFormatExt As IDictionary(Of String, String) = New Dictionary(Of String, String)()
                 fileFormatExt.Add(dataDir & Convert.ToString("Image1"), ".png")
                 fileFormatExt.Add(dataDir & Convert.ToString("Document1"), ".docx")
                 fileFormatExt.Add(dataDir & Convert.ToString("Documennt1"), ".xlsx")
 
-                Dim project As New Project(dataDir & Convert.ToString("Project1.mpp"))
+                Dim project As New Project(dataDir & Convert.ToString("EmbeddedObjects.mpp"))
 
                 For Each oleObject As OleObject In project.OleObjects
                     If Not String.IsNullOrEmpty(oleObject.FileFormat) AndAlso fileFormatExt.ContainsKey(oleObject.FileFormat) Then

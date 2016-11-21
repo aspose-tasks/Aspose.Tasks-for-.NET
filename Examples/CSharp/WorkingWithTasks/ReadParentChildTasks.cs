@@ -20,8 +20,8 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithTasks
         {
             // ExStart:ReadParentChildTasks
             // Create project instance
-            string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
-            Project project1 = new Project(dataDir + "project.mpp");
+            string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
+            Project project1 = new Project(dataDir + "ParentChildTasks.mpp");
             
             // Create a ChildTasksCollector instance
             ChildTasksCollector collector = new ChildTasksCollector();

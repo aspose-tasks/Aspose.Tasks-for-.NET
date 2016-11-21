@@ -27,8 +27,8 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithCalendars.CreatingUpdatingAndR
             Aspose.Tasks.Calendar.MakeStandardCalendar(cal1);
 
             // Save the Project
-            string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
-            project.Save(dataDir + "Project_out.xml", Aspose.Tasks.Saving.SaveFileFormat.XML);
+            string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
+            project.Save(dataDir + "Project_MakeStandardCalendar_out.xml", Aspose.Tasks.Saving.SaveFileFormat.XML);
             // ExEnd:MakeAStandardCalendar
         }
     }

@@ -21,10 +21,10 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithTasks.WorkingWithTaskConstrain
         {
             // ExStart:SetConstraintAsLateAsPossible
             // The path to the documents directory.
-            string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
+            string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
             // Create project instance
-            Project project1 = new Project(dataDir + "TestProject.mpp");
+            Project project1 = new Project(dataDir + "ConstraintAsLateAsPossible.mpp");
 
             // Set constraint As Late As Possible for task with Id 11
             Task wallBoard = project1.RootTask.Children.GetById(11);

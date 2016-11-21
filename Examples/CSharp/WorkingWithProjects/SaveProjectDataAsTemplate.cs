@@ -16,7 +16,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects
         {
             // ExStart:SaveProjectDataAsTemplate
             // The path to the documents directory.
-            string dataDir = RunExamples.GetDataDir_WorkingWithProjects();
+            string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName); 
             Project project = new Project(dataDir + "Project2.mpp");
             HtmlSaveOptions option = new HtmlSaveOptions();
             project.Save(dataDir + "SaveProjectDataAsHTML_out.html", option);

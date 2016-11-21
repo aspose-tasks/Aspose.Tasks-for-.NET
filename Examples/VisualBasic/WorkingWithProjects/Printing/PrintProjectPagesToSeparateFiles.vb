@@ -16,8 +16,8 @@ Namespace WorkingWithProjects.Printing
         Public Shared Sub Run()
             ' ExStart:PrintProjectPagesToSeparateFiles
             ' The path to the documents directory.
-            Dim dataDir As String = RunExamples.GetDataDir_PrintingAndExporting()
-            Dim project As New Project(dataDir & Convert.ToString("Project5.mpp"))
+            Dim dataDir As String = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName)
+            Dim project As New Project(dataDir & Convert.ToString("PrintProject5.mpp"))
             Dim saveOptions As New ImageSaveOptions(SaveFileFormat.PNG)
             saveOptions.StartDate = project.[Get](Prj.StartDate).AddDays(-3)
             saveOptions.EndDate = project.[Get](Prj.FinishDate)
@@ -29,8 +29,10 @@ Namespace WorkingWithProjects.Printing
             gridline.Color = Color.CornflowerBlue
             gridline.Pattern = LinePattern.Dashed
             saveOptions.Gridlines.Add(gridline)
+
             ' Save the whole project layout to one file
             project.Save(dataDir & Convert.ToString("CustomerFeedback1_out.png"), saveOptions)
+
             ' Save project layout to separate files
             saveOptions.SaveToSeparateFiles = True
             project.Save(dataDir & Convert.ToString("CustomerFeedback2_out.png"), saveOptions)

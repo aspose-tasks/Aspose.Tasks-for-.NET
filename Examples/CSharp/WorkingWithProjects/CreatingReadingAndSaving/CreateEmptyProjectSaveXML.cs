@@ -15,14 +15,14 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.CreatingReadingAndSav
         public static void Run()
         {            
             // The path to the documents directory.
-            string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
+            string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
             // ExStart:CreateEmptyProjectSaveXML
             // Create empty project
             Project project = new Project();
 
             // Save project as xml 
-            project.Save(dataDir + "saved_out.xml", SaveFileFormat.XML);
+            project.Save(dataDir + "EmptyProjectSaveXML_out.xml", SaveFileFormat.XML);
             // ExEnd:CreateEmptyProjectSaveXML
         }
     }

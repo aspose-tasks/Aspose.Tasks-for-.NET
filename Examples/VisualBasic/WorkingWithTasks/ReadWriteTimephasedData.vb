@@ -4,8 +4,8 @@ Namespace WorkingWithTasks
         Public Shared Sub Run()
             ' ExStart:ReadWriteTimephasedData
             ' Create project instance
-            Dim dataDir As String = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType)
-            Dim project1 As New Project(dataDir & "project.mpp")
+            Dim dataDir As String = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName)
+            Dim project1 As New Project(dataDir & "ReadWriteTimephasedData.mpp")
 
             ' Set project properties
             project1.[Set](Prj.StartDate, New DateTime(2013, 10, 30, 9, 0, 0))

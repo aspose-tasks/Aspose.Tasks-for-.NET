@@ -20,13 +20,13 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.Miscellaneous
             {
                 // ExStart:EmbeddedObjectsCreatedInsideApplication
                 // The path to the documents directory.
-                string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
+                string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
                 IDictionary<string, string> fileFormatExt = new Dictionary<string, string>();
                 fileFormatExt.Add(dataDir + "Image1", ".png");
                 fileFormatExt.Add(dataDir + "Document1", ".docx");
                 fileFormatExt.Add(dataDir + "Documennt1", ".xlsx");
-                
-                Project project = new Project(dataDir + "Project1.mpp"); 
+
+                Project project = new Project(dataDir + "EmbeddedObjects.mpp"); 
 
                 foreach (OleObject oleObject in project.OleObjects)
                 {

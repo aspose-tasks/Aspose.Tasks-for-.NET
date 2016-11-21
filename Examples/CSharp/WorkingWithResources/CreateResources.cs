@@ -19,7 +19,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithResources
         public static void Run()
         {
             // The path to the documents directory.
-            string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
+            string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
             // Create project instance
             Project project = new Project();
@@ -30,7 +30,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithResources
             // ExEnd:CreateResources
 
             // Save project as XML
-            project.Save(dataDir + "project_out.xml", SaveFileFormat.XML);     
+            project.Save(dataDir + "CreateResources_out.xml", SaveFileFormat.XML);     
         }
     }
 }

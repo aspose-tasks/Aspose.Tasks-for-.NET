@@ -19,7 +19,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithTasks
             {
                 // ExStart:MoveTaskUnderSameParent
                 // The path to the documents directory.
-                string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);        
+                string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);        
              
                 // Loading project file
                 Project project = new Project(dataDir + "MoveTask.mpp");

@@ -16,7 +16,7 @@ Namespace WorkingWithProjects.ImportingAndExporting
         Public Shared Sub Run()
             ' ExStart:ImportDataFromMPXFileFormats
             ' The path to the documents directory.
-            Dim dataDir As String = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType)
+            Dim dataDir As String = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName)
 
             Dim project As New Project(dataDir & "Primavera1.mpx")
             Dim info As ProjectFileInfo = project.GetProjectFileInfo(dataDir & "primavera1.mpx")

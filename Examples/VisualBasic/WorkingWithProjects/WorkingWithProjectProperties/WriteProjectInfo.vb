@@ -14,7 +14,7 @@ Namespace WorkingWithProjects.WorkingWithProjectProperties
             ' ExStart: WriteProjectInfo
             Try
                 ' The path to the documents directory.
-                Dim dataDir As String = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType)
+                Dim dataDir As String = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName)
 
                 ' Create project from template file
                 Dim project As New Project(dataDir & "WriteProjectInfo.mpp")
@@ -25,9 +25,9 @@ Namespace WorkingWithProjects.WorkingWithProjectProperties
                 project.Set(Prj.Revision, 15)
                 project.Set(Prj.Keywords, "MSP Aspose")
                 project.Set(Prj.Comments, "Comments")
-                project.Save(dataDir & "saved_out.mpp", SaveFileFormat.MPP)
+                project.Save(dataDir & "WriteProjectInfo_out.mpp", SaveFileFormat.MPP)
             Catch ex As Exception
-                Console.WriteLine(ex.Message & "\nThis example will only work if you apply a valid Aspose License. You can purchase full license or get 30 day temporary license from http://www.aspose.com/purchase/default.aspx.")
+                Console.WriteLine(ex.Message + vbLf & "This example will only work if you apply a valid Aspose License. You can purchase full license or get 30 day temporary license from http://www.aspose.com/purchase/default.aspx.")
             End Try
             ' ExEnd: WriteProjectInfo
         End Sub

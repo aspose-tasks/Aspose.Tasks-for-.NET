@@ -17,9 +17,9 @@ Namespace WorkingWithCalendars.CreatingUpdatingAndRemoving
     Class WriteUpdatedCalendarDataToMPP
         Public Shared Sub Run()
             ' ExStart:WriteUpdatedCalendarDataToMPP
-            Dim resultFile As String = "result_out.mpp"
-            Dim newFile As String = "project_test.mpp"
-            Dim dataDir As String = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType)
+            Dim resultFile As String = "result_WriteUpdatedCalendarDataToMPP_out.mpp"
+            Dim newFile As String = "project_update_test.mpp"
+            Dim dataDir As String = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName)
 
             Try
                 ' Create project instance and access calendar

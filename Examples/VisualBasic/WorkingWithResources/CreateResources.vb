@@ -12,7 +12,7 @@ Namespace WorkingWithResources
     Public Class CreateResources
         Public Shared Sub Run()
             ' The path to the documents directory.
-            Dim dataDir As String = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType)
+            Dim dataDir As String = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName)
 
             ' Create project instance
             Dim project As New Project()
@@ -23,7 +23,7 @@ Namespace WorkingWithResources
             ' ExEnd:CreateResources
 
             ' Save project
-            project.Save(dataDir & "project_out.xml", SaveFileFormat.XML)
+            project.Save(dataDir & "CreateResources_out.xml", SaveFileFormat.XML)
         End Sub
     End Class
 End Namespace

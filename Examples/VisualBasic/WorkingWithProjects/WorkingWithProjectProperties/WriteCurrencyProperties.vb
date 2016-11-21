@@ -8,7 +8,7 @@ Namespace WorkingWithProjects.WorkingWithProjectProperties
         Public Shared Sub Run()
             ' Exstart: WriteCurrencyProperties
             ' The path to the documents directory.
-            Dim dataDir As String = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType)
+            Dim dataDir As String = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName)
 
             ' Create a project instance
             Dim project As New Project(dataDir & "WriteCurrencyProperties.mpp")
@@ -20,7 +20,7 @@ Namespace WorkingWithProjects.WorkingWithProjectProperties
             project.Set(Prj.CurrencySymbolPosition, CurrencySymbolPositionType.After)
 
             ' Save the project as XML project file
-            project.Save(dataDir & "project_out.xml", SaveFileFormat.XML)
+            project.Save(dataDir & "WriteCurrencyProperties_out.xml", SaveFileFormat.XML)
             ' ExEnd: WriteCurrencyProperties
         End Sub
     End Class

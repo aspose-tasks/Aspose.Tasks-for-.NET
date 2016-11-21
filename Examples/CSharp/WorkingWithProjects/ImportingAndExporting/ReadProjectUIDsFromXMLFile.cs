@@ -16,7 +16,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.ImportingAndExporting
         {
             // ExStart:ReadProjectUIDsFromXMLFile
             // The path to the documents directory.
-            string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
+            string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
             PrimaveraXmlReader reader = new PrimaveraXmlReader(dataDir + "Project.xml");
             List<int> listOpProjectUids = reader.GetProjectUids();

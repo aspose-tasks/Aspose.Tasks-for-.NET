@@ -39,7 +39,8 @@ Namespace WorkingWithTasks
             splitResourceAssignment.[Set](Asn.WorkContour, WorkContourType.Contoured)
 
             ' Save the Project
-            splitTaskProject.Save("Project_out.xml", SaveFileFormat.XML)
+            Dim dataDir As String = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName)
+            splitTaskProject.Save(dataDir & "CreateSplitTasks_out.xml", SaveFileFormat.XML)
             ' ExEnd:CreateSplitTasks
         End Sub
     End Class

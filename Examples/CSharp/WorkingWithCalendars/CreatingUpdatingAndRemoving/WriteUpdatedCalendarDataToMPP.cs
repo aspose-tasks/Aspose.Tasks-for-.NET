@@ -20,9 +20,9 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithCalendars.CreatingUpdatingAndR
         public static void Run()
         {
             // ExStart:WriteUpdatedCalendarDataToMPP
-            string resultFile = "result_out.mpp";
-            string newFile = "project_test.mpp";
-            string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
+            string resultFile = "result_WriteUpdatedCalendarDataToMPP_out.mpp";
+            string newFile = "project_update_test.mpp";
+            string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
             try
             {

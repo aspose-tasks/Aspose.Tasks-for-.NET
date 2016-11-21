@@ -21,10 +21,10 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithTasks.WorkingWithTaskConstrain
         {
             // ExStart:SetConstraintMustFinishOn
             // The path to the documents directory.
-            string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
+            string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
             // Create project instance
-            Project project1 = new Project(dataDir + "TestProject.mpp");
+            Project project1 = new Project(dataDir + "ConstraintMustFinishOn.mpp");
 
             // Set constraint Must Finish On for task with Id 15
             Task interiorFixtures = project1.RootTask.Children.GetById(15);

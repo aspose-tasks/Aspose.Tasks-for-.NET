@@ -7,7 +7,7 @@ Namespace WorkingWithProjects
         Public Shared Sub Run()
             ' ExStart: GetNumberOfPages
             ' The path to the documents directory.
-            Dim dataDir As String = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType)
+            Dim dataDir As String = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName)
             Dim project As New Project(dataDir & "GetNumberOfPages.mpp")
 
             ' Read the input Project file Get number of pages, Months and ThirdsOfMonths

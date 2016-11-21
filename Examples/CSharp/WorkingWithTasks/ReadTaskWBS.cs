@@ -21,8 +21,8 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithTasks
         {
             // ExStart:ReadTaskWBS
             // Read project
-            string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);            
-            Project project1 = new Project(dataDir + "project.mpp");
+            string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
+            Project project1 = new Project(dataDir + "TaskWBS.mpp");
 
             // Create a ChildTasksCollector instance
             ChildTasksCollector collector = new ChildTasksCollector();
@@ -42,7 +42,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithTasks
             // ExEnd:ReadTaskWBS
 
             // Save project as PDF
-            project1.Save(dataDir + "project_out.pdf", SaveFileFormat.PDF);
+            project1.Save(dataDir + "TaskWBS_out.pdf", SaveFileFormat.PDF);
         }
     }
 }

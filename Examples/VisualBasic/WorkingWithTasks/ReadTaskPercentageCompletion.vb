@@ -4,8 +4,8 @@ Namespace WorkingWithTasks
         Public Shared Sub Run()
             ' ExStart:ReadTaskPercentageCompletion
             ' Create project instance
-            Dim dataDir As String = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType)
-            Dim project1 As New Project(dataDir + "project.mpp")
+            Dim dataDir As String = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName)
+            Dim project1 As New Project(dataDir + "TaskPercentageCompletion.mpp")
 
             ' Access tasks and display percentage completion
             Dim tasks = project1.RootTask.Children

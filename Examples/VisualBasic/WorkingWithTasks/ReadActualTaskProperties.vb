@@ -13,9 +13,9 @@ Namespace WorkingWithTasks
         Public Shared Sub Run()
             ' ExStart:ReadActualTaskProperties
             ' The path to the documents directory.
-            Dim dataDir As String = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType)
+            Dim dataDir As String = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName)
 
-            Dim project As New Project(dataDir & "TestProject.mpp")
+            Dim project As New Project(dataDir & "ActualTaskProperties.mpp")
 
             ' Create a ChildTasksCollector instance
             Dim collector As New ChildTasksCollector()

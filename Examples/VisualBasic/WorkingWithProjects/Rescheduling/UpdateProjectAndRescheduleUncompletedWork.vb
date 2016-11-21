@@ -16,7 +16,7 @@ Namespace WorkingWithProjects.Rescheduling
         Public Shared Sub Run()
             ' ExStart:UpdateProjectAndRescheduleUncompletedWork
             ' The path to the documents directory.
-            Dim dataDir As String = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType)
+            Dim dataDir As String = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName)
 
             ' Create a new project and set start date
             Dim project As New Project()
@@ -63,13 +63,13 @@ Namespace WorkingWithProjects.Rescheduling
             task10.[Set](Tsk.IsManual, True)
 
             ' Save project before and after updating work as completed 
-            project.Save(dataDir & Convert.ToString("notUpdated_out.xml"), SaveFileFormat.XML)
+            project.Save(dataDir & Convert.ToString("RescheduleUncompletedWork_notUpdated_out.xml"), SaveFileFormat.XML)
             project.UpdateProjectWorkAsComplete(New DateTime(2014, 1, 28, 17, 0, 0), False)
-            project.Save(dataDir & Convert.ToString("updated_out.xml"), SaveFileFormat.XML)
+            project.Save(dataDir & Convert.ToString("RescheduleUncompletedWork_updated_out.xml"), SaveFileFormat.XML)
 
             ' Save project after rescheduling uncompleted work
             project.RescheduleUncompletedWorkToStartAfter(New DateTime(2014, 2, 7, 8, 0, 0))
-            project.Save(dataDir & Convert.ToString("rescheduled_out.xml"), SaveFileFormat.XML)
+            project.Save(dataDir & Convert.ToString("RescheduleUncompletedWork_rescheduled_out.xml"), SaveFileFormat.XML)
             ' ExEnd:UpdateProjectAndRescheduleUncompletedWork
         End Sub
     End Class

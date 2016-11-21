@@ -13,7 +13,7 @@ Namespace WorkingWithProjects.WorkingWithProjectProperties
         Public Shared Sub Run()
             ' ExStart:WriteDefaultProperties
             ' The path to the documents directory.
-            Dim dataDir As String = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType)
+            Dim dataDir As String = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName)
 
             ' Create a project instance and Set default properties
             Dim project As New Project()

@@ -3,11 +3,11 @@ Namespace WorkingWithResources
     Public Class GetResourceCalendar
         Public Shared Sub Run()
             ' The path to the documents directory.
-            Dim dataDir As String = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType)
+            Dim dataDir As String = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName)
 
             ' ExStart:GetResourceCalendar
             ' Create project instance
-            Dim project1 As New Project(dataDir + "project_test.mpp")
+            Dim project1 As New Project(dataDir + "ResourceCalendar.mpp")
 
             ' Display base calendar name for all resources 
             For Each res As Resource In project1.Resources

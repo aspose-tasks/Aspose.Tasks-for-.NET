@@ -13,7 +13,7 @@ Namespace WorkingWithProjects.ImportingAndExporting
         Public Shared Sub Run()
             ' ExStart:ExportProjectDataToPrimaveraMPXFormat
             ' The path to the documents directory.
-            Dim dataDir As String = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType)
+            Dim dataDir As String = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName)
 
             ' Create project instance
             Dim project As New Project(dataDir & Convert.ToString("Project1.mpp"))

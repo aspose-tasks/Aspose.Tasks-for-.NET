@@ -22,8 +22,8 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithTasks
             {
                 // ExStart:CreateSubProjectTask
                 // Create project instance
-                string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
-                Project project = new Project(dataDir + "project.mpp");
+                string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
+                Project project = new Project(dataDir + "SubProjectTask.mpp");
 
                 // Add task
                 Task task = project.RootTask.Children.Add("Task 1");
@@ -32,7 +32,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithTasks
                 task.Set(Tsk.SubprojectName, dataDir + "subProject.mpp");
 
                 // Save project
-                project.Save(dataDir + "Link_out.mpp", SaveFileFormat.MPP);
+                project.Save(dataDir + "SubProjectTask_out.mpp", SaveFileFormat.MPP);
                 // ExEnd:CreateSubProjectTask
             }
             catch (Exception ex)

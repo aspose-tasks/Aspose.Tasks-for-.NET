@@ -15,8 +15,8 @@ Namespace WorkingWithTasks
         Public Shared Sub Run()
             ' ExStart:ReadTaskWBS
             ' Read project
-            Dim dataDir As String = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType)
-            Dim project1 As New Project(dataDir & "project.mpp")
+            Dim dataDir As String = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName)
+            Dim project1 As New Project(dataDir & "TaskWBS.mpp")
 
             ' Create a ChildTasksCollector instance
             Dim collector As New ChildTasksCollector()
@@ -35,7 +35,7 @@ Namespace WorkingWithTasks
             ' ExEnd:ReadTaskWBS
 
             ' Save project as PDF
-            project1.Save(dataDir + "project_out.pdf", SaveFileFormat.PDF)
+            project1.Save(dataDir + "TaskWBS_out.pdf", SaveFileFormat.PDF)
         End Sub
     End Class
 End Namespace

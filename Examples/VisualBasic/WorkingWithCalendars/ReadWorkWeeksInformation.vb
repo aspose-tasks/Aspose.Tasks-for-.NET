@@ -16,10 +16,10 @@ Namespace WorkingWithCalendars
     Class ReadWorkWeeksInformation
         Public Shared Sub Run()
             ' ExStart: ReadWorkWeeksInformation
-            Dim dataDir As String = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType)
+            Dim dataDir As String = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName)
 
             ' Create project instance and access calendar and work weeks collection
-            Dim project As New Project(dataDir & Convert.ToString("project.mpp"))
+            Dim project As New Project(dataDir & Convert.ToString("ReadWorkWeeksInformation.mpp"))
             Dim calendar As Calendar = project.Calendars.GetByUid(3)
             Dim collection As WorkWeekCollection = calendar.WorkWeeks
 

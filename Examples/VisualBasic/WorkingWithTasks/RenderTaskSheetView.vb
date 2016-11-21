@@ -14,13 +14,13 @@ Namespace WorkingWithTasks
         Public Shared Sub Run()
             ' ExStart:RenderTaskSheetView
             ' Create project instance
-            Dim dataDir As String = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType)
-            Dim project1 As New Project(dataDir & "project.mpp")
+            Dim dataDir As String = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName)
+            Dim project1 As New Project(dataDir & "TaskSheetView.mpp")
 
             ' Set presentation format Task Sheet and save project as PDF
             Dim options As SaveOptions = New PdfSaveOptions()
             options.PresentationFormat = PresentationFormat.TaskSheet
-            project1.Save(dataDir & "taskSheet_out.pdf", options)
+            project1.Save(dataDir & "TaskSheetView_out.pdf", options)
             ' ExEnd:RenderTaskSheetView
         End Sub
     End Class

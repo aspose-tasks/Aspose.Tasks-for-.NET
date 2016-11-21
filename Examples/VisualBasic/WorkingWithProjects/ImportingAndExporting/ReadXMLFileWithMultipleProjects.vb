@@ -17,7 +17,7 @@ Namespace WorkingWithProjects.ImportingAndExporting
         Public Shared Sub Run()
             ' ExStart:ReadXMLFileWithMultipleProjects
             ' The path to the documents directory.
-            Dim dataDir As String = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType)
+            Dim dataDir As String = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName)
 
             Dim options As New PrimaveraXmlReadingOptions()
             options.ProjectUid = 4557

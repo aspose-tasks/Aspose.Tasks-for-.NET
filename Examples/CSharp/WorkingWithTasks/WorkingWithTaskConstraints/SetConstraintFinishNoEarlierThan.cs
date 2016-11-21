@@ -21,10 +21,10 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithTasks.WorkingWithTaskConstrain
         {
             // ExStart:SetConstraintFinishNoEarlierThan
             // The path to the documents directory.
-            string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
+            string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
             // Create project instance
-            Project project1 = new Project(dataDir + "TestProject.mpp");
+            Project project1 = new Project(dataDir + "ConstraintFinishNoEarlierThan.mpp");
 
             // Set constraint Finish No Earlier Than on task with Id 2
             Task first = project1.RootTask.Children.GetById(2);

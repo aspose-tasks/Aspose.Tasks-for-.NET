@@ -23,11 +23,11 @@ Namespace WorkingWithProjects.CreatingReadingAndSaving
 
         Private Shared Function GetModifiedXml() As String
             ' The path to the documents directory.
-            Dim dataDir As String = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType)
+            Dim dataDir As String = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName)
             Dim xml As String
 
             ' Open valid xml file and modify it
-            Using reader As TextReader = New StreamReader(dataDir & Convert.ToString("Project.xml"))
+            Using reader As TextReader = New StreamReader(dataDir & Convert.ToString("IgnoreInvalidCharacters.xml"))
                 xml = reader.ReadToEnd()
             End Using
 

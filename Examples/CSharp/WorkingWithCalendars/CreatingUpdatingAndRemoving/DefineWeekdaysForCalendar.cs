@@ -49,10 +49,9 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithCalendars.CreatingUpdatingAndR
             myWeekDay.DayWorking = true;
             cal.WeekDays.Add(myWeekDay);
 
-
             // Save the Project
-            string dataDir = RunExamples.GetDataDir_Projects();
-            project.Save("Project.xml", Aspose.Tasks.Saving.SaveFileFormat.XML);
+            string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
+            project.Save("Project_DefineCalendarWeekdays_out.xml", Aspose.Tasks.Saving.SaveFileFormat.XML);
             // ExEnd:DefineWeekdaysForCalendar
         }
     }

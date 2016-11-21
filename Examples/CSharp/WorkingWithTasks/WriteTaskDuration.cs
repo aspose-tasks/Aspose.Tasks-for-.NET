@@ -44,8 +44,8 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithTasks
             // ExEnd:WriteTaskDuration
 
             // Save project as PDF
-            string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
-            project.Save(dataDir + "project_out.pdf", SaveFileFormat.PDF);
+            string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
+            project.Save(dataDir + "WriteTaskDuration_out.pdf", SaveFileFormat.PDF);
         }
     }
 }

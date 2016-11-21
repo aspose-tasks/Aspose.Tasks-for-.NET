@@ -11,7 +11,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithCalendarExceptions
         public static void Run()
         {
             // ExStart:AddRemoveCalendarExceptions
-            string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
+            string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
             using (FileStream fs = new FileStream(dataDir + "project_test.mpp", FileMode.Open))
             {

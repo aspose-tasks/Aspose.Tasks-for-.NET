@@ -9,7 +9,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.WorkingWithExtendedAt
         {
             // ExStart:ExtendedAttributes
             // The path to the documents directory.
-            string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
+            string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
             Project prj = new Project(dataDir + "ExtendedAttributes.mpp");
             ExtendedAttributeDefinitionCollection eads = prj.ExtendedAttributes;

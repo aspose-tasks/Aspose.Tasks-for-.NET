@@ -13,10 +13,10 @@ Namespace WorkingWithTasks
         Public Shared Sub Run()
             ' ExStart:ReadTaskCalendar
             ' The path to the documents directory.
-            Dim dataDir As String = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType)
+            Dim dataDir As String = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName)
 
             ' Create project instance
-            Dim prj As New Project(dataDir & "project.mpp")
+            Dim prj As New Project(dataDir & "ReadTaskCalendar.mpp")
 
             ' Declare ChildTasksCollector class object
             Dim collector As New ChildTasksCollector()

@@ -17,7 +17,7 @@ Namespace WorkingWithProjects.ImportingAndExporting
     Public Class SupportForSQLiteDatabase
         Public Shared Sub Run()
             ' The path to the documents directory.
-            Dim dataDir As String = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType)
+            Dim dataDir As String = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName)
 
             Try
                 ' ExStart:SupportForSQLiteDatabase
