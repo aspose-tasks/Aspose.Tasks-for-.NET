@@ -36,7 +36,7 @@ Namespace WorkingWithProjects.Rescheduling
             ' Add links between tasks
             Dim link12 As TaskLink = project.TaskLinks.Add(task1, task2, TaskLinkType.FinishToStart)
             Dim link23 As TaskLink = project.TaskLinks.Add(task2, task3, TaskLinkType.FinishToStart)
-            ' one day lag
+            ' One day lag
             link23.LinkLag = 4800
             Dim link34 As TaskLink = project.TaskLinks.Add(task3, task4, TaskLinkType.FinishToStart)
             Dim link45 As TaskLink = project.TaskLinks.Add(task4, task5, TaskLinkType.FinishToStart)

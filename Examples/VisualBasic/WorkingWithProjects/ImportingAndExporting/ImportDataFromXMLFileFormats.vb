@@ -11,10 +11,10 @@ Imports Aspose.Tasks.Saving
 Namespace WorkingWithProjects.ImportingAndExporting
     Public Class ImportDataFromXMLFileFormats
         Public Shared Sub Run()
-            ' ExStart:ImportDataFromXMLFileFormats
             ' The path to the documents directory.
             Dim dataDir As String = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName)
 
+            ' ExStart:ImportDataFromXMLFileFormats
             Dim project As New Project(dataDir & Convert.ToString("Project.xml"))
             Dim info As ProjectFileInfo = Project.GetProjectFileInfo(dataDir & Convert.ToString("Project.xml"))
             Console.WriteLine(info.ProjectFileFormat.ToString())

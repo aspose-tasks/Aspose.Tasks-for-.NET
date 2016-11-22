@@ -15,10 +15,10 @@ Imports Aspose.Tasks.Visualization
 Namespace WorkingWithProjects.ImportingAndExporting
     Public Class ReadProjectUIDsFromXMLFile
         Public Shared Sub Run()
-            ' ExStart:ReadProjectUIDsFromXMLFile
             ' The path to the documents directory.
             Dim dataDir As String = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName)
 
+            ' ExStart:ReadProjectUIDsFromXMLFile
             Dim reader As New PrimaveraXmlReader(dataDir & Convert.ToString("Project.xml"))
             Dim listOpProjectUids As List(Of Integer) = reader.GetProjectUids()
             ' ExEnd:ReadProjectUIDsFromXMLFile

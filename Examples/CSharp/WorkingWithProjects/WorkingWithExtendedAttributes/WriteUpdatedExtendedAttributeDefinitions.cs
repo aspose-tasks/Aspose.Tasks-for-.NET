@@ -18,10 +18,10 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.WorkingWithExtendedAt
             // This example requires Aspose.Task for .NET, a trial version can be download from  http://www.aspose.com/corporate/purchase/temporary-license.aspx
             try
             {
-                // ExStart:WriteUpdatedExtendedAttributeDefinitions
                 // The path to the documents directory.
                 string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
+                // ExStart:WriteUpdatedExtendedAttributeDefinitions
                 Project project = new Project(dataDir + "WriteUpdatedExtendedAttributeDefinitions.mpp");
 
                 #region task attributes

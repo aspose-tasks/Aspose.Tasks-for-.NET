@@ -13,9 +13,10 @@ Namespace WorkingWithProjects.Miscellaneous
     Public Class EmbeddedObjectsCreatedInsideApplication
         Public Shared Sub Run()
             Try
-                ' ExStart:EmbeddedObjectsCreatedInsideApplication
                 ' The path to the documents directory.
                 Dim dataDir As String = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName)
+
+                ' ExStart:EmbeddedObjectsCreatedInsideApplication
                 Dim fileFormatExt As IDictionary(Of String, String) = New Dictionary(Of String, String)()
                 fileFormatExt.Add(dataDir & Convert.ToString("Image1"), ".png")
                 fileFormatExt.Add(dataDir & Convert.ToString("Document1"), ".docx")

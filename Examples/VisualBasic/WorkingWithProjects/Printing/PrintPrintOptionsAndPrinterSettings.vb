@@ -24,7 +24,7 @@ Namespace WorkingWithProjects.Printing
             Dim options As New PrintOptions()
             options.Timescale = Timescale.Months
 
-            ' Print first ten pages
+            ' Print first two pages
             Dim printerSettings As New PrinterSettings()
             printerSettings.PrintRange = PrintRange.SomePages
             printerSettings.FromPage = 1

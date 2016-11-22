@@ -36,7 +36,6 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithTasks
             {
                 Console.WriteLine(exception.Message + "\nThis example will only work if you apply a valid Aspose.Tasks License. You can purchase full license or get 30 day temporary license from http://www.aspose.com/purchase/default.aspx.");
             }
-            // ExEnd:MoveTaskUnderSameParent
         }
     }
 }

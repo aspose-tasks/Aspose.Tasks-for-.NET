@@ -13,7 +13,7 @@ Namespace WorkingWithProjects.WorkingWithProjectProperties
             ' Create project
             Dim project As New Project(dataDir & "DefaultProperties.mpp")
 
-            'Display default properties
+            ' Display default properties
             Console.WriteLine("New Task Default Start: " + project.[Get](Prj.DefaultStartTime).ToShortDateString())
             Console.WriteLine("New Task Default Type:" + project.[Get](Prj.DefaultTaskType).ToString())
             Console.WriteLine("Resouce Default Standard Rate: " + project.[Get](Prj.DefaultStandardRate).ToString())

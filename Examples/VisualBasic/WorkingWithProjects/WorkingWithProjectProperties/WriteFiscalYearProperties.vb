@@ -26,7 +26,7 @@ Namespace WorkingWithProjects.WorkingWithProjectProperties
                 project.[Set](Prj.FyStartDate, Month.July)
                 project.[Set](Prj.FiscalYearStart, True)
                 project.Save(dataDir & "WriteFiscalYearProperties_out.mpp", SaveFileFormat.MPP)
-                'ExEnd: WriteFiscalYearProperties
+                ' ExEnd: WriteFiscalYearProperties
             Catch ex As Exception
                 Console.WriteLine(ex.Message + vbLf & "This example will only work if you apply a valid Aspose License. You can purchase full license or get 30 day temporary license from http://www.aspose.com/purchase/default.aspx.")
             End Try

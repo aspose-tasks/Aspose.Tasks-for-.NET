@@ -15,13 +15,13 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.WorkingWithProjectVie
     public class ConfigureTheGantChartViewShowSelectedColumnFields
     {
         public static void Run()
-        {
-            // ExStart:ConfigureTheGantChartViewShowSelectedColumnFields
+        {            
             try
             {
                 // The path to the documents directory.
                 string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
+                // ExStart:ConfigureTheGantChartViewShowSelectedColumnFields
                 Project project = new Project(dataDir + "Project5.mpp"); 
                 
                 // Create a new project task
@@ -43,14 +43,14 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.WorkingWithProjectVie
                 Table table = project.Tables.ToList()[0];
                 table.TableFields.Insert(3, attrField);
 
-                // The result of opening of saved project in MSP2010 is in attached screenshot
+                // Save project as MPP
                 project.Save(dataDir + "ConfigureTheGantChartViewShowSelectedColumnFields_out.mpp", SaveFileFormat.MPP);
+                // ExEnd:ConfigureTheGantChartViewShowSelectedColumnFields
             }
             catch (Exception ex)
             {
                 Console.WriteLine(ex.Message + "\nThis example will only work if you apply a valid Aspose License. You can purchase full license or get 30 day temporary license from http:// Www.aspose.com/purchase/default.aspx.");
             }
-            // ExEnd:ConfigureTheGantChartViewShowSelectedColumnFields
         }
     }
 }

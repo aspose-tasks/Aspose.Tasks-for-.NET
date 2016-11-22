@@ -14,11 +14,10 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.Miscellaneous
     {
         public static void Run()
         {
-            // ExStart:ReadTableDataFromProjectFile
             // The path to the documents directory.
             string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
-          
-            // Create project instance
+
+            // ExStart:ReadTableDataFromProjectFile
             Project project = new Project(dataDir + "ReadTableData.mpp");
 
             // Access table

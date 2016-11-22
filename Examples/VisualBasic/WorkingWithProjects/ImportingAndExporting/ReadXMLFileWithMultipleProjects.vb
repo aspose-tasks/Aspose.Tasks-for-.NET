@@ -15,10 +15,10 @@ Imports Aspose.Tasks.Visualization
 Namespace WorkingWithProjects.ImportingAndExporting
     Public Class ReadXMLFileWithMultipleProjects
         Public Shared Sub Run()
-            ' ExStart:ReadXMLFileWithMultipleProjects
             ' The path to the documents directory.
             Dim dataDir As String = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName)
 
+            ' ExStart:ReadXMLFileWithMultipleProjects
             Dim options As New PrimaveraXmlReadingOptions()
             options.ProjectUid = 4557
             ' Returns project with special Uid

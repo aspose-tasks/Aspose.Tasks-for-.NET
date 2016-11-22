@@ -26,6 +26,7 @@ Namespace WorkingWithTasks
 
                 ' Saving File To Disk
                 project.Save(dataDir & Convert.ToString("MoveTaskAtTheEnd_out.mpp"), SaveFileFormat.MPP)
+                ' ExEnd:MoveTaskAtTheEnd
             Catch exception As Exception
                 Console.WriteLine(exception.Message + vbLf & "This example will only work if you apply a valid Aspose.Tasks License. You can purchase full license or get 30 day temporary license from http://www.aspose.com/purchase/default.aspx.")
             End Try

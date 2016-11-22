@@ -28,7 +28,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithTasks
             Console.WriteLine("Duration in Weeks: {0}", weeks);
             double months = task.Get(Tsk.Duration).Convert(TimeUnitType.Month).ToDouble();
             Console.WriteLine("Duration in Months: {0}", months);
-            // ExStart:CalculateTaskDurations
+            // ExEnd:CalculateTaskDurations
         }
     }
 }

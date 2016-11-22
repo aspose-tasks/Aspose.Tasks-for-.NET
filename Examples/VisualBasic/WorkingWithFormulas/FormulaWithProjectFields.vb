@@ -14,8 +14,8 @@ Imports Aspose.Tasks.Visualization
 
 Namespace WorkingWithFormulas
     Public Class FormulaWithProjectFields
+        ' ExStart:FormulaWithProjectFields
         Public Shared Sub Run()
-            ' ExStart:FormulaWithProjectFields
             Dim project As Project = CreateTestProjectWithCustomFieldWithoutResource()
 
             ' Set formula
@@ -24,7 +24,6 @@ Namespace WorkingWithFormulas
             ' Print if formula value is computed correctly
             Dim task As Task = project.RootTask.Children.GetById(1)
             Console.WriteLine("Check Total tasks: 1 Total resources: 0 - {0}", task.ExtendedAttributes(0).Value.Equals("Total tasks: 1 Total resources: 0"))
-            ' ExEnd:FormulaWithProjectFields
         End Sub
 
         Private Shared Function CreateTestProjectWithCustomFieldWithoutResource() As Project
@@ -39,5 +38,6 @@ Namespace WorkingWithFormulas
             task.ExtendedAttributes.Add(a)
             Return project
         End Function
+        ' ExEnd:FormulaWithProjectFields
     End Class
 End Namespace

@@ -11,11 +11,10 @@ Imports Aspose.Tasks.Saving
 Namespace WorkingWithProjects.ImportingAndExporting
     Public Class ExportProjectDataToPrimaveraMPXFormat
         Public Shared Sub Run()
-            ' ExStart:ExportProjectDataToPrimaveraMPXFormat
             ' The path to the documents directory.
             Dim dataDir As String = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName)
 
-            ' Create project instance
+            ' ExStart:ExportProjectDataToPrimaveraMPXFormat
             Dim project As New Project(dataDir & Convert.ToString("Project1.mpp"))
 
             ' Save project in desired format

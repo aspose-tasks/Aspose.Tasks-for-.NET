@@ -6,10 +6,10 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.Miscellaneous
     {
         public static void Run()
         {
-            // ExStart:CalculateCriticalPath
             // The path to the documents directory.
             string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
+            // ExStart:CalculateCriticalPath
             Project project = new Project(dataDir + "CalculateCriticalPath.mpp");
             project.CalculationMode = CalculationMode.Automatic;
 

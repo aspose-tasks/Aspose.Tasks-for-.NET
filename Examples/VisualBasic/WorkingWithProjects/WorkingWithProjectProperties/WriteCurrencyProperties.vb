@@ -6,7 +6,7 @@ Imports Aspose.Tasks.Saving
 Namespace WorkingWithProjects.WorkingWithProjectProperties
     Public Class WriteCurrencyProperties
         Public Shared Sub Run()
-            ' Exstart: WriteCurrencyProperties
+            ' ExStart: WriteCurrencyProperties
             ' The path to the documents directory.
             Dim dataDir As String = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName)
 

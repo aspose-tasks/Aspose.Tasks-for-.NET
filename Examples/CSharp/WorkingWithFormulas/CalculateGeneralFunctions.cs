@@ -43,8 +43,8 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithFormulas
                 Console.WriteLine(task.ExtendedAttributes[0].Value);
  
             }           
-
         }
+
         public static void EvaluateSwitch()
         {    
             Project project = CreateTestProjectWithCustomField();

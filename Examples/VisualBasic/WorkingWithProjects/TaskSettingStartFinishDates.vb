@@ -11,7 +11,7 @@ Namespace WorkingWithProjects
         ''' </summary>
 
         Public Shared Sub Run()
-            'ExStart: TaskSettingStartFinishDates
+            ' ExStart: TaskSettingStartFinishDates
             Dim project As New Project()
             Console.WriteLine(project.[Get](Prj.StartDate))
             Console.WriteLine(project.CalculationMode.ToString())
@@ -36,7 +36,7 @@ Namespace WorkingWithProjects
             Console.WriteLine(task.[Get](Tsk.Start))
             Console.WriteLine(task.[Get](Tsk.Finish))
 
-            'ExEnd: TaskSettingStartFinishDates
+            ' ExEnd: TaskSettingStartFinishDates
         End Sub
     End Class
 End Namespace

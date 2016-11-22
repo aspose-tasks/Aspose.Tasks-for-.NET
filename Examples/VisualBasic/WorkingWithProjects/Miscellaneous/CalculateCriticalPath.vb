@@ -3,10 +3,10 @@ Imports System
 Namespace WorkingWithProjects.Miscellaneous
     Public Class CalculateCriticalPath
         Public Shared Sub Run()
-            ' ExStart: CalculateCriticalPath
             ' The path to the documents directory.
             Dim dataDir As String = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName)
 
+            ' ExStart: CalculateCriticalPath
             Dim project As New Project(dataDir & "CalculateCriticalPath.mpp")
             project.CalculationMode = CalculationMode.Automatic
 

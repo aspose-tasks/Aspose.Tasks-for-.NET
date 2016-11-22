@@ -11,9 +11,10 @@ Imports Aspose.Tasks.Saving
 Namespace WorkingWithProjects
     Public Class ReadOutlineCodes
         Public Shared Sub Run()
-            ' ExStart:ReadOutlineCodes		
             ' The path to the documents directory.
             Dim dataDir As String = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName)
+
+            ' ExStart:ReadOutlineCodes		
             Dim project As New Project(dataDir & Convert.ToString("OutlineCodes.mpp"))
 
             For Each ocd As OutlineCodeDefinition In project.OutlineCodes

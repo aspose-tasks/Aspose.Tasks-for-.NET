@@ -14,9 +14,10 @@ Namespace WorkingWithProjects
     Public Class AddImageToPageHeaderFooter
         Public Shared Sub Run()
             Try
-                ' ExStart:AddImageToPageHeaderFooter
                 ' The path to the documents directory.
                 Dim dataDir As String = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName)
+
+                ' ExStart:AddImageToPageHeaderFooter
                 Dim project As New Project(dataDir & Convert.ToString("AddImageToPageHeaderFooter.mpp"))
 
                 project.RootTask.Children.Add("Task1")

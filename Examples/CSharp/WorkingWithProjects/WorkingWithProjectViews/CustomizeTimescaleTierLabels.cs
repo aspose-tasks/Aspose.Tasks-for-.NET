@@ -8,14 +8,15 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.WorkingWithProjectVie
     {
         public static void Run()
         {
-            // ExStart:CustomizeTimescaleTierLabels
             // The path to the documents directory.
             string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
-            
+
+            // ExStart:CustomizeTimescaleTierLabels
             Project project = new Project(dataDir + "Project5.mpp");
 
-            // Here is just some test data
+            // Add task links
             project.TaskLinks.Add(project.RootTask.Children.Add("Task 1"), project.RootTask.Children.Add("Task 2"));
+            
             GanttChartView view = (GanttChartView)project.DefaultView;
             
             // This code is added for better visualization
