@@ -11,10 +11,10 @@ Imports Aspose.Tasks
 Namespace WorkingWithProjects.Miscellaneous
     Public Class ExtractEmbeddedObjects
         Public Shared Sub Run()
-            ' ExStart:ExtractEmbeddedObjects
             ' The path to the documents directory.
             Dim dataDir As String = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName)
 
+            ' ExStart:ExtractEmbeddedObjects
             Dim project As New Project(dataDir & Convert.ToString("Project1.mpp"))
             Dim ole As OleObject = project.OleObjects.ToList()(0)
 

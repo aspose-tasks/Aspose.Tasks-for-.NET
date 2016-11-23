@@ -11,10 +11,10 @@ Imports System.Collections.Generic
 Namespace WorkingWithProjects.Miscellaneous
     Public Class ReadFilterDefinitionData
         Public Shared Sub Run()
-            ' ExStart:ReadFilterDefinitionData
             ' The path to the documents directory.
             Dim dataDir As String = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName)
 
+            ' ExStart:ReadFilterDefinitionData
             ' Instantiate project and access task filters
             Dim project As New Project(dataDir & Convert.ToString("ReadFilterDefinitionData.mpp"))
             Dim taskFilters As List(Of Filter) = project.TaskFilters.ToList()

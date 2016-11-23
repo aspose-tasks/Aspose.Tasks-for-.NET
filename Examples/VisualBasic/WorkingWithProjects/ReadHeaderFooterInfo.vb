@@ -79,7 +79,7 @@ Namespace WorkingWithProjects
             Console.WriteLine("LegendOn Equals Legend.OnEveryPage : {0} ", info.Legend.LegendOn.Equals(Legend.OnEveryPage))
             Console.WriteLine("Legend Width Equals 7.77 : {0} ", If((info.Legend.Width - 7.77 <= 0.00001), True, False))
         End Sub
-        ' ExStart:ReadHeaderFooterInfo
+        ' ExEnd:ReadHeaderFooterInfo
     End Class
 End Namespace
 

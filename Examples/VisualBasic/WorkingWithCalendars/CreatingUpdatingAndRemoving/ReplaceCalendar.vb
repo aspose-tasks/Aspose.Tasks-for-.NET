@@ -18,10 +18,10 @@ Namespace WorkingWithCalendars.CreatingUpdatingAndRemoving
             Dim dataDir As String = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName)
             Dim project As New Project(dataDir + "ReplaceCalendar.mpp")
 
-            'Add a new calendar to the project's calendars collection
+            ' Add a new calendar to the project's calendars collection
             project.Calendars.Add("New cal1", project.[Get](Prj.Calendar))
 
-            'Now traverse through project calendars and replace the already added calendar with a new one
+            ' Now traverse through project calendars and replace the already added calendar with a new one
             Dim calColl As CalendarCollection = project.Calendars
 
             For Each c As Calendar In calColl

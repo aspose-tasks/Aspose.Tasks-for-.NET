@@ -6,10 +6,10 @@ Imports Aspose.Tasks
 Namespace WorkingWithProjects.WorkingWithExtendedAttributes
     Public Class WriteExtendedAttributes
         Public Shared Sub Run()
-            ' ExStart: ExtendedAttributes
             ' The path to the documents directory.
             Dim dataDir As String = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName)
 
+            ' ExStart: ExtendedAttributes
             Dim prj As New Project(dataDir & "ExtendedAttributes.mpp")
             Dim eads As ExtendedAttributeDefinitionCollection = prj.ExtendedAttributes
 

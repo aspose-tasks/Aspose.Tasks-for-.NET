@@ -7,10 +7,10 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.Miscellaneous
     {
         public static void Run()
         {
-            // ExStart:PrintTaskWritingException
             // The path to the documents directory.
             string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
+            // ExStart:PrintTaskWritingException
             try
             {
                 Project project = new Project(dataDir + "PrintTaskWritingException.mpp");

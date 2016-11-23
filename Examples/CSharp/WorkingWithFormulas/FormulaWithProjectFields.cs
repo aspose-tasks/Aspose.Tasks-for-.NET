@@ -12,9 +12,9 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithFormulas
 {
     public class FormulaWithProjectFields
     {
+        // ExStart:FormulaWithProjectFields
         public static void Run()
-        {
-            // ExStart:FormulaWithProjectFields
+        {            
             Project project = CreateTestProjectWithCustomFieldWithoutResource();
 
             // Set formula
@@ -22,8 +22,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithFormulas
             
             // Print if formula value is computed correctly
             Task task = project.RootTask.Children.GetById(1);
-            Console.WriteLine("Check Total tasks: 1 Total resources: 0 - {0}", task.ExtendedAttributes[0].Value.Equals("Total tasks: 1 Total resources: 0"));
-            // ExEnd:FormulaWithProjectFields
+            Console.WriteLine("Check Total tasks: 1 Total resources: 0 - {0}", task.ExtendedAttributes[0].Value.Equals("Total tasks: 1 Total resources: 0"));            
         }
 
         static Project CreateTestProjectWithCustomFieldWithoutResource()
@@ -39,5 +38,6 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithFormulas
             task.ExtendedAttributes.Add(a);
             return project;
         }
+        // ExEnd:FormulaWithProjectFields
     }
 }

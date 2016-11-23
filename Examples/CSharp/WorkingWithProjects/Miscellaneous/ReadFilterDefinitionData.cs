@@ -15,10 +15,10 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.Miscellaneous
     {
         public static void Run()
         {
-            // ExStart:ReadFilterDefinitionData
             // The path to the documents directory.
             string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
+            // ExStart:ReadFilterDefinitionData
             // Instantiate project and access task filters
             Project project = new Project(dataDir + "ReadFilterDefinitionData.mpp");
             List<Filter> taskFilters = project.TaskFilters.ToList();

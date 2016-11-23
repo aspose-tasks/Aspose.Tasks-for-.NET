@@ -14,11 +14,10 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.ImportingAndExporting
     {
         public static void Run()
         {
-            // ExStart:ExportProjectDataToPrimaveraMPXFormat
             // The path to the documents directory.
             string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
-            // Create project instance
+            // ExStart:ExportProjectDataToPrimaveraMPXFormat
             Project project = new Project(dataDir + "Project1.mpp");
 
             // Save project in desired format

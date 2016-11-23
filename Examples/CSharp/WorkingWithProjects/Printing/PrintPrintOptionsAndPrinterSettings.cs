@@ -26,7 +26,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.Printing
             PrintOptions options = new PrintOptions();
             options.Timescale = Timescale.Months;
 
-            // Print first ten pages
+            // Print first two pages
             PrinterSettings printerSettings = new PrinterSettings();
             printerSettings.PrintRange = PrintRange.SomePages;
             printerSettings.FromPage = 1;

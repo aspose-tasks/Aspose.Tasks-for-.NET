@@ -18,7 +18,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithFormulas
             // The path to the documents directory.
             // Create project instance
             string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
-            Project project1 = new Project(dataDir + "ReadFormulas.mpp"); // attached test mpp
+            Project project1 = new Project(dataDir + "ReadFormulas.mpp"); // Attached test mpp
            
             // Read extended attribute formula
             ExtendedAttributeDefinition attr = project1.ExtendedAttributes[0];

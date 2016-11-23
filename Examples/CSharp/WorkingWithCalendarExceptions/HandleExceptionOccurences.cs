@@ -18,7 +18,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithCalendarExceptions
             Aspose.Tasks.Calendar cal = project1.Calendars.Add("Calendar1");
 
             // ExStart:HandleExceptionOccurences
-            // Define week days exception for a holiday
+            // Define exception and specify occurences
             CalendarException except = new CalendarException();
             except.EnteredByOccurrences = true;
             except.Occurrences = 5;

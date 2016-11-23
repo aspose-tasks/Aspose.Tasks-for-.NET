@@ -13,14 +13,15 @@ Imports Aspose.Tasks.Visualization
 Namespace WorkingWithProjects.WorkingWithProjectViews
     Public Class CustomizeTimescaleTierLabels
         Public Shared Sub Run()
-            ' ExStart:CustomizeTimescaleTierLabels
             ' The path to the documents directory.
             Dim dataDir As String = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName)
 
+            ' ExStart:CustomizeTimescaleTierLabels
             Dim project As New Project(dataDir & Convert.ToString("Project5.mpp"))
 
-            ' Here is just some test data
+            ' Add task links
             project.TaskLinks.Add(project.RootTask.Children.Add("Task 1"), project.RootTask.Children.Add("Task 2"))
+
             Dim view As GanttChartView = DirectCast(project.DefaultView, GanttChartView)
 
             ' This code is added for better visualization

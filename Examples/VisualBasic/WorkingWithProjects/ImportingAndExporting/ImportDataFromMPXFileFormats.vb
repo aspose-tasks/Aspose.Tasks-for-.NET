@@ -14,10 +14,10 @@ Imports Aspose.Tasks.Visualization
 Namespace WorkingWithProjects.ImportingAndExporting
     Public Class ImportDataFromMPXFileFormats
         Public Shared Sub Run()
-            ' ExStart:ImportDataFromMPXFileFormats
             ' The path to the documents directory.
             Dim dataDir As String = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName)
 
+            ' ExStart:ImportDataFromMPXFileFormats
             Dim project As New Project(dataDir & "Primavera1.mpx")
             Dim info As ProjectFileInfo = project.GetProjectFileInfo(dataDir & "primavera1.mpx")
             Console.WriteLine(info.ProjectFileFormat)

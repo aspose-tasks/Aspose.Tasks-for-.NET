@@ -19,9 +19,10 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects
         {
             try
             {
-                // ExStart:AddImageToPageHeaderFooter
                 // The path to the documents directory.
                 string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
+
+                // ExStart:AddImageToPageHeaderFooter
                 Project project = new Project(dataDir + "AddImageToPageHeaderFooter.mpp");
 
                 project.RootTask.Children.Add("Task1");

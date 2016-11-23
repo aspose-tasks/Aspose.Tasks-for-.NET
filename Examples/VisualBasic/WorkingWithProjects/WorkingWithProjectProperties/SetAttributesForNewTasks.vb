@@ -14,7 +14,7 @@ Imports Aspose.Tasks.Saving
 Namespace WorkingWithProjects.WorkingWithProjectProperties
     Public Class SetAttributesForNewTasks
         Public Shared Sub Run()
-            ' Exstart: SetAttributesForNewTasks
+            ' ExStart: SetAttributesForNewTasks
             ' The path to the documents directory.
             Dim dataDir As String = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName)
 
@@ -25,7 +25,7 @@ Namespace WorkingWithProjects.WorkingWithProjectProperties
 
             ' Display Status.
             System.Console.WriteLine("New Task created with start date successfully.")
-            ' Exend: SetAttributesForNewTasks
+            ' ExEnd: SetAttributesForNewTasks
         End Sub
     End Class
 End Namespace

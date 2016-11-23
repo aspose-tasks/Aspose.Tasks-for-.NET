@@ -40,7 +40,6 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithFormulas
             Console.WriteLine(task.ExtendedAttributes[0].Value);
             project.ExtendedAttributes[0].Formula = "String(-5 ,\"Astr\")";
             Console.WriteLine(task.ExtendedAttributes[0].Value);
-
         }
         // ExEnd:CalculateTextFunctions
 

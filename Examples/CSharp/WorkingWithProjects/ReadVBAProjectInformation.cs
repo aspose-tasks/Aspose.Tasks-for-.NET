@@ -17,7 +17,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects
             // The path to the documents directory.
             string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
-            // loading project file
+            // Loading project file
             Project project = new Project(dataDir + "VbaProject1.mpp");
 
             VbaProject vbaProject = project.VbaProject;

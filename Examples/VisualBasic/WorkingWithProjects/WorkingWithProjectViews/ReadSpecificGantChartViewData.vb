@@ -12,10 +12,10 @@ Imports Aspose.Tasks.Visualization
 Namespace WorkingWithProjects.WorkingWithProjectViews
     Public Class ReadSpecificGantChartViewData
         Public Shared Sub Run()
-            ' ExStart:ReadSpecificGantChartViewData
             ' The path to the documents directory.
             Dim dataDir As String = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName)
 
+            ' ExStart:ReadSpecificGantChartViewData
             Dim project As New Project(dataDir & Convert.ToString("Project2.mpp"))
 
             Dim view As GanttChartView = TryCast(project.Views.ToList()(1), GanttChartView)

@@ -14,10 +14,10 @@ Namespace WorkingWithProjects.WorkingWithExtendedAttributes
 
             ' This example requires Aspose.Task for .NET, a trial version can be download from  http://www.aspose.com/corporate/purchase/temporary-license.aspx
             Try
-                ' ExStart:WriteUpdatedExtendedAttributeDefinitions
                 ' The path to the documents directory.
                 Dim dataDir As String = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName)
 
+                ' ExStart:WriteUpdatedExtendedAttributeDefinitions
                 Dim project As New Project(dataDir & Convert.ToString("WriteUpdatedExtendedAttributeDefinitions.mpp"))
 
                 ' Add new text3 extended attribute and one text value

@@ -21,7 +21,6 @@ Namespace WorkingWithFormulas
         End Sub
 
         Public Shared Sub EvaluateStringFunction()
-
             Dim project As Project = CreateTestProjectWithCustomField()
             Dim task As Task = project.RootTask.Children.GetById(1)
 
@@ -32,7 +31,6 @@ Namespace WorkingWithFormulas
             Console.WriteLine(task.ExtendedAttributes(0).Value)
             project.ExtendedAttributes(0).Formula = "String(-5 ,""Astr"")"
             Console.WriteLine(task.ExtendedAttributes(0).Value)
-
         End Sub
         ' ExEnd:CalculateTextFunctions
 

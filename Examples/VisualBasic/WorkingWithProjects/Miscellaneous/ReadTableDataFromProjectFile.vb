@@ -11,11 +11,10 @@ Imports Aspose.Tasks.Saving
 Namespace WorkingWithProjects.Miscellaneous
     Public Class ReadTableDataFromProjectFile
         Public Shared Sub Run()
-            ' ExStart:ReadTableDataFromProjectFile
             ' The path to the documents directory.
             Dim dataDir As String = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName)
 
-            ' Create project instance
+            ' ExStart:ReadTableDataFromProjectFile
             Dim project As New Project(dataDir & Convert.ToString("ReadTableData.mpp"))
 
             ' Access table

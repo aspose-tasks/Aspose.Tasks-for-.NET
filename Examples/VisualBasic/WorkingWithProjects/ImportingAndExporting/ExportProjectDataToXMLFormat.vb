@@ -11,11 +11,10 @@ Imports Aspose.Tasks.Saving
 Namespace WorkingWithProjects.ImportingAndExporting
     Public Class ExportProjectDataToXMLFormat
         Public Shared Sub Run()
-            ' ExStart:ExportProjectDataToXMLFormat
             ' The path to the documents directory.
             Dim dataDir As String = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName)
 
-            ' Create project instance
+            ' ExStart:ExportProjectDataToXMLFormat
             Dim project As New Project(dataDir & Convert.ToString("Project1.mpp"))
 
             ' Save project in desired format

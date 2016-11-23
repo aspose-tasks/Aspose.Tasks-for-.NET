@@ -7,10 +7,10 @@ Imports Aspose.Tasks.Saving
 Namespace WorkingWithProjects.Miscellaneous
     Public Class PrintTaskWritingException
         Public Shared Sub Run()
-            ' ExStart: PrintTaskWritingException
             ' The path to the documents directory.
             Dim dataDir As String = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName)
 
+            ' ExStart: PrintTaskWritingException
             Try
                 Dim project As New Project(dataDir & "PrintTaskWritingException.mpp")
                 Console.Write("This example will only work if you apply a valid Aspose License. You can purchase full license or get 30 day temporary license from http://www.aspose.com/purchase/default.aspx.")

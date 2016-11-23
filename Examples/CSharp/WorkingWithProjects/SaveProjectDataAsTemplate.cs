@@ -22,7 +22,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects
             project.Save(dataDir + "SaveProjectDataAsHTML_out.html", option);
 
             // OR
-            option.Pages.Add(2); // adding only one page (page number 2)
+            option.Pages.Add(2); // Adding only one page (page number 2)
             project.Save(dataDir + "SaveProjectDataAsHTML2_out.html", option);
             // ExEnd:SaveProjectDataAsTemplate
         }

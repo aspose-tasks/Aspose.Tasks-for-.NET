@@ -6,11 +6,10 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.WorkingWithProjectVie
     {
         public static void Run()
         {
-            // ExStart:SetTimeScaleCount
             // The path to the documents directory.
             string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
-            
-            // Create empty project
+
+            // ExStart:SetTimeScaleCount
             Project project = new Project();
 
             // Init Gantt Chart View

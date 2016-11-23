@@ -12,11 +12,10 @@ Imports Aspose.Tasks.Saving
 Namespace WorkingWithProjects.WorkingWithProjectViews
     Public Class SetTimeScaleCount
         Public Shared Sub Run()
-            ' ExStart:SetTimeScaleCount
             ' The path to the documents directory.
             Dim dataDir As String = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName)
 
-            ' Create empty project
+            ' ExStart:SetTimeScaleCount
             Dim project As New Project()
 
             ' Init Gantt Chart View

@@ -11,10 +11,10 @@ Imports Aspose.Tasks.Saving
 Namespace WorkingWithProjects.Miscellaneous
     Public Class ReadGroupDefinitionData
         Public Shared Sub Run()
-            ' ExStart:ReadGroupDefinitionData
             ' The path to the documents directory.
             Dim dataDir As String = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName)
 
+            ' ExStart:ReadGroupDefinitionData
             Dim project As New Project(dataDir & Convert.ToString("ReadGroupDefinitionData.mpp"))
 
             Console.WriteLine("Task Groups Count: " & project.TaskGroups.Count)

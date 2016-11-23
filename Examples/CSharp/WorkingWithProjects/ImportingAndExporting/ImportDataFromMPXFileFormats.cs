@@ -14,10 +14,10 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.ImportingAndExporting
     {
         public static void Run()
         {
-            // ExStart:ImportDataFromMPXFileFormats
             // The path to the documents directory.
             string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
+            // ExStart:ImportDataFromMPXFileFormats
             Project project = new Project(dataDir + "Primavera1.mpx");
             ProjectFileInfo info = Project.GetProjectFileInfo(dataDir + "primavera1.mpx");
             Console.WriteLine(info.ProjectFileFormat);

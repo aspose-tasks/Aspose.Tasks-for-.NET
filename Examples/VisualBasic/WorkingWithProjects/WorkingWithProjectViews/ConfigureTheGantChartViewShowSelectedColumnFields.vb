@@ -12,11 +12,11 @@ Imports Aspose.Tasks.Saving
 Namespace WorkingWithProjects.WorkingWithProjectViews
     Public Class ConfigureTheGantChartViewShowSelectedColumnFields
         Public Shared Sub Run()
-            ' ExStart:ConfigureTheGantChartViewShowSelectedColumnFields
             Try
                 ' The path to the documents directory.
                 Dim dataDir As String = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName)
 
+                ' ExStart:ConfigureTheGantChartViewShowSelectedColumnFields
                 Dim project As New Project(dataDir & Convert.ToString("Project5.mpp"))
 
                 ' Create a new project task
@@ -38,12 +38,12 @@ Namespace WorkingWithProjects.WorkingWithProjectViews
                 Dim table As Table = project.Tables.ToList()(0)
                 table.TableFields.Insert(3, attrField)
 
-                ' The result of opening of saved project in MSP2010 is in attached screenshot
+                ' Save project as MPP
                 project.Save(dataDir & Convert.ToString("ConfigureTheGantChartViewShowSelectedColumnFields_out.mpp"), SaveFileFormat.MPP)
+                ' ExEnd:ConfigureTheGantChartViewShowSelectedColumnFields
             Catch ex As Exception
                 Console.WriteLine(ex.Message + vbLf & "This example will only work if you apply a valid Aspose License. You can purchase full license or get 30 day temporary license from http:// Www.aspose.com/purchase/default.aspx.")
             End Try
-            ' ExEnd:ConfigureTheGantChartViewShowSelectedColumnFields
         End Sub
     End Class
 End Namespace

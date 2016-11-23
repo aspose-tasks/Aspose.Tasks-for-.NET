@@ -16,10 +16,10 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.WorkingWithProjectVie
     {
         public static void Run()
         {
-            // ExStart:ReadSpecificGantChartViewData
             // The path to the documents directory.
             string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
             
+            // ExStart:ReadSpecificGantChartViewData   
             Project project = new Project(dataDir + "Project2.mpp"); 
 
             GanttChartView view = project.Views.ToList()[0] as GanttChartView;

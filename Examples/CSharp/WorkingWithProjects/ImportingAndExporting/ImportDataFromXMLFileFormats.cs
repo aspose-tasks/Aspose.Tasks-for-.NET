@@ -14,10 +14,10 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.ImportingAndExporting
     {
         public static void Run()
         {
-            // ExStart:ImportDataFromXMLFileFormats
             // The path to the documents directory.
             string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
+            // ExStart:ImportDataFromXMLFileFormats
             Project project = new Project(dataDir + "Project.xml");
             ProjectFileInfo info = Project.GetProjectFileInfo(dataDir + "Project.xml");
             Console.WriteLine(info.ProjectFileFormat);
