@@ -12,20 +12,17 @@ Imports Aspose.Tasks.Visualization
 Namespace WorkingWithTasks.WorkingWithTaskConstraints
     Public Class SetConstraintFinishNoEarlierThan
         Public Shared Sub Run()
-            ' ExStart:SetConstraintFinishNoEarlierThan
             ' The path to the documents directory.
             Dim dataDir As String = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName)
 
             ' Create project instance
             Dim project1 As Project = New Project(dataDir + "ConstraintFinishNoEarlierThan.mpp")
 
+            ' ExStart:SetConstraintFinishNoEarlierThan
             ' Set constraint Finish No Earlier Than on task with Id 2
             Dim first As Task = project1.RootTask.Children.GetById(2)
             first.Set(Tsk.ConstraintType, ConstraintType.FinishNoEarlierThan)
             first.Set(Tsk.ConstraintDate, New DateTime(2016, 12, 1, 18, 0, 0))
-
-            ' TODO: Replace latest 
-            'Task.Recalculate(project.RootTask);
 
             ' Save project as pdf
             Dim options As SaveOptions = New PdfSaveOptions()

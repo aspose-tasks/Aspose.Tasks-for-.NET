@@ -57,9 +57,9 @@ Namespace WorkingWithCalendars
             End While
             tempDate = startDate
 
-            Console.WriteLine("Duration in Minutes = " + durationInMins)
-            Console.WriteLine("Duration in Hours = " + durationInHours)
-            Console.WriteLine("Duration in Days = " + durationInDays)
+            Console.WriteLine("Duration in Minutes = " & durationInMins)
+            Console.WriteLine("Duration in Hours = " & durationInHours)
+            Console.WriteLine("Duration in Days = " & durationInDays)
             ' ExEnd:CalculateWorkHours
         End Sub
     End Class

@@ -23,10 +23,10 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects
             string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
             // Create project and project info instances
-            Project project = new Project(dataDir + "HeaderFooter2007_3.mpp");
+            Project project = new Project(dataDir + "Blank2010.mpp");
             PageInfo info = project.DefaultView.PageInfo;
 
-            Console.WriteLine("Page data cannot be null : {0} ", info.Equals(null));
+            Console.WriteLine("Page data cannot be null : {0} ", !info.Equals(null));
 
             if (info != null)
             {                
@@ -59,7 +59,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects
             Console.WriteLine("PagesInWidth Equals 3 : {0} ", info.PageSettings.PagesInWidth.Equals(3));
             Console.WriteLine("PagesInHeight Equals 7 : {0} ", info.PageSettings.PagesInHeight.Equals(7));
             Console.WriteLine("PaperSize Equals PaperA4 : {0} ", info.PageSettings.PaperSize.Equals(PrinterPaperSize.PaperA4));
-            Console.WriteLine("FirstPageNumber Equals 2 : {0} ", info.PageSettings.FirstPageNumber.Equals(short.MinValue + 2));
+            Console.WriteLine("FirstPageNumber : {0} ", info.PageSettings.FirstPageNumber);
         }
 
         private static void AssertPageViewSettingsCorrect(PageInfo info)
@@ -90,7 +90,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects
             Console.WriteLine("Legend right text Equals RIGHT LEGEND : {0} ", info.Legend.RightText.Equals("RIGHT LEGEND"));
 
             Console.WriteLine("LegendOn Equals Legend.OnEveryPage : {0} ", info.Legend.LegendOn.Equals(Legend.OnEveryPage));
-            Console.WriteLine("Legend Width Equals 7.77 : {0} ", (info.Legend.Width - 7.77 <= 1e-5) ? true : false);            
+            Console.WriteLine("Legend Width Equals 5 : {0} ", (info.Legend.Width - 5 <= 1e-5) ? true : false);            
         }
         // ExEnd:ReadHeaderFooterInfo
     }

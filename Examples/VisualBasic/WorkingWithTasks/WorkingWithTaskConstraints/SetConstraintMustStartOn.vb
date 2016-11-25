@@ -12,20 +12,17 @@ Imports Aspose.Tasks.Saving
 Namespace WorkingWithTasks.WorkingWithTaskConstraints
     Public Class SetConstraintMustStartOn
         Public Shared Sub Run()
-            ' ExStart:SetConstraintMustStartOn
             ' The path to the documents directory.
             Dim dataDir As String = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName)
 
             ' Create project instance
             Dim project1 As Project = New Project(dataDir + "ConstraintMustStartOn.mpp")
 
+            ' ExStart:SetConstraintMustStartOn
             ' Set constraint Must Start On for task with Id 5
             Dim roof As Task = project1.RootTask.Children.GetById(5)
             roof.Set(Tsk.ConstraintType, ConstraintType.MustStartOn)
             roof.Set(Tsk.ConstraintDate, New DateTime(2017, 1, 1, 9, 0, 0))
-
-            ' TODO: Replace latest 
-            'Task.Recalculate(project.RootTask);
 
             ' Save project as pdf
             Dim options As SaveOptions = New PdfSaveOptions()

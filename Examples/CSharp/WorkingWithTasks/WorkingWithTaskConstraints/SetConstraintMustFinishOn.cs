@@ -19,21 +19,18 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithTasks.WorkingWithTaskConstrain
     {
         public static void Run()
         {
-            // ExStart:SetConstraintMustFinishOn
             // The path to the documents directory.
             string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
             // Create project instance
             Project project1 = new Project(dataDir + "ConstraintMustFinishOn.mpp");
 
+            // ExStart:SetConstraintMustFinishOn
             // Set constraint Must Finish On for task with Id 15
             Task interiorFixtures = project1.RootTask.Children.GetById(15);
             interiorFixtures.Set(Tsk.ConstraintType, ConstraintType.MustFinishOn);
             interiorFixtures.Set(Tsk.ConstraintDate, new DateTime(2017, 3, 1, 18, 0, 0));
-
-            // TODO: Replace latest 
-            //Task.Recalculate(project.RootTask);
-
+                        
             // Save project as pdf
             SaveOptions options = new PdfSaveOptions();
             options.StartDate = project1.Get(Prj.StartDate);

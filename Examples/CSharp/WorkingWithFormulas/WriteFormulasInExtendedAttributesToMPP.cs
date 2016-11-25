@@ -17,6 +17,9 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithFormulas
         {
             try
             {
+                var lic = new License();
+                lic.SetLicense(@"E:\Aspose\License\Aspose.Tasks.lic");
+				
                 // ExStart:WriteFormulasInExtendedAttributesToMPP
                 // Create project instance
                 string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);

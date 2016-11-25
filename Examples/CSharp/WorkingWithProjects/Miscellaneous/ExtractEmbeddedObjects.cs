@@ -10,7 +10,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.Miscellaneous
             string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
             // ExStart:ExtractEmbeddedObjects
-            Project project = new Project(dataDir + "Project1.mpp");
+            Project project = new Project(dataDir + "ExtractEmbeddedObjects.mpp");
             OleObject ole = project.OleObjects.ToList()[0];
 
             // We have to check this property because it can be null if the embedded object was created inside the ms project application Or, alternatively, you can use this check: if (ole.FileFormat == "Package")

@@ -19,21 +19,18 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithTasks.WorkingWithTaskConstrain
     {
         public static void Run()
         {
-            // ExStart:SetConstraintMustStartOn
             // The path to the documents directory.
             string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
             // Create project instance
             Project project1 = new Project(dataDir + "ConstraintMustStartOn.mpp");
 
+            // ExStart:SetConstraintMustStartOn
             // Set constraint Must Start On for task with Id 5
             Task roof = project1.RootTask.Children.GetById(5);
             roof.Set(Tsk.ConstraintType, ConstraintType.MustStartOn);
             roof.Set(Tsk.ConstraintDate, new DateTime(2017, 1, 1, 9, 0, 0));
-
-            // TODO: Replace latest 
-            //Task.Recalculate(project.RootTask);
-
+                        
             // Save project as pdf
             SaveOptions options = new PdfSaveOptions();
             options.StartDate = project1.Get(Prj.StartDate);

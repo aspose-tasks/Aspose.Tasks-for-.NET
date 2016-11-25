@@ -114,6 +114,7 @@
     <Compile Include="WorkingWithResources\GetResourceCosts.vb" />
     <Compile Include="WorkingWithResources\GetResourceOvertime.vb" />
     <Compile Include="WorkingWithResources\GetResourcePercentWorkComplete.vb" />
+    <Compile Include="WorkingWithResources\GetResourceWorkVariance.vb" />
     <Compile Include="WorkingWithResources\ReadResourceTimephasedData.vb" />
     <Compile Include="WorkingWithResources\RenderResourceSheetView.vb" />
     <Compile Include="WorkingWithResources\RenderResourceUsageView.vb" />
@@ -198,6 +199,7 @@
     <Compile Include="WorkingWithTaskLinks\SetTaskLinkType.vb" />
     <Compile Include="WorkingWithTasks\AddTaskExtendedAttributes.vb" />
     <Compile Include="WorkingWithTasks\CalculateTaskDurations.vb" />
+    <Compile Include="WorkingWithTasks\ChangeTaskProgress.vb" />
     <Compile Include="WorkingWithTasks\CreateSplitTasks.vb" />
     <Compile Include="WorkingWithTasks\CreateSubProjectTask.vb" />
     <Compile Include="WorkingWithTasks\MoveTaskAtTheEnd.vb" />
@@ -280,6 +282,7 @@
     <Compile Include="WorkingWithTasks\RenderTaskUsageViewWithDetails.vb" />
     <Compile Include="WorkingWithTasks\UpdateTaskData.vb" />
     <Compile Include="WorkingWithTasks\ViewSplitTasks.vb" />
+    <Compile Include="WorkingWithTasks\WorkingWithTaskConstraints\GetConstraints.vb" />
     <Compile Include="WorkingWithTasks\WorkingWithTaskConstraints\SetConstraintAsLateAsPossible.vb" />
     <Compile Include="WorkingWithTasks\WorkingWithTaskConstraints\SetConstraintFinishNoEarlierThan.vb" />
     <Compile Include="WorkingWithTasks\WorkingWithTaskConstraints\SetConstraintMustFinishOn.vb" />

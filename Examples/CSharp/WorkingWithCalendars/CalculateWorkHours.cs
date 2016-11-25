@@ -15,7 +15,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithCalendars
             Project project = new Project(dataDir + "CalculateWorkHours.mpp");
 
             // Access Task By Id
-            Task task = project.RootTask.Children.GetById(4);
+            Task task = project.RootTask.Children.GetById(1);
 
             // Access Calendar and it's start and end dates
             Aspose.Tasks.Calendar taskCalendar = task.Get(Tsk.Calendar);
