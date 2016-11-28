@@ -149,6 +149,7 @@
     <Compile Include="WorkingWithResources\GetResourceCosts.cs" />
     <Compile Include="WorkingWithResources\GetResourceOvertime.cs" />
     <Compile Include="WorkingWithResources\GetResourcePercentWorkComplete.cs" />
+    <Compile Include="WorkingWithResources\GetResourceWorkVariance.cs" />
     <Compile Include="WorkingWithResources\ReadResourceTimephasedData.cs" />
     <Compile Include="WorkingWithResources\RenderResourceSheetView.cs" />
     <Compile Include="WorkingWithResources\RenderResourceUsageView.cs" />
@@ -165,6 +166,7 @@
     <Compile Include="WorkingWithTaskLinks\GetTaskLinkType.cs" />
     <Compile Include="WorkingWithTaskLinks\IdentifyCrossProjectTasks.cs" />
     <Compile Include="WorkingWithTaskLinks\SetTaskLinkType.cs" />
+    <Compile Include="WorkingWithTasks\ChangeTaskProgress.cs" />
     <Compile Include="WorkingWithTasks\MoveTaskAtTheEnd.cs" />
     <Compile Include="WorkingWithTasks\MoveTaskUnderAnotherParent.cs" />
     <Compile Include="WorkingWithTasks\MoveTaskUnderSameParent.cs" />
@@ -252,6 +254,7 @@
     <Compile Include="WorkingWithTasks\RenderTaskUsageViewWithDetails.cs" />
     <Compile Include="WorkingWithTasks\UpdateTaskData.cs" />
     <Compile Include="WorkingWithTasks\ViewSplitTasks.cs" />
+    <Compile Include="WorkingWithTasks\WorkingWithTaskConstraints\GetConstraints.cs" />
     <Compile Include="WorkingWithTasks\WorkingWithTaskConstraints\SetConstraintAsLateAsPossible.cs" />
     <Compile Include="WorkingWithTasks\WorkingWithTaskConstraints\SetConstraintFinishNoEarlierThan.cs" />
     <Compile Include="WorkingWithTasks\WorkingWithTaskConstraints\SetConstraintMustFinishOn.cs" />

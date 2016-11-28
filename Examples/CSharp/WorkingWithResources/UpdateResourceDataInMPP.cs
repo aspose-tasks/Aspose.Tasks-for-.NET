@@ -27,6 +27,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithResources
                 // Create project instance
                 Project project1 = new Project(dataDir + "UpdateResourceData.mpp");
 
+                // Add resource and set some properties
                 Resource rsc1 = project1.Resources.Add("Rsc");
                 rsc1.Set(Rsc.StandardRate, 30);
                 rsc1.Set(Rsc.OvertimeRate, 45);

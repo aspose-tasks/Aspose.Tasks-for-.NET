@@ -16,10 +16,10 @@ Namespace WorkingWithProjects
             Dim dataDir As String = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName)
 
             ' Create project and project info instances
-            Dim project As New Project(dataDir & "HeaderFooter2007_3.mpp")
+            Dim project As New Project(dataDir & "Blank2010.mpp")
             Dim info As PageInfo = project.DefaultView.PageInfo
 
-            Console.WriteLine("Page data cannot be null : {0} ", info.Equals(Nothing))
+            Console.WriteLine("Page data cannot be null : {0} ", Not info.Equals(Nothing))
 
             If info IsNot Nothing Then
                 AssertHeaderFooterCorrect(info)
@@ -49,7 +49,7 @@ Namespace WorkingWithProjects
             Console.WriteLine("PagesInWidth Equals 3 : {0} ", info.PageSettings.PagesInWidth.Equals(3))
             Console.WriteLine("PagesInHeight Equals 7 : {0} ", info.PageSettings.PagesInHeight.Equals(7))
             Console.WriteLine("PaperSize Equals PaperA4 : {0} ", info.PageSettings.PaperSize.Equals(PrinterPaperSize.PaperA4))
-            Console.WriteLine("FirstPageNumber Equals 2 : {0} ", info.PageSettings.FirstPageNumber.Equals(Short.MinValue + 2))
+            Console.WriteLine("FirstPageNumber : {0} ", info.PageSettings.FirstPageNumber)
         End Sub
 
         Private Shared Sub AssertPageViewSettingsCorrect(info As PageInfo)

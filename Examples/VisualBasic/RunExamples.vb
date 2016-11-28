@@ -73,7 +73,7 @@ Class RunExamples
         ' =====================================================
         ' =====================================================
 
-        'DefineWeekdaysForCalendar.Run()
+        'CalculateWorkHours.Run()
         'GeneralCalendarProperties.Run()
         'ReadWorkWeeksInformation.Run()
         'RetrieveCalendarInfo.Run()
@@ -82,6 +82,7 @@ Class RunExamples
         ' =====================================================
 
         'CreatingCalendar.Run()
+        'DefineWeekdaysForCalendar.Run()
         'MakeAStandardCalendar.Run()
         'ReplaceCalendar.Run()
         'WriteUpdatedCalendarDataToMPP.Run()
@@ -112,8 +113,11 @@ Class RunExamples
         'CalculateTextFunctions.Run()
         'FormulaWithBooleanValues.Run()
         'FormulaWithProjectFields.Run()
+        'ReadFormulasExtendedAttributesFromMPP.Run()
         'UsingArithmeticExpression.Run()
         'UsingTaskNumberFields.Run()
+        'UsingTasksAndResourceFieldsInFormulaCalculations.Run()
+        'WriteFormulasInExtendedAttributesToMPP.Run()
 
         ' =====================================================
         ' =====================================================
@@ -125,6 +129,7 @@ Class RunExamples
         'GetNumberOfPages.Run()
         'GetNumberOfPagesForViews.Run()
         'MPPFileUpdate.Run()
+        'ReadHeaderFooterInfo.Run()
         'ReadModuleAttributesInforamtion.Run()
         'ReadModulesInformation.Run()
         'ReadOutlineCodes.Run()
@@ -224,6 +229,7 @@ Class RunExamples
         'ConfigureGantChart.Run()
         'ConfigureTheGantChartViewShowSelectedColumnFields.Run()
         'CustomizeTimescaleTierLabels.Run()
+        'ReadSpecificGantChartViewData.Run()
         'SetTimeScaleCount.Run()
 
         ' =====================================================
@@ -255,6 +261,7 @@ Class RunExamples
         'GetResourceCosts.Run()
         'GetResourceOvertime.Run()
         'GetResourcePercentWorkComplete.Run()
+        'GetResourceWorkVariance.Run()
         'ReadResourceTimephasedData.Run()
         'RenderResourceSheetView.Run()
         'RenderResourceUsageView.Run()
@@ -292,8 +299,10 @@ Class RunExamples
         ' =====================================================
         ' =====================================================
 
+        'AddTaskExtendedAttributes.Run()
         'CalculateSplitTaskFinishDate.Run()
         'CalculateTaskDurations.Run()
+        'ChangeTaskProgress.Run()
         'CreateSplitTasks.Run()
         'CreateSubProjectTask.Run()
         'CreateTasks.Run()
@@ -328,6 +337,11 @@ Class RunExamples
         ' Working with Task Constraints
         ' =====================================================
 
+        'GetConstraints.Run()
+        'SetConstraintAsLateAsPossible.Run()
+        'SetConstraintFinishNoEarlierThan.Run()
+        'SetConstraintMustFinishOn.Run()
+        'SetConstraintMustStartOn.Run()
         'SetConstraintStartNoEarlierThan.Run()
 
         ' Stop before exiting
@@ -341,7 +355,7 @@ Class RunExamples
         categoryName = categoryName.Substring(0, categoryName.IndexOf("."))
         categoryName = categoryName.Replace(".", Path.DirectorySeparatorChar)
         Dim p As String = Path.GetFullPath(Path.Combine(Directory.GetCurrentDirectory(), "..", "..", "..", "Data", categoryName))
-        p += Path.DirectorySeparatorChar
+        p &= Path.DirectorySeparatorChar
 
         If Directory.Exists(p) Then
             Console.WriteLine("Using Data Dir {0}", p)

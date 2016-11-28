@@ -37,8 +37,11 @@ Namespace WorkingWithFormulas
 
         ' Helper method to create project
         Public Shared Function CreateTestProjectWithCustomField() As Project
+            ' The path to the documents directory.
+            Dim dataDir As String = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName)
+
             ' Create new project instance
-            Dim project As New Project()
+            Dim project As New Project(dataDir + "Blank2010.mpp")
             project.[Set](Prj.StartDate, New DateTime(2015, 3, 6, 8, 0, 0))
 
             ' Add new task with extended attribute

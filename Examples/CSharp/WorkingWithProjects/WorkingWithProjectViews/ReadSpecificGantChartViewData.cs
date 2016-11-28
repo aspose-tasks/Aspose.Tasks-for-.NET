@@ -20,7 +20,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.WorkingWithProjectVie
             string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
             
             // ExStart:ReadSpecificGantChartViewData   
-            Project project = new Project(dataDir + "Project2.mpp"); 
+            Project project = new Project(dataDir + "ReadSpecificGantChartViewData.mpp"); 
 
             GanttChartView view = project.Views.ToList()[0] as GanttChartView;
             Console.WriteLine("Is Bar Rounding: " + view.BarRounding);

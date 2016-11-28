@@ -18,22 +18,19 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithTasks.WorkingWithTaskConstrain
     class SetConstraintFinishNoEarlierThan
     {
         public static void Run()
-        {
-            // ExStart:SetConstraintFinishNoEarlierThan
+        {           
             // The path to the documents directory.
             string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
             // Create project instance
             Project project1 = new Project(dataDir + "ConstraintFinishNoEarlierThan.mpp");
 
+            // ExStart:SetConstraintFinishNoEarlierThan
             // Set constraint Finish No Earlier Than on task with Id 2
             Task first = project1.RootTask.Children.GetById(2);
             first.Set(Tsk.ConstraintType, ConstraintType.FinishNoEarlierThan);
             first.Set(Tsk.ConstraintDate, new DateTime(2016, 12, 1, 18, 0, 0));
-
-            // TODO: Replace latest 
-            //Task.Recalculate(project.RootTask);
-
+                        
             // Save project as pdf
             SaveOptions options = new PdfSaveOptions();
             options.StartDate = project1.Get(Prj.StartDate);

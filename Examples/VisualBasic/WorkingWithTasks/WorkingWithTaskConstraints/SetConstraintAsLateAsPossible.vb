@@ -12,19 +12,16 @@ Imports Aspose.Tasks.Visualization
 Namespace WorkingWithTasks.WorkingWithTaskConstraints
     Public Class SetConstraintAsLateAsPossible
         Public Shared Sub Run()
-            ' ExStart:SetConstraintAsLateAsPossible
             ' The path to the documents directory.
             Dim dataDir As String = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName)
 
             ' Create project instance
             Dim project1 As Project = New Project(dataDir + "ConstraintAsLateAsPossible.mpp")
 
+            ' ExStart:SetConstraintAsLateAsPossible
             ' Set constraint As Late As Possible for task with Id 11
             Dim wallBoard As Task = project1.RootTask.Children.GetById(11)
             wallBoard.Set(Tsk.ConstraintType, ConstraintType.AsLateAsPossible)
-
-            ' TODO: Replace latest 
-            'Task.Recalculate(project.RootTask);
 
             ' Save project as pdf
             Dim options As SaveOptions = New PdfSaveOptions()

@@ -78,7 +78,7 @@ namespace Aspose.Tasks.Examples.CSharp
             // =====================================================
             // =====================================================
 
-            //DefineWeekdaysForCalendar.Run();
+            //CalculateWorkHours.Run();            
             //GeneralCalendarProperties.Run();
             //ReadWorkWeeksInformation.Run();
             //RetrieveCalendarInfo.Run();  
@@ -87,6 +87,7 @@ namespace Aspose.Tasks.Examples.CSharp
             // =====================================================
 
             //CreatingCalendar.Run();
+            //DefineWeekdaysForCalendar.Run();
             //MakeAStandardCalendar.Run();
             //ReplaceCalendar.Run();
             //WriteUpdatedCalendarDataToMPP.Run();
@@ -117,8 +118,11 @@ namespace Aspose.Tasks.Examples.CSharp
             //CalculateTextFunctions.Run();
             //FormulaWithBooleanValues.Run();
             //FormulaWithProjectFields.Run();
+            ReadFormulasExtendedAttributesFromMPP.Run();
             //UsingArithmeticExpression.Run();
             //UsingTaskNumberFields.Run();
+            //UsingTasksAndResourceFieldsInFormulaCalculations.Run();
+            //WriteFormulasInExtendedAttributesToMPP.Run();
 
             // =====================================================
             // =====================================================
@@ -130,6 +134,7 @@ namespace Aspose.Tasks.Examples.CSharp
             //GetNumberOfPages.Run();
             //GetNumberOfPagesForViews.Run();
             //MPPFileUpdate.Run();
+            //ReadHeaderFooterInfo.Run();
             //ReadModuleAttributesInforamtion.Run();
             //ReadModulesInformation.Run();
             //ReadOutlineCodes.Run();
@@ -176,7 +181,7 @@ namespace Aspose.Tasks.Examples.CSharp
             // =====================================================
 
             //CalculateCriticalPath.Run();
-            //EmbeddedObjectsCreatedInsideApplication.Run();
+            //EmbeddedObjectsCreatedInsideApplication.Run();            
             //PrintTaskWritingException.Run();
             //ReadFilterCriteriaData.Run();
             //ReadFilterDefinitionData.Run();
@@ -230,6 +235,7 @@ namespace Aspose.Tasks.Examples.CSharp
             //ConfigureGantChart.Run();
             //ConfigureTheGantChartViewShowSelectedColumnFields.Run();
             //CustomizeTimescaleTierLabels.Run();
+            //ReadSpecificGantChartViewData.Run();
             //SetTimeScaleCount.Run();
             
             // =====================================================
@@ -260,6 +266,7 @@ namespace Aspose.Tasks.Examples.CSharp
             //GetResourceCosts.Run();
             //GetResourceOvertime.Run();
             //GetResourcePercentWorkComplete.Run();
+            //GetResourceWorkVariance.Run();
             //ReadResourceTimephasedData.Run();
             //RenderResourceSheetView.Run();
             //RenderResourceUsageView.Run();
@@ -296,9 +303,11 @@ namespace Aspose.Tasks.Examples.CSharp
             // Working With Tasks
             // =====================================================
             // =====================================================
-                        
+
+            //AddTaskExtendedAttributes.Run();
             //CalculateSplitTaskFinishDate.Run();
             //CalculateTaskDurations.Run();
+            //ChangeTaskProgress.Run();
             //CreateSplitTasks.Run();
             //CreateSubProjectTask.Run();
             //CreateTasks.Run();
@@ -333,6 +342,11 @@ namespace Aspose.Tasks.Examples.CSharp
             // Working with Task Constraints
             // =====================================================
 
+            //GetConstraints.Run();
+            //SetConstraintAsLateAsPossible.Run();
+            //SetConstraintFinishNoEarlierThan.Run();
+            //SetConstraintMustFinishOn.Run();
+            //SetConstraintMustStartOn.Run();
             //SetConstraintStartNoEarlierThan.Run();
             
             // Stop before exiting

@@ -12,9 +12,12 @@ Namespace WorkingWithTasks
     Public Class AddTaskExtendedAttributes
         Public Shared Sub Run()
             Try
+                ' The path to the documents directory.
+                Dim dataDir As String = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName)
+
                 ' ExStart:AddTaskExtendedAttributes
                 ' Create new project
-                Dim project1 As New Project()
+                Dim project1 As New Project(dataDir & "Blank2010.mpp")
 
                 ' Create the Extended Attribute Definition of Text Type
                 Dim taskExtendedAttributeText9Definition As ExtendedAttributeDefinition
@@ -58,7 +61,6 @@ Namespace WorkingWithTasks
                 task.ExtendedAttributes.Add(taskExtendedAttributeFlag1)
 
                 ' Save the Project
-                Dim dataDir As String = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName)
                 project1.Save(dataDir & "AddTaskExtendedAttributes_out.mpp", SaveFileFormat.MPP)
                 ' ExEnd:AddTaskExtendedAttributes
             Catch ex As Exception

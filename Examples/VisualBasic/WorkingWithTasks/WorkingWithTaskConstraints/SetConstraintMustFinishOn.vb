@@ -12,20 +12,17 @@ Imports Aspose.Tasks.Visualization
 Namespace WorkingWithTasks.WorkingWithTaskConstraints
     Public Class SetConstraintMustFinishOn
         Public Shared Sub Run()
-            ' ExStart:SetConstraintMustFinishOn
             ' The path to the documents directory.
             Dim dataDir As String = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName)
 
             ' Create project instance
             Dim project1 As Project = New Project(dataDir + "ConstraintMustFinishOn.mpp")
 
+            ' ExStart:SetConstraintMustFinishOn
             ' Set constraint Must Finish On for task with Id 15
             Dim interiorFixtures As Task = project1.RootTask.Children.GetById(15)
             interiorFixtures.Set(Tsk.ConstraintType, ConstraintType.MustFinishOn)
             interiorFixtures.Set(Tsk.ConstraintDate, New DateTime(2017, 3, 1, 18, 0, 0))
-
-            ' TODO: Replace latest 
-            'Task.Recalculate(project.RootTask);
 
             ' Save project as pdf
             Dim options As SaveOptions = New PdfSaveOptions()

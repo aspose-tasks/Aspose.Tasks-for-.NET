@@ -43,8 +43,11 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithFormulas
         // Helper method to create project
         private static Project CreateTestProjectWithCustomField()
         {
+            // The path to the documents directory.
+            string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
+
             // Create new project instance
-            Project project = new Project();
+            Project project = new Project(dataDir + "Blank2010.mpp");
             project.Set(Prj.StartDate, new DateTime(2015, 3, 6, 8, 0, 0));
 
             // Add new task with extended attribute
