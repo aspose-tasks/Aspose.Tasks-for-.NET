@@ -14,7 +14,7 @@ Namespace Miscellaneous
             Dim dataDir As String = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName)
 
             ' ExStart:SaveBurnDownReport
-            Dim project1 As New Project(dataDir & "Cyclic stucture.mpp")
+            Dim project1 As New Project(dataDir & "Homemoveplan.mpp")
             project1.SaveReport(dataDir & "Burndown_out.pdf", ReportType.Burndown)
             ' ExEnd:SaveBurnDownReport
         End Sub

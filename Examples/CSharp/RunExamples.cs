@@ -43,6 +43,7 @@ namespace Aspose.Tasks.Examples.CSharp
             //HandleExceptions.Run();
             //PerformRiskAnalysis.Run();
             //SaveBestPracticeAnalyzerReport.Run();
+            //SaveBurnDownReport.Run();            
             //SaveCashFlowReport.Run();
             //SaveCostOverrunsReport.Run();
             //SaveCostOverviewReport.Run();
@@ -53,6 +54,7 @@ namespace Aspose.Tasks.Examples.CSharp
             //SaveProjectOverviewReport.Run();
             //SaveResourceCostOverviewReport.Run();
             //SaveResourceOverviewReport.Run();
+            //SaveSlippingTasksReport.Run();
             //SaveTaskCostOverviewReport.Run();
             //SaveUpcomingTasksReport.Run();
             //SaveWorkOverviewReport.Run();
@@ -118,7 +120,7 @@ namespace Aspose.Tasks.Examples.CSharp
             //CalculateTextFunctions.Run();
             //FormulaWithBooleanValues.Run();
             //FormulaWithProjectFields.Run();
-            ReadFormulasExtendedAttributesFromMPP.Run();
+            //ReadFormulasExtendedAttributesFromMPP.Run();
             //UsingArithmeticExpression.Run();
             //UsingTaskNumberFields.Run();
             //UsingTasksAndResourceFieldsInFormulaCalculations.Run();

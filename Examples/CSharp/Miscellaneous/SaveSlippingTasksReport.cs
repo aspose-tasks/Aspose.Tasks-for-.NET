@@ -21,7 +21,7 @@ namespace Aspose.Tasks.Examples.CSharp.Miscellaneous
             string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
             // ExStart:SaveSlippingTasksReport
-            Project project1 = new Project(dataDir + "Cyclic stucture.mpp");
+            Project project1 = new Project(dataDir + "Homemoveplan.mpp");
             project1.SaveReport(dataDir + "SlippingTasks_out.pdf", ReportType.SlippingTasks);
             // ExEnd:SaveSlippingTasksReport
         }
