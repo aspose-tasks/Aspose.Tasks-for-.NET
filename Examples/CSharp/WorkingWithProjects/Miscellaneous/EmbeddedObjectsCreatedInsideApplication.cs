@@ -23,17 +23,17 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.Miscellaneous
 
                 // ExStart:EmbeddedObjectsCreatedInsideApplication
                 IDictionary<string, string> fileFormatExt = new Dictionary<string, string>();
-                fileFormatExt.Add(dataDir + "Image1", ".png");
-                fileFormatExt.Add(dataDir + "Document1", ".docx");
-                fileFormatExt.Add(dataDir + "Documennt1", ".xlsx");
+                fileFormatExt.Add("RTF", "_rtfFile_out.rtf");
+                fileFormatExt.Add("MSWordDoc", "_wordFile_out.docx");
+                fileFormatExt.Add("ExcelML12", "_excelFile_out.xlsx");
 
-                Project project = new Project(dataDir + "EmbeddedObjects.mpp"); 
+                Project project = new Project(dataDir + "Embedded.mpp"); 
 
                 foreach (OleObject oleObject in project.OleObjects)
                 {
                     if (!string.IsNullOrEmpty(oleObject.FileFormat) && fileFormatExt.ContainsKey(oleObject.FileFormat))
                     {
-                        string path = dataDir + "EmbeddedContent_out" + fileFormatExt[oleObject.FileFormat];
+                        string path = dataDir + "EmbeddedContent_" + fileFormatExt[oleObject.FileFormat];
                         using (FileStream fileStream = new FileStream(path, FileMode.Create))
                             fileStream.Write(oleObject.Content, 0, oleObject.Content.Length);
                     }

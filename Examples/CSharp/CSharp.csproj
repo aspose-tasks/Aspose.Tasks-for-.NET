@@ -95,6 +95,7 @@
     <Compile Include="WorkingWithProjects\CreatingReadingAndSaving\SaveProjectAsText.cs" />
     <Compile Include="WorkingWithProjects\CreatingReadingAndSaving\UseSvgOptions.cs" />
     <Compile Include="WorkingWithProjects\ImportingAndExporting\ImportProjectFromPrimaveraDB.cs" />
+    <Compile Include="WorkingWithProjects\ImportingAndExporting\UsingPrimaveraXMLSaveOptions.cs" />
     <Compile Include="WorkingWithProjects\ReadHeaderFooterInfo.cs" />
     <Compile Include="WorkingWithProjects\Rescheduling\RescheduleProjectFromFinishDate.cs" />
     <Compile Include="WorkingWithFormulas\UsingArithmeticExpression.cs" />
@@ -105,6 +106,7 @@
     <Compile Include="WorkingWithCalendars\CreatingUpdatingAndRemoving\MakeAStandardCalendar.cs" />
     <Compile Include="WorkingWithCalendars\ReadWorkWeeksInformation.cs" />
     <Compile Include="WorkingWithCalendars\CreatingUpdatingAndRemoving\WriteUpdatedCalendarDataToMPP.cs" />
+    <Compile Include="WorkingWithProjects\WorkingWithExtendedAttributes\CreateExtendedAttributes.cs" />
     <Compile Include="WorkingWithProjects\WorkingWithProjectProperties\ApplyCalculationModeAuto.cs" />
     <Compile Include="WorkingWithProjects\WorkingWithProjectProperties\ApplyCalculationModeManual.cs" />
     <Compile Include="WorkingWithProjects\WorkingWithProjectProperties\ApplyCalculationModeNone.cs" />

@@ -92,6 +92,7 @@ namespace Aspose.Tasks.Examples.CSharp
             //DefineWeekdaysForCalendar.Run();
             //MakeAStandardCalendar.Run();
             //ReplaceCalendar.Run();
+            //ReplaceCalendarWithNewCalendar.Run();
             //WriteUpdatedCalendarDataToMPP.Run();
 
             // =====================================================
@@ -178,6 +179,7 @@ namespace Aspose.Tasks.Examples.CSharp
             //ExportProjectDataToXMLFormat.Run();
             //ImportDataFromXMLFileFormats.Run();
             //SupportForSQLiteDatabase.Run();
+            //UsingPrimaveraXMLSaveOptions.Run(); 
 
             // Miscellaneous
             // =====================================================
@@ -208,6 +210,7 @@ namespace Aspose.Tasks.Examples.CSharp
             // Working with Extended Attributes
             // =====================================================
 
+            //CreateExtendedAttributes.Run();
             //WriteExtendedAttributes.Run();
             //WriteUpdatedExtendedAttributeDefinitions.Run();
 

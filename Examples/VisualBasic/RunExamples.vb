@@ -87,6 +87,7 @@ Class RunExamples
         'DefineWeekdaysForCalendar.Run()
         'MakeAStandardCalendar.Run()
         'ReplaceCalendar.Run()
+        'ReplaceCalendarWithNewCalendar.Run()
         'WriteUpdatedCalendarDataToMPP.Run()
 
         ' =====================================================
@@ -172,6 +173,7 @@ Class RunExamples
         'ExportProjectDataToXMLFormat.Run()
         'ImportDataFromXMLFileFormats.Run()
         'SupportForSQLiteDatabase.Run()
+        'UsingPrimaveraXMLSaveOptions.Run()
 
         ' Miscellaneous
         ' =====================================================
@@ -202,6 +204,7 @@ Class RunExamples
         ' Working with Extended Attributes
         ' =====================================================
 
+        'CreateExtendedAttributes.Run()
         'WriteExtendedAttributes.Run()
         'WriteUpdatedExtendedAttributeDefinitions.Run()
 

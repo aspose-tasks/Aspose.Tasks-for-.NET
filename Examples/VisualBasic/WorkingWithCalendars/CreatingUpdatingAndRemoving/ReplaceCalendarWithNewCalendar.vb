@@ -1,4 +1,5 @@
 Imports Aspose.Tasks
+Imports Aspose.Tasks.Saving
 
 '
 'This project uses Automatic Package Restore feature of NuGet to resolve Aspose.Tasks for .NET API reference 
@@ -11,28 +12,31 @@ Imports Aspose.Tasks
 Namespace WorkingWithCalendars.CreatingUpdatingAndRemoving
     Public Class ReplaceCalendarWithNewCalendar
         Public Shared Sub Run()
-            ' ExStart:ReplaceCalendarWithNewCalendar
-            ' The path to the documents directory.
-            Dim dataDir As String = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName)
+            Try
+                ' The path to the documents directory.
+                Dim dataDir As String = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName)
 
-            ' Create project and new calendar instance
-            Dim project As New Project(dataDir & Convert.ToString("Project5.mpp"))
-            Dim calendar As New Calendar("New Cal")
+                ' ExStart:ReplaceCalendarWithNewCalendar
+                ' Create project
+                Dim project As New Project(dataDir & Convert.ToString("Project5.mpp"))
 
-            ' Access project calendars
-            Dim calColl As CalendarCollection = project.Calendars
-            For Each getcalendar As Calendar In calColl
-                If getcalendar.Name = "Standard" Then
+                ' Access project calendars
+                Dim calColl As CalendarCollection = project.Calendars
+                For Each myCalendar As Calendar In calColl
+                    If myCalendar.Name = "TestCalendar" Then
+                        ' Remove calendar
+                        calColl.Remove(myCalendar)
+                        Exit For
+                    End If
+                Next
 
-                    ' Remove calendar
-                    calColl.Remove(getcalendar)
-
-                    ' Add new calendar
-                    calColl.Add("Standard", getcalendar)
-                    Exit For
-                End If
-            Next
-            ' ExEnd:ReplaceCalendarWithNewCalendar
+                ' Add new calendar
+                Dim newCalendar As Calendar = calColl.Add("TestCalendar")
+                project.Save(dataDir + "ReplaceCalendar_out.mpp", SaveFileFormat.MPP)
+                ' ExEnd:ReplaceCalendarWithNewCalendar
+            Catch ex As Exception
+                Console.WriteLine(ex.Message + vbLf & "This example will only work if you apply a valid Aspose License. You can purchase full license or get 30 day temporary license from http://www.aspose.com/purchase/default.aspx.")
+            End Try
         End Sub
     End Class
 End Namespace
