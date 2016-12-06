@@ -98,6 +98,8 @@
     <Compile Include="WorkingWithFormulas\CalculateMathExpressions.vb" />
     <Compile Include="WorkingWithFormulas\CalculateTextFunctions.vb" />
     <Compile Include="WorkingWithFormulas\UsingArithmeticExpression.vb" />
+    <Compile Include="WorkingWithProjects\ImportingAndExporting\UsingPrimaveraXMLSaveOptions.vb" />
+    <Compile Include="WorkingWithProjects\WorkingWithExtendedAttributes\CreateExtendedAttributes.vb" />
     <Compile Include="WorkingWithResourceAssignments\CreateResourceAssignments.vb" />
     <Compile Include="WorkingWithResourceAssignments\GenerateResourceAssignmentTimephasedData.vb" />
     <Compile Include="WorkingWithResourceAssignments\GetGeneralResourceAssignmentProperties.vb" />

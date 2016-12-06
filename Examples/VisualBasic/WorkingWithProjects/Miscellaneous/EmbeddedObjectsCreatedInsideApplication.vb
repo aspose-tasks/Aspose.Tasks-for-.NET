@@ -18,15 +18,16 @@ Namespace WorkingWithProjects.Miscellaneous
 
                 ' ExStart:EmbeddedObjectsCreatedInsideApplication
                 Dim fileFormatExt As IDictionary(Of String, String) = New Dictionary(Of String, String)()
-                fileFormatExt.Add(dataDir & Convert.ToString("Image1"), ".png")
-                fileFormatExt.Add(dataDir & Convert.ToString("Document1"), ".docx")
-                fileFormatExt.Add(dataDir & Convert.ToString("Documennt1"), ".xlsx")
+                fileFormatExt.Add("RTF", "_rtfFile_out.rtf")
+                fileFormatExt.Add("MSWordDoc", "_wordFile_out.docx")
+                fileFormatExt.Add("ExcelML12", "_excelFile_out.xlsx")
 
-                Dim project As New Project(dataDir & Convert.ToString("EmbeddedObjects.mpp"))
+                Dim project As New Project(dataDir & Convert.ToString("Embedded.mpp"))
 
                 For Each oleObject As OleObject In project.OleObjects
+                    Dim name As String = oleObject.ToString()
                     If Not String.IsNullOrEmpty(oleObject.FileFormat) AndAlso fileFormatExt.ContainsKey(oleObject.FileFormat) Then
-                        Dim path As String = (dataDir & Convert.ToString("EmbeddedContent_out")) + fileFormatExt(oleObject.FileFormat)
+                        Dim path As String = (dataDir & Convert.ToString("EmbeddedContent_")) + fileFormatExt(oleObject.FileFormat)
                         Using fileStream As New FileStream(path, FileMode.Create)
                             fileStream.Write(oleObject.Content, 0, oleObject.Content.Length)
                         End Using
