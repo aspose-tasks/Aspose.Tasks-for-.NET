@@ -20,6 +20,8 @@ Imports Aspose.Tasks.Examples.VisualBasic.WorkingWithResourceAssignments
 Imports Aspose.Tasks.Examples.VisualBasic.WorkingWithFormulas
 Imports Aspose.Tasks.Examples.VisualBasic.WorkingWithCurrencies
 Imports Aspose.Tasks.Examples.VisualBasic.Miscellaneous
+Imports Aspose.Tasks.Examples.VisualBasic.WorkingWithVBA
+Imports Aspose.Tasks.Examples.VisualBasic.ConvertingProjectData
 
 Class RunExamples
 
@@ -28,6 +30,32 @@ Class RunExamples
         Console.WriteLine("=====================================================")
 
         ' Uncomment the one you want to try out
+
+        ' =====================================================
+        ' =====================================================
+        ' Converting Project Data
+        ' =====================================================
+        ' =====================================================
+
+        'ControlHeaderNameDuringHTMLExport.Run()
+        'CustomizeDateFormats.Run()
+        'CustomizeTextStyle.Run()
+        'FitContentsToCellSize.Run()
+        'HideLegendsDuringSave.Run()
+        'PrintProjectPagesToSeparateFiles.Run()
+        'RenderProjectDataToFormat24bppRgb.Run()
+        'SaveProjectAsCSV.Run()
+        'SaveProjectAsPDF.Run()
+        'SaveProjectAsSVG.Run()
+        'SaveProjectAsText.Run()
+        'SaveProjectAsXLSX.Run()
+        'SaveProjectDataAsHTML.Run()
+        'SaveProjectDataAsTemplate.Run()
+        'SaveProjectDataToSpreadsheet2003XML.Run
+        'SaveToMultiplePDFFiles.Run()
+        'UsingSpreadsheet2003SaveOptions.Run()
+        'UsingSvgOptions.Run()
+        'UsingXlsxOptions.Run()
 
         ' =====================================================
         ' =====================================================
@@ -133,12 +161,7 @@ Class RunExamples
         'GetNumberOfPagesForViews.Run()
         'MPPFileUpdate.Run()
         'ReadHeaderFooterInfo.Run()
-        'ReadModuleAttributesInforamtion.Run()
-        'ReadModulesInformation.Run()
         'ReadOutlineCodes.Run()
-        'ReadReferencesInformation.Run()
-        'ReadVBAProjectInformation.Run()
-        'RenderProjectDataToFormat24bppRgb.Run()
         'SaveProjectDataAsTemplate.Run()
         'TaskSettingStartFinishDates.Run()
 
@@ -147,23 +170,11 @@ Class RunExamples
 
         'CreateEmptyProjectSaveXML.Run()
         'CreateEmptyProjectSaveStream.Run()
-        'CustomizeDateFormats.Run()
-        'CustomizeTextStyle.Run()
-        'FitContentsToCellSize.Run()
         'IgnoreInvalidCharactersDuringloadingProject.Run()
         'ImportProjectDataFromDatabase.Run()
         'ReadPasswordProtectedProjectFile.Run()
         'ReadProjectFileFromStream.Run()
         'ReadProjectFiles.Run()
-        'SaveProjectAsCSV.Run()
-        'SaveProjectAsPDF.Run()
-        'SaveProjectAsSVG.Run()
-        'SaveProjectAsXLSX.Run()
-        'SaveProjectDataAsHTML.Run()
-        'SaveProjectDataToSpreadsheet2003XML.Run()
-        'SaveToMultiplePDFFiles.Run()
-        'UseSvgOptions.Run()
-        'UsingXlsxOptions.Run()
 
         ' Importing and Exporting
         ' =====================================================
@@ -189,7 +200,6 @@ Class RunExamples
         ' Printing
         ' =====================================================
 
-        'PrintProjectPagesToSeparateFiles.Run()
         'PrintProjectUsingCustomPrinter.Run()
         'PrintTheProject.Run()
 
@@ -348,6 +358,17 @@ Class RunExamples
         'SetConstraintMustFinishOn.Run()
         'SetConstraintMustStartOn.Run()
         'SetConstraintStartNoEarlierThan.Run()
+
+        ' =====================================================
+        ' =====================================================
+        ' Working With VBA
+        ' =====================================================
+        ' =====================================================
+
+        'ReadModuleAttributesInformation.Run()
+        'ReadModulesInformation.Run()
+        'ReadReferencesInformation.Run()
+        'ReadVBAProjectInformation.Run()
 
         ' Stop before exiting
         Console.WriteLine(vbLf & vbLf & "Program Finished. Press any key to exit..")

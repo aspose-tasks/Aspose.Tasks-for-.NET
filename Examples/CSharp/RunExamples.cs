@@ -21,6 +21,8 @@ using Aspose.Tasks.Examples.CSharp.WorkingWithResourceAssignments;
 using Aspose.Tasks.Examples.CSharp.WorkingWithFormulas;
 using Aspose.Tasks.Examples.CSharp.WorkingWithCurrencies;
 using Aspose.Tasks.Examples.CSharp.Miscellaneous;
+using Aspose.Tasks.Examples.CSharp.WorkingWithVBA;
+using Aspose.Tasks.Examples.CSharp.ConvertingProjectData;
 
 namespace Aspose.Tasks.Examples.CSharp
 {
@@ -33,6 +35,32 @@ namespace Aspose.Tasks.Examples.CSharp
             Console.WriteLine("=====================================================");
 
             // Uncomment the one you want to try out
+
+            // =====================================================
+            // =====================================================
+            // Converting Project Data
+            // =====================================================
+            // =====================================================
+
+            //ControlHeaderNameDuringHTMLExport.Run();
+            //CustomizeDateFormats.Run();
+            //CustomizeTextStyle.Run();
+            //FitContentsToCellSize.Run();
+            //HideLegendsDuringSave.Run();
+            //PrintProjectPagesToSeparateFiles.Run();
+            //RenderProjectDataToFormat24bppRgb.Run();
+            //SaveProjectAsCSV.Run();
+            //SaveProjectAsPDF.Run();
+            //SaveProjectAsSVG.Run();  
+            //SaveProjectAsText.Run();  
+            //SaveProjectAsXLSX.Run();
+            //SaveProjectDataAsHTML.Run();
+            //SaveProjectDataAsTemplate.Run();
+            //SaveProjectDataToSpreadsheet2003XML.Run();
+            //SaveToMultiplePDFFiles.Run();
+            //UsingSpreadsheet2003SaveOptions.Run();
+            //UsingSvgOptions.Run();
+            //UsingXlsxOptions.Run();                                   
 
             // =====================================================
             // =====================================================
@@ -138,12 +166,7 @@ namespace Aspose.Tasks.Examples.CSharp
             //GetNumberOfPagesForViews.Run();
             //MPPFileUpdate.Run();
             //ReadHeaderFooterInfo.Run();
-            //ReadModuleAttributesInforamtion.Run();
-            //ReadModulesInformation.Run();
             //ReadOutlineCodes.Run();
-            //ReadReferencesInformation.Run();
-            //ReadVBAProjectInformation.Run();
-            //RenderProjectDataToFormat24bppRgb.Run();
             //SaveProjectDataAsTemplate.Run();
             //TaskSettingStartFinishDates.Run();
 
@@ -152,25 +175,12 @@ namespace Aspose.Tasks.Examples.CSharp
 
             //CreateEmptyProjectSaveXML.Run();
             //CreateEmptyProjectSaveStream.Run();
-            //CustomizeDateFormats.Run();
-            //CustomizeTextStyle.Run();
-            //FitContentsToCellSize.Run();
             //IgnoreInvalidCharactersDuringloadingProject.Run();
             //ImportProjectDataFromDatabase.Run();
             //ReadPasswordProtectedProjectFile.Run();
             //ReadProjectFileFromStream.Run();
             //ReadProjectFiles.Run();
-            //SaveProjectAsCSV.Run();
-            //SaveProjectAsPDF.Run();
-            //SaveProjectAsSVG.Run();
-            //SaveProjectAsText.Run();
-            //SaveProjectAsXLSX.Run();
-            //SaveProjectDataAsHTML.Run();
-            //SaveProjectDataToSpreadsheet2003XML.Run();
-            //SaveToMultiplePDFFiles.Run();
-            //UseSvgOptions.Run();
-            //UsingXlsxOptions.Run();                                   
-
+            
             // Importing and Exporting
             // =====================================================
 
@@ -194,8 +204,7 @@ namespace Aspose.Tasks.Examples.CSharp
 
             // Printing
             // =====================================================
-
-            //PrintProjectPagesToSeparateFiles.Run();
+                        
             //PrintProjectUsingCustomPrinter.Run();
             //PrintTheProject.Run(); 
 
@@ -353,7 +362,18 @@ namespace Aspose.Tasks.Examples.CSharp
             //SetConstraintMustFinishOn.Run();
             //SetConstraintMustStartOn.Run();
             //SetConstraintStartNoEarlierThan.Run();
-            
+
+            // =====================================================
+            // =====================================================
+            // Working With VBA
+            // =====================================================
+            // =====================================================
+
+            //ReadModuleAttributesInformation.Run();
+            //ReadModulesInformation.Run();
+            //ReadReferencesInformation.Run();
+            //ReadVBAProjectInformation.Run();
+
             // Stop before exiting
             Console.WriteLine("\n\nProgram Finished. Press any key to exit..");
             Console.ReadKey();
