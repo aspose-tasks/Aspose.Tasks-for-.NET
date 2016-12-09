@@ -43,6 +43,10 @@
       <HintPath>..\packages\Aspose.Tasks.9.6.0\lib\Aspose.Tasks.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Aspose.Words, Version=16.11.0.0, Culture=neutral, PublicKeyToken=716fcc553a201e56, processorArchitecture=MSIL">
+      <HintPath>..\packages\Aspose.Words.16.11.0\lib\net40\Aspose.Words.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Activities" />
     <Reference Include="System.Core" />
@@ -65,6 +69,19 @@
     <Import Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Articles\AlignCellContents.vb" />
+    <Compile Include="Articles\ChangeGanttBarsColorGradient.vb" />
+    <Compile Include="Articles\ImplementCustomBarStyleWriting.vb" />
+    <Compile Include="Articles\ReadCustomBarStyle.vb" />
+    <Compile Include="Articles\RenderDifferentPresentationFormatsToXAML.vb" />
+    <Compile Include="Articles\RenderGanttChartWithBarsNotRolledUp.vb" />
+    <Compile Include="Articles\RenderMultipageTIFF.vb" />
+    <Compile Include="Articles\RenderProjectToPredefinedPageSizes.vb" />
+    <Compile Include="Articles\RenderToXAML.vb" />
+    <Compile Include="Articles\RenderXAMLWithOptions.vb" />
+    <Compile Include="Articles\RetrieveTaskEmbeddedDocuments.vb" />
+    <Compile Include="Articles\SetGanttChartViewStartDate.vb" />
+    <Compile Include="Articles\SortTasksByColumnInGanttChart.vb" />
     <Compile Include="ConvertingProjectData\ControlHeaderNameDuringHTMLExport.vb" />
     <Compile Include="ConvertingProjectData\HideLegendsDuringSave.vb" />
     <Compile Include="ConvertingProjectData\UsingSpreadsheet2003SaveOptions.vb" />

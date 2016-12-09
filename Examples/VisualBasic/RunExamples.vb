@@ -22,6 +22,7 @@ Imports Aspose.Tasks.Examples.VisualBasic.WorkingWithCurrencies
 Imports Aspose.Tasks.Examples.VisualBasic.Miscellaneous
 Imports Aspose.Tasks.Examples.VisualBasic.WorkingWithVBA
 Imports Aspose.Tasks.Examples.VisualBasic.ConvertingProjectData
+Imports Aspose.Tasks.Examples.VisualBasic.Articles
 
 Class RunExamples
 
@@ -30,6 +31,26 @@ Class RunExamples
         Console.WriteLine("=====================================================")
 
         ' Uncomment the one you want to try out
+
+        ' =====================================================
+        ' =====================================================
+        ' Articles
+        ' =====================================================
+        ' =====================================================
+
+        'AlignCellContents.Run()
+        'ChangeGanttBarsColorGradient.Run()
+        'ImplementCustomBarStyleWriting.Run()
+        'ReadCustomBarStyle.Run()
+        'RenderDifferentPresentationFormatsToXAML.Run()
+        'RenderGanttChartWithBarsNotRolledUp.Run()
+        'RenderMultipageTIFF.Run()
+        'RenderProjectToPredefinedPageSizes.Run()
+        'RenderToXAML.Run()
+        'RenderXAMLWithOptions.Run()
+        'RetrieveTaskEmbeddedDocuments.Run()
+        'SetGanttChartViewStartDate.Run()
+        'SortTasksByColumnInGanttChart.Run()
 
         ' =====================================================
         ' =====================================================

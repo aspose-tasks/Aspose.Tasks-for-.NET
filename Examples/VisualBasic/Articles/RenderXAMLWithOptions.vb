@@ -1,4 +1,4 @@
-Imports Aspose.Tasks.Saving
+﻿Imports Aspose.Tasks.Saving
 Imports Aspose.Tasks.Visualization
 
 '
@@ -9,22 +9,21 @@ Imports Aspose.Tasks.Visualization
 'please feel free to contact us using http://www.aspose.com/community/forums/default.aspx
 '
 
-Namespace ConvertingProjectData
-    Public Class FitContentsToCellSize
+Namespace Articles
+    Public Class RenderXAMLWithOptions
         Public Shared Sub Run()
             ' The path to the documents directory.
             Dim dataDir As String = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName)
 
-            ' ExStart:FitContentsToCellSize
-            Dim project As New Project(dataDir & Convert.ToString("CreateProject2.mpp"))
-            Dim saveOptions As SaveOptions = New PdfSaveOptions()
-
-            ' Set option fit content to true
-            saveOptions.FitContent = True
-            saveOptions.Timescale = Timescale.Months
-            saveOptions.PresentationFormat = PresentationFormat.TaskUsage
-            project.Save(dataDir & Convert.ToString("FitContentsToCellSize_out.pdf"), saveOptions)
-            ' ExEnd:FitContentsToCellSize
+            ' ExStart:RenderXAMLWithOptions
+            Dim project As New Project(dataDir & "Project2.mpp")
+            Const resultFile As String = "RenderXAMLWithOptions_out.xaml"
+            Dim options As SaveOptions = New XamlOptions()
+            options.FitContent = True
+            options.LegendOnEachPage = False
+            options.Timescale = Timescale.ThirdsOfMonths
+            project.Save(dataDir & resultFile, options)
+            ' ExEnd:RenderXAMLWithOptions
         End Sub
     End Class
 End Namespace
