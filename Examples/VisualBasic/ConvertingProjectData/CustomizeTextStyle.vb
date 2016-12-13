@@ -18,7 +18,6 @@ Namespace ConvertingProjectData
             Dim dataDir As String = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName)
 
             ' ExStart:CustomizeTextStyle
-            ' Create a project instance and Set default properties
             Dim project As New Project(dataDir & Convert.ToString("CreateProject2.mpp"))
             Dim options As SaveOptions = New PdfSaveOptions()
             options.PresentationFormat = PresentationFormat.ResourceSheet

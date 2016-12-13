@@ -1,5 +1,4 @@
-Imports Aspose.Tasks.Saving
-Imports Aspose.Tasks.Visualization
+﻿Imports Aspose.Tasks.Saving
 
 '
 'This project uses Automatic Package Restore feature of NuGet to resolve Aspose.Tasks for .NET API reference 
@@ -9,22 +8,17 @@ Imports Aspose.Tasks.Visualization
 'please feel free to contact us using http://www.aspose.com/community/forums/default.aspx
 '
 
-Namespace ConvertingProjectData
-    Public Class FitContentsToCellSize
+Namespace Articles
+    Public Class RenderToXAML
         Public Shared Sub Run()
             ' The path to the documents directory.
             Dim dataDir As String = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName)
 
-            ' ExStart:FitContentsToCellSize
-            Dim project As New Project(dataDir & Convert.ToString("CreateProject2.mpp"))
-            Dim saveOptions As SaveOptions = New PdfSaveOptions()
-
-            ' Set option fit content to true
-            saveOptions.FitContent = True
-            saveOptions.Timescale = Timescale.Months
-            saveOptions.PresentationFormat = PresentationFormat.TaskUsage
-            project.Save(dataDir & Convert.ToString("FitContentsToCellSize_out.pdf"), saveOptions)
-            ' ExEnd:FitContentsToCellSize
+            ' ExStart:RenderToXAML
+            Dim project As New Project(dataDir & "Project2.mpp")
+            Dim resultFile As String = "RenderToXAML_out.xaml"
+            project.Save(dataDir & resultFile, SaveFileFormat.XAML)
+            ' ExEnd:RenderToXAML
         End Sub
     End Class
 End Namespace

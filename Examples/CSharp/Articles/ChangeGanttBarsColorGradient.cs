@@ -1,5 +1,8 @@
-using Aspose.Tasks.Saving;
-using Aspose.Tasks.Visualization;
+﻿using Aspose.Tasks.Saving;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
 
 /*
 This project uses Automatic Package Restore feature of NuGet to resolve Aspose.Tasks for .NET API reference 
@@ -9,25 +12,25 @@ install it and then add its reference to this project. For any issues, questions
 please feel free to contact us using http://www.aspose.com/community/forums/default.aspx
 */
 
-namespace Aspose.Tasks.Examples.CSharp.ConvertingProjectData
+namespace Aspose.Tasks.Examples.CSharp.Articles
 {
-    public class FitContentsToCellSize
+    class ChangeGanttBarsColorGradient
     {
         public static void Run()
         {
             // The path to the documents directory.
             string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
-            // ExStart:FitContentsToCellSize
-            Project project = new Project(dataDir + "CreateProject2.mpp");
-            SaveOptions saveOptions = new PdfSaveOptions();
+            // ExStart:ChangeGanttBarsColorGradient
+            Project project = new Project(dataDir + "Project2.mpp");
+            
+            SaveOptions options = new XamlOptions();
+            options.UseGradientBrush = false;
+            project.Save(dataDir + "ChangeGanttBarsColorGradient_Solid_out.xaml", options);
 
-            // Set option fit content to true
-            saveOptions.FitContent = true;
-            saveOptions.Timescale = Timescale.Months;
-            saveOptions.PresentationFormat = PresentationFormat.TaskUsage;
-            project.Save(dataDir + "FitContentsToCellSize_out.pdf", saveOptions);
-            // ExEnd:FitContentsToCellSize
+            options.UseGradientBrush = true;
+            project.Save(dataDir + "ChangeGanttBarsColorGradient_Gradient_out.xaml", options);
+            // ExEnd:ChangeGanttBarsColorGradient
         }
     }
 }

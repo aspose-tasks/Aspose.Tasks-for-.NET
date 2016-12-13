@@ -21,7 +21,6 @@ namespace Aspose.Tasks.Examples.CSharp.ConvertingProjectData
             string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
             // ExStart:CustomizeTextStyle
-            // Create a project instance and Set default properties
             Project project = new Project(dataDir + "CreateProject2.mpp");
             SaveOptions options = new PdfSaveOptions();
             options.PresentationFormat = PresentationFormat.ResourceSheet;

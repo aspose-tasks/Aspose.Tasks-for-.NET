@@ -23,6 +23,7 @@ using Aspose.Tasks.Examples.CSharp.WorkingWithCurrencies;
 using Aspose.Tasks.Examples.CSharp.Miscellaneous;
 using Aspose.Tasks.Examples.CSharp.WorkingWithVBA;
 using Aspose.Tasks.Examples.CSharp.ConvertingProjectData;
+using Aspose.Tasks.Examples.CSharp.Articles;
 
 namespace Aspose.Tasks.Examples.CSharp
 {
@@ -35,6 +36,26 @@ namespace Aspose.Tasks.Examples.CSharp
             Console.WriteLine("=====================================================");
 
             // Uncomment the one you want to try out
+
+            // =====================================================
+            // =====================================================
+            // Articles
+            // =====================================================
+            // =====================================================
+
+            //AlignCellContents.Run();
+            //ChangeGanttBarsColorGradient.Run();
+            //ImplementCustomBarStyleWriting.Run();
+            //ReadCustomBarStyle.Run();
+            //RenderDifferentPresentationFormatsToXAML.Run();
+            //RenderGanttChartWithBarsNotRolledUp.Run();
+            //RenderMultipageTIFF.Run();
+            //RenderProjectToPredefinedPageSizes.Run();
+            //RenderToXAML.Run();
+            //RenderXAMLWithOptions.Run();
+            //RetrieveTaskEmbeddedDocuments.Run();
+            //SetGanttChartViewStartDate.Run();
+            //SortTasksByColumnInGanttChart.Run();
 
             // =====================================================
             // =====================================================
