@@ -23,6 +23,7 @@ Imports Aspose.Tasks.Examples.VisualBasic.Miscellaneous
 Imports Aspose.Tasks.Examples.VisualBasic.WorkingWithVBA
 Imports Aspose.Tasks.Examples.VisualBasic.ConvertingProjectData
 Imports Aspose.Tasks.Examples.VisualBasic.Articles
+Imports Aspose.Tasks.Examples.VisualBasic.KnowledgeBase
 
 Class RunExamples
 
@@ -77,6 +78,18 @@ Class RunExamples
         'UsingSpreadsheet2003SaveOptions.Run()
         'UsingSvgOptions.Run()
         'UsingXlsxOptions.Run()
+
+        ' =====================================================
+        ' =====================================================
+        ' Knowledge Base
+        ' =====================================================
+        ' =====================================================
+
+        'AddNewTask.Run()
+        'CreateResourcesAndLinkToTasks.Run()
+        'LinkTasks.Run()
+        'ReadCriticalPath.Run()
+        'ReadTaskAndResources.Run()
 
         ' =====================================================
         ' =====================================================

@@ -72,6 +72,11 @@
     <Compile Include="ConvertingProjectData\ControlHeaderNameDuringHTMLExport.cs" />
     <Compile Include="ConvertingProjectData\HideLegendsDuringSave.cs" />
     <Compile Include="ConvertingProjectData\UsingSpreadsheet2003SaveOptions.cs" />
+    <Compile Include="KnowledgeBase\AddNewTask.cs" />
+    <Compile Include="KnowledgeBase\CreateResourcesAndLinkToTasks.cs" />
+    <Compile Include="KnowledgeBase\LinkTasks.cs" />
+    <Compile Include="KnowledgeBase\ReadCriticalPath.cs" />
+    <Compile Include="KnowledgeBase\ReadTaskAndResources.cs" />
     <Compile Include="Licensing\ApplyLicenseUsingFile.cs" />
     <Compile Include="Licensing\ApplyLicenseUsingStream.cs" />
     <Compile Include="Licensing\EvaluationDateTimeLimitations.cs" />

@@ -24,6 +24,7 @@ using Aspose.Tasks.Examples.CSharp.Miscellaneous;
 using Aspose.Tasks.Examples.CSharp.WorkingWithVBA;
 using Aspose.Tasks.Examples.CSharp.ConvertingProjectData;
 using Aspose.Tasks.Examples.CSharp.Articles;
+using Aspose.Tasks.Examples.CSharp.KnowledgeBase;
 
 namespace Aspose.Tasks.Examples.CSharp
 {
@@ -82,6 +83,18 @@ namespace Aspose.Tasks.Examples.CSharp
             //UsingSpreadsheet2003SaveOptions.Run();
             //UsingSvgOptions.Run();
             //UsingXlsxOptions.Run();                                   
+
+            // =====================================================
+            // =====================================================
+            // Knowledge Base
+            // =====================================================
+            // =====================================================
+
+            //AddNewTask.Run();
+            //CreateResourcesAndLinkToTasks.Run();
+            //LinkTasks.Run();
+            //ReadCriticalPath.Run();
+            //ReadTaskAndResources.Run();
 
             // =====================================================
             // =====================================================
