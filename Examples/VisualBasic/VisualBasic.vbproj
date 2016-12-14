@@ -85,6 +85,10 @@
     <Compile Include="ConvertingProjectData\ControlHeaderNameDuringHTMLExport.vb" />
     <Compile Include="ConvertingProjectData\HideLegendsDuringSave.vb" />
     <Compile Include="ConvertingProjectData\UsingSpreadsheet2003SaveOptions.vb" />
+    <Compile Include="KnowledgeBase\AddNewTask.vb" />
+    <Compile Include="KnowledgeBase\CreateResourcesAndLinkToTasks.vb" />
+    <Compile Include="KnowledgeBase\ReadCriticalPath.vb" />
+    <Compile Include="KnowledgeBase\ReadTaskAndResources.vb" />
     <Compile Include="Licensing\ApplyLicenseUsingFile.vb" />
     <Compile Include="Licensing\ApplyLicenseUsingStream.vb" />
     <Compile Include="Licensing\EvaluationDateTimeLimitations.vb" />
@@ -227,6 +231,7 @@
     <Compile Include="WorkingWithTasks\ChangeTaskProgress.vb" />
     <Compile Include="WorkingWithTasks\CreateSplitTasks.vb" />
     <Compile Include="WorkingWithTasks\CreateSubProjectTask.vb" />
+    <Compile Include="KnowledgeBase\LinkTasks.vb" />
     <Compile Include="WorkingWithTasks\MoveTaskAtTheEnd.vb" />
     <Compile Include="WorkingWithTasks\MoveTaskUnderAnotherParent.vb" />
     <Compile Include="WorkingWithTasks\MoveTaskUnderSameParent.vb" />
