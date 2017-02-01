@@ -20,56 +20,120 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithTasks
         {
             try
             {
+                // ExStart:AddTaskExtendedAttributes
                 // The path to the documents directory.
                 string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
-                // ExStart:AddTaskExtendedAttributes
                 // Create new project
+                Project project = new Project(dataDir + "Blank2010.mpp");
+
+                #region Adding Plain Text Attribute
+                //Create an Extended Attribute Definition of Text1 type
+                var taskExtendedAttributeText1Definition = ExtendedAttributeDefinition.CreateTaskDefinition(CustomFieldType.Text, ExtendedAttributeTask.Text1, "Task City Name");
+
+                //Add it to the project's Extended Attributes collection
+                project.ExtendedAttributes.Add(taskExtendedAttributeText1Definition);
+
+                //Add a task to the project
+                var task = project.RootTask.Children.Add("Task 1");
+
+                //Create an Extended Attribute from the Attribute Definition
+                var taskExtendedAttributeText1 = taskExtendedAttributeText1Definition.CreateExtendedAttribute();
+
+                //Assign a value to the generated Extended Attribute
+                taskExtendedAttributeText1.Value = "London";
+
+                //Add the Extended Attribute to task
+                task.ExtendedAttributes.Add(taskExtendedAttributeText1);
+
+                project.Save(dataDir + "PlainTextExtendedAttribute_out.mpp", SaveFileFormat.MPP);
+                #endregion
+
+                #region Adding Text Attribute with Lookup option
+
                 Project project1 = new Project(dataDir + "Blank2010.mpp");
 
-                // Create the Extended Attribute Definition of Text Type
-                ExtendedAttributeDefinition taskExtendedAttributeText9Definition;
-                taskExtendedAttributeText9Definition = new ExtendedAttributeDefinition();
-                taskExtendedAttributeText9Definition.Alias = "Task City Name";      
-                taskExtendedAttributeText9Definition.FieldName = "Text9";
-                taskExtendedAttributeText9Definition.ElementType = ElementType.Task;
-                taskExtendedAttributeText9Definition.CfType = CustomFieldType.Text;
-                taskExtendedAttributeText9Definition.FieldId = Convert.ToInt32(ExtendedAttributeTask.Text9).ToString(System.Globalization.CultureInfo.InvariantCulture);
+                //Create an Extended Attribute Definition of Text2 type
+                var taskExtendedAttributeText2Definition = ExtendedAttributeDefinition.CreateLookupTaskDefinition(CustomFieldType.Text, ExtendedAttributeTask.Text2, "Task Towns Name");
 
-                // Create an Extended Attribute Definition of Flag Type
-                ExtendedAttributeDefinition taskExtendedAttributeFlag1Definition;
-                taskExtendedAttributeFlag1Definition = new ExtendedAttributeDefinition();
-                taskExtendedAttributeFlag1Definition.Alias = "Is Billable";
-                taskExtendedAttributeFlag1Definition.FieldName = "Flag1";
-                taskExtendedAttributeFlag1Definition.ElementType = ElementType.Task;
-                taskExtendedAttributeFlag1Definition.CfType = CustomFieldType.Flag;
-                taskExtendedAttributeFlag1Definition.FieldId = Convert.ToInt32(ExtendedAttributeTask.Flag1).ToString(System.Globalization.CultureInfo.InvariantCulture);
+                //Add lookup values for the extended attribute definition
+                taskExtendedAttributeText2Definition.AddLookupValue(new Value { Id = 1, StringValue = "Town1", Description = "This is Town1" });
+                taskExtendedAttributeText2Definition.AddLookupValue(new Value { Id = 2, StringValue = "Town2", Description = "This is Town2" });
 
-                // Add the Extended Attribute Definitions to the Project's Extended Attribute Collection
-                project1.ExtendedAttributes.Add(taskExtendedAttributeText9Definition);
-                project1.ExtendedAttributes.Add(taskExtendedAttributeFlag1Definition);
+                //Add it to the porject's Extended Attributes collection
+                project1.ExtendedAttributes.Add(taskExtendedAttributeText2Definition);
 
-                // Add a task to project and set its properties
-                Task task = project1.RootTask.Children.Add("Task 1");
-                task.Set(Tsk.Start, new DateTime(2016, 7, 27, 8, 0, 0));
-                task.Set(Tsk.Duration, project1.GetDuration(8, TimeUnitType.Hour));
+                //Add a task to the project
+                var task2 = project1.RootTask.Children.Add("Task 2");
 
-                // Create Extended Attribute and set it's values
-                ExtendedAttribute taskExtendedAttributeText9 = new ExtendedAttribute();
-                taskExtendedAttributeText9.FieldId = taskExtendedAttributeText9Definition.FieldId;
-                taskExtendedAttributeText9.Value = "London";               
+                //Crate an Extended Attribute from the Text2 Lookup Definition for Id 1
+                var taskExtendedAttributeText2 = taskExtendedAttributeText2Definition.CreateExtendedAttribute(taskExtendedAttributeText2Definition.ValueList[1]);
+
+                //Add the Extended Attribute to task
+                task2.ExtendedAttributes.Add(taskExtendedAttributeText2);
+
+                project1.Save(dataDir + "TextExtendedAttributeWithLookup_out.mpp", SaveFileFormat.MPP);
+                #endregion
+
+                #region Adding Duration Attribute with Lookup option
                 
-                // Create Extended Attribute of Flag type and set it's values
-                ExtendedAttribute taskExtendedAttributeFlag1 = new ExtendedAttribute();
-                taskExtendedAttributeFlag1.FieldId = taskExtendedAttributeFlag1Definition.FieldId;
-                taskExtendedAttributeFlag1.Value = "1";
+                Project project2 = new Project(dataDir + "Blank2010.mpp");
 
-                // Add the Extended Attributes to Task
-                task.ExtendedAttributes.Add(taskExtendedAttributeText9);
-                task.ExtendedAttributes.Add(taskExtendedAttributeFlag1);
+                //Create an Extended Attribute Definition of Duration2 type
+                var taskExtendedAttributeDuration2Definition = ExtendedAttributeDefinition.CreateLookupTaskDefinition(CustomFieldType.Duration, ExtendedAttributeTask.Duration2, "Some duration");
+
+                //Add lookup values for extended attribute definition
+                taskExtendedAttributeDuration2Definition.AddLookupValue(new Value { Id = 2, DurationValue = 4 * 60, Description = "4 hours" });
+                taskExtendedAttributeDuration2Definition.AddLookupValue(new Value { Id = 3, DurationValue = 8 * 60, Description = "1 day" });
+                taskExtendedAttributeDuration2Definition.AddLookupValue(new Value { Id = 4, DurationValue = 1 * 60, Description = "1 hour" });
+                taskExtendedAttributeDuration2Definition.AddLookupValue(new Value { Id = 7, DurationValue = 10 * 8 * 60, Description = "10 days" });
+
+                //Add the definition to the project's Extended Attributes collection
+                project2.ExtendedAttributes.Add(taskExtendedAttributeDuration2Definition);
+
+                //Add a task to the project
+                var task3 = project2.RootTask.Children.Add("Task 3");
+
+                //Create an Extended Attribute from the Duration2 Lookup Definition for Id 3
+                var taskExtendedAttributeDuration2 = taskExtendedAttributeDuration2Definition.CreateExtendedAttribute(taskExtendedAttributeDuration2Definition.ValueList[3]);
+
+                //Add the Extended Attribute to task
+                task3.ExtendedAttributes.Add(taskExtendedAttributeDuration2);
+
+                project2.Save(dataDir + "DurationExtendedAttributeWithLookup_out.mpp", SaveFileFormat.MPP);
+
+                #endregion
+
+                #region Adding Date-Time with Lookup option
+
+                Project project3 = new Project(dataDir + "Blank2010.mpp");
+
+                //Create an Extended Attribute Definition of Finish2 Type
+                var taskExtendedAttributeFinish2Definition = ExtendedAttributeDefinition.CreateLookupTaskDefinition(CustomFieldType.Finish, ExtendedAttributeTask.Finish2, "Some finish");
+
+                //Add lookup values for extended attribute defintion
+                taskExtendedAttributeFinish2Definition.AddLookupValue(new Value { Id = 2, DateTimeValue = new DateTime(1984, 01, 01, 00, 00, 01), Description = "This is Value2" });
+                taskExtendedAttributeFinish2Definition.AddLookupValue(new Value { Id = 3, DateTimeValue = new DateTime(1994, 01, 01, 00, 01, 01), Description = "This is Value3" });
+                taskExtendedAttributeFinish2Definition.AddLookupValue(new Value { Id = 4, DateTimeValue = new DateTime(2009, 12, 31, 00, 00, 00), Description = "This is Value4" });
+                taskExtendedAttributeFinish2Definition.AddLookupValue(new Value { Id = 7, DateTimeValue = DateTime.Now, Description = "This is Value6" });
+
+                //Add the definition to the project's Extended Attributes collection
+                project3.ExtendedAttributes.Add(taskExtendedAttributeFinish2Definition);
+
+                //Add a task to the project
+                var task4 = project3.RootTask.Children.Add("Task 4");
+
+                //Create an Extneded Attribute from the Finish2 Lookup Definition for Id 3
+                var taskExtendedAttributeFinish2 = taskExtendedAttributeFinish2Definition.CreateExtendedAttribute(taskExtendedAttributeFinish2Definition.ValueList[3]);
+
+                //Add the Extended Attribute to task
+                task4.ExtendedAttributes.Add(taskExtendedAttributeFinish2);
 
                 // Save the Project               
-                project1.Save(dataDir + "AddTaskExtendedAttributes_out.mpp", SaveFileFormat.MPP);
+                project3.Save(dataDir + "FinishExtendedAttributeWithLookup_out.mpp", SaveFileFormat.MPP);                
+                #endregion
+
+
                 // ExEnd:AddTaskExtendedAttributes
             }
             catch (Exception ex)
