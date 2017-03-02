@@ -352,7 +352,8 @@ namespace Aspose.Tasks.Examples.CSharp
             // =====================================================
             // =====================================================
 
-            AddTaskExtendedAttributes.Run();
+            //AddTaskExtendedAttributes.Run();
+            //AddWBSCodes.Run();
             //CalculateSplitTaskFinishDate.Run();
             //CalculateTaskDurations.Run();
             //ChangeTaskProgress.Run();
