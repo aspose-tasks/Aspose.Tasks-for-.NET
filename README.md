@@ -1,8 +1,8 @@
-## Aspose.Tasks for .NET
+﻿## Aspose.Tasks for .NET
 
-[Aspose.Tasks for .NET](http://www.aspose.com/products/tasks/net) offers Project management APIs that enable .NET applications to not only read and manipulate Microsoft Project® documents but also write Microsoft Project® documents in both MPP and XML formats - all without using Microsoft Project®. As with all Aspose file format APIs - Aspose.Tasks for .NET works well with both WinForms and Web Form applications.
+[Aspose.Tasks for .NET](https://www.aspose.com/products/tasks/net) offers Project management APIs that enable .NET applications to not only read and manipulate Microsoft Project® documents but also write Microsoft Project® documents in both MPP and XML formats - all without using Microsoft Project®. As with all Aspose file format APIs - Aspose.Tasks for .NET works well with both WinForms and Web Form applications.
 
-This repository contains [Examples](Examples), [Plugins](Plugins) and Showcase projects for [Aspose.Tasks for .NET](http://www.aspose.com/products/tasks/net) to help you learn and write your own applications.
+This repository contains [Examples](Examples), [Plugins](Plugins) and Showcase projects for [Aspose.Tasks for .NET](https://www.aspose.com/products/tasks/net) to help you learn and write your own applications.
 
 <p align="center">
 
@@ -18,9 +18,9 @@ Directory | Description
 
 ## Resources
 
-+ **Website:** [www.aspose.com](http://www.aspose.com)
-+ **Product Home:** [Aspose.Tasks for .NET](http://www.aspose.com/products/tasks/net)
-+ **Download:** [Download Aspose.Tasks for .NET](http://www.aspose.com/downloads/tasks/net)
++ **Website:** [www.aspose.com](https://www.aspose.com)
++ **Product Home:** [Aspose.Tasks for .NET](https://www.aspose.com/products/tasks/net)
++ **Download:** [Download Aspose.Tasks for .NET](https://downloads.aspose.com/tasks/net)
 + **Documentation:** [Aspose.Tasks for .NET Documentation](https://docs.aspose.com/display/tasksnet/Home)
-+ **Forum:** [Aspose.Tasks for .NET Forum](http://www.aspose.com/community/forums/aspose.tasks-product-family/96/showforum.aspx)
-+ **Blog:** [Aspose.Tasks for .NET Blog](http://www.aspose.com/blogs/aspose-products/aspose-tasks-product-family.html)
++ **Forum:** [Aspose.Tasks for .NET Forum](https://www.aspose.com/community/forums/aspose.tasks-product-family/96/showforum.aspx)
++ **Blog:** [Aspose.Tasks for .NET Blog](https://blog.aspose.com/category/aspose-products/aspose-tasks-product-family/)
