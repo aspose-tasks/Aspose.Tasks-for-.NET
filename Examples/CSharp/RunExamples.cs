@@ -124,7 +124,7 @@ namespace Aspose.Tasks.Examples.CSharp
             //SortTasksByName.Run();
             //UpdateOutlineCodes.Run();
             //WriteMetadataToMPP.Run();
-            
+
             // =====================================================
             // =====================================================
             // Working With Calendar Exceptions
@@ -214,7 +214,7 @@ namespace Aspose.Tasks.Examples.CSharp
             //ReadPasswordProtectedProjectFile.Run();
             //ReadProjectFileFromStream.Run();
             //ReadProjectFiles.Run();
-            
+
             // Importing and Exporting
             // =====================================================
 
@@ -238,7 +238,7 @@ namespace Aspose.Tasks.Examples.CSharp
 
             // Printing
             // =====================================================
-                        
+
             //PrintProjectUsingCustomPrinter.Run();
             //PrintTheProject.Run(); 
 
@@ -285,7 +285,8 @@ namespace Aspose.Tasks.Examples.CSharp
             //CustomizeTimescaleTierLabels.Run();
             //ReadSpecificGantChartViewData.Run();
             //SetTimeScaleCount.Run();
-            
+            //SupportForTextStyle.Run();
+
             // =====================================================
             // =====================================================
             // Working With Resource Assignments
@@ -328,7 +329,7 @@ namespace Aspose.Tasks.Examples.CSharp
             // Working With Task Baselines
             // =====================================================
             // =====================================================
-            
+
             //CreateTaskBaseline.Run();
             //GetTaskBaselineDuration.Run();
             //GetTaskBaselineSchedule.Run();
