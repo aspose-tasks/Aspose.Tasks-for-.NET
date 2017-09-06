@@ -303,6 +303,7 @@ namespace Aspose.Tasks.Examples.CSharp
             //GetResourceAssignmentStopResumeDates.Run();
             //GetResourceAssignmentVariance.Run();
             //UpdateResourceAssignmentInMPP.Run();
+            //ReadWriteRateScaleForResourceAssignment.Run();
 
             // =====================================================
             // =====================================================
