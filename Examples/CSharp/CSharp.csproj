@@ -38,11 +38,11 @@
     <StartupObject>Aspose.Tasks.Examples.CSharp.RunExamples</StartupObject>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Aspose.Tasks, Version=17.7.0.0, Culture=neutral, PublicKeyToken=716fcc553a201e56, processorArchitecture=MSIL">
-      <HintPath>..\packages\Aspose.Tasks.17.7\lib\Aspose.Tasks.dll</HintPath>
+    <Reference Include="Aspose.Tasks, Version=17.8.0.0, Culture=neutral, PublicKeyToken=716fcc553a201e56, processorArchitecture=MSIL">
+      <HintPath>..\packages\Aspose.Tasks.17.8\lib\Aspose.Tasks.dll</HintPath>
     </Reference>
-    <Reference Include="Aspose.Words, Version=17.7.0.0, Culture=neutral, PublicKeyToken=716fcc553a201e56, processorArchitecture=MSIL">
-      <HintPath>..\packages\Aspose.Words.17.7\lib\net40\Aspose.Words.dll</HintPath>
+    <Reference Include="Aspose.Words, Version=17.9.0.0, Culture=neutral, PublicKeyToken=716fcc553a201e56, processorArchitecture=MSIL">
+      <HintPath>..\packages\Aspose.Words.17.9\lib\net40\Aspose.Words.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -117,6 +117,7 @@
     <Compile Include="WorkingWithFormulas\CalculateMathExpressions.cs" />
     <Compile Include="WorkingWithFormulas\CalculateTextFunctions.cs" />
     <Compile Include="WorkingWithProjects\WorkingWithProjectViews\SupportForTextStyle.cs" />
+    <Compile Include="WorkingWithResourceAssignments\ReadWriteRateScaleForResourceAssignment.cs" />
     <Compile Include="WorkingWithTasks\AddWBSCodes.cs" />
     <Compile Include="WorkingWithProjects\CreatingReadingAndSaving\CreateEmptyProjectSaveStream.cs" />
     <Compile Include="WorkingWithProjects\CreatingReadingAndSaving\ReadPasswordProtectedProjectFile.cs" />
