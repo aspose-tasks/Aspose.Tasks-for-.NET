@@ -72,6 +72,7 @@ namespace Aspose.Tasks.Examples.CSharp
             //PrintProjectPagesToSeparateFiles.Run();
             //RenderProjectDataToFormat24bppRgb.Run();
             //SaveProjectAsCSV.Run();
+            //SaveProjectAsJPEG.Run();
             //SaveProjectAsPDF.Run();
             //SaveProjectAsSVG.Run();  
             //SaveProjectAsText.Run();  
