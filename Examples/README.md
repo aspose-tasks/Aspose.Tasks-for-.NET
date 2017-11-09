@@ -1,7 +1,7 @@
 
 ## Aspose.Tasks for .NET Examples
 
-This repository contains C# and VB.NET Example Projects for [Aspose.Tasks for .NET](http://www.aspose.com/products/tasks/net) which will help you learn Aspose.Tasks for .NET and write your own applications.
+This repository contains C# Example Projects for [Aspose.Tasks for .NET](http://www.aspose.com/products/tasks/net) which will help you learn Aspose.Tasks for .NET and write your own applications.
 
 
 <p align="center">
