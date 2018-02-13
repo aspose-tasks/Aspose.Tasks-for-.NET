@@ -20,7 +20,7 @@ Directory | Description
 
 + **Website:** [www.aspose.com](https://www.aspose.com)
 + **Product Home:** [Aspose.Tasks for .NET](https://products.aspose.com/tasks/net)
-+ **Download:** [Download Aspose.Tasks for .NET](https://downloads.aspose.com/tasks/net)
++ **Download:** [Download Aspose.Tasks for .NET](https://www.nuget.org/packages/Aspose.Tasks/)
 + **Documentation:** [Aspose.Tasks for .NET Documentation](https://docs.aspose.com/display/tasksnet/Home)
 + **Forum:** [Aspose.Tasks for .NET Forum](https://forum.aspose.com/c/tasks)
 + **Blog:** [Aspose.Tasks for .NET Blog](https://blog.aspose.com/category/aspose-products/aspose-tasks-product-family/)
