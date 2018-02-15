@@ -2,6 +2,8 @@ using System;
 using System.IO;
 using Aspose.Tasks.Examples.CSharp.Articles;
 using Aspose.Tasks.Examples.CSharp.ConvertingProjectData;
+using Aspose.Tasks.Examples.CSharp.WorkingWithProjects;
+using Aspose.Tasks.Examples.CSharp.WorkingWithTasks;
 
 namespace Aspose.Tasks.Examples.CSharp
 {
@@ -55,8 +57,8 @@ namespace Aspose.Tasks.Examples.CSharp
             //SaveProjectAsCSV.Run();
             //SaveProjectAsJPEG.Run();
             //SaveProjectAsPDF.Run();
-            //SaveProjectAsSVG.Run();  
-            //SaveProjectAsText.Run();  
+            //SaveProjectAsSVG.Run();
+            //SaveProjectAsText.Run();
             //SaveProjectAsXLSX.Run();
             //SaveProjectDataAsHTML.Run();
             //SaveProjectDataAsTemplate.Run();
@@ -64,7 +66,7 @@ namespace Aspose.Tasks.Examples.CSharp
             //SaveToMultiplePDFFiles.Run();
             //UsingSpreadsheet2003SaveOptions.Run();
             //UsingSvgOptions.Run();
-            //UsingXlsxOptions.Run();                                   
+            //UsingXlsxOptions.Run();
 
             // =====================================================
             // =====================================================
@@ -180,6 +182,7 @@ namespace Aspose.Tasks.Examples.CSharp
             //AddImageToPageHeaderFooter.Run();
             //GetNumberOfPages.Run();
             //GetNumberOfPagesForViews.Run();
+            //GetPageCountOnStartAndEndDates.Run();
             //MPPFileUpdate.Run();
             //ReadHeaderFooterInfo.Run();
             //ReadOutlineCodes.Run();
@@ -366,6 +369,7 @@ namespace Aspose.Tasks.Examples.CSharp
             //RenderTaskSheetView.Run();
             //RenderTaskUsageView.Run();
             //RenderTaskUsageViewWithDetails.Run();
+            //RenumberTaskWBSCodes.Run();
             //UpdateTaskData.Run();
             //ViewSplitTasks.Run();
             //WriteTaskCalendar.Run();
