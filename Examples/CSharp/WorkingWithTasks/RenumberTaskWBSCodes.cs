@@ -1,7 +1,5 @@
-﻿using Aspose.Tasks.Util;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
 using System.Text;
 
@@ -15,29 +13,35 @@ please feel free to contact us using https://forum.aspose.com/c/tasks
 
 namespace Aspose.Tasks.Examples.CSharp.WorkingWithTasks
 {
-    class ReadTaskPriority
+    class RenumberTaskWBSCodes
     {
         public static void Run()
         {
-            // ExStart:ReadTaskPriority
-            // Read project from file stream
             string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
-            FileStream fs = new FileStream(dataDir + "TaskPriority.mpp", FileMode.Open);
-            Project prj = new Project(fs);
-            fs.Close();
+            //ExStart: RenumberTaskWBSCodes
+            var project = new Project(dataDir + "RenumberExample.mpp");
 
-            // Create a ChildTasksCollector instance
-            ChildTasksCollector collector = new ChildTasksCollector();
+            var tasks = project.RootTask.SelectAllChildTasks().ToList();
 
-            // Collect all the tasks from RootTask using TaskUtils
-            TaskUtils.Apply(prj.RootTask, collector, 0);
+            Console.WriteLine("WBS codes before: ");
 
-            // Display Priorities for all tasks
-            foreach (Task tsk1 in collector.Tasks)
+            // output: ""; "1"; "2"; "4"
+            foreach (var task in tasks)
             {
-                Console.WriteLine(tsk1.Get(Tsk.Name) + " - Priority : " + tsk1.Get(Tsk.Priority).ToString());
+                Console.WriteLine("\"" + task.Get(Tsk.WBS) + "\"" + "; ");
             }
-            // ExEnd:ReadTaskPriority
+
+            // project.RenumberWBSCode(); // this overload could have used too
+            project.RenumberWBSCode(new List<int> { 1, 2, 3 });
+
+            Console.WriteLine("\nWBS codes after: ");
+
+            // output: ""; "1"; "2"; "3"
+            foreach (var task in tasks)
+            {
+                Console.WriteLine("\"" + task.Get(Tsk.WBS) + "\"" + "; ");
+            }
+            //ExEnd: RenumberTaskWBSCodes
         }
     }
 }
