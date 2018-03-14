@@ -53,6 +53,7 @@ namespace Aspose.Tasks.Examples.CSharp
             //FitContentsToCellSize.Run();
             //HideLegendsDuringSave.Run();
             //PrintProjectPagesToSeparateFiles.Run();
+            //ReducingGapBetweenTasksListAndFooter.Run();
             //RenderProjectDataToFormat24bppRgb.Run();
             //SaveProjectAsCSV.Run();
             //SaveProjectAsJPEG.Run();
