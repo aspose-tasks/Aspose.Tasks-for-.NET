@@ -30,7 +30,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithTasks
                 // Add task, sub task and save project
                 Task task = project.RootTask.Children.Add("Summary1");
                 Task subtask = task.Children.Add("Subtask1");
-                project.Save(dataDir + "CreateTasks_out.MPP", SaveFileFormat.MPP);
+                project.Save(dataDir + "CreateTasks_out.xml", SaveFileFormat.XML);
                 // ExEnd:CreateTasks
             }
             catch (Exception ex)
