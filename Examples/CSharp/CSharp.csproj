@@ -38,11 +38,13 @@
     <StartupObject>Aspose.Tasks.Examples.CSharp.RunExamples</StartupObject>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Aspose.Tasks, Version=18.5.0.0, Culture=neutral, PublicKeyToken=716fcc553a201e56, processorArchitecture=MSIL">
+    <Reference Include="Aspose.Tasks">
       <HintPath>..\packages\Aspose.Tasks.18.5.0\lib\Aspose.Tasks.dll</HintPath>
+      <Private>True</Private>
     </Reference>
-    <Reference Include="Aspose.Words, Version=18.5.0.0, Culture=neutral, PublicKeyToken=716fcc553a201e56, processorArchitecture=MSIL">
+    <Reference Include="Aspose.Words">
       <HintPath>..\packages\Aspose.Words.18.5.0\lib\net40\Aspose.Words.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -121,7 +123,9 @@
     <Compile Include="WorkingWithFormulas\CalculateTextFunctions.cs" />
     <Compile Include="WorkingWithProjects\GetPageCountOnStartAndEndDates.cs" />
     <Compile Include="WorkingWithProjects\WorkingWithProjectViews\SupportForTextStyle.cs" />
+    <Compile Include="WorkingWithResourceAssignments\AddExtendedAttributesToRAWithLookUp.cs" />
     <Compile Include="WorkingWithResourceAssignments\ReadWriteRateScaleForResourceAssignment.cs" />
+    <Compile Include="WorkingWithResourceAssignments\AddExtendedAttributesToResourceAssignment.cs" />
     <Compile Include="WorkingWithTasks\AddWBSCodes.cs" />
     <Compile Include="WorkingWithProjects\CreatingReadingAndSaving\CreateEmptyProjectSaveStream.cs" />
     <Compile Include="WorkingWithProjects\CreatingReadingAndSaving\ReadPasswordProtectedProjectFile.cs" />

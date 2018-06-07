@@ -3,6 +3,7 @@ using System.IO;
 using Aspose.Tasks.Examples.CSharp.Articles;
 using Aspose.Tasks.Examples.CSharp.ConvertingProjectData;
 using Aspose.Tasks.Examples.CSharp.WorkingWithProjects;
+using Aspose.Tasks.Examples.CSharp.WorkingWithResourceAssignments;
 using Aspose.Tasks.Examples.CSharp.WorkingWithTasks;
 
 namespace Aspose.Tasks.Examples.CSharp
@@ -40,12 +41,7 @@ namespace Aspose.Tasks.Examples.CSharp
             //SetGanttChartViewStartDate.Run();
             //SortTasksByColumnInGanttChart.Run();
 
-            // =====================================================
-            // =====================================================
-            // Converting Project Data
-            // =====================================================
-            // =====================================================
-
+            #region Converting Project Data
             //AddDefaultFontDuringSavingAsPDF.Run();
             //ControlHeaderNameDuringHTMLExport.Run();
             //CustomizeDateFormats.Run();
@@ -68,6 +64,7 @@ namespace Aspose.Tasks.Examples.CSharp
             //UsingSpreadsheet2003SaveOptions.Run();
             //UsingSvgOptions.Run();
             //UsingXlsxOptions.Run();
+            #endregion
 
             // =====================================================
             // =====================================================
@@ -279,6 +276,8 @@ namespace Aspose.Tasks.Examples.CSharp
             // =====================================================
             // =====================================================
 
+            //AddExtendedAttributesToResourceAssignment.Run();
+            //AddExtendedAttributesToRAWithLookUp.Run();
             //CreateResourceAssignments.Run();
             //GenerateResourceAssignmentTimephasedData.Run();
             //GetGeneralResourceAssignmentProperties.Run();
@@ -339,7 +338,7 @@ namespace Aspose.Tasks.Examples.CSharp
             // Working With Tasks
             // =====================================================
             // =====================================================
-
+            #region Working with Tasks
             //AddTaskExtendedAttributes.Run();
             //AddWBSCodes.Run();
             //CalculateSplitTaskFinishDate.Run();
@@ -376,6 +375,7 @@ namespace Aspose.Tasks.Examples.CSharp
             //WriteTaskCalendar.Run();
             //WriteTaskDuration.Run();
             //WriteTaskProperties.Run();
+            #endregion
 
             // Working with Task Constraints
             // =====================================================
