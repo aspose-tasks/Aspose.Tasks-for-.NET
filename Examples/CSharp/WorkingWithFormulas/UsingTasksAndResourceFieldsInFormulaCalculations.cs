@@ -52,8 +52,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithFormulas
 
             // Add new task with extended attribute
             Task task = project.RootTask.Children.Add("Task");
-            ExtendedAttributeDefinition extendedAttributeDefinition = new ExtendedAttributeDefinition();
-            extendedAttributeDefinition.FieldId = ExtendedAttributeTask.Text1.ToString("D");
+            ExtendedAttributeDefinition extendedAttributeDefinition = ExtendedAttributeDefinition.CreateTaskDefinition(CustomFieldType.Text, ExtendedAttributeTask.Text5, "My Ext Attr");
             project.ExtendedAttributes.Add(extendedAttributeDefinition);
             ExtendedAttribute extendedAttribute = extendedAttributeDefinition.CreateExtendedAttribute();
             task.ExtendedAttributes.Add(extendedAttribute);

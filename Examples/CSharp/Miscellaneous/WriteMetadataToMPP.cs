@@ -84,13 +84,11 @@ namespace Aspose.Tasks.Examples.CSharp.Miscellaneous
                 assn.Set(Asn.Finish, task.Get(Tsk.Finish));
 
                 // Add extended attribute for project and task
-                ExtendedAttributeDefinition attr = new ExtendedAttributeDefinition();
-                attr.FieldId = ((int)ExtendedAttributeTask.Flag1).ToString();
-                attr.Alias = "Labeled";
+                ExtendedAttributeDefinition attr = ExtendedAttributeDefinition.CreateTaskDefinition(CustomFieldType.Flag, ExtendedAttributeTask.Flag1,  "My Flag Field");
                 project.ExtendedAttributes.Add(attr);
+
                 ExtendedAttribute taskAttr = new ExtendedAttribute();
                 taskAttr.Value = "1";
-                taskAttr.FieldId = attr.FieldId;
                 task2.ExtendedAttributes.Add(taskAttr);
 
                 // Save project as MPP

@@ -28,17 +28,13 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithResources
                 Project project1 = new Project(dataDir + "ResourceExtendedAttributes.mpp");
 
                 // Define extended attribute
-                ExtendedAttributeDefinition myNumber1 = null;
-                if (project1.ExtendedAttributes.GetById(Convert.ToInt32(ExtendedAttributeResource.Number1.ToString("D"))) == null)
+                ExtendedAttributeDefinition myNumber1 = project1.ExtendedAttributes.GetById((int)ExtendedAttributeTask.Text1);
+                if (myNumber1 == null)
                 {
-                    myNumber1 = new ExtendedAttributeDefinition();
-                    myNumber1.Alias = "Age";
-                    myNumber1.CfType = CustomFieldType.Number;
+                    myNumber1 = ExtendedAttributeDefinition.CreateResourceDefinition(CustomFieldType.Text, ExtendedAttributeResource.Text1, "Age");
                     myNumber1.FieldId = ExtendedAttributeResource.Number1.ToString("D");
                     project1.ExtendedAttributes.Add(myNumber1);
                 }
-                else
-                    myNumber1 = project1.ExtendedAttributes.GetById(Convert.ToInt32(ExtendedAttributeResource.Number1.ToString("D")));
 
                 // Create extended attribute and set its value
                 ExtendedAttribute Number1Resource = myNumber1.CreateExtendedAttribute();

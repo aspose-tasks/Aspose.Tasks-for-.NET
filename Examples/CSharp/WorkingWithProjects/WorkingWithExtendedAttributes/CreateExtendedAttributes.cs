@@ -26,27 +26,23 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.WorkingWithExtendedAt
                 // ExStart:CreateExtendedAttributes  
                 Project project1 = new Project(dataDir + "Blank2010.mpp");
 
-                ExtendedAttributeDefinition myText1Def = null;
+                ExtendedAttributeDefinition myTextAttributeDefinition = project1.ExtendedAttributes.GetById((int)ExtendedAttributeTask.Text1);
 
                 // If the Custom field doesn't exist in Project, create it
-                if (project1.ExtendedAttributes.GetById(Convert.ToInt32(ExtendedAttributeTask.Text1.ToString("D"))) == null)
+                if (myTextAttributeDefinition == null)
                 {
-                    myText1Def = new ExtendedAttributeDefinition();
-                    myText1Def.Alias = "MyValue";
-                    myText1Def.CfType = CustomFieldType.Number;
-                    myText1Def.FieldId = ExtendedAttributeTask.Text1.ToString("D");
-                    project1.ExtendedAttributes.Add(myText1Def);
+                    myTextAttributeDefinition = ExtendedAttributeDefinition.CreateTaskDefinition(ExtendedAttributeTask.Text1, "My text field");
+                    project1.ExtendedAttributes.Add(myTextAttributeDefinition);
                 }
-                else
-                    myText1Def = project1.ExtendedAttributes.GetById(Convert.ToInt32(ExtendedAttributeTask.Number1.ToString("D")));
 
                 // Generate Extended Attribute from definition
-                ExtendedAttribute text1TaskAttr = myText1Def.CreateExtendedAttribute();
-                text1TaskAttr.Value = "20.55";
+                ExtendedAttribute text1TaskAttribute = myTextAttributeDefinition.CreateExtendedAttribute();
+
+                text1TaskAttribute.Value = "Text attribute value";
 
                 // Add extended attribute to task
                 Task tsk = project1.RootTask.Children.Add("Task 1");
-                tsk.ExtendedAttributes.Add(text1TaskAttr);
+                tsk.ExtendedAttributes.Add(text1TaskAttribute);
 
                 project1.Save(dataDir + "CreateExtendedAttributes_out.mpp", SaveFileFormat.MPP);
                 // ExEnd:CreateExtendedAttributes
