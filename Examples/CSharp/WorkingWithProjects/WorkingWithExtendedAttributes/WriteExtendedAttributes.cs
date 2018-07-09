@@ -15,9 +15,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.WorkingWithExtendedAt
             ExtendedAttributeDefinitionCollection eads = prj.ExtendedAttributes;
 
             // Create extended attribute definition
-            ExtendedAttributeDefinition ead = new ExtendedAttributeDefinition();
-            ead.FieldId = ((int)ExtendedAttributeTask.Start7).ToString();
-            ead.FieldName = "Start7";
+            ExtendedAttributeDefinition ead = ExtendedAttributeDefinition.CreateTaskDefinition(CustomFieldType.Start, ExtendedAttributeTask.Start7, "Start 7");
             eads.Add(ead);
 
             // Get zero index task

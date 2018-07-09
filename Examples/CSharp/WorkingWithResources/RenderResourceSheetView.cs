@@ -30,7 +30,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithResources
             PresentationFormat format = PresentationFormat.ResourceSheet;
 
             // Define rendering options
-            PdfSaveOptions options = new PdfSaveOptions();
+            SaveOptions options = new PdfSaveOptions();
             options.PresentationFormat = format;
             project1.Save(dataDir + "ResourceSheetView_out.pdf", options);
             // ExEnd:RenderResourceSheetView

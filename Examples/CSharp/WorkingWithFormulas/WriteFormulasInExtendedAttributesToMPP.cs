@@ -27,8 +27,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithFormulas
                 project.Set(Prj.NewTasksAreManual, false);
 
                 // Create new custom field (Task Text1) with formula which will double task cost
-                ExtendedAttributeDefinition attr = new ExtendedAttributeDefinition();                
-                attr.FieldId = ExtendedAttributeTask.Text1.ToString("D");
+                ExtendedAttributeDefinition attr = ExtendedAttributeDefinition.CreateTaskDefinition(CustomFieldType.Text, ExtendedAttributeTask.Text1, "Custom");
                 attr.Alias = "Double Costs";
                 attr.Formula = "[Cost]*2";
                 project.ExtendedAttributes.Add(attr);

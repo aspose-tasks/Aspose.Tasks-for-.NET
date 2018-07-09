@@ -28,9 +28,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithFormulas
         public static Project CreateTestProjectWithCustomField()
         {
             Project project = new Project();
-            ExtendedAttributeDefinition attr = new ExtendedAttributeDefinition();          
-            attr.FieldId = ExtendedAttributeTask.Text1.ToString("D");
-            attr.Alias = "Sine";
+            ExtendedAttributeDefinition attr = ExtendedAttributeDefinition.CreateTaskDefinition(CustomFieldType.Text, ExtendedAttributeTask.Text1, "Sine");         
             project.ExtendedAttributes.Add(attr);
 
             Task task = project.RootTask.Children.Add("Task");
