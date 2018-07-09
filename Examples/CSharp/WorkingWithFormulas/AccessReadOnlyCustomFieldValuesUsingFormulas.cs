@@ -10,11 +10,10 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithFormulas
             // ExStart:AccessReadOnlyCustomFieldValuesUsingFormulas
             // Create new project and extended attribute definition
             Project project = new Project();
-            ExtendedAttributeDefinition attribute = new ExtendedAttributeDefinition
-            {
-                FieldId = ((int) ExtendedAttributeTask.Text1).ToString(),
-                Formula = "[Cost]-[Actual Cost]"
-            };
+
+            ExtendedAttributeDefinition attribute = ExtendedAttributeDefinition.CreateTaskDefinition(CustomFieldType.Text, ExtendedAttributeTask.Text1, "");
+            attribute.Formula  = "[Cost]-[Actual Cost]";
+           
             project.ExtendedAttributes.Add(attribute);
             
             // Add task

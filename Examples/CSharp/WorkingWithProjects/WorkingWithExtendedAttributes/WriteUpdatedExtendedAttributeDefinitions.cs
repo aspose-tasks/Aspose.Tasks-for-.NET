@@ -25,31 +25,22 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.WorkingWithExtendedAt
                 Project project = new Project(dataDir + "WriteUpdatedExtendedAttributeDefinitions.mpp");
 
                 #region task attributes
-                // Add new text3 extended attribute and one text value
-                ExtendedAttributeDefinition taskTextAttr = new ExtendedAttributeDefinition();
-                taskTextAttr.Alias = "New text3 attribute";
-                taskTextAttr.FieldName = "Text3";
-                taskTextAttr.ElementType = ElementType.Task;
-                taskTextAttr.CfType = CustomFieldType.Text;
-                taskTextAttr.FieldId = Convert.ToInt32(ExtendedAttributeTask.Text3).ToString();
-                taskTextAttr.LookupUid = Guid.NewGuid().ToString();
-                project.ExtendedAttributes.Add(taskTextAttr);
+
+                // Add new text3 extended attribute with lookup and one lookup value
+                ExtendedAttributeDefinition taskTextAttributeDefinition = ExtendedAttributeDefinition.CreateLookupTaskDefinition(ExtendedAttributeTask.Text3, "New text3 attribute");
+                taskTextAttributeDefinition.ElementType = ElementType.Task;
+                project.ExtendedAttributes.Add(taskTextAttributeDefinition);
 
                 Value textVal = new Value();
                 textVal.Id = 1;
                 textVal.Description = "Text value descr";
                 textVal.Val = "Text value1";
-                taskTextAttr.ValueList.Add(textVal);
 
-                // Add new cost1 extended attribute and two cost values
-                ExtendedAttributeDefinition taskCostAttr = new ExtendedAttributeDefinition();
-                taskCostAttr.Alias = "New cost1 attribute";
-                taskCostAttr.FieldName = "Cost1";
-                taskCostAttr.ElementType = ElementType.Task;
-                taskCostAttr.CfType = CustomFieldType.Cost;
-                taskCostAttr.FieldId = Convert.ToInt32(ExtendedAttributeTask.Cost1).ToString();
-                taskCostAttr.LookupUid = Guid.NewGuid().ToString();
-                project.ExtendedAttributes.Add(taskCostAttr);
+                taskTextAttributeDefinition.AddLookupValue(textVal);
+
+                // Add new cost1 extended attribute with lookup and two cost values
+                ExtendedAttributeDefinition taskCostAttributeDefinition = ExtendedAttributeDefinition.CreateLookupTaskDefinition(ExtendedAttributeTask.Cost1, "New cost1 attribute");
+                project.ExtendedAttributes.Add(taskCostAttributeDefinition);
 
                 Value costVal1 = new Value();
                 costVal1.Id = 2;
@@ -61,109 +52,83 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.WorkingWithExtendedAt
                 costVal2.Description = "Cost value 2 descr";
                 costVal2.Val = "11100";
 
-                taskCostAttr.ValueList.Add(costVal1);
-                taskCostAttr.ValueList.Add(costVal2);
+                taskCostAttributeDefinition.AddLookupValue(costVal1);
+                taskCostAttributeDefinition.AddLookupValue(costVal2);
 
-                // Add new task and assign attribute value
+                // Add new task and assign attribute lookup value.
                 Task task = project.RootTask.Children.Add("New task");
 
-                ExtendedAttribute taskAttr = new ExtendedAttribute();
-                taskAttr.AttributeDefinition = taskCostAttr;
-                taskAttr.Value = "99900";
-                taskAttr.FieldId = taskCostAttr.FieldId;
+                ExtendedAttribute taskAttr = taskCostAttributeDefinition.CreateExtendedAttribute(costVal1);
                 task.ExtendedAttributes.Add(taskAttr);
 
-                ExtendedAttributeDefinition taskStartAttr = new ExtendedAttributeDefinition();
-                taskStartAttr.Alias = "New start 7 attribute";
-                taskStartAttr.CfType = CustomFieldType.Start;
-                taskStartAttr.ElementType = ElementType.Task;
-                taskStartAttr.FieldName = "Start7";
-                taskStartAttr.FieldId = Convert.ToInt32(ExtendedAttributeTask.Start7).ToString();
-                taskStartAttr.LookupUid = Guid.NewGuid().ToString();
+                ExtendedAttributeDefinition taskStartAttributeDefinition = ExtendedAttributeDefinition.CreateLookupTaskDefinition(ExtendedAttributeTask.Start7, "New start 7 attribute");
+
                 Value startVal = new Value();
-                startVal.Val = DateTime.Now.ToString();
+                startVal.Id = 4;
+                startVal.DateTimeValue = DateTime.Now;
                 startVal.Description = "Start 7 value description";
 
-                taskStartAttr.ValueList.Add(startVal);
+                taskStartAttributeDefinition.AddLookupValue(startVal);
 
-                project.ExtendedAttributes.Add(taskStartAttr);
+                project.ExtendedAttributes.Add(taskStartAttributeDefinition);
 
-                ExtendedAttributeDefinition taskFinishAttr = new ExtendedAttributeDefinition();
-                taskFinishAttr.Alias = "New finish 4 attribute";
-                taskFinishAttr.CfType = CustomFieldType.Finish;
-                taskFinishAttr.ElementType = ElementType.Task;
-                taskFinishAttr.FieldName = "Finish4";
-                taskFinishAttr.FieldId = Convert.ToInt32(ExtendedAttributeTask.Finish4).ToString();
-                taskFinishAttr.LookupUid = Guid.NewGuid().ToString();
+                ExtendedAttributeDefinition taskFinishAttributeDefinition = ExtendedAttributeDefinition.CreateLookupTaskDefinition(ExtendedAttributeTask.Finish4, "New finish 4 attribute");
+
                 Value finishVal = new Value();
-                finishVal.Val = DateTime.Now.ToString();
+                finishVal.Id = 5;
+                finishVal.DateTimeValue = DateTime.Now;
                 finishVal.Description = "Finish 4 value description";
 
-                taskFinishAttr.ValueList.Add(finishVal);
+                taskFinishAttributeDefinition.ValueList.Add(finishVal);
 
-                project.ExtendedAttributes.Add(taskFinishAttr);
+                project.ExtendedAttributes.Add(taskFinishAttributeDefinition);
 
-                ExtendedAttributeDefinition numberAttr = new ExtendedAttributeDefinition();
-                numberAttr.Alias = "New number attribute";
-                numberAttr.FieldName = "Number20";
-                numberAttr.CfType = CustomFieldType.Number;
-                numberAttr.ElementType = ElementType.Task;
-                numberAttr.FieldId = Convert.ToInt32(ExtendedAttributeTask.Number20).ToString();
-                numberAttr.LookupUid = Guid.NewGuid().ToString();
+                ExtendedAttributeDefinition numberAttributeDefinition = ExtendedAttributeDefinition.CreateLookupTaskDefinition(ExtendedAttributeTask.Number20, "New number attribute");
+
                 Value val1 = new Value();
+                val1.Id = 6;
                 val1.Val = "1";
                 val1.Description = "Number 1 value";
                 Value val2 = new Value();
+                val2.Id = 7;
                 val2.Val = "2";
                 val2.Description = "Number 2 value";
                 Value val3 = new Value();
+                val2.Id = 8;
                 val3.Val = "3";
                 val3.Description = "Number 3 value";
 
-                numberAttr.ValueList.Add(val1);
-                numberAttr.ValueList.Add(val2);
-                numberAttr.ValueList.Add(val3);
+                numberAttributeDefinition.AddLookupValue(val1);
+                numberAttributeDefinition.AddLookupValue(val2);
+                numberAttributeDefinition.AddLookupValue(val3);
 
-                project.ExtendedAttributes.Add(numberAttr);
+                project.ExtendedAttributes.Add(numberAttributeDefinition);
 
                 #endregion
 
-                ExtendedAttributeDefinition rscStartAttr = new ExtendedAttributeDefinition();
-                rscStartAttr.Alias = "New start5 attribute";
-                rscStartAttr.FieldName = "Start5";
-                rscStartAttr.ElementType = ElementType.Resource;
-                rscStartAttr.CfType = CustomFieldType.Start;
-                rscStartAttr.CalculationType = CalculationType.Rollup;
-                rscStartAttr.RollupType = RollupType.Sum;
+                ExtendedAttributeDefinition rscStartAttributeDefinition = ExtendedAttributeDefinition.CreateLookupResourceDefinition(ExtendedAttributeResource.Start5, "New start5 attribute");
 
-                rscStartAttr.FieldId = Convert.ToInt32(ExtendedAttributeTask.Start5).ToString(); ;
-                rscStartAttr.LookupUid = Guid.NewGuid().ToString();
                 Value startVal2 = new Value();
-                startVal2.Id = 4;
-                startVal2.Val = DateTime.Now.ToString();
+                startVal2.Id = 9;
+                startVal2.DateTimeValue = DateTime.Now;
                 startVal2.Description = "this is start5 value descr";
 
-                rscStartAttr.ValueList.Add(startVal2);
+                rscStartAttributeDefinition.AddLookupValue(startVal2);
 
-                project.ExtendedAttributes.Add(rscStartAttr);
+                project.ExtendedAttributes.Add(rscStartAttributeDefinition);
 
-                ExtendedAttributeDefinition myTaskDurattr = new ExtendedAttributeDefinition();
-                myTaskDurattr.Alias = "New Duration";
-                myTaskDurattr.CfType = CustomFieldType.Duration;
-                myTaskDurattr.FieldId = ExtendedAttributeTask.Duration1.ToString("D");
-                myTaskDurattr.CalculationType = CalculationType.Rollup;
-                myTaskDurattr.RollupType = RollupType.Sum;
-                myTaskDurattr.ElementType = ElementType.Task;
-                project.ExtendedAttributes.Add(myTaskDurattr);
+                // Define a duration attribute without lookup.
+                ExtendedAttributeDefinition taskDurationAttributeDefinition = ExtendedAttributeDefinition.CreateTaskDefinition(ExtendedAttributeTask.Duration1, "New Duration");
+                project.ExtendedAttributes.Add(taskDurationAttributeDefinition);
 
-                // Add new task and assign attribute value
+                // Add new task and assign duration value of the previously defined duration attribute "New Duration".
                 Task timeTask = project.RootTask.Children.Add("New task");
 
-                ExtendedAttribute timeexExtendedAttribute = myTaskDurattr.CreateExtendedAttribute();
+                ExtendedAttribute durationExtendedAttribute = taskDurationAttributeDefinition.CreateExtendedAttribute();
 
-                timeexExtendedAttribute.DurationFormat = TimeUnitType.Hour;
-                timeexExtendedAttribute.Value = "PT3H0M0S";
-                timeTask.ExtendedAttributes.Add(timeexExtendedAttribute);
+                durationExtendedAttribute.DurationFormat = TimeUnitType.Hour;
+                durationExtendedAttribute.Value = "PT3H0M0S";
+                timeTask.ExtendedAttributes.Add(durationExtendedAttribute);
 
                 MPPSaveOptions mppSaveOptions = new MPPSaveOptions();
                 mppSaveOptions.WriteViewData = true;

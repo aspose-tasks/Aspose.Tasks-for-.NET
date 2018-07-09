@@ -30,8 +30,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithFormulas
         {
             Project project = new Project();
             project.Set(Prj.StartDate, new DateTime(2015, 3, 6, 8, 0, 0));
-            ExtendedAttributeDefinition attr = new ExtendedAttributeDefinition();
-            attr.FieldId = ExtendedAttributeTask.Text1.ToString("D");
+            ExtendedAttributeDefinition attr = ExtendedAttributeDefinition.CreateTaskDefinition(CustomFieldType.Text, ExtendedAttributeTask.Text1, "Custom Field");
             project.ExtendedAttributes.Add(attr);
 
             Task task = project.RootTask.Children.Add("Task");
