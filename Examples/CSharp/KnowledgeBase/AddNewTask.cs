@@ -29,7 +29,6 @@ namespace Aspose.Tasks.Examples.CSharp.KnowledgeBase
             // Set duration in hours
             task.Set(Tsk.Duration, project.GetDuration(24, TimeUnitType.Hour));
             task.Set(Tsk.DurationFormat, TimeUnitType.Day);
-            project.RootTask.Children.Add(task);
             
             // Save the Project as XML
             project.Save(dataDir + "AddNewTask_out.xml", SaveFileFormat.XML);
