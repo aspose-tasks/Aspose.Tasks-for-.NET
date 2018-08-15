@@ -11,7 +11,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithFormulas
             // Create new project and extended attribute definition
             Project project = new Project();
 
-            ExtendedAttributeDefinition attribute = ExtendedAttributeDefinition.CreateTaskDefinition(CustomFieldType.Text, ExtendedAttributeTask.Text1, "");
+            ExtendedAttributeDefinition attribute = ExtendedAttributeDefinition.CreateTaskDefinition(CustomFieldType.Cost, ExtendedAttributeTask.Cost1, "");
             attribute.Formula  = "[Cost]-[Actual Cost]";
            
             project.ExtendedAttributes.Add(attribute);
@@ -25,8 +25,8 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithFormulas
 
             // Display if extended attributes are read only or not
             Console.WriteLine(extendedAttribute.ValueReadOnly == true ? "Value is Read only" : "Value is not read only");
-            extendedAttribute.Value = "Invalid";
-            Console.WriteLine(extendedAttribute.Value == string.Empty ? "Formula values are read-only" : "Values are not read-only");
+            extendedAttribute.NumericValue = -1000000M;
+            Console.WriteLine(extendedAttribute.NumericValue == -1000000M ? "Formula values are read-only" : "Values are not read-only");
             // ExEnd:AccessReadOnlyCustomFieldValuesUsingFormulas
         }
     }

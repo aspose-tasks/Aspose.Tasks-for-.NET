@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace Aspose.Tasks.Examples.CSharp.WorkingWithFormulas
 {
@@ -22,13 +19,13 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithFormulas
 
             // Print Calculated value
             Task task = project.RootTask.Children.GetById(1);
-            Console.WriteLine("Sin(pi/2): {0}", task.ExtendedAttributes[0].Value);            
+            Console.WriteLine("Sin(pi/2): {0}", task.ExtendedAttributes[0].NumericValue);
         }
 
         public static Project CreateTestProjectWithCustomField()
         {
             Project project = new Project();
-            ExtendedAttributeDefinition attr = ExtendedAttributeDefinition.CreateTaskDefinition(CustomFieldType.Text, ExtendedAttributeTask.Text1, "Sine");         
+            ExtendedAttributeDefinition attr = ExtendedAttributeDefinition.CreateTaskDefinition(CustomFieldType.Number, ExtendedAttributeTask.Number1, "Sine");         
             project.ExtendedAttributes.Add(attr);
 
             Task task = project.RootTask.Children.Add("Task");

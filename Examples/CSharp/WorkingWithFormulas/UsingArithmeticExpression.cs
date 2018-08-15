@@ -24,7 +24,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithFormulas
 
             // Display extended attribute value
             Task task = project.RootTask.Children.GetById(1);
-            Console.WriteLine(task.ExtendedAttributes[0].Value);
+            Console.WriteLine(task.ExtendedAttributes[0].NumericValue);
             // ExEnd:UsingArithmeticExpression
         }
 
@@ -32,14 +32,12 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithFormulas
         {
             Project project = new Project();
             project.Set(Prj.StartDate, new DateTime(2015, 3, 6, 8, 0, 0));
-            ExtendedAttributeDefinition attr = ExtendedAttributeDefinition.CreateTaskDefinition(CustomFieldType.Text, ExtendedAttributeTask.Text1, "Custom");
+            ExtendedAttributeDefinition attr = ExtendedAttributeDefinition.CreateTaskDefinition(CustomFieldType.Number, ExtendedAttributeTask.Number1, "Custom");
             project.ExtendedAttributes.Add(attr);
 
             Task task = project.RootTask.Children.Add("Task");
             ExtendedAttribute extendedAttribute = attr.CreateExtendedAttribute();
             task.ExtendedAttributes.Add(extendedAttribute);
-            Resource rsc = project.Resources.Add("Rsc");
-            ResourceAssignment resourceAssignment = project.ResourceAssignments.Add(task, rsc);
             return project;
         }
     }

@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace Aspose.Tasks.Examples.CSharp.WorkingWithTasks
 {
@@ -20,8 +17,33 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithTasks
                 foreach (ExtendedAttribute ea in tsk.ExtendedAttributes)
                 {
                     Console.WriteLine(ea.FieldId);
-                    Console.WriteLine(ea.Value);
                     Console.WriteLine(ea.ValueGuid);
+
+                    switch (ea.AttributeDefinition.CfType)
+                    {
+                        case CustomFieldType.Date:
+                        case CustomFieldType.Start:
+                        case CustomFieldType.Finish:
+                            Console.WriteLine(ea.DateValue);
+                            break;
+
+                        case CustomFieldType.Text:
+                            Console.WriteLine(ea.TextValue);
+                            break;
+
+                        case CustomFieldType.Duration:
+                            Console.WriteLine(ea.DurationValue.ToString());
+                            break;
+
+                        case CustomFieldType.Cost:
+                        case CustomFieldType.Number:
+                            Console.WriteLine(ea.NumericValue);
+                            break;
+
+                        case CustomFieldType.Flag:
+                            Console.WriteLine(ea.FlagValue);
+                            break;
+                    }
                 }
             }
             // ExEnd:ReadTaskExtendedAttributes

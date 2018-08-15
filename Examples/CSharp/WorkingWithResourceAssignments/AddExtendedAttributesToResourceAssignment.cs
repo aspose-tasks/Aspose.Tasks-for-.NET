@@ -21,37 +21,39 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithResourceAssignments
             Task task1 = project.RootTask.Children.Add("Task");
             Resource rsc1 = project.Resources.Add("Rsc");
 
-            // Assign the resource desired task
-            ResourceAssignment assn = project.ResourceAssignments.Add(task1, rsc1);
-
-            var assignment = project.ResourceAssignments.First();
+            // Assign the resource to the desired task
+            ResourceAssignment assignment = project.ResourceAssignments.Add(task1, rsc1);
 
             // Custom attributes which is visible in "Resource Usage" view can be created with ExtendedAttributeDefinition.CreateResourceDefinition method.
             {
-                ExtendedAttributeDefinition resCostAttr = ExtendedAttributeDefinition.CreateResourceDefinition(
+                ExtendedAttributeDefinition resCostAttributeDefinition = ExtendedAttributeDefinition.CreateResourceDefinition(
                     CustomFieldType.Cost,
                     ExtendedAttributeResource.Cost5,
                     "My cost");
 
-                project.ExtendedAttributes.Add(resCostAttr);
+                project.ExtendedAttributes.Add(resCostAttributeDefinition);
 
-                var value = resCostAttr.CreateExtendedAttribute();
-                value.Value = "1500";
+                var value = resCostAttributeDefinition.CreateExtendedAttribute();
+
+                // The type of the attribute is "Cost", so we need to use "NumericValue" property.
+                value.NumericValue = 1500;
 
                 assignment.ExtendedAttributes.Add(value);
             }
 
             // Custom attributes which is visible in "Task Usage" view can be created with ExtendedAttributeDefinition.CreateTaskDefinition method
             {
-                ExtendedAttributeDefinition resCostAttr2 = ExtendedAttributeDefinition.CreateTaskDefinition(
+                ExtendedAttributeDefinition taskCostAttributeDefinition = ExtendedAttributeDefinition.CreateTaskDefinition(
                     CustomFieldType.Cost,
                     ExtendedAttributeTask.Cost5,
                     "My cost for task");
 
-                project.ExtendedAttributes.Add(resCostAttr2);
+                project.ExtendedAttributes.Add(taskCostAttributeDefinition);
 
-                var value = resCostAttr2.CreateExtendedAttribute();
-                value.Value = "2300";
+                var value = taskCostAttributeDefinition.CreateExtendedAttribute();
+
+                // The type of the attribute is "Cost", so we need to use "NumericValue" property.
+                value.NumericValue = 2300;
 
                 assignment.ExtendedAttributes.Add(value);
             }

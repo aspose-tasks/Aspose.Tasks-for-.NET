@@ -1,5 +1,4 @@
 using System;
-using System.Xml;
 
 namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.WorkingWithExtendedAttributes
 {
@@ -11,23 +10,21 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.WorkingWithExtendedAt
             string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
             // ExStart:ExtendedAttributes
-            Project prj = new Project(dataDir + "ExtendedAttributes.mpp");
-            ExtendedAttributeDefinitionCollection eads = prj.ExtendedAttributes;
+            Project project = new Project(dataDir + "ExtendedAttributes.mpp");
 
             // Create extended attribute definition
-            ExtendedAttributeDefinition ead = ExtendedAttributeDefinition.CreateTaskDefinition(CustomFieldType.Start, ExtendedAttributeTask.Start7, "Start 7");
-            eads.Add(ead);
+            ExtendedAttributeDefinition attributeDefinition = ExtendedAttributeDefinition.CreateTaskDefinition(CustomFieldType.Start, ExtendedAttributeTask.Start7, "Start 7");
+            project.ExtendedAttributes.Add(attributeDefinition);
 
             // Get zero index task
-            Task tsk = prj.RootTask.Children.GetById(1);
-            ExtendedAttributeCollection eas = tsk.ExtendedAttributes;
+            Task task = project.RootTask.Children.GetById(1);
 
             // Add extended attribute
-            string dateTimeFormat = "yyyy-MM-ddTHH:mm:ss";
-            ExtendedAttribute ea = new ExtendedAttribute();
-            ea.FieldId = ead.FieldId;
-            ea.Value = XmlConvert.ToString(DateTime.Now, dateTimeFormat);
-            eas.Add(ea);
+            ExtendedAttribute attribute = attributeDefinition.CreateExtendedAttribute();
+            attribute.DateValue = DateTime.Now;
+
+            // Also the following short syntax can be used: ExtendedAttribute attribute = attributeDefinition.CreateExtendedAttribute(DateTime.Now);
+            task.ExtendedAttributes.Add(attribute);
             // ExEnd:ExtendedAttributes
         }
     }
