@@ -1,8 +1,5 @@
 ﻿using Aspose.Tasks.Saving;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 /*
 This project uses Automatic Package Restore feature of NuGet to resolve Aspose.Tasks for .NET API reference 
@@ -87,8 +84,8 @@ namespace Aspose.Tasks.Examples.CSharp.Miscellaneous
                 ExtendedAttributeDefinition attr = ExtendedAttributeDefinition.CreateTaskDefinition(CustomFieldType.Flag, ExtendedAttributeTask.Flag1,  "My Flag Field");
                 project.ExtendedAttributes.Add(attr);
 
-                ExtendedAttribute taskAttr = new ExtendedAttribute();
-                taskAttr.Value = "1";
+                ExtendedAttribute taskAttr = attr.CreateExtendedAttribute();
+                taskAttr.FlagValue = true;
                 task2.ExtendedAttributes.Add(taskAttr);
 
                 // Save project as MPP

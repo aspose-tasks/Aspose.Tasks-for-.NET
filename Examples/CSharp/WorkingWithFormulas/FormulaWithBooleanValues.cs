@@ -36,8 +36,6 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithFormulas
             Task task = project.RootTask.Children.Add("Task");
             ExtendedAttribute extendedAttribute = attr.CreateExtendedAttribute();
             task.ExtendedAttributes.Add(extendedAttribute);
-            Resource rsc = project.Resources.Add("Rsc");
-            ResourceAssignment assn = project.ResourceAssignments.Add(task, rsc);
             return project;
         }
     }

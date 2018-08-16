@@ -1,8 +1,5 @@
 ﻿using Aspose.Tasks.Saving;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 /*
 This project uses Automatic Package Restore feature of NuGet to resolve Aspose.Tasks for .NET API reference 
@@ -40,8 +37,8 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithTasks
                 //Create an Extended Attribute from the Attribute Definition
                 var taskExtendedAttributeText1 = taskExtendedAttributeText1Definition.CreateExtendedAttribute();
 
-                //Assign a value to the generated Extended Attribute
-                taskExtendedAttributeText1.Value = "London";
+                //Assign a value to the generated Extended Attribute. The type of the attribute is "Text", the "TextValue" property should be used.
+                taskExtendedAttributeText1.TextValue = "London";
 
                 //Add the Extended Attribute to task
                 task.ExtendedAttributes.Add(taskExtendedAttributeText1);
@@ -83,10 +80,10 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithTasks
                 var taskExtendedAttributeDuration2Definition = ExtendedAttributeDefinition.CreateLookupTaskDefinition(CustomFieldType.Duration, ExtendedAttributeTask.Duration2, "Some duration");
 
                 //Add lookup values for extended attribute definition
-                taskExtendedAttributeDuration2Definition.AddLookupValue(new Value { Id = 2, DurationValue = 4 * 60, Description = "4 hours" });
-                taskExtendedAttributeDuration2Definition.AddLookupValue(new Value { Id = 3, DurationValue = 8 * 60, Description = "1 day" });
-                taskExtendedAttributeDuration2Definition.AddLookupValue(new Value { Id = 4, DurationValue = 1 * 60, Description = "1 hour" });
-                taskExtendedAttributeDuration2Definition.AddLookupValue(new Value { Id = 7, DurationValue = 10 * 8 * 60, Description = "10 days" });
+                taskExtendedAttributeDuration2Definition.AddLookupValue(new Value { Id = 2, Duration = project2.GetDuration(4, TimeUnitType.Hour), Description = "4 hours" });
+                taskExtendedAttributeDuration2Definition.AddLookupValue(new Value { Id = 3, Duration = project2.GetDuration(1, TimeUnitType.Day), Description = "1 day" });
+                taskExtendedAttributeDuration2Definition.AddLookupValue(new Value { Id = 4, Duration = project2.GetDuration(1, TimeUnitType.Hour), Description = "1 hour" });
+                taskExtendedAttributeDuration2Definition.AddLookupValue(new Value { Id = 7, Duration = project2.GetDuration(10, TimeUnitType.Day), Description = "10 days" });
 
                 //Add the definition to the project's Extended Attributes collection
                 project2.ExtendedAttributes.Add(taskExtendedAttributeDuration2Definition);

@@ -1,8 +1,5 @@
 ﻿using Aspose.Tasks.Saving;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 /*
 This project uses Automatic Package Restore feature of NuGet to resolve Aspose.Tasks for .NET API reference 
@@ -38,7 +35,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.WorkingWithExtendedAt
                 // Generate Extended Attribute from definition
                 ExtendedAttribute text1TaskAttribute = myTextAttributeDefinition.CreateExtendedAttribute();
 
-                text1TaskAttribute.Value = "Text attribute value";
+                text1TaskAttribute.TextValue = "Text attribute value";
 
                 // Add extended attribute to task
                 Task tsk = project1.RootTask.Children.Add("Task 1");

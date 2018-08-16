@@ -121,13 +121,12 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.WorkingWithExtendedAt
                 ExtendedAttributeDefinition taskDurationAttributeDefinition = ExtendedAttributeDefinition.CreateTaskDefinition(ExtendedAttributeTask.Duration1, "New Duration");
                 project.ExtendedAttributes.Add(taskDurationAttributeDefinition);
 
-                // Add new task and assign duration value of the previously defined duration attribute "New Duration".
+                // Add new task and assign duration value to the previously defined duration attribute.
                 Task timeTask = project.RootTask.Children.Add("New task");
 
                 ExtendedAttribute durationExtendedAttribute = taskDurationAttributeDefinition.CreateExtendedAttribute();
 
-                durationExtendedAttribute.DurationFormat = TimeUnitType.Hour;
-                durationExtendedAttribute.Value = "PT3H0M0S";
+                durationExtendedAttribute.DurationValue = project.GetDuration(3.0, TimeUnitType.Hour);
                 timeTask.ExtendedAttributes.Add(durationExtendedAttribute);
 
                 MPPSaveOptions mppSaveOptions = new MPPSaveOptions();

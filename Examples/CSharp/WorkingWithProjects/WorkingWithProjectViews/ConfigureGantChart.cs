@@ -24,11 +24,11 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.WorkingWithProjectVie
                 Project project = new Project(dataDir + "Project5.mpp"); // Create a new project task
                 Task task = project.RootTask.Children.Add("New Activity");
 
+                // Define new custom attribute
+                ExtendedAttributeDefinition text1Definition = ExtendedAttributeDefinition.CreateTaskDefinition(ExtendedAttributeTask.Text1, null);
+                project.ExtendedAttributes.Add(text1Definition);
                 // Add custom text attribute to created task.
-                ExtendedAttribute attr = new ExtendedAttribute();
-                attr.FieldId = ((int)ExtendedAttributeTask.Text1).ToString();
-                attr.Value = "Activity attribute";
-                task.ExtendedAttributes.Add(attr);
+                task.ExtendedAttributes.Add(text1Definition.CreateExtendedAttribute("Activity attribute"));
 
                 // Customize table by adding text attribute field
                 TableField attrField = new TableField();
@@ -40,8 +40,8 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.WorkingWithProjectVie
 
                 Table table = project.Tables.ToList()[0];
                 table.TableFields.Insert(3, attrField);
-                         
-                project.Save(dataDir + "ConfigureGantChart_out.mpp", SaveFileFormat.MPP);
+
+                project.Save(dataDir + "ConfigureGantChart_out.mpp", new MPPSaveOptions() { WriteViewData = true });
             }
             catch (Exception ex)
             {

@@ -1,8 +1,5 @@
 ﻿using Aspose.Tasks.Saving;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 /*
 This project uses Automatic Package Restore feature of NuGet to resolve Aspose.Tasks for .NET API reference 
@@ -28,21 +25,20 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithResources
                 Project project1 = new Project(dataDir + "ResourceExtendedAttributes.mpp");
 
                 // Define extended attribute
-                ExtendedAttributeDefinition myNumber1 = project1.ExtendedAttributes.GetById((int)ExtendedAttributeTask.Text1);
+                ExtendedAttributeDefinition myNumber1 = project1.ExtendedAttributes.GetById((int)ExtendedAttributeTask.Number1);
                 if (myNumber1 == null)
                 {
-                    myNumber1 = ExtendedAttributeDefinition.CreateResourceDefinition(CustomFieldType.Text, ExtendedAttributeResource.Text1, "Age");
-                    myNumber1.FieldId = ExtendedAttributeResource.Number1.ToString("D");
+                    myNumber1 = ExtendedAttributeDefinition.CreateResourceDefinition(ExtendedAttributeResource.Number1, "Age");
                     project1.ExtendedAttributes.Add(myNumber1);
                 }
 
                 // Create extended attribute and set its value
-                ExtendedAttribute Number1Resource = myNumber1.CreateExtendedAttribute();
-                Number1Resource.Value = "30.5345";
+                ExtendedAttribute number1Resource = myNumber1.CreateExtendedAttribute();
+                number1Resource.NumericValue = 30.5345m;
 
                 // Add a new resource and its extended attribute   
                 Resource rsc = project1.Resources.Add("R1");
-                rsc.ExtendedAttributes.Add(Number1Resource);
+                rsc.ExtendedAttributes.Add(number1Resource);
 
                 // Save project as MPP
                 project1.Save(dataDir + "ResourceExtendedAttributes_out.mpp", SaveFileFormat.MPP);

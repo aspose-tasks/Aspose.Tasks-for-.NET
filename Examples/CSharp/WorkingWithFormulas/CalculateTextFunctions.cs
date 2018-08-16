@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace Aspose.Tasks.Examples.CSharp.WorkingWithFormulas
 {
@@ -34,11 +31,12 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithFormulas
             Task task = project.RootTask.Children.GetById(1);
                         
             // Set formulas and print extended attribute value
-            project.ExtendedAttributes[0].Formula = "String(5 ,40)";
+            project.ExtendedAttributes[0].Formula = "String(5, 40)";
             Console.WriteLine(task.ExtendedAttributes[0].Value);
-            project.ExtendedAttributes[0].Formula = "String(5 ,\"Astr\")";
+            project.ExtendedAttributes[0].Formula = "String(5, \"A\")";
             Console.WriteLine(task.ExtendedAttributes[0].Value);
-            project.ExtendedAttributes[0].Formula = "String(-5 ,\"Astr\")";
+            project.ExtendedAttributes[0].Formula = "String(-5, \"A\")";
+            // #Error
             Console.WriteLine(task.ExtendedAttributes[0].Value);
         }
         // ExEnd:CalculateTextFunctions

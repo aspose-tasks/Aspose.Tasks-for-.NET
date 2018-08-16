@@ -1,60 +1,64 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace Aspose.Tasks.Examples.CSharp.WorkingWithFormulas
 {
+    using System.Globalization;
+
     class CalculateDateTimeFunctions
     {
         public static void Run()
         {
             // ExStart:CalculateDateTimeFunctions
-            Project project = CreateTestProjectWithCustomField();
+            Project project = CreateTestProject();
             Task task = project.RootTask.Children.GetById(1);
 
-            // Set ProjDateDiff formula and print entended attribute value
-            project.ExtendedAttributes[0].Formula = "ProjDateDiff(\"03/23/2015\",\"03/18/2015\")";
-            Console.WriteLine(task.ExtendedAttributes[0].Value);
-            project.ExtendedAttributes[0].Formula = "ProjDateDiff(\"03/23/2015\",\"03/25/2015\")";
-            Console.WriteLine(task.ExtendedAttributes[0].Value);
+            ExtendedAttributeDefinition numberDefinition = ExtendedAttributeDefinition.CreateTaskDefinition(ExtendedAttributeTask.Number1, null);
+            project.ExtendedAttributes.Add(numberDefinition);
 
-            // Set ProjDateSub formula and print entended attribute value
-            project.ExtendedAttributes[0].Formula = "ProjDateSub(\"3/19/2015\", \"1d\")";
-            Console.WriteLine(task.ExtendedAttributes[0].Value);
+            ExtendedAttribute numberAttribute = numberDefinition.CreateExtendedAttribute();
+            task.ExtendedAttributes.Add(numberAttribute);
+
+            // Set ProjDateDiff formula and print extended attribute value
+            numberDefinition.Formula = "ProjDateDiff(\"03/23/2015\",\"03/18/2015\")";
+            Console.WriteLine(numberAttribute.NumericValue);
+            numberDefinition.Formula = "ProjDateDiff(\"03/23/2015\",\"03/25/2015\")";
+            Console.WriteLine(numberAttribute.NumericValue);
+
+            ExtendedAttributeDefinition dateDefinition = ExtendedAttributeDefinition.CreateTaskDefinition(ExtendedAttributeTask.Date1, null);
+            project.ExtendedAttributes.Add(dateDefinition);
+            ExtendedAttribute dateAttribute = dateDefinition.CreateExtendedAttribute();
+            task.ExtendedAttributes.Add(dateAttribute);
+
+            // Set ProjDateSub formula and print extended attribute value
+            dateDefinition.Formula = "ProjDateSub(\"3/19/2015\", \"1d\")";
+            Console.WriteLine(dateAttribute.DateValue);
 
             // Set ProjDurConv formula and print entended attribute value
-            project.ExtendedAttributes[0].Formula = "ProjDurConv([Duration], pjHours)";
-            Console.WriteLine(task.ExtendedAttributes[0].Value);
-            project.ExtendedAttributes[0].Formula = "ProjDurConv([Duration], pjWeeks)";
-            Console.WriteLine(task.ExtendedAttributes[0].Value);
+            numberDefinition.Formula = "ProjDurConv([Duration], pjHours)";
+            Console.WriteLine(numberAttribute.Value);
+
+            numberDefinition.Formula = "ProjDurConv([Duration], pjWeeks)";
+            Console.WriteLine(numberAttribute.Value);
 
             // Set Second formula and print entended attribute value
-            project.ExtendedAttributes[0].Formula = "Second(\"4/21/2015 2:53:41 AM\")";
-            Console.WriteLine(task.ExtendedAttributes[0].Value);
+            numberDefinition.Formula = "Second(\"4/21/2015 2:53:41 AM\")";
+            Console.WriteLine(numberAttribute.NumericValue);
 
             // Set Weekday formula and print entended attribute value
-            project.ExtendedAttributes[0].Formula = "Weekday(\"24/3/2015\", 1)";
-            Console.WriteLine(task.ExtendedAttributes[0].Value);
-            project.ExtendedAttributes[0].Formula = "Weekday(\"24/3/2015\", 2)";
-            Console.WriteLine(task.ExtendedAttributes[0].Value);
-            project.ExtendedAttributes[0].Formula = "Weekday(\"24/3/2015\", 3)";
-            Console.WriteLine(task.ExtendedAttributes[0].Value);
+            numberDefinition.Formula = "Weekday(\"24/3/2015\", 1)";
+            Console.WriteLine(numberAttribute.NumericValue);
+            numberDefinition.Formula = "Weekday(\"24/3/2015\", 2)";
+            Console.WriteLine(numberAttribute.NumericValue);
+            numberDefinition.Formula = "Weekday(\"24/3/2015\", 3)";
+            Console.WriteLine(numberAttribute.NumericValue);
             // ExEnd:CalculateDateTimeFunctions
         }
 
-        public static Project CreateTestProjectWithCustomField()
+        private static Project CreateTestProject()
         {
             Project project = new Project();
-            ExtendedAttributeDefinition attr = ExtendedAttributeDefinition.CreateTaskDefinition(CustomFieldType.Text, ExtendedAttributeTask.Text1, "Custom Field");
-            
-            project.ExtendedAttributes.Add(attr);
-
-            Task task = project.RootTask.Children.Add("Task");
-
-            ExtendedAttribute a = attr.CreateExtendedAttribute();
-            task.ExtendedAttributes.Add(a);
+            project.RootTask.Children.Add("Task");
             return project;
-        } 
+        }
     }
 }
