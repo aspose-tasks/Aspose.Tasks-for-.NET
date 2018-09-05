@@ -2,8 +2,6 @@
 
 namespace Aspose.Tasks.Examples.CSharp.WorkingWithFormulas
 {
-    using System.Globalization;
-
     class CalculateDateTimeFunctions
     {
         public static void Run()
@@ -29,16 +27,32 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithFormulas
             ExtendedAttribute dateAttribute = dateDefinition.CreateExtendedAttribute();
             task.ExtendedAttributes.Add(dateAttribute);
 
+            ExtendedAttributeDefinition durationDefinition = ExtendedAttributeDefinition.CreateTaskDefinition(ExtendedAttributeTask.Duration4, "Custom duration field");
+            project.ExtendedAttributes.Add(durationDefinition);
+            ExtendedAttribute durationAttribute = durationDefinition.CreateExtendedAttribute();
+            task.ExtendedAttributes.Add(durationAttribute);
+
+            ExtendedAttributeDefinition textDefinition = ExtendedAttributeDefinition.CreateTaskDefinition(ExtendedAttributeTask.Text5, "Custom text field");
+            project.ExtendedAttributes.Add(textDefinition);
+            ExtendedAttribute textAttribute = textDefinition.CreateExtendedAttribute();
+            task.ExtendedAttributes.Add(textAttribute);
+
             // Set ProjDateSub formula and print extended attribute value
             dateDefinition.Formula = "ProjDateSub(\"3/19/2015\", \"1d\")";
             Console.WriteLine(dateAttribute.DateValue);
 
-            // Set ProjDurConv formula and print entended attribute value
-            numberDefinition.Formula = "ProjDurConv([Duration], pjHours)";
-            Console.WriteLine(numberAttribute.Value);
+            // We can set ProjDurConv formula to duration-valued attribute as well as to text-valued attribute.
 
-            numberDefinition.Formula = "ProjDurConv([Duration], pjWeeks)";
-            Console.WriteLine(numberAttribute.Value);
+            // Set ProjDurConv formula to duration-valued extended attribute and print its value.
+            durationDefinition.Formula = "ProjDurConv([Duration], pjHours)";
+            Console.WriteLine(durationAttribute.DurationValue);
+
+            // Set ProjDurConv formula to text-valued extended attribute and print its value.
+            textDefinition.Formula = "ProjDurConv([Duration], pjHours)";
+            Console.WriteLine(textAttribute.TextValue);
+
+            textDefinition.Formula = "ProjDurConv([Duration], pjWeeks)";
+            Console.WriteLine(textAttribute.TextValue);
 
             // Set Second formula and print entended attribute value
             numberDefinition.Formula = "Second(\"4/21/2015 2:53:41 AM\")";

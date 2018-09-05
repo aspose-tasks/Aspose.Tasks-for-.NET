@@ -18,11 +18,11 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithFormulas
 
             // Set formulas and print extended attribute value
             project.ExtendedAttributes[0].Formula = "StrConv(\"sTring and sTRINg\",3)";
-            Console.WriteLine(task.ExtendedAttributes[0].Value);
+            Console.WriteLine(task.ExtendedAttributes[0].TextValue);
             project.ExtendedAttributes[0].Formula = "StrConv(\"sTring and sTRINg\",1)";
-            Console.WriteLine(task.ExtendedAttributes[0].Value);
+            Console.WriteLine(task.ExtendedAttributes[0].TextValue);
             project.ExtendedAttributes[0].Formula = "StrConv(\"sTring and sTRINg\",2)";
-            Console.WriteLine(task.ExtendedAttributes[0].Value);
+            Console.WriteLine(task.ExtendedAttributes[0].TextValue);
         }
 
         public static void EvaluateStringFunction()
@@ -32,12 +32,12 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithFormulas
                         
             // Set formulas and print extended attribute value
             project.ExtendedAttributes[0].Formula = "String(5, 40)";
-            Console.WriteLine(task.ExtendedAttributes[0].Value);
+            Console.WriteLine(task.ExtendedAttributes[0].TextValue);
             project.ExtendedAttributes[0].Formula = "String(5, \"A\")";
-            Console.WriteLine(task.ExtendedAttributes[0].Value);
+            Console.WriteLine(task.ExtendedAttributes[0].TextValue);
             project.ExtendedAttributes[0].Formula = "String(-5, \"A\")";
             // #Error
-            Console.WriteLine(task.ExtendedAttributes[0].Value);
+            Console.WriteLine(task.ExtendedAttributes[0].TextValue);
         }
         // ExEnd:CalculateTextFunctions
 

@@ -24,12 +24,12 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithFormulas
     
             // Print extended attribute value
             Task task = project.RootTask.Children.GetById(1);
-            Console.WriteLine(task.ExtendedAttributes[0].Value);
+            Console.WriteLine(task.ExtendedAttributes[0].TextValue);
         }
 
         public static void EvaluateIsNumeric()
         {
-            string[] numericFormulas = { "IsNUmeric(1)", "IsNumeric(1<0)", "IsNumeric(\"1.1\")", "IsNumeric(Choose((2 + Sgn(2^-3)), 123, \"one two three\"))" };
+            string[] numericFormulas = { "IsNumeric('AAA')", "IsNUmeric(1)", "IsNumeric(1<0)", "IsNumeric(\"1.1\")", "IsNumeric(Choose((2 + Sgn(2^-3)), 123, \"one two three\"))" };
     
             Project project = CreateTestProjectWithCustomField();
     
@@ -40,8 +40,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithFormulas
 
                 // Print extended attribute value
                 Task task = project.RootTask.Children.GetById(1);
-                Console.WriteLine(task.ExtendedAttributes[0].Value);
- 
+                Console.WriteLine(task.ExtendedAttributes[0].TextValue);
             }           
         }
 
@@ -50,11 +49,11 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithFormulas
             Project project = CreateTestProjectWithCustomField();
 
             // Set Formula
-            project.ExtendedAttributes[0].Formula = "Switch(False, \"False predicate\", true, \"True predicate\")";
+            project.ExtendedAttributes[0].Formula = "Switch( 0 < 1, \"0 is lesser than 1\", 0 > 1, \"0 is greater than 1\")";
 
             // Print extended attribute value
             Task task = project.RootTask.Children.GetById(1);
-            Console.WriteLine(task.ExtendedAttributes[0].Value);
+            Console.WriteLine(task.ExtendedAttributes[0].TextValue);
         }
         // ExEnd:CalculateGeneralFunctions
 

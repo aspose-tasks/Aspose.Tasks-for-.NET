@@ -22,7 +22,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithFormulas
             
             // Print if formula value is computed correctly
             Task task = project.RootTask.Children.GetById(1);
-            Console.WriteLine("Check Total tasks: 1 Total resources: 0 - {0}", task.ExtendedAttributes[0].Value.Equals("Total tasks: 1 Total resources: 0"));            
+            Console.WriteLine("Check Total tasks: 1 Total resources: 0 - {0}", task.ExtendedAttributes[0].TextValue.Equals("Total tasks: 1 Total resources: 0"));            
         }
 
         static Project CreateTestProjectWithCustomFieldWithoutResource()
