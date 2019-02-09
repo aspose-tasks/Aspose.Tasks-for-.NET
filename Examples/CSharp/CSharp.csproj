@@ -38,13 +38,11 @@
     <StartupObject>Aspose.Tasks.Examples.CSharp.RunExamples</StartupObject>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Aspose.Tasks, Version=18.9.0.0, Culture=neutral, PublicKeyToken=716fcc553a201e56, processorArchitecture=MSIL">
-      <HintPath>..\packages\Aspose.Tasks.18.9.0\lib\Aspose.Tasks.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="Aspose.Tasks, Version=19.2.0.0, Culture=neutral, PublicKeyToken=716fcc553a201e56, processorArchitecture=MSIL">
+      <HintPath>..\packages\Aspose.Tasks.19.2.0\lib\net40\Aspose.Tasks.dll</HintPath>
     </Reference>
-    <Reference Include="Aspose.Words, Version=18.6.0.0, Culture=neutral, PublicKeyToken=716fcc553a201e56, processorArchitecture=MSIL">
-      <HintPath>..\packages\Aspose.Words.18.6.0\lib\net40\Aspose.Words.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="Aspose.Words, Version=19.2.0.0, Culture=neutral, PublicKeyToken=716fcc553a201e56, processorArchitecture=MSIL">
+      <HintPath>..\packages\Aspose.Words.19.2.0\lib\net40\Aspose.Words.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -70,6 +68,7 @@
     <Compile Include="Articles\SetGanttChartViewStartDate.cs" />
     <Compile Include="Articles\SortTasksByColumnInGanttChart.cs" />
     <Compile Include="ConvertingProjectData\AddDefaultFontDuringSavingAsPDF.cs" />
+    <Compile Include="ConvertingProjectData\AddingCssStylePrefix.cs" />
     <Compile Include="ConvertingProjectData\ControlHeaderNameDuringHTMLExport.cs" />
     <Compile Include="ConvertingProjectData\HideLegendsDuringSave.cs" />
     <Compile Include="ConvertingProjectData\ReducingGapBetweenTasksListAndFooter.cs" />
