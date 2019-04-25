@@ -3,7 +3,9 @@ using System.IO;
 using Aspose.Tasks.Examples.CSharp.Articles;
 using Aspose.Tasks.Examples.CSharp.ConvertingProjectData;
 using Aspose.Tasks.Examples.CSharp.WorkingWithProjects;
+using Aspose.Tasks.Examples.CSharp.WorkingWithProjects.ImportingAndExporting;
 using Aspose.Tasks.Examples.CSharp.WorkingWithResourceAssignments;
+using Aspose.Tasks.Examples.CSharp.WorkingWithResources;
 using Aspose.Tasks.Examples.CSharp.WorkingWithTasks;
 
 namespace Aspose.Tasks.Examples.CSharp
@@ -17,7 +19,7 @@ namespace Aspose.Tasks.Examples.CSharp
             Console.WriteLine("=====================================================");
 
             License lic = new License();
-            lic.SetLicense(@"E:/Lics/Aspose.Total.lic");
+            lic.SetLicense(@"Aspose.Total.NET.lic");
 
             // Uncomment the one you want to try out
 
@@ -33,6 +35,7 @@ namespace Aspose.Tasks.Examples.CSharp
             //ReadCustomBarStyle.Run();
             //RenderDifferentPresentationFormatsToXAML.Run();
             //RenderGanttChartWithBarsNotRolledUp.Run();
+            //RenderGanttChartWithBarsRolledUp.Run();
             //RenderMultipageTIFF.Run();
             //RenderProjectToPredefinedPageSizes.Run();
             //RenderToXAML.Run();
@@ -40,6 +43,8 @@ namespace Aspose.Tasks.Examples.CSharp
             //RetrieveTaskEmbeddedDocuments.Run();
             //SetGanttChartViewStartDate.Run();
             //SortTasksByColumnInGanttChart.Run();
+            //TimescaleSettings.Run();
+            //CustomizeTextWithTaskBars.Run();
 
             #region Converting Project Data
             //AddDefaultFontDuringSavingAsPDF.Run();
@@ -197,6 +202,7 @@ namespace Aspose.Tasks.Examples.CSharp
             //ReadPasswordProtectedProjectFile.Run();
             //ReadProjectFileFromStream.Run();
             //ReadProjectFiles.Run();
+            //WorkingWithEncodings.Run();
 
             // Importing and Exporting
             // =====================================================
@@ -309,6 +315,7 @@ namespace Aspose.Tasks.Examples.CSharp
             //SetResourceCalendar.Run();
             //SetResourceExtendedAttributes.Run();
             //UpdateResourceDataInMPP.Run();
+            //ResourcePrefixForNestedResources.Run();
 
             // =====================================================
             // =====================================================
