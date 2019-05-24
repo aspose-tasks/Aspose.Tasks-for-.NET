@@ -38,11 +38,11 @@
     <StartupObject>Aspose.Tasks.Examples.CSharp.RunExamples</StartupObject>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Aspose.Tasks, Version=19.2.0.0, Culture=neutral, PublicKeyToken=716fcc553a201e56, processorArchitecture=MSIL">
-      <HintPath>..\packages\Aspose.Tasks.19.2.0\lib\net40\Aspose.Tasks.dll</HintPath>
+    <Reference Include="Aspose.Tasks, Version=19.5.0.0, Culture=neutral, PublicKeyToken=716fcc553a201e56, processorArchitecture=MSIL">
+      <HintPath>..\packages\Aspose.Tasks.19.5.0\lib\net40\Aspose.Tasks.dll</HintPath>
     </Reference>
-    <Reference Include="Aspose.Words, Version=19.2.0.0, Culture=neutral, PublicKeyToken=716fcc553a201e56, processorArchitecture=MSIL">
-      <HintPath>..\packages\Aspose.Words.19.2.0\lib\net40\Aspose.Words.dll</HintPath>
+    <Reference Include="Aspose.Words, Version=19.5.0.0, Culture=neutral, PublicKeyToken=716fcc553a201e56, processorArchitecture=MSIL">
+      <HintPath>..\packages\Aspose.Words.19.5.0\lib\net40\Aspose.Words.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -56,9 +56,11 @@
   <ItemGroup>
     <Compile Include="Articles\AlignCellContents.cs" />
     <Compile Include="Articles\ChangeGanttBarsColorGradient.cs" />
+    <Compile Include="Articles\CustomizeTextWithTaskBars.cs" />
     <Compile Include="Articles\ImplementCustomBarStyleWriting.cs" />
     <Compile Include="Articles\ReadCustomBarStyle.cs" />
     <Compile Include="Articles\RenderDifferentPresentationFormatsToXAML.cs" />
+    <Compile Include="Articles\RenderGanttChartWithBarsRolledUp.cs" />
     <Compile Include="Articles\RenderGanttChartWithBarsNotRolledUp.cs" />
     <Compile Include="Articles\RenderMultipageTIFF.cs" />
     <Compile Include="Articles\RenderProjectToPredefinedPageSizes.cs" />
@@ -67,11 +69,13 @@
     <Compile Include="Articles\RetrieveTaskEmbeddedDocuments.cs" />
     <Compile Include="Articles\SetGanttChartViewStartDate.cs" />
     <Compile Include="Articles\SortTasksByColumnInGanttChart.cs" />
+    <Compile Include="Articles\TimescaleSettings.cs" />
     <Compile Include="ConvertingProjectData\AddDefaultFontDuringSavingAsPDF.cs" />
     <Compile Include="ConvertingProjectData\AddingCssStylePrefix.cs" />
     <Compile Include="ConvertingProjectData\ControlHeaderNameDuringHTMLExport.cs" />
     <Compile Include="ConvertingProjectData\HideLegendsDuringSave.cs" />
     <Compile Include="ConvertingProjectData\ReducingGapBetweenTasksListAndFooter.cs" />
+    <Compile Include="ConvertingProjectData\RenderCommentsWhenConverting.cs" />
     <Compile Include="ConvertingProjectData\SaveProjectAsJPEG.cs" />
     <Compile Include="ConvertingProjectData\UsingSpreadsheet2003SaveOptions.cs" />
     <Compile Include="KnowledgeBase\AddNewTask.cs" />
@@ -121,10 +125,12 @@
     <Compile Include="WorkingWithFormulas\CalculateMathExpressions.cs" />
     <Compile Include="WorkingWithFormulas\CalculateTextFunctions.cs" />
     <Compile Include="WorkingWithProjects\GetPageCountOnStartAndEndDates.cs" />
+    <Compile Include="WorkingWithProjects\CreatingReadingAndSaving\WorkingWithEncodings.cs" />
     <Compile Include="WorkingWithProjects\WorkingWithProjectViews\SupportForTextStyle.cs" />
     <Compile Include="WorkingWithResourceAssignments\AddExtendedAttributesToRAWithLookUp.cs" />
     <Compile Include="WorkingWithResourceAssignments\ReadWriteRateScaleForResourceAssignment.cs" />
     <Compile Include="WorkingWithResourceAssignments\AddExtendedAttributesToResourceAssignment.cs" />
+    <Compile Include="WorkingWithResources\ResourcePrefixForNestedResources.cs" />
     <Compile Include="WorkingWithTasks\AddWBSCodes.cs" />
     <Compile Include="WorkingWithProjects\CreatingReadingAndSaving\CreateEmptyProjectSaveStream.cs" />
     <Compile Include="WorkingWithProjects\CreatingReadingAndSaving\ReadPasswordProtectedProjectFile.cs" />
@@ -232,6 +238,7 @@
     <Compile Include="WorkingWithProjects\WorkingWithProjectProperties\ReadCurrencyProperties.cs" />
     <Compile Include="WorkingWithProjects\WorkingWithProjectProperties\ReadFiscalYearProperties.cs" />
     <Compile Include="WorkingWithTasks\RenumberTaskWBSCodes.cs" />
+    <Compile Include="WorkingWithTasks\TaskWarning.cs" />
     <Compile Include="WorkingWithVBA\ReadModuleAttributesInformation.cs" />
     <Compile Include="WorkingWithVBA\ReadModulesInformation.cs" />
     <Compile Include="WorkingWithProjects\CreatingReadingAndSaving\ImportProjectDataFromDatabase.cs" />
@@ -243,7 +250,7 @@
     <Compile Include="ConvertingProjectData\FitContentsToCellSize.cs" />
     <Compile Include="ConvertingProjectData\CustomizeTextStyle.cs" />
     <Compile Include="ConvertingProjectData\CustomizeDateFormats.cs" />
-    <Compile Include="WorkingWithProjects\ReadOutlineCodes.cs" />
+    <Compile Include="WorkingWithProjects\WorkingWithOutlineCodes.cs" />
     <Compile Include="WorkingWithProjects\Printing\PrintProjectUsingCustomPrinter.cs" />
     <Compile Include="ConvertingProjectData\SaveToMultiplePDFFiles.cs" />
     <Compile Include="WorkingWithProjects\WorkingWithProjectProperties\WriteDefaultProperties.cs" />

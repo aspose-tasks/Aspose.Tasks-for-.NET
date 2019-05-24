@@ -19,7 +19,7 @@ namespace Aspose.Tasks.Examples.CSharp
             Console.WriteLine("=====================================================");
 
             License lic = new License();
-            lic.SetLicense(@"Aspose.Total.NET.lic");
+            lic.SetLicense(@"D:\Aspose\Licenses\Aspose.Total.NET.lic");
 
             // Uncomment the one you want to try out
 
@@ -69,6 +69,7 @@ namespace Aspose.Tasks.Examples.CSharp
             //UsingSpreadsheet2003SaveOptions.Run();
             //UsingSvgOptions.Run();
             //UsingXlsxOptions.Run();
+            //RenderCommentsWhenConverting.Run();
             #endregion
 
             // =====================================================
@@ -188,7 +189,7 @@ namespace Aspose.Tasks.Examples.CSharp
             //GetPageCountOnStartAndEndDates.Run();
             //MPPFileUpdate.Run();
             //ReadHeaderFooterInfo.Run();
-            //ReadOutlineCodes.Run();
+            WorkingWithOutlineCodes.Run();
             //SaveProjectDataAsTemplate.Run();
             //TaskSettingStartFinishDates.Run();
 
@@ -382,6 +383,7 @@ namespace Aspose.Tasks.Examples.CSharp
             //WriteTaskCalendar.Run();
             //WriteTaskDuration.Run();
             //WriteTaskProperties.Run();
+            //TaskWarning.Run();
             #endregion
 
             // Working with Task Constraints

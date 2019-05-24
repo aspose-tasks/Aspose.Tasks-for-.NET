@@ -36,6 +36,8 @@ namespace Aspose.Tasks.Examples.CSharp.Articles
             string resultFile = Path.Combine(dataDir, "RenderGanttChartWithBarsNotRolledUp_out.pdf");
 
             Project project = new Project(file);
+            //for (int i = 14; i <= 23; i++)
+            //    project.GetTaskById(i).HideBar = false;
             project.Save(resultFile, (SaveOptions)options);
             // ExEnd:RenderGanttChartWithBarsRolledUp
         }
