@@ -13,7 +13,7 @@ namespace Aspose.Tasks.Examples.CSharp.ConvertingProjectData
             string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
             // ExStart:RenderCommentsWhenConverting
-            Project project = new Project(dataDir + "PrintProject5.mpp");
+            Project project = new Project(dataDir + "Input.mpp");
             project.DefaultView.PageInfo.PageViewSettings.PrintNotes = true;
             project.Save(dataDir + "ProjectWithComments.pdf", Saving.SaveFileFormat.PDF);
             // ExEnd:RenderCommentsWhenConverting
