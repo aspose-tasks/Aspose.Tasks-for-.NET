@@ -70,6 +70,7 @@ namespace Aspose.Tasks.Examples.CSharp
             //UsingSvgOptions.Run();
             //UsingXlsxOptions.Run();
             //RenderCommentsWhenConverting.Run();
+            WriteStringDataToProject.Run();
             #endregion
 
             // =====================================================
