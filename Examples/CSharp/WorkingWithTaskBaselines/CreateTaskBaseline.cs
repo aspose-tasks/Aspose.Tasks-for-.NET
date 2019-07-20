@@ -16,7 +16,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithTaskBaselines
             // Creating TaskBaseline:
             Task task = project1.RootTask.Children.Add("Task");
 
-            // Set baseline for specified tasks and  and entire project
+            // Set baseline for specified tasks and entire project
             project1.SetBaseline(BaselineType.Baseline, new Task[] { task });
             project1.SetBaseline(BaselineType.Baseline);
             // ExEnd:CreateTaskBaseline

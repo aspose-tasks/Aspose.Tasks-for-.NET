@@ -18,19 +18,19 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithResources
     {
         public static void Run()
         {
+            // ExStart:CreateResources
             // The path to the documents directory.
             string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
             // Create project instance
             Project project = new Project();
 
-            // ExStart:CreateResources
             // Add resources
             Resource rsc1 = project.Resources.Add("Rsc");
-            // ExEnd:CreateResources
 
             // Save project as XML
-            project.Save(dataDir + "CreateResources_out.xml", SaveFileFormat.XML);     
+            project.Save(dataDir + "CreateResources_out.xml", SaveFileFormat.XML);
+            // ExEnd:CreateResources
         }
     }
 }
