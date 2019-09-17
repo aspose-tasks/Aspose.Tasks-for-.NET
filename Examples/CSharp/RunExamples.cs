@@ -1,12 +1,31 @@
 using System;
 using System.IO;
+using Aspose.Tasks;
 using Aspose.Tasks.Examples.CSharp.Articles;
 using Aspose.Tasks.Examples.CSharp.ConvertingProjectData;
+using Aspose.Tasks.Examples.CSharp.KnowledgeBase;
+using Aspose.Tasks.Examples.CSharp.Miscellaneous;
+using Aspose.Tasks.Examples.CSharp.WorkingWithCalendarExceptions;
+using Aspose.Tasks.Examples.CSharp.WorkingWithCalendars;
+using Aspose.Tasks.Examples.CSharp.WorkingWithCalendars.CreatingUpdatingAndRemoving;
+using Aspose.Tasks.Examples.CSharp.WorkingWithCurrencies;
+using Aspose.Tasks.Examples.CSharp.WorkingWithFormulas;
 using Aspose.Tasks.Examples.CSharp.WorkingWithProjects;
+using Aspose.Tasks.Examples.CSharp.WorkingWithProjects.CreatingReadingAndSaving;
 using Aspose.Tasks.Examples.CSharp.WorkingWithProjects.ImportingAndExporting;
+using Aspose.Tasks.Examples.CSharp.WorkingWithProjects.Miscellaneous;
+using Aspose.Tasks.Examples.CSharp.WorkingWithProjects.Printing;
+using Aspose.Tasks.Examples.CSharp.WorkingWithProjects.Rescheduling;
+using Aspose.Tasks.Examples.CSharp.WorkingWithProjects.WorkingWithExtendedAttributes;
+using Aspose.Tasks.Examples.CSharp.WorkingWithProjects.WorkingWithProjectProperties;
+using Aspose.Tasks.Examples.CSharp.WorkingWithProjects.WorkingWithProjectViews;
 using Aspose.Tasks.Examples.CSharp.WorkingWithResourceAssignments;
 using Aspose.Tasks.Examples.CSharp.WorkingWithResources;
+using Aspose.Tasks.Examples.CSharp.WorkingWithTaskBaselines;
+using Aspose.Tasks.Examples.CSharp.WorkingWithTaskLinks;
 using Aspose.Tasks.Examples.CSharp.WorkingWithTasks;
+using Aspose.Tasks.Examples.CSharp.WorkingWithTasks.WorkingWithTaskConstraints;
+using Aspose.Tasks.Examples.CSharp.WorkingWithVBA;
 
 namespace Aspose.Tasks.Examples.CSharp
 {
@@ -70,7 +89,6 @@ namespace Aspose.Tasks.Examples.CSharp
             //UsingSvgOptions.Run();
             //UsingXlsxOptions.Run();
             //RenderCommentsWhenConverting.Run();
-            WriteStringDataToProject.Run();
             #endregion
 
             // =====================================================
