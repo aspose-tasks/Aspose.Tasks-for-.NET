@@ -295,6 +295,7 @@ namespace Aspose.Tasks.Examples.CSharp
             //ReadSpecificGantChartViewData.Run();
             //SetTimeScaleCount.Run();
             //SupportForTextStyle.Run();
+            //SaveWithDefaultGanttChartView.Run();
 
             // =====================================================
             // =====================================================
