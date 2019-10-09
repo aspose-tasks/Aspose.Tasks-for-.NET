@@ -37,8 +37,8 @@ namespace Aspose.Tasks.Examples.CSharp
             Console.WriteLine("Open RunExamples.cs. \nIn Main() method, uncomment the example that you want to run");
             Console.WriteLine("=====================================================");
 
-            License lic = new License();
-            lic.SetLicense(@"D:\Aspose\Licenses\Aspose.Total.NET.lic");
+            //License lic = new License();
+            //lic.SetLicense(@"Aspose.Total.NET.lic");
 
             // Uncomment the one you want to try out
 
@@ -316,6 +316,7 @@ namespace Aspose.Tasks.Examples.CSharp
             //GetResourceAssignmentVariance.Run();
             //UpdateResourceAssignmentInMPP.Run();
             //ReadWriteRateScaleForResourceAssignment.Run();
+            //CreateMultipleResourceAssignmentsForOneTask.Run();
 
             // =====================================================
             // =====================================================
