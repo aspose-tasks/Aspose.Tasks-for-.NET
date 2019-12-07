@@ -53,7 +53,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithResources
                 args.Stream = stream1;
                 args.KeepStreamOpen = false;
                 args.Uri = dataDir + "resources/" + args.FileName;
-                args.NestedUri = dataDir + "nestedResources/" + args.FileName;
+                //args.NestedUri = dataDir + "nestedResources/" + args.FileName;
             }
             else
             {
