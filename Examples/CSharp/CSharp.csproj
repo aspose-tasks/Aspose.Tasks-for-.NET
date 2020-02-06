@@ -38,11 +38,11 @@
     <StartupObject>Aspose.Tasks.Examples.CSharp.RunExamples</StartupObject>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Aspose.Tasks, Version=19.12.0.0, Culture=neutral, PublicKeyToken=716fcc553a201e56, processorArchitecture=MSIL">
-      <HintPath>..\packages\Aspose.Tasks.19.12.0\lib\net40\Aspose.Tasks.dll</HintPath>
+    <Reference Include="Aspose.Tasks, Version=20.1.0.0, Culture=neutral, PublicKeyToken=716fcc553a201e56, processorArchitecture=MSIL">
+      <HintPath>..\packages\Aspose.Tasks.20.1.0\lib\net40\Aspose.Tasks.dll</HintPath>
     </Reference>
-    <Reference Include="Aspose.Words, Version=19.12.0.0, Culture=neutral, PublicKeyToken=716fcc553a201e56, processorArchitecture=MSIL">
-      <HintPath>..\packages\Aspose.Words.19.12.0\lib\net40\Aspose.Words.dll</HintPath>
+    <Reference Include="Aspose.Words, Version=20.2.0.0, Culture=neutral, PublicKeyToken=716fcc553a201e56, processorArchitecture=MSIL">
+      <HintPath>..\packages\Aspose.Words.20.2.0\lib\net40\Aspose.Words.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -125,6 +125,7 @@
     <Compile Include="WorkingWithFormulas\CalculateMathExpressions.cs" />
     <Compile Include="WorkingWithFormulas\CalculateTextFunctions.cs" />
     <Compile Include="WorkingWithProjects\CreatingReadingAndSaving\ReadingProjectOnline.cs" />
+    <Compile Include="WorkingWithProjects\CreatingReadingAndSaving\CreateEmptyProjectSaveMPP.cs" />
     <Compile Include="WorkingWithProjects\GetPageCountOnStartAndEndDates.cs" />
     <Compile Include="WorkingWithProjects\CreatingReadingAndSaving\WorkingWithEncodings.cs" />
     <Compile Include="WorkingWithProjects\WorkingWithProjectViews\SaveWithDefaultGanttChartView.cs" />
