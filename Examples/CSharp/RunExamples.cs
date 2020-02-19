@@ -285,6 +285,7 @@ namespace Aspose.Tasks.Examples.CSharp
             //WriteMPPProjectSummary.Run();
             //WriteProjectInfo.Run();
             //WriteWeekdayProperties.Run();
+            ReadMetaProperties.Run();
 
             // Working with Project Views
             // =====================================================
