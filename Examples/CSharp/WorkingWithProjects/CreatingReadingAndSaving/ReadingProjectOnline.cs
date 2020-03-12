@@ -15,8 +15,9 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.CreatingReadingAndSav
             string password = "MyPassword";
 
             var credentials = new ProjectServerCredentials(sharepointDomainAddress, userName, password);
-            ProjectOnlineReader reader = new ProjectOnlineReader(credentials);
-            var list = reader.GetProjectList();
+
+            ProjectServerManager manager = new ProjectServerManager(credentials);
+            var list = manager.GetProjectList();
 
             foreach (var p in list)
             {
@@ -25,7 +26,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.CreatingReadingAndSav
 
             foreach (var p in list)
             {
-                var project = reader.GetProject(p.Id);
+                var project = manager.GetProject(p.Id);
                 Console.WriteLine("Project '{0}' loaded. Resources count: {1}",
                     p.Name,
                     project.Resources.Count);
