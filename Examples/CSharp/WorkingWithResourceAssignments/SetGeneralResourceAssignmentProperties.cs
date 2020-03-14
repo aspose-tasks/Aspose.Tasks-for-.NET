@@ -1,8 +1,4 @@
 ﻿using Aspose.Tasks.Saving;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 /*
 This project uses Automatic Package Restore feature of NuGet to resolve Aspose.Tasks for .NET API reference 
@@ -18,7 +14,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithResourceAssignments
     {
         public static void Run()
         {
-            // ExStart:SetGeneralResourceAssignmentProperties
+            //ExStart:SetGeneralResourceAssignmentProperties
             // Create empty project
             Project project1 = new Project();
 
@@ -30,7 +26,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithResourceAssignments
 
             // Assign the resource desired task
             ResourceAssignment assn = project1.ResourceAssignments.Add(task1, rsc1);
-            // ExEnd:SetGeneralResourceAssignmentProperties
+            //ExEnd:SetGeneralResourceAssignmentProperties
 
             // Save project as PDF
             string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);

@@ -1,9 +1,5 @@
 ﻿using Aspose.Tasks.Saving;
 using Aspose.Tasks.Visualization;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 /*
 This project uses Automatic Package Restore feature of NuGet to resolve Aspose.Tasks for .NET API reference 
@@ -19,7 +15,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithTasks
     {
         public static void Run()
         {
-            // ExStart:RenderTaskSheetView
+            //ExStart:RenderTaskSheetView
             // Create project instance
             string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
             Project project1 = new Project(dataDir + "TaskSheetView.mpp");
@@ -28,8 +24,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithTasks
             SaveOptions options = new PdfSaveOptions();
             options.PresentationFormat = PresentationFormat.TaskSheet;
             project1.Save(dataDir + "TaskSheetView_out.pdf", options);
-            // ExEnd:RenderTaskSheetView
+            //ExEnd:RenderTaskSheetView
         }
-
     }
 }

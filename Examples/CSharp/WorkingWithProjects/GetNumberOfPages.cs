@@ -14,7 +14,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects
     {
         public static void Run()
         {
-            // ExStart:GetNumberOfPages
+            //ExStart:GetNumberOfPages
             // The path to the documents directory.
             string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
@@ -22,10 +22,10 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects
             Project project = new Project(dataDir + "GetNumberOfPages.mpp");
 
             // Get number of pages,  Timescale.Months, Timescale.ThirdsOfMonths
-            int iPages = project.GetPageCount();
-            iPages = project.GetPageCount(Timescale.Months);
-            iPages = project.GetPageCount(Timescale.ThirdsOfMonths);
-            // ExEnd:GetNumberOfPages
+            int pageCount = project.GetPageCount();
+            pageCount = project.GetPageCount(Timescale.Months);
+            pageCount = project.GetPageCount(Timescale.ThirdsOfMonths);
+            //ExEnd:GetNumberOfPages
 
         }
     }

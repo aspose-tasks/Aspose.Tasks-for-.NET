@@ -6,7 +6,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.CreatingReadingAndSav
     {
         public static void Run()
         {
-            // ExStart:ReadProjectFileFromStream
+            //ExStart:ReadProjectFileFromStream
             // The path to the documents directory.
             string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);       
 
@@ -16,7 +16,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.CreatingReadingAndSav
                 // Create project using file stream
                 Project project = new Project(filesStream);
             }
-            // ExEnd:ReadProjectFileFromStream
+            //ExEnd:ReadProjectFileFromStream
         }
     }
 }

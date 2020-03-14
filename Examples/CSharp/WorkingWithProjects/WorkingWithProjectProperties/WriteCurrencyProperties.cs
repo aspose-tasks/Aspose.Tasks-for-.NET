@@ -6,7 +6,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.WorkingWithProjectPro
     {
         public static void Run()
         {
-            // ExStart:WriteCurrencyProperties
+            //ExStart:WriteCurrencyProperties
             // The path to the documents directory.
             string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
@@ -21,7 +21,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.WorkingWithProjectPro
 
             // Save the project as XML project file
             project.Save(dataDir + "WriteCurrencyProperties_out.xml", SaveFileFormat.XML);
-            // ExEnd:WriteCurrencyProperties
+            //ExEnd:WriteCurrencyProperties
         }
     }
 }

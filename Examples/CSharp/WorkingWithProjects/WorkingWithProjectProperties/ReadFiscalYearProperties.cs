@@ -6,7 +6,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.WorkingWithProjectPro
     {
         public static void Run()
         {
-            // ExStart:ReadFiscalYearProperties
+            //ExStart:ReadFiscalYearProperties
             // The path to the documents directory.
             string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
             
@@ -14,9 +14,9 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.WorkingWithProjectPro
             Project project = new Project(dataDir + "ReadFiscalYearProperties.mpp");
 
             // Display fiscal year properties
-            Console.WriteLine("Fiscal Year Start Date : " + project.Get(Prj.FyStartDate).ToString());
-            Console.WriteLine("Fiscal Year Numbering : " + project.Get(Prj.FiscalYearStart).ToString());
-            // ExEnd:ReadFiscalYearProperties
+            Console.WriteLine("Fiscal Year Start Date : " + project.Get(Prj.FyStartDate));
+            Console.WriteLine("Fiscal Year Numbering : " + project.Get(Prj.FiscalYearStart));
+            //ExEnd:ReadFiscalYearProperties
         }
     }
 }

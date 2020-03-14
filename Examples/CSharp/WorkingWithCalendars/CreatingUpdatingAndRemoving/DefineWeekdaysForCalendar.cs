@@ -1,8 +1,4 @@
-﻿using Aspose.Tasks;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System;
 
 /*
 This project uses Automatic Package Restore feature of NuGet to resolve Aspose.Tasks for .NET API reference 
@@ -18,13 +14,14 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithCalendars.CreatingUpdatingAndR
     {
         public static void Run()
         {
-            // ExStart:DefineWeekdaysForCalendar
+            string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
+            //ExStart:DefineWeekdaysForCalendar
             // This example shows how Aspose.Tasks API can be used to define a new Calendar, add week days to it and define working times for days
             // Create a project instance
             Project project = new Project();
 
             // Define Calendar
-            Aspose.Tasks.Calendar cal = project.Calendars.Add("Calendar1");
+            Calendar cal = project.Calendars.Add("Calendar1");
 
             // Add working days monday through thursday with default timings
             cal.WeekDays.Add(WeekDay.CreateDefaultWorkingDay(DayType.Monday));
@@ -50,9 +47,8 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithCalendars.CreatingUpdatingAndR
             cal.WeekDays.Add(myWeekDay);
 
             // Save the Project
-            string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
-            project.Save("Project_DefineCalendarWeekdays_out.xml", Aspose.Tasks.Saving.SaveFileFormat.XML);
-            // ExEnd:DefineWeekdaysForCalendar
+            project.Save(dataDir + "Project_DefineCalendarWeekdays_out.xml", Saving.SaveFileFormat.XML);
+            //ExEnd:DefineWeekdaysForCalendar
         }
     }
 }

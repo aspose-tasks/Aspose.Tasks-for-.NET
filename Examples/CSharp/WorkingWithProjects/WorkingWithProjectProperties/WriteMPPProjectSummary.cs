@@ -17,7 +17,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.WorkingWithProjectPro
         {
             try
             {
-                // ExStart:WriteMPPProjectSummary
+                //ExStart:WriteMPPProjectSummary
                 // The path to the documents directory.
                 string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
@@ -31,7 +31,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.WorkingWithProjectPro
                 project.Set(Prj.Keywords, "MSP Aspose");
                 project.Set(Prj.Comments, "Comments");
                 project.Save(dataDir + "WriteMPPProjectSummary_out.mpp", SaveFileFormat.MPP);
-                // ExEnd:WriteMPPProjectSummary
+                //ExEnd:WriteMPPProjectSummary
             }
             catch (Exception ex)
             {

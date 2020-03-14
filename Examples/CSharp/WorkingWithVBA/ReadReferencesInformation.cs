@@ -17,12 +17,12 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithVBA
             // The path to the documents directory.
             string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
-            // ExStart:ReadReferencesInformation
+            //ExStart:ReadReferencesInformation
             Project project = new Project(dataDir + "VbaProject1.mpp");
 
             VbaProject vbaProject = project.VbaProject;
             VbaReferenceCollection references = vbaProject.References;
-            Console.WriteLine("Reference count ", references.Count);
+            Console.WriteLine("Reference count " + references.Count);
 
             VbaReference reference = vbaProject.References.ToList()[0];
             Console.WriteLine("Identifier: " + reference.LibIdentifier);
@@ -35,7 +35,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithVBA
             reference = vbaProject.References.ToList()[2];
             Console.WriteLine("Identifier: " + reference.LibIdentifier);
             Console.WriteLine("Name: " + reference.Name);
-            // ExEnd:ReadReferencesInformation
+            //ExEnd:ReadReferencesInformation
         }
     }
 }

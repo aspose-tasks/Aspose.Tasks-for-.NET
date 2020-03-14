@@ -18,14 +18,14 @@ namespace Aspose.Tasks.Examples.CSharp.ConvertingProjectData
             // The path to the documents directory.
             string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
-            // ExStart:RenderProjectDataToFormat24bppRgb
+            //ExStart:RenderProjectDataToFormat24bppRgb
             Project project = new Project(dataDir + "TestProject1.mpp");
             ImageSaveOptions options = new ImageSaveOptions(SaveFileFormat.TIFF);
             options.HorizontalResolution = 72;
             options.VerticalResolution = 72;
             options.PixelFormat = PixelFormat.Format24bppRgb;
-            project.Save(dataDir + "RenderProjectDataToFormat24bppRgb_out.tif", (SaveOptions)options);
-            // ExEnd:RenderProjectDataToFormat24bppRgb
+            project.Save(dataDir + "RenderProjectDataToFormat24bppRgb_out.tif", options);
+            //ExEnd:RenderProjectDataToFormat24bppRgb
         }
     }
 }

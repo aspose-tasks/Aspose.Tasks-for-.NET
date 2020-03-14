@@ -1,8 +1,5 @@
 ﻿using Aspose.Tasks.Saving;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 /*
 This project uses Automatic Package Restore feature of NuGet to resolve Aspose.Tasks for .NET API reference 
@@ -23,11 +20,11 @@ namespace Aspose.Tasks.Examples.CSharp.Articles
                 // The path to the documents directory.
                 string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
-                // ExStart:SetGanttChartViewStartDate
+                //ExStart:SetGanttChartViewStartDate
                 Project project = new Project(dataDir + "Project2.mpp");
                 project.Set(Prj.TimescaleStart, new DateTime(2012, 4, 30));
                 project.Save(dataDir + "SetGanttChartViewStartDate_out.mpp", SaveFileFormat.MPP);
-                // ExEnd:SetGanttChartViewStartDate
+                //ExEnd:SetGanttChartViewStartDate
             }
             catch (NotSupportedException ex)
             {

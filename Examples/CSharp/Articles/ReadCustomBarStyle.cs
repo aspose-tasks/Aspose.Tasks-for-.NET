@@ -1,9 +1,6 @@
 ﻿using Aspose.Tasks.Visualization;
 using System;
-using System.Collections.Generic;
 using System.Drawing;
-using System.Linq;
-using System.Text;
 
 /*
 This project uses Automatic Package Restore feature of NuGet to resolve Aspose.Tasks for .NET API reference 
@@ -22,10 +19,12 @@ namespace Aspose.Tasks.Examples.CSharp.Articles
             // The path to the documents directory.
             string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
-            // ExStart:ReadCustomBarStyle
+            //ExStart:ReadCustomBarStyle
+            //ExFor: GanttChartView.CustomBarStyles
+            //ExSummary: Shows how to read custom bar styles of Gantt Chart project view. 
             Project project = new Project(dataDir + "CustomBarStyle.mpp");
 
-            GanttChartView view = project.DefaultView as GanttChartView;
+            GanttChartView view = (GanttChartView)project.DefaultView;
             Console.WriteLine("Custom bar styles count: {0}", view.CustomBarStyles.Count);
 
             GanttBarStyle style1 = view.CustomBarStyles[0];
@@ -55,13 +54,13 @@ namespace Aspose.Tasks.Examples.CSharp.Articles
             Console.WriteLine("Style3.StartShapeColor is Red : {0}", style3.StartShapeColor.Equals(Color.FromArgb(Color.Red.ToArgb())));
 
             Console.WriteLine("Style3.EndShape is CircleDiamond : {0}", style3.EndShape.Equals(GanttBarEndShape.CircleDiamond));
-            Console.WriteLine("Style3.EndShapeType is Solid : {0}",  style3.EndShapeType.Equals(GanttBarType.Solid) );
-            Console.WriteLine("Style3.EndShapeColor is Yellow : {0}",  style3.EndShapeColor.Equals(Color.FromArgb(Color.Yellow.ToArgb())));
+            Console.WriteLine("Style3.EndShapeType is Solid : {0}", style3.EndShapeType.Equals(GanttBarType.Solid));
+            Console.WriteLine("Style3.EndShapeColor is Yellow : {0}", style3.EndShapeColor.Equals(Color.FromArgb(Color.Yellow.ToArgb())));
         
             Console.WriteLine("Style3.MiddleShape is RectangleTop : {0}", style3.MiddleShape.Equals(GanttBarMiddleShape.RectangleTop));
             Console.WriteLine("Style3.MiddleFillPattern is SolidFill : {0}", style3.MiddleFillPattern.Equals(GanttBarFillPattern.SolidFill));
             Console.WriteLine("Style3.EndShapeColor is Red : {0}", style3.MiddleShapeColor.Equals(Color.FromArgb(Color.Red.ToArgb())));
-            // ExEnd:ReadCustomBarStyle
+            //ExEnd:ReadCustomBarStyle
         }
     }
 }

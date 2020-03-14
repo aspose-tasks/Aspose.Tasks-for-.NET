@@ -14,7 +14,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithFormulas
     {
         public static void Run()
         {
-            // ExStart:FormulaWithBooleanValues
+            //ExStart:FormulaWithBooleanValues
             Project project = CreateTestProjectWithCustomField();
 
             // Set formula for extended attribute
@@ -23,7 +23,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithFormulas
             // Print value of extened attribute
             Task task = project.RootTask.Children.GetById(1);
             Console.WriteLine("Formula with boolean values: " + task.ExtendedAttributes[0].TextValue);
-            // ExEnd:FormulaWithBooleanValues
+            //ExEnd:FormulaWithBooleanValues
         }
       
         private static Project CreateTestProjectWithCustomField()

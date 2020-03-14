@@ -1,9 +1,5 @@
 ﻿using Aspose.Tasks.Saving;
 using Aspose.Tasks.Visualization;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 /*
 This project uses Automatic Package Restore feature of NuGet to resolve Aspose.Tasks for .NET API reference 
@@ -22,7 +18,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithResources
             // The path to the documents directory.
             string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
-            // ExStart:RenderResourceSheetView
+            //ExStart:RenderResourceSheetView
             // Create project instance
             Project project1 = new Project(dataDir + "ResourceSheetView.mpp");
             
@@ -33,7 +29,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithResources
             SaveOptions options = new PdfSaveOptions();
             options.PresentationFormat = format;
             project1.Save(dataDir + "ResourceSheetView_out.pdf", options);
-            // ExEnd:RenderResourceSheetView
+            //ExEnd:RenderResourceSheetView
         }
     }
 }

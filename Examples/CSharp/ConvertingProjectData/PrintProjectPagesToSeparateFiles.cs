@@ -20,7 +20,7 @@ namespace Aspose.Tasks.Examples.CSharp.ConvertingProjectData
             // The path to the documents directory.
             string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
-            // ExStart:PrintProjectPagesToSeparateFiles
+            //ExStart:PrintProjectPagesToSeparateFiles
             Project project = new Project(dataDir + "CreateProject2.mpp");
             ImageSaveOptions saveOptions = new ImageSaveOptions(SaveFileFormat.PNG);
             saveOptions.StartDate = project.Get(Prj.StartDate).AddDays(-3);
@@ -38,12 +38,12 @@ namespace Aspose.Tasks.Examples.CSharp.ConvertingProjectData
             saveOptions.Gridlines.Add(gridline);
  
             // Save the whole project layout to one file
-            project.Save(dataDir + "PrintProjectPagesToSeparateFiles1_out.png", (SaveOptions)saveOptions);
+            project.Save(dataDir + "PrintProjectPagesToSeparateFiles1_out.png", saveOptions);
             
             // Save project layout to separate files
             saveOptions.SaveToSeparateFiles = true;
-            project.Save(dataDir + "PrintProjectPagesToSeparateFiles2_out.png", (SaveOptions)saveOptions);
-            // ExEnd:PrintProjectPagesToSeparateFiles
+            project.Save(dataDir + "PrintProjectPagesToSeparateFiles2_out.png", saveOptions);
+            //ExEnd:PrintProjectPagesToSeparateFiles
         }
     }
 }

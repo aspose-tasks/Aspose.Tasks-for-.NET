@@ -1,10 +1,7 @@
-﻿using Aspose.Tasks.Saving;
+﻿using System.Drawing;
+
+using Aspose.Tasks.Saving;
 using Aspose.Tasks.Visualization;
-using System;
-using System.Collections.Generic;
-using System.Drawing;
-using System.Linq;
-using System.Text;
 
 /*
 This project uses Automatic Package Restore feature of NuGet to resolve Aspose.Tasks for .NET API reference 
@@ -23,33 +20,35 @@ namespace Aspose.Tasks.Examples.CSharp.Articles
             // The path to the documents directory.
             string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
-            // ExStart:AlignCellContents
+            //ExStart:AlignCellContents
+            //ExFor: ViewColumn.StringAlignment
+            //ExSummary: Shows how to set a alignment of the text in a column (can be one of the values of the <see cref="P:Aspose.Tasks.Visualization.ViewColumn.StringAlignment" /> enumeration).
             Project project = new Project(dataDir + "Project2.mpp");
             SaveOptions options = new PdfSaveOptions();
             options.Timescale = Timescale.Months;
             options.View = ProjectView.GetDefaultGanttChartView();
 
-            GanttChartColumn column1 = options.View.Columns[2] as GanttChartColumn;
+            GanttChartColumn column1 = (GanttChartColumn)options.View.Columns[2];
             column1.StringAlignment = StringAlignment.Center;
-            column1 = options.View.Columns[3] as GanttChartColumn;
-            column1.StringAlignment = StringAlignment.Far;
-            column1 = options.View.Columns[4] as GanttChartColumn;
-            column1.StringAlignment = StringAlignment.Far;
+            var column2 = (GanttChartColumn)options.View.Columns[3];
+            column2.StringAlignment = StringAlignment.Far;
+            var column3 = (GanttChartColumn)options.View.Columns[4];
+            column3.StringAlignment = StringAlignment.Far;
 
             project.Save(dataDir + "AlignCellContents_GanttChart_out.pdf", options);
 
             options.PresentationFormat = PresentationFormat.ResourceSheet;
             options.View = ProjectView.GetDefaultResourceSheetView();
 
-            ResourceViewColumn column2 = options.View.Columns[2] as ResourceViewColumn;
-            column2.StringAlignment = StringAlignment.Center;
-            column2 = options.View.Columns[3] as ResourceViewColumn;
-            column2.StringAlignment = StringAlignment.Far;
-            column2 = options.View.Columns[4] as ResourceViewColumn;
-            column2.StringAlignment = StringAlignment.Far;
+            ResourceViewColumn column4 = (ResourceViewColumn)options.View.Columns[2];
+            column4.StringAlignment = StringAlignment.Center;
+            var column5 = (ResourceViewColumn)options.View.Columns[3];
+            column5.StringAlignment = StringAlignment.Far;
+            var column6 = (ResourceViewColumn)options.View.Columns[4];
+            column6.StringAlignment = StringAlignment.Far;
 
             project.Save(dataDir + "AlignCellContents_ResourceSheet_out.pdf", options);
-            // ExEnd:AlignCellContents
+            //ExEnd:AlignCellContents
         }
     }
 }

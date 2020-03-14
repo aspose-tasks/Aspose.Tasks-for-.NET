@@ -1,8 +1,5 @@
 ﻿using Aspose.Tasks.Saving;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 /*
 This project uses Automatic Package Restore feature of NuGet to resolve Aspose.Tasks for .NET API reference 
@@ -18,7 +15,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithTasks
     {
         public static void Run()
         {
-            // ExStart:CreateSplitTasks
+            //ExStart:CreateSplitTasks
             // Create new project
             Project splitTaskProject = new Project();
 
@@ -48,7 +45,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithTasks
             // Save the Project
             string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
             splitTaskProject.Save(dataDir + "CreateSplitTasks_out.xml", SaveFileFormat.XML);
-            // ExEnd:CreateSplitTasks
+            //ExEnd:CreateSplitTasks
         }
     }
 }

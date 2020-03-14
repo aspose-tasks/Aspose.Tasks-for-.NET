@@ -14,7 +14,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.Rescheduling
     {
         public static void Run()
         {
-            // ExStart:RescheduleProjectStartOrFinishDate
+            //ExStart:RescheduleProjectStartOrFinishDate
             // The path to the documents directory.
             string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName); 
 
@@ -25,7 +25,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.Rescheduling
             // Now all tasks dates (Start, Finish, EarlyStart, EarlyFinish, LateStart, LateFinish) are calculated. To get the critical path we need to calculate slacks (can be invoked in separate thread, but only after calculation of all early/late dates)
             project.Recalculate();
             TaskCollection criticalPath = project.CriticalPath;
-            // ExEnd:RescheduleProjectStartOrFinishDate
+            //ExEnd:RescheduleProjectStartOrFinishDate
         }
     }
 }

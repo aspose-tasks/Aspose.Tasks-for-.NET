@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.CreatingReadingAndSaving
 {
@@ -9,29 +6,22 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.CreatingReadingAndSav
     {
         public static void Run()
         {
-            // ExStart:ReadingProjectOnline
+            //ExStart:ReadingProjectOnline
             string sharepointDomainAddress = "https://contoso.sharepoint.com";
             string userName = "admin@contoso.onmicrosoft.com";
             string password = "MyPassword";
 
             var credentials = new ProjectServerCredentials(sharepointDomainAddress, userName, password);
-
-            ProjectServerManager manager = new ProjectServerManager(credentials);
-            var list = manager.GetProjectList();
+            var reader = new ProjectServerManager(credentials);
+            var list = reader.GetProjectList();
 
             foreach (var p in list)
             {
+                var project = reader.GetProject(p.Id);
                 Console.WriteLine("{0} - {1} - {2}", p.Name, p.CreatedDate, p.LastSavedDate);
+                Console.WriteLine("Resources count: {0}", project.Resources.Count);
             }
-
-            foreach (var p in list)
-            {
-                var project = manager.GetProject(p.Id);
-                Console.WriteLine("Project '{0}' loaded. Resources count: {1}",
-                    p.Name,
-                    project.Resources.Count);
-            }
-            // ExEnd:ReadingProjectOnline
+            //ExEnd:ReadingProjectOnline
         }
     }
 }

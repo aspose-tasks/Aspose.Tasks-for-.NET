@@ -16,7 +16,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.CreatingReadingAndSav
     {
         public static void Run()
         {
-            // ExStart:ImportProjectDataFromDatabase   
+            //ExStart:ImportProjectDataFromDatabase   
             try
             {
                 // Create connection string
@@ -35,10 +35,10 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.CreatingReadingAndSav
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.Message + "\nPlease setup proper datasource (DataSource, InitialCatalog etc)");
+                Console.WriteLine(ex.Message + "\nPlease setup proper data source (DataSource, InitialCatalog etc)");
             }
             
-            // ExEnd:ImportProjectDataFromDatabase
+            //ExEnd:ImportProjectDataFromDatabase
         }
     }
 }

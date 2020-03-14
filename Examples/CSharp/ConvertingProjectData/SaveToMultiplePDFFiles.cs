@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using Aspose.Tasks.Saving;
 
@@ -19,15 +18,15 @@ namespace Aspose.Tasks.Examples.CSharp.ConvertingProjectData
             // The path to the documents directory.
             string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
-            // ExStart:SaveToMultiplePDFFiles
+            //ExStart:SaveToMultiplePDFFiles
             Project project = new Project(dataDir + "Software Development Plan.mpp");
             PdfSaveOptions saveOptions = new PdfSaveOptions();
             saveOptions.SaveToSeparateFiles = true;
             saveOptions.Pages = new List<int>();
             saveOptions.Pages.Add(1);
             saveOptions.Pages.Add(4);
-            project.Save(dataDir + "SaveToMultiplePDFFiles_out.pdf", (SaveOptions)saveOptions);
-            // ExEnd:SaveToMultiplePDFFiles
+            project.Save(dataDir + "SaveToMultiplePDFFiles_out.pdf", saveOptions);
+            //ExEnd:SaveToMultiplePDFFiles
         }
     }
 }

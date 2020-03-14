@@ -20,7 +20,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithResources
                 // The path to the documents directory.
                 string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
-                // ExStart:SetResourceExtendedAttributes
+                //ExStart:SetResourceExtendedAttributes
                 // Create project instance
                 Project project1 = new Project(dataDir + "ResourceExtendedAttributes.mpp");
 
@@ -42,7 +42,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithResources
 
                 // Save project as MPP
                 project1.Save(dataDir + "ResourceExtendedAttributes_out.mpp", SaveFileFormat.MPP);
-                // ExEnd:SetResourceExtendedAttributes
+                //ExEnd:SetResourceExtendedAttributes
             }
             catch (Exception ex)
             {

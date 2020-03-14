@@ -7,7 +7,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.Printing
     {
         public static void Run()
         {
-            // ExStart:PrintLargeFiles
+            //ExStart:PrintLargeFiles
             // The path to the documents directory.
             string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
@@ -17,8 +17,10 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.Printing
             PrintOptions options = new PrintOptions();
             options.Timescale = Timescale.ThirdsOfMonths;
             if (project.GetPageCount(Timescale.ThirdsOfMonths) <= 280)
+            {
                 project.Print(options);
-            // ExEnd:PrintLargeFiles
+            }
+            //ExEnd:PrintLargeFiles
         }
     }
 }

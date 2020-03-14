@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.WorkingWithProjectProperties
 {
@@ -9,7 +6,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.WorkingWithProjectPro
     {
         public static void Run()
         {
-            // ExStart:ReadMetaProperties
+            //ExStart:ReadMetaProperties
             // The path to the documents directory.
             string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
@@ -35,7 +32,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.WorkingWithProjectPro
                 Console.WriteLine(property.Name);
                 Console.WriteLine(property.Value);
             }
-            // ExEnd:ReadMetaProperties
+            //ExEnd:ReadMetaProperties
             Console.WriteLine("The program has run successfully");
         }
     }

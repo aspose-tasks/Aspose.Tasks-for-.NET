@@ -13,7 +13,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithFormulas
 {
     public class UsingTasksAndResourceFieldsInFormulaCalculations
     {
-        // ExStart:UsingTasksAndResourceFieldsInFormulaCalculations
+        //ExStart:UsingTasksAndResourceFieldsInFormulaCalculations
         public static void Run()
         {
             try
@@ -30,7 +30,6 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithFormulas
                 extendedAttributeDefinition1.Formula = "[Deadline] - [Finish]";
 
                 // Set Task Deadline and save project
-                Task task1 = project.RootTask.Children.GetById(1);
                 task.Set(Tsk.Deadline, new DateTime(2015, 3, 20, 17, 0, 0));
                 project.Save(dataDir + "project_UsingTasksAndResourceFields_out.mpp", SaveFileFormat.MPP);             
             }
@@ -62,6 +61,6 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithFormulas
             ResourceAssignment assn = project.ResourceAssignments.Add(task, rsc);
             return project;
         }
-        // ExEnd:UsingTasksAndResourceFieldsInFormulaCalculations            
+        //ExEnd:UsingTasksAndResourceFieldsInFormulaCalculations            
     }
 }

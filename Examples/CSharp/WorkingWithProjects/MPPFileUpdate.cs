@@ -9,7 +9,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects
         {
             try
             {
-                // ExStart:MPPFileUpdate
+                //ExStart:MPPFileUpdate
                 // The path to the documents directory.
                 string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
@@ -24,7 +24,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects
 
                 // Save the project as MPP project file
                 project.Save(dataDir + "AfterLinking_out.Mpp", SaveFileFormat.MPP);
-                // ExEnd:MPPFileUpdate   
+                //ExEnd:MPPFileUpdate   
             }
             catch (Exception ex)
             {

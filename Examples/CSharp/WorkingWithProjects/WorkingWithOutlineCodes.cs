@@ -24,21 +24,14 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects
 
         private static void ReadOutlineCodes(string dataDir)
         {
-            // ExStart:ReadOutlineCodes
+            //ExStart:ReadOutlineCodes
             Project project = new Project(dataDir + "OutlineCodes.mpp");
 
             foreach (OutlineCodeDefinition ocd in project.OutlineCodes)
             {
                 Console.WriteLine("Alias = " + ocd.Alias);
-                if (ocd.AllLevelsRequired)
-                    Console.WriteLine("It contains property: must have all levels");
-                else
-                    Console.WriteLine("It does not contain property: must have all levels");
-                if (ocd.Enterprise)
-                    Console.WriteLine("It is an enterprise custom outline code.");
-                else
-                    Console.WriteLine("It is not an enterprise custom outline code.");
-
+                Console.WriteLine(ocd.AllLevelsRequired ? "It contains property: must have all levels" : "It does not contain property: must have all levels");
+                Console.WriteLine(ocd.Enterprise ? "It is an enterprise custom outline code." : "It is not an enterprise custom outline code.");
                 Console.WriteLine("Reference to another custom field for which this outline code definition is an alias is = " + ocd.EnterpriseOutlineCodeAlias);
                 Console.WriteLine("Field Id = " + ocd.FieldId);
                 Console.WriteLine("Field Name = " + ocd.FieldName);
@@ -49,7 +42,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects
                 foreach (OutlineMask outlineMask in ocd.Masks)
                 {
                     Console.WriteLine("Level of a mask = " + outlineMask.Level);
-                    Console.WriteLine("Mask = " + outlineMask.ToString());
+                    Console.WriteLine("Mask = " + outlineMask);
                 }
 
                 // Display out line code values
@@ -61,12 +54,12 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects
                     Console.WriteLine("Type = " + outlineMask1.Type);
                 }
             }
-            // ExEnd:ReadOutlineCodes
+            //ExEnd:ReadOutlineCodes
         }
 
         private static void CheckOutlineCodeIdUniqueness(string dataDir)
         {
-            // ExStart:CheckOutlineCodeIdUniqueness
+            //ExStart:CheckOutlineCodeIdUniqueness
             Project project = new Project(dataDir + "OutlineValues2010.mpp");
 
             OutlineCodeDefinition textOutline = new OutlineCodeDefinition();
@@ -87,7 +80,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects
             textOutline.Values.Add(textValue);
 
             project.Save(dataDir + "MultipleOutlineValues.mpp", SaveFileFormat.MPP);
-            // ExEnd:CheckOutlineCodeIdUniqueness
+            //ExEnd:CheckOutlineCodeIdUniqueness
         }
     }
 }

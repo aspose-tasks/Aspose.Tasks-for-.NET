@@ -1,8 +1,4 @@
 ﻿using Aspose.Tasks.Saving;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 /*
 This project uses Automatic Package Restore feature of NuGet to resolve Aspose.Tasks for .NET API reference 
@@ -18,7 +14,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithTasks
     {
         public static void Run()
         {
-            // ExStart:WriteTaskProperties
+            //ExStart:WriteTaskProperties
             // Create project instance
             Project project = new Project();
             
@@ -26,7 +22,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithTasks
             Task task = project.RootTask.Children.Add("Task1");
             task.Set(Tsk.Start, project.RootTask.Get(Tsk.Start).AddDays(1));
             task.Set(Tsk.Name, "new name");
-            // ExEnd:WriteTaskProperties
+            //ExEnd:WriteTaskProperties
 
             // Save project
             string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);

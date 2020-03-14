@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace Aspose.Tasks.Examples.CSharp.KnowledgeBase
 {
@@ -11,8 +8,7 @@ namespace Aspose.Tasks.Examples.CSharp.KnowledgeBase
         {
             string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
-            // ExStart:ReadCriticalPath
-            // Load MPP file
+            //ExStart:ReadCriticalPath
             Project project = new Project(dataDir + "Project1.mpp");
 
             // Get the critical path
@@ -25,7 +21,7 @@ namespace Aspose.Tasks.Examples.CSharp.KnowledgeBase
                 Console.WriteLine(task.Get(Tsk.Start));
                 Console.WriteLine(task.Get(Tsk.Finish) + "\n");
             }
-            // ExEnd:ReadCriticalPath
+            //ExEnd:ReadCriticalPath
         }
     }
 }

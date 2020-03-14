@@ -1,9 +1,6 @@
 ﻿using Aspose.Tasks.Saving;
 using Aspose.Tasks.Visualization;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 /*
 This project uses Automatic Package Restore feature of NuGet to resolve Aspose.Tasks for .NET API reference 
@@ -25,7 +22,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithTasks.WorkingWithTaskConstrain
             // Create project instance
             Project project1 = new Project(dataDir + "ConstraintFinishNoEarlierThan.mpp");
 
-            // ExStart:SetConstraintFinishNoEarlierThan
+            //ExStart:SetConstraintFinishNoEarlierThan
             // Set constraint Finish No Earlier Than on task with Id 2
             Task first = project1.RootTask.Children.GetById(2);
             first.Set(Tsk.ConstraintType, ConstraintType.FinishNoEarlierThan);
@@ -36,7 +33,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithTasks.WorkingWithTaskConstrain
             options.StartDate = project1.Get(Prj.StartDate);
             options.Timescale = Timescale.ThirdsOfMonths;
             project1.Save(dataDir + "project_FinishNoEarlierThan_out.pdf", options);
-            // ExEnd:SetConstraintFinishNoEarlierThan
+            //ExEnd:SetConstraintFinishNoEarlierThan
         }
     }
 }

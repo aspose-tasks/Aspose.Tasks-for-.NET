@@ -17,7 +17,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithVBA
             // The path to the documents directory.
             string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
-            // ExStart:ReadModuleAttributesInformation
+            //ExStart:ReadModuleAttributesInformation
             Project project = new Project(dataDir + "VbaProject1.mpp");
             VbaProject vbaProject = project.VbaProject;
             IVbaModule vbaModule = vbaProject.Modules.ToList()[0];
@@ -25,7 +25,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithVBA
             Console.WriteLine("Attributes Count: " + vbaModule.Attributes.Count);
             Console.WriteLine("VB_Name: " + vbaModule.Attributes.ToList()[0].Key);
             Console.WriteLine("Module1: " + vbaModule.Attributes.ToList()[0].Value);
-            // ExEnd:ReadModuleAttributesInformation
+            //ExEnd:ReadModuleAttributesInformation
         }
     }
 }

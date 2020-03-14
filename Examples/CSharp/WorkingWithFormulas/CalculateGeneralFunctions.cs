@@ -1,10 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace Aspose.Tasks.Examples.CSharp.WorkingWithFormulas
+﻿namespace Aspose.Tasks.Examples.CSharp.WorkingWithFormulas
 {
+    using System;
+
     class CalculateGeneralFunctions
     {
         public static void Run()
@@ -14,8 +11,8 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithFormulas
             EvaluateSwitch();
         }
 
-        // ExStart:CalculateGeneralFunctions
-        public static void EvaluateChoose()
+        //ExStart:CalculateGeneralFunctions
+        private static void EvaluateChoose()
         {    
             Project project = CreateTestProjectWithCustomField();
     
@@ -27,9 +24,9 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithFormulas
             Console.WriteLine(task.ExtendedAttributes[0].TextValue);
         }
 
-        public static void EvaluateIsNumeric()
+        private static void EvaluateIsNumeric()
         {
-            string[] numericFormulas = { "IsNumeric('AAA')", "IsNUmeric(1)", "IsNumeric(1<0)", "IsNumeric(\"1.1\")", "IsNumeric(Choose((2 + Sgn(2^-3)), 123, \"one two three\"))" };
+            string[] numericFormulas = { "IsNumeric('AAA')", @"IsNUmeric(1)", "IsNumeric(1<0)", "IsNumeric(\"1.1\")", "IsNumeric(Choose((2 + Sgn(2^-3)), 123, \"one two three\"))" };
     
             Project project = CreateTestProjectWithCustomField();
     
@@ -44,7 +41,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithFormulas
             }           
         }
 
-        public static void EvaluateSwitch()
+        private static void EvaluateSwitch()
         {    
             Project project = CreateTestProjectWithCustomField();
 
@@ -55,9 +52,9 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithFormulas
             Task task = project.RootTask.Children.GetById(1);
             Console.WriteLine(task.ExtendedAttributes[0].TextValue);
         }
-        // ExEnd:CalculateGeneralFunctions
+        //ExEnd:CalculateGeneralFunctions
 
-        public static Project CreateTestProjectWithCustomField()
+        private static Project CreateTestProjectWithCustomField()
         {
             Project project = new Project();
             ExtendedAttributeDefinition attr = ExtendedAttributeDefinition.CreateTaskDefinition(CustomFieldType.Text, ExtendedAttributeTask.Text1, "Custom Field");

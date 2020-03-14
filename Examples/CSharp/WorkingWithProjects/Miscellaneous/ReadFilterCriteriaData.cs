@@ -17,7 +17,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.Miscellaneous
             // The path to the documents directory.
             string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
-            // ExStart:ReadFilterCriteriaData
+            //ExStart:ReadFilterCriteriaData
             Project project = new Project(dataDir + "Project2003.mpp");
 
             Filter filter = project.TaskFilters.ToList()[1];
@@ -43,7 +43,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.Miscellaneous
             Console.WriteLine(criteria22.Field.ToString());
             Console.WriteLine(criteria22.Values[0].ToString());            
             Console.WriteLine(filter.Criteria);
-            // ExEnd:ReadFilterCriteriaData
+            //ExEnd:ReadFilterCriteriaData
         }
     }
 }

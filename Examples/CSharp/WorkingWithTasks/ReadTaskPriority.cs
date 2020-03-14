@@ -1,9 +1,5 @@
 ﻿using Aspose.Tasks.Util;
 using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Text;
 
 /*
 This project uses Automatic Package Restore feature of NuGet to resolve Aspose.Tasks for .NET API reference 
@@ -15,11 +11,13 @@ please feel free to contact us using https://forum.aspose.com/c/tasks
 
 namespace Aspose.Tasks.Examples.CSharp.WorkingWithTasks
 {
+    using System.IO;
+
     class ReadTaskPriority
     {
         public static void Run()
         {
-            // ExStart:ReadTaskPriority
+            //ExStart:ReadTaskPriority
             // Read project from file stream
             string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
             FileStream fs = new FileStream(dataDir + "TaskPriority.mpp", FileMode.Open);
@@ -35,9 +33,9 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithTasks
             // Display Priorities for all tasks
             foreach (Task tsk1 in collector.Tasks)
             {
-                Console.WriteLine(tsk1.Get(Tsk.Name) + " - Priority : " + tsk1.Get(Tsk.Priority).ToString());
+                Console.WriteLine(tsk1.Get(Tsk.Name) + " - Priority : " + tsk1.Get(Tsk.Priority));
             }
-            // ExEnd:ReadTaskPriority
+            //ExEnd:ReadTaskPriority
         }
     }
 }

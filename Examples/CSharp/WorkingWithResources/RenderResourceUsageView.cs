@@ -1,9 +1,5 @@
 ﻿using Aspose.Tasks.Saving;
 using Aspose.Tasks.Visualization;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 /*
 This project uses Automatic Package Restore feature of NuGet to resolve Aspose.Tasks for .NET API reference 
@@ -22,7 +18,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithResources
             // The path to the documents directory.
             string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
-            // ExStart:RenderResourceUsageView
+            //ExStart:RenderResourceUsageView
             // Create project instance
             Project project1 = new Project(dataDir + "ResourceUsageView.mpp");
                         
@@ -46,7 +42,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithResources
             options.Timescale = Timescale.Months;
             outputFile = "result_ResourceUsageView_months_out.pdf";
             project1.Save(dataDir + outputFile, options);
-            // ExEnd:RenderResourceUsageView
+            //ExEnd:RenderResourceUsageView
         }
     }
 }

@@ -1,8 +1,4 @@
 ﻿using Aspose.Tasks.Saving;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 /*
 This project uses Automatic Package Restore feature of NuGet to resolve Aspose.Tasks for .NET API reference 
@@ -18,7 +14,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithResources
     {
         public static void Run()
         {
-            // ExStart:CreateResources
+            //ExStart:CreateResources
             // The path to the documents directory.
             string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
@@ -26,11 +22,11 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithResources
             Project project = new Project();
 
             // Add resources
-            Resource rsc1 = project.Resources.Add("Rsc");
+            Resource resource = project.Resources.Add("Rsc");
 
             // Save project as XML
             project.Save(dataDir + "CreateResources_out.xml", SaveFileFormat.XML);
-            // ExEnd:CreateResources
+            //ExEnd:CreateResources
         }
     }
 }

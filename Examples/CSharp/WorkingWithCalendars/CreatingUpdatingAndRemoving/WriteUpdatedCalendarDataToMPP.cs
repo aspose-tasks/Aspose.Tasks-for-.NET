@@ -1,9 +1,5 @@
-﻿using Aspose.Tasks;
-using Aspose.Tasks.Saving;
+﻿using Aspose.Tasks.Saving;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 /*
 This project uses Automatic Package Restore feature of NuGet to resolve Aspose.Tasks for .NET API reference 
@@ -19,7 +15,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithCalendars.CreatingUpdatingAndR
     {
         public static void Run()
         {
-            // ExStart:WriteUpdatedCalendarDataToMPP
+            //ExStart:WriteUpdatedCalendarDataToMPP
             string resultFile = "result_WriteUpdatedCalendarDataToMPP_out.mpp";
             string newFile = "project_update_test.mpp";
             string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
@@ -70,7 +66,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithCalendars.CreatingUpdatingAndR
             {
                 Console.WriteLine(ex.Message + "\nThis example will only work if you apply a valid Aspose License. You can purchase full license or get 30 day temporary license from http:// Www.aspose.com/purchase/default.aspx.");
             }            
-            // ExEnd:WriteUpdatedCalendarDataToMPP
+            //ExEnd:WriteUpdatedCalendarDataToMPP
         }
     }
 }

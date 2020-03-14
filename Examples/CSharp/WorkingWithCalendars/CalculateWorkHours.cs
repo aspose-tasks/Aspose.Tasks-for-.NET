@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace Aspose.Tasks.Examples.CSharp.WorkingWithCalendars
 {
@@ -9,7 +6,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithCalendars
     {
         public static void Run()
         {
-            // ExStart:CalculateWorkHours
+            //ExStart:CalculateWorkHours
             // Load an existing project
             string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
             Project project = new Project(dataDir + "CalculateWorkHours.mpp");
@@ -36,10 +33,12 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithCalendars
                 if (taskCalendar.IsDayWorking(tempDate) && resourceCalendar.IsDayWorking(tempDate))
                 {
                     timeSpan = taskCalendar.GetWorkingHours(tempDate);
-                    durationInMins = durationInMins + timeSpan.TotalMinutes;
+                    durationInMins += timeSpan.TotalMinutes;
                 }
+
                 tempDate = tempDate.AddDays(1);
             }
+
             tempDate = startDate;
 
             // Get Duration in Hours
@@ -49,10 +48,12 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithCalendars
                 if (taskCalendar.IsDayWorking(tempDate) && resourceCalendar.IsDayWorking(tempDate))
                 {
                     timeSpan = taskCalendar.GetWorkingHours(tempDate);
-                    durationInHours = durationInHours + timeSpan.TotalHours;
+                    durationInHours += timeSpan.TotalHours;
                 }
+
                 tempDate = tempDate.AddDays(1);
             }
+
             tempDate = startDate;
 
             // Get Duration in Days
@@ -63,15 +64,18 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithCalendars
                 {
                     timeSpan = taskCalendar.GetWorkingHours(tempDate);
                     if (timeSpan.TotalHours > 0)
-                        durationInDays = durationInDays + timeSpan.TotalDays * (24 / (timeSpan.TotalHours));
+                    {
+                        durationInDays += timeSpan.TotalDays * (24 / timeSpan.TotalHours);
+                    }
                 }
+
                 tempDate = tempDate.AddDays(1);
             }
 
             Console.WriteLine("Duration in Minutes = " + durationInMins);
             Console.WriteLine("Duration in Hours = " + durationInHours);
             Console.WriteLine("Duration in Days = " + durationInDays);
-            // ExEnd:CalculateWorkHours
+            //ExEnd:CalculateWorkHours
         }
     }
 }

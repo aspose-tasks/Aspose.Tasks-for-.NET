@@ -15,7 +15,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.Rescheduling
     {
         public static void Run()
         {
-            // ExStart:UpdateProjectAndRescheduleUncompletedWork
+            //ExStart:UpdateProjectAndRescheduleUncompletedWork
             // The path to the documents directory.
             string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
             
@@ -37,10 +37,11 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.Rescheduling
             // Add links between tasks
             TaskLink link12 = project.TaskLinks.Add(task1, task2, TaskLinkType.FinishToStart);
             TaskLink link23 = project.TaskLinks.Add(task2, task3, TaskLinkType.FinishToStart);
+            
             // One day lag
             link23.LinkLag = 4800; 
-            TaskLink link34 = project.TaskLinks.Add(task3, task4, TaskLinkType.FinishToStart);
-            TaskLink link45 = project.TaskLinks.Add(task4, task5, TaskLinkType.FinishToStart);
+            project.TaskLinks.Add(task3, task4, TaskLinkType.FinishToStart);
+            project.TaskLinks.Add(task4, task5, TaskLinkType.FinishToStart);
             
             // Add new tasks
             Task task6 = project.RootTask.Children.Add("Task 6");
@@ -53,10 +54,10 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.Rescheduling
             Task task10 = project.RootTask.Children.Add("Task 10");
             
             // Add links between tasks
-            TaskLink link67 = project.TaskLinks.Add(task6, task7, TaskLinkType.FinishToStart);
-            TaskLink link78 = project.TaskLinks.Add(task7, task8, TaskLinkType.FinishToStart);
-            TaskLink link89 = project.TaskLinks.Add(task8, task9, TaskLinkType.FinishToStart);
-            TaskLink link910 = project.TaskLinks.Add(task9, task10, TaskLinkType.FinishToStart);
+            project.TaskLinks.Add(task6, task7, TaskLinkType.FinishToStart);
+            project.TaskLinks.Add(task7, task8, TaskLinkType.FinishToStart);
+            project.TaskLinks.Add(task8, task9, TaskLinkType.FinishToStart);
+            project.TaskLinks.Add(task9, task10, TaskLinkType.FinishToStart);
             task6.Set(Tsk.IsManual, true);
             task7.Set(Tsk.IsManual, true);
             task8.Set(Tsk.IsManual, true);
@@ -71,7 +72,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.Rescheduling
             // Save project after rescheduling uncompleted work
             project.RescheduleUncompletedWorkToStartAfter(new DateTime(2014, 2, 7, 8, 0, 0));
             project.Save(dataDir + "RescheduleUncompletedWork_rescheduled_out.xml", SaveFileFormat.XML);
-            // ExEnd:UpdateProjectAndRescheduleUncompletedWork
+            //ExEnd:UpdateProjectAndRescheduleUncompletedWork
         }
     }
 }

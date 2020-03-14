@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.WorkingWithProjectProperties
 {
@@ -9,7 +6,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.WorkingWithProjectPro
     {
         public static void Run()
         {
-            // ExStart:ApplyCalculationModeNone
+            //ExStart:ApplyCalculationModeNone
             // Create empty project and set calculation mode to None
             Project project = new Project();
             project.CalculationMode = CalculationMode.None;
@@ -29,7 +26,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.WorkingWithProjectPro
             Console.WriteLine("Task Duration Equals 2 days : {0} ", task.Get(Tsk.Duration).ToString().Equals("2 days"));
             Console.WriteLine("Task Start Equals DateTime.MinValue  : {0} ", task.Get(Tsk.Start).Equals(DateTime.MinValue));
             Console.WriteLine("Task Finish Equals DateTime.MinValue  : {0} ", task.Get(Tsk.Finish).Equals(DateTime.MinValue));
-            // ExEnd:ApplyCalculationModeNone
+            //ExEnd:ApplyCalculationModeNone
         }
     }
 }

@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace Aspose.Tasks.Examples.CSharp.WorkingWithResourceAssignments
 {
@@ -12,7 +9,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithResourceAssignments
             // The path to the documents directory.
             string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
-            // ExStart:GetResourceAssignmentCosts
+            //ExStart:GetResourceAssignmentCosts
             // Create project instance
             Project project1 = new Project(dataDir + "ResourceAssignmentCosts.mpp");
 
@@ -24,7 +21,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithResourceAssignments
                 Console.WriteLine(ra.Get(Asn.BCWP));
                 Console.WriteLine(ra.Get(Asn.BCWS));
             }
-            // ExEnd:GetResourceAssignmentCosts
+            //ExEnd:GetResourceAssignmentCosts
         }
     }
 }

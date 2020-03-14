@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace Aspose.Tasks.Examples.CSharp.WorkingWithTaskLinks
 {
@@ -9,7 +6,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithTaskLinks
     {
         public static void Run()
         {
-            // ExStart:IdentifyCrossProjectTasks
+            //ExStart:IdentifyCrossProjectTasks
             // Create project instance and access task
             string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
             Project project1 = new Project(dataDir + "External.mpp");
@@ -20,7 +17,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithTaskLinks
             
             // Show ID of the task in the original project
             Console.WriteLine(externalTask.Get(Tsk.ExternalId).ToString());
-            // ExEnd:IdentifyCrossProjectTasks
+            //ExEnd:IdentifyCrossProjectTasks
         }
     }
 }

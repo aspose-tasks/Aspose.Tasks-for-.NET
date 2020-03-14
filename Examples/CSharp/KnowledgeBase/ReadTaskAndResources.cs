@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace Aspose.Tasks.Examples.CSharp.KnowledgeBase
 {
@@ -11,7 +8,7 @@ namespace Aspose.Tasks.Examples.CSharp.KnowledgeBase
         {
             string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
-            // ExStart:ReadTaskAndResources
+            //ExStart:ReadTaskAndResources
             // Load MPP file
             Project project = new Project(dataDir + "Project1.mpp");
 
@@ -31,7 +28,7 @@ namespace Aspose.Tasks.Examples.CSharp.KnowledgeBase
             // Loop through each resource and read information related to resources
             foreach (Resource resource in project.Resources)
             {
-                string resourceType = null;
+                string resourceType;
                 switch (resource.Get(Rsc.Type))
                 {
                     case ResourceType.Material:
@@ -40,9 +37,11 @@ namespace Aspose.Tasks.Examples.CSharp.KnowledgeBase
                     case ResourceType.Work:
                         resourceType = "Work";
                         break;
-                    default:
+                    case ResourceType.Cost:
                         resourceType = "Cost";
                         break;
+                    default:
+                        throw new ArgumentOutOfRangeException();
                 }
 
                 Console.WriteLine("Reading Resource " + resource.Get(Rsc.Name));
@@ -50,7 +49,7 @@ namespace Aspose.Tasks.Examples.CSharp.KnowledgeBase
                 Console.WriteLine("Type: " + resourceType);
                 Console.WriteLine("\n===========================\n");
             }
-            // ExEnd:ReadTaskAndResources
+            //ExEnd:ReadTaskAndResources
         }
     }
 }

@@ -1,9 +1,6 @@
 ﻿using Aspose.Tasks.Saving;
 using Aspose.Tasks.Util;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 /*
 This project uses Automatic Package Restore feature of NuGet to resolve Aspose.Tasks for .NET API reference 
@@ -19,7 +16,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithTasks
     {
         public static void Run()
         {
-            // ExStart:ReadTaskWBS
+            //ExStart:ReadTaskWBS
             // Read project
             string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
             Project project1 = new Project(dataDir + "TaskWBS.mpp");
@@ -39,7 +36,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithTasks
                 // Set custom WBS
                 tsk.Set(Tsk.WBS, "custom wbs" + tsk.Get(Tsk.WBS));
             }
-            // ExEnd:ReadTaskWBS
+            //ExEnd:ReadTaskWBS
 
             // Save project as PDF
             project1.Save(dataDir + "TaskWBS_out.pdf", SaveFileFormat.PDF);

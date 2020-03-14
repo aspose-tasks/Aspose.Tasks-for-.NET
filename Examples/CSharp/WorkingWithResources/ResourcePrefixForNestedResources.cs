@@ -1,28 +1,24 @@
 ﻿using Aspose.Tasks.Saving;
 using Aspose.Tasks.Visualization;
-using System;
+
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
 
 namespace Aspose.Tasks.Examples.CSharp.WorkingWithResources
 {
-    // ExStart:ResourcePrefixForNestedResources
+    //ExStart:ResourcePrefixForNestedResources
     public class ResourcePrefixForNestedResources : ICssSavingCallback, IFontSavingCallback, IImageSavingCallback
     {
         // The path to the documents directory.
-        public static string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
+        public static readonly string DataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
+        
         public static void Run()
         {
-            // The path to the documents directory.
-            string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
-
-            using (FileStream fs = new FileStream(dataDir + "Project1.mpp", FileMode.Open))
+            using (FileStream fs = new FileStream(DataDir + "Project1.mpp", FileMode.Open))
             {
                 Project project = new Project(fs);
                 HtmlSaveOptions options = GetSaveOptions(1);
-                using (FileStream stream = new FileStream(dataDir + "document.html", FileMode.Create))
+                using (FileStream stream = new FileStream(DataDir + "document.html", FileMode.Create))
                 {
                     project.Save(stream, options);
                 }
@@ -31,36 +27,37 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithResources
 
         public void CssSaving(CssSavingArgs args)
         {
-            FileStream stream = new FileStream(dataDir + "css/" + args.FileName, FileMode.Create);
+            FileStream stream = new FileStream(DataDir + "css/" + args.FileName, FileMode.Create);
             args.Stream = stream;
             args.KeepStreamOpen = false;
-            args.Uri = dataDir + "css/" + args.FileName;
+            args.Uri = DataDir + "css/" + args.FileName;
         }
 
         public void FontSaving(FontSavingArgs args)
         {
-            FileStream stream = new FileStream(dataDir + "fonts/" + args.FileName, FileMode.Create);
+            FileStream stream = new FileStream(DataDir + "fonts/" + args.FileName, FileMode.Create);
             args.Stream = stream;
             args.KeepStreamOpen = false;
-            args.Uri = dataDir + "fonts/" + args.FileName;
+            args.Uri = DataDir + "fonts/" + args.FileName;
         }
 
         public void ImageSaving(ImageSavingArgs args)
         {
             if (args.FileName.EndsWith("png"))
             {
-                FileStream stream1 = new FileStream(dataDir + "resources/nestedResources/" + args.FileName, FileMode.Create);
+                FileStream stream1 = new FileStream(DataDir + "resources/nestedResources/" + args.FileName, FileMode.Create);
                 args.Stream = stream1;
                 args.KeepStreamOpen = false;
-                args.Uri = dataDir + "resources/" + args.FileName;
-                //args.NestedUri = dataDir + "nestedResources/" + args.FileName;
+                args.Uri = DataDir + "resources/" + args.FileName;
+
+                // args.NestedUri = dataDir + "nestedResources/" + args.FileName;
             }
             else
             {
-                FileStream stream2 = new FileStream(dataDir + "resources/" + args.FileName, FileMode.Create);
+                FileStream stream2 = new FileStream(DataDir + "resources/" + args.FileName, FileMode.Create);
                 args.Stream = stream2;
                 args.KeepStreamOpen = false;
-                args.Uri = dataDir + "resources/" + args.FileName;
+                args.Uri = DataDir + "resources/" + args.FileName;
             }
         }
 
@@ -88,28 +85,28 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithResources
             saveOptions.Pages.Clear();
             saveOptions.Pages.Add(pageNumber);
 
-            if (!Directory.Exists(dataDir + "fonts"))
+            if (!Directory.Exists(DataDir + "fonts"))
             {
-                Directory.CreateDirectory(dataDir + "fonts");
+                Directory.CreateDirectory(DataDir + "fonts");
             }
 
-            if (!Directory.Exists(dataDir + "resources"))
+            if (!Directory.Exists(DataDir + "resources"))
             {
-                Directory.CreateDirectory(dataDir + "resources");
+                Directory.CreateDirectory(DataDir + "resources");
             }
 
-            if (!Directory.Exists(dataDir + "nestedResources"))
+            if (!Directory.Exists(DataDir + "nestedResources"))
             {
-                Directory.CreateDirectory(dataDir + "resources/nestedResources");
+                Directory.CreateDirectory(DataDir + "resources/nestedResources");
             }
 
-            if (!Directory.Exists(dataDir + "css"))
+            if (!Directory.Exists(DataDir + "css"))
             {
-                Directory.CreateDirectory(dataDir + "css");
+                Directory.CreateDirectory(DataDir + "css");
             }
 
             return saveOptions;
         }
     }
-    // ExEnd:ResourcePrefixForNestedResources
+    //ExEnd:ResourcePrefixForNestedResources
 }

@@ -1,10 +1,4 @@
-﻿using Aspose.Tasks;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-/*
+﻿/*
 This project uses Automatic Package Restore feature of NuGet to resolve Aspose.Tasks for .NET API reference 
 when the project is build. Please check https:// Docs.nuget.org/consume/nuget-faq for more information. 
 If you do not wish to use NuGet, you can manually download Aspose.Tasks for .NET API from https://www.nuget.org/packages/Aspose.Tasks/, 
@@ -18,7 +12,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithCalendars.CreatingUpdatingAndR
     {
         public static void Run()
         { 
-            // ExStart:MakeAStandardCalendar
+            //ExStart:MakeAStandardCalendar
             // Create a project instance
             Project project = new Project();
 
@@ -29,7 +23,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithCalendars.CreatingUpdatingAndR
             // Save the Project
             string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
             project.Save(dataDir + "Project_MakeStandardCalendar_out.xml", Aspose.Tasks.Saving.SaveFileFormat.XML);
-            // ExEnd:MakeAStandardCalendar
+            //ExEnd:MakeAStandardCalendar
         }
     }
 }

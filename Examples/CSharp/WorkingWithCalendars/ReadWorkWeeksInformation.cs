@@ -1,8 +1,4 @@
-﻿using Aspose.Tasks;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System;
 
 /*
 This project uses Automatic Package Restore feature of NuGet to resolve Aspose.Tasks for .NET API reference 
@@ -18,7 +14,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithCalendars
     {
         public static void Run()
         {
-            // ExStart:ReadWorkWeeksInformation       
+            //ExStart:ReadWorkWeeksInformation       
             string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
             
             // Create project instance and access calendar and work weeks collection
@@ -29,7 +25,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithCalendars
             foreach (WorkWeek workWeek in collection)
             {
                 // Display work week name, from and to dates
-                string Name = workWeek.Name;  
+                string name = workWeek.Name;  
                 DateTime fromDate = workWeek.FromDate;  
                 DateTime toDate = workWeek.ToDate;      
 
@@ -41,7 +37,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithCalendars
                     WorkingTimeCollection workingTimes = day.WorkingTimes;                     
                 }
             }
-            // ExEnd:ReadWorkWeeksInformation
+            //ExEnd:ReadWorkWeeksInformation
         }
     }
 }

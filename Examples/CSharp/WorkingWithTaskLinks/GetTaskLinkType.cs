@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace Aspose.Tasks.Examples.CSharp.WorkingWithTaskLinks
 {
@@ -9,18 +6,18 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithTaskLinks
     {
         public static void Run()
         {
-            // ExStart:GetTaskLinkType
+            //ExStart:GetTaskLinkType
             // Create project instance
             string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
             Project project1 = new Project(dataDir + "GetTaskLinkType.mpp");
 
             // Display task link types 
-            var allinks = project1.TaskLinks;
-            foreach (TaskLink tsklnk in allinks)
+            var taskLinks = project1.TaskLinks;
+            foreach (TaskLink link in taskLinks)
             {
-                Console.WriteLine(tsklnk.LinkType.ToString());
+                Console.WriteLine(link.LinkType.ToString());
             }
-            // ExEnd:GetTaskLinkType
+            //ExEnd:GetTaskLinkType
         }
     }
 }

@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace Aspose.Tasks.Examples.CSharp.WorkingWithResourceAssignments
 {
@@ -12,7 +9,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithResourceAssignments
             // The path to the documents directory.
             string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
-            // ExStart:GetResourceAssignmentOvertimes
+            //ExStart:GetResourceAssignmentOvertimes
             // Create project instance
             Project project1 = new Project(dataDir + "ResourceAssignmentOvertimes.mpp");
 
@@ -26,7 +23,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithResourceAssignments
                 Console.WriteLine(ra.Get(Asn.RemainingOvertimeWork).ToString());
                 Console.WriteLine(ra.Get(Asn.RemainingOvertimeWork).ToString());
             }
-            // ExEnd:GetResourceAssignmentOvertimes
+            //ExEnd:GetResourceAssignmentOvertimes
         }
     }
 }

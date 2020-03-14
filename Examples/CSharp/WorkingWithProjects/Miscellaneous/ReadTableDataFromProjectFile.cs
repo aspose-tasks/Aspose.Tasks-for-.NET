@@ -17,7 +17,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.Miscellaneous
             // The path to the documents directory.
             string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
-            // ExStart:ReadTableDataFromProjectFile
+            //ExStart:ReadTableDataFromProjectFile
             Project project = new Project(dataDir + "ReadTableData.mpp");
 
             // Access table
@@ -29,10 +29,10 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.Miscellaneous
             {
                 Console.WriteLine("Field width: " + tableField.Width);
                 Console.WriteLine("Field Title: " + tableField.Title);
-                Console.WriteLine("Field Title Alignment: " + tableField.AlignTitle.ToString());
-                Console.WriteLine("Field Align Data: " + tableField.AlignData.ToString());
+                Console.WriteLine("Field Title Alignment: " + tableField.AlignTitle);
+                Console.WriteLine("Field Align Data: " + tableField.AlignData);
             }
-            // ExEnd:ReadTableDataFromProjectFile
+            //ExEnd:ReadTableDataFromProjectFile
         }
     }
 }

@@ -17,13 +17,13 @@ namespace Aspose.Tasks.Examples.CSharp.ConvertingProjectData
             // The path to the documents directory.
             string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
             
-            // ExStart:SaveProjectAsSVG
+            //ExStart:SaveProjectAsSVG
             // Read the input Project file
             Project project = new Project(dataDir + "CreateProject1.mpp");
 
             // Save the Project as SVG
             project.Save(dataDir + "SaveProjectAsSVG_out.SVG", SaveFileFormat.SVG);
-            // ExEnd:SaveProjectAsSVG
+            //ExEnd:SaveProjectAsSVG
         }
     }
 }

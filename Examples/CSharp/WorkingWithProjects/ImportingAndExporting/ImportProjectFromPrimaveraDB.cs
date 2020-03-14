@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
+﻿using System.Data.SqlClient;
+
 using Aspose.Tasks.Connectivity;
 
 /*
@@ -19,7 +16,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.ImportingAndExporting
     {
         public static void Run()
         {
-            // ExStart:ImportProjectFromPrimaveraDB
+            //ExStart:ImportProjectFromPrimaveraDB
             SqlConnectionStringBuilder sb = new SqlConnectionStringBuilder();
             sb.DataSource = "192.168.56.3,1433";
             sb.Encrypt = true;
@@ -34,8 +31,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.ImportingAndExporting
 
             // Initialize a new instance of the Project class
             Project project = new Project(settings);
-            // ExEnd:ImportProjectFromPrimaveraDB
+            //ExEnd:ImportProjectFromPrimaveraDB
         }
-
     }
 }

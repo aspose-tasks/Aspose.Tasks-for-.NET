@@ -1,7 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System.Collections.Generic;
+
 using Aspose.Tasks.Saving;
 
 /*
@@ -21,7 +19,7 @@ namespace Aspose.Tasks.Examples.CSharp.ConvertingProjectData
             // The path to the documents directory.
             string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
-            // ExStart:ControlHeaderNameDuringHTMLExport
+            //ExStart:ControlHeaderNameDuringHTMLExport
             Project project = new Project(dataDir + "CreateProject2.mpp");
             HtmlSaveOptions htmlSaveOptions = new HtmlSaveOptions();
 
@@ -34,7 +32,7 @@ namespace Aspose.Tasks.Examples.CSharp.ConvertingProjectData
             htmlSaveOptions.Pages = new List<int>();
             htmlSaveOptions.Pages.Add(1);
             project.Save(dataDir + "ControlHeaderNameDuringHTMLExport_out.html", htmlSaveOptions);
-            // ExEnd:ControlHeaderNameDuringHTMLExport
+            //ExEnd:ControlHeaderNameDuringHTMLExport
         }
     }
 }

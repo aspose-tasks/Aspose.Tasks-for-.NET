@@ -1,8 +1,4 @@
 ﻿using Aspose.Tasks.Visualization;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 /*
 This project uses Automatic Package Restore feature of NuGet to resolve Aspose.Tasks for .NET API reference 
@@ -20,10 +16,10 @@ namespace Aspose.Tasks.Examples.CSharp.Miscellaneous
         {
             string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
-            // ExStart:SaveUpcomingTasksReport
+            //ExStart:SaveUpcomingTasksReport
             Project project1 = new Project(dataDir + "UpcomingTasks.mpp");
             project1.SaveReport(dataDir + "UpcomingTasks_out.pdf", ReportType.UpcomingTask);
-            // ExEnd:SaveUpcomingTasksReport
+            //ExEnd:SaveUpcomingTasksReport
         }
     }
 }

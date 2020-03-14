@@ -18,7 +18,7 @@ namespace Aspose.Tasks.Examples.CSharp.ConvertingProjectData
             // The path to the documents directory.
             string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
-            // ExStart:UsingXlsxOptions
+            //ExStart:UsingXlsxOptions
             // Read the input Project file
             Project project = new Project(dataDir + "CreateProject2.mpp");
                                    
@@ -29,17 +29,21 @@ namespace Aspose.Tasks.Examples.CSharp.ConvertingProjectData
             options.View.Columns.Add(col);
 
             // Add desired resource view columns
-            ResourceViewColumn rscCol = new ResourceViewColumn("Cost center", 100, delegate(Resource resource)
-            { return resource.Get(Rsc.CostCenter); });
+            ResourceViewColumn rscCol = new ResourceViewColumn(
+                "Cost center",
+                100,
+                delegate(Resource resource)
+                    {
+                        return resource.Get(Rsc.CostCenter);
+                    });
             options.ResourceView.Columns.Add(rscCol);
 
             // Add desired assignment view columns
-            AssignmentViewColumn assnCol = new AssignmentViewColumn("Notes", 200, delegate(ResourceAssignment assignment)
-            { return assignment.Get(Asn.Notes); });
+            AssignmentViewColumn assnCol = new AssignmentViewColumn("Notes", 200, delegate(ResourceAssignment assignment) { return assignment.Get(Asn.Notes); });
             options.AssignmentView.Columns.Add(assnCol);
 
             project.Save(dataDir + "UsingXlsxOptions_out.xlsx", options);
-            // ExEnd:UsingXlsxOptions
+            //ExEnd:UsingXlsxOptions
         }
     }
 }

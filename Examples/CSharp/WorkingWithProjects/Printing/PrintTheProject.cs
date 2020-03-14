@@ -12,14 +12,14 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.Printing
     {
         public static void Run()
         {
-            // ExStart:PrintTheProject
+            //ExStart:PrintTheProject
             // The path to the documents directory
             string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
             // Read the input Project file
             Project project = new Project(dataDir + "Project2.mpp");
             project.Print();
-            // ExEnd:PrintTheProject
+            //ExEnd:PrintTheProject
         }
     }
 }

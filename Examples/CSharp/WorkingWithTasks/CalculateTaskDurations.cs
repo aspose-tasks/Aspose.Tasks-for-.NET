@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace Aspose.Tasks.Examples.CSharp.WorkingWithTasks
 {
@@ -9,7 +6,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithTasks
     {
         public static void Run()
         {
-            // ExStart:CalculateTaskDurations
+            //ExStart:CalculateTaskDurations
             // Create project instance
             string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
             Project project1 = new Project(dataDir + "TaskDurations.mpp");
@@ -28,7 +25,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithTasks
             Console.WriteLine("Duration in Weeks: {0}", weeks);
             double months = task.Get(Tsk.Duration).Convert(TimeUnitType.Month).ToDouble();
             Console.WriteLine("Duration in Months: {0}", months);
-            // ExEnd:CalculateTaskDurations
+            //ExEnd:CalculateTaskDurations
         }
     }
 }

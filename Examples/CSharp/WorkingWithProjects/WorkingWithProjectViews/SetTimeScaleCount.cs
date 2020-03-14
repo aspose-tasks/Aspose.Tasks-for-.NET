@@ -9,7 +9,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.WorkingWithProjectVie
             // The path to the documents directory.
             string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
-            // ExStart:SetTimeScaleCount
+            //ExStart:SetTimeScaleCount
             Project project = new Project();
 
             // Init Gantt Chart View
@@ -30,7 +30,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.WorkingWithProjectVie
             task1.Set(Tsk.Duration, task1.ParentProject.GetDuration(24, TimeUnitType.Hour));
             task2.Set(Tsk.Duration, task1.ParentProject.GetDuration(40, TimeUnitType.Hour));
             project.Save(dataDir + "SetTimeScaleCount_out.pdf", SaveFileFormat.PDF); 
-            // ExEnd:SetTimeScaleCount
+            //ExEnd:SetTimeScaleCount
         }
     }
 }

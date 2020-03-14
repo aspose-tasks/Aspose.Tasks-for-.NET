@@ -12,16 +12,19 @@ please feel free to contact us using https://forum.aspose.com/c/tasks
 
 namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.WorkingWithProjectViews
 {
-    public class ConfigureGantChart
+    public class ConfigureTheGanttChartViewShowSelectedColumnFields
     {
         public static void Run()
-        {
+        {            
             try
             {
-                // ExStart:ConfigureGantChart
                 // The path to the documents directory.
-                string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName); 
-                Project project = new Project(dataDir + "Project5.mpp"); // Create a new project task
+                string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
+
+                //ExStart:ConfigureTheGantChartViewShowSelectedColumnFields
+                Project project = new Project(dataDir + "Project5.mpp"); 
+                
+                // Create a new project task
                 Task task = project.RootTask.Children.Add("New Activity");
 
                 // Define new custom attribute
@@ -37,17 +40,17 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.WorkingWithProjectVie
                 attrField.Title = "Custom attribute";
                 attrField.AlignTitle = StringAlignment.Center;
                 attrField.AlignData = StringAlignment.Center;
-
                 Table table = project.Tables.ToList()[0];
                 table.TableFields.Insert(3, attrField);
 
-                project.Save(dataDir + "ConfigureGantChart_out.mpp", new MPPSaveOptions() { WriteViewData = true });
+                // Save project as MPP
+                project.Save(dataDir + "ConfigureTheGanttChartViewShowSelectedColumnFields_out.mpp", new MPPSaveOptions { WriteViewData = true });
+                //ExEnd:ConfigureTheGantChartViewShowSelectedColumnFields
             }
             catch (Exception ex)
             {
                 Console.WriteLine(ex.Message + "\nThis example will only work if you apply a valid Aspose License. You can purchase full license or get 30 day temporary license from http:// Www.aspose.com/purchase/default.aspx.");
             }
-            // ExEnd:ConfigureGantChart
         }
     }
 }

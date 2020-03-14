@@ -14,15 +14,15 @@ please feel free to contact us using https://forum.aspose.com/c/tasks
 
 namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.CreatingReadingAndSaving
 {
-    public class IgnoreInvalidCharactersDuringloadingProject
+    public class IgnoreInvalidCharactersDuringProjectLoading
     {
-        // ExStart:IgnoreInvalidCharactersDuringloadingProject 
+        //ExStart:IgnoreInvalidCharactersDuringloadingProject 
         public static void Run()
         {         
             // Open modified xml stream
             using (MemoryStream stream = new MemoryStream(Encoding.UTF8.GetBytes(GetModifiedXml())))
             {
-                Project project = new Project(stream, new ParseErrorCallback(CustomDurationHandler));
+                Project project = new Project(stream, CustomDurationHandler);
             }
         }
 
@@ -34,7 +34,9 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.CreatingReadingAndSav
 
             // Open valid xml file and modify it
             using (TextReader reader = new StreamReader(dataDir + "IgnoreInvalidCharacters.xml"))
+            {
                 xml = reader.ReadToEnd();
+            }
 
             Regex regex = new Regex("PT(\\d+)H(\\d+)M(\\d+)S");
             return regex.Replace(xml, "**$1Hrs$2Mins$3Secs**");
@@ -54,6 +56,6 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.CreatingReadingAndSav
             // Here we handle only TimeSpan instances, so rethrow original exception with other types
             throw args.Exception;
         }
-        // ExEnd:IgnoreInvalidCharactersDuringloadingProject
+        //ExEnd:IgnoreInvalidCharactersDuringloadingProject
     }
 }

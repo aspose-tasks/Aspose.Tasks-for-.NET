@@ -1,8 +1,5 @@
 ﻿using Aspose.Tasks.Util;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 /*
 This project uses Automatic Package Restore feature of NuGet to resolve Aspose.Tasks for .NET API reference 
@@ -18,7 +15,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithTasks
     {
         public static void Run()
         {
-            // ExStart:ReadActualTaskProperties
+            //ExStart:ReadActualTaskProperties
             // The path to the documents directory.
             string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
@@ -37,11 +34,11 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithTasks
                 Console.WriteLine("Task Name : " + task.Get(Tsk.Name));
                 Console.WriteLine("Actual Start: " + task.Get(Tsk.ActualStart).ToLongDateString());
                 Console.WriteLine("Actual Finish: " + task.Get(Tsk.ActualFinish).ToLongDateString());
-                Console.WriteLine("Actual Duration: " + task.Get(Tsk.ActualDuration).TimeSpan.Hours.ToString());
-                Console.WriteLine("Actual Cost: " + task.Get(Tsk.ActualCost).ToString());
+                Console.WriteLine("Actual Duration: " + task.Get(Tsk.ActualDuration).TimeSpan.Hours);
+                Console.WriteLine("Actual Cost: " + task.Get(Tsk.ActualCost));
                 Console.WriteLine("---------------------------------------------");
             }
-            // ExEnd:ReadActualTaskProperties
+            //ExEnd:ReadActualTaskProperties
         }
     }
 }

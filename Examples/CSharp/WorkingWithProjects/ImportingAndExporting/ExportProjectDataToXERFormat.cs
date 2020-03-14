@@ -17,12 +17,12 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.ImportingAndExporting
             // The path to the documents directory.
             string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
-            // ExStart:ExportProjectDataToXERFormat
+            //ExStart:ExportProjectDataToXERFormat
             Project project = new Project(dataDir + "Project1.mpp");
 
             // Save project in desired format
             project.Save(dataDir + "ExportProjectDataToXERFormat_out.mpp", SaveFileFormat.PrimaveraXER);
-            // ExEnd:ExportProjectDataToXERFormat
+            //ExEnd:ExportProjectDataToXERFormat
         }
     }
 }

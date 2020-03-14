@@ -1,8 +1,5 @@
 ﻿using Aspose.Tasks.Saving;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 /*
 This project uses Automatic Package Restore feature of NuGet to resolve Aspose.Tasks for .NET API reference 
@@ -18,9 +15,7 @@ namespace Aspose.Tasks.Examples.CSharp.Licensing
     {
         public static void Run()
         {
-            string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
-
-            // ExStart:DateTimeLimitations
+            //ExStart:DateTimeLimitations
             // Create a prject instance
             Project project1 = new Project();
 
@@ -33,7 +28,7 @@ namespace Aspose.Tasks.Examples.CSharp.Licensing
 
             // Save the Project as XML
             project1.Save("EvalProject_out.xml", SaveFileFormat.XML);
-            // ExEnd:DateTimeLimitations
+            //ExEnd:DateTimeLimitations
         }
     }
 }

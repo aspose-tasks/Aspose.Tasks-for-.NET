@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace Aspose.Tasks.Examples.CSharp.WorkingWithCalendarExceptions
 {
@@ -9,7 +6,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithCalendarExceptions
     {
         public static void Run()
         {
-            // ExStart:RetrieveCalendarExceptions
+            //ExStart:RetrieveCalendarExceptions
             string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
             // Create project instance
@@ -25,7 +22,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithCalendarExceptions
                     Console.WriteLine("To: " + calExc.ToDate.ToShortDateString());
                 }
             }
-            // ExEnd:RetrieveCalendarExceptions
+            //ExEnd:RetrieveCalendarExceptions
         }
     }
 }

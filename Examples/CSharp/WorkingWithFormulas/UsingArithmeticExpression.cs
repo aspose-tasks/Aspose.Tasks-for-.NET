@@ -14,7 +14,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithFormulas
     {
         public static void Run()
         {
-            // ExStart:UsingArithmeticExpression
+            //ExStart:UsingArithmeticExpression
             Project project = CreateTestProjectWithCustomField();
             
             // Set arithmetic formula for extended attribute
@@ -25,7 +25,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithFormulas
             // Display extended attribute value
             Task task = project.RootTask.Children.GetById(1);
             Console.WriteLine(task.ExtendedAttributes[0].NumericValue);
-            // ExEnd:UsingArithmeticExpression
+            //ExEnd:UsingArithmeticExpression
         }
 
         private static Project CreateTestProjectWithCustomField()

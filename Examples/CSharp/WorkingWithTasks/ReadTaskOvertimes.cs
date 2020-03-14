@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
 
 namespace Aspose.Tasks.Examples.CSharp.WorkingWithTasks
 {
@@ -10,7 +7,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithTasks
     {
         public static void Run()
         {
-            // ExStart:ReadTaskOvertimes
+            //ExStart:ReadTaskOvertimes
             // Read project from file stream
             string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
             FileStream fs = new FileStream(dataDir + "TaskOvertimes.mpp", FileMode.Open);
@@ -29,7 +26,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithTasks
                 // Set percent complete
                 tsk1.Set(Tsk.PercentComplete, 100);
             }
-            // ExEnd:ReadTaskOvertimes
+            //ExEnd:ReadTaskOvertimes
         }
     }
 }

@@ -15,7 +15,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.WorkingWithProjectPro
     {
         public static void Run()
         {
-            // ExStart:SetAttributesForNewTasks
+            //ExStart:SetAttributesForNewTasks
             // The path to the documents directory.
             string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName); 
 
@@ -26,7 +26,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.WorkingWithProjectPro
  
             // Display Status.
             Console.WriteLine("New Task created with start date successfully.");
-            // ExEnd:SetAttributesForNewTasks
+            //ExEnd:SetAttributesForNewTasks
         }
     }
 }

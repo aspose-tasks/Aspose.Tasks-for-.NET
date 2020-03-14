@@ -1,10 +1,6 @@
 ﻿using Aspose.Tasks.Saving;
 using Aspose.Tasks.Visualization;
-using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
 
 /*
 This project uses Automatic Package Restore feature of NuGet to resolve Aspose.Tasks for .NET API reference 
@@ -24,7 +20,9 @@ namespace Aspose.Tasks.Examples.CSharp.Articles
             string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
             string fileName = "Project2.mpp";
 
-            // ExStart:RenderGanttChartWithBarsRolledUp
+            //ExStart:RenderGanttChartWithBarsRolledUp
+            //ExFor: SaveOptions.RollUpGanttBars
+            //ExSummary: Shows how to set a value indicating that subtasks on the summary task bar must be rolled up.
             PdfSaveOptions options = new PdfSaveOptions();
             options.PresentationFormat = PresentationFormat.GanttChart;
             options.FitContent = true;
@@ -32,14 +30,9 @@ namespace Aspose.Tasks.Examples.CSharp.Articles
             options.DrawNonWorkingTime = true;
             options.PageSize = PageSize.A3;
 
-            string file = Path.Combine(dataDir, fileName);
-            string resultFile = Path.Combine(dataDir, "RenderGanttChartWithBarsNotRolledUp_out.pdf");
-
-            Project project = new Project(file);
-            //for (int i = 14; i <= 23; i++)
-            //    project.GetTaskById(i).HideBar = false;
-            project.Save(resultFile, (SaveOptions)options);
-            // ExEnd:RenderGanttChartWithBarsRolledUp
+            Project project = new Project(Path.Combine(dataDir, fileName));
+            project.Save(Path.Combine(dataDir, "RenderGanttChartWithBarsRolledUp_out.pdf"), options);
+            //ExEnd:RenderGanttChartWithBarsRolledUp
         }
     }
 }

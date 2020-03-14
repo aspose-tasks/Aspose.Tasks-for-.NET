@@ -41,7 +41,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithResourceAssignments
             Console.WriteLine(resavedMaterialResourceAssignment.Get(Asn.RateScale));
 
             // only material resource assignments can have non-zero rate scale value.
-            var resavedNonMaterialResourceAssignment = resavedProject.ResourceAssignments.GetByUid(2);
+            var assignment = resavedProject.ResourceAssignments.GetByUid(2);
             //ExEnd: ReadWriteRateScaleForResourceAssignment
         }
     }

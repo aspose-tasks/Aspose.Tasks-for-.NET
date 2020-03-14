@@ -9,8 +9,8 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithFormulas
             EvaluateSine();
         }
 
-        // ExStart:CalculateMathExpressions
-        public static void EvaluateSine()
+        //ExStart:CalculateMathExpressions
+        private static void EvaluateSine()
         {
             Project project = CreateTestProjectWithCustomField();
             
@@ -22,7 +22,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithFormulas
             Console.WriteLine("Sin(pi/2): {0}", task.ExtendedAttributes[0].NumericValue);
         }
 
-        public static Project CreateTestProjectWithCustomField()
+        private static Project CreateTestProjectWithCustomField()
         {
             Project project = new Project();
             ExtendedAttributeDefinition attr = ExtendedAttributeDefinition.CreateTaskDefinition(CustomFieldType.Number, ExtendedAttributeTask.Number1, "Sine");         
@@ -34,6 +34,6 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithFormulas
             task.ExtendedAttributes.Add(a);
             return project;
         }
-        // ExEnd:CalculateMathExpressions
+        //ExEnd:CalculateMathExpressions
     }
 }

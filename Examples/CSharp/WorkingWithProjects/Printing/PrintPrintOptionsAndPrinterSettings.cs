@@ -16,7 +16,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.Printing
     {
         public static void Run()
         {
-            // ExStart:PrintPrintOptionsAndPrinterSettings
+            //ExStart:PrintPrintOptionsAndPrinterSettings
             // The path to the documents directory.
             string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
@@ -35,7 +35,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.Printing
             System.Drawing.Printing.PageSettings pageSettings = printerSettings.DefaultPageSettings;
             pageSettings.PaperSize = new PaperSize(dataDir + "Custom Size", 1000, 700);
             project.Print(printerSettings, options);
-            // ExEnd:PrintPrintOptionsAndPrinterSettings
+            //ExEnd:PrintPrintOptionsAndPrinterSettings
         }
     }
 }

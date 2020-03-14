@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace Aspose.Tasks.Examples.CSharp.WorkingWithTasks
 {
@@ -14,7 +11,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithTasks
                 // The path to the documents directory.
                 string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
-                // ExStart:CreateRecurringTask
+                //ExStart:CreateRecurringTask
                 // Create project instance
                 var project = new Project(dataDir + "Blank2010.mpp");
                 var parameters = new RecurringTaskParameters
@@ -40,7 +37,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithTasks
                                              }
                 };
                 project.RootTask.Children.Add(parameters);
-                // ExEnd:CreateRecurringTask
+                //ExEnd:CreateRecurringTask
             }
             catch (Exception ex)
             {

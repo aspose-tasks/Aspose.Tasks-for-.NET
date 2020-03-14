@@ -10,8 +10,8 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithFormulas
             EvaluateStringFunction();
         }
 
-        // ExStart:CalculateTextFunctions
-        public static void EvaluateStrConv()
+        //ExStart:CalculateTextFunctions
+        private static void EvaluateStrConv()
         {
             Project project = CreateTestProjectWithCustomField();
             Task task = project.RootTask.Children.GetById(1);
@@ -25,7 +25,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithFormulas
             Console.WriteLine(task.ExtendedAttributes[0].TextValue);
         }
 
-        public static void EvaluateStringFunction()
+        private static void EvaluateStringFunction()
         {
             Project project = CreateTestProjectWithCustomField();
             Task task = project.RootTask.Children.GetById(1);
@@ -39,9 +39,9 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithFormulas
             // #Error
             Console.WriteLine(task.ExtendedAttributes[0].TextValue);
         }
-        // ExEnd:CalculateTextFunctions
+        //ExEnd:CalculateTextFunctions
 
-        public static Project CreateTestProjectWithCustomField()
+        private static Project CreateTestProjectWithCustomField()
         {
             Project project = new Project();
             ExtendedAttributeDefinition attr = ExtendedAttributeDefinition.CreateTaskDefinition(CustomFieldType.Text, ExtendedAttributeTask.Text1, "Custom Field");

@@ -20,10 +20,10 @@ namespace Aspose.Tasks.Examples.CSharp.ConvertingProjectData
                 // The path to the documents directory.
                 string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
-                // ExStart:SaveProjectDataAsTemplate   
-                const string projectName = "Project2.mpp";
-                Project project = new Project(dataDir + projectName);
-                ProjectFileInfo projectFileInfo = Project.GetProjectFileInfo(dataDir + projectName);
+                //ExStart:SaveProjectDataAsTemplate   
+                const string ProjectName = "Project2.mpp";
+                Project project = new Project(dataDir + ProjectName);
+                ProjectFileInfo projectFileInfo = Project.GetProjectFileInfo(dataDir + ProjectName);
 
                 if (FileFormat.MPP14 == projectFileInfo.ProjectFileFormat)
                 {
@@ -34,15 +34,15 @@ namespace Aspose.Tasks.Examples.CSharp.ConvertingProjectData
                 options.RemoveActualValues = true;
                 options.RemoveBaselineValues = true;
 
-                const string templateName = "SaveProjectDataAsTemplate_out.mpt";
-                project.SaveAsTemplate(dataDir + templateName);
+                const string TemplateName = "SaveProjectDataAsTemplate_out.mpt";
+                project.SaveAsTemplate(dataDir + TemplateName);
 
-                ProjectFileInfo templateFileInfo = Project.GetProjectFileInfo(dataDir + templateName);
+                ProjectFileInfo templateFileInfo = Project.GetProjectFileInfo(dataDir + TemplateName);
                 if (FileFormat.MPT14 == templateFileInfo.ProjectFileFormat)
                 {
                     Console.WriteLine("Template FileFormat is ok");
                 }
-                // ExEnd:SaveProjectDataAsTemplate
+                //ExEnd:SaveProjectDataAsTemplate
             }
             catch (NotSupportedException ex)
             {

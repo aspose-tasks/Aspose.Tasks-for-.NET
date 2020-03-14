@@ -1,9 +1,5 @@
 ﻿using Aspose.Tasks.Saving;
 using Aspose.Tasks.Visualization;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 /*
 This project uses Automatic Package Restore feature of NuGet to resolve Aspose.Tasks for .NET API reference 
@@ -22,15 +18,15 @@ namespace Aspose.Tasks.Examples.CSharp.Articles
             // The path to the documents directory.
             string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
-            // ExStart:RenderXAMLWithOptions
+            //ExStart:RenderXAMLWithOptions
             Project project = new Project(dataDir + "Project2.mpp");
-            const string resultFile = "RenderXAMLWithOptions_out.xaml";
+            const string ResultFile = "RenderXAMLWithOptions_out.xaml";
             SaveOptions options = new XamlOptions();
             options.FitContent = true;
             options.LegendOnEachPage = false;
             options.Timescale = Timescale.ThirdsOfMonths;
-            project.Save(dataDir + resultFile, options);
-            // ExEnd:RenderXAMLWithOptions
+            project.Save(dataDir + ResultFile, options);
+            //ExEnd:RenderXAMLWithOptions
         }
     }
 }

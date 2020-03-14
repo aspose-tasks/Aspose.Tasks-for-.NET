@@ -1,8 +1,5 @@
 ﻿using Aspose.Tasks.Saving;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 /*
 This project uses Automatic Package Restore feature of NuGet to resolve Aspose.Tasks for .NET API reference 
@@ -20,7 +17,7 @@ namespace Aspose.Tasks.Examples.CSharp.Miscellaneous
         {
             try
             {
-                // ExStart:UpdateOutlineCodes
+                //ExStart:UpdateOutlineCodes
                 string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
                 Project project = new Project(dataDir + "project.mpp");
                  
@@ -70,7 +67,7 @@ namespace Aspose.Tasks.Examples.CSharp.Miscellaneous
 
                 // Save project as MPP
                 project.Save(dataDir + "Updated_project_out.mpp", SaveFileFormat.MPP);
-                // ExEnd:UpdateOutlineCodes
+                //ExEnd:UpdateOutlineCodes
             }
             catch (Exception ex)
             {

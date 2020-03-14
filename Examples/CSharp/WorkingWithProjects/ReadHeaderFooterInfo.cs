@@ -1,7 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+
 using Aspose.Tasks.Visualization;
 
 /*
@@ -16,7 +14,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects
 {
     class ReadHeaderFooterInfo
     {
-        // ExStart:ReadHeaderFooterInfo
+        //ExStart:ReadHeaderFooterInfo
         public static void Run()
         {
             // The path to the documents directory.
@@ -28,15 +26,11 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects
 
             Console.WriteLine("Page data cannot be null : {0} ", !info.Equals(null));
 
-            if (info != null)
-            {                
-                AssertHeaderFooterCorrect(info);
-                AssertPageSettingsCorrect(info);
-                AssertPageViewSettingsCorrect(info);
-                AssertMarginsCorrect(info);
-                AssertLegendCorrect(info);
-            }
-         
+            AssertHeaderFooterCorrect(info);
+            AssertPageSettingsCorrect(info);
+            AssertPageViewSettingsCorrect(info);
+            AssertMarginsCorrect(info);
+            AssertLegendCorrect(info);
         }
 
         private static void AssertHeaderFooterCorrect(PageInfo info)
@@ -75,12 +69,12 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects
 
         private static void AssertMarginsCorrect(PageInfo info)
         {
-            Console.WriteLine("Margins.Left Equals 1 : {0} ", (info.Margins.Left - 1 <= 1e-5) ? true : false);
-            Console.WriteLine("Margins.Top Equals 1.1 : {0} ", (info.Margins.Top - 1.1 <= 1e-5) ? true : false);
-            Console.WriteLine("Margins.Right Equals 1.2 : {0} ", (info.Margins.Right - 1.2 <= 1e-5) ? true : false);
-            Console.WriteLine("Margins.Bottom Equals 1.2 : {0} ", (info.Margins.Bottom - 1.3 <= 1e-5) ? true : false);
+            Console.WriteLine("Margins.Left Equals 1 : {0} ", info.Margins.Left - 1 <= 1e-5);
+            Console.WriteLine("Margins.Top Equals 1.1 : {0} ", info.Margins.Top - 1.1 <= 1e-5);
+            Console.WriteLine("Margins.Right Equals 1.2 : {0} ", info.Margins.Right - 1.2 <= 1e-5);
+            Console.WriteLine("Margins.Bottom Equals 1.2 : {0} ", info.Margins.Bottom - 1.3 <= 1e-5);
 
-            Console.WriteLine("Margin.Borders Equals Border.AroundEveryPage : {0} ",info.Margins.Borders.Equals(Border.AroundEveryPage));
+            Console.WriteLine("Margin.Borders Equals Border.AroundEveryPage : {0} ", info.Margins.Borders.Equals(Border.AroundEveryPage));
         }
 
         private static void AssertLegendCorrect(PageInfo info)
@@ -90,8 +84,8 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects
             Console.WriteLine("Legend right text Equals RIGHT LEGEND : {0} ", info.Legend.RightText.Equals("RIGHT LEGEND"));
 
             Console.WriteLine("LegendOn Equals Legend.OnEveryPage : {0} ", info.Legend.LegendOn.Equals(Legend.OnEveryPage));
-            Console.WriteLine("Legend Width Equals 5 : {0} ", (info.Legend.Width - 5 <= 1e-5) ? true : false);            
+            Console.WriteLine("Legend Width Equals 5 : {0} ", (info.Legend.Width - 5 <= 1e-5));            
         }
-        // ExEnd:ReadHeaderFooterInfo
+        //ExEnd:ReadHeaderFooterInfo
     }
 }

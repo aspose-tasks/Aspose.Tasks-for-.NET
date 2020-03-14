@@ -1,11 +1,10 @@
-
 namespace Aspose.Tasks.Examples.CSharp.WorkingWithCalendars.CreatingUpdatingAndRemoving
 {
     public class ReplaceCalendar
     {
         public static void Run()
         {
-            // ExStart:ReplaceCalendar
+            //ExStart:ReplaceCalendar
             // The path to the documents directory.
             string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
             Project project = new Project(dataDir + "ReplaceCalendar.mpp");
@@ -18,14 +17,16 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithCalendars.CreatingUpdatingAndR
 
             foreach (Calendar c in calColl)
             {
-                if (c.Name == "New cal1")
+                if (c.Name != "New cal1")
                 {
-                    calColl.Remove(c);
-                    calColl.Add("New cal2", project.Get(Prj.Calendar));
-                    break;
+                    continue;
                 }
+
+                calColl.Remove(c);
+                calColl.Add("New cal2", project.Get(Prj.Calendar));
+                break;
             }
-            // ExEnd:ReplaceCalendar            
+            //ExEnd:ReplaceCalendar            
         }
     }
 }

@@ -1,8 +1,5 @@
 ﻿using Aspose.Tasks.Saving;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+
 /*
 This project uses Automatic Package Restore feature of NuGet to resolve Aspose.Tasks for .NET API reference 
 when the project is build. Please check https:// Docs.nuget.org/consume/nuget-faq for more information. 
@@ -18,14 +15,16 @@ namespace Aspose.Tasks.Examples.CSharp.ConvertingProjectData
         public static void Run()
         {
             string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
-			//ExStart: SaveProjectAsJPEG
+            //ExStart: SaveProjectAsJPEG
+            //ExFor: ImageSaveOptions.JpegQuality
+            //ExSummary: Shows how to set a JPEG quality of output JPEG files.
             Project project = new Project(dataDir + "CreateProject2.mpp");
 
             // in order to manipulate JPEG quality one can use ImageSaveOptions.JpegQuality property.
             // The allowed value range is 0..100.
             var options = new ImageSaveOptions(SaveFileFormat.JPEG) { JpegQuality = 50 };
 
-            project.Save(dataDir + "image_out.jpeg", (SaveOptions)options);
+            project.Save(dataDir + "image_out.jpeg", options);
 			//ExEnd: SaveProjectAsJPEG
         }
     }

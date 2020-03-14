@@ -1,8 +1,4 @@
 ﻿using Aspose.Tasks.Saving;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 /*
 This project uses Automatic Package Restore feature of NuGet to resolve Aspose.Tasks for .NET API reference 
@@ -18,11 +14,11 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithCurrencies
     {
         public static void Run()
         {
-            // ExStart:SetCurrencyDigits
+            //ExStart:SetCurrencyDigits
             // Create new project and set currency digits
             Project project1 = new Project();
             project1.Set(Prj.CurrencyDigits, 2);
-            // ExEnd:SetCurrencyDigits
+            //ExEnd:SetCurrencyDigits
 
             // Save project as XML
             string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);

@@ -1,8 +1,5 @@
 ﻿using Aspose.Tasks.RiskAnalysis;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 /*
 This project uses Automatic Package Restore feature of NuGet to resolve Aspose.Tasks for .NET API reference 
@@ -18,16 +15,16 @@ namespace Aspose.Tasks.Examples.CSharp.Miscellaneous
     {
         public static void Run()
         {
-            // ExStart:PrepareAnalysisSettings
+            //ExStart:PrepareAnalysisSettings
             RiskAnalysisSettings settings = new RiskAnalysisSettings();
 
             // Set number of iterations for Monte Carlo simulation (the default value is 100).
             settings.IterationsCount = 200;
-            // ExEnd:PrepareAnalysisSettings
+            //ExEnd:PrepareAnalysisSettings
 
             string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
-            // ExStart:IdentifyAnalysisInput
+            //ExStart:IdentifyAnalysisInput
             Project project = new Project(dataDir + "Software Development Plan-1.mpp");
             Task task = project.RootTask.Children.GetById(17);
 
@@ -51,15 +48,15 @@ namespace Aspose.Tasks.Examples.CSharp.Miscellaneous
             pattern.ConfidenceLevel = ConfidenceLevel.CL75;
             
             settings.Patterns.Add(pattern);
-            // ExEnd:IdentifyAnalysisInput
+            //ExEnd:IdentifyAnalysisInput
 
-            // ExStart:AnalyzeRisks
+            //ExStart:AnalyzeRisks
             // Analyze the project risks
             RiskAnalyzer analyzer = new RiskAnalyzer(settings);
             RiskAnalysisResult analysisResult = analyzer.Analyze(project);
-            // ExEnd:AnalyzeRisks
+            //ExEnd:AnalyzeRisks
 
-            // ExStart:UseAnalysisResult
+            //ExStart:UseAnalysisResult
             // Select the desired output (here we get early finish of the root task)
             RiskItemStatistics rootEarlyFinish = analysisResult.GetRiskItems(RiskItemType.EarlyFinish).Get(project.RootTask);
 
@@ -73,7 +70,7 @@ namespace Aspose.Tasks.Examples.CSharp.Miscellaneous
 
             // Save PDF report which is rendered for Project Root Task Finish date
             analysisResult.SaveReport(dataDir + "AnalysisReport_out.pdf");
-            // ExEnd:UseAnalysisResult
+            //ExEnd:UseAnalysisResult
         }
     }
 }

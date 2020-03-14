@@ -1,8 +1,5 @@
 ﻿using Aspose.Tasks.Util;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 /*
 This project uses Automatic Package Restore feature of NuGet to resolve Aspose.Tasks for .NET API reference 
@@ -18,7 +15,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithTasks.WorkingWithTaskConstrain
     {
         public static void Run()
         {
-            // ExStart:GetConstraints
+            //ExStart:GetConstraints
             string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
             Project project1 = new Project(dataDir + "Project2.mpp");
 
@@ -31,14 +28,11 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithTasks.WorkingWithTaskConstrain
             // Parse through all the collected tasks
             foreach (Aspose.Tasks.Task tsk1 in collector.Tasks)
             {
-                if (tsk1.Get(Tsk.ConstraintDate).ToShortDateString() == "1/1/2000")
-                    Console.WriteLine("NA");
-                else
-                    Console.WriteLine(tsk1.Get(Tsk.ConstraintDate).ToShortDateString());
+                Console.WriteLine(tsk1.Get(Tsk.ConstraintDate).ToShortDateString() == "1/1/2000" ? "NA" : tsk1.Get(Tsk.ConstraintDate).ToShortDateString());
 
                 Console.WriteLine(tsk1.Get(Tsk.ConstraintType).ToString());
             }
-            // ExEnd:GetConstraints
+            //ExEnd:GetConstraints
         }
     }
 }

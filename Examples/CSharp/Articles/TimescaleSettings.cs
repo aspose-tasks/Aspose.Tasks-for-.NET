@@ -1,9 +1,5 @@
 ﻿using Aspose.Tasks.Saving;
 using Aspose.Tasks.Visualization;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace Aspose.Tasks.Examples.CSharp.Articles
 {
@@ -11,10 +7,7 @@ namespace Aspose.Tasks.Examples.CSharp.Articles
     {
         public static void Run()
         {
-            // The path to the documents directory.
-            string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
-
-            // ExStart:TimescaleSettings
+            //ExStart:TimescaleSettings
             Project project = new Project("Project2.mpp");
 
             // Save to one page image (Timescale.days by default)
@@ -30,7 +23,7 @@ namespace Aspose.Tasks.Examples.CSharp.Articles
             // Save to one page image (Timescale.Months)
             options.Timescale = Timescale.Months;
             project.Save("NewProductDevMonths.jpeg", options);
-            // ExEnd:TimescaleSettings
+            //ExEnd:TimescaleSettings
         }
     }
 }

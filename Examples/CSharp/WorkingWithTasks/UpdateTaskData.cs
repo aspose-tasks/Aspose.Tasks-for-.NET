@@ -1,8 +1,5 @@
 ﻿using Aspose.Tasks.Saving;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 /*
 This project uses Automatic Package Restore feature of NuGet to resolve Aspose.Tasks for .NET API reference 
@@ -20,7 +17,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithTasks
         {
             try
             {
-                // ExStart:UpdateTaskData
+                //ExStart:UpdateTaskData
                 // Create project instance
                 string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
                 string newProject = "UpdateTaskData.mpp";
@@ -43,7 +40,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithTasks
                 // Create 10 new sub tasks for summary task
                 for (int i = 0; i < 10; i++)
                 {
-                    Task subTask = summary.Children.Add(string.Format("Task{0}", i + 2));
+                    Task subTask = summary.Children.Add(string.Format("Task {0}", i + 2));
                     subTask.Set(Tsk.Duration, task1.Get(Tsk.Duration).Add(project.GetDuration(i + 1)));
                     subTask.Set(Tsk.DurationFormat, TimeUnitType.Day);
                     subTask.Set(Tsk.Deadline, task1.Get(Tsk.Deadline).AddDays(i + 1));
@@ -51,7 +48,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithTasks
 
                 // Save the Project
                 project.Save(dataDir + "project_UpdateTaskData_updated_out.mpp", SaveFileFormat.MPP);
-                // ExEnd:UpdateTaskData
+                //ExEnd:UpdateTaskData
             }
             catch (Exception ex)
             {

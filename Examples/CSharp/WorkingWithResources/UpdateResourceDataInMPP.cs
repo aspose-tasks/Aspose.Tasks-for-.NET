@@ -1,8 +1,5 @@
 ﻿using Aspose.Tasks.Saving;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 /*
 This project uses Automatic Package Restore feature of NuGet to resolve Aspose.Tasks for .NET API reference 
@@ -23,7 +20,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithResources
                 // The path to the documents directory.
                 string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
-                // ExStart:UpdateResourceDataInMPP
+                //ExStart:UpdateResourceDataInMPP
                 // Create project instance
                 Project project1 = new Project(dataDir + "UpdateResourceData.mpp");
 
@@ -35,7 +32,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithResources
 
                 // Save the Project
                 project1.Save(dataDir + "UpdateResourceData_out.mpp", SaveFileFormat.MPP);
-                // ExEnd:UpdateResourceDataInMPP
+                //ExEnd:UpdateResourceDataInMPP
             }
             catch (Exception ex)
             {

@@ -20,7 +20,7 @@ namespace Aspose.Tasks.Examples.CSharp.ConvertingProjectData
             // The path to the documents directory.
             string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
-            // ExStart:CustomizeTextStyle
+            //ExStart:CustomizeTextStyle
             Project project = new Project(dataDir + "CreateProject2.mpp");
             SaveOptions options = new PdfSaveOptions();
             options.PresentationFormat = PresentationFormat.ResourceSheet;
@@ -34,7 +34,7 @@ namespace Aspose.Tasks.Examples.CSharp.ConvertingProjectData
             options.TextStyles = new List<TextStyle>();
             options.TextStyles.Add(style);
             project.Save(dataDir + "CustomizeTextStyle_out.pdf", options);
-            // ExEnd:CustomizeTextStyle
+            //ExEnd:CustomizeTextStyle
         }
     }
 }

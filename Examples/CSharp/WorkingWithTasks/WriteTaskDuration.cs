@@ -1,8 +1,5 @@
 ﻿using Aspose.Tasks.Saving;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 /*
 This project uses Automatic Package Restore feature of NuGet to resolve Aspose.Tasks for .NET API reference 
@@ -18,7 +15,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithTasks
     {
         public static void Run()
         {
-            // ExStart:WriteTaskDuration
+            //ExStart:WriteTaskDuration
             // Create a new project and add a new task
             Project project = new Project();
             Task task = project.RootTask.Children.Add("Task");
@@ -41,7 +38,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithTasks
             // Decrease task duration and display if duration is updated successfully
             task.Set(Tsk.Duration, task.Get(Tsk.Duration).Subtract(0.5));
             Console.WriteLine("Duration equals 0.5 wks: {0}", task.Get(Tsk.Duration).ToString().Equals("0.5 wks"));
-            // ExEnd:WriteTaskDuration
+            //ExEnd:WriteTaskDuration
 
             // Save project as PDF
             string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);

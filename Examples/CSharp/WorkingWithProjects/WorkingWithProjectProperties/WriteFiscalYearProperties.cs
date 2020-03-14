@@ -17,7 +17,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.WorkingWithProjectPro
         {
             try
             {
-                // ExStart:WriteFiscalYearProperties
+                //ExStart:WriteFiscalYearProperties
                 // The path to the documents directory.
                 string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
@@ -28,7 +28,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.WorkingWithProjectPro
                 project.Set(Prj.FyStartDate, Month.July);
                 project.Set(Prj.FiscalYearStart, true);
                 project.Save(dataDir + "WriteFiscalYearProperties_out.mpp", SaveFileFormat.MPP);
-                // ExEnd:WriteFiscalYearProperties
+                //ExEnd:WriteFiscalYearProperties
             }
             catch (Exception ex)
             {

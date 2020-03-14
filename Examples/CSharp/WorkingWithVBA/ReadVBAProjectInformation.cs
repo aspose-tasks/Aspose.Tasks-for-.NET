@@ -17,7 +17,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithVBA
             // The path to the documents directory.
             string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
-            // ExStart:ReadVBAProjectInformation
+            //ExStart:ReadVBAProjectInformation
             // Loading project file
             Project project = new Project(dataDir + "VbaProject1.mpp");
 
@@ -27,7 +27,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithVBA
             Console.WriteLine("VbaProject.Description " + vbaProject.Description);
             Console.WriteLine("VbaProject.CompilationArguments" + vbaProject.CompilationArguments);
             Console.WriteLine("VbaProject.HelpContextId" + vbaProject.HelpContextId);
-            // ExEnd:ReadVBAProjectInformation
+            //ExEnd:ReadVBAProjectInformation
         }
     }
 }

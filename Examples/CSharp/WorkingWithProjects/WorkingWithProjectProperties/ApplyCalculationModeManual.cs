@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.WorkingWithProjectProperties
 {
@@ -9,7 +6,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.WorkingWithProjectPro
     {
         public static void Run()
         {
-            // ExStart:ApplyCalculationModeManual
+            //ExStart:ApplyCalculationModeManual
             // Create empty project and set calculation mode to Manual
             Project project = new Project();
             project.CalculationMode = CalculationMode.Manual;
@@ -35,8 +32,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.WorkingWithProjectPro
             // Task 2 Start has not been changed
             Console.WriteLine("Task1 Start Equals Task2 Start : {0} ", task1.Get(Tsk.Start).Equals(task2.Get(Tsk.Start)));
             Console.WriteLine("Task1 Finish Equals Task2 Finish : {0} ", task1.Get(Tsk.Finish).Equals(task2.Get(Tsk.Finish)));            
-            // ExEnd:ApplyCalculationModeManual
-        
+            //ExEnd:ApplyCalculationModeManual
         }
     }
 }

@@ -14,7 +14,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithFormulas
     {
         public static void Run()
         {
-            // ExStart:UsingTaskNumberFields
+            //ExStart:UsingTaskNumberFields
             Project project = CreateTestProjectWithCustomField();
 
             // Set formula
@@ -28,7 +28,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithFormulas
             Console.WriteLine(task.ExtendedAttributes[0].NumericValue);
             task.Set(Tsk.PercentComplete, 50);
             Console.WriteLine(task.ExtendedAttributes[0].NumericValue);
-            // ExEnd:UsingTaskNumberFields
+            //ExEnd:UsingTaskNumberFields
         }
 
         private static Project CreateTestProjectWithCustomField()

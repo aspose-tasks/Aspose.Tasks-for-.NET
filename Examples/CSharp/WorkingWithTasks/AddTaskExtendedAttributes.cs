@@ -17,14 +17,13 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithTasks
         {
             try
             {
-                // ExStart:AddTaskExtendedAttributes
+                //ExStart:AddTaskExtendedAttributes
                 // The path to the documents directory.
                 string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
                 // Create new project
                 Project project = new Project(dataDir + "Blank2010.mpp");
 
-                #region Adding Plain Text Attribute
                 //Create an Extended Attribute Definition of Text1 type
                 var taskExtendedAttributeText1Definition = ExtendedAttributeDefinition.CreateTaskDefinition(CustomFieldType.Text, ExtendedAttributeTask.Text1, "Task City Name");
 
@@ -44,9 +43,6 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithTasks
                 task.ExtendedAttributes.Add(taskExtendedAttributeText1);
 
                 project.Save(dataDir + "PlainTextExtendedAttribute_out.mpp", SaveFileFormat.MPP);
-                #endregion
-
-                #region Adding Text Attribute with Lookup option
 
                 Project project1 = new Project(dataDir + "Blank2010.mpp");
 
@@ -70,10 +66,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithTasks
                 task2.ExtendedAttributes.Add(taskExtendedAttributeText2);
 
                 project1.Save(dataDir + "TextExtendedAttributeWithLookup_out.mpp", SaveFileFormat.MPP);
-                #endregion
 
-                #region Adding Duration Attribute with Lookup option
-                
                 Project project2 = new Project(dataDir + "Blank2010.mpp");
 
                 //Create an Extended Attribute Definition of Duration2 type
@@ -98,10 +91,6 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithTasks
                 task3.ExtendedAttributes.Add(taskExtendedAttributeDuration2);
 
                 project2.Save(dataDir + "DurationExtendedAttributeWithLookup_out.mpp", SaveFileFormat.MPP);
-
-                #endregion
-
-                #region Adding Date-Time with Lookup option
 
                 Project project3 = new Project(dataDir + "Blank2010.mpp");
 
@@ -128,10 +117,8 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithTasks
 
                 // Save the Project               
                 project3.Save(dataDir + "FinishExtendedAttributeWithLookup_out.mpp", SaveFileFormat.MPP);                
-                #endregion
 
-
-                // ExEnd:AddTaskExtendedAttributes
+                //ExEnd:AddTaskExtendedAttributes
             }
             catch (Exception ex)
             {

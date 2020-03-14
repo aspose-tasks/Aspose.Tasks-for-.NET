@@ -1,8 +1,4 @@
 ﻿using Aspose.Tasks.Saving;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 /*
 This project uses Automatic Package Restore feature of NuGet to resolve Aspose.Tasks for .NET API reference 
@@ -21,7 +17,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithResources
             // The path to the documents directory.
             string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
-            // ExStart:SetResourceCalendar
+            //ExStart:SetResourceCalendar
             // Create project instance and add resource
             Project project = new Project();
             Resource res = project.Resources.Add("Resource1");
@@ -29,7 +25,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithResources
             // Add standard calendar and assign to resource
             Aspose.Tasks.Calendar cal = project.Calendars.Add("Resource1");
             res.Set(Rsc.Calendar, cal);
-            // ExEnd:SetResourceCalendar
+            //ExEnd:SetResourceCalendar
 
             // Save project as XML
             project.Save(dataDir + "SetResourceCalendar_out.xml", SaveFileFormat.XML);

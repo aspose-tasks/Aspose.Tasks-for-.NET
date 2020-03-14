@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace Aspose.Tasks.Examples.CSharp.Miscellaneous
 {
@@ -9,7 +6,7 @@ namespace Aspose.Tasks.Examples.CSharp.Miscellaneous
     {
         public static void Run()
         {
-            // ExStart:HandleExceptions
+            //ExStart:HandleExceptions
             Project project;
             try
             {
@@ -32,7 +29,7 @@ namespace Aspose.Tasks.Examples.CSharp.Miscellaneous
             {
                 Console.WriteLine(ex.Message);
             }
-            // ExEnd:HandleExceptions
+            //ExEnd:HandleExceptions
         }
     }
 }

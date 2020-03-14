@@ -22,7 +22,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects
                 // The path to the documents directory.
                 string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
-                // ExStart:AddImageToPageHeaderFooter
+                //ExStart:AddImageToPageHeaderFooter
                 Project project = new Project(dataDir + "AddImageToPageHeaderFooter.mpp");
 
                 project.RootTask.Children.Add("Task1");
@@ -37,7 +37,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects
                     saveOptions.WriteViewData = true;
                     project.Save(dataDir + "AddImageToPageHeaderFooter_out.mpp", saveOptions);
                 }
-                // ExEnd:AddImageToPageHeaderFooter
+                //ExEnd:AddImageToPageHeaderFooter
             }
             catch (Exception ex)
             {

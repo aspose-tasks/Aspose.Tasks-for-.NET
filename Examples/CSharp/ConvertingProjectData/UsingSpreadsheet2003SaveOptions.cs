@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using Aspose.Tasks.Saving;
+﻿using Aspose.Tasks.Saving;
 using Aspose.Tasks.Visualization;
 
 /*
@@ -19,28 +15,37 @@ namespace Aspose.Tasks.Examples.CSharp.ConvertingProjectData
     {
         public static void Run()
         {
-
             // The path to the documents directory.
             string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
             // Read the input Project file
             Project project = new Project(dataDir + "CreateProject2.mpp");
 
-            // ExStart:UsingSpreadsheet2003SaveOptions
+            //ExStart:UsingSpreadsheet2003SaveOptions
             Spreadsheet2003SaveOptions options = new Spreadsheet2003SaveOptions();
             GanttChartColumn col = new GanttChartColumn("WBS", 100, delegate(Task task) { return task.Get(Tsk.WBS); });
             options.View.Columns.Add(col);
 
-            ResourceViewColumn rscCol = new ResourceViewColumn("Cost center", 100, delegate(Resource resource)
-            { return resource.Get(Rsc.CostCenter); });
+            ResourceViewColumn rscCol = new ResourceViewColumn(
+                "Cost center",
+                100,
+                delegate(Resource resource)
+                    {
+                        return resource.Get(Rsc.CostCenter);
+                    });
             options.ResourceView.Columns.Add(rscCol);
 
-            AssignmentViewColumn assnCol = new AssignmentViewColumn("Notes", 200, delegate(ResourceAssignment assignment)
-            { return assignment.Get(Asn.Notes); });
+            AssignmentViewColumn assnCol = new AssignmentViewColumn(
+                "Notes",
+                200,
+                delegate(ResourceAssignment assignment)
+                    {
+                        return assignment.Get(Asn.Notes);
+                    });
             options.AssignmentView.Columns.Add(assnCol);
 
             project.Save(dataDir + "UsingSpreadsheet2003SaveOptions_out.xml", options);
-            // ExEnd:UsingSpreadsheet2003SaveOptions
+            //ExEnd:UsingSpreadsheet2003SaveOptions
         }
     }
 }

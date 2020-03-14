@@ -15,7 +15,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.Printing
     {
         public static void Run()
         {
-            // ExStart:PrintProjectUsingCustomPrinter
+            //ExStart:PrintProjectUsingCustomPrinter
             // The path to the documents directory.
             string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
@@ -31,7 +31,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.Printing
                     break;
                 }
             }
-            // ExEnd:PrintProjectUsingCustomPrinter
+            //ExEnd:PrintProjectUsingCustomPrinter
         }
     }
 }

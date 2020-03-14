@@ -20,22 +20,22 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.ImportingAndExporting
 
             try
             {
-                // ExStart:SupportForSQLiteDatabase
+                //ExStart:SupportForSQLiteDatabase
                 string connectionString = "Data Source=" + dataDir + "\\PPMDBSQLite.db";
-                const int projectId = 4502;
+                const int ProjectId = 4502;
 
                 // Create Primavera DB Settings using connection string and project id
-                PrimaveraDbSettings primaveraDbSettings = new PrimaveraDbSettings(connectionString, projectId);
+                PrimaveraDbSettings primaveraDbSettings = new PrimaveraDbSettings(connectionString, ProjectId);
                 primaveraDbSettings.ProviderInvariantName = "System.Data.SQLite";
 
                 // Create new project using primavera db settings
                 Project project = new Project(primaveraDbSettings);
-                // ExEnd:SupportForSQLiteDatabase
+                //ExEnd:SupportForSQLiteDatabase
 
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.Message + "\nPlease setup proper datasource (connectionString, ProviderInvariantName) etc");      
+                Console.WriteLine(ex.Message + "\nPlease setup proper data source (connectionString, ProviderInvariantName) etc");      
             }            
         }
     }

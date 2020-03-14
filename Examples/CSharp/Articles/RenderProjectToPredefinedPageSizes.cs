@@ -1,9 +1,6 @@
 ﻿using Aspose.Tasks.Saving;
 using Aspose.Tasks.Visualization;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 /*
 This project uses Automatic Package Restore feature of NuGet to resolve Aspose.Tasks for .NET API reference 
@@ -22,12 +19,10 @@ namespace Aspose.Tasks.Examples.CSharp.Articles
             // The path to the documents directory.
             string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
-            // ExStart:RenderProjectToPredefinedPageSizes
-            // Source File to Render
-            string fileName = "Project2.mpp";
+            //ExStart:RenderProjectToPredefinedPageSizes
 
             // Read the Project
-            Project project1 = new Project(dataDir + fileName);
+            Project project1 = new Project(dataDir + "Project2.mpp");
 
             // Select a Presentation format
             PresentationFormat format = PresentationFormat.GanttChart;
@@ -39,10 +34,10 @@ namespace Aspose.Tasks.Examples.CSharp.Articles
                 options.PresentationFormat = format;
                 options.FitContent = true;
                 options.PageSize = pageSize;
-                string resultFile = "result_PredefinedPageSizes_" + format.ToString() + "_" + pageSize.ToString() + "_out.pdf";
-                project1.Save(dataDir + resultFile, (SaveOptions)options);
+                string resultFile = "result_PredefinedPageSizes_" + format + "_" + pageSize + "_out.pdf";
+                project1.Save(dataDir + resultFile, options);
             }
-            // ExEnd:RenderProjectToPredefinedPageSizes
+            //ExEnd:RenderProjectToPredefinedPageSizes
         }
     }
 }

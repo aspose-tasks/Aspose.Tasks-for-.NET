@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using Aspose.Tasks.Saving;
 
 /*
@@ -23,7 +20,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithTasks
                 // The path to the documents directory.
                 string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
-                // ExStart:CreateTasks
+                //ExStart:CreateTasks
                 // Create project instance
                 Project project = new Project();
 
@@ -31,7 +28,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithTasks
                 Task task = project.RootTask.Children.Add("Summary1");
                 Task subtask = task.Children.Add("Subtask1");
                 project.Save(dataDir + "CreateTasks_out.xml", SaveFileFormat.XML);
-                // ExEnd:CreateTasks
+                //ExEnd:CreateTasks
             }
             catch (Exception ex)
             {

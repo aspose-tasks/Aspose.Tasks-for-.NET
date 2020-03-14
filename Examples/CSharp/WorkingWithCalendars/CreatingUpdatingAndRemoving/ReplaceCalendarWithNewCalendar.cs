@@ -20,7 +20,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithCalendars.CreatingUpdatingAndR
                 // The path to the documents directory.
                 string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
-                // ExStart:ReplaceCalendarWithNewCalendar
+                //ExStart:ReplaceCalendarWithNewCalendar
                 // Create project
                 Project project = new Project(dataDir + "Project5.mpp");
 
@@ -38,7 +38,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithCalendars.CreatingUpdatingAndR
                 // Add new calendar
                 Calendar newCalendar = calColl.Add("TestCalendar");
                 project.Save(dataDir + "ReplaceCalendar_out.mpp", SaveFileFormat.MPP);
-                // ExEnd:ReplaceCalendarWithNewCalendar
+                //ExEnd:ReplaceCalendarWithNewCalendar
             }
             catch (Exception ex)
             {

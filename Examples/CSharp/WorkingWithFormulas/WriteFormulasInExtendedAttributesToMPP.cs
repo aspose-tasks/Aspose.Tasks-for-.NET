@@ -20,7 +20,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithFormulas
                 var lic = new License();
                 lic.SetLicense(@"E:\Aspose\License\Aspose.Tasks.lic");
 				
-                // ExStart:WriteFormulasInExtendedAttributesToMPP
+                //ExStart:WriteFormulasInExtendedAttributesToMPP
                 // Create project instance
                 string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
                 Project project = new Project(dataDir + "Project1.mpp");
@@ -40,9 +40,9 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithFormulas
 
                 // Save project
                 project.Save(dataDir + "WriteFormulasInExtendedAttributesToMPP_out.mpp", SaveFileFormat.MPP);
-                // ExEnd:WriteFormulasInExtendedAttributesToMPP
+                //ExEnd:WriteFormulasInExtendedAttributesToMPP
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 Console.WriteLine(ex.Message + "\nThis example will only work if you apply a valid Aspose License. You can purchase full license or get 30 day temporary license from http://www.aspose.com/purchase/default.aspx.");
             }            

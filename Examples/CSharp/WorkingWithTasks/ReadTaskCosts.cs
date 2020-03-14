@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace Aspose.Tasks.Examples.CSharp.WorkingWithTasks
 {
@@ -9,7 +6,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithTasks
     {
         public static void Run()
         {
-            // ExStart:ReadTaskCosts
+            //ExStart:ReadTaskCosts
             // Create new project
             Project project = new Project();
 
@@ -25,7 +22,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithTasks
             Console.WriteLine(project.RootTask.Get(Tsk.FixedCost));
             Console.WriteLine(project.RootTask.Get(Tsk.RemainingCost));
             Console.WriteLine(project.RootTask.Get(Tsk.CostVariance));
-            // ExEnd:ReadTaskCosts
+            //ExEnd:ReadTaskCosts
         }
     }
 }

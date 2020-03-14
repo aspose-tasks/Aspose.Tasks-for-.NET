@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace Aspose.Tasks.Examples.CSharp.WorkingWithResources
 {
@@ -12,7 +9,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithResources
             // The path to the documents directory.
             string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
-            // ExStart:GetResourcePercentWorkComplete
+            //ExStart:GetResourcePercentWorkComplete
             // Create project instance
             Project project1 = new Project(dataDir + "ResourcePercentWorkComplete.mpp");
 
@@ -24,7 +21,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithResources
                     Console.WriteLine(res.Get(Rsc.PercentWorkComplete));
                 }
             }
-            // ExEnd:GetResourcePercentWorkComplete
+            //ExEnd:GetResourcePercentWorkComplete
         }
     }
 }

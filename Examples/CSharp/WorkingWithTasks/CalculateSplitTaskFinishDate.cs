@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace Aspose.Tasks.Examples.CSharp.WorkingWithTasks
 {
@@ -9,7 +6,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithTasks
     {
         public static void Run()
         {
-            // ExStart:CalculateSplitTaskFinishDate
+            //ExStart:CalculateSplitTaskFinishDate
             // Read project            
             string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
             string projectName = "SplitTaskFinishDate.mpp";
@@ -33,7 +30,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithTasks
             Console.WriteLine("Start Date: " + splitTask.Get(Tsk.Start).ToShortDateString() + "\n+ Duration 80 hours\nFinish Date: " + calendar.GetTaskFinishDateFromDuration(splitTask, new TimeSpan(80, 0, 0)));
             Console.WriteLine("Start Date: " + splitTask.Get(Tsk.Start).ToShortDateString() + "\n+ Duration 120 hours\nFinish Date: " + calendar.GetTaskFinishDateFromDuration(splitTask, new TimeSpan(120, 0, 0)));
             Console.WriteLine("Start Date: " + splitTask.Get(Tsk.Start).ToShortDateString() + "\n+ Duration 150 hours\nFinish Date: " + calendar.GetTaskFinishDateFromDuration(splitTask, new TimeSpan(150, 0, 0)));
-            // ExEnd:CalculateSplitTaskFinishDate
+            //ExEnd:CalculateSplitTaskFinishDate
         }
     }
 }

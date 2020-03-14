@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace Aspose.Tasks.Examples.CSharp.WorkingWithTaskBaselines
 {
     class GetTaskBaselineDuration
     {
-        public  static void Run()
+        public static void Run()
         {                        
-            // ExStart:GetTaskBaselineDuration
+            //ExStart:GetTaskBaselineDuration
             // Create project instance
             Project project = new Project();
 
@@ -22,7 +19,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithTaskBaselines
             Console.WriteLine("Baseline duration is 1 day: {0}", baseline.Duration.ToString().Equals("1 day"));
             Console.WriteLine("BaselineStart is same as Task Start: {0}", baseline.Start.Equals(task.Get(Tsk.Start)));
             Console.WriteLine("BaselineFinish is same as Task Finish: {0}", baseline.Finish.Equals(task.Get(Tsk.Finish)));
-            // ExEnd:GetTaskBaselineDuration            
+            //ExEnd:GetTaskBaselineDuration            
         }
     }
 }

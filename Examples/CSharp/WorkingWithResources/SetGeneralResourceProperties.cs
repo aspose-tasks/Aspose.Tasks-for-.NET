@@ -1,8 +1,4 @@
 ﻿using Aspose.Tasks.Saving;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 /*
 This project uses Automatic Package Restore feature of NuGet to resolve Aspose.Tasks for .NET API reference 
@@ -24,14 +20,14 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithResources
             // Create project instance
             Project project = new Project();
 
-            // ExStart:SetGeneralResourceProperties
+            //ExStart:SetGeneralResourceProperties
             // Add resources
             Resource rsc1 = project.Resources.Add("Rsc");
 
             // Set resource properties, Resource properties are represented by static class Rsc
             rsc1.Set(Rsc.StandardRate, 15);
             rsc1.Set(Rsc.OvertimeRate, 20);
-            // ExEnd:SetGeneralResourceProperties
+            //ExEnd:SetGeneralResourceProperties
 
             // Save project as XML
             project.Save(dataDir + "SetGeneralResourceProperties_out.xml", SaveFileFormat.XML);

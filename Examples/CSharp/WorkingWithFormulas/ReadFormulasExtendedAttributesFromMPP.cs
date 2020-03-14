@@ -14,7 +14,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithFormulas
     {
         public static void Run()
         {
-            // ExStart:ReadFormulasExtendedAttributesFromMPP
+            //ExStart:ReadFormulasExtendedAttributesFromMPP
             // The path to the documents directory.
             // Create project instance
             string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
@@ -23,7 +23,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithFormulas
             // Read extended attribute formula
             ExtendedAttributeDefinition attr = project1.ExtendedAttributes[0];
             Console.WriteLine("Attribute Formula: " + attr.Formula);
-            // ExEnd:ReadFormulasExtendedAttributesFromMPP
+            //ExEnd:ReadFormulasExtendedAttributesFromMPP
         }
     }
 }

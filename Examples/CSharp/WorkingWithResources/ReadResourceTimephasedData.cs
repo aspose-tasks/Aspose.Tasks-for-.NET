@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace Aspose.Tasks.Examples.CSharp.WorkingWithResources
 {
@@ -12,7 +9,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithResources
             // The path to the documents directory.
             string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
-            // ExStart:ReadResourceTimephasedData
+            //ExStart:ReadResourceTimephasedData
             // Create project instance
             Project project1 = new Project(dataDir + "ResourceTimephasedData.mpp");
 
@@ -34,7 +31,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithResources
                 Console.Write("Start: " + td.Start.ToShortDateString());
                 Console.Write(" Cost: " + td.Value + Environment.NewLine);
             }
-            // ExEnd:ReadResourceTimephasedData
+            //ExEnd:ReadResourceTimephasedData
         }
     }
 }

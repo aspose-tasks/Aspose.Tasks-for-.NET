@@ -21,10 +21,8 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.WorkingWithExtendedAt
                 // The path to the documents directory.
                 string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
-                // ExStart:WriteUpdatedExtendedAttributeDefinitions
+                //ExStart:WriteUpdatedExtendedAttributeDefinitions
                 Project project = new Project(dataDir + "WriteUpdatedExtendedAttributeDefinitions.mpp");
-
-                #region task attributes
 
                 // Add new text3 extended attribute with lookup and one lookup value
                 ExtendedAttributeDefinition taskTextAttributeDefinition = ExtendedAttributeDefinition.CreateLookupTaskDefinition(ExtendedAttributeTask.Text3, "New text3 attribute");
@@ -104,8 +102,6 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.WorkingWithExtendedAt
 
                 project.ExtendedAttributes.Add(numberAttributeDefinition);
 
-                #endregion
-
                 ExtendedAttributeDefinition rscStartAttributeDefinition = ExtendedAttributeDefinition.CreateLookupResourceDefinition(ExtendedAttributeResource.Start5, "New start5 attribute");
 
                 Value startVal2 = new Value();
@@ -134,13 +130,12 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.WorkingWithExtendedAt
 
                 // Save the project as MPP project file
                 project.Save(dataDir + "WriteUpdatedExtendedAttributeDefinitions_out.mpp", mppSaveOptions);
-                // ExEnd:WriteUpdatedExtendedAttributeDefinitions
+                //ExEnd:WriteUpdatedExtendedAttributeDefinitions
             }
             catch (Exception ex)
             {
                 Console.Write(ex.Message + "\nThis example will only work if you apply a valid Aspose License. You can purchase full license or get 30 day temporary license from http://www.aspose.com/purchase/default.aspx.");
             }
-
         }
     }
 }

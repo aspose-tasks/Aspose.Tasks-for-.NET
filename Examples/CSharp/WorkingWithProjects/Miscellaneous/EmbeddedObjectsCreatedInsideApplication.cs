@@ -21,7 +21,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.Miscellaneous
                 // The path to the documents directory.
                 string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
-                // ExStart:EmbeddedObjectsCreatedInsideApplication
+                //ExStart:EmbeddedObjectsCreatedInsideApplication
                 IDictionary<string, string> fileFormatExt = new Dictionary<string, string>();
                 fileFormatExt.Add("RTF", "_rtfFile_out.rtf");
                 fileFormatExt.Add("MSWordDoc", "_wordFile_out.docx");
@@ -35,10 +35,12 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.Miscellaneous
                     {
                         string path = dataDir + "EmbeddedContent_" + fileFormatExt[oleObject.FileFormat];
                         using (FileStream fileStream = new FileStream(path, FileMode.Create))
+                        {
                             fileStream.Write(oleObject.Content, 0, oleObject.Content.Length);
+                        }
                     }
                 }
-                // ExEnd:EmbeddedObjectsCreatedInsideApplication
+                //ExEnd:EmbeddedObjectsCreatedInsideApplication
             }
             catch (Exception ex)
             {

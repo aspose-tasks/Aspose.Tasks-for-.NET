@@ -1,9 +1,5 @@
 ﻿using Aspose.Tasks.Saving;
-using System;
-using System.Collections.Generic;
 using System.Drawing;
-using System.Linq;
-using System.Text;
 
 /*
 This project uses Automatic Package Restore feature of NuGet to resolve Aspose.Tasks for .NET API reference 
@@ -19,7 +15,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithTasks
     {
         public static void Run()
         {
-            // ExStart:RenderTaskUsageViewWithDetails
+            //ExStart:RenderTaskUsageViewWithDetails
             // Create project instance
             string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
             Project project1 = new Project(dataDir + "TaskUsageViewWithDetails.mpp");
@@ -40,7 +36,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithTasks
             view.RepeatDetailsHeaderOnAllRows = true;
             view.AlignDetailsData = StringAlignment.Far;
             project1.Save(dataDir + "task usage2_out.pdf", SaveFileFormat.PDF);
-            // ExEnd:RenderTaskUsageViewWithDetails
+            //ExEnd:RenderTaskUsageViewWithDetails
         }
     }
 }

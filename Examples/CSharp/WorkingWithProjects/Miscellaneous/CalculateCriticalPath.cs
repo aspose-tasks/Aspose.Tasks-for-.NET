@@ -9,7 +9,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.Miscellaneous
             // The path to the documents directory.
             string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
-            // ExStart:CalculateCriticalPath
+            //ExStart:CalculateCriticalPath
             Project project = new Project(dataDir + "CalculateCriticalPath.mpp");
             project.CalculationMode = CalculationMode.Automatic;
 
@@ -23,7 +23,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.Miscellaneous
             {
                 Console.WriteLine(task.Get(Tsk.Name));
             }
-            // ExEnd:CalculateCriticalPath
+            //ExEnd:CalculateCriticalPath
         }
     }
 }

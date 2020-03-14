@@ -1,8 +1,6 @@
 ﻿using Aspose.Tasks.Util;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 /*
 This project uses Automatic Package Restore feature of NuGet to resolve Aspose.Tasks for .NET API reference 
@@ -18,7 +16,7 @@ namespace Aspose.Tasks.Examples.CSharp.Miscellaneous
     {
         public static void Run()
         {
-            // ExStart:SortTasksByName
+            //ExStart:SortTasksByName
             string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
             Project project = new Project(dataDir + "project-sort.mpp");
             ChildTasksCollector coll = new ChildTasksCollector();
@@ -31,21 +29,27 @@ namespace Aspose.Tasks.Examples.CSharp.Miscellaneous
             {
                 Console.WriteLine(task);
             }
-            // ExEnd:SortTasksByName
+            //ExEnd:SortTasksByName
         }
          
-        // ExStart:ImplementIComparer
+        //ExStart:ImplementIComparer
         private class TaskNameComparer : IComparer<Task>
         {
             public int Compare(Task x, Task y)
             {
                 if (string.IsNullOrEmpty(x.Get(Tsk.Name)))
+                {
                     return 1;
+                }
+
                 if (string.IsNullOrEmpty(y.Get(Tsk.Name)))
+                {
                     return -1;
+                }
+                
                 return x.Get(Tsk.Name).CompareTo(y.Get(Tsk.Name));
             }
         }
-        // ExEnd:ImplementIComparer
+        //ExEnd:ImplementIComparer
     }
 }

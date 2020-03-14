@@ -6,7 +6,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.WorkingWithProjectPro
     {
         public static void Run()
         {
-            // ExStart:DefaultProperties
+            //ExStart:DefaultProperties
             // The path to the documents directory.
             string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName); 
             
@@ -16,11 +16,11 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.WorkingWithProjectPro
             // Display default properties
             Console.WriteLine("New Task Default Start: " + project.Get(Prj.DefaultStartTime).ToShortDateString());
             Console.WriteLine("New Task Default Type: " + project.Get(Prj.DefaultTaskType));
-            Console.WriteLine("Resouce Default Standard Rate: " + project.Get(Prj.DefaultStandardRate).ToString());
-            Console.WriteLine("Resource Default Overtime Rate: " + project.Get(Prj.DefaultOvertimeRate).ToString());
-            Console.WriteLine("Default Task EV Method: " + project.Get(Prj.DefaultTaskEVMethod).ToString());
-            Console.WriteLine("Default Cost Accrual: " + project.Get(Prj.DefaultFixedCostAccrual).ToString());
-            // ExEnd:DefaultProperties
+            Console.WriteLine("Resource Default Standard Rate: " + project.Get(Prj.DefaultStandardRate));
+            Console.WriteLine("Resource Default Overtime Rate: " + project.Get(Prj.DefaultOvertimeRate));
+            Console.WriteLine("Default Task EV Method: " + project.Get(Prj.DefaultTaskEVMethod));
+            Console.WriteLine("Default Cost Accrual: " + project.Get(Prj.DefaultFixedCostAccrual));
+            //ExEnd:DefaultProperties
         }
     }
 }

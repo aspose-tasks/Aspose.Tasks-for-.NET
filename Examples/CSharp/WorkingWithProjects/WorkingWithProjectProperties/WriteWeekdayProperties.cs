@@ -6,12 +6,12 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.WorkingWithProjectPro
     {
         public static void Run()
         {
-            // ExStart:WriteWeekdayProperties
+            //ExStart:WriteWeekdayProperties
             // The path to the documents directory.
             string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
             // Create a project instance
-            Project project = new Project(dataDir+ "WriteWeekdayProperties.mpp");
+            Project project = new Project(dataDir + "WriteWeekdayProperties.mpp");
 
             // Set week days properties
             project.Set(Prj.WeekStartDay, DayType.Monday);
@@ -19,7 +19,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.WorkingWithProjectPro
             project.Set(Prj.MinutesPerDay, 540);
             project.Set(Prj.MinutesPerWeek, 3240);
             project.Save(dataDir + "WriteWeekdayProperties_out.xml", SaveFileFormat.XML);
-            // ExEnd:WriteWeekdayProperties            
+            //ExEnd:WriteWeekdayProperties            
         }
     }
 }

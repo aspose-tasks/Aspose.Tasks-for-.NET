@@ -1,9 +1,6 @@
 ﻿using Aspose.Tasks.Saving;
 using Aspose.Tasks.Visualization;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 /*
 This project uses Automatic Package Restore feature of NuGet to resolve Aspose.Tasks for .NET API reference 
@@ -19,7 +16,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithTasks.WorkingWithTaskConstrain
     {
         public static void Run()
         {
-            // ExStart:SetConstraintStartNoEarlierThan
+            //ExStart:SetConstraintStartNoEarlierThan
             // The path to the documents directory.
             string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName); 
 
@@ -36,7 +33,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithTasks.WorkingWithTaskConstrain
             o.StartDate = project.Get(Prj.StartDate);
             o.Timescale = Timescale.ThirdsOfMonths;
             project.Save(dataDir + "project_StartNoEarlierThan_out.pdf", o);
-            // ExEnd:SetConstraintStartNoEarlierThan
+            //ExEnd:SetConstraintStartNoEarlierThan
         }
     }
 }

@@ -1,9 +1,5 @@
 ﻿using Aspose.Tasks.Saving;
 using Aspose.Tasks.Visualization;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 /*
 This project uses Automatic Package Restore feature of NuGet to resolve Aspose.Tasks for .NET API reference 
@@ -22,16 +18,16 @@ namespace Aspose.Tasks.Examples.CSharp.Articles
             // The path to the documents directory.
             string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
-            // ExStart:RenderDifferentPresentationFormatsToXAML
+            //ExStart:RenderDifferentPresentationFormatsToXAML
+            //ExFor: SaveOptions.PresentationFormat
+            //ExSummary: Shows how to set the presentation format to be rendered to XAML output file.
             Project project = new Project(dataDir + "Project2.mpp");
 
-            PresentationFormat presentationFormat = PresentationFormat.GanttChart;
-            string resultFile = "RenderDifferentPresentationFormatsToXAML_" + presentationFormat + "_out.xaml";
             SaveOptions options = new XamlOptions();
-            options.PresentationFormat = presentationFormat;
+            options.PresentationFormat = PresentationFormat.GanttChart;
 
-            project.Save(dataDir + resultFile, options);
-            // ExEnd:RenderDifferentPresentationFormatsToXAML
+            project.Save(dataDir + "RenderDifferentPresentationFormatsToXAML_out.xaml", options);
+            //ExEnd:RenderDifferentPresentationFormatsToXAML
         }
     }
 }

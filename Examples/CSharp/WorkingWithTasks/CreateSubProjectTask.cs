@@ -1,8 +1,5 @@
 ﻿using Aspose.Tasks.Saving;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 /*
 This project uses Automatic Package Restore feature of NuGet to resolve Aspose.Tasks for .NET API reference 
@@ -20,7 +17,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithTasks
         {
             try
             {
-                // ExStart:CreateSubProjectTask
+                //ExStart:CreateSubProjectTask
                 // Create project instance
                 string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
                 Project project = new Project(dataDir + "SubProjectTask.mpp");
@@ -33,7 +30,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithTasks
 
                 // Save project
                 project.Save(dataDir + "SubProjectTask_out.mpp", SaveFileFormat.MPP);
-                // ExEnd:CreateSubProjectTask
+                //ExEnd:CreateSubProjectTask
             }
             catch (Exception ex)
             {

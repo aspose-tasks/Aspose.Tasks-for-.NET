@@ -1,10 +1,7 @@
 ﻿using Aspose.Tasks.Saving;
 using Aspose.Tasks.Visualization;
 using System;
-using System.Collections.Generic;
 using System.Drawing;
-using System.Linq;
-using System.Text;
 
 /*
 This project uses Automatic Package Restore feature of NuGet to resolve Aspose.Tasks for .NET API reference 
@@ -20,32 +17,31 @@ namespace Aspose.Tasks.Examples.CSharp.Articles
     {
         public static void Run()
         {
-            ImplementCustomBarSytle();
+            // The path to the documents directory.
+            string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
+            ImplementCustomBarStyle(dataDir);
         }
 
-        // ExStart:ImplementCustomBarStyleWriting
-        static void ImplementCustomBarSytle()
+        //ExStart:ImplementCustomBarStyleWriting
+        //ExFor: GanttChartView.CustomBarStyles
+        //ExSummary: Shows how to set custom bar styles of Gantt Chart project view. 
+        private static void ImplementCustomBarStyle(string dataDir)
         {
             try
             {
-                // The path to the documents directory.
-                string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
-
                 Project project = new Project(dataDir + "Blank2010.mpp");
                 project.RootTask.Children.Add("Task");
 
-                GanttChartView view = project.DefaultView as GanttChartView;
+                GanttChartView view = (GanttChartView)project.DefaultView;
                 GanttBarStyle custom = GetCustomBarStyle();
 
                 // Add the custom bar style to the custom bar collection of the project view
                 view.CustomBarStyles.Add(custom);
 
-                string file = "ImplementCustomBarStyleWriting_out.mpp";
-
                 MPPSaveOptions options = new MPPSaveOptions();
                 options.WriteViewData = true;
 
-                project.Save(dataDir + file, options);
+                project.Save(dataDir + "ImplementCustomBarStyleWriting_out.mpp", options);
             }
             catch (NotSupportedException ex)
             {
@@ -75,6 +71,6 @@ namespace Aspose.Tasks.Examples.CSharp.Articles
 
             return style;
         }
-        // ExEnd:ImplementCustomBarStyleWriting
+        //ExEnd:ImplementCustomBarStyleWriting
     }
 }

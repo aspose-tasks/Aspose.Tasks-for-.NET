@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using Aspose.Tasks.Util;
 
 /*
@@ -18,7 +15,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithTasks
     {
         public static void Run()
         {
-            // ExStart:ReadTaskProperties
+            //ExStart:ReadTaskProperties
             // The path to the documents directory.
             string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
@@ -40,7 +37,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithTasks
                 Console.WriteLine("Task Start: {0}", tsk.Get(Tsk.Start));
                 Console.WriteLine("Task Finish: {0}", tsk.Get(Tsk.Finish));
             }
-            // ExEnd:ReadTaskProperties
+            //ExEnd:ReadTaskProperties
         }
     }
 }

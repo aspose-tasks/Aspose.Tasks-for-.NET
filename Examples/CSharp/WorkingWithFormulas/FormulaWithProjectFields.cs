@@ -12,7 +12,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithFormulas
 {
     public class FormulaWithProjectFields
     {
-        // ExStart:FormulaWithProjectFields
+        //ExStart:FormulaWithProjectFields
         public static void Run()
         {            
             Project project = CreateTestProjectWithCustomFieldWithoutResource();
@@ -25,7 +25,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithFormulas
             Console.WriteLine("Check Total tasks: 1 Total resources: 0 - {0}", task.ExtendedAttributes[0].TextValue.Equals("Total tasks: 1 Total resources: 0"));            
         }
 
-        static Project CreateTestProjectWithCustomFieldWithoutResource()
+        private static Project CreateTestProjectWithCustomFieldWithoutResource()
         {
             Project project = new Project();
             project.Set(Prj.StartDate, new DateTime(2015, 3, 6, 8, 0, 0));
@@ -37,6 +37,6 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithFormulas
             task.ExtendedAttributes.Add(a);
             return project;
         }
-        // ExEnd:FormulaWithProjectFields
+        //ExEnd:FormulaWithProjectFields
     }
 }

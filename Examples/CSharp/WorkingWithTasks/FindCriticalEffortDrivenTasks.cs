@@ -1,9 +1,6 @@
 ﻿using Aspose.Tasks.Util;
 using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
 
 /*
 This project uses Automatic Package Restore feature of NuGet to resolve Aspose.Tasks for .NET API reference 
@@ -19,7 +16,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithTasks
     {
         public static void Run()
         {
-            // ExStart:FindCriticalEffortDrivenTasks
+            //ExStart:FindCriticalEffortDrivenTasks
             // Read project from file stream
             string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
             FileStream fs = new FileStream(dataDir + "CriticalEffortDrivenTasks.mpp", FileMode.Open);
@@ -36,11 +33,11 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithTasks
             foreach (Task tsk1 in collector.Tasks)
             {
                 string strED = tsk1.Get(Tsk.IsEffortDriven) ? "EffortDriven" : "Non-EffortDriven";
-                string strCrit = tsk1.Get(Tsk.IsCritical) ? "Critical" : "Non-Critical";
+                string nonCritical = tsk1.Get(Tsk.IsCritical) ? "Critical" : "Non-Critical";
                 Console.WriteLine(tsk1.Get(Tsk.Name) + " : " + strED);
-                Console.WriteLine(tsk1.Get(Tsk.Name) + " : " + strCrit);
+                Console.WriteLine(tsk1.Get(Tsk.Name) + " : " + nonCritical);
             }
-            // ExEnd:FindCriticalEffortDrivenTasks
+            //ExEnd:FindCriticalEffortDrivenTasks
         }
     }
 }

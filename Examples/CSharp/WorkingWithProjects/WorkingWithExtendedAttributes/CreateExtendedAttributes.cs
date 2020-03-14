@@ -20,7 +20,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.WorkingWithExtendedAt
                 // The path to the documents directory.
                 string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
-                // ExStart:CreateExtendedAttributes  
+                //ExStart:CreateExtendedAttributes  
                 Project project1 = new Project(dataDir + "Blank2010.mpp");
 
                 ExtendedAttributeDefinition myTextAttributeDefinition = project1.ExtendedAttributes.GetById((int)ExtendedAttributeTask.Text1);
@@ -42,7 +42,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.WorkingWithExtendedAt
                 tsk.ExtendedAttributes.Add(text1TaskAttribute);
 
                 project1.Save(dataDir + "CreateExtendedAttributes_out.mpp", SaveFileFormat.MPP);
-                // ExEnd:CreateExtendedAttributes
+                //ExEnd:CreateExtendedAttributes
             }
             catch (Exception ex)
             {

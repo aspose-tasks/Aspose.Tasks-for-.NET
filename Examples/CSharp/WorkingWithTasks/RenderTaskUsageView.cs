@@ -1,9 +1,5 @@
 ﻿using Aspose.Tasks.Saving;
 using Aspose.Tasks.Visualization;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 /*
 This project uses Automatic Package Restore feature of NuGet to resolve Aspose.Tasks for .NET API reference 
@@ -19,7 +15,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithTasks
     {
         public static void Run()
         {
-            // ExStart:RenderTaskUsageView
+            //ExStart:RenderTaskUsageView
             // Create project instance
             string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
             Project project1 = new Project(dataDir + "TaskUsageView.mpp");
@@ -48,7 +44,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithTasks
             // Save the project
             outputProject = "project_TaskUsageView_result_months_out.pdf";
             project1.Save(dataDir + outputProject, options);
-            // ExEnd:RenderTaskUsageView
+            //ExEnd:RenderTaskUsageView
         }
     }
 }

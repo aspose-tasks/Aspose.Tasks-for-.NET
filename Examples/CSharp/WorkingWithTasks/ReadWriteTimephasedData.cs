@@ -1,7 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace Aspose.Tasks.Examples.CSharp.WorkingWithTasks
 {
@@ -9,7 +7,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithTasks
     {
         public static void Run()
         {
-            // ExStart:ReadWriteTimephasedData
+            //ExStart:ReadWriteTimephasedData
             // Create project instance
             string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
             Project project1 = new Project(dataDir + "ReadWriteTimephasedData.mpp");
@@ -41,11 +39,11 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithTasks
             // Read timephased data
             List<TimephasedData> td = assn.GetTimephasedData(assn.Get(Asn.Start), assn.Get(Asn.Finish), TimephasedDataType.AssignmentRemainingWork).ToList();
             Console.WriteLine(td.Count);
-            foreach(TimephasedData timePhasedValue in td)
+            foreach (TimephasedData timePhasedValue in td)
             {                    
                 Console.WriteLine(timePhasedValue.Value);
             }
-            // ExEnd:ReadWriteTimephasedData
+            //ExEnd:ReadWriteTimephasedData
         }
     }
 }

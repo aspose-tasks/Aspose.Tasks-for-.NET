@@ -11,11 +11,11 @@ please feel free to contact us using https://forum.aspose.com/c/tasks
 
 namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.WorkingWithProjectProperties
 {
-    public class  WriteDefaultProperties
+    public class WriteDefaultProperties
     {
         public static void Run()
         {
-            // ExStart:WriteDefaultProperties
+            //ExStart:WriteDefaultProperties
             // The path to the documents directory.
             string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName); 
 
@@ -32,7 +32,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.WorkingWithProjectPro
 
             // Save the project to XML format
             project.Save(dataDir + "WriteDefaultProperties_out.xml", SaveFileFormat.XML);
-            // ExEnd:WriteDefaultProperties
+            //ExEnd:WriteDefaultProperties
         }
     }
 }

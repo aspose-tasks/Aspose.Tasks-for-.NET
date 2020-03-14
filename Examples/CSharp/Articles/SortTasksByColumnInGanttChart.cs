@@ -1,9 +1,6 @@
 ﻿using Aspose.Tasks.Saving;
 using Aspose.Tasks.Visualization;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 /*
 This project uses Automatic Package Restore feature of NuGet to resolve Aspose.Tasks for .NET API reference 
@@ -15,7 +12,7 @@ please feel free to contact us using https://forum.aspose.com/c/tasks
 
 namespace Aspose.Tasks.Examples.CSharp.Articles
 {
-    // ExStart:SortTasksByColumnInGanttChart
+    //ExStart:SortTasksByColumnInGanttChart
     class SortTasksByColumnInGanttChart
     {
         public static void Run()
@@ -34,7 +31,7 @@ namespace Aspose.Tasks.Examples.CSharp.Articles
             project.Save(dataDir + "SortedByDurations_out.pdf", options);
         }
 
-        public class TasksNameComparer : IComparer<Task>
+        private class TasksNameComparer : IComparer<Task>
         {
             public int Compare(Task x, Task y)
             {                
@@ -42,7 +39,7 @@ namespace Aspose.Tasks.Examples.CSharp.Articles
             }
         }
 
-        public class TasksDurationComparer : IComparer<Task>
+        private class TasksDurationComparer : IComparer<Task>
         {
             public int Compare(Task x, Task y)
             {
@@ -52,5 +49,5 @@ namespace Aspose.Tasks.Examples.CSharp.Articles
             }
         }
     }
-    // ExEnd:SortTasksByColumnInGanttChart
+    //ExEnd:SortTasksByColumnInGanttChart
 }

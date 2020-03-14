@@ -1,8 +1,4 @@
 ﻿using Aspose.Tasks.Saving;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 /*
 This project uses Automatic Package Restore feature of NuGet to resolve Aspose.Tasks for .NET API reference 
@@ -21,7 +17,9 @@ namespace Aspose.Tasks.Examples.CSharp.Articles
             // The path to the documents directory.
             string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
-            // ExStart:ChangeGanttBarsColorGradient
+            //ExStart:ChangeGanttBarsColorGradient
+            //ExFor: SaveOptions.UseGradientBrush
+            //ExSummary: shows how to set a value indicating whether gradient brush should be used when rendering Gantt Chart.
             Project project = new Project(dataDir + "Project2.mpp");
             
             SaveOptions options = new XamlOptions();
@@ -30,7 +28,7 @@ namespace Aspose.Tasks.Examples.CSharp.Articles
 
             options.UseGradientBrush = true;
             project.Save(dataDir + "ChangeGanttBarsColorGradient_Gradient_out.xaml", options);
-            // ExEnd:ChangeGanttBarsColorGradient
+            //ExEnd:ChangeGanttBarsColorGradient
         }
     }
 }

@@ -1,9 +1,6 @@
 ﻿using Aspose.Tasks.Saving;
 using Aspose.Tasks.Util;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 /*
 This project uses Automatic Package Restore feature of NuGet to resolve Aspose.Tasks for .NET API reference 
@@ -23,7 +20,7 @@ namespace Aspose.Tasks.Examples.CSharp.KnowledgeBase
             {
                 string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
-                // ExStart:CreateResourcesAndLinkToTasks
+                //ExStart:CreateResourcesAndLinkToTasks
                 Project project1 = new Project(dataDir + "SampleProject.mpp");
 
                 // Declare ChildTasksCollector class object
@@ -35,18 +32,18 @@ namespace Aspose.Tasks.Examples.CSharp.KnowledgeBase
                 // Define Resources
                 for (int i = 0; i <= 4; i++)
                 {
-                    string devloper = "Developer0" + i;
+                    string developer0 = "Developer0" + i;
 
                     // Add resource to project
-                    Resource newResource = project1.Resources.Add(devloper);
+                    Resource newResource = project1.Resources.Add(developer0);
                     newResource.Set(Rsc.Type, ResourceType.Work);
 
                     // Define assignment
-                    ResourceAssignment newResourceAssignment = project1.ResourceAssignments.Add((Task)collector.Tasks[i], newResource);                    
+                    ResourceAssignment newResourceAssignment = project1.ResourceAssignments.Add(collector.Tasks[i], newResource);                    
                 }
 
                 project1.Save(dataDir + "CreateResourcesAndLinkToTasks_out.mpp", SaveFileFormat.MPP);
-                // ExEnd:CreateResourcesAndLinkToTasks
+                //ExEnd:CreateResourcesAndLinkToTasks
             }
             catch (NotSupportedException ex)
             {

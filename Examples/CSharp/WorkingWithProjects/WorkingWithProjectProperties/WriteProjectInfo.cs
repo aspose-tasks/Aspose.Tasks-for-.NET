@@ -15,7 +15,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.WorkingWithProjectPro
     {
         public static void Run()
         {         
-            // ExStart:WriteProjectInfo
+            //ExStart:WriteProjectInfo
             try
             {
                 // The path to the documents directory.
@@ -36,7 +36,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.WorkingWithProjectPro
             {
                 Console.WriteLine(ex.Message + "\nThis example will only work if you apply a valid Aspose License. You can purchase full license or get 30 day temporary license from http://www.aspose.com/purchase/default.aspx.");
             }             
-            // ExEnd:WriteProjectInfo
+            //ExEnd:WriteProjectInfo
         }
     }
 }

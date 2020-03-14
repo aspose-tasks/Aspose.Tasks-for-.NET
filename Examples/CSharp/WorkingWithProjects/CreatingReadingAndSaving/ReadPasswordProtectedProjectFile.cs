@@ -1,6 +1,3 @@
-using System;
-using Aspose.Tasks.Saving;
-
 /*
 This project uses Automatic Package Restore feature of NuGet to resolve Aspose.Tasks for .NET API reference 
 when the project is build. Please check https:// Docs.nuget.org/consume/nuget-faq for more information. 
@@ -15,12 +12,12 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.CreatingReadingAndSav
     {
         public static void Run()
         {
-            // ExStart:ReadingPasswordProtectedProjectFile
+            //ExStart:ReadingPasswordProtectedProjectFile
             // The path to the documents directory.
             string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
             Project project = new Project(dataDir + "PasswordProtectedProject.mpp", "password");           
-            // ExEnd:ReadingPasswordProtectedProjectFile
+            //ExEnd:ReadingPasswordProtectedProjectFile
         }
     }
 }

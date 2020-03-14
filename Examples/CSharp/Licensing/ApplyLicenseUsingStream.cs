@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Text;
+﻿using System.IO;
 
 namespace Aspose.Tasks.Examples.CSharp.Licensing
 {
@@ -10,11 +6,11 @@ namespace Aspose.Tasks.Examples.CSharp.Licensing
     {
         public static void Run()
         {
-            // ExStart:ApplyLicenseUsingStream
+            //ExStart:ApplyLicenseUsingStream
             Aspose.Tasks.License license = new Aspose.Tasks.License();
             FileStream myStream = new FileStream("Aspose.Tasks.lic", FileMode.Open);
             license.SetLicense(myStream);
-            // ExEnd:ApplyLicenseUsingStream
+            //ExEnd:ApplyLicenseUsingStream
         }
     }
 }

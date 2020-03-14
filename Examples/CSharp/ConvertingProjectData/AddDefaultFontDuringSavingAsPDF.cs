@@ -1,9 +1,5 @@
 ﻿using Aspose.Tasks.Saving;
 using Aspose.Tasks.Visualization;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 /*
 This project uses Automatic Package Restore feature of NuGet to resolve Aspose.Tasks for .NET API reference 
 when the project is build. Please check https:// Docs.nuget.org/consume/nuget-faq for more information. 
@@ -21,6 +17,9 @@ namespace Aspose.Tasks.Examples.CSharp.ConvertingProjectData
             string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
             //ExStart: AddDefaultFontDuringSavingAsPDF
+            //ExFor: PdfSaveOptions.DefaultFontName
+            //ExFor: PdfSaveOptions.UseProjectDefaultFont
+            //ExSummary: Shows how to set custom font that will be used for print of output pdf.
             Project project = new Project(dataDir + "CreateProject2.mpp");
 
             var options = new PdfSaveOptions
@@ -30,7 +29,7 @@ namespace Aspose.Tasks.Examples.CSharp.ConvertingProjectData
                 UseProjectDefaultFont = false,
                 DefaultFontName = "Segoe UI Black"
             };
-            project.Save(dataDir + "CreateProject2_out.pdf", (SaveOptions)options);
+            project.Save(dataDir + "CreateProject2_out.pdf", options);
             //ExEnd: AddDefaultFontDuringSavingAsPDF
         }
     }

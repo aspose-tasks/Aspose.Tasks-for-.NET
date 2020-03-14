@@ -18,7 +18,7 @@ namespace Aspose.Tasks.Examples.CSharp.ConvertingProjectData
             // The path to the documents directory.
             string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
-            // ExStart:FitContentsToCellSize
+            //ExStart:FitContentsToCellSize
             Project project = new Project(dataDir + "CreateProject2.mpp");
             SaveOptions saveOptions = new PdfSaveOptions();
 
@@ -27,7 +27,7 @@ namespace Aspose.Tasks.Examples.CSharp.ConvertingProjectData
             saveOptions.Timescale = Timescale.Months;
             saveOptions.PresentationFormat = PresentationFormat.TaskUsage;
             project.Save(dataDir + "FitContentsToCellSize_out.pdf", saveOptions);
-            // ExEnd:FitContentsToCellSize
+            //ExEnd:FitContentsToCellSize
         }
     }
 }

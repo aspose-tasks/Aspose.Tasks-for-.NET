@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using Aspose.Tasks.Saving;
+﻿using Aspose.Tasks.Saving;
 
 /*
 This project uses Automatic Package Restore feature of NuGet to resolve Aspose.Tasks for .NET API reference 
@@ -23,12 +19,12 @@ namespace Aspose.Tasks.Examples.CSharp.ConvertingProjectData
                         
             Project project = new Project(dataDir + "CreateProject2.mpp");
             
-            // ExStart:HideLegendsDuringSave
+            //ExStart:HideLegendsDuringSave
             SaveOptions saveOptions = new PdfSaveOptions();
 
             // Set the LegendOnEachPage property to false to hide legends
             saveOptions.LegendOnEachPage = false;
-            // ExEnd:HideLegendsDuringSave
+            //ExEnd:HideLegendsDuringSave
             
             project.Save(dataDir + "HideLegendsDuringSave_out.pdf", saveOptions);                    
         }

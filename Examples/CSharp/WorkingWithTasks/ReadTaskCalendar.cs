@@ -1,7 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+
 using Aspose.Tasks.Util;
 
 /*
@@ -18,7 +16,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithTasks
     {
         public static void Run()
         {
-            // ExStart:ReadTaskCalendar
+            //ExStart:ReadTaskCalendar
             // The path to the documents directory.
             string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
@@ -37,7 +35,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithTasks
                 Calendar tskCal = tsk.Get(Tsk.Calendar);
                 Console.WriteLine("Task calendar name: {0}", tskCal == null ? "None" : tskCal.Name);
             }
-            // ExEnd:ReadTaskCalendar
+            //ExEnd:ReadTaskCalendar
         }
     }
 }

@@ -1,8 +1,5 @@
 ﻿using Aspose.Tasks.Util;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 /*
 This project uses Automatic Package Restore feature of NuGet to resolve Aspose.Tasks for .NET API reference 
@@ -18,7 +15,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithTasks
     {
         public static void Run()
         {
-            // ExStart:ReadParentChildTasks
+            //ExStart:ReadParentChildTasks
             // Create project instance
             string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
             Project project1 = new Project(dataDir + "ParentChildTasks.mpp");
@@ -34,7 +31,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithTasks
             {
                 Console.WriteLine(tsk1.Get(Tsk.Name));
             }
-            // ExEnd:ReadParentChildTasks
+            //ExEnd:ReadParentChildTasks
         }
     }
 }

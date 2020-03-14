@@ -8,6 +8,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithResourceAssignments
         {
             // The path to the documents directory.
             string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
+            
             //ExStart: AddExtendedAttributesToRAWithLookUp
             // Create new project
             Project project = new Project(dataDir + "Blank2010.mpp");
@@ -25,11 +26,11 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithResourceAssignments
                 "My lookup resource cost");
             project.ExtendedAttributes.Add(resCostAttr);
 
-            var value1 = new Value { NumberValue = 1500, Description = "Val 1", Id = 1, Val = "1500" };
+            var value1 = new Value { NumericValue = 1500, Description = "Val 1", Id = 1, Val = "1500" };
 
             resCostAttr.AddLookupValue(value1);
 
-            resCostAttr.AddLookupValue(new Value { NumberValue = 2500, Description = "Val 2", Id = 2 });
+            resCostAttr.AddLookupValue(new Value { NumericValue = 2500, Description = "Val 2", Id = 2 });
 
             // This value can be seen in "Resource usage" view of MS Project.
             var attributeValue = resCostAttr.CreateExtendedAttribute(value1);
@@ -42,10 +43,10 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithResourceAssignments
 
             project.ExtendedAttributes.Add(taskCostAttr);
 
-            var taskLookupValue1 = new Value { NumberValue = 18, Description = "Task val 1", Id = 3, Val = "18" };
+            var taskLookupValue1 = new Value { NumericValue = 18, Description = "Task val 1", Id = 3, Val = "18" };
             taskCostAttr.AddLookupValue(taskLookupValue1);
 
-            resCostAttr.AddLookupValue(new Value { NumberValue = 30, Description = "Task val 2", Id = 4 });
+            resCostAttr.AddLookupValue(new Value { NumericValue = 30, Description = "Task val 2", Id = 4 });
 
             // This value can be seen in "Task usage" view of MS Project.
             assignment.ExtendedAttributes.Add(taskCostAttr.CreateExtendedAttribute(taskLookupValue1));

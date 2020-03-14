@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using Aspose.Tasks.Saving;
-
-/*
+﻿/*
 This project uses Automatic Package Restore feature of NuGet to resolve Aspose.Tasks for .NET API reference 
 when the project is build. Please check https:// Docs.nuget.org/consume/nuget-faq for more information. 
 If you do not wish to use NuGet, you can manually download Aspose.Tasks for .NET API from https://www.nuget.org/packages/Aspose.Tasks/, 
@@ -18,7 +12,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithTasks
     {
         public static void Run()
         {
-            // ExStart:WriteTaskCalendar
+            //ExStart:WriteTaskCalendar
             // Create project instance
             Project project = new Project();
 
@@ -28,7 +22,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithTasks
             // Create calendar and assign to task
             Aspose.Tasks.Calendar cal = project.Calendars.Add("TaskCal1");
             tsk1.Set(Tsk.Calendar, cal);
-            // ExEnd:WriteTaskCalendar      
+            //ExEnd:WriteTaskCalendar      
         }
     }
 }

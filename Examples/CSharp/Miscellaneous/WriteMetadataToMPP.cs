@@ -17,7 +17,7 @@ namespace Aspose.Tasks.Examples.CSharp.Miscellaneous
         {
             try
             {
-                // ExStart:WriteMetadataToMPP
+                //ExStart:WriteMetadataToMPP
                 string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
                 Project project = new Project(dataDir + "Project1.mpp");
 
@@ -90,7 +90,7 @@ namespace Aspose.Tasks.Examples.CSharp.Miscellaneous
 
                 // Save project as MPP
                 project.Save(dataDir + "WriteMetaData_out.mpp", SaveFileFormat.MPP);
-                // ExEnd:WriteMetadataToMPP
+                //ExEnd:WriteMetadataToMPP
             }
             catch (Exception ex)
             {

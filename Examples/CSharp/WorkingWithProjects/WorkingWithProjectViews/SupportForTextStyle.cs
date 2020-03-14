@@ -7,7 +7,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.WorkingWithProjectVie
     {
         public static void Run()
         {
-            // ExStart:SupportForTextStyle
+            //ExStart:SupportForTextStyle
             // The path to the documents directory.
             string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
             Project project = new Project(dataDir + "Project5.mpp"); // Create a new project task
@@ -19,7 +19,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.WorkingWithProjectVie
                 ganttChartView.TableTextStyles.Add(new TableTextStyle(1) { Color = Color.Gray, Field = Field.TaskDurationText });
                 ganttChartView.TableTextStyles.Add(new TableTextStyle(2) { Color = Color.Blue, FontStyle = FontStyle.Bold | FontStyle.Italic | FontStyle.Underline });
             }
-            // ExEnd:SupportForTextStyle
+            //ExEnd:SupportForTextStyle
         }
     }
 }

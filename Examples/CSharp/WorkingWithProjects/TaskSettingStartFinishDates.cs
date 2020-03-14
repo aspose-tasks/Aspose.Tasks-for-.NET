@@ -11,7 +11,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects
         /// </summary>
         public static void Run()
         {
-            // ExStart:TaskSettingStartFinishDates
+            //ExStart:TaskSettingStartFinishDates
             Project project = new Project();
             Console.WriteLine(project.Get(Prj.StartDate));
             Console.WriteLine(project.CalculationMode.ToString());
@@ -36,7 +36,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects
             Console.WriteLine(task.Get(Tsk.Start));
             Console.WriteLine(task.Get(Tsk.Finish));
 
-            // ExEnd:TaskSettingStartFinishDates
+            //ExEnd:TaskSettingStartFinishDates
         }
     }
 }

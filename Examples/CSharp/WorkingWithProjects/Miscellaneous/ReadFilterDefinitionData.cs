@@ -18,7 +18,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.Miscellaneous
             // The path to the documents directory.
             string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
-            // ExStart:ReadFilterDefinitionData
+            //ExStart:ReadFilterDefinitionData
             // Instantiate project and access task filters
             Project project = new Project(dataDir + "ReadFilterDefinitionData.mpp");
             List<Filter> taskFilters = project.TaskFilters.ToList();
@@ -34,7 +34,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.Miscellaneous
             Console.WriteLine("Resource Filter Item Type: Item.ResourceType: " + rscFilters[0].FilterType);
             Console.WriteLine("Resource filter ShowInMenu" + rscFilters[0].ShowInMenu);
             Console.WriteLine("Resource filter ShowRelatedSummaryRows: " + rscFilters[0].ShowRelatedSummaryRows);
-            // ExEnd:ReadFilterDefinitionData
+            //ExEnd:ReadFilterDefinitionData
         }
     }
 }

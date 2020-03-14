@@ -7,7 +7,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects
     {
         public static void Run()
         {
-            // ExStart:GetNumberOfPagesForViews
+            //ExStart:GetNumberOfPagesForViews
             // The path to the documents directory.
             string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
@@ -15,10 +15,10 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects
             Project project = new Project(dataDir + "GetNumberOfPagesForViews.mpp");
 
             // Get number of pages,  Months and  ThirdsOfMonths
-            Console.WriteLine(string.Format("Number of Pages = '{0}'", project.GetPageCount(PresentationFormat.ResourceUsage, Timescale.Days)));
-            Console.WriteLine(string.Format("Number of Pages = '{0}'", project.GetPageCount(PresentationFormat.ResourceUsage, Timescale.Months)));
-            Console.WriteLine(string.Format("Number of Pages = '{0}'", project.GetPageCount(PresentationFormat.ResourceUsage, Timescale.ThirdsOfMonths)));
-            // ExEnd:GetNumberOfPagesForViews
+            Console.WriteLine("Number of Pages = '{0}'", project.GetPageCount(PresentationFormat.ResourceUsage, Timescale.Days));
+            Console.WriteLine("Number of Pages = '{0}'", project.GetPageCount(PresentationFormat.ResourceUsage, Timescale.Months));
+            Console.WriteLine($"Number of Pages = '{project.GetPageCount(PresentationFormat.ResourceUsage, Timescale.ThirdsOfMonths)}'");
+            //ExEnd:GetNumberOfPagesForViews
         }
     }
 }

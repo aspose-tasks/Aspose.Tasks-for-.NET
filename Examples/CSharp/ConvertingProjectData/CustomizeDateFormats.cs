@@ -18,7 +18,7 @@ namespace Aspose.Tasks.Examples.CSharp.ConvertingProjectData
             // The path to the documents directory.
             string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
-            // ExStart:CustomizeDateFormats
+            //ExStart:CustomizeDateFormats
             Project project = new Project(dataDir + "CreateProject2.mpp");
             project.Set(Prj.StartDate, new DateTime(2014, 9, 22));
         
@@ -29,7 +29,7 @@ namespace Aspose.Tasks.Examples.CSharp.ConvertingProjectData
             // Export to date format 19/07/2016
             project.Set(Prj.DateFormat, DateFormat.DateDdMmYyyy);
             project.Save(dataDir + "CustomizeDateFormats2_out.pdf", SaveFileFormat.PDF);
-            // ExEnd:CustomizeDateFormats
+            //ExEnd:CustomizeDateFormats
         }
     }
 }

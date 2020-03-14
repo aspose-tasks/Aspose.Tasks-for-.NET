@@ -9,7 +9,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.WorkingWithExtendedAt
             // The path to the documents directory.
             string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
-            // ExStart:ExtendedAttributes
+            //ExStart:ExtendedAttributes
             Project project = new Project(dataDir + "ExtendedAttributes.mpp");
 
             // Create extended attribute definition
@@ -25,7 +25,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.WorkingWithExtendedAt
 
             // Also the following short syntax can be used: ExtendedAttribute attribute = attributeDefinition.CreateExtendedAttribute(DateTime.Now);
             task.ExtendedAttributes.Add(attribute);
-            // ExEnd:ExtendedAttributes
+            //ExEnd:ExtendedAttributes
         }
     }
 }

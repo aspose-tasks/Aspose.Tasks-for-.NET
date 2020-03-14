@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace Aspose.Tasks.Examples.CSharp.WorkingWithTasks
 {
@@ -9,7 +6,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithTasks
     {
         public static void Run()
         {
-            // ExStart:ReadTaskPercentageCompletion
+            //ExStart:ReadTaskPercentageCompletion
             // Create project instance
             string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
             Project project1 = new Project(dataDir + "TaskPercentageCompletion.mpp");
@@ -22,7 +19,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithTasks
                 Console.WriteLine(tsk1.Get(Tsk.PercentWorkComplete).ToString());
                 Console.WriteLine(tsk1.Get(Tsk.PhysicalPercentComplete).ToString());
             }
-            // ExEnd:ReadTaskPercentageCompletion
+            //ExEnd:ReadTaskPercentageCompletion
         }
     }
 }

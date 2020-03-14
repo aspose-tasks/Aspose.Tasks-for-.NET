@@ -111,7 +111,7 @@
     <Compile Include="Miscellaneous\WriteMetadataToMPP.cs" />
     <Compile Include="WorkingWithCalendarExceptions\AddRemoveCalendarExceptions.cs" />
     <Compile Include="WorkingWithCalendarExceptions\DefineWeekdayExceptions.cs" />
-    <Compile Include="WorkingWithCalendarExceptions\HandleExceptionOccurences.cs" />
+    <Compile Include="WorkingWithCalendarExceptions\HandleExceptionOccurrences.cs" />
     <Compile Include="WorkingWithCalendarExceptions\RetrieveCalendarExceptions.cs" />
     <Compile Include="WorkingWithCalendars\CalculateWorkHours.cs" />
     <Compile Include="WorkingWithCurrencies\GetCurrencyCodes.cs" />
@@ -169,9 +169,9 @@
     <Compile Include="WorkingWithProjects\CreatingReadingAndSaving\CreateEmptyProjectSaveXML.cs" />
     <Compile Include="WorkingWithProjects\WorkingWithProjectProperties\ReadDefaultProperties.cs" />
     <Compile Include="WorkingWithProjects\WorkingWithProjectProperties\DetermineProjectVersion.cs" />
-    <Compile Include="WorkingWithProjects\WorkingWithProjectViews\ConfigureTheGantChartViewShowSelectedColumnFields.cs" />
+    <Compile Include="WorkingWithProjects\WorkingWithProjectViews\ConfigureTheGanttChartViewShowSelectedColumnFields.cs" />
     <Compile Include="ConvertingProjectData\RenderProjectDataToFormat24bppRgb.cs" />
-    <Compile Include="WorkingWithProjects\WorkingWithProjectViews\ReadSpecificGantChartViewData.cs" />
+    <Compile Include="WorkingWithProjects\WorkingWithProjectViews\ReadSpecificGanttChartViewData.cs" />
     <Compile Include="WorkingWithProjects\Miscellaneous\ReadTableDataFromProjectFile.cs" />
     <Compile Include="WorkingWithProjects\Miscellaneous\ReadGroupDefinitionData.cs" />
     <Compile Include="WorkingWithProjects\Miscellaneous\ReadFilterCriteriaData.cs" />
@@ -180,7 +180,7 @@
     <Compile Include="WorkingWithProjects\WorkingWithExtendedAttributes\WriteExtendedAttributes.cs" />
     <Compile Include="WorkingWithProjects\GetNumberOfPages.cs" />
     <Compile Include="WorkingWithProjects\GetNumberOfPagesForViews.cs" />
-    <Compile Include="WorkingWithProjects\CreatingReadingAndSaving\IgnoreInvalidCharactersDuringloadingProject.cs" />
+    <Compile Include="WorkingWithProjects\CreatingReadingAndSaving\IgnoreInvalidCharactersDuringProjectLoading.cs" />
     <Compile Include="WorkingWithProjects\ImportingAndExporting\ImportDataFromMPXFileFormats.cs" />
     <Compile Include="WorkingWithResourceAssignments\CreateResourceAssignments.cs" />
     <Compile Include="WorkingWithResourceAssignments\GenerateResourceAssignmentTimephasedData.cs" />
@@ -224,7 +224,7 @@
     <Compile Include="WorkingWithProjects\ImportingAndExporting\ImportDataFromXMLFileFormats.cs" />
     <Compile Include="WorkingWithProjects\ImportingAndExporting\ExportProjectDataToXMLFormat.cs" />
     <Compile Include="ConvertingProjectData\PrintProjectPagesToSeparateFiles.cs" />
-    <Compile Include="WorkingWithProjects\WorkingWithProjectViews\ConfigureGantChart.cs" />
+    <Compile Include="WorkingWithProjects\WorkingWithProjectViews\ConfigureGanttChart.cs" />
     <Compile Include="WorkingWithProjects\WorkingWithProjectViews\SetTimeScaleCount.cs" />
     <Compile Include="WorkingWithProjects\ImportingAndExporting\SupportForSQLiteDatabase.cs" />
     <Compile Include="WorkingWithProjects\ImportingAndExporting\ReadXMLFileWithMultipleProjects.cs" />

@@ -17,11 +17,11 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.ImportingAndExporting
             // The path to the documents directory.
             string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
-            // ExStart:ImportDataFromMPXFileFormats
+            //ExStart:ImportDataFromMPXFileFormats
             Project project = new Project(dataDir + "Primavera1.mpx");
             ProjectFileInfo info = Project.GetProjectFileInfo(dataDir + "primavera1.mpx");
             Console.WriteLine(info.ProjectFileFormat);
-            // ExEnd:ImportDataFromMPXFileFormats
+            //ExEnd:ImportDataFromMPXFileFormats
         }
     }
 }

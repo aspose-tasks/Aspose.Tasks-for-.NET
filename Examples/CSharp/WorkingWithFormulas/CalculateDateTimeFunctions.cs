@@ -6,7 +6,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithFormulas
     {
         public static void Run()
         {
-            // ExStart:CalculateDateTimeFunctions
+            //ExStart:CalculateDateTimeFunctions
             Project project = CreateTestProject();
             Task task = project.RootTask.Children.GetById(1);
 
@@ -65,7 +65,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithFormulas
             Console.WriteLine(numberAttribute.NumericValue);
             numberDefinition.Formula = "Weekday(\"24/3/2015\", 3)";
             Console.WriteLine(numberAttribute.NumericValue);
-            // ExEnd:CalculateDateTimeFunctions
+            //ExEnd:CalculateDateTimeFunctions
         }
 
         private static Project CreateTestProject()

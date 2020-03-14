@@ -1,12 +1,10 @@
 ﻿using Aspose.Words;
-using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
 
 namespace Aspose.Tasks.Examples.CSharp.Articles
 {
+    using Aspose.Words.Drawing;
+
     class RetrieveTaskEmbeddedDocuments
     {
         public static void Run()
@@ -14,13 +12,13 @@ namespace Aspose.Tasks.Examples.CSharp.Articles
             // The path to the documents directory.
             string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
-            // ExStart:RetrieveTaskEmbeddedDocuments
+            //ExStart:RetrieveTaskEmbeddedDocuments
             Project project = new Project(dataDir + "TaskEmbeddedDocuments.mpp");
             Task task = project.RootTask.Children.GetById(1);
 
             File.WriteAllText(dataDir + "Notes_out.rtf", task.Get(Tsk.NotesRTF));
 
-            Document doc = null;
+            Document doc;
             using (MemoryStream stream = new MemoryStream())
             using (StreamWriter streamWriter = new StreamWriter(stream))
             {
@@ -29,8 +27,9 @@ namespace Aspose.Tasks.Examples.CSharp.Articles
             }
 
             NodeCollection shapes = doc.GetChildNodes(NodeType.Shape, true);
-            foreach (Aspose.Words.Drawing.Shape shape in shapes)
+            foreach (var node in shapes)
             {
+                var shape = (Shape)node;
                 if (shape.OleFormat != null)
                 {
                     if (!shape.OleFormat.IsLink)
@@ -47,7 +46,7 @@ namespace Aspose.Tasks.Examples.CSharp.Articles
                     }
                 }
             }
-            // ExEnd:RetrieveTaskEmbeddedDocuments
+            //ExEnd:RetrieveTaskEmbeddedDocuments
         }
     }
 }

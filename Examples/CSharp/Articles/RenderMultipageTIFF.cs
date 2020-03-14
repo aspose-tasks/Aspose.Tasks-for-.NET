@@ -1,8 +1,4 @@
 ﻿using Aspose.Tasks.Saving;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 /*
 This project uses Automatic Package Restore feature of NuGet to resolve Aspose.Tasks for .NET API reference 
@@ -21,23 +17,40 @@ namespace Aspose.Tasks.Examples.CSharp.Articles
             // The path to the documents directory.
             string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
-            // ExStart:RenderMultipageTIFF
-            // Source file to be converted to TIFF
-            string file = "Project2.mpp";
-            Project project = new Project(dataDir + file);
+            //ExStart:RenderMultipageTIFF
+            //ExFor: SaveFileFormat.TIFF
+            //ExFor: TiffCompression.None
+            //ExFor: TiffCompression.Rle
+            //ExFor: TiffCompression.Ccitt3
+            //ExFor: TiffCompression.Ccitt4
+            //ExFor: TiffCompression.Lzw
+            //ExSummary: 
+            Project project = new Project(dataDir + "Project2.mpp");
 
             // Save the project to TIFF
             project.Save(dataDir + "RenderMultipageTIFF_out.tif", SaveFileFormat.TIFF);
 
-            // Save the project with CCITT4 compression
+            // Save the project with Rle compression
             ImageSaveOptions options = new ImageSaveOptions(SaveFileFormat.TIFF);
+            options.TiffCompression = TiffCompression.Rle;
+            project.Save(dataDir + "RenderMultipageTIFF_comp_rle_out.tif", options);
+            
+            // Save the project with CCITT3 compression
+            options.TiffCompression = TiffCompression.Ccitt3;
+            project.Save(dataDir + "RenderMultipageTIFF_comp_rle_out.tif", options);
+            
+            // Save the project with CCITT4 compression
             options.TiffCompression = TiffCompression.Ccitt4;
-            project.Save(dataDir + "RenderMultipageTIFF_options_out.tif", (SaveOptions)options);
+            project.Save(dataDir + "RenderMultipageTIFF_comp_ccitt4_out.tif", options);
+            
+            // Save the project with CCITT4 compression
+            options.TiffCompression = TiffCompression.Lzw;
+            project.Save(dataDir + "RenderMultipageTIFF_comp_lzw_out.tif", options);
 
             // Remove the compression
             options.TiffCompression = TiffCompression.None;
-            project.Save(dataDir + "RenderMultipageTIFF_comp_none_out.tif", (SaveOptions)options);
-            // ExEnd:RenderMultipageTIFF
+            project.Save(dataDir + "RenderMultipageTIFF_comp_none_out.tif", options);
+            //ExEnd:RenderMultipageTIFF
         }
     }
 }

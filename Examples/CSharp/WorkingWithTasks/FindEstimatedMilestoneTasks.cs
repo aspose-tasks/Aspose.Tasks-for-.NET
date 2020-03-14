@@ -1,9 +1,6 @@
 ﻿using Aspose.Tasks.Util;
 using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
 
 /*
 This project uses Automatic Package Restore feature of NuGet to resolve Aspose.Tasks for .NET API reference 
@@ -19,7 +16,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithTasks
     {
         public static void Run()
         {
-            // ExStart:FindEstimatedMilestoneTasks
+            //ExStart:FindEstimatedMilestoneTasks
             // Read project from file stream
             string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
             FileStream fs = new FileStream(dataDir + "EstimatedMilestoneTasks.mpp", FileMode.Open);
@@ -35,12 +32,12 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithTasks
             // Parse through all the collected tasks
             foreach (Task tsk1 in collector.Tasks)
             {
-                string strEst = (tsk1.Get(Tsk.IsEstimated)) ? "Estimated" : "Non-Estimated";
-                string strMileStone = (tsk1.Get(Tsk.IsMilestone)) ? "Milestone" : "Non-Milestone";
+                string strEst = tsk1.Get(Tsk.IsEstimated) ? "Estimated" : "Non-Estimated";
+                string strMileStone = tsk1.Get(Tsk.IsMilestone) ? "Milestone" : "Non-Milestone";
                 Console.WriteLine(tsk1.Get(Tsk.Name) + " : " + strEst);
                 Console.WriteLine(tsk1.Get(Tsk.Name) + " : " + strMileStone);
             }
-            // ExEnd:FindEstimatedMilestoneTasks
+            //ExEnd:FindEstimatedMilestoneTasks
         }
     }
 }

@@ -11,7 +11,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.WorkingWithProjectVie
             // The path to the documents directory.
             string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
-            // ExStart:CustomizeTimescaleTierLabels
+            //ExStart:CustomizeTimescaleTierLabels
             Project project = new Project(dataDir + "Project5.mpp");
 
             // Add task links
@@ -27,7 +27,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.WorkingWithProjectVie
             view.MiddleTimescaleTier.DateTimeConverter =
             date => new[] { "Янв.", "Фев.", "Мар.", "Апр.", "Май", "Июнь", "Июль", "Авг.", "Сен.", "Окт.", "Ноя.", "Дек." }[date.Month - 1];
             project.Save(dataDir + "CustomizeTimescaleTierLabels_out.pdf", SaveFileFormat.PDF);
-            // ExEnd:CustomizeTimescaleTierLabels
+            //ExEnd:CustomizeTimescaleTierLabels
         }
     }
 }

@@ -1,8 +1,4 @@
-﻿using Aspose.Tasks;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System;
 
 /*
 This project uses Automatic Package Restore feature of NuGet to resolve Aspose.Tasks for .NET API reference 
@@ -18,7 +14,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithCalendars
     {
         public static void Run()
         {
-            // ExStart:ReadCalendarProps            
+            //ExStart:ReadCalendarProps            
             // Load an existing project
             string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
             Project project = new Project(dataDir + "Project_GeneralCalendarProperties.xml");
@@ -27,24 +23,21 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithCalendars
             {
                 if (cal.Name != null)
                 {
-                    Console.WriteLine("UID : " + cal.Uid.ToString() + " Name: " + cal.Name);
+                    Console.WriteLine("UID : " + cal.Uid + " Name: " + cal.Name);
 
                     // Show if it is has a base calendar
                     Console.Write("Base Calendar : ");
-                    if (cal.IsBaseCalendar)
-                        Console.WriteLine("Self");
-                    else
-                        Console.WriteLine(cal.BaseCalendar.Name);
+                    Console.WriteLine(cal.IsBaseCalendar ? "Self" : cal.BaseCalendar.Name);
 
                     // Get Time in hours on each working day
                     foreach (WeekDay wd in cal.WeekDays)
                     {
                         TimeSpan ts = wd.GetWorkingTime();
-                        Console.WriteLine("Day Type: " + wd.DayType.ToString() + " Hours: " + ts.ToString());
+                        Console.WriteLine("Day Type: " + wd.DayType + " Hours: " + ts);
                     }
                 }
             }
-            // ExEnd:ReadCalendarProps
+            //ExEnd:ReadCalendarProps
         }
     }
 }

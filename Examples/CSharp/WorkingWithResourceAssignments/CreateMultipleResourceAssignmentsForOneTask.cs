@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace Aspose.Tasks.Examples.CSharp.WorkingWithResourceAssignments
 {
@@ -12,7 +9,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithResourceAssignments
             // The path to the documents directory.
             string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
-            // ExStart:CreateMultipleResourceAssignmentsForOneTask
+            //ExStart:CreateMultipleResourceAssignmentsForOneTask
             Project project = new Project(dataDir + "TemplateResource2010.mpp")
             {
                 CalculationMode = CalculationMode.Automatic
@@ -66,7 +63,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithResourceAssignments
             tsk1.Set(Tsk.IsManual, new NullableBool(true));
 
             project.Save(dataDir + @"Assignment_Dates.mpp", Saving.SaveFileFormat.MPP);
-            // ExEnd:CreateMultipleResourceAssignmentsForOneTask
+            //ExEnd:CreateMultipleResourceAssignmentsForOneTask
         }
     }
 }

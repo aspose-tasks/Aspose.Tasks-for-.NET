@@ -1,8 +1,4 @@
 ﻿using Aspose.Tasks.Saving;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 /*
 This project uses Automatic Package Restore feature of NuGet to resolve Aspose.Tasks for .NET API reference 
@@ -21,14 +17,14 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.ImportingAndExporting
             // The path to the documents directory.
             string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
-            // ExStart:UsingPrimaveraXMLSaveOptions
+            //ExStart:UsingPrimaveraXMLSaveOptions
             Project project = new Project(dataDir + "project.xml");
 
             // Specify xml save options
             PrimaveraXmlSaveOptions options = new PrimaveraXmlSaveOptions();
             options.SaveRootTask = false;
             project.Save("UsingPrimaveraXMLSaveOptions_out.xml", options);
-            // ExEnd:UsingPrimaveraXMLSaveOptions
+            //ExEnd:UsingPrimaveraXMLSaveOptions
         }
     }
 }

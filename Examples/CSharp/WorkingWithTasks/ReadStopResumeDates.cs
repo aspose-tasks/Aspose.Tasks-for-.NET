@@ -1,9 +1,6 @@
 ﻿using Aspose.Tasks.Util;
 using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
 
 /*
 This project uses Automatic Package Restore feature of NuGet to resolve Aspose.Tasks for .NET API reference 
@@ -19,7 +16,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithTasks
     {
         public static void Run()
         {
-            // ExStart:ReadStopResumeDates
+            //ExStart:ReadStopResumeDates
             // Read project from file stream
             string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
             FileStream fs = new FileStream(dataDir + "StopResumeDates.mpp", FileMode.Open);
@@ -36,16 +33,24 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithTasks
             foreach (Task tsk1 in collector.Tasks)
             {
                 if (tsk1.Get(Tsk.Stop).ToShortDateString() == "1/1/2000")
+                {
                     Console.WriteLine("Stop: NA");
+                }
                 else
+                {
                     Console.WriteLine("Stop: " + tsk1.Get(Tsk.Stop).ToShortDateString());
+                }
 
                 if (tsk1.Get(Tsk.Resume).ToShortDateString() == "1/1/2000")
+                {
                     Console.WriteLine("Resume: NA");
+                }
                 else
+                {
                     Console.WriteLine("Resume: " + tsk1.Get(Tsk.Resume).ToShortDateString());
+                }
             }
-            // ExEnd:ReadStopResumeDates
+            //ExEnd:ReadStopResumeDates
         }
     }
 }

@@ -17,29 +17,31 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.Miscellaneous
             // The path to the documents directory.
             string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
-            // ExStart:ReadGroupDefinitionData
+            //ExStart:ReadGroupDefinitionData
             Project project = new Project(dataDir + "ReadGroupDefinitionData.mpp"); 
             
             Console.WriteLine("Task Groups Count: " + project.TaskGroups.Count);
             Group taskGroup = project.TaskGroups.ToList()[1];
-            Console.WriteLine("Group Name:", taskGroup.Name);
+            Console.WriteLine("Group Name: " + taskGroup.Name);
             Console.WriteLine("Group Criteria count: " + taskGroup.GroupCriteria.Count);
             Console.WriteLine("\n************* Retrieving Task Group's Criterion information *************");
             GroupCriterion criterion = taskGroup.GroupCriteria.ToList()[0];
-            Console.WriteLine("Criterion Field: " + criterion.Field.ToString());
-            Console.WriteLine("Criterion GroupOn: " + criterion.GroupOn.ToString());
+            Console.WriteLine("Criterion Field: " + criterion.Field);
+            Console.WriteLine("Criterion GroupOn: " + criterion.GroupOn);
             Console.WriteLine("Criterion Cell Color: " + criterion.CellColor);
-            Console.WriteLine("Criterion Pattern: " + criterion.Pattern.ToString());
+            Console.WriteLine("Criterion Pattern: " + criterion.Pattern);
 
             if (taskGroup == criterion.ParentGroup)
-                Console.WriteLine("Parent Group is equval to task Group.");
+            {
+                Console.WriteLine("Parent Group is equal to task Group.");
+            }
 
-            Console.WriteLine("\n*********** Retreivnig Criterion's Font Information ***********");
+            Console.WriteLine("\n*********** Retrieving Criterion's Font Information ***********");
             Console.WriteLine("Font Name: " + criterion.Font.Name);
             Console.WriteLine("Font Size: " + criterion.Font.Size);
             Console.WriteLine("Font Style: " + criterion.Font.Style);
-            Console.WriteLine("Ascending/Dscending: " + criterion.Ascending);
-            // ExEnd:ReadGroupDefinitionData
+            Console.WriteLine("Ascending/Descending: " + criterion.Ascending);
+            //ExEnd:ReadGroupDefinitionData
         }
     }
 }

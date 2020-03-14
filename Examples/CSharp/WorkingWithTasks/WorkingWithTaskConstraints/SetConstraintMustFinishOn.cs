@@ -1,9 +1,6 @@
 ﻿using Aspose.Tasks.Saving;
 using Aspose.Tasks.Visualization;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 /*
 This project uses Automatic Package Restore feature of NuGet to resolve Aspose.Tasks for .NET API reference 
@@ -25,7 +22,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithTasks.WorkingWithTaskConstrain
             // Create project instance
             Project project1 = new Project(dataDir + "ConstraintMustFinishOn.mpp");
 
-            // ExStart:SetConstraintMustFinishOn
+            //ExStart:SetConstraintMustFinishOn
             // Set constraint Must Finish On for task with Id 15
             Task interiorFixtures = project1.RootTask.Children.GetById(15);
             interiorFixtures.Set(Tsk.ConstraintType, ConstraintType.MustFinishOn);
@@ -36,7 +33,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithTasks.WorkingWithTaskConstrain
             options.StartDate = project1.Get(Prj.StartDate);
             options.Timescale = Timescale.ThirdsOfMonths;
             project1.Save(dataDir + "project_MustFinishOn_out.pdf", options);
-            // ExEnd:SetConstraintMustFinishOn
+            //ExEnd:SetConstraintMustFinishOn
         }
     }
 }
