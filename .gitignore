@@ -1,4 +1,3 @@
-
 Temp/
 obj/
 classes/
@@ -24,3 +23,5 @@ test-results/
 *.userprefs
 packages/
 *.gitattributes
+*.DotSettings
+.idea/
