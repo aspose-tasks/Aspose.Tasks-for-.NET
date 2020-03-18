@@ -1,7 +1,7 @@
-﻿using System;
-
-namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects
+﻿namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects
 {
+    using System;
+
     public class TaskSettingStartFinishDates
     {
         /// <summary>
@@ -12,7 +12,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects
         public static void Run()
         {
             //ExStart:TaskSettingStartFinishDates
-            Project project = new Project();
+            var project = new Project();
             Console.WriteLine(project.Get(Prj.StartDate));
             Console.WriteLine(project.CalculationMode.ToString());
 
@@ -20,7 +20,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects
 
             Console.WriteLine(project.CalculationMode.ToString());
 
-            Task task = project.RootTask.Children.Add("Task1");
+            var task = project.RootTask.Children.Add("Task1");
 
             task.Set(Tsk.Start, new DateTime(2012, 8, 1));
             task.Set(Tsk.Finish, new DateTime(2012, 8, 5));

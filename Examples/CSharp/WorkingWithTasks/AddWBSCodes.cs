@@ -1,22 +1,22 @@
-﻿using Aspose.Tasks.Saving;
-
-namespace Aspose.Tasks.Examples.CSharp.WorkingWithTasks
+﻿namespace Aspose.Tasks.Examples.CSharp.WorkingWithTasks
 {
-    class AddWBSCodes
+    using Aspose.Tasks.Saving;
+
+    internal class AddWBSCodes
     {
         public static void Run()
         {
-            string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
+            var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
             //ExStart:AddWBSCodes
-            Project proj = new Project();
+            var proj = new Project();
 
             proj.WBSCodeDefinition = new WBSCodeDefinition();
             proj.WBSCodeDefinition.GenerateWBSCode = true;
             proj.WBSCodeDefinition.VerifyUniqueness = true;
             proj.WBSCodeDefinition.CodePrefix = "CRS-";
 
-            WBSCodeMask mask = new WBSCodeMask();
+            var mask = new WBSCodeMask();
             mask.Length = 2;
             mask.Separator = "-";
             mask.Sequence = WBSSequence.OrderedNumbers;
@@ -28,8 +28,8 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithTasks
             mask.Sequence = WBSSequence.OrderedUppercaseLetters;
             proj.WBSCodeDefinition.CodeMaskCollection.Add(mask);
             
-            Task tsk = proj.RootTask.Children.Add("Task 1");
-            Task child = tsk.Children.Add("Task 2");
+            var tsk = proj.RootTask.Children.Add("Task 1");
+            tsk.Children.Add("Task 2");
 
             proj.Recalculate();
             proj.Save(dataDir + @"AddWBSCodes_out.xml", SaveFileFormat.XML);

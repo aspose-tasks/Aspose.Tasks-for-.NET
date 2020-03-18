@@ -1,19 +1,19 @@
 ﻿namespace Aspose.Tasks.Examples.CSharp.WorkingWithTaskBaselines
 {
-    class CreateTaskBaseline
+    internal class CreateTaskBaseline
     {
         public static void Run()
         {
             //ExStart:CreateTaskBaseline
             // Create project instance
-            Project project1 = new Project();
+            var project = new Project();
 
             // Creating TaskBaseline:
-            Task task = project1.RootTask.Children.Add("Task");
+            var task = project.RootTask.Children.Add("Task");
 
             // Set baseline for specified tasks and entire project
-            project1.SetBaseline(BaselineType.Baseline, new[] { task });
-            project1.SetBaseline(BaselineType.Baseline);
+            project.SetBaseline(BaselineType.Baseline, new[] { task });
+            project.SetBaseline(BaselineType.Baseline);
             //ExEnd:CreateTaskBaseline
         }
     }

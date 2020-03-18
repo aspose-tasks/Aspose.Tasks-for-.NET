@@ -1,5 +1,3 @@
-using System.Collections.Generic;
-
 /*
 This project uses Automatic Package Restore feature of NuGet to resolve Aspose.Tasks for .NET API reference 
 when the project is build. Please check https:// Docs.nuget.org/consume/nuget-faq for more information. 
@@ -10,16 +8,23 @@ please feel free to contact us using https://forum.aspose.com/c/tasks
 
 namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.ImportingAndExporting
 {
+    using System;
+    using System.Collections.Generic;
+
     public class ReadProjectUIDsFromXMLFile
     {
         public static void Run()
         {
             // The path to the documents directory.
-            string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
+            var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
             //ExStart:ReadProjectUIDsFromXMLFile
-            PrimaveraXmlReader reader = new PrimaveraXmlReader(dataDir + "Project.xml");
-            List<int> listOpProjectUids = reader.GetProjectUids();
+            var reader = new PrimaveraXmlReader(dataDir + "Project.xml");
+            List<int> projectUids = reader.GetProjectUids();
+            foreach (var projectUid in projectUids)
+            {
+                Console.WriteLine("Project UID: " + projectUid);
+            }
             //ExEnd:ReadProjectUIDsFromXMLFile
         }
     }

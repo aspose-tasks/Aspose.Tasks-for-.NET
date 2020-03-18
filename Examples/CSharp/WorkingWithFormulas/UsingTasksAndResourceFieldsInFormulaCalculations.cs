@@ -1,6 +1,3 @@
-using System;
-using Aspose.Tasks.Saving;
-
 /*
 This project uses Automatic Package Restore feature of NuGet to resolve Aspose.Tasks for .NET API reference 
 when the project is build. Please check https:// Docs.nuget.org/consume/nuget-faq for more information. 
@@ -11,6 +8,10 @@ please feel free to contact us using https://forum.aspose.com/c/tasks
 
 namespace Aspose.Tasks.Examples.CSharp.WorkingWithFormulas
 {
+    using System;
+
+    using Aspose.Tasks.Saving;
+
     public class UsingTasksAndResourceFieldsInFormulaCalculations
     {
         //ExStart:UsingTasksAndResourceFieldsInFormulaCalculations
@@ -19,13 +20,13 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithFormulas
             try
             {
                 // The path to the documents directory.
-                string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
+                var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
-                Project project = CreateTestProjectWithCustomField();
-                Task task = project.RootTask.Children.GetById(1);
+                var project = CreateTestProjectWithCustomField();
+                var task = project.RootTask.Children.GetById(1);
 
                 // Set formula for extended attribute
-                ExtendedAttributeDefinition extendedAttributeDefinition1 = project.ExtendedAttributes[0];
+                var extendedAttributeDefinition1 = project.ExtendedAttributes[0];
                 extendedAttributeDefinition1.Alias = "Days from finish to deadline";
                 extendedAttributeDefinition1.Formula = "[Deadline] - [Finish]";
 
@@ -43,22 +44,22 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithFormulas
         private static Project CreateTestProjectWithCustomField()
         {
             // The path to the documents directory.
-            string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
+            var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
             // Create new project instance
-            Project project = new Project(dataDir + "Blank2010.mpp");
+            var project = new Project(dataDir + "Blank2010.mpp");
             project.Set(Prj.StartDate, new DateTime(2015, 3, 6, 8, 0, 0));
 
             // Add new task with extended attribute
-            Task task = project.RootTask.Children.Add("Task");
-            ExtendedAttributeDefinition extendedAttributeDefinition = ExtendedAttributeDefinition.CreateTaskDefinition(CustomFieldType.Text, ExtendedAttributeTask.Text5, "My Ext Attr");
+            var task = project.RootTask.Children.Add("Task");
+            var extendedAttributeDefinition = ExtendedAttributeDefinition.CreateTaskDefinition(CustomFieldType.Text, ExtendedAttributeTask.Text5, "My Ext Attr");
             project.ExtendedAttributes.Add(extendedAttributeDefinition);
-            ExtendedAttribute extendedAttribute = extendedAttributeDefinition.CreateExtendedAttribute();
+            var extendedAttribute = extendedAttributeDefinition.CreateExtendedAttribute();
             task.ExtendedAttributes.Add(extendedAttribute);
 
             // Add resource and resource assignment
-            Resource rsc = project.Resources.Add("Rsc");
-            ResourceAssignment assn = project.ResourceAssignments.Add(task, rsc);
+            var rsc = project.Resources.Add("Rsc");
+            project.ResourceAssignments.Add(task, rsc);
             return project;
         }
         //ExEnd:UsingTasksAndResourceFieldsInFormulaCalculations            

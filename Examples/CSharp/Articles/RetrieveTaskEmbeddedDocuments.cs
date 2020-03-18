@@ -1,49 +1,54 @@
-﻿using Aspose.Words;
-using System.IO;
-
-namespace Aspose.Tasks.Examples.CSharp.Articles
+﻿namespace Aspose.Tasks.Examples.CSharp.Articles
 {
+    using System.IO;
+
+    using Aspose.Words;
     using Aspose.Words.Drawing;
 
-    class RetrieveTaskEmbeddedDocuments
+    internal class RetrieveTaskEmbeddedDocuments
     {
         public static void Run()
         {
             // The path to the documents directory.
-            string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
+            var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
             //ExStart:RetrieveTaskEmbeddedDocuments
-            Project project = new Project(dataDir + "TaskEmbeddedDocuments.mpp");
-            Task task = project.RootTask.Children.GetById(1);
+            //ExFor: Tsk.NotesRTF
+            //ExFor: Shape.OleFormat
+            //ExSummary: Shows how to extract embedded RTF and save OLE objects from it. 
+            var project = new Project(dataDir + "TaskEmbeddedDocuments.mpp");
+            var task = project.RootTask.Children.GetById(1);
 
             File.WriteAllText(dataDir + "Notes_out.rtf", task.Get(Tsk.NotesRTF));
 
             Document doc;
-            using (MemoryStream stream = new MemoryStream())
-            using (StreamWriter streamWriter = new StreamWriter(stream))
+            using (var stream = new MemoryStream())
             {
-                streamWriter.Write(task.Get(Tsk.NotesRTF));
-                doc = new Document(stream);
+                using (var writer = new StreamWriter(stream))
+                {
+                    writer.Write(task.Get(Tsk.NotesRTF));
+                    doc = new Document(stream);
+                }
             }
 
-            NodeCollection shapes = doc.GetChildNodes(NodeType.Shape, true);
+            var shapes = doc.GetChildNodes(NodeType.Shape, true);
             foreach (var node in shapes)
             {
                 var shape = (Shape)node;
-                if (shape.OleFormat != null)
+                if (shape.OleFormat == null 
+                    || shape.OleFormat.IsLink
+                    || shape.OleFormat.ProgId != "Word.Document.12")
                 {
-                    if (!shape.OleFormat.IsLink)
-                    {
-                        // Extract OLE Word object
-                        if (shape.OleFormat.ProgId == "Word.Document.12")
-                        {
-                            MemoryStream stream = new MemoryStream();
-                            shape.OleFormat.Save(stream);
+                    continue;
+                }
 
-                            Document newDoc = new Document(stream);
-                            newDoc.Save(dataDir + "RetrieveTaskEmbeddedDocuments_out.doc");
-                        }
-                    }
+                // Extract OLE Word object
+                using (var stream = new MemoryStream())
+                {
+                    shape.OleFormat.Save(stream);
+
+                    var newDocument = new Document(stream);
+                    newDocument.Save(dataDir + "RetrieveTaskEmbeddedDocuments_out.doc");
                 }
             }
             //ExEnd:RetrieveTaskEmbeddedDocuments

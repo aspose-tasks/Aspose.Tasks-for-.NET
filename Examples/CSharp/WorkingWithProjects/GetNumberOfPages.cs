@@ -1,5 +1,3 @@
-using Aspose.Tasks.Visualization;
-
 /*
 This project uses Automatic Package Restore feature of NuGet to resolve Aspose.Tasks for .NET API reference 
 when the project is build. Please check https:// Docs.nuget.org/consume/nuget-faq for more information. 
@@ -10,23 +8,29 @@ please feel free to contact us using https://forum.aspose.com/c/tasks
 
 namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects
 {
+    using System;
+
+    using Aspose.Tasks.Visualization;
+
     public class GetNumberOfPages
     {
         public static void Run()
         {
-            //ExStart:GetNumberOfPages
             // The path to the documents directory.
-            string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
+            var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
+            //ExStart:GetNumberOfPages
             // Read the input Project file
-            Project project = new Project(dataDir + "GetNumberOfPages.mpp");
+            var project = new Project(dataDir + "GetNumberOfPages.mpp");
 
-            // Get number of pages,  Timescale.Months, Timescale.ThirdsOfMonths
-            int pageCount = project.GetPageCount();
+            // Get number of pages, Timescale.Months, Timescale.ThirdsOfMonths
+            var pageCount = project.GetPageCount();
+            Console.WriteLine("Page count:" + pageCount);
             pageCount = project.GetPageCount(Timescale.Months);
+            Console.WriteLine("Page count (Month):" + pageCount);
             pageCount = project.GetPageCount(Timescale.ThirdsOfMonths);
+            Console.WriteLine("Page count (Thirds of Months):" + pageCount);
             //ExEnd:GetNumberOfPages
-
         }
     }
 }

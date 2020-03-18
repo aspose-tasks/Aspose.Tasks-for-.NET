@@ -1,5 +1,3 @@
-using Aspose.Tasks.Saving;
-
 /*
 This project uses Automatic Package Restore feature of NuGet to resolve Aspose.Tasks for .NET API reference 
 when the project is build. Please check https:// Docs.nuget.org/consume/nuget-faq for more information. 
@@ -10,16 +8,18 @@ please feel free to contact us using https://forum.aspose.com/c/tasks
 
 namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.CreatingReadingAndSaving
 {
+    using Aspose.Tasks.Saving;
+
     public class CreateEmptyProjectSaveXML
     {
         public static void Run()
         {            
             // The path to the documents directory.
-            string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
+            var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
             //ExStart:CreateEmptyProjectSaveXML
             // Create empty project
-            Project project = new Project();
+            var project = new Project();
 
             // Save project as xml 
             project.Save(dataDir + "EmptyProjectSaveXML_out.xml", SaveFileFormat.XML);

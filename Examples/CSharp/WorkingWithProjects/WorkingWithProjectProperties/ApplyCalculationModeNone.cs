@@ -1,18 +1,18 @@
-﻿using System;
-
-namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.WorkingWithProjectProperties
+﻿namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.WorkingWithProjectProperties
 {
-    class ApplyCalculationModeNone
+    using System;
+
+    internal class ApplyCalculationModeNone
     {
         public static void Run()
         {
             //ExStart:ApplyCalculationModeNone
             // Create empty project and set calculation mode to None
-            Project project = new Project();
+            var project = new Project();
             project.CalculationMode = CalculationMode.None;
 
             // Add a new task
-            Task task = project.RootTask.Children.Add("Task");
+            var task = project.RootTask.Children.Add("Task");
 
             // Note that even ids were not calculated            
             Console.WriteLine("Task.Id Equals 0 : {0} ",  task.Get(Tsk.Id).Equals(0));

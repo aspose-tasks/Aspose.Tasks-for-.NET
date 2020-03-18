@@ -1,22 +1,21 @@
-﻿using System;
-
-namespace Aspose.Tasks.Examples.CSharp.WorkingWithTasks
+﻿namespace Aspose.Tasks.Examples.CSharp.WorkingWithTasks
 {
-    class CalculateSplitTaskFinishDate
+    using System;
+
+    internal class CalculateSplitTaskFinishDate
     {
         public static void Run()
         {
+            var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
+
             //ExStart:CalculateSplitTaskFinishDate
-            // Read project            
-            string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
-            string projectName = "SplitTaskFinishDate.mpp";
-            Project project = new Project(dataDir + projectName);
+            var project = new Project(dataDir + "SplitTaskFinishDate.mpp");
 
             // Find a split task
-            Task splitTask = project.RootTask.Children.GetByUid(4);
+            var splitTask = project.RootTask.Children.GetByUid(4);
 
             // Find the project calendar
-            Calendar calendar = project.Get(Prj.Calendar);
+            var calendar = project.Get(Prj.Calendar);
 
             // Calculate task's finish date with different durations
             Console.WriteLine("Start Date: " + splitTask.Get(Tsk.Start).ToShortDateString() + "\n+ Duration 8 hours\nFinish Date: " + calendar.GetTaskFinishDateFromDuration(splitTask, new TimeSpan(8, 0, 0)));

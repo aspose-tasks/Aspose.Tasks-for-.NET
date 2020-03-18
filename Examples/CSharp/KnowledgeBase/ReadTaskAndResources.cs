@@ -1,22 +1,27 @@
-﻿using System;
-
-namespace Aspose.Tasks.Examples.CSharp.KnowledgeBase
+﻿namespace Aspose.Tasks.Examples.CSharp.KnowledgeBase
 {
-    class ReadTaskAndResources
+    using System;
+
+    internal class ReadTaskAndResources
     {
         public static void Run()
         {
-            string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
+            var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
             //ExStart:ReadTaskAndResources
-            // Load MPP file
-            Project project = new Project(dataDir + "Project1.mpp");
+            //ExFor: Project.Resources
+            //ExFor: Project.RootTask.Children
+            //ExFor: Tsk.Name
+            //ExFor: Rsc.Type
+            //ExFor: Rsc.Name
+            //ExSummary: Shows how to read task and resources.
+            var project = new Project(dataDir + "Project1.mpp");
 
             // Load all tasks
-            TaskCollection allTasks = project.RootTask.Children;
+            var tasks = project.RootTask.Children;
 
             // Loop through each task and read information related to tasks
-            foreach (Task task in allTasks)
+            foreach (var task in tasks)
             {
                 Console.WriteLine("Reading Task " + task.Get(Tsk.Name));
                 Console.WriteLine("\nID: " + task.Get(Tsk.Id));
@@ -26,7 +31,7 @@ namespace Aspose.Tasks.Examples.CSharp.KnowledgeBase
             }
 
             // Loop through each resource and read information related to resources
-            foreach (Resource resource in project.Resources)
+            foreach (var resource in project.Resources)
             {
                 string resourceType;
                 switch (resource.Get(Rsc.Type))

@@ -1,9 +1,4 @@
-﻿using Aspose.Tasks.Saving;
-using Aspose.Tasks.Visualization;
-using System;
-using System.Drawing;
-
-/*
+﻿/*
 This project uses Automatic Package Restore feature of NuGet to resolve Aspose.Tasks for .NET API reference 
 when the project is build. Please check https:// Docs.nuget.org/consume/nuget-faq for more information. 
 If you do not wish to use NuGet, you can manually download Aspose.Tasks for .NET API from https://www.nuget.org/packages/Aspose.Tasks/, 
@@ -13,12 +8,18 @@ please feel free to contact us using https://forum.aspose.com/c/tasks
 
 namespace Aspose.Tasks.Examples.CSharp.Articles
 {
-    class ImplementCustomBarStyleWriting
+    using System;
+    using System.Drawing;
+
+    using Aspose.Tasks.Saving;
+    using Aspose.Tasks.Visualization;
+
+    internal class ImplementCustomBarStyleWriting
     {
         public static void Run()
         {
             // The path to the documents directory.
-            string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
+            var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
             ImplementCustomBarStyle(dataDir);
         }
 
@@ -29,16 +30,16 @@ namespace Aspose.Tasks.Examples.CSharp.Articles
         {
             try
             {
-                Project project = new Project(dataDir + "Blank2010.mpp");
+                var project = new Project(dataDir + "Blank2010.mpp");
                 project.RootTask.Children.Add("Task");
 
-                GanttChartView view = (GanttChartView)project.DefaultView;
-                GanttBarStyle custom = GetCustomBarStyle();
+                var view = (GanttChartView)project.DefaultView;
+                var custom = GetCustomBarStyle();
 
                 // Add the custom bar style to the custom bar collection of the project view
                 view.CustomBarStyles.Add(custom);
 
-                MPPSaveOptions options = new MPPSaveOptions();
+                var options = new MPPSaveOptions();
                 options.WriteViewData = true;
 
                 project.Save(dataDir + "ImplementCustomBarStyleWriting_out.mpp", options);
@@ -51,7 +52,7 @@ namespace Aspose.Tasks.Examples.CSharp.Articles
 
         private static GanttBarStyle GetCustomBarStyle()
         {
-            GanttBarStyle style = new GanttBarStyle();
+            var style = new GanttBarStyle();
             style.ShowFor = "1";
             style.MiddleShape = GanttBarMiddleShape.RectangleBottom;
             style.MiddleFillPattern = GanttBarFillPattern.MediumFill;

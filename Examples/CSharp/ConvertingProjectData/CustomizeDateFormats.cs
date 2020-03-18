@@ -1,6 +1,3 @@
-using System;
-using Aspose.Tasks.Saving;
-
 /*
 This project uses Automatic Package Restore feature of NuGet to resolve Aspose.Tasks for .NET API reference 
 when the project is build. Please check https:// Docs.nuget.org/consume/nuget-faq for more information. 
@@ -11,15 +8,23 @@ please feel free to contact us using https://forum.aspose.com/c/tasks
 
 namespace Aspose.Tasks.Examples.CSharp.ConvertingProjectData
 {
+    using System;
+
+    using Aspose.Tasks.Saving;
+
     public class CustomizeDateFormats
     {
         public static void Run()
         {
             // The path to the documents directory.
-            string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
+            var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
             //ExStart:CustomizeDateFormats
-            Project project = new Project(dataDir + "CreateProject2.mpp");
+            //ExFor: DateFormat 
+            //ExFor: Prj.StartDate 
+            //ExFor: Prj.DateFormat 
+            //ExSummary: Shows how to customize date format of all dates in the project to be exported. 
+            var project = new Project(dataDir + "CreateProject2.mpp");
             project.Set(Prj.StartDate, new DateTime(2014, 9, 22));
         
             // By default project.DateFormat == DateFormat.Date_ddd_mm_dd_yy (Mon 09/22/14) customize DateFormat (September 22, 2014)

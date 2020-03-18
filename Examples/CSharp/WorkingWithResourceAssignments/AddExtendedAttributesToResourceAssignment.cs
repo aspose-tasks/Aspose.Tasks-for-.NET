@@ -1,28 +1,28 @@
-﻿using Aspose.Tasks.Saving;
-
-namespace Aspose.Tasks.Examples.CSharp.WorkingWithResourceAssignments
+﻿namespace Aspose.Tasks.Examples.CSharp.WorkingWithResourceAssignments
 {
+    using Aspose.Tasks.Saving;
+
     public class AddExtendedAttributesToResourceAssignment
     {
         public static void Run()
         {
             // The path to the documents directory.
-            string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
+            var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
             //ExStart: AddExtendedAttributesToResourceAssignment
             // Create new project
-            Project project = new Project(dataDir + "Blank2010.mpp");
+            var project = new Project(dataDir + "Blank2010.mpp");
 
             // Add new task and resource
-            Task task1 = project.RootTask.Children.Add("Task");
-            Resource rsc1 = project.Resources.Add("Rsc");
+            var task1 = project.RootTask.Children.Add("Task");
+            var rsc1 = project.Resources.Add("Rsc");
 
             // Assign the resource to the desired task
-            ResourceAssignment assignment = project.ResourceAssignments.Add(task1, rsc1);
+            var assignment = project.ResourceAssignments.Add(task1, rsc1);
 
             // Custom attributes which is visible in "Resource Usage" view can be created with ExtendedAttributeDefinition.CreateResourceDefinition method.
             {
-                ExtendedAttributeDefinition resCostAttributeDefinition = ExtendedAttributeDefinition.CreateResourceDefinition(
+                var resCostAttributeDefinition = ExtendedAttributeDefinition.CreateResourceDefinition(
                     CustomFieldType.Cost,
                     ExtendedAttributeResource.Cost5,
                     "My cost");
@@ -39,7 +39,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithResourceAssignments
 
             // Custom attributes which is visible in "Task Usage" view can be created with ExtendedAttributeDefinition.CreateTaskDefinition method
             {
-                ExtendedAttributeDefinition taskCostAttributeDefinition = ExtendedAttributeDefinition.CreateTaskDefinition(
+                var taskCostAttributeDefinition = ExtendedAttributeDefinition.CreateTaskDefinition(
                     CustomFieldType.Cost,
                     ExtendedAttributeTask.Cost5,
                     "My cost for task");

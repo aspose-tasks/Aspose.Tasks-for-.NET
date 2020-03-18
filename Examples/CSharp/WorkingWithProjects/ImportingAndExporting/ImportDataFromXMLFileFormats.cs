@@ -1,5 +1,3 @@
-using System;
-
 /*
 This project uses Automatic Package Restore feature of NuGet to resolve Aspose.Tasks for .NET API reference 
 when the project is build. Please check https:// Docs.nuget.org/consume/nuget-faq for more information. 
@@ -10,16 +8,17 @@ please feel free to contact us using https://forum.aspose.com/c/tasks
 
 namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.ImportingAndExporting
 {
+    using System;
+
     public class ImportDataFromXMLFileFormats
     {
         public static void Run()
         {
             // The path to the documents directory.
-            string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
+            var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
             //ExStart:ImportDataFromXMLFileFormats
-            Project project = new Project(dataDir + "Project.xml");
-            ProjectFileInfo info = Project.GetProjectFileInfo(dataDir + "Project.xml");
+            var info = Project.GetProjectFileInfo(dataDir + "Project.xml");
             Console.WriteLine(info.ProjectFileFormat);
             //ExEnd:ImportDataFromXMLFileFormats
         }

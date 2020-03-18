@@ -1,7 +1,3 @@
-using System;
-using System.Data.SqlClient;
-using Aspose.Tasks.Connectivity;
-
 /*
 This project uses Automatic Package Restore feature of NuGet to resolve Aspose.Tasks for .NET API reference 
 when the project is build. Please check https:// Docs.nuget.org/consume/nuget-faq for more information. 
@@ -12,15 +8,24 @@ please feel free to contact us using https://forum.aspose.com/c/tasks
 
 namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.CreatingReadingAndSaving
 {
+    using System;
+    using System.Data.SqlClient;
+
+    using Aspose.Tasks.Connectivity;
+    using Aspose.Tasks.Saving;
+
     public class ImportProjectDataFromDatabase
     {
         public static void Run()
         {
+            // The path to the documents directory.
+            var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
+
             //ExStart:ImportProjectDataFromDatabase   
             try
             {
                 // Create connection string
-                SqlConnectionStringBuilder sqlConnectionString = new SqlConnectionStringBuilder();
+                var sqlConnectionString = new SqlConnectionStringBuilder();
                 sqlConnectionString.DataSource = "192.168.56.2,1433";
                 sqlConnectionString.Encrypt = true;
                 sqlConnectionString.TrustServerCertificate = true;
@@ -30,14 +35,14 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.CreatingReadingAndSav
                 sqlConnectionString.Password = "*****";
 
                 // Use Aspose.Tasks.Connectivity namespace
-                MspDbSettings settings = new MspDbSettings(sqlConnectionString.ConnectionString, new Guid("E6426C44-D6CB-4B9C-AF16-48910ACE0F54"));
-                Project project = new Project(settings);
+                var settings = new MspDbSettings(sqlConnectionString.ConnectionString, new Guid("E6426C44-D6CB-4B9C-AF16-48910ACE0F54"));
+                var project = new Project(settings);
+                project.Save(dataDir + "ImportProjectDataFromDatabase_out.mpp", SaveFileFormat.MPP);
             }
             catch (Exception ex)
             {
                 Console.WriteLine(ex.Message + "\nPlease setup proper data source (DataSource, InitialCatalog etc)");
             }
-            
             //ExEnd:ImportProjectDataFromDatabase
         }
     }

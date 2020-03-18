@@ -1,17 +1,17 @@
-using Aspose.Tasks.Saving;
-
 namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.WorkingWithProjectProperties
 {
+    using Aspose.Tasks.Saving;
+
     public class WriteWeekdayProperties
     {
         public static void Run()
         {
             //ExStart:WriteWeekdayProperties
             // The path to the documents directory.
-            string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
+            var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
             // Create a project instance
-            Project project = new Project(dataDir + "WriteWeekdayProperties.mpp");
+            var project = new Project(dataDir + "WriteWeekdayProperties.mpp");
 
             // Set week days properties
             project.Set(Prj.WeekStartDay, DayType.Monday);

@@ -1,7 +1,4 @@
-﻿using Aspose.Tasks.Saving;
-using System;
-
-/*
+﻿/*
 This project uses Automatic Package Restore feature of NuGet to resolve Aspose.Tasks for .NET API reference 
 when the project is build. Please check https:// Docs.nuget.org/consume/nuget-faq for more information. 
 If you do not wish to use NuGet, you can manually download Aspose.Tasks for .NET API from https://www.nuget.org/packages/Aspose.Tasks/, 
@@ -11,17 +8,21 @@ please feel free to contact us using https://forum.aspose.com/c/tasks
 
 namespace Aspose.Tasks.Examples.CSharp.WorkingWithTasks
 {
-    class WriteTaskDuration
+    using System;
+
+    using Aspose.Tasks.Saving;
+
+    internal class WriteTaskDuration
     {
         public static void Run()
         {
             //ExStart:WriteTaskDuration
             // Create a new project and add a new task
-            Project project = new Project();
-            Task task = project.RootTask.Children.Add("Task");
+            var project = new Project();
+            var task = project.RootTask.Children.Add("Task");
 
             // Task duration in days (default time unit)
-            Duration duration = task.Get(Tsk.Duration);
+            var duration = task.Get(Tsk.Duration);
             Console.WriteLine("Duration equals 1 day: {0}", duration.ToString().Equals("1 day"));
 
             // Convert to hours time unit
@@ -41,7 +42,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithTasks
             //ExEnd:WriteTaskDuration
 
             // Save project as PDF
-            string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
+            var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
             project.Save(dataDir + "WriteTaskDuration_out.pdf", SaveFileFormat.PDF);
         }
     }

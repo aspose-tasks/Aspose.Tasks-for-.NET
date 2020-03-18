@@ -1,23 +1,24 @@
-﻿using System;
-using Aspose.Tasks.Saving;
-using Aspose.Tasks.Visualization;
-
-namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.WorkingWithProjectViews
+﻿namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.WorkingWithProjectViews
 {
+    using System;
+
+    using Aspose.Tasks.Saving;
+    using Aspose.Tasks.Visualization;
+
     public class CustomizeTimescaleTierLabels
     {
         public static void Run()
         {
             // The path to the documents directory.
-            string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
+            var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
             //ExStart:CustomizeTimescaleTierLabels
-            Project project = new Project(dataDir + "Project5.mpp");
+            var project = new Project(dataDir + "Project5.mpp");
 
             // Add task links
             project.TaskLinks.Add(project.RootTask.Children.Add("Task 1"), project.RootTask.Children.Add("Task 2"));
             
-            GanttChartView view = (GanttChartView)project.DefaultView;
+            var view = (GanttChartView)project.DefaultView;
             
             // This code is added for better visualization
             view.MiddleTimescaleTier.Unit = TimescaleUnit.Months;

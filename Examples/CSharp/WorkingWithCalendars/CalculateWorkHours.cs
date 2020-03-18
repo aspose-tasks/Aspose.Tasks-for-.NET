@@ -1,28 +1,28 @@
-﻿using System;
-
-namespace Aspose.Tasks.Examples.CSharp.WorkingWithCalendars
+﻿namespace Aspose.Tasks.Examples.CSharp.WorkingWithCalendars
 {
-    class CalculateWorkHours
+    using System;
+
+    internal class CalculateWorkHours
     {
         public static void Run()
         {
             //ExStart:CalculateWorkHours
             // Load an existing project
-            string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
-            Project project = new Project(dataDir + "CalculateWorkHours.mpp");
+            var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
+            var project = new Project(dataDir + "CalculateWorkHours.mpp");
 
             // Access Task By Id
-            Task task = project.RootTask.Children.GetById(1);
+            var task = project.RootTask.Children.GetById(1);
 
             // Access Calendar and it's start and end dates
-            Aspose.Tasks.Calendar taskCalendar = task.Get(Tsk.Calendar);
-            DateTime startDate = task.Get(Tsk.Start);
-            DateTime endDate = task.Get(Tsk.Finish);
-            DateTime tempDate = startDate;
+            var taskCalendar = task.Get(Tsk.Calendar);
+            var startDate = task.Get(Tsk.Start);
+            var endDate = task.Get(Tsk.Finish);
+            var tempDate = startDate;
 
             // Access resource and their calendar
-            Resource resource = project.Resources.GetByUid(1);
-            Aspose.Tasks.Calendar resourceCalendar = resource.Get(Rsc.Calendar);
+            var resource = project.Resources.GetByUid(1);
+            var resourceCalendar = resource.Get(Rsc.Calendar);
 
             TimeSpan timeSpan;
 

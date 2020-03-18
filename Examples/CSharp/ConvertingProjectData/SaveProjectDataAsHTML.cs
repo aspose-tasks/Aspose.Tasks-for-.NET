@@ -1,5 +1,3 @@
-using Aspose.Tasks.Saving;
-
 /*
 This project uses Automatic Package Restore feature of NuGet to resolve Aspose.Tasks for .NET API reference 
 when the project is build. Please check https:// Docs.nuget.org/consume/nuget-faq for more information. 
@@ -10,16 +8,20 @@ please feel free to contact us using https://forum.aspose.com/c/tasks
 
 namespace Aspose.Tasks.Examples.CSharp.ConvertingProjectData
 {
+    using Aspose.Tasks.Saving;
+
     public class SaveProjectDataAsHTML
     {
         public static void Run()
         {
             // The path to the documents directory.
-            string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
+            var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
             //ExStart:SaveProjectDataAsHTML
-            Project project = new Project(dataDir + "CreateProject2.mpp");
-            HtmlSaveOptions option = new HtmlSaveOptions();
+            //ExFor: SaveFileFormat.HTML
+            //ExSummary: Shows how to save a project in HTML format.
+            var project = new Project(dataDir + "CreateProject2.mpp");
+            var option = new HtmlSaveOptions();
             project.Save(dataDir + "SaveProjectDataAsHTML_out.html", option);
 
             // OR

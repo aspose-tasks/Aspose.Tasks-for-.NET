@@ -1,15 +1,19 @@
-﻿using System.IO;
-
-namespace Aspose.Tasks.Examples.CSharp.Licensing
+﻿namespace Aspose.Tasks.Examples.CSharp.Licensing
 {
-    class ApplyLicenseUsingStream
+    using System.IO;
+
+    internal class ApplyLicenseUsingStream
     {
         public static void Run()
         {
             //ExStart:ApplyLicenseUsingStream
-            Aspose.Tasks.License license = new Aspose.Tasks.License();
-            FileStream myStream = new FileStream("Aspose.Tasks.lic", FileMode.Open);
-            license.SetLicense(myStream);
+            //ExFor: License(Stream)
+            //ExSummary: Shows how to apply a license of Aspose.Tasks read from <see cref="System.IO.FileStream" />.
+            var license = new License();
+            using (var stream = new FileStream("Aspose.Tasks.lic", FileMode.Open))
+            {
+                license.SetLicense(stream);
+            }
             //ExEnd:ApplyLicenseUsingStream
         }
     }

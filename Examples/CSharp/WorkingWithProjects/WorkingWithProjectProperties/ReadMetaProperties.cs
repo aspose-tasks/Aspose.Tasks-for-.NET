@@ -1,17 +1,17 @@
-﻿using System;
-
-namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.WorkingWithProjectProperties
+﻿namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.WorkingWithProjectProperties
 {
-    class ReadMetaProperties
+    using System;
+
+    internal class ReadMetaProperties
     {
         public static void Run()
         {
-            //ExStart:ReadMetaProperties
             // The path to the documents directory.
-            string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
+            var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
+            //ExStart:ReadMetaProperties
             // Create a project reader instance
-            Project project = new Project(dataDir + "ReadProjectInfo.mpp");
+            var project = new Project(dataDir + "ReadProjectInfo.mpp");
 
             // custom properties are available through the typed collection
             foreach (var property in project.CustomProps)

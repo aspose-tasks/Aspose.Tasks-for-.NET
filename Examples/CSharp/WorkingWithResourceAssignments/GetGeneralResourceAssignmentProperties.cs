@@ -1,20 +1,20 @@
-﻿using System;
-
-namespace Aspose.Tasks.Examples.CSharp.WorkingWithResourceAssignments
+﻿namespace Aspose.Tasks.Examples.CSharp.WorkingWithResourceAssignments
 {
-    class GetGeneralResourceAssignmentProperties
+    using System;
+
+    internal class GetGeneralResourceAssignmentProperties
     {
         public static void Run()
         {
             // The path to the documents directory.
-            string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
+            var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
             //ExStart:GetGeneralResourceAssignmentProperties
             // Create project instance
-            Project project1 = new Project(dataDir + "GetGeneralResourceAssignmentProperties.mpp");
+            var project = new Project(dataDir + "GetGeneralResourceAssignmentProperties.mpp");
 
             // Print general resource assignment properties
-            foreach (ResourceAssignment ra in project1.ResourceAssignments)
+            foreach (var ra in project.ResourceAssignments)
             {
                 Console.WriteLine(ra.Get(Asn.Uid));
                 Console.WriteLine(ra.Get(Asn.Start).ToShortDateString());

@@ -1,5 +1,3 @@
-using Aspose.Tasks.Saving;
-
 /*
 This project uses Automatic Package Restore feature of NuGet to resolve Aspose.Tasks for .NET API reference 
 when the project is build. Please check https:// Docs.nuget.org/consume/nuget-faq for more information. 
@@ -10,16 +8,20 @@ please feel free to contact us using https://forum.aspose.com/c/tasks
 
 namespace Aspose.Tasks.Examples.CSharp.ConvertingProjectData
 {
+    using Aspose.Tasks.Saving;
+
     public class SaveProjectAsText
     {
         public static void Run()
         {
             // The path to the documents directory.
-            string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
+            var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
             
             //ExStart:SaveProjectAsText
+            //ExFor: SaveFileFormat.TXT
+            //ExSummary: Shows how to save a project in TXT format. 
             // Read the input Project file
-            Project project = new Project(dataDir + "CreateProject2.mpp");
+            var project = new Project(dataDir + "CreateProject2.mpp");
 
             // Save the Project as text
             project.Save(dataDir + "SaveProjectAsText_out.txt", SaveFileFormat.TXT);

@@ -1,23 +1,23 @@
-﻿using System;
-
-namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.WorkingWithProjectProperties
+﻿namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.WorkingWithProjectProperties
 {
-    class ApplyCalculationModeAuto
+    using System;
+
+    internal class ApplyCalculationModeAuto
     {
         public static void Run()
         {
             //ExStart:ApplyCalculationModeAuto
             // Create empty project and set calculation mode to Automatic
-            Project project = new Project();
+            var project = new Project();
             project.CalculationMode = CalculationMode.Automatic;
 
             // Set project start date and add new tasks
             project.Set(Prj.StartDate, new DateTime(2015, 4, 15));
-            Task task1 = project.RootTask.Children.Add("Task 1");
-            Task task2 = project.RootTask.Children.Add("Task 2");
+            var task1 = project.RootTask.Children.Add("Task 1");
+            var task2 = project.RootTask.Children.Add("Task 2");
 
             // Link tasks
-            TaskLink link = project.TaskLinks.Add(task1, task2, TaskLinkType.FinishToStart);
+            project.TaskLinks.Add(task1, task2, TaskLinkType.FinishToStart);
 
             // Verify dates have been recalculated
             Console.WriteLine("Task1 Start + 1 Equals Task2 Start : {0} ", task1.Get(Tsk.Start).AddDays(1).Equals(task2.Get(Tsk.Start)));

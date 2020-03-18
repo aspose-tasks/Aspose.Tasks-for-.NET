@@ -1,7 +1,4 @@
-﻿using Aspose.Tasks.Saving;
-using System;
-
-/*
+﻿/*
 This project uses Automatic Package Restore feature of NuGet to resolve Aspose.Tasks for .NET API reference 
 when the project is build. Please check https:// Docs.nuget.org/consume/nuget-faq for more information. 
 If you do not wish to use NuGet, you can manually download Aspose.Tasks for .NET API from https://www.nuget.org/packages/Aspose.Tasks/, 
@@ -11,27 +8,31 @@ please feel free to contact us using https://forum.aspose.com/c/tasks
 
 namespace Aspose.Tasks.Examples.CSharp.WorkingWithResources
 {
-    class UpdateResourceDataInMPP
+    using System;
+
+    using Aspose.Tasks.Saving;
+
+    internal class UpdateResourceDataInMPP
     {
         public static void Run()
         {
             try
             {
                 // The path to the documents directory.
-                string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
+                var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
                 //ExStart:UpdateResourceDataInMPP
                 // Create project instance
-                Project project1 = new Project(dataDir + "UpdateResourceData.mpp");
+                var project = new Project(dataDir + "UpdateResourceData.mpp");
 
                 // Add resource and set some properties
-                Resource rsc1 = project1.Resources.Add("Rsc");
+                var rsc1 = project.Resources.Add("Rsc");
                 rsc1.Set(Rsc.StandardRate, 30);
                 rsc1.Set(Rsc.OvertimeRate, 45);
                 rsc1.Set(Rsc.Group, "Workgroup1");
 
                 // Save the Project
-                project1.Save(dataDir + "UpdateResourceData_out.mpp", SaveFileFormat.MPP);
+                project.Save(dataDir + "UpdateResourceData_out.mpp", SaveFileFormat.MPP);
                 //ExEnd:UpdateResourceDataInMPP
             }
             catch (Exception ex)

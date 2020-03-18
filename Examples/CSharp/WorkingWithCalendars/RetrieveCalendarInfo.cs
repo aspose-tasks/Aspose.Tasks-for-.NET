@@ -1,21 +1,21 @@
-using System;
-
 namespace Aspose.Tasks.Examples.CSharp.WorkingWithCalendars
 {
+    using System;
+
     public class RetrieveCalendarInfo
     {
         public static void Run()
         {
             //ExStart:RetrieveCalendarInfo
             // The path to the documents directory.
-            string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
+            var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
             // Create a project instance
-            Project project = new Project(dataDir + "RetrieveCalendarInfo.mpp");
+            var project = new Project(dataDir + "RetrieveCalendarInfo.mpp");
 
             // Retrieve Calendars Information
-            CalendarCollection calendars = project.Calendars;
-            foreach (Calendar cal in calendars)
+            var calendars = project.Calendars;
+            foreach (var cal in calendars)
             {
                 if (cal.Name == null)
                 {
@@ -25,15 +25,17 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithCalendars
                 Console.WriteLine("Calendar UID : " + cal.Uid);
                 Console.WriteLine("Calendar Name : " + cal.Name);
 
-                WeekDayCollection days = cal.WeekDays;
-                foreach (WeekDay wd in days)
+                var days = cal.WeekDays;
+                foreach (var wd in days)
                 {
-                    TimeSpan ts = wd.GetWorkingTime();
-                    if (wd.DayWorking)
+                    var ts = wd.GetWorkingTime();
+                    if (!wd.DayWorking) 
                     {
-                        Console.WriteLine(wd.DayType + ":");
-                        Console.WriteLine(ts.ToString());
+                        continue;
                     }
+
+                    Console.WriteLine(wd.DayType + ":");
+                    Console.WriteLine(ts.ToString());
                 }
             }
             //ExEnd:RetrieveCalendarInfo

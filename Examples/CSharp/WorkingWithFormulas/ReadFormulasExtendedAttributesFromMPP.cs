@@ -1,5 +1,3 @@
-using System;
-
 /*
 This project uses Automatic Package Restore feature of NuGet to resolve Aspose.Tasks for .NET API reference 
 when the project is build. Please check https:// Docs.nuget.org/consume/nuget-faq for more information. 
@@ -10,18 +8,21 @@ please feel free to contact us using https://forum.aspose.com/c/tasks
 
 namespace Aspose.Tasks.Examples.CSharp.WorkingWithFormulas
 {
+    using System;
+
     public class ReadFormulasExtendedAttributesFromMPP
     {
         public static void Run()
         {
-            //ExStart:ReadFormulasExtendedAttributesFromMPP
             // The path to the documents directory.
+            var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
+
+            //ExStart:ReadFormulasExtendedAttributesFromMPP
             // Create project instance
-            string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
-            Project project1 = new Project(dataDir + "ReadFormulas.mpp"); // Attached test mpp
+            var project = new Project(dataDir + "ReadFormulas.mpp"); // Attached test mpp
            
             // Read extended attribute formula
-            ExtendedAttributeDefinition attr = project1.ExtendedAttributes[0];
+            var attr = project.ExtendedAttributes[0];
             Console.WriteLine("Attribute Formula: " + attr.Formula);
             //ExEnd:ReadFormulasExtendedAttributesFromMPP
         }

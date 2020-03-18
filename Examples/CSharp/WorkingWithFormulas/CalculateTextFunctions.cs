@@ -1,8 +1,8 @@
-﻿using System;
-
-namespace Aspose.Tasks.Examples.CSharp.WorkingWithFormulas
+﻿namespace Aspose.Tasks.Examples.CSharp.WorkingWithFormulas
 {
-    class CalculateTextFunctions
+    using System;
+
+    internal class CalculateTextFunctions
     {
         public static void Run()
         {
@@ -13,8 +13,8 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithFormulas
         //ExStart:CalculateTextFunctions
         private static void EvaluateStrConv()
         {
-            Project project = CreateTestProjectWithCustomField();
-            Task task = project.RootTask.Children.GetById(1);
+            var project = CreateTestProjectWithCustomField();
+            var task = project.RootTask.Children.GetById(1);
 
             // Set formulas and print extended attribute value
             project.ExtendedAttributes[0].Formula = "StrConv(\"sTring and sTRINg\",3)";
@@ -27,8 +27,8 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithFormulas
 
         private static void EvaluateStringFunction()
         {
-            Project project = CreateTestProjectWithCustomField();
-            Task task = project.RootTask.Children.GetById(1);
+            var project = CreateTestProjectWithCustomField();
+            var task = project.RootTask.Children.GetById(1);
                         
             // Set formulas and print extended attribute value
             project.ExtendedAttributes[0].Formula = "String(5, 40)";
@@ -43,13 +43,13 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithFormulas
 
         private static Project CreateTestProjectWithCustomField()
         {
-            Project project = new Project();
-            ExtendedAttributeDefinition attr = ExtendedAttributeDefinition.CreateTaskDefinition(CustomFieldType.Text, ExtendedAttributeTask.Text1, "Custom Field");
+            var project = new Project();
+            var attr = ExtendedAttributeDefinition.CreateTaskDefinition(CustomFieldType.Text, ExtendedAttributeTask.Text1, "Custom Field");
             project.ExtendedAttributes.Add(attr);
 
-            Task task = project.RootTask.Children.Add("Task");
+            var task = project.RootTask.Children.Add("Task");
 
-            ExtendedAttribute a = attr.CreateExtendedAttribute();
+            var a = attr.CreateExtendedAttribute();
             task.ExtendedAttributes.Add(a);
             return project;
         }   

@@ -1,7 +1,4 @@
-﻿using Aspose.Tasks.Saving;
-using System;
-
-/*
+﻿/*
 This project uses Automatic Package Restore feature of NuGet to resolve Aspose.Tasks for .NET API reference 
 when the project is build. Please check https:// Docs.nuget.org/consume/nuget-faq for more information. 
 If you do not wish to use NuGet, you can manually download Aspose.Tasks for .NET API from https://www.nuget.org/packages/Aspose.Tasks/, 
@@ -11,29 +8,33 @@ please feel free to contact us using https://forum.aspose.com/c/tasks
 
 namespace Aspose.Tasks.Examples.CSharp.Miscellaneous
 {
-    class UpdateOutlineCodes
+    using System;
+
+    using Aspose.Tasks.Saving;
+
+    internal class UpdateOutlineCodes
     {
         public static void Run()
         {
             try
             {
                 //ExStart:UpdateOutlineCodes
-                string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
-                Project project = new Project(dataDir + "project.mpp");
+                var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
+                var project = new Project(dataDir + "project.mpp");
                  
                 // Define outline code and its outline mask
-                OutlineCodeDefinition code1 = new OutlineCodeDefinition();
+                var code1 = new OutlineCodeDefinition();
                 code1.Alias = "New task outline code1";
                 code1.FieldId = ((int)ExtendedAttributeTask.OutlineCode1).ToString();
                 code1.FieldName = "Outline Code1";
-                OutlineMask mask = new OutlineMask();
+                var mask = new OutlineMask();
                 mask.Separator = "+";
                 mask.Level = 1;
                 mask.Type = MaskType.Numbers;
                 code1.Masks.Add(mask);
 
                 // Add outline value
-                OutlineValue value = new OutlineValue();
+                var value = new OutlineValue();
                 value.Description = "Value description";
                 value.ValueId = 1;
                 value.Value = "123456";
@@ -44,18 +45,18 @@ namespace Aspose.Tasks.Examples.CSharp.Miscellaneous
                 project.OutlineCodes.Add(code1);
 
                 // Define outline code and its outline mask
-                OutlineCodeDefinition code2 = new OutlineCodeDefinition();
+                var code2 = new OutlineCodeDefinition();
                 code2.Alias = "New rsc outline code2";
                 code2.FieldId = ((int)ExtendedAttributeResource.OutlineCode2).ToString();
                 code2.FieldName = "Outline Code2";
-                OutlineMask mask2 = new OutlineMask();
+                var mask2 = new OutlineMask();
                 mask2.Separator = "/";
                 mask2.Level = 1;
                 mask2.Type = MaskType.Numbers;
                 code2.Masks.Add(mask2);
 
                 // Add outline value
-                OutlineValue value2 = new OutlineValue();
+                var value2 = new OutlineValue();
                 value2.Description = "Value2 description";
                 value2.ValueId = 2;
                 value2.Value = "987654";

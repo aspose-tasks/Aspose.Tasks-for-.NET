@@ -1,8 +1,8 @@
-﻿using System;
-
-namespace Aspose.Tasks.Examples.CSharp.WorkingWithFormulas
+﻿namespace Aspose.Tasks.Examples.CSharp.WorkingWithFormulas
 {
-    class CalculateMathExpressions
+    using System;
+
+    internal class CalculateMathExpressions
     {
         public static void Run()
         {
@@ -12,25 +12,25 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithFormulas
         //ExStart:CalculateMathExpressions
         private static void EvaluateSine()
         {
-            Project project = CreateTestProjectWithCustomField();
+            var project = CreateTestProjectWithCustomField();
             
             // Set formula Sin(pi/2)
             project.ExtendedAttributes[0].Formula = "Sin(3.1415926/2)";
 
             // Print Calculated value
-            Task task = project.RootTask.Children.GetById(1);
+            var task = project.RootTask.Children.GetById(1);
             Console.WriteLine("Sin(pi/2): {0}", task.ExtendedAttributes[0].NumericValue);
         }
 
         private static Project CreateTestProjectWithCustomField()
         {
-            Project project = new Project();
-            ExtendedAttributeDefinition attr = ExtendedAttributeDefinition.CreateTaskDefinition(CustomFieldType.Number, ExtendedAttributeTask.Number1, "Sine");         
+            var project = new Project();
+            var attr = ExtendedAttributeDefinition.CreateTaskDefinition(CustomFieldType.Number, ExtendedAttributeTask.Number1, "Sine");         
             project.ExtendedAttributes.Add(attr);
 
-            Task task = project.RootTask.Children.Add("Task");
+            var task = project.RootTask.Children.Add("Task");
 
-            ExtendedAttribute a = attr.CreateExtendedAttribute();
+            var a = attr.CreateExtendedAttribute();
             task.ExtendedAttributes.Add(a);
             return project;
         }

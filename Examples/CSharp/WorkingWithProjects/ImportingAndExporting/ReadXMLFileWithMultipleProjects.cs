@@ -8,18 +8,21 @@ please feel free to contact us using https://forum.aspose.com/c/tasks
 
 namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.ImportingAndExporting
 {
+    using System;
+
     public class ReadXMLFileWithMultipleProjects
     {
         public static void Run()
         {
             // The path to the documents directory.
-            string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
+            var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
             //ExStart:ReadXMLFileWithMultipleProjects
-            PrimaveraXmlReadingOptions options = new PrimaveraXmlReadingOptions();
+            var options = new PrimaveraXmlReadingOptions();
             options.ProjectUid = 4557;
             // Returns project with special Uid
-            Project project = new Project(dataDir + "Project.xml", options); 
+            var project = new Project(dataDir + "Project.xml", options);
+            Console.WriteLine(project.Get(Prj.Name));
             //ExEnd:ReadXMLFileWithMultipleProjects
         }
     }

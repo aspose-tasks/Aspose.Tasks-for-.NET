@@ -1,6 +1,3 @@
-using System.Drawing.Imaging;
-using Aspose.Tasks.Saving;
-
 /*
 This project uses Automatic Package Restore feature of NuGet to resolve Aspose.Tasks for .NET API reference 
 when the project is build. Please check https:// Docs.nuget.org/consume/nuget-faq for more information. 
@@ -11,16 +8,22 @@ please feel free to contact us using https://forum.aspose.com/c/tasks
 
 namespace Aspose.Tasks.Examples.CSharp.ConvertingProjectData
 {
+    using System.Drawing.Imaging;
+
+    using Aspose.Tasks.Saving;
+
     public class RenderProjectDataToFormat24bppRgb
     {
         public static void Run()
         {
             // The path to the documents directory.
-            string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
+            var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
             //ExStart:RenderProjectDataToFormat24bppRgb
-            Project project = new Project(dataDir + "TestProject1.mpp");
-            ImageSaveOptions options = new ImageSaveOptions(SaveFileFormat.TIFF);
+            //ExFor: ImageSaveOptions.PixelFormat
+            //ExSummary: Shows how to set pixel format which is used during conversion into image formats. 
+            var project = new Project(dataDir + "TestProject1.mpp");
+            var options = new ImageSaveOptions(SaveFileFormat.TIFF);
             options.HorizontalResolution = 72;
             options.VerticalResolution = 72;
             options.PixelFormat = PixelFormat.Format24bppRgb;

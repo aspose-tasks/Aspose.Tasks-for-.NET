@@ -1,8 +1,4 @@
-﻿using System;
-
-using Aspose.Tasks.Visualization;
-
-/*
+﻿/*
 This project uses Automatic Package Restore feature of NuGet to resolve Aspose.Tasks for .NET API reference 
 when the project is build. Please check https:// Docs.nuget.org/consume/nuget-faq for more information. 
 If you do not wish to use NuGet, you can manually download Aspose.Tasks for .NET API from https://www.nuget.org/packages/Aspose.Tasks/, 
@@ -12,17 +8,21 @@ please feel free to contact us using https://forum.aspose.com/c/tasks
 
 namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects
 {
-    class ReadHeaderFooterInfo
+    using System;
+
+    using Aspose.Tasks.Visualization;
+
+    internal class ReadHeaderFooterInfo
     {
         //ExStart:ReadHeaderFooterInfo
         public static void Run()
         {
             // The path to the documents directory.
-            string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
+            var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
             // Create project and project info instances
-            Project project = new Project(dataDir + "Blank2010.mpp");
-            PageInfo info = project.DefaultView.PageInfo;
+            var project = new Project(dataDir + "Blank2010.mpp");
+            var info = project.DefaultView.PageInfo;
 
             Console.WriteLine("Page data cannot be null : {0} ", !info.Equals(null));
 
@@ -84,7 +84,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects
             Console.WriteLine("Legend right text Equals RIGHT LEGEND : {0} ", info.Legend.RightText.Equals("RIGHT LEGEND"));
 
             Console.WriteLine("LegendOn Equals Legend.OnEveryPage : {0} ", info.Legend.LegendOn.Equals(Legend.OnEveryPage));
-            Console.WriteLine("Legend Width Equals 5 : {0} ", (info.Legend.Width - 5 <= 1e-5));            
+            Console.WriteLine("Legend Width Equals 5 : {0} ", info.Legend.Width - 5 <= 1e-5);
         }
         //ExEnd:ReadHeaderFooterInfo
     }

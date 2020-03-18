@@ -1,6 +1,4 @@
-﻿using Aspose.Tasks.Saving;
-
-/*
+﻿/*
 This project uses Automatic Package Restore feature of NuGet to resolve Aspose.Tasks for .NET API reference 
 when the project is build. Please check https:// Docs.nuget.org/consume/nuget-faq for more information. 
 If you do not wish to use NuGet, you can manually download Aspose.Tasks for .NET API from https://www.nuget.org/packages/Aspose.Tasks/, 
@@ -10,12 +8,14 @@ please feel free to contact us using https://forum.aspose.com/c/tasks
 
 namespace Aspose.Tasks.Examples.CSharp.Articles
 {
-    class RenderMultipageTIFF
+    using Aspose.Tasks.Saving;
+
+    internal class RenderMultipageTIFF
     {
         public static void Run()
         {
             // The path to the documents directory.
-            string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
+            var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
             //ExStart:RenderMultipageTIFF
             //ExFor: SaveFileFormat.TIFF
@@ -24,14 +24,14 @@ namespace Aspose.Tasks.Examples.CSharp.Articles
             //ExFor: TiffCompression.Ccitt3
             //ExFor: TiffCompression.Ccitt4
             //ExFor: TiffCompression.Lzw
-            //ExSummary: 
-            Project project = new Project(dataDir + "Project2.mpp");
+            //ExSummary: Shows how to set TIFF compression mode (can be one of the values of the <see cref="P:Aspose.Tasks.Saving.PageSize" /> enumeration).
+            var project = new Project(dataDir + "Project2.mpp");
 
             // Save the project to TIFF
             project.Save(dataDir + "RenderMultipageTIFF_out.tif", SaveFileFormat.TIFF);
 
             // Save the project with Rle compression
-            ImageSaveOptions options = new ImageSaveOptions(SaveFileFormat.TIFF);
+            var options = new ImageSaveOptions(SaveFileFormat.TIFF);
             options.TiffCompression = TiffCompression.Rle;
             project.Save(dataDir + "RenderMultipageTIFF_comp_rle_out.tif", options);
             

@@ -1,18 +1,18 @@
-﻿using System;
-
-namespace Aspose.Tasks.Examples.CSharp.WorkingWithTaskLinks
+﻿namespace Aspose.Tasks.Examples.CSharp.WorkingWithTaskLinks
 {
-    class GetPredecessorSuccessorTasks
+    using System;
+
+    internal class GetPredecessorSuccessorTasks
     {
         public static void Run()
         {
             //ExStart:GetPredecessorSuccessorTasks
             // Create project instance
-            string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
-            Project project1 = new Project(dataDir + "GetPredecessorSuccessorTasks.mpp");
+            var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
+            var project = new Project(dataDir + "GetPredecessorSuccessorTasks.mpp");
 
             // Display names of predecessor and successor tasks
-            foreach (TaskLink taskLink in project1.TaskLinks)
+            foreach (var taskLink in project.TaskLinks)
             {
                 Console.WriteLine("Predecessor " + taskLink.PredTask.Get(Tsk.Name));
                 Console.WriteLine("Predecessor " + taskLink.SuccTask.Get(Tsk.Name));

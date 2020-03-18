@@ -1,6 +1,3 @@
-using Aspose.Tasks.Saving;
-using System;
-
 /*
 This project uses Automatic Package Restore feature of NuGet to resolve Aspose.Tasks for .NET API reference 
 when the project is build. Please check https:// Docs.nuget.org/consume/nuget-faq for more information. 
@@ -11,23 +8,27 @@ please feel free to contact us using https://forum.aspose.com/c/tasks
 
 namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects
 {
+    using System;
+
+    using Aspose.Tasks.Saving;
+
     public class WorkingWithOutlineCodes
     {
         public static void Run()
         {
             // The path to the documents directory.
-            string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
+            var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
-            //ReadOutlineCodes(dataDir);
+            ReadOutlineCodes(dataDir);
             CheckOutlineCodeIdUniqueness(dataDir);
         }
 
         private static void ReadOutlineCodes(string dataDir)
         {
             //ExStart:ReadOutlineCodes
-            Project project = new Project(dataDir + "OutlineCodes.mpp");
+            var project = new Project(dataDir + "OutlineCodes.mpp");
 
-            foreach (OutlineCodeDefinition ocd in project.OutlineCodes)
+            foreach (var ocd in project.OutlineCodes)
             {
                 Console.WriteLine("Alias = " + ocd.Alias);
                 Console.WriteLine(ocd.AllLevelsRequired ? "It contains property: must have all levels" : "It does not contain property: must have all levels");
@@ -39,14 +40,14 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects
                 Console.WriteLine("Guid = " + ocd.Guid);
 
                 // Display outline code masks
-                foreach (OutlineMask outlineMask in ocd.Masks)
+                foreach (var outlineMask in ocd.Masks)
                 {
                     Console.WriteLine("Level of a mask = " + outlineMask.Level);
                     Console.WriteLine("Mask = " + outlineMask);
                 }
 
                 // Display out line code values
-                foreach (OutlineValue outlineMask1 in ocd.Values)
+                foreach (var outlineMask1 in ocd.Values)
                 {
                     Console.WriteLine("Description of outline value = " + outlineMask1.Description);
                     Console.WriteLine("Value Id = " + outlineMask1.ValueId);
@@ -60,19 +61,19 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects
         private static void CheckOutlineCodeIdUniqueness(string dataDir)
         {
             //ExStart:CheckOutlineCodeIdUniqueness
-            Project project = new Project(dataDir + "OutlineValues2010.mpp");
+            var project = new Project(dataDir + "OutlineValues2010.mpp");
 
-            OutlineCodeDefinition textOutline = new OutlineCodeDefinition();
+            var textOutline = new OutlineCodeDefinition();
             textOutline.FieldId = ExtendedAttributeTask.OutlineCode7.ToString("D");
             textOutline.Alias = "My Outline Code";
 
             project.OutlineCodes.Add(textOutline);
 
-            OutlineMask mask = new OutlineMask();
+            var mask = new OutlineMask();
             mask.Type = MaskType.Characters;
             textOutline.Masks.Add(mask);
 
-            OutlineValue textValue = new OutlineValue();
+            var textValue = new OutlineValue();
             textValue.Value = "Text value 1";
             textValue.ValueId = 1;
             textValue.Type = OutlineValueType.Text;

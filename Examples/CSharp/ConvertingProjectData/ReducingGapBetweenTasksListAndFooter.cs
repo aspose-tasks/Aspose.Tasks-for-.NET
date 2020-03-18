@@ -1,20 +1,20 @@
-﻿using Aspose.Tasks.Saving;
-using Aspose.Tasks.Visualization;
-
-namespace Aspose.Tasks.Examples.CSharp.ConvertingProjectData
+﻿namespace Aspose.Tasks.Examples.CSharp.ConvertingProjectData
 {
-    class ReducingGapBetweenTasksListAndFooter
+    using Aspose.Tasks.Saving;
+    using Aspose.Tasks.Visualization;
+
+    internal class ReducingGapBetweenTasksListAndFooter
     {
         public static void Run()
         {
             // The path to the documents directory.
-            string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
+            var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
             //ExStart: ReducingGapBetweenTasksListAndFooter
             //ExFor: ImageSaveOptions.ReduceFooterGap
             //ExSummary: Shows how to set a value indicating whether a gap between last task and the footer must be reduced.
 
-            Project project = new Project(dataDir + "CreateProject2.mpp");
+            var project = new Project(dataDir + "CreateProject2.mpp");
 
             //Use ReduceFooterGap property to reduce the gap between list of tasks and Footer
             var imageSaveOptions =

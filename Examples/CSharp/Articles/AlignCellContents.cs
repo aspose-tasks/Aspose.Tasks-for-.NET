@@ -1,9 +1,4 @@
-﻿using System.Drawing;
-
-using Aspose.Tasks.Saving;
-using Aspose.Tasks.Visualization;
-
-/*
+﻿/*
 This project uses Automatic Package Restore feature of NuGet to resolve Aspose.Tasks for .NET API reference 
 when the project is build. Please check https:// Docs.nuget.org/consume/nuget-faq for more information. 
 If you do not wish to use NuGet, you can manually download Aspose.Tasks for .NET API from https://www.nuget.org/packages/Aspose.Tasks/, 
@@ -13,22 +8,27 @@ please feel free to contact us using https://forum.aspose.com/c/tasks
 
 namespace Aspose.Tasks.Examples.CSharp.Articles
 {
-    class AlignCellContents
+    using System.Drawing;
+
+    using Aspose.Tasks.Saving;
+    using Aspose.Tasks.Visualization;
+
+    internal class AlignCellContents
     {
         public static void Run()
         {  
             // The path to the documents directory.
-            string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
+            var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
             //ExStart:AlignCellContents
             //ExFor: ViewColumn.StringAlignment
             //ExSummary: Shows how to set a alignment of the text in a column (can be one of the values of the <see cref="P:Aspose.Tasks.Visualization.ViewColumn.StringAlignment" /> enumeration).
-            Project project = new Project(dataDir + "Project2.mpp");
+            var project = new Project(dataDir + "Project2.mpp");
             SaveOptions options = new PdfSaveOptions();
             options.Timescale = Timescale.Months;
             options.View = ProjectView.GetDefaultGanttChartView();
 
-            GanttChartColumn column1 = (GanttChartColumn)options.View.Columns[2];
+            var column1 = (GanttChartColumn)options.View.Columns[2];
             column1.StringAlignment = StringAlignment.Center;
             var column2 = (GanttChartColumn)options.View.Columns[3];
             column2.StringAlignment = StringAlignment.Far;
@@ -40,7 +40,7 @@ namespace Aspose.Tasks.Examples.CSharp.Articles
             options.PresentationFormat = PresentationFormat.ResourceSheet;
             options.View = ProjectView.GetDefaultResourceSheetView();
 
-            ResourceViewColumn column4 = (ResourceViewColumn)options.View.Columns[2];
+            var column4 = (ResourceViewColumn)options.View.Columns[2];
             column4.StringAlignment = StringAlignment.Center;
             var column5 = (ResourceViewColumn)options.View.Columns[3];
             column5.StringAlignment = StringAlignment.Far;

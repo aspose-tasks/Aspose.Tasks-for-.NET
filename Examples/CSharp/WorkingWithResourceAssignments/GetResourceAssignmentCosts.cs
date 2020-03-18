@@ -1,20 +1,20 @@
-﻿using System;
-
-namespace Aspose.Tasks.Examples.CSharp.WorkingWithResourceAssignments
+﻿namespace Aspose.Tasks.Examples.CSharp.WorkingWithResourceAssignments
 {
-    class GetResourceAssignmentCosts
+    using System;
+
+    internal class GetResourceAssignmentCosts
     {
         public static void Run()
         {
             // The path to the documents directory.
-            string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
+            var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
             //ExStart:GetResourceAssignmentCosts
             // Create project instance
-            Project project1 = new Project(dataDir + "ResourceAssignmentCosts.mpp");
+            var project = new Project(dataDir + "ResourceAssignmentCosts.mpp");
 
             // Print resource assignment costs
-            foreach (ResourceAssignment ra in project1.ResourceAssignments)
+            foreach (var ra in project.ResourceAssignments)
             {
                 Console.WriteLine(ra.Get(Asn.Cost));
                 Console.WriteLine(ra.Get(Asn.ACWP));

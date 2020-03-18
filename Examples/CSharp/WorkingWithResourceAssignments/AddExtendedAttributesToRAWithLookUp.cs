@@ -1,26 +1,26 @@
-﻿using Aspose.Tasks.Saving;
-
-namespace Aspose.Tasks.Examples.CSharp.WorkingWithResourceAssignments
+﻿namespace Aspose.Tasks.Examples.CSharp.WorkingWithResourceAssignments
 {
+    using Aspose.Tasks.Saving;
+
     public class AddExtendedAttributesToRAWithLookUp
     {
         public static void Run()
         {
             // The path to the documents directory.
-            string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
+            var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
             
             //ExStart: AddExtendedAttributesToRAWithLookUp
             // Create new project
-            Project project = new Project(dataDir + "Blank2010.mpp");
+            var project = new Project(dataDir + "Blank2010.mpp");
 
             // Assign resource "1 TRG: Trade Group" to the "TASK 1" by creating a ResourceAssignment object.
-            Resource resource = project.Resources.GetById(1);
-            Task task = project.RootTask.Children.GetById(1);
+            var resource = project.Resources.GetById(1);
+            var task = project.RootTask.Children.GetById(1);
 
-            ResourceAssignment assignment = project.ResourceAssignments.Add(task, resource);
+            var assignment = project.ResourceAssignments.Add(task, resource);
 
             // Create custom attribute definition with lookup.
-            ExtendedAttributeDefinition resCostAttr = ExtendedAttributeDefinition.CreateLookupResourceDefinition(
+            var resCostAttr = ExtendedAttributeDefinition.CreateLookupResourceDefinition(
                 CustomFieldType.Cost,
                 ExtendedAttributeResource.Cost5,
                 "My lookup resource cost");
@@ -37,7 +37,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithResourceAssignments
             assignment.ExtendedAttributes.Add(attributeValue);
 
             // Create custom attribute definition with lookup.
-            ExtendedAttributeDefinition taskCostAttr = ExtendedAttributeDefinition.CreateLookupTaskDefinition(
+            var taskCostAttr = ExtendedAttributeDefinition.CreateLookupTaskDefinition(
                 ExtendedAttributeTask.Cost4,
                 "My lookup task cost");
 

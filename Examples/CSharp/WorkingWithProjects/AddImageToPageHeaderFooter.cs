@@ -1,8 +1,3 @@
-using System;
-using System.Drawing;
-using Aspose.Tasks.Saving;
-using Aspose.Tasks.Visualization;
-
 /*
 This project uses Automatic Package Restore feature of NuGet to resolve Aspose.Tasks for .NET API reference 
 when the project is build. Please check https:// Docs.nuget.org/consume/nuget-faq for more information. 
@@ -13,6 +8,11 @@ please feel free to contact us using https://forum.aspose.com/c/tasks
 
 namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects
 {
+    using System;
+    using System.Drawing;
+
+    using Aspose.Tasks.Saving;
+
     public class AddImageToPageHeaderFooter
     {
         public static void Run()
@@ -20,20 +20,20 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects
             try
             {
                 // The path to the documents directory.
-                string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
+                var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
                 //ExStart:AddImageToPageHeaderFooter
-                Project project = new Project(dataDir + "AddImageToPageHeaderFooter.mpp");
+                var project = new Project(dataDir + "AddImageToPageHeaderFooter.mpp");
 
                 project.RootTask.Children.Add("Task1");
-                PageInfo pageInfo = project.DefaultView.PageInfo;
+                var pageInfo = project.DefaultView.PageInfo;
                 
-                using (Image image = Image.FromFile(dataDir + "Image1.png"))
+                using (var image = Image.FromFile(dataDir + "Image1.png"))
                 {
                     pageInfo.Header.CenteredImage = image;
                     pageInfo.Legend.LeftImage = image;
                     pageInfo.Legend.LeftText = string.Empty;
-                    MPPSaveOptions saveOptions = new MPPSaveOptions();
+                    var saveOptions = new MPPSaveOptions();
                     saveOptions.WriteViewData = true;
                     project.Save(dataDir + "AddImageToPageHeaderFooter_out.mpp", saveOptions);
                 }

@@ -1,8 +1,4 @@
-﻿using Aspose.Tasks.Saving;
-using Aspose.Tasks.Visualization;
-using System.Collections.Generic;
-
-/*
+﻿/*
 This project uses Automatic Package Restore feature of NuGet to resolve Aspose.Tasks for .NET API reference 
 when the project is build. Please check https:// Docs.nuget.org/consume/nuget-faq for more information. 
 If you do not wish to use NuGet, you can manually download Aspose.Tasks for .NET API from https://www.nuget.org/packages/Aspose.Tasks/, 
@@ -12,15 +8,23 @@ please feel free to contact us using https://forum.aspose.com/c/tasks
 
 namespace Aspose.Tasks.Examples.CSharp.Articles
 {
+    using System;
+    using System.Collections.Generic;
+
+    using Aspose.Tasks.Saving;
+    using Aspose.Tasks.Visualization;
+
     //ExStart:SortTasksByColumnInGanttChart
-    class SortTasksByColumnInGanttChart
+    //ExFor: SaveOptions.TasksComparer
+    //ExSummary: Shows how to set a comparer to sort tasks on Gantt chart and/or Task Sheet chart.
+    internal class SortTasksByColumnInGanttChart
     {
         public static void Run()
         {
             // The path to the documents directory.
-            string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
+            var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
-            Project project = new Project(dataDir + "Project2.mpp");
+            var project = new Project(dataDir + "Project2.mpp");
             SaveOptions options = new PdfSaveOptions();
             options.Timescale = Timescale.Months;
 
@@ -34,8 +38,19 @@ namespace Aspose.Tasks.Examples.CSharp.Articles
         private class TasksNameComparer : IComparer<Task>
         {
             public int Compare(Task x, Task y)
-            {                
-                return x.Get(Tsk.Name).CompareTo(y.Get(Tsk.Name));
+            {
+                // ReSharper disable once ConvertIfStatementToSwitchStatement
+                if (x == null && y == null)
+                {
+                    return 0;
+                }
+
+                if (x == null)
+                {
+                    return -1;
+                }
+
+                return y == null ? 1 : string.Compare(x.Get(Tsk.Name), y.Get(Tsk.Name), StringComparison.Ordinal);
             }
         }
 
@@ -43,8 +58,24 @@ namespace Aspose.Tasks.Examples.CSharp.Articles
         {
             public int Compare(Task x, Task y)
             {
-                Duration durX = x.Get(Tsk.Duration);
-                Duration durY = y.Get(Tsk.Duration);
+                // ReSharper disable once ConvertIfStatementToSwitchStatement
+                if (x == null && y == null)
+                {
+                    return 0;
+                }
+
+                if (x == null)
+                {
+                    return -1;
+                }
+
+                if (y == null)
+                {
+                    return 1;
+                }
+                
+                var durX = x.Get(Tsk.Duration);
+                var durY = y.Get(Tsk.Duration);
                 return durX.TimeSpan.CompareTo(durY.TimeSpan);
             }
         }

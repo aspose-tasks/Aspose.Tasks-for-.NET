@@ -1,6 +1,3 @@
-using System;
-using System.Collections.Generic;
-
 /*
 This project uses Automatic Package Restore feature of NuGet to resolve Aspose.Tasks for .NET API reference 
 when the project is build. Please check https:// Docs.nuget.org/consume/nuget-faq for more information. 
@@ -11,16 +8,19 @@ please feel free to contact us using https://forum.aspose.com/c/tasks
 
 namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.Miscellaneous
 {
+    using System;
+    using System.Collections.Generic;
+
     public class ReadFilterDefinitionData
     {
         public static void Run()
         {
             // The path to the documents directory.
-            string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
+            var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
             //ExStart:ReadFilterDefinitionData
             // Instantiate project and access task filters
-            Project project = new Project(dataDir + "ReadFilterDefinitionData.mpp");
+            var project = new Project(dataDir + "ReadFilterDefinitionData.mpp");
             List<Filter> taskFilters = project.TaskFilters.ToList();
             Console.WriteLine("Task Filters Count: " + taskFilters.Count);
             Console.WriteLine("All Tasks: " + taskFilters[0].Name);

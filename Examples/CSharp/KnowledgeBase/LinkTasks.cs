@@ -1,24 +1,29 @@
-﻿using Aspose.Tasks.Saving;
-using System;
-
-namespace Aspose.Tasks.Examples.CSharp.KnowledgeBase
+﻿namespace Aspose.Tasks.Examples.CSharp.KnowledgeBase
 {
-    class LinkTasks
+    using System;
+
+    using Aspose.Tasks.Saving;
+
+    internal class LinkTasks
     {
         public static void Run()
         {
             try
             {
-                string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
+                var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
-                //ExStart:LinkTasks            
-                Project project = new Project(dataDir + "SampleProject.mpp");
+                //ExStart:LinkTasks
+                //ExFor: Project.TaskLinks.Add(Task, Task, TaskLinkType)
+                //ExFor: TaskLink.PredTask
+                //ExFor: TaskLink.SuccTask
+                //ExSummary: Shows how to add task links.
+                var project = new Project(dataDir + "SampleProject.mpp");
 
-                Task task1 = project.RootTask.Children.GetById(1);
-                Task task2 = project.RootTask.Children.GetById(2);
-                Task task3 = project.RootTask.Children.GetById(3);
-                Task task4 = project.RootTask.Children.GetById(4);
-                Task task5 = project.RootTask.Children.GetById(5);
+                var task1 = project.RootTask.Children.GetById(1);
+                var task2 = project.RootTask.Children.GetById(2);
+                var task3 = project.RootTask.Children.GetById(3);
+                var task4 = project.RootTask.Children.GetById(4);
+                var task5 = project.RootTask.Children.GetById(5);
 
                 // Link the tasks
                 project.TaskLinks.Add(task1, task2, TaskLinkType.FinishToStart);
@@ -28,8 +33,8 @@ namespace Aspose.Tasks.Examples.CSharp.KnowledgeBase
                 project.TaskLinks.Add(task2, task5, TaskLinkType.FinishToStart);
                 
                 // Display links among the tasks
-                TaskLinkCollection links = project.TaskLinks;
-                foreach (TaskLink link in links)
+                var links = project.TaskLinks;
+                foreach (var link in links)
                 {
                     Console.WriteLine("From ID = " + link.PredTask.Get(Tsk.Id) + "=>To ID = " + link.SuccTask.Get(Tsk.Id));
                     Console.WriteLine("________________________________________");

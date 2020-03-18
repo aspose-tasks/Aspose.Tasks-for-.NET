@@ -1,28 +1,31 @@
-﻿using Aspose.Tasks.Saving;
-using Aspose.Tasks.Visualization;
-
-namespace Aspose.Tasks.Examples.CSharp.Articles
+﻿namespace Aspose.Tasks.Examples.CSharp.Articles
 {
-    class TimescaleSettings
+    using Aspose.Tasks.Saving;
+    using Aspose.Tasks.Visualization;
+
+    internal class TimescaleSettings
     {
         public static void Run()
         {
+            var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
+            
             //ExStart:TimescaleSettings
-            Project project = new Project("Project2.mpp");
+            //ExFor: SaveOptions.Timescale
+            //ExSummary: Shows how to set the minimal time period to render. The default value is <see cref="P:Aspose.Tasks.Saving.SaveOptions.Timescale">Days</see>.
+            var project = new Project(dataDir + "Project2.mpp");
 
             // Save to one page image (Timescale.days by default)
-            project.Save("NewProductDevDays.jpeg", new ImageSaveOptions(SaveFileFormat.JPEG));
-
+            project.Save(dataDir + "NewProductDevDays.jpeg", new ImageSaveOptions(SaveFileFormat.JPEG));
 
             // Save to one page image (Timescale.ThirdsOfMonths)
-            ImageSaveOptions options = new ImageSaveOptions(SaveFileFormat.JPEG);
+            var options = new ImageSaveOptions(SaveFileFormat.JPEG);
             options.Timescale = Timescale.ThirdsOfMonths;
 
-            project.Save("NewProductDevThirdsOfMonths.jpeg", options);
+            project.Save(dataDir + "NewProductDevThirdsOfMonths.jpeg", options);
 
             // Save to one page image (Timescale.Months)
             options.Timescale = Timescale.Months;
-            project.Save("NewProductDevMonths.jpeg", options);
+            project.Save(dataDir + "NewProductDevMonths.jpeg", options);
             //ExEnd:TimescaleSettings
         }
     }

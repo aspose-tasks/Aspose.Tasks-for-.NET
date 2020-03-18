@@ -1,19 +1,20 @@
-﻿using System;
-
-namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.CreatingReadingAndSaving
+﻿namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.CreatingReadingAndSaving
 {
-    class ReadingProjectOnline
+    using System;
+    using System.Collections.Generic;
+
+    internal class ReadingProjectOnline
     {
         public static void Run()
         {
             //ExStart:ReadingProjectOnline
-            string sharepointDomainAddress = "https://contoso.sharepoint.com";
-            string userName = "admin@contoso.onmicrosoft.com";
-            string password = "MyPassword";
+            const string SharepointDomainAddress = "https://contoso.sharepoint.com";
+            const string UserName = "admin@contoso.onmicrosoft.com";
+            const string Password = "MyPassword";
 
-            var credentials = new ProjectServerCredentials(sharepointDomainAddress, userName, password);
+            var credentials = new ProjectServerCredentials(SharepointDomainAddress, UserName, Password);
             var reader = new ProjectServerManager(credentials);
-            var list = reader.GetProjectList();
+            IEnumerable<ProjectInfo> list = reader.GetProjectList();
 
             foreach (var p in list)
             {

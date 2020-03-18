@@ -1,17 +1,17 @@
-using Aspose.Tasks.Saving;
-
 namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.WorkingWithProjectProperties
 {
+    using Aspose.Tasks.Saving;
+
     public class WriteCurrencyProperties
     {
         public static void Run()
         {
             //ExStart:WriteCurrencyProperties
             // The path to the documents directory.
-            string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
+            var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
             // Create a project instance
-            Project project = new Project(dataDir + "WriteCurrencyProperties.mpp");
+            var project = new Project(dataDir + "WriteCurrencyProperties.mpp");
 
             // Set currency properties
             project.Set(Prj.CurrencyCode, "AUD");

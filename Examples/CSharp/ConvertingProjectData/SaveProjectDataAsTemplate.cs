@@ -1,6 +1,3 @@
-using Aspose.Tasks.Saving;
-using System;
-
 /*
 This project uses Automatic Package Restore feature of NuGet to resolve Aspose.Tasks for .NET API reference 
 when the project is build. Please check https:// Docs.nuget.org/consume/nuget-faq for more information. 
@@ -11,6 +8,10 @@ please feel free to contact us using https://forum.aspose.com/c/tasks
 
 namespace Aspose.Tasks.Examples.CSharp.ConvertingProjectData
 {
+    using System;
+
+    using Aspose.Tasks.Saving;
+
     public class SaveProjectDataAsTemplate
     {
         public static void Run()
@@ -18,26 +19,34 @@ namespace Aspose.Tasks.Examples.CSharp.ConvertingProjectData
             try
             {
                 // The path to the documents directory.
-                string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
+                var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
-                //ExStart:SaveProjectDataAsTemplate   
+                //ExStart:SaveProjectDataAsTemplate
+                //ExFor: SaveTemplateOptions
+                //ExFor: SaveTemplateOptions.RemoveActualValues
+                //ExFor: SaveTemplateOptions.RemoveBaselineValues
+                //ExFor: Project.SaveAsTemplate(String)
+                //ExFor: Project.SaveAsTemplate(Stream)
+                //ExFor: Project.SaveAsTemplate(String,SaveTemplateOptions)
+                //ExFor: Project.SaveAsTemplate(Stream,SaveTemplateOptions)
+                //ExSummary: Shows how to save project as a template.
                 const string ProjectName = "Project2.mpp";
-                Project project = new Project(dataDir + ProjectName);
-                ProjectFileInfo projectFileInfo = Project.GetProjectFileInfo(dataDir + ProjectName);
+                var project = new Project(dataDir + ProjectName);
+                var projectFileInfo = Project.GetProjectFileInfo(dataDir + ProjectName);
 
                 if (FileFormat.MPP14 == projectFileInfo.ProjectFileFormat)
                 {
                     Console.WriteLine("Project file format is ok");
                 }
 
-                SaveTemplateOptions options = new SaveTemplateOptions();
+                var options = new SaveTemplateOptions();
                 options.RemoveActualValues = true;
                 options.RemoveBaselineValues = true;
 
                 const string TemplateName = "SaveProjectDataAsTemplate_out.mpt";
                 project.SaveAsTemplate(dataDir + TemplateName);
 
-                ProjectFileInfo templateFileInfo = Project.GetProjectFileInfo(dataDir + TemplateName);
+                var templateFileInfo = Project.GetProjectFileInfo(dataDir + TemplateName);
                 if (FileFormat.MPT14 == templateFileInfo.ProjectFileFormat)
                 {
                     Console.WriteLine("Template FileFormat is ok");

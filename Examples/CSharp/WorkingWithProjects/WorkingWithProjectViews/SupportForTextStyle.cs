@@ -1,24 +1,24 @@
-﻿using Aspose.Tasks.Visualization;
-using System.Drawing;
-
-namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.WorkingWithProjectViews
+﻿namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.WorkingWithProjectViews
 {
-    class SupportForTextStyle
+    using System.Drawing;
+
+    using Aspose.Tasks.Visualization;
+
+    internal class SupportForTextStyle
     {
         public static void Run()
         {
-            //ExStart:SupportForTextStyle
             // The path to the documents directory.
-            string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
-            Project project = new Project(dataDir + "Project5.mpp"); // Create a new project task
-            var ganttChartView = project.Views.ToList()[0] as GanttChartView;
-            if (ganttChartView != null)
-            {
-                ganttChartView.TableTextStyles.Clear();
-                ganttChartView.TableTextStyles.Add(new TableTextStyle(1) { Color = Color.Red, Field = Field.TaskName });
-                ganttChartView.TableTextStyles.Add(new TableTextStyle(1) { Color = Color.Gray, Field = Field.TaskDurationText });
-                ganttChartView.TableTextStyles.Add(new TableTextStyle(2) { Color = Color.Blue, FontStyle = FontStyle.Bold | FontStyle.Italic | FontStyle.Underline });
-            }
+            var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
+
+            //ExStart:SupportForTextStyle
+            var project = new Project(dataDir + "Project5.mpp"); // Create a new project task
+            var view = (GanttChartView)project.Views.ToList()[0];
+            
+            view.TableTextStyles.Clear();
+            view.TableTextStyles.Add(new TableTextStyle(1) { Color = Color.Red, Field = Field.TaskName });
+            view.TableTextStyles.Add(new TableTextStyle(1) { Color = Color.Gray, Field = Field.TaskDurationText });
+            view.TableTextStyles.Add(new TableTextStyle(2) { Color = Color.Blue, FontStyle = FontStyle.Bold | FontStyle.Italic | FontStyle.Underline });
             //ExEnd:SupportForTextStyle
         }
     }

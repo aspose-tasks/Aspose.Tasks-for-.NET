@@ -1,7 +1,4 @@
-﻿using System;
-using Aspose.Tasks.Saving;
-
-/*
+﻿/*
 This project uses Automatic Package Restore feature of NuGet to resolve Aspose.Tasks for .NET API reference 
 when the project is build. Please check https:// Docs.nuget.org/consume/nuget-faq for more information. 
 If you do not wish to use NuGet, you can manually download Aspose.Tasks for .NET API from https://www.nuget.org/packages/Aspose.Tasks/, 
@@ -11,25 +8,29 @@ please feel free to contact us using https://forum.aspose.com/c/tasks
 
 namespace Aspose.Tasks.Examples.CSharp.WorkingWithTasks
 {
-    class MoveTaskUnderAnotherParent
+    using System;
+
+    using Aspose.Tasks.Saving;
+
+    internal class MoveTaskUnderAnotherParent
     {
         public static void Run()
         {        
             try
             {
-                //ExStart:MoveTaskUnderAnotherParent
                 // The path to the documents directory.
-                string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);  
+                var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);  
 
+                //ExStart:MoveTaskUnderAnotherParent
                 // Loading project file
-                Project project = new Project(dataDir + "MoveTask.mpp");
+                var project = new Project(dataDir + "MoveTask.mpp");
 
                 // Set CalculationMode
                 project.CalculationMode = CalculationMode.Automatic;
               
                 // Get Tasks by Ids
-                Task t6 = project.RootTask.Children.GetByUid(6);
-                Task t3 = project.RootTask.Children.GetByUid(3);
+                var t6 = project.RootTask.Children.GetByUid(6);
+                var t3 = project.RootTask.Children.GetByUid(3);
 
                 // Adding Task 6 to another parent
                 t3.Children.Add(t6);

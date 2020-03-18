@@ -1,20 +1,20 @@
-﻿using System;
-
-namespace Aspose.Tasks.Examples.CSharp.WorkingWithResourceAssignments
+﻿namespace Aspose.Tasks.Examples.CSharp.WorkingWithResourceAssignments
 {
-    class GetResourceAssignmentOvertimes
+    using System;
+
+    internal class GetResourceAssignmentOvertimes
     {
         public static void Run()
         {
             // The path to the documents directory.
-            string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
+            var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
             //ExStart:GetResourceAssignmentOvertimes
             // Create project instance
-            Project project1 = new Project(dataDir + "ResourceAssignmentOvertimes.mpp");
+            var project = new Project(dataDir + "ResourceAssignmentOvertimes.mpp");
 
             // Print assignment overtimes
-            foreach (ResourceAssignment ra in project1.ResourceAssignments)
+            foreach (var ra in project.ResourceAssignments)
             {
                 Console.WriteLine(ra.Get(Asn.OvertimeCost));
                 Console.WriteLine(ra.Get(Asn.OvertimeWork).ToString());

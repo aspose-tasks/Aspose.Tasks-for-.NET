@@ -1,7 +1,4 @@
-﻿using Aspose.Tasks.Saving;
-using System;
-
-/*
+﻿/*
 This project uses Automatic Package Restore feature of NuGet to resolve Aspose.Tasks for .NET API reference 
 when the project is build. Please check https:// Docs.nuget.org/consume/nuget-faq for more information. 
 If you do not wish to use NuGet, you can manually download Aspose.Tasks for .NET API from https://www.nuget.org/packages/Aspose.Tasks/, 
@@ -11,34 +8,38 @@ please feel free to contact us using https://forum.aspose.com/c/tasks
 
 namespace Aspose.Tasks.Examples.CSharp.Miscellaneous
 {
-    class WriteMetadataToMPP
+    using System;
+
+    using Aspose.Tasks.Saving;
+
+    internal class WriteMetadataToMPP
     {
         public static void Run()
         {
             try
             {
                 //ExStart:WriteMetadataToMPP
-                string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
-                Project project = new Project(dataDir + "Project1.mpp");
+                var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
+                var project = new Project(dataDir + "Project1.mpp");
 
                 // Add working times to project calendar
-                WorkingTime wt = new WorkingTime();
+                var wt = new WorkingTime();
                 wt.FromTime = new DateTime(2010, 1, 1, 19, 0, 0);
                 wt.ToTime = new DateTime(2010, 1, 1, 20, 0, 0);
-                WeekDay day = project.Get(Prj.Calendar).WeekDays.ToList()[1];
+                var day = project.Get(Prj.Calendar).WeekDays.ToList()[1];
                 day.WorkingTimes.Add(wt);
 
                 // Change calendar name
                 project.Get(Prj.Calendar).Name = "CHANGED NAME!";
 
                 // Add tasks and set task meta data
-                Task task = project.RootTask.Children.Add("Task 1");
+                var task = project.RootTask.Children.Add("Task 1");
                 task.Set(Tsk.DurationFormat, TimeUnitType.Day);
                 task.Set(Tsk.Duration, project.GetDuration(3));
                 task.Set(Tsk.Contact, "Rsc 1");
                 task.Set(Tsk.IsMarked, true);
                 task.Set(Tsk.IgnoreWarnings, true);
-                Task task2 = project.RootTask.Children.Add("Task 2");
+                var task2 = project.RootTask.Children.Add("Task 2");
                 task2.Set(Tsk.DurationFormat, TimeUnitType.Day);
                 task2.Set(Tsk.Contact, "Rsc 2");
 
@@ -49,7 +50,7 @@ namespace Aspose.Tasks.Examples.CSharp.Miscellaneous
                 project.Set(Prj.StartDate, new DateTime(2013, 8, 13, 9, 0, 0));
 
                 // Add resource and set resource meta data
-                Resource rsc1 = project.Resources.Add("Rsc 1");
+                var rsc1 = project.Resources.Add("Rsc 1");
                 rsc1.Set(Rsc.Type, ResourceType.Work);
                 rsc1.Set(Rsc.Initials, "WR");
                 rsc1.Set(Rsc.AccrueAt, CostAccrualType.Prorated);
@@ -69,7 +70,7 @@ namespace Aspose.Tasks.Examples.CSharp.Miscellaneous
                 rsc1.Set(Rsc.CostCenter, "Cost Center 1");
 
                 // Create resource assignment and set resource assignment meta data
-                ResourceAssignment assn = project.ResourceAssignments.Add(task, rsc1);
+                var assn = project.ResourceAssignments.Add(task, rsc1);
                 assn.Set(Asn.Uid, 1);
                 assn.Set(Asn.Work, task.Get(Tsk.Duration));
                 assn.Set(Asn.RemainingWork, assn.Get(Asn.Work));
@@ -81,10 +82,10 @@ namespace Aspose.Tasks.Examples.CSharp.Miscellaneous
                 assn.Set(Asn.Finish, task.Get(Tsk.Finish));
 
                 // Add extended attribute for project and task
-                ExtendedAttributeDefinition attr = ExtendedAttributeDefinition.CreateTaskDefinition(CustomFieldType.Flag, ExtendedAttributeTask.Flag1,  "My Flag Field");
+                var attr = ExtendedAttributeDefinition.CreateTaskDefinition(CustomFieldType.Flag, ExtendedAttributeTask.Flag1,  "My Flag Field");
                 project.ExtendedAttributes.Add(attr);
 
-                ExtendedAttribute taskAttr = attr.CreateExtendedAttribute();
+                var taskAttr = attr.CreateExtendedAttribute();
                 taskAttr.FlagValue = true;
                 task2.ExtendedAttributes.Add(taskAttr);
 

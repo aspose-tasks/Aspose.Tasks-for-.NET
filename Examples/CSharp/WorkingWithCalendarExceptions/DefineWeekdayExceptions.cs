@@ -1,22 +1,22 @@
-﻿using System;
-
-namespace Aspose.Tasks.Examples.CSharp.WorkingWithCalendarExceptions
+﻿namespace Aspose.Tasks.Examples.CSharp.WorkingWithCalendarExceptions
 {
-    class DefineWeekdayExceptions
+    using System;
+
+    internal class DefineWeekdayExceptions
     {
         public static void Run()
         {
             //ExStart:DefineWeekdayExceptions
-            string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
+            var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
             // Create a project instance
-            Project prj = new Project();
+            var prj = new Project();
 
             // Define Calendar
-            Calendar cal = prj.Calendars.Add("Calendar1");
+            var cal = prj.Calendars.Add("Calendar1");
 
             // Define week days exception for a holiday
-            CalendarException except = new CalendarException();
+            var except = new CalendarException();
             except.EnteredByOccurrences = false;
             except.FromDate = new DateTime(2009, 12, 24, 0, 0, 0);
             except.ToDate = new DateTime(2009, 12, 31, 23, 59, 0);
@@ -27,7 +27,6 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithCalendarExceptions
             // Save the Project
             prj.Save(dataDir + "Project_DefineWeekDayException_out.xml", Saving.SaveFileFormat.XML);
             //ExEnd:DefineWeekdayExceptions
-
         }
     }
 }

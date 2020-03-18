@@ -1,6 +1,3 @@
-using System;
-using Aspose.Tasks.Saving;
-
 /*
 This project uses Automatic Package Restore feature of NuGet to resolve Aspose.Tasks for .NET API reference 
 when the project is build. Please check https:// Docs.nuget.org/consume/nuget-faq for more information. 
@@ -11,16 +8,20 @@ please feel free to contact us using https://forum.aspose.com/c/tasks
 
 namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.WorkingWithProjectProperties
 {
+    using System;
+
+    using Aspose.Tasks.Saving;
+
     public class SetAttributesForNewTasks
     {
         public static void Run()
         {
             //ExStart:SetAttributesForNewTasks
             // The path to the documents directory.
-            string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName); 
+            var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName); 
 
             // Create a project instance Set new task property and Save the project as XML project file
-            Project project = new Project();
+            var project = new Project();
             project.Set(Prj.NewTaskStartDate, TaskStartDateType.CurrentDate);
             project.Save(dataDir + "SetAttributesForNewTasks_out.xml", SaveFileFormat.XML);
  

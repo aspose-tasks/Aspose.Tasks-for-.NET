@@ -1,8 +1,4 @@
-﻿using Aspose.Tasks.Util;
-using System;
-using System.Collections.Generic;
-
-/*
+﻿/*
 This project uses Automatic Package Restore feature of NuGet to resolve Aspose.Tasks for .NET API reference 
 when the project is build. Please check https:// Docs.nuget.org/consume/nuget-faq for more information. 
 If you do not wish to use NuGet, you can manually download Aspose.Tasks for .NET API from https://www.nuget.org/packages/Aspose.Tasks/, 
@@ -12,20 +8,25 @@ please feel free to contact us using https://forum.aspose.com/c/tasks
 
 namespace Aspose.Tasks.Examples.CSharp.Miscellaneous
 {
-    class SortTasksByName
+    using System;
+    using System.Collections.Generic;
+
+    using Aspose.Tasks.Util;
+
+    internal class SortTasksByName
     {
         public static void Run()
         {
             //ExStart:SortTasksByName
-            string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
-            Project project = new Project(dataDir + "project-sort.mpp");
-            ChildTasksCollector coll = new ChildTasksCollector();
+            var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
+            var project = new Project(dataDir + "project-sort.mpp");
+            var coll = new ChildTasksCollector();
             TaskUtils.Apply(project.RootTask, coll, 0);
             List<Task> tasks = coll.Tasks;
 
             tasks.Sort(new TaskNameComparer());
 
-            foreach (Task task in tasks)
+            foreach (var task in tasks)
             {
                 Console.WriteLine(task);
             }
@@ -47,7 +48,7 @@ namespace Aspose.Tasks.Examples.CSharp.Miscellaneous
                     return -1;
                 }
                 
-                return x.Get(Tsk.Name).CompareTo(y.Get(Tsk.Name));
+                return string.Compare(x.Get(Tsk.Name), y.Get(Tsk.Name), StringComparison.Ordinal);
             }
         }
         //ExEnd:ImplementIComparer

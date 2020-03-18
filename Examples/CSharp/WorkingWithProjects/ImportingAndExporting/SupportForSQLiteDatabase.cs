@@ -1,6 +1,3 @@
-using System;
-using Aspose.Tasks.Connectivity;
-
 /*
 This project uses Automatic Package Restore feature of NuGet to resolve Aspose.Tasks for .NET API reference 
 when the project is build. Please check https:// Docs.nuget.org/consume/nuget-faq for more information. 
@@ -11,27 +8,32 @@ please feel free to contact us using https://forum.aspose.com/c/tasks
 
 namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.ImportingAndExporting
 {
+    using System;
+
+    using Aspose.Tasks.Connectivity;
+    using Aspose.Tasks.Saving;
+
     public class SupportForSQLiteDatabase
     {
         public static void Run()
         {
              // The path to the documents directory.
-            string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
+            var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
             try
             {
                 //ExStart:SupportForSQLiteDatabase
-                string connectionString = "Data Source=" + dataDir + "\\PPMDBSQLite.db";
+                var connectionString = "Data Source=" + dataDir + "\\PPMDBSQLite.db";
                 const int ProjectId = 4502;
 
                 // Create Primavera DB Settings using connection string and project id
-                PrimaveraDbSettings primaveraDbSettings = new PrimaveraDbSettings(connectionString, ProjectId);
-                primaveraDbSettings.ProviderInvariantName = "System.Data.SQLite";
+                var settings = new PrimaveraDbSettings(connectionString, ProjectId);
+                settings.ProviderInvariantName = "System.Data.SQLite";
 
                 // Create new project using primavera db settings
-                Project project = new Project(primaveraDbSettings);
+                var project = new Project(settings);
+                project.Save(dataDir + "SupportForSQLiteDatabase_out.mpp", SaveFileFormat.MPP);
                 //ExEnd:SupportForSQLiteDatabase
-
             }
             catch (Exception ex)
             {

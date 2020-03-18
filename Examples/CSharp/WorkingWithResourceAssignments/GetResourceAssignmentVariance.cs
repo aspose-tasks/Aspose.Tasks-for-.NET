@@ -1,20 +1,20 @@
-﻿using System;
-
-namespace Aspose.Tasks.Examples.CSharp.WorkingWithResourceAssignments
+﻿namespace Aspose.Tasks.Examples.CSharp.WorkingWithResourceAssignments
 {
-    class GetResourceAssignmentVariance
+    using System;
+
+    internal class GetResourceAssignmentVariance
     {
         public static void Run()
         {
             // The path to the documents directory.
-            string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
+            var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
             //ExStart:GetResourceAssignmentVariance
             // Create project instance
-            Project project1 = new Project(dataDir + "ResourceAssignmentVariance.mpp");
+            var project = new Project(dataDir + "ResourceAssignmentVariance.mpp");
 
             // Print assignment variances
-            foreach (ResourceAssignment ra in project1.ResourceAssignments)
+            foreach (var ra in project.ResourceAssignments)
             {
                 Console.WriteLine(ra.Get(Asn.WorkVariance));
                 Console.WriteLine(ra.Get(Asn.CostVariance));

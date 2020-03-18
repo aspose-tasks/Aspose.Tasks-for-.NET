@@ -1,7 +1,3 @@
-using System;
-using System.Drawing;
-using Aspose.Tasks.Visualization;
-
 /*
 This project uses Automatic Package Restore feature of NuGet to resolve Aspose.Tasks for .NET API reference 
 when the project is build. Please check https:// Docs.nuget.org/consume/nuget-faq for more information. 
@@ -12,17 +8,22 @@ please feel free to contact us using https://forum.aspose.com/c/tasks
 
 namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.WorkingWithProjectViews
 {
+    using System;
+    using System.Drawing;
+
+    using Aspose.Tasks.Visualization;
+
     public class ReadSpecificGanttChartViewData
     {
         public static void Run()
         {
             // The path to the documents directory.
-            string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
+            var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
             
-            //ExStart:ReadSpecificGantChartViewData   
-            Project project = new Project(dataDir + @"ReadSpecificGantChartViewData.mpp"); 
+            //ExStart:ReadSpecificGanttChartViewData   
+            var project = new Project(dataDir + @"ReadSpecificGantChartViewData.mpp"); 
 
-            GanttChartView view = (GanttChartView)project.Views.ToList()[0];
+            var view = (GanttChartView)project.Views.ToList()[0];
             Console.WriteLine("Is Bar Rounding: " + view.BarRounding);
             Console.WriteLine("Show Bar Splits? : " + view.ShowBarSplits);
             Console.WriteLine("Show Drawings? : " + view.ShowDrawings);
@@ -31,8 +32,8 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.WorkingWithProjectVie
             Console.WriteLine("Bar Size: " + view.BarSize);
             Console.WriteLine("Bar Style: " + view.BarStyles.Count);
             Console.WriteLine("\n************************ RETRIEVING BAR STYLES INFORMATION FROM THE VIEW *********************");
-            int i = 0;
-            foreach (GanttBarStyle barStyle in view.BarStyles)
+            var i = 0;
+            foreach (var barStyle in view.BarStyles)
             {
                 Console.WriteLine("Name: " + barStyle.Name);
                 Console.WriteLine("ShowFor: " + barStyle.ShowFor);
@@ -48,7 +49,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.WorkingWithProjectVie
             }
 
             Console.WriteLine("Grid Lines Count: " + view.Gridlines.Count);
-            Gridlines gridlines = view.Gridlines[0];
+            var gridlines = view.Gridlines[0];
             Console.WriteLine("\n************************ RETRIEVING GRID LINES PROPERTIES *********************");
             Console.WriteLine("GridLine Type: " + gridlines.Type);
             Console.WriteLine("Gridlines Interval: " + gridlines.Interval);
@@ -98,7 +99,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.WorkingWithProjectVie
             Console.WriteLine("TopTimescaleTier.Alignment: " + StringAlignment.Center, view.TopTimescaleTier.Alignment.ToString());
             Console.WriteLine("TopTimescaleTier.ShowTicks: " + view.TopTimescaleTier.ShowTicks);
             Console.WriteLine("TopTimescaleTier.Label: " + view.TopTimescaleTier.Label); 
-            //ExEnd:ReadSpecificGantChartViewData
+            //ExEnd:ReadSpecificGanttChartViewData
         }
     }
 }

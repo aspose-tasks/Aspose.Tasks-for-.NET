@@ -1,8 +1,4 @@
-﻿using Aspose.Tasks.Saving;
-using Aspose.Tasks.Util;
-using System;
-
-/*
+﻿/*
 This project uses Automatic Package Restore feature of NuGet to resolve Aspose.Tasks for .NET API reference 
 when the project is build. Please check https:// Docs.nuget.org/consume/nuget-faq for more information. 
 If you do not wish to use NuGet, you can manually download Aspose.Tasks for .NET API from https://www.nuget.org/packages/Aspose.Tasks/, 
@@ -12,23 +8,28 @@ please feel free to contact us using https://forum.aspose.com/c/tasks
 
 namespace Aspose.Tasks.Examples.CSharp.WorkingWithTasks
 {
-    class ReadTaskWBS
+    using System;
+
+    using Aspose.Tasks.Saving;
+    using Aspose.Tasks.Util;
+
+    internal class ReadTaskWBS
     {
         public static void Run()
         {
             //ExStart:ReadTaskWBS
             // Read project
-            string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
-            Project project1 = new Project(dataDir + "TaskWBS.mpp");
+            var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
+            var project = new Project(dataDir + "TaskWBS.mpp");
 
             // Create a ChildTasksCollector instance
-            ChildTasksCollector collector = new ChildTasksCollector();
+            var collector = new ChildTasksCollector();
 
             // Collect all the tasks from RootTask using TaskUtils
-            TaskUtils.Apply(project1.RootTask, collector, 0);
+            TaskUtils.Apply(project.RootTask, collector, 0);
 
             // Parse through all the collected tasks
-            foreach (Task tsk in collector.Tasks)
+            foreach (var tsk in collector.Tasks)
             {
                 Console.WriteLine(tsk.Get(Tsk.WBS));
                 Console.WriteLine(tsk.Get(Tsk.WBSLevel));
@@ -39,7 +40,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithTasks
             //ExEnd:ReadTaskWBS
 
             // Save project as PDF
-            project1.Save(dataDir + "TaskWBS_out.pdf", SaveFileFormat.PDF);
+            project.Save(dataDir + "TaskWBS_out.pdf", SaveFileFormat.PDF);
         }
     }
 }

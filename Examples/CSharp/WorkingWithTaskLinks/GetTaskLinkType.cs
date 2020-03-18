@@ -1,19 +1,19 @@
-﻿using System;
-
-namespace Aspose.Tasks.Examples.CSharp.WorkingWithTaskLinks
+﻿namespace Aspose.Tasks.Examples.CSharp.WorkingWithTaskLinks
 {
-    class GetTaskLinkType
+    using System;
+
+    internal class GetTaskLinkType
     {
         public static void Run()
         {
+            var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
             //ExStart:GetTaskLinkType
             // Create project instance
-            string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
-            Project project1 = new Project(dataDir + "GetTaskLinkType.mpp");
+            var project = new Project(dataDir + "GetTaskLinkType.mpp");
 
             // Display task link types 
-            var taskLinks = project1.TaskLinks;
-            foreach (TaskLink link in taskLinks)
+            var taskLinks = project.TaskLinks;
+            foreach (var link in taskLinks)
             {
                 Console.WriteLine(link.LinkType.ToString());
             }

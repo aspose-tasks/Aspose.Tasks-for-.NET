@@ -1,21 +1,19 @@
-﻿using System;
-using System.IO;
-
-namespace Aspose.Tasks.Examples.CSharp.WorkingWithTasks
+﻿namespace Aspose.Tasks.Examples.CSharp.WorkingWithTasks
 {
-    class ReadTaskOvertimes
+    using System;
+    using System.IO;
+
+    internal class ReadTaskOvertimes
     {
         public static void Run()
         {
+            var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
             //ExStart:ReadTaskOvertimes
             // Read project from file stream
-            string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
-            FileStream fs = new FileStream(dataDir + "TaskOvertimes.mpp", FileMode.Open);
-            Project project1 = new Project(fs);
-            fs.Close();
+            var project = new Project(new FileStream(dataDir + "TaskOvertimes.mpp", FileMode.Open));
 
             // Read overtime and percentage completion for tasks
-            foreach (Task tsk1 in project1.RootTask.Children)
+            foreach (var tsk1 in project.RootTask.Children)
             {
                 Console.WriteLine(tsk1.Get(Tsk.OvertimeCost));
                 Console.WriteLine(tsk1.Get(Tsk.OvertimeWork).ToString());

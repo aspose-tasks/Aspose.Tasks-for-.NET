@@ -1,18 +1,19 @@
-using System;
-using Aspose.Tasks.Visualization;
-
 namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects
 {
+    using System;
+
+    using Aspose.Tasks.Visualization;
+
     public class GetNumberOfPagesForViews
     {
         public static void Run()
         {
             //ExStart:GetNumberOfPagesForViews
             // The path to the documents directory.
-            string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
+            var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
             // Read the source Project
-            Project project = new Project(dataDir + "GetNumberOfPagesForViews.mpp");
+            var project = new Project(dataDir + "GetNumberOfPagesForViews.mpp");
 
             // Get number of pages,  Months and  ThirdsOfMonths
             Console.WriteLine("Number of Pages = '{0}'", project.GetPageCount(PresentationFormat.ResourceUsage, Timescale.Days));

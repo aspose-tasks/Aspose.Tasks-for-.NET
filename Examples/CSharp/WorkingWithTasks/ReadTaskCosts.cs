@@ -1,17 +1,17 @@
-﻿using System;
-
-namespace Aspose.Tasks.Examples.CSharp.WorkingWithTasks
+﻿namespace Aspose.Tasks.Examples.CSharp.WorkingWithTasks
 {
-    class ReadTaskCosts
+    using System;
+
+    internal class ReadTaskCosts
     {
         public static void Run()
         {
             //ExStart:ReadTaskCosts
             // Create new project
-            Project project = new Project();
+            var project = new Project();
 
             // Add task and set cost
-            Task task = project.RootTask.Children.Add("Task");
+            var task = project.RootTask.Children.Add("Task");
             task.Set(Tsk.Cost, 800);
 
             // Display cost related properties of task

@@ -8,20 +8,20 @@ please feel free to contact us using https://forum.aspose.com/c/tasks
 
 namespace Aspose.Tasks.Examples.CSharp.WorkingWithCalendars.CreatingUpdatingAndRemoving
 {
-    class MakeAStandardCalendar
+    internal class MakeAStandardCalendar
     {
         public static void Run()
         { 
             //ExStart:MakeAStandardCalendar
             // Create a project instance
-            Project project = new Project();
+            var project = new Project();
 
             // Define Calendar and make it standard
-            Aspose.Tasks.Calendar cal1 = project.Calendars.Add("My Cal");
+            var cal1 = project.Calendars.Add("My Cal");
             Aspose.Tasks.Calendar.MakeStandardCalendar(cal1);
 
             // Save the Project
-            string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
+            var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
             project.Save(dataDir + "Project_MakeStandardCalendar_out.xml", Aspose.Tasks.Saving.SaveFileFormat.XML);
             //ExEnd:MakeAStandardCalendar
         }

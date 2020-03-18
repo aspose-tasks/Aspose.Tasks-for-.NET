@@ -1,5 +1,3 @@
-using System.Drawing.Printing;
-
 /*
 This project uses Automatic Package Restore feature of NuGet to resolve Aspose.Tasks for .NET API reference 
 when the project is build. Please check https:// Docs.nuget.org/consume/nuget-faq for more information. 
@@ -8,28 +6,30 @@ install it and then add its reference to this project. For any issues, questions
 please feel free to contact us using https://forum.aspose.com/c/tasks
 */
 
-
 namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.Printing
 {
+    using System.Drawing.Printing;
+
     public class PrintProjectUsingCustomPrinter
     {
         public static void Run()
         {
-            //ExStart:PrintProjectUsingCustomPrinter
             // The path to the documents directory.
-            string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
+            var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
+            //ExStart:PrintProjectUsingCustomPrinter
             // Read the input Project file
-            Project project = new Project(dataDir + "Project2.mpp");
-            string printerName = "Microsoft Print to PDF";
+            var project = new Project(dataDir + "Project2.mpp");
 
             foreach (string printer in PrinterSettings.InstalledPrinters)
             {
-                if (printer.ToUpperInvariant().Contains(printerName.ToUpperInvariant()))
+                if (!printer.ToUpperInvariant().Contains("Microsoft Print to PDF".ToUpperInvariant()))
                 {
-                    project.Print(printer);
-                    break;
+                    continue;
                 }
+
+                project.Print(printer);
+                break;
             }
             //ExEnd:PrintProjectUsingCustomPrinter
         }

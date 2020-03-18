@@ -8,13 +8,13 @@ please feel free to contact us using https://forum.aspose.com/c/tasks
 
 namespace Aspose.Tasks.Examples.CSharp.WorkingWithCalendars.CreatingUpdatingAndRemoving
 {
-    class CreatingCalendar
+    internal class CreatingCalendar
     {
         public static void Run()
         {
             //ExStart:CreatingCalendar            
             // Create a project instance
-            Project project = new Project();
+            var project = new Project();
 
             // New calendar can be added to a project's calendar collection using the collection's Add method.
             project.Calendars.Add("New Info");
@@ -22,7 +22,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithCalendars.CreatingUpdatingAndR
             project.Calendars.Add("cal3");
 
             // Save the Project
-            string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
+            var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
             project.Save(dataDir + "CreatingCalendar_out.Xml", Aspose.Tasks.Saving.SaveFileFormat.XML);
             //ExEnd:CreatingCalendar
         }

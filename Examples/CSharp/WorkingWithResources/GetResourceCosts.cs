@@ -1,20 +1,20 @@
-﻿using System;
-
-namespace Aspose.Tasks.Examples.CSharp.WorkingWithResources
+﻿namespace Aspose.Tasks.Examples.CSharp.WorkingWithResources
 {
-    class GetResourceCosts
+    using System;
+
+    internal class GetResourceCosts
     {
         public static void Run()
         {
             // The path to the documents directory.
-            string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
+            var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
             //ExStart:GetResourceCosts
             // Create project instance
-            Project project1 = new Project(dataDir + "ResourceCosts.mpp");
+            var project = new Project(dataDir + "ResourceCosts.mpp");
 
             // Display all resources costs
-            foreach (Resource res in project1.Resources)
+            foreach (var res in project.Resources)
             {
                 if (res.Get(Rsc.Name) == null)
                 {

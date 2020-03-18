@@ -1,18 +1,20 @@
-﻿using Aspose.Tasks.Saving;
-
-namespace Aspose.Tasks.Examples.CSharp.ConvertingProjectData
+﻿namespace Aspose.Tasks.Examples.CSharp.ConvertingProjectData
 {
-    class AddingCssStylePrefix
+    using Aspose.Tasks.Saving;
+
+    internal class AddingCssStylePrefix
     {
         public static void Run()
         {
             // The path to the documents directory.
-            string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
+            var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
             //ExStart:AddingCssStylePrefix
-            Project project = new Project(dataDir + "CreateProject2.mpp");
+            //ExFor: HtmlSaveOptions.CssStylePrefix
+            //ExSummary: Shows how to set a common prefix for CSS styles are used during export to HTML.
+            var project = new Project(dataDir + "CreateProject2.mpp");
 
-            HtmlSaveOptions options = new HtmlSaveOptions
+            var options = new HtmlSaveOptions
             {
                 CssStylePrefix = "test_prefix"
             };

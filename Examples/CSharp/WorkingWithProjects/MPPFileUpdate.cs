@@ -1,8 +1,9 @@
-using System;
-using Aspose.Tasks.Saving;
-
 namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects
 {
+    using System;
+
+    using Aspose.Tasks.Saving;
+
     public class MPPFileUpdate
     {
         public static void Run()
@@ -11,13 +12,13 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects
             {
                 //ExStart:MPPFileUpdate
                 // The path to the documents directory.
-                string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
+                var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
                 // Read an existing project
-                Project project = new Project(dataDir + "MPPFileUpdate.mpp");
+                var project = new Project(dataDir + "MPPFileUpdate.mpp");
 
                 // Create a new task
-                Task task = project.RootTask.Children.Add("Task1");
+                var task = project.RootTask.Children.Add("Task1");
 
                 task.Set(Tsk.Start, new DateTime(2012, 8, 1));
                 task.Set(Tsk.Finish, new DateTime(2012, 8, 5));

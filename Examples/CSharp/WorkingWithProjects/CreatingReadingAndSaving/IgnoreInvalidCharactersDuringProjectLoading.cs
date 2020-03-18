@@ -1,9 +1,3 @@
-using System;
-using System.Diagnostics;
-using System.IO;
-using System.Text;
-using System.Text.RegularExpressions;
-
 /*
 This project uses Automatic Package Restore feature of NuGet to resolve Aspose.Tasks for .NET API reference 
 when the project is build. Please check https:// Docs.nuget.org/consume/nuget-faq for more information. 
@@ -14,22 +8,29 @@ please feel free to contact us using https://forum.aspose.com/c/tasks
 
 namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.CreatingReadingAndSaving
 {
+    using System;
+    using System.Diagnostics;
+    using System.IO;
+    using System.Text;
+    using System.Text.RegularExpressions;
+
     public class IgnoreInvalidCharactersDuringProjectLoading
     {
-        //ExStart:IgnoreInvalidCharactersDuringloadingProject 
+        //ExStart:IgnoreInvalidCharactersDuringLoadingProject 
         public static void Run()
         {         
             // Open modified xml stream
-            using (MemoryStream stream = new MemoryStream(Encoding.UTF8.GetBytes(GetModifiedXml())))
+            using (var stream = new MemoryStream(Encoding.UTF8.GetBytes(GetModifiedXml())))
             {
-                Project project = new Project(stream, CustomDurationHandler);
+                var project = new Project(stream, CustomDurationHandler);
+                Console.WriteLine(project.Get(Prj.Name));
             }
         }
 
         private static string GetModifiedXml()
         {
             // The path to the documents directory.
-            string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName); 
+            var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName); 
             string xml;
 
             // Open valid xml file and modify it
@@ -38,24 +39,26 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.CreatingReadingAndSav
                 xml = reader.ReadToEnd();
             }
 
-            Regex regex = new Regex("PT(\\d+)H(\\d+)M(\\d+)S");
+            var regex = new Regex("PT(\\d+)H(\\d+)M(\\d+)S");
             return regex.Replace(xml, "**$1Hrs$2Mins$3Secs**");
         }
 
         private static object CustomDurationHandler(object sender, ParseErrorArgs args)
         {
-            Regex regex = new Regex("[*]{2}(\\d+)Hrs(\\d+)Mins(\\d+)Secs[*]{2}");
-            if (args.FieldType == typeof(TimeSpan))
+            var regex = new Regex("[*]{2}(\\d+)Hrs(\\d+)Mins(\\d+)Secs[*]{2}");
+            if (args.FieldType != typeof(TimeSpan))
             {
-                Debug.Print("Object field : {0}, Invalid value : {1}", args.FieldName, args.InvalidValue);
-                string duration = regex.Replace(args.InvalidValue, "PT$1H$2M$3S");
-                TimeSpan newValue = Duration.ParseTimeSpan(duration);
-                Debug.Print("New value : {0}", newValue);
-                return newValue;
+                throw args.Exception;
             }
+
+            Debug.Print("Object field : {0}, Invalid value : {1}", args.FieldName, args.InvalidValue);
+            var duration = regex.Replace(args.InvalidValue, "PT$1H$2M$3S");
+            var newValue = Duration.ParseTimeSpan(duration);
+            Debug.Print("New value : {0}", newValue);
+            return newValue;
+
             // Here we handle only TimeSpan instances, so rethrow original exception with other types
-            throw args.Exception;
         }
-        //ExEnd:IgnoreInvalidCharactersDuringloadingProject
+        //ExEnd:IgnoreInvalidCharactersDuringLoadingProject
     }
 }

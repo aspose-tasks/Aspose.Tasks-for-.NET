@@ -1,8 +1,4 @@
-﻿using Aspose.Tasks.Saving;
-using Aspose.Tasks.Visualization;
-using System.IO;
-
-/*
+﻿/*
 This project uses Automatic Package Restore feature of NuGet to resolve Aspose.Tasks for .NET API reference 
 when the project is build. Please check https:// Docs.nuget.org/consume/nuget-faq for more information. 
 If you do not wish to use NuGet, you can manually download Aspose.Tasks for .NET API from https://www.nuget.org/packages/Aspose.Tasks/, 
@@ -12,24 +8,29 @@ please feel free to contact us using https://forum.aspose.com/c/tasks
 
 namespace Aspose.Tasks.Examples.CSharp.Articles
 {
-    class RenderGanttChartWithBarsNotRolledUp
+    using System.IO;
+
+    using Aspose.Tasks.Saving;
+    using Aspose.Tasks.Visualization;
+
+    internal class RenderGanttChartWithBarsNotRolledUp
     {
         public static void Run()
         {
             // The path to the documents directory.
-            string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
+            var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
             //ExStart:RenderGanttChartWithBarsNotRolledUp
             //ExFor: SaveOptions.RollUpGanttBars
             //ExSummary: Shows how to set a value indicating that subtasks on the summary task bar must not be rolled up.
-            PdfSaveOptions options = new PdfSaveOptions();
+            var options = new PdfSaveOptions();
             options.PresentationFormat = PresentationFormat.GanttChart;
             options.FitContent = true;
             options.RollUpGanttBars = false;
             options.DrawNonWorkingTime = true;
             options.PageSize = PageSize.A3;
 
-            Project project = new Project(Path.Combine(dataDir, "Project2.mpp"));
+            var project = new Project(Path.Combine(dataDir, "Project2.mpp"));
             project.Save(Path.Combine(dataDir, "RenderGanttChartWithBarsNotRolledUp_out.pdf"), options);
             //ExEnd:RenderGanttChartWithBarsNotRolledUp
         }

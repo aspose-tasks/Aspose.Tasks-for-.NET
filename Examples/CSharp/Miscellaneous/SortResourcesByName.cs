@@ -1,21 +1,21 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace Aspose.Tasks.Examples.CSharp.Miscellaneous
+﻿namespace Aspose.Tasks.Examples.CSharp.Miscellaneous
 {
-    class SortResourcesByName
+    using System;
+    using System.Collections.Generic;
+
+    internal class SortResourcesByName
     {
         public static void Run()
         {
-            string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
+            var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
             //ExStart:SortResourcesByName
-            Project project = new Project(dataDir + "project-sort.mpp");
+            var project = new Project(dataDir + "project-sort.mpp");
 
             List<Resource> resources = project.Resources.ToList();
             resources.Sort(new RscNameComparer());
 
-            foreach (Resource rsc in resources)
+            foreach (var rsc in resources)
             {
                 Console.WriteLine(rsc);
             }
@@ -36,7 +36,8 @@ namespace Aspose.Tasks.Examples.CSharp.Miscellaneous
                 {
                     return -1;
                 }
-                return x.Get(Rsc.Name).CompareTo(y.Get(Rsc.Name));
+                
+                return string.Compare(x.Get(Rsc.Name), y.Get(Rsc.Name), StringComparison.Ordinal);
             }
         }
         //ExEnd:ImplementIComparer

@@ -1,7 +1,4 @@
-﻿using Aspose.Tasks.Saving;
-using System;
-
-/*
+﻿/*
 This project uses Automatic Package Restore feature of NuGet to resolve Aspose.Tasks for .NET API reference 
 when the project is build. Please check https:// Docs.nuget.org/consume/nuget-faq for more information. 
 If you do not wish to use NuGet, you can manually download Aspose.Tasks for .NET API from https://www.nuget.org/packages/Aspose.Tasks/, 
@@ -11,18 +8,22 @@ please feel free to contact us using https://forum.aspose.com/c/tasks
 
 namespace Aspose.Tasks.Examples.CSharp.WorkingWithTasks
 {
-    class AddTaskExtendedAttributes
+    using System;
+
+    using Aspose.Tasks.Saving;
+
+    internal class AddTaskExtendedAttributes
     {
         public static void Run()
         {
             try
             {
-                //ExStart:AddTaskExtendedAttributes
                 // The path to the documents directory.
-                string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
+                var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
+                //ExStart:AddTaskExtendedAttributes
                 // Create new project
-                Project project = new Project(dataDir + "Blank2010.mpp");
+                var project = new Project(dataDir + "Blank2010.mpp");
 
                 //Create an Extended Attribute Definition of Text1 type
                 var taskExtendedAttributeText1Definition = ExtendedAttributeDefinition.CreateTaskDefinition(CustomFieldType.Text, ExtendedAttributeTask.Text1, "Task City Name");
@@ -44,7 +45,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithTasks
 
                 project.Save(dataDir + "PlainTextExtendedAttribute_out.mpp", SaveFileFormat.MPP);
 
-                Project project1 = new Project(dataDir + "Blank2010.mpp");
+                var project4 = new Project(dataDir + "Blank2010.mpp");
 
                 //Create an Extended Attribute Definition of Text2 type
                 var taskExtendedAttributeText2Definition = ExtendedAttributeDefinition.CreateLookupTaskDefinition(CustomFieldType.Text, ExtendedAttributeTask.Text2, "Task Towns Name");
@@ -53,11 +54,11 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithTasks
                 taskExtendedAttributeText2Definition.AddLookupValue(new Value { Id = 1, StringValue = "Town1", Description = "This is Town1" });
                 taskExtendedAttributeText2Definition.AddLookupValue(new Value { Id = 2, StringValue = "Town2", Description = "This is Town2" });
 
-                //Add it to the porject's Extended Attributes collection
-                project1.ExtendedAttributes.Add(taskExtendedAttributeText2Definition);
+                //Add it to the project's Extended Attributes collection
+                project4.ExtendedAttributes.Add(taskExtendedAttributeText2Definition);
 
                 //Add a task to the project
-                var task2 = project1.RootTask.Children.Add("Task 2");
+                var task2 = project4.RootTask.Children.Add("Task 2");
 
                 //Crate an Extended Attribute from the Text2 Lookup Definition for Id 1
                 var taskExtendedAttributeText2 = taskExtendedAttributeText2Definition.CreateExtendedAttribute(taskExtendedAttributeText2Definition.ValueList[1]);
@@ -65,9 +66,9 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithTasks
                 //Add the Extended Attribute to task
                 task2.ExtendedAttributes.Add(taskExtendedAttributeText2);
 
-                project1.Save(dataDir + "TextExtendedAttributeWithLookup_out.mpp", SaveFileFormat.MPP);
+                project4.Save(dataDir + "TextExtendedAttributeWithLookup_out.mpp", SaveFileFormat.MPP);
 
-                Project project2 = new Project(dataDir + "Blank2010.mpp");
+                var project2 = new Project(dataDir + "Blank2010.mpp");
 
                 //Create an Extended Attribute Definition of Duration2 type
                 var taskExtendedAttributeDuration2Definition = ExtendedAttributeDefinition.CreateLookupTaskDefinition(CustomFieldType.Duration, ExtendedAttributeTask.Duration2, "Some duration");
@@ -92,12 +93,12 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithTasks
 
                 project2.Save(dataDir + "DurationExtendedAttributeWithLookup_out.mpp", SaveFileFormat.MPP);
 
-                Project project3 = new Project(dataDir + "Blank2010.mpp");
+                var project3 = new Project(dataDir + "Blank2010.mpp");
 
                 //Create an Extended Attribute Definition of Finish2 Type
                 var taskExtendedAttributeFinish2Definition = ExtendedAttributeDefinition.CreateLookupTaskDefinition(CustomFieldType.Finish, ExtendedAttributeTask.Finish2, "Some finish");
 
-                //Add lookup values for extended attribute defintion
+                //Add lookup values for extended attribute definition
                 taskExtendedAttributeFinish2Definition.AddLookupValue(new Value { Id = 2, DateTimeValue = new DateTime(1984, 01, 01, 00, 00, 01), Description = "This is Value2" });
                 taskExtendedAttributeFinish2Definition.AddLookupValue(new Value { Id = 3, DateTimeValue = new DateTime(1994, 01, 01, 00, 01, 01), Description = "This is Value3" });
                 taskExtendedAttributeFinish2Definition.AddLookupValue(new Value { Id = 4, DateTimeValue = new DateTime(2009, 12, 31, 00, 00, 00), Description = "This is Value4" });
@@ -109,7 +110,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithTasks
                 //Add a task to the project
                 var task4 = project3.RootTask.Children.Add("Task 4");
 
-                //Create an Extneded Attribute from the Finish2 Lookup Definition for Id 3
+                //Create an Extended Attribute from the Finish2 Lookup Definition for Id 3
                 var taskExtendedAttributeFinish2 = taskExtendedAttributeFinish2Definition.CreateExtendedAttribute(taskExtendedAttributeFinish2Definition.ValueList[3]);
 
                 //Add the Extended Attribute to task

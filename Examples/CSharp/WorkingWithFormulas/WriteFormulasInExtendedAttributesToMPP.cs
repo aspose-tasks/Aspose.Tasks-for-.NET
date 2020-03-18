@@ -1,6 +1,3 @@
-using Aspose.Tasks.Saving;
-using System;
-
 /*
 This project uses Automatic Package Restore feature of NuGet to resolve Aspose.Tasks for .NET API reference 
 when the project is build. Please check https:// Docs.nuget.org/consume/nuget-faq for more information. 
@@ -11,6 +8,10 @@ please feel free to contact us using https://forum.aspose.com/c/tasks
 
 namespace Aspose.Tasks.Examples.CSharp.WorkingWithFormulas
 {
+    using System;
+
+    using Aspose.Tasks.Saving;
+
     public class WriteFormulasInExtendedAttributesToMPP
     {
         public static void Run()
@@ -22,18 +23,18 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithFormulas
 				
                 //ExStart:WriteFormulasInExtendedAttributesToMPP
                 // Create project instance
-                string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
-                Project project = new Project(dataDir + "Project1.mpp");
+                var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
+                var project = new Project(dataDir + "Project1.mpp");
                 project.Set(Prj.NewTasksAreManual, false);
 
                 // Create new custom field (Task Text1) with formula which will double task cost
-                ExtendedAttributeDefinition attr = ExtendedAttributeDefinition.CreateTaskDefinition(CustomFieldType.Text, ExtendedAttributeTask.Text1, "Custom");
+                var attr = ExtendedAttributeDefinition.CreateTaskDefinition(CustomFieldType.Text, ExtendedAttributeTask.Text1, "Custom");
                 attr.Alias = "Double Costs";
                 attr.Formula = "[Cost]*2";
                 project.ExtendedAttributes.Add(attr);
 
                 // Add a task
-                Task task = project.RootTask.Children.Add("Task");
+                var task = project.RootTask.Children.Add("Task");
 
                 // Set task cost            
                 task.Set(Tsk.Cost, 100);

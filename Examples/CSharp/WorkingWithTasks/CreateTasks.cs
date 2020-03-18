@@ -1,7 +1,4 @@
-﻿using System;
-using Aspose.Tasks.Saving;
-
-/*
+﻿/*
 This project uses Automatic Package Restore feature of NuGet to resolve Aspose.Tasks for .NET API reference 
 when the project is build. Please check https:// Docs.nuget.org/consume/nuget-faq for more information. 
 If you do not wish to use NuGet, you can manually download Aspose.Tasks for .NET API from https://www.nuget.org/packages/Aspose.Tasks/, 
@@ -11,22 +8,26 @@ please feel free to contact us using https://forum.aspose.com/c/tasks
 
 namespace Aspose.Tasks.Examples.CSharp.WorkingWithTasks
 {
-    class CreateTasks
+    using System;
+
+    using Aspose.Tasks.Saving;
+
+    internal class CreateTasks
     {
         public static void Run()
         {
             try
             {
                 // The path to the documents directory.
-                string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
+                var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
                 //ExStart:CreateTasks
                 // Create project instance
-                Project project = new Project();
+                var project = new Project();
 
                 // Add task, sub task and save project
-                Task task = project.RootTask.Children.Add("Summary1");
-                Task subtask = task.Children.Add("Subtask1");
+                var task = project.RootTask.Children.Add("Summary1");
+                task.Children.Add("Subtask1");
                 project.Save(dataDir + "CreateTasks_out.xml", SaveFileFormat.XML);
                 //ExEnd:CreateTasks
             }

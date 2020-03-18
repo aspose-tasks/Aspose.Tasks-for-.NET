@@ -1,5 +1,3 @@
-using System;
-
 /*
 This project uses Automatic Package Restore feature of NuGet to resolve Aspose.Tasks for .NET API reference 
 when the project is build. Please check https:// Docs.nuget.org/consume/nuget-faq for more information. 
@@ -10,33 +8,35 @@ please feel free to contact us using https://forum.aspose.com/c/tasks
 
 namespace Aspose.Tasks.Examples.CSharp.WorkingWithFormulas
 {
+    using System;
+
     public class UsingArithmeticExpression
     {
         public static void Run()
         {
             //ExStart:UsingArithmeticExpression
-            Project project = CreateTestProjectWithCustomField();
+            var project = CreateTestProjectWithCustomField();
             
             // Set arithmetic formula for extended attribute
-            ExtendedAttributeDefinition attr = project.ExtendedAttributes[0];
+            var attr = project.ExtendedAttributes[0];
             attr.Alias = "Arithmetic Expression";
             attr.Formula = "(1+3*(2+ -5)+8/2)^3";
 
             // Display extended attribute value
-            Task task = project.RootTask.Children.GetById(1);
+            var task = project.RootTask.Children.GetById(1);
             Console.WriteLine(task.ExtendedAttributes[0].NumericValue);
             //ExEnd:UsingArithmeticExpression
         }
 
         private static Project CreateTestProjectWithCustomField()
         {
-            Project project = new Project();
+            var project = new Project();
             project.Set(Prj.StartDate, new DateTime(2015, 3, 6, 8, 0, 0));
-            ExtendedAttributeDefinition attr = ExtendedAttributeDefinition.CreateTaskDefinition(CustomFieldType.Number, ExtendedAttributeTask.Number1, "Custom");
+            var attr = ExtendedAttributeDefinition.CreateTaskDefinition(CustomFieldType.Number, ExtendedAttributeTask.Number1, "Custom");
             project.ExtendedAttributes.Add(attr);
 
-            Task task = project.RootTask.Children.Add("Task");
-            ExtendedAttribute extendedAttribute = attr.CreateExtendedAttribute();
+            var task = project.RootTask.Children.Add("Task");
+            var extendedAttribute = attr.CreateExtendedAttribute();
             task.ExtendedAttributes.Add(extendedAttribute);
             return project;
         }

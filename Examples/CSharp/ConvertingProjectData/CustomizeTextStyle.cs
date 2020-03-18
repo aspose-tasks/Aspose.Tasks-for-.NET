@@ -1,8 +1,3 @@
-using System.Collections.Generic;
-using System.Drawing;
-using Aspose.Tasks.Saving;
-using Aspose.Tasks.Visualization;
-
 /*
 This project uses Automatic Package Restore feature of NuGet to resolve Aspose.Tasks for .NET API reference 
 when the project is build. Please check https:// Docs.nuget.org/consume/nuget-faq for more information. 
@@ -13,19 +8,30 @@ please feel free to contact us using https://forum.aspose.com/c/tasks
 
 namespace Aspose.Tasks.Examples.CSharp.ConvertingProjectData
 {
+    using System.Collections.Generic;
+    using System.Drawing;
+
+    using Aspose.Tasks.Saving;
+    using Aspose.Tasks.Visualization;
+
     public class CustomizeTextStyle
     {
         public static void Run()
         {
             // The path to the documents directory.
-            string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
+            var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
             //ExStart:CustomizeTextStyle
-            Project project = new Project(dataDir + "CreateProject2.mpp");
+            //ExFor: TextStyle
+            //ExFor: TextItemType
+            //ExFor: FontStyle
+            //ExFor: SaveOptions.TextStyles
+            //ExSummary: Shows how to customize text styles which are used to style different text items in a project.
+            var project = new Project(dataDir + "CreateProject2.mpp");
             SaveOptions options = new PdfSaveOptions();
             options.PresentationFormat = PresentationFormat.ResourceSheet;
 
-            TextStyle style = new TextStyle();
+            var style = new TextStyle();
             style.Color = Color.OrangeRed;
             style.FontStyle = FontStyle.Bold;
             style.FontStyle |= FontStyle.Italic;

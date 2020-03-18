@@ -8,19 +8,19 @@ please feel free to contact us using https://forum.aspose.com/c/tasks
 
 namespace Aspose.Tasks.Examples.CSharp.WorkingWithTasks
 {
-    class WriteTaskCalendar
+    internal class WriteTaskCalendar
     {
         public static void Run()
         {
             //ExStart:WriteTaskCalendar
             // Create project instance
-            Project project = new Project();
+            var project = new Project();
 
             // Add task
-            Task tsk1 = project.RootTask.Children.Add("Task1");
+            var tsk1 = project.RootTask.Children.Add("Task1");
 
             // Create calendar and assign to task
-            Aspose.Tasks.Calendar cal = project.Calendars.Add("TaskCal1");
+            var cal = project.Calendars.Add("TaskCal1");
             tsk1.Set(Tsk.Calendar, cal);
             //ExEnd:WriteTaskCalendar      
         }

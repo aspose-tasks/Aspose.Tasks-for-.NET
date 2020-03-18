@@ -1,7 +1,3 @@
-using System.Drawing.Printing;
-using Aspose.Tasks.Saving;
-using Aspose.Tasks.Visualization;
-
 /*
 This project uses Automatic Package Restore feature of NuGet to resolve Aspose.Tasks for .NET API reference 
 when the project is build. Please check https:// Docs.nuget.org/consume/nuget-faq for more information. 
@@ -12,27 +8,32 @@ please feel free to contact us using https://forum.aspose.com/c/tasks
 
 namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.Printing
 {
+    using System.Drawing.Printing;
+
+    using Aspose.Tasks.Saving;
+    using Aspose.Tasks.Visualization;
+
     public class PrintPrintOptionsAndPrinterSettings
     {
         public static void Run()
         {
             //ExStart:PrintPrintOptionsAndPrinterSettings
             // The path to the documents directory.
-            string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
+            var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
             // Read the input Project file
-            Project project = new Project(dataDir + "Project2.mpp");
+            var project = new Project(dataDir + "Project2.mpp");
 
-            PrintOptions options = new PrintOptions();
+            var options = new PrintOptions();
             options.Timescale = Timescale.Months;
 
             // Print first two pages
-            PrinterSettings printerSettings = new PrinterSettings();
+            var printerSettings = new PrinterSettings();
             printerSettings.PrintRange = PrintRange.SomePages;
             printerSettings.FromPage = 1;
             printerSettings.ToPage = 2;
 
-            System.Drawing.Printing.PageSettings pageSettings = printerSettings.DefaultPageSettings;
+            var pageSettings = printerSettings.DefaultPageSettings;
             pageSettings.PaperSize = new PaperSize(dataDir + "Custom Size", 1000, 700);
             project.Print(printerSettings, options);
             //ExEnd:PrintPrintOptionsAndPrinterSettings

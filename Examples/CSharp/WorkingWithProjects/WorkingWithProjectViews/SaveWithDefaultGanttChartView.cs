@@ -1,8 +1,9 @@
-﻿using Aspose.Tasks.Saving;
-using System;
-
-namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.WorkingWithProjectViews
+﻿namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.WorkingWithProjectViews
 {
+    using System;
+
+    using Aspose.Tasks.Saving;
+
     public class SaveWithDefaultGanttChartView
     {
         public static void Run()
@@ -11,8 +12,8 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.WorkingWithProjectVie
             {
                 //ExStart:SaveWithDefaultGanttChartView
                 // The path to the documents directory.
-                string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
-                Project project = new Project(dataDir + "Project5.mpp"); 
+                var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
+                var project = new Project(dataDir + "Project5.mpp"); 
                                                                          
                 View view = null;
                 foreach (var v in project.Views)

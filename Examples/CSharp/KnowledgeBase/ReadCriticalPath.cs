@@ -1,21 +1,23 @@
-﻿using System;
-
-namespace Aspose.Tasks.Examples.CSharp.KnowledgeBase
+﻿namespace Aspose.Tasks.Examples.CSharp.KnowledgeBase
 {
-    class ReadCriticalPath
+    using System;
+
+    internal class ReadCriticalPath
     {
         public static void Run()
         {
-            string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
+            var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
             //ExStart:ReadCriticalPath
-            Project project = new Project(dataDir + "Project1.mpp");
+            //ExFor: Project.CriticalPath
+            //ExSummary: Shows how to read the critical path.
+            var project = new Project(dataDir + "Project1.mpp");
 
             // Get the critical path
-            TaskCollection criticalPath = project.CriticalPath;
+            var criticalPath = project.CriticalPath;
 
             // Enumerate the tasks in the critical path
-            foreach (Task task in criticalPath)
+            foreach (var task in criticalPath)
             {
                 Console.WriteLine(task.Get(Tsk.Id) + "  " + task.Get(Tsk.Name));
                 Console.WriteLine(task.Get(Tsk.Start));

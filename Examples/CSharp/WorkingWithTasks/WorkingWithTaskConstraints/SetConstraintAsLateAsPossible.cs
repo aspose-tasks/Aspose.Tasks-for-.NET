@@ -1,7 +1,4 @@
-﻿using Aspose.Tasks.Saving;
-using Aspose.Tasks.Visualization;
-
-/*
+﻿/*
 This project uses Automatic Package Restore feature of NuGet to resolve Aspose.Tasks for .NET API reference 
 when the project is build. Please check https:// Docs.nuget.org/consume/nuget-faq for more information. 
 If you do not wish to use NuGet, you can manually download Aspose.Tasks for .NET API from https://www.nuget.org/packages/Aspose.Tasks/, 
@@ -11,26 +8,29 @@ please feel free to contact us using https://forum.aspose.com/c/tasks
 
 namespace Aspose.Tasks.Examples.CSharp.WorkingWithTasks.WorkingWithTaskConstraints
 {
-    class SetConstraintAsLateAsPossible
+    using Aspose.Tasks.Saving;
+    using Aspose.Tasks.Visualization;
+
+    internal class SetConstraintAsLateAsPossible
     {
         public static void Run()
         {
             // The path to the documents directory.
-            string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
+            var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
             // Create project instance
-            Project project1 = new Project(dataDir + "ConstraintAsLateAsPossible.mpp");
+            var project = new Project(dataDir + "ConstraintAsLateAsPossible.mpp");
 
             //ExStart:SetConstraintAsLateAsPossible
             // Set constraint As Late As Possible for task with Id 11
-            Task wallBoard = project1.RootTask.Children.GetById(11);
+            var wallBoard = project.RootTask.Children.GetById(11);
             wallBoard.Set(Tsk.ConstraintType, ConstraintType.AsLateAsPossible);            
                         
             // Save project as pdf
             SaveOptions options = new PdfSaveOptions();
-            options.StartDate = project1.Get(Prj.StartDate);
+            options.StartDate = project.Get(Prj.StartDate);
             options.Timescale = Timescale.ThirdsOfMonths;
-            project1.Save(dataDir + "project_AsLateAsPossible_out.pdf", options);
+            project.Save(dataDir + "project_AsLateAsPossible_out.pdf", options);
             //ExEnd:SetConstraintAsLateAsPossible
         }
     }

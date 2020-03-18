@@ -1,17 +1,22 @@
-﻿using System;
-
-namespace Aspose.Tasks.Examples.CSharp.Miscellaneous
+﻿namespace Aspose.Tasks.Examples.CSharp.Miscellaneous
 {
-    class HandleExceptions
+    using System;
+
+    using Saving;
+
+    internal class HandleExceptions
     {
         public static void Run()
         {
+            var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
+
             //ExStart:HandleExceptions
-            Project project;
+            //ExFor: Project(String)
+            //ExSummary: Shows how to handle exceptions or project' reading/writing.
             try
             {
-                string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
-                project = new Project(dataDir + "project.mpp");
+                var project = new Project(dataDir + "project.mpp");
+                project.Save(dataDir + "HandleExceptions.mpp", SaveFileFormat.MPP);
             }
             catch (TasksReadingException ex)
             {

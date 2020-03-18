@@ -1,7 +1,4 @@
-﻿using Aspose.Tasks.Saving;
-using Aspose.Tasks.Visualization;
-
-/*
+﻿/*
 This project uses Automatic Package Restore feature of NuGet to resolve Aspose.Tasks for .NET API reference 
 when the project is build. Please check https:// Docs.nuget.org/consume/nuget-faq for more information. 
 If you do not wish to use NuGet, you can manually download Aspose.Tasks for .NET API from https://www.nuget.org/packages/Aspose.Tasks/, 
@@ -11,16 +8,19 @@ please feel free to contact us using https://forum.aspose.com/c/tasks
 
 namespace Aspose.Tasks.Examples.CSharp.WorkingWithResources
 {
-    class RenderResourceUsageView
+    using Aspose.Tasks.Saving;
+    using Aspose.Tasks.Visualization;
+
+    internal class RenderResourceUsageView
     {
         public static void Run()
         {
             // The path to the documents directory.
-            string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
+            var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
             //ExStart:RenderResourceUsageView
             // Create project instance
-            Project project1 = new Project(dataDir + "ResourceUsageView.mpp");
+            var project = new Project(dataDir + "ResourceUsageView.mpp");
                         
             // Define the SaveOptions with required TimeScale settings as Days
             SaveOptions options = new PdfSaveOptions();
@@ -30,18 +30,18 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithResources
             options.PresentationFormat = PresentationFormat.ResourceUsage;
 
             // Save the Project
-            string outputFile = "result_ResourceUsageView_days_out.pdf";
-            project1.Save(dataDir + outputFile, options);
+            var outputFile = "result_ResourceUsageView_days_out.pdf";
+            project.Save(dataDir + outputFile, options);
 
-            // Set the Tiemscale settings to ThirdsOfMonths and save the Project
+            // Set the Timescale settings to ThirdsOfMonths and save the Project
             options.Timescale = Timescale.ThirdsOfMonths;
             outputFile = "result_ResourceUsageView_thirdsOfMonths_out.pdf";
-            project1.Save(dataDir + outputFile, options);
+            project.Save(dataDir + outputFile, options);
 
             // Set the Timescale settings to Months and save the Project
             options.Timescale = Timescale.Months;
             outputFile = "result_ResourceUsageView_months_out.pdf";
-            project1.Save(dataDir + outputFile, options);
+            project.Save(dataDir + outputFile, options);
             //ExEnd:RenderResourceUsageView
         }
     }

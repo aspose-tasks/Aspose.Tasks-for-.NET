@@ -1,7 +1,4 @@
-﻿using Aspose.Tasks.Saving;
-using System;
-
-/*
+﻿/*
 This project uses Automatic Package Restore feature of NuGet to resolve Aspose.Tasks for .NET API reference 
 when the project is build. Please check https:// Docs.nuget.org/consume/nuget-faq for more information. 
 If you do not wish to use NuGet, you can manually download Aspose.Tasks for .NET API from https://www.nuget.org/packages/Aspose.Tasks/, 
@@ -11,27 +8,31 @@ please feel free to contact us using https://forum.aspose.com/c/tasks
 
 namespace Aspose.Tasks.Examples.CSharp.WorkingWithResourceAssignments
 {
-    class UpdateResourceAssignmentInMPP
+    using System;
+
+    using Aspose.Tasks.Saving;
+
+    internal class UpdateResourceAssignmentInMPP
     {
         public static void Run()
         {
             try
             {
                 // The path to the documents directory.
-                string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
+                var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
                 //ExStart:UpdateResourceAssignmentInMPP
                 // Create project instance and access first task and resource
-                Project project1 = new Project(dataDir + "UpdateResourceAssignment.mpp");
-                Task task = project1.RootTask.Children.GetById(1);
-                Resource rsc = project1.Resources.GetById(1);
+                var project = new Project(dataDir + "UpdateResourceAssignment.mpp");
+                var task = project.RootTask.Children.GetById(1);
+                var rsc = project.Resources.GetById(1);
 
                 // Create resource assignment
-                ResourceAssignment assn = project1.ResourceAssignments.Add(task, rsc);
+                var assn = project.ResourceAssignments.Add(task, rsc);
                 assn.Set(Asn.Notes, "Newly added assignment");
 
                 // Save project as MPP
-                project1.Save(dataDir + "UpdateResourceAssignment_out.mpp", SaveFileFormat.MPP);
+                project.Save(dataDir + "UpdateResourceAssignment_out.mpp", SaveFileFormat.MPP);
                 //ExEnd:UpdateResourceAssignmentInMPP
             }
             catch (Exception ex)

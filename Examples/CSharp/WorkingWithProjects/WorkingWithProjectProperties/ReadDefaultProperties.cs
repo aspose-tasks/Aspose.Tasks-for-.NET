@@ -1,17 +1,17 @@
-using System;
-
 namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.WorkingWithProjectProperties
 {
+    using System;
+
     public class ReadDefaultProperties
     {
         public static void Run()
         {
             //ExStart:DefaultProperties
             // The path to the documents directory.
-            string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName); 
+            var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName); 
             
             // Create project
-            Project project = new Project(dataDir + "DefaultProperties.mpp");
+            var project = new Project(dataDir + "DefaultProperties.mpp");
 
             // Display default properties
             Console.WriteLine("New Task Default Start: " + project.Get(Prj.DefaultStartTime).ToShortDateString());

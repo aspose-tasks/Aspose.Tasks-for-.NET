@@ -1,24 +1,24 @@
 ﻿namespace Aspose.Tasks.Examples.CSharp.WorkingWithCalendarExceptions
 {
-    class HandleExceptionOccurrences
+    internal class HandleExceptionOccurrences
     {
         public static void Run()
         {            
-            string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
+            var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
             // Create a project instance
-            Project project = new Project();
+            var project = new Project();
 
             // Define Calendar
             var cal = project.Calendars.Add("Calendar1");
 
-            //ExStart:HandleExceptionOccurences
-            // Define exception and specify occurences
-            CalendarException except = new CalendarException();
+            //ExStart:HandleExceptionOccurrences
+            // Define exception and specify occurrences
+            var except = new CalendarException();
             except.EnteredByOccurrences = true;
             except.Occurrences = 5;
             except.Type = CalendarExceptionType.YearlyByDay;
-            //ExEnd:HandleExceptionOccurences
+            //ExEnd:HandleExceptionOccurrences
 
             // Add exception to calendar and save the Project
             cal.Exceptions.Add(except);

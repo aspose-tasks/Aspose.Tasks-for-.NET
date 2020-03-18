@@ -1,15 +1,15 @@
-﻿using System;
-
-namespace Aspose.Tasks.Examples.CSharp.WorkingWithTasks
+﻿namespace Aspose.Tasks.Examples.CSharp.WorkingWithTasks
 {
-    class CreateRecurringTask
+    using System;
+
+    internal class CreateRecurringTask
     {
         public static void Run()
         {
             try
             {
                 // The path to the documents directory.
-                string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
+                var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
                 //ExStart:CreateRecurringTask
                 // Create project instance

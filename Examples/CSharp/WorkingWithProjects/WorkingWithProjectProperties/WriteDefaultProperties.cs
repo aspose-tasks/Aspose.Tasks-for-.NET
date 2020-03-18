@@ -1,6 +1,3 @@
-using System;
-using Aspose.Tasks.Saving;
-
 /*
 This project uses Automatic Package Restore feature of NuGet to resolve Aspose.Tasks for .NET API reference 
 when the project is build. Please check https:// Docs.nuget.org/consume/nuget-faq for more information. 
@@ -11,16 +8,20 @@ please feel free to contact us using https://forum.aspose.com/c/tasks
 
 namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.WorkingWithProjectProperties
 {
+    using System;
+
+    using Aspose.Tasks.Saving;
+
     public class WriteDefaultProperties
     {
         public static void Run()
         {
-            //ExStart:WriteDefaultProperties
             // The path to the documents directory.
-            string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName); 
+            var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName); 
 
+            //ExStart:WriteDefaultProperties
             // Create a project instance and Set default properties
-            Project project = new Project();
+            var project = new Project();
             project.Set(Prj.ScheduleFromStart, true);
             project.Set(Prj.StartDate, DateTime.Now);
             project.Set(Prj.DefaultStartTime, project.Get(Prj.StartDate));

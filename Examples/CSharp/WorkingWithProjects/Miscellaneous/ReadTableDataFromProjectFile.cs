@@ -1,5 +1,3 @@
-using System;
-
 /*
 This project uses Automatic Package Restore feature of NuGet to resolve Aspose.Tasks for .NET API reference 
 when the project is build. Please check https:// Docs.nuget.org/consume/nuget-faq for more information. 
@@ -10,22 +8,24 @@ please feel free to contact us using https://forum.aspose.com/c/tasks
 
 namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.Miscellaneous
 {
+    using System;
+
     public class ReadTableDataFromProjectFile
     {
         public static void Run()
         {
             // The path to the documents directory.
-            string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
+            var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
             //ExStart:ReadTableDataFromProjectFile
-            Project project = new Project(dataDir + "ReadTableData.mpp");
+            var project = new Project(dataDir + "ReadTableData.mpp");
 
             // Access table
-            Table task1 = project.Tables.ToList()[0];
+            var task1 = project.Tables.ToList()[0];
             Console.WriteLine("Table Fields Count" + task1.TableFields.Count);
 
             // Display all table fields information
-            foreach (TableField tableField in task1.TableFields)
+            foreach (var tableField in task1.TableFields)
             {
                 Console.WriteLine("Field width: " + tableField.Width);
                 Console.WriteLine("Field Title: " + tableField.Title);

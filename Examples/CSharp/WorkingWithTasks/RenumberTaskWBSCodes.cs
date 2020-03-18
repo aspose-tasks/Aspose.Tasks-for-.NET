@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-
-/*
+﻿/*
 This project uses Automatic Package Restore feature of NuGet to resolve Aspose.Tasks for .NET API reference 
 when the project is build. Please check https:// Docs.nuget.org/consume/nuget-faq for more information. 
 If you do not wish to use NuGet, you can manually download Aspose.Tasks for .NET API from https://www.nuget.org/packages/Aspose.Tasks/, 
@@ -12,15 +8,20 @@ please feel free to contact us using https://forum.aspose.com/c/tasks
 
 namespace Aspose.Tasks.Examples.CSharp.WorkingWithTasks
 {
-    class RenumberTaskWBSCodes
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+
+    internal class RenumberTaskWBSCodes
     {
         public static void Run()
         {
-            string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
+            var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
+            
             //ExStart: RenumberTaskWBSCodes
             var project = new Project(dataDir + "RenumberExample.mpp");
 
-            var tasks = project.RootTask.SelectAllChildTasks().ToList();
+            List<Task> tasks = project.RootTask.SelectAllChildTasks().ToList();
 
             Console.WriteLine("WBS codes before: ");
 

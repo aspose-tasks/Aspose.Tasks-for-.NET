@@ -1,20 +1,21 @@
-﻿using System;
-
-namespace Aspose.Tasks.Examples.CSharp.WorkingWithTasks
+﻿namespace Aspose.Tasks.Examples.CSharp.WorkingWithTasks
 {
-    class ReadTaskExtendedAttributes
+    using System;
+
+    internal class ReadTaskExtendedAttributes
     {
         public static void Run()
         {
+            var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
+
             //ExStart:ReadTaskExtendedAttributes
             // Create project instance
-            string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
-            Project project1 = new Project(dataDir + "ReadTaskExtendedAttributes.mpp");
+            var project = new Project(dataDir + "ReadTaskExtendedAttributes.mpp");
 
             // Read extended attributes for tasks
-            foreach (Task tsk in project1.RootTask.Children)
+            foreach (var tsk in project.RootTask.Children)
             {
-                foreach (ExtendedAttribute ea in tsk.ExtendedAttributes)
+                foreach (var ea in tsk.ExtendedAttributes)
                 {
                     Console.WriteLine(ea.FieldId);
                     Console.WriteLine(ea.ValueGuid);
@@ -39,6 +40,12 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithTasks
                         case CustomFieldType.Flag:
                             Console.WriteLine(ea.FlagValue);
                             break;
+                        case CustomFieldType.Null:
+                        case CustomFieldType.RBS:
+                        case CustomFieldType.OutlineCode:
+                            return;
+                        default:
+                            return;
                     }
                 }
             }

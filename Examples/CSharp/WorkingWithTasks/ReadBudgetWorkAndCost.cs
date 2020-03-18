@@ -1,31 +1,32 @@
-﻿using System;
-
-namespace Aspose.Tasks.Examples.CSharp.WorkingWithTasks
+﻿namespace Aspose.Tasks.Examples.CSharp.WorkingWithTasks
 {
-    class ReadBudgetWorkAndCost
+    using System;
+
+    internal class ReadBudgetWorkAndCost
     {
         public static void Run()
         {
+            var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
+
             //ExStart:ReadBudgetWorkAndCost
             // Create project instance
-            string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
-            Project project1 = new Project(dataDir + "BudgetWorkAndCost.mpp");
+            var project = new Project(dataDir + "BudgetWorkAndCost.mpp");
 
             // Display budget work and budget cost for project summary task
-            Task projSummary = project1.RootTask;
+            var projSummary = project.RootTask;
             Console.WriteLine("projSummary.BudgetWork = " + projSummary.Get(Tsk.BudgetWork));
             Console.WriteLine("projSummary.BudgetCost = " + projSummary.Get(Tsk.BudgetCost));
 
             // Display resource budget work
-            Resource rsc = project1.Resources.GetByUid(6);            
+            var rsc = project.Resources.GetByUid(6);            
             Console.WriteLine("Resource BudgetWork = " + rsc.Get(Rsc.BudgetWork));
 
             // Display resource budget cost
-            rsc = project1.Resources.GetByUid(7);
+            rsc = project.Resources.GetByUid(7);
             Console.WriteLine("Resource BudgetCost = " + rsc.Get(Rsc.BudgetCost));
 
             // Display assignment budget work and budget cost
-            foreach (ResourceAssignment assn in projSummary.Assignments)
+            foreach (var assn in projSummary.Assignments)
             {
                 if (assn.Get(Asn.Resource).Get(Rsc.Type) == ResourceType.Work)
                 {

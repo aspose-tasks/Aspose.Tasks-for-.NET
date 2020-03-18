@@ -1,6 +1,3 @@
-using System;
-using Aspose.Tasks.Saving;
-
 /*
 This project uses Automatic Package Restore feature of NuGet to resolve Aspose.Tasks for .NET API reference 
 when the project is build. Please check https:// Docs.nuget.org/consume/nuget-faq for more information. 
@@ -11,32 +8,36 @@ please feel free to contact us using https://forum.aspose.com/c/tasks
 
 namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.Rescheduling
 {
+    using System;
+
+    using Aspose.Tasks.Saving;
+
     public class UpdateProjectAndRescheduleUncompletedWork
     {
         public static void Run()
         {
-            //ExStart:UpdateProjectAndRescheduleUncompletedWork
             // The path to the documents directory.
-            string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
-            
+            var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
+
+            //ExStart:UpdateProjectAndRescheduleUncompletedWork
             // Create a new project and set start date
-            Project project = new Project();
+            var project = new Project();
             project.Set(Prj.StartDate, new DateTime(2014, 1, 27, 8, 0, 0));
 
             // Add new tasks
-            Task task1 = project.RootTask.Children.Add("Task 1");
-            Task task2 = project.RootTask.Children.Add("Task 2");
+            var task1 = project.RootTask.Children.Add("Task 1");
+            var task2 = project.RootTask.Children.Add("Task 2");
             task2.Set(Tsk.Duration, task2.ParentProject.GetDuration(16, TimeUnitType.Hour));
-            Task task3 = project.RootTask.Children.Add("Task 3");
+            var task3 = project.RootTask.Children.Add("Task 3");
             task3.Set(Tsk.Duration, task2.ParentProject.GetDuration(24, TimeUnitType.Hour));
-            Task task4 = project.RootTask.Children.Add("Task 4");
+            var task4 = project.RootTask.Children.Add("Task 4");
             task4.Set(Tsk.Duration, task2.ParentProject.GetDuration(16, TimeUnitType.Hour));
-            Task task5 = project.RootTask.Children.Add("Task 5");
+            var task5 = project.RootTask.Children.Add("Task 5");
             task5.Set(Tsk.Duration, task2.ParentProject.GetDuration(16, TimeUnitType.Hour));
 
             // Add links between tasks
-            TaskLink link12 = project.TaskLinks.Add(task1, task2, TaskLinkType.FinishToStart);
-            TaskLink link23 = project.TaskLinks.Add(task2, task3, TaskLinkType.FinishToStart);
+            project.TaskLinks.Add(task1, task2, TaskLinkType.FinishToStart);
+            var link23 = project.TaskLinks.Add(task2, task3, TaskLinkType.FinishToStart);
             
             // One day lag
             link23.LinkLag = 4800; 
@@ -44,14 +45,14 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.Rescheduling
             project.TaskLinks.Add(task4, task5, TaskLinkType.FinishToStart);
             
             // Add new tasks
-            Task task6 = project.RootTask.Children.Add("Task 6");
-            Task task7 = project.RootTask.Children.Add("Task 7");
+            var task6 = project.RootTask.Children.Add("Task 6");
+            var task7 = project.RootTask.Children.Add("Task 7");
             task7.Set(Tsk.Duration, task7.ParentProject.GetDuration(24, TimeUnitType.Hour));
-            Task task8 = project.RootTask.Children.Add("Task 8");
+            var task8 = project.RootTask.Children.Add("Task 8");
             task8.Set(Tsk.Duration, task2.ParentProject.GetDuration(16, TimeUnitType.Hour));
-            Task task9 = project.RootTask.Children.Add("Task 9");
+            var task9 = project.RootTask.Children.Add("Task 9");
             task9.Set(Tsk.Duration, task2.ParentProject.GetDuration(16, TimeUnitType.Hour));
-            Task task10 = project.RootTask.Children.Add("Task 10");
+            var task10 = project.RootTask.Children.Add("Task 10");
             
             // Add links between tasks
             project.TaskLinks.Add(task6, task7, TaskLinkType.FinishToStart);

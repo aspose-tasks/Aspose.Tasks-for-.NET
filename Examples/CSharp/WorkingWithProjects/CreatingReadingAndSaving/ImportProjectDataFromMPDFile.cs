@@ -1,5 +1,3 @@
-using Aspose.Tasks.Connectivity;
-
 /*
 This project uses Automatic Package Restore feature of NuGet to resolve Aspose.Tasks for .NET API reference 
 when the project is build. Please check https:// Docs.nuget.org/consume/nuget-faq for more information. 
@@ -10,15 +8,20 @@ please feel free to contact us using https://forum.aspose.com/c/tasks
 
 namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.CreatingReadingAndSaving
 {
+    using System;
+
+    using Aspose.Tasks.Connectivity;
+
     public class ImportProjectDataFromMPDFile
     {
         public static void Run()
         {
-            //ExStart:ImportProjectDataFromMPDFile 
             // The path to the documents directory.
-            string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
+            var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
+            //ExStart:ImportProjectDataFromMPDFile 
             DbSettings settings = new MpdSettings("Provider=Microsoft.Jet.OLEDB.4.0; Data Source=" + dataDir + "MpdFileToRead.mpd", 1);
-            Project project = new Project(settings);            
+            var project = new Project(settings);            
+            Console.WriteLine(project.Get(Prj.Name));
             //ExEnd:ImportProjectDataFromMPDFile
         }
     }

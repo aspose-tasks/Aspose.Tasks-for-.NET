@@ -1,6 +1,3 @@
-using Aspose.Tasks.Saving;
-using System;
-
 /*
 This project uses Automatic Package Restore feature of NuGet to resolve Aspose.Tasks for .NET API reference 
 when the project is build. Please check https:// Docs.nuget.org/consume/nuget-faq for more information. 
@@ -11,6 +8,10 @@ please feel free to contact us using https://forum.aspose.com/c/tasks
 
 namespace Aspose.Tasks.Examples.CSharp.WorkingWithCalendars.CreatingUpdatingAndRemoving
 {
+    using System;
+
+    using Aspose.Tasks.Saving;
+
     public class ReplaceCalendarWithNewCalendar
     {
         public static void Run()
@@ -18,15 +19,15 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithCalendars.CreatingUpdatingAndR
             try
             {				
                 // The path to the documents directory.
-                string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
+                var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
                 //ExStart:ReplaceCalendarWithNewCalendar
                 // Create project
-                Project project = new Project(dataDir + "Project5.mpp");
+                var project = new Project(dataDir + "Project5.mpp");
 
                 // Access project calendars
-                CalendarCollection calColl = project.Calendars;
-                foreach (Calendar myCalendar in calColl)
+                var calColl = project.Calendars;
+                foreach (var myCalendar in calColl)
                 {
                     if (myCalendar.Name == "TestCalendar")
                     {
@@ -36,7 +37,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithCalendars.CreatingUpdatingAndR
                 }
 
                 // Add new calendar
-                Calendar newCalendar = calColl.Add("TestCalendar");
+                calColl.Add("TestCalendar");
                 project.Save(dataDir + "ReplaceCalendar_out.mpp", SaveFileFormat.MPP);
                 //ExEnd:ReplaceCalendarWithNewCalendar
             }

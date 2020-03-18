@@ -1,6 +1,4 @@
-﻿using System;
-
-/*
+﻿/*
 This project uses Automatic Package Restore feature of NuGet to resolve Aspose.Tasks for .NET API reference 
 when the project is build. Please check https:// Docs.nuget.org/consume/nuget-faq for more information. 
 If you do not wish to use NuGet, you can manually download Aspose.Tasks for .NET API from https://www.nuget.org/packages/Aspose.Tasks/, 
@@ -10,23 +8,32 @@ please feel free to contact us using https://forum.aspose.com/c/tasks
 
 namespace Aspose.Tasks.Examples.CSharp.WorkingWithVBA
 {
+    using System;
+
     public class ReadVBAProjectInformation
     {
         public static void Run()
         {
             // The path to the documents directory.
-            string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
+            var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
             //ExStart:ReadVBAProjectInformation
+            //ExFor: Project.VbaProject
+            //ExFor: Project.VbaProject.Name
+            //ExFor: Project.VbaProject.Description
+            //ExFor: Project.VbaProject.CompilationArguments
+            //ExFor: Project.VbaProject.HelpContextId
+            //ExSummary: Shows how to read VBA project information.
             // Loading project file
-            Project project = new Project(dataDir + "VbaProject1.mpp");
+            var project = new Project(dataDir + "VbaProject1.mpp");
 
-            VbaProject vbaProject = project.VbaProject;
+            var vbaProject = project.VbaProject;
 
             Console.WriteLine("VbaProject.Name " + vbaProject.Name);
             Console.WriteLine("VbaProject.Description " + vbaProject.Description);
             Console.WriteLine("VbaProject.CompilationArguments" + vbaProject.CompilationArguments);
             Console.WriteLine("VbaProject.HelpContextId" + vbaProject.HelpContextId);
+            Console.WriteLine("VbaProject.HelpFile" + vbaProject.HelpFile);
             //ExEnd:ReadVBAProjectInformation
         }
     }

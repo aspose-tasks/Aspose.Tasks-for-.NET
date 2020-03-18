@@ -1,8 +1,4 @@
-﻿using Aspose.Tasks.Saving;
-using Aspose.Tasks.Util;
-using System;
-
-/*
+﻿/*
 This project uses Automatic Package Restore feature of NuGet to resolve Aspose.Tasks for .NET API reference 
 when the project is build. Please check https:// Docs.nuget.org/consume/nuget-faq for more information. 
 If you do not wish to use NuGet, you can manually download Aspose.Tasks for .NET API from https://www.nuget.org/packages/Aspose.Tasks/, 
@@ -12,37 +8,45 @@ please feel free to contact us using https://forum.aspose.com/c/tasks
 
 namespace Aspose.Tasks.Examples.CSharp.KnowledgeBase
 {
-    class CreateResourcesAndLinkToTasks
+    using System;
+
+    using Aspose.Tasks.Saving;
+    using Aspose.Tasks.Util;
+
+    internal class CreateResourcesAndLinkToTasks
     {
         public static void Run()
         {
             try
             {
-                string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
+                var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
                 //ExStart:CreateResourcesAndLinkToTasks
-                Project project1 = new Project(dataDir + "SampleProject.mpp");
+                //ExFor: Project.Resources.Add(String)
+                //ExFor: Project.ResourceAssignments.Add(Task, Resource)
+                //ExSummary: Shows how to create resources and resource assignments.
+                var project = new Project(dataDir + "SampleProject.mpp");
 
                 // Declare ChildTasksCollector class object
-                ChildTasksCollector collector = new ChildTasksCollector();
+                var collector = new ChildTasksCollector();
 
                 // Use TaskUtils to get all children tasks in RootTask
-                TaskUtils.Apply(project1.RootTask, collector, 0);
+                TaskUtils.Apply(project.RootTask, collector, 0);
 
                 // Define Resources
-                for (int i = 0; i <= 4; i++)
+                for (var i = 0; i <= 4; i++)
                 {
-                    string developer0 = "Developer0" + i;
+                    var name = "Developer0" + i;
 
                     // Add resource to project
-                    Resource newResource = project1.Resources.Add(developer0);
-                    newResource.Set(Rsc.Type, ResourceType.Work);
+                    var resource = project.Resources.Add(name);
+                    resource.Set(Rsc.Type, ResourceType.Work);
 
-                    // Define assignment
-                    ResourceAssignment newResourceAssignment = project1.ResourceAssignments.Add(collector.Tasks[i], newResource);                    
+                    // Add assignment
+                    project.ResourceAssignments.Add(collector.Tasks[i], resource);                    
                 }
 
-                project1.Save(dataDir + "CreateResourcesAndLinkToTasks_out.mpp", SaveFileFormat.MPP);
+                project.Save(dataDir + "CreateResourcesAndLinkToTasks_out.mpp", SaveFileFormat.MPP);
                 //ExEnd:CreateResourcesAndLinkToTasks
             }
             catch (NotSupportedException ex)

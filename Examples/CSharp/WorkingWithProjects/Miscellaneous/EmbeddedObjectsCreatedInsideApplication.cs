@@ -1,7 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.IO;
-
 /*
 This project uses Automatic Package Restore feature of NuGet to resolve Aspose.Tasks for .NET API reference 
 when the project is build. Please check https:// Docs.nuget.org/consume/nuget-faq for more information. 
@@ -12,6 +8,10 @@ please feel free to contact us using https://forum.aspose.com/c/tasks
 
 namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.Miscellaneous
 {
+    using System;
+    using System.Collections.Generic;
+    using System.IO;
+
     public class EmbeddedObjectsCreatedInsideApplication
     {
         public static void Run()
@@ -19,7 +19,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.Miscellaneous
             try
             {
                 // The path to the documents directory.
-                string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
+                var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
                 //ExStart:EmbeddedObjectsCreatedInsideApplication
                 IDictionary<string, string> fileFormatExt = new Dictionary<string, string>();
@@ -27,17 +27,19 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.Miscellaneous
                 fileFormatExt.Add("MSWordDoc", "_wordFile_out.docx");
                 fileFormatExt.Add("ExcelML12", "_excelFile_out.xlsx");
 
-                Project project = new Project(dataDir + "Embedded.mpp"); 
+                var project = new Project(dataDir + "Embedded.mpp"); 
 
-                foreach (OleObject oleObject in project.OleObjects)
+                foreach (var oleObject in project.OleObjects)
                 {
-                    if (!string.IsNullOrEmpty(oleObject.FileFormat) && fileFormatExt.ContainsKey(oleObject.FileFormat))
+                    if (string.IsNullOrEmpty(oleObject.FileFormat) || !fileFormatExt.ContainsKey(oleObject.FileFormat))
                     {
-                        string path = dataDir + "EmbeddedContent_" + fileFormatExt[oleObject.FileFormat];
-                        using (FileStream fileStream = new FileStream(path, FileMode.Create))
-                        {
-                            fileStream.Write(oleObject.Content, 0, oleObject.Content.Length);
-                        }
+                        continue;
+                    }
+
+                    var path = dataDir + "EmbeddedContent_" + fileFormatExt[oleObject.FileFormat];
+                    using (var fileStream = new FileStream(path, FileMode.Create))
+                    {
+                        fileStream.Write(oleObject.Content, 0, oleObject.Content.Length);
                     }
                 }
                 //ExEnd:EmbeddedObjectsCreatedInsideApplication

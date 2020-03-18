@@ -1,7 +1,4 @@
-﻿using Aspose.Tasks.Saving;
-using System;
-
-/*
+﻿/*
 This project uses Automatic Package Restore feature of NuGet to resolve Aspose.Tasks for .NET API reference 
 when the project is build. Please check https:// Docs.nuget.org/consume/nuget-faq for more information. 
 If you do not wish to use NuGet, you can manually download Aspose.Tasks for .NET API from https://www.nuget.org/packages/Aspose.Tasks/, 
@@ -10,14 +7,18 @@ please feel free to contact us using https://forum.aspose.com/c/tasks
 */
 namespace Aspose.Tasks.Examples.CSharp.WorkingWithResourceAssignments
 {
-    class ReadWriteRateScaleForResourceAssignment
+    using System;
+
+    using Aspose.Tasks.Saving;
+
+    internal class ReadWriteRateScaleForResourceAssignment
     {
         public static void Run()
         {
-            string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
+            var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
             //ExStart: ReadWriteRateScaleForResourceAssignment
-            Project project = new Project(dataDir + "New project 2013.mpp");
+            var project = new Project(dataDir + "New project 2013.mpp");
 
             var task = project.RootTask.Children.Add("t1");
 
@@ -41,7 +42,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithResourceAssignments
             Console.WriteLine(resavedMaterialResourceAssignment.Get(Asn.RateScale));
 
             // only material resource assignments can have non-zero rate scale value.
-            var assignment = resavedProject.ResourceAssignments.GetByUid(2);
+            resavedProject.ResourceAssignments.GetByUid(2);
             //ExEnd: ReadWriteRateScaleForResourceAssignment
         }
     }
