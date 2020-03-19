@@ -13,15 +13,17 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithTasks
         public static void Run()
         {
             //ExStart:WriteTaskCalendar
+            //ExFor: Tsk.Calendar
+            //ExSummary: Shows how to set a task calendar.
             // Create project instance
             var project = new Project();
 
             // Add task
-            var tsk1 = project.RootTask.Children.Add("Task1");
+            var task = project.RootTask.Children.Add("Task1");
 
             // Create calendar and assign to task
-            var cal = project.Calendars.Add("TaskCal1");
-            tsk1.Set(Tsk.Calendar, cal);
+            var calendar = project.Calendars.Add("TaskCal1");
+            task.Set(Tsk.Calendar, calendar);
             //ExEnd:WriteTaskCalendar      
         }
     }

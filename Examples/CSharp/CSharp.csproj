@@ -194,7 +194,6 @@
     <Compile Include="WorkingWithResources\UpdateResourceDataInMPP.cs" />
     <Compile Include="WorkingWithTaskBaselines\CreateTaskBaseline.cs" />
     <Compile Include="WorkingWithTaskBaselines\GetTaskBaselineDuration.cs" />
-    <Compile Include="WorkingWithTaskBaselines\GetTaskBaselineSchedule.cs" />
     <Compile Include="WorkingWithTaskLinks\CreateTaskLinks.cs" />
     <Compile Include="WorkingWithTaskLinks\GetCrossProjectTaskLinks.cs" />
     <Compile Include="WorkingWithTaskLinks\GetPredecessorSuccessorTasks.cs" />

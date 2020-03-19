@@ -7,6 +7,10 @@
         public static void Run()
         {                        
             //ExStart:GetTaskBaselineDuration
+            //ExFor: TaskBaseline.Duration
+            //ExFor: TaskBaseline.Start
+            //ExFor: TaskBaseline.Finish
+            //ExSummary: Shows how to get access to a baseline information.
             // Create project instance
             var project = new Project();
 

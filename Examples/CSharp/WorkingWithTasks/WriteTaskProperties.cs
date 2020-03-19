@@ -14,19 +14,23 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithTasks
     {
         public static void Run()
         {
+            var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
+            
             //ExStart:WriteTaskProperties
+            //ExFor: Tsk.Start
+            //ExFor: Tsk.Name
+            //ExSummary: Shows how to set task properties.
             // Create project instance
             var project = new Project();
             
             // Add task and set task properties
             var task = project.RootTask.Children.Add("Task1");
             task.Set(Tsk.Start, project.RootTask.Get(Tsk.Start).AddDays(1));
-            task.Set(Tsk.Name, "new name");
-            //ExEnd:WriteTaskProperties
-
+            task.Set(Tsk.Name, "Task1");
+            
             // Save project
-            var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
-            project.Save(dataDir + "WriteTaskProperties_out.pdf", SaveFileFormat.PDF); 
+            project.Save(dataDir + "WriteTaskProperties_out.pdf", SaveFileFormat.PDF);
+            //ExEnd:WriteTaskProperties
         }
     }
 }

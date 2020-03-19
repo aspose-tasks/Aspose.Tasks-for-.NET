@@ -16,7 +16,11 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithTasks
     {
         public static void Run()
         {
+            var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
+
             //ExStart:WriteTaskDuration
+            //ExFor: Tsk.Duration
+            //ExSummary: Shows how to work with a task duration.
             // Create a new project and add a new task
             var project = new Project();
             var task = project.RootTask.Children.Add("Task");
@@ -42,7 +46,6 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithTasks
             //ExEnd:WriteTaskDuration
 
             // Save project as PDF
-            var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
             project.Save(dataDir + "WriteTaskDuration_out.pdf", SaveFileFormat.PDF);
         }
     }

@@ -17,23 +17,29 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithTasks
     {
         public static void Run()
         {
-            //ExStart:ReadTaskPriority
-            // Read project from file stream
             var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
-            var fs = new FileStream(dataDir + "TaskPriority.mpp", FileMode.Open);
-            var prj = new Project(fs);
-            fs.Close();
+            
+            //ExStart:ReadTaskPriority
+            //ExFor: Tsk.Priority
+            //ExSummary: Shows how to read a task priority.
+            // Read project from file stream
+
+            Project project;
+            using (var fs = new FileStream(dataDir + "TaskPriority.mpp", FileMode.Open))
+            {
+                project = new Project(fs);
+            }
 
             // Create a ChildTasksCollector instance
             var collector = new ChildTasksCollector();
 
             // Collect all the tasks from RootTask using TaskUtils
-            TaskUtils.Apply(prj.RootTask, collector, 0);
+            TaskUtils.Apply(project.RootTask, collector, 0);
 
             // Display Priorities for all tasks
-            foreach (var tsk1 in collector.Tasks)
+            foreach (var task in collector.Tasks)
             {
-                Console.WriteLine(tsk1.Get(Tsk.Name) + " - Priority : " + tsk1.Get(Tsk.Priority));
+                Console.WriteLine(task.Get(Tsk.Name) + " - Priority : " + task.Get(Tsk.Priority));
             }
             //ExEnd:ReadTaskPriority
         }

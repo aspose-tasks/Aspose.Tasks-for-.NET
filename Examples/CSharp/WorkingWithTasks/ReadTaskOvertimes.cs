@@ -8,21 +8,25 @@
         public static void Run()
         {
             var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
+            
             //ExStart:ReadTaskOvertimes
+            //ExFor: Tsk.OvertimeCost
+            //ExFor: Tsk.OvertimeWork
+            //ExSummary: Shows how to read task overtimes.
             // Read project from file stream
-            var project = new Project(new FileStream(dataDir + "TaskOvertimes.mpp", FileMode.Open));
+            var project = new Project(dataDir + "TaskOvertimes.mpp");
 
             // Read overtime and percentage completion for tasks
-            foreach (var tsk1 in project.RootTask.Children)
+            foreach (var task in project.RootTask.Children)
             {
-                Console.WriteLine(tsk1.Get(Tsk.OvertimeCost));
-                Console.WriteLine(tsk1.Get(Tsk.OvertimeWork).ToString());
-                Console.WriteLine(tsk1.Get(Tsk.PercentComplete));
-                Console.WriteLine(tsk1.Get(Tsk.PercentWorkComplete).ToString());
-                Console.WriteLine(tsk1.Get(Tsk.PhysicalPercentComplete).ToString());
+                Console.WriteLine(task.Get(Tsk.OvertimeCost));
+                Console.WriteLine(task.Get(Tsk.OvertimeWork));
+                Console.WriteLine(task.Get(Tsk.PercentComplete));
+                Console.WriteLine(task.Get(Tsk.PercentWorkComplete));
+                Console.WriteLine(task.Get(Tsk.PhysicalPercentComplete));
 
                 // Set percent complete
-                tsk1.Set(Tsk.PercentComplete, 100);
+                task.Set(Tsk.PercentComplete, 100);
             }
             //ExEnd:ReadTaskOvertimes
         }

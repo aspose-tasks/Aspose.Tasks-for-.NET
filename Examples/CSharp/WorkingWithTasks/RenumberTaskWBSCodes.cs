@@ -19,6 +19,9 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithTasks
             var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
             
             //ExStart: RenumberTaskWBSCodes
+            //ExFor: Tsk.WBS
+            //ExFor: Project.RenumberWBSCode(List<int>)
+            //ExSummary: Shows how to renumber tasks' WBS codes.
             var project = new Project(dataDir + "RenumberExample.mpp");
 
             List<Task> tasks = project.RootTask.SelectAllChildTasks().ToList();

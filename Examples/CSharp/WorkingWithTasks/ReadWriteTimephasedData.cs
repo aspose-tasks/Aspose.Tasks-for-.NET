@@ -8,7 +8,12 @@
         public static void Run()
         {
             var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
+            
             //ExStart:ReadWriteTimephasedData
+            //ExFor: Asn.WorkContour
+            //ExFor: ResourceAssignment.GetTimephasedData(DateTime, DateTime)
+            //ExFor: ResourceAssignment.GetTimephasedData(DateTime, DateTime, TimephasedDataType)
+            //ExSummary: Shows how to read timephased data of a resource assignment.
             // Create project instance
             var project = new Project(dataDir + "ReadWriteTimephasedData.mpp");
 

@@ -17,9 +17,13 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithTasks
     {
         public static void Run()
         {
-            //ExStart:ReadTaskWBS
-            // Read project
             var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
+            
+            //ExStart:ReadTaskWBS
+            //ExFor: Tsk.WBS
+            //ExFor: Tsk.WBSLevel
+            //ExSummary: Shows how to read task's WBS codes.
+            // Read project
             var project = new Project(dataDir + "TaskWBS.mpp");
 
             // Create a ChildTasksCollector instance
@@ -29,13 +33,10 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithTasks
             TaskUtils.Apply(project.RootTask, collector, 0);
 
             // Parse through all the collected tasks
-            foreach (var tsk in collector.Tasks)
+            foreach (var task in collector.Tasks)
             {
-                Console.WriteLine(tsk.Get(Tsk.WBS));
-                Console.WriteLine(tsk.Get(Tsk.WBSLevel));
-                
-                // Set custom WBS
-                tsk.Set(Tsk.WBS, "custom wbs" + tsk.Get(Tsk.WBS));
+                Console.WriteLine(task.Get(Tsk.WBS));
+                Console.WriteLine(task.Get(Tsk.WBSLevel));
             }
             //ExEnd:ReadTaskWBS
 

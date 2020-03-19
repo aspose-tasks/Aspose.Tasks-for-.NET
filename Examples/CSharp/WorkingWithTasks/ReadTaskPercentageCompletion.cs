@@ -6,18 +6,23 @@
     {
         public static void Run()
         {
-            //ExStart:ReadTaskPercentageCompletion
-            // Create project instance
             var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
+            
+            //ExStart:ReadTaskPercentageCompletion
+            //ExFor: Tsk.PercentComplete
+            //ExFor: Tsk.PercentWorkComplete
+            //ExFor: Tsk.PhysicalPercentComplete
+            //ExSummary: Shows how to read task's percentages.
+            // Create project instance
             var project = new Project(dataDir + "TaskPercentageCompletion.mpp");
 
             // Access tasks and display percentage completion
             var tasks = project.RootTask.Children;
-            foreach (var tsk1 in tasks)
+            foreach (var task in tasks)
             {
-                Console.WriteLine(tsk1.Get(Tsk.PercentComplete));
-                Console.WriteLine(tsk1.Get(Tsk.PercentWorkComplete).ToString());
-                Console.WriteLine(tsk1.Get(Tsk.PhysicalPercentComplete).ToString());
+                Console.WriteLine(task.Get(Tsk.PercentComplete));
+                Console.WriteLine(task.Get(Tsk.PercentWorkComplete));
+                Console.WriteLine(task.Get(Tsk.PhysicalPercentComplete));
             }
             //ExEnd:ReadTaskPercentageCompletion
         }

@@ -19,6 +19,11 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithTasks
             var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
             //ExStart:RenderTaskUsageViewWithDetails
+            //ExFor: Project.DefaultView
+            //ExFor: UsageView.DisplayDetailsHeaderColumn
+            //ExFor: UsageView.RepeatDetailsHeaderOnAllRows
+            //ExFor: UsageView.AlignDetailsData
+            //ExSummary: Shows how to render task usage view with details.
             // Create project instance
             var project = new Project(dataDir + "TaskUsageViewWithDetails.mpp");
 

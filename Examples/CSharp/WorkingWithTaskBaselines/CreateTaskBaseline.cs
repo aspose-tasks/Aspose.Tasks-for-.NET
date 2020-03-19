@@ -5,6 +5,9 @@
         public static void Run()
         {
             //ExStart:CreateTaskBaseline
+            //ExFor: Project.SetBaseline(BaselineType)
+            //ExFor: Project.SetBaseline(BaselineType,IEnumerable<Task>)
+            //ExSummary: Shows how to create task baselines.
             // Create project instance
             var project = new Project();
 
