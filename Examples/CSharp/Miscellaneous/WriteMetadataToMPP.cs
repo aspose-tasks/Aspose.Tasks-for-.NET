@@ -18,8 +18,14 @@ namespace Aspose.Tasks.Examples.CSharp.Miscellaneous
         {
             try
             {
-                //ExStart:WriteMetadataToMPP
                 var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
+                
+                //ExStart:WriteMetadataToMPP
+                //ExFor: Tsk.Contact
+                //ExFor: Rsc.Group
+                //ExFor: Rsc.EMailAddress
+                //ExFor: Rsc.WindowsUserAccount
+                //ExSummary: Shows how to prepare and save project with metadata were set for main entities (Tasks, Resources, Assignments).
                 var project = new Project(dataDir + "Project1.mpp");
 
                 // Add working times to project calendar
@@ -82,12 +88,12 @@ namespace Aspose.Tasks.Examples.CSharp.Miscellaneous
                 assn.Set(Asn.Finish, task.Get(Tsk.Finish));
 
                 // Add extended attribute for project and task
-                var attr = ExtendedAttributeDefinition.CreateTaskDefinition(CustomFieldType.Flag, ExtendedAttributeTask.Flag1,  "My Flag Field");
-                project.ExtendedAttributes.Add(attr);
+                var attributeDefinition = ExtendedAttributeDefinition.CreateTaskDefinition(CustomFieldType.Flag, ExtendedAttributeTask.Flag1,  "My Flag Field");
+                project.ExtendedAttributes.Add(attributeDefinition);
 
-                var taskAttr = attr.CreateExtendedAttribute();
-                taskAttr.FlagValue = true;
-                task2.ExtendedAttributes.Add(taskAttr);
+                var attribute = attributeDefinition.CreateExtendedAttribute();
+                attribute.FlagValue = true;
+                task2.ExtendedAttributes.Add(attribute);
 
                 // Save project as MPP
                 project.Save(dataDir + "WriteMetaData_out.mpp", SaveFileFormat.MPP);

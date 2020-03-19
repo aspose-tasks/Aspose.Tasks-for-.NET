@@ -12,7 +12,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.WorkingWithExtendedAt
 
     using Aspose.Tasks.Saving;
 
-    public class WriteUpdatedExtendedAttributeDefinitions
+    internal class WriteUpdatedExtendedAttributeDefinitions
     {
         public static void Run()
         {

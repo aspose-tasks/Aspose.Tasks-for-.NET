@@ -10,7 +10,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.ImportingAndExporting
 {
     using Aspose.Tasks.Saving;
 
-    public class ExportProjectDataToXERFormat
+    internal class ExportProjectDataToXERFormat
     {
         public static void Run()
         {

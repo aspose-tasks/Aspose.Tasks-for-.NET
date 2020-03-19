@@ -2,7 +2,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.WorkingWithProjectPro
 {
     using System;
 
-    public class ReadFiscalYearProperties
+    internal class ReadFiscalYearProperties
     {
         public static void Run()
         {

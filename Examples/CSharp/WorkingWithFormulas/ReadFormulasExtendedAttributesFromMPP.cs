@@ -10,7 +10,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithFormulas
 {
     using System;
 
-    public class ReadFormulasExtendedAttributesFromMPP
+    internal class ReadFormulasExtendedAttributesFromMPP
     {
         public static void Run()
         {
@@ -18,12 +18,14 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithFormulas
             var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
             //ExStart:ReadFormulasExtendedAttributesFromMPP
+            //ExFor: ExtendedAttributeDefinition.Formula
+            //ExSummary: Shows how to read extended attribute formulas.
             // Create project instance
             var project = new Project(dataDir + "ReadFormulas.mpp"); // Attached test mpp
            
             // Read extended attribute formula
-            var attr = project.ExtendedAttributes[0];
-            Console.WriteLine("Attribute Formula: " + attr.Formula);
+            var attribute = project.ExtendedAttributes[0];
+            Console.WriteLine("Attribute Formula: " + attribute.Formula);
             //ExEnd:ReadFormulasExtendedAttributesFromMPP
         }
     }

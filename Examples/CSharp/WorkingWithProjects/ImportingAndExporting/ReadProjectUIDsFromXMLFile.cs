@@ -11,7 +11,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.ImportingAndExporting
     using System;
     using System.Collections.Generic;
 
-    public class ReadProjectUIDsFromXMLFile
+    internal class ReadProjectUIDsFromXMLFile
     {
         public static void Run()
         {

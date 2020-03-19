@@ -49,8 +49,8 @@
 
             var task = project.RootTask.Children.Add("Task");
 
-            var a = attr.CreateExtendedAttribute();
-            task.ExtendedAttributes.Add(a);
+            var attribute = attr.CreateExtendedAttribute();
+            task.ExtendedAttributes.Add(attribute);
             return project;
         }   
     }

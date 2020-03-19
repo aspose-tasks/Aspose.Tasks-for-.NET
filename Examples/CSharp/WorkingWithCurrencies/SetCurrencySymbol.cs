@@ -15,14 +15,12 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithCurrencies
         public static void Run()
         {
             //ExStart:SetCurrencySymbol
+            //ExFor: Prj.CurrencySymbol
+            //ExSummary: Shows how to set the project currency symbol.
             // Create new project and set currency symbol
             var project = new Project();
             project.Set(Prj.CurrencySymbol, "$$");
             //ExEnd:SetCurrencySymbol
-
-            // Save project as XML
-            var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
-            project.Save(dataDir + "project_CurrencySymbol_out.xml", SaveFileFormat.XML);
         }
     }
 }

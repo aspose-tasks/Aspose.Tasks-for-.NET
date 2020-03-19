@@ -11,7 +11,7 @@ namespace Aspose.Tasks.Examples.CSharp.ConvertingProjectData
     using Aspose.Tasks.Saving;
     using Aspose.Tasks.Visualization;
 
-    public class UsingXlsxOptions
+    internal class UsingXlsxOptions
     {
         public static void Run()
         {           

@@ -12,7 +12,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects
 
     using Aspose.Tasks.Saving;
 
-    public class WorkingWithOutlineCodes
+    internal class WorkingWithOutlineCodes
     {
         public static void Run()
         {

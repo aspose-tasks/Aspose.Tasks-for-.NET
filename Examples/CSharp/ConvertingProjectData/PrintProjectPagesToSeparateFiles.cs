@@ -14,7 +14,7 @@ namespace Aspose.Tasks.Examples.CSharp.ConvertingProjectData
     using Aspose.Tasks.Saving;
     using Aspose.Tasks.Visualization;
 
-    public class PrintProjectPagesToSeparateFiles
+    internal class PrintProjectPagesToSeparateFiles
     {
         public static void Run()
         {

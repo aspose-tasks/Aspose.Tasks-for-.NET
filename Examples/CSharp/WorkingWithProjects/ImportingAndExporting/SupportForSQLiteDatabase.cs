@@ -13,7 +13,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.ImportingAndExporting
     using Aspose.Tasks.Connectivity;
     using Aspose.Tasks.Saving;
 
-    public class SupportForSQLiteDatabase
+    internal class SupportForSQLiteDatabase
     {
         public static void Run()
         {

@@ -2,7 +2,7 @@ namespace Aspose.Tasks.Examples.CSharp.ConvertingProjectData
 {
     using Aspose.Tasks.Saving;
 
-    public class SaveProjectAsPDF
+    internal class SaveProjectAsPDF
     {
         public static void Run()
         {

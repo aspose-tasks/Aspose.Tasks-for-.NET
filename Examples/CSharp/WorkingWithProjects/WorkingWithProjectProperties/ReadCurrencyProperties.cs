@@ -2,7 +2,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.WorkingWithProjectPro
 {
     using System;
 
-    public class ReadCurrencyProperties
+    internal class ReadCurrencyProperties
     {
         public static void Run()
         {

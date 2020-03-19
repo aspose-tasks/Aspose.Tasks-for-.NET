@@ -10,7 +10,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithVBA
 {
     using System;
 
-    public class ReadVBAProjectInformation
+    internal class ReadVBAProjectInformation
     {
         public static void Run()
         {

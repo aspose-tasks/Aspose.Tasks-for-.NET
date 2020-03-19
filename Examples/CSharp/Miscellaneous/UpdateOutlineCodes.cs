@@ -18,8 +18,12 @@ namespace Aspose.Tasks.Examples.CSharp.Miscellaneous
         {
             try
             {
-                //ExStart:UpdateOutlineCodes
                 var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
+
+                //ExStart:UpdateOutlineCodes
+                //ExFor: Project.OutlineCodes
+                //ExFor: OutlineCodeDefinition.Values
+                //ExSummary: Shows how to create new outline codes.
                 var project = new Project(dataDir + "project.mpp");
                  
                 // Define outline code and its outline mask

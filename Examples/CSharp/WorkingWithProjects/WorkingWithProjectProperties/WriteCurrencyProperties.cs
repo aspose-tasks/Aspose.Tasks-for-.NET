@@ -2,7 +2,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.WorkingWithProjectPro
 {
     using Aspose.Tasks.Saving;
 
-    public class WriteCurrencyProperties
+    internal class WriteCurrencyProperties
     {
         public static void Run()
         {

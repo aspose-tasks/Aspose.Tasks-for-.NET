@@ -16,6 +16,7 @@ namespace Aspose.Tasks.Examples.CSharp.Licensing
     {
         public static void Run()
         {
+            var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
             //ExStart:DateTimeLimitations
             //ExFor: Project.Save(String,SaveFileFormat)
             //ExSummary: Shows that project' dates are reset in an evaluation mode.
@@ -30,7 +31,7 @@ namespace Aspose.Tasks.Examples.CSharp.Licensing
             task2.Set(Tsk.ActualStart, DateTime.Parse("10-Apr-2010"));
 
             // Save the Project as XML
-            project.Save("EvalProject_out.xml", SaveFileFormat.XML);
+            project.Save(dataDir + "EvalProject_out.xml", SaveFileFormat.XML);
             //ExEnd:DateTimeLimitations
         }
     }

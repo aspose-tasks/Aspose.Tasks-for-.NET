@@ -10,7 +10,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithVBA
 {
     using System;
 
-    public class ReadModulesInformation
+    internal class ReadModulesInformation
     {
         public static void Run()
         {

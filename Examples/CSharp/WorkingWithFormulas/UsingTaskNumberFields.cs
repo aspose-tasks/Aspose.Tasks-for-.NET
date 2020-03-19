@@ -10,7 +10,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithFormulas
 {
     using System;
 
-    public class UsingTaskNumberFields
+    internal class UsingTaskNumberFields
     {
         public static void Run()
         {

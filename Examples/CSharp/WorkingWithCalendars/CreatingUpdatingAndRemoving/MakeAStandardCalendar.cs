@@ -11,17 +11,20 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithCalendars.CreatingUpdatingAndR
     internal class MakeAStandardCalendar
     {
         public static void Run()
-        { 
+        {
+            var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);   
+            
             //ExStart:MakeAStandardCalendar
+            //ExFor: Project.Calendars.Add(String)
+            //ExSummary: Shows how to make a standard calendar.
             // Create a project instance
             var project = new Project();
 
-            // Define Calendar and make it standard
-            var cal1 = project.Calendars.Add("My Cal");
-            Aspose.Tasks.Calendar.MakeStandardCalendar(cal1);
+            // Define a calendar and make it standard
+            var calendar = project.Calendars.Add("New Standard Calendar");
+            Calendar.MakeStandardCalendar(calendar);
 
             // Save the Project
-            var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
             project.Save(dataDir + "Project_MakeStandardCalendar_out.xml", Aspose.Tasks.Saving.SaveFileFormat.XML);
             //ExEnd:MakeAStandardCalendar
         }

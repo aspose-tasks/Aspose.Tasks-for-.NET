@@ -10,7 +10,7 @@ namespace Aspose.Tasks.Examples.CSharp.ConvertingProjectData
 {
     using Aspose.Tasks.Saving;
 
-    public class SaveProjectAsSVG
+    internal class SaveProjectAsSVG
     {
         public static void Run()
         {

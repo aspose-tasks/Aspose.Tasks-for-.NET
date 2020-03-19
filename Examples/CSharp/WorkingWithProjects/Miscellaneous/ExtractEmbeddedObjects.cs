@@ -2,7 +2,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.Miscellaneous
 {
     using System.IO;
 
-    public class ExtractEmbeddedObjects
+    internal class ExtractEmbeddedObjects
     {
         public static void Run()
         {

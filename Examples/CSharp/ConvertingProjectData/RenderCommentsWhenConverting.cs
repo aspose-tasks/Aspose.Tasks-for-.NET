@@ -2,7 +2,7 @@
 {
     using Saving;
 
-    public class RenderCommentsWhenConverting
+    internal class RenderCommentsWhenConverting
     {
         public static void Run()
         {

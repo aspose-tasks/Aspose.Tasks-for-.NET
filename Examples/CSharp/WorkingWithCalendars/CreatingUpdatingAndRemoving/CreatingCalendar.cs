@@ -12,17 +12,19 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithCalendars.CreatingUpdatingAndR
     {
         public static void Run()
         {
-            //ExStart:CreatingCalendar            
-            // Create a project instance
+            var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
+
+            //ExStart:CreatingCalendar
+            //ExFor: Project.Calendars.Add(String)
+            //ExFor: Project.Calendars.Add(String,Calendar)
+            //ExSummary: Shows how to add new calendars.
             var project = new Project();
 
-            // New calendar can be added to a project's calendar collection using the collection's Add method.
-            project.Calendars.Add("New Info");
-            project.Calendars.Add("no name");
-            project.Calendars.Add("cal3");
+            // new calendars can be added to a project's calendar collection by using the collection's Add overloads.
+            project.Calendars.Add("Calendar");
+            var calendar = project.Calendars.Add("Parent");
+            project.Calendars.Add("Child", calendar);
 
-            // Save the Project
-            var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
             project.Save(dataDir + "CreatingCalendar_out.Xml", Aspose.Tasks.Saving.SaveFileFormat.XML);
             //ExEnd:CreatingCalendar
         }

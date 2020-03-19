@@ -7,8 +7,12 @@
         public static void Run()
         {
             //ExStart:CalculateDateTimeFunctions
-            var project = CreateTestProject();
-            var task = project.RootTask.Children.GetById(1);
+            //ExFor: ExtendedAttributeDefinition.Formula
+            //ExFor: ExtendedAttribute.DurationValue
+            //ExFor: ExtendedAttribute.TextValue
+            //ExSummary: Shows how to add extended attributes that uses MS Project date/time formulas.
+            var project = new Project();
+            var task = project.RootTask.Children.Add("Task");
 
             var numberDefinition = ExtendedAttributeDefinition.CreateTaskDefinition(ExtendedAttributeTask.Number1, null);
             project.ExtendedAttributes.Add(numberDefinition);
@@ -66,13 +70,6 @@
             numberDefinition.Formula = "Weekday(\"24/3/2015\", 3)";
             Console.WriteLine(numberAttribute.NumericValue);
             //ExEnd:CalculateDateTimeFunctions
-        }
-
-        private static Project CreateTestProject()
-        {
-            var project = new Project();
-            project.RootTask.Children.Add("Task");
-            return project;
         }
     }
 }

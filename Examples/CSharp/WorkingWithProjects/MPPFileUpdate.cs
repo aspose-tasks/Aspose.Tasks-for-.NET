@@ -4,7 +4,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects
 
     using Aspose.Tasks.Saving;
 
-    public class MPPFileUpdate
+    internal class MPPFileUpdate
     {
         public static void Run()
         {

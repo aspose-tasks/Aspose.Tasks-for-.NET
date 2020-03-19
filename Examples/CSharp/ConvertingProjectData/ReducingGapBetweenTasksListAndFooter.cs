@@ -13,7 +13,6 @@
             //ExStart: ReducingGapBetweenTasksListAndFooter
             //ExFor: ImageSaveOptions.ReduceFooterGap
             //ExSummary: Shows how to set a value indicating whether a gap between last task and the footer must be reduced.
-
             var project = new Project(dataDir + "CreateProject2.mpp");
 
             //Use ReduceFooterGap property to reduce the gap between list of tasks and Footer

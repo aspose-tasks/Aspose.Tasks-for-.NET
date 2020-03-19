@@ -2,7 +2,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.WorkingWithProjectPro
 {
     using System;
 
-    public class ReadDefaultProperties
+    internal class ReadDefaultProperties
     {
         public static void Run()
         {

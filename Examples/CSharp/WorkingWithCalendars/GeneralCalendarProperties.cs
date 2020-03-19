@@ -16,25 +16,29 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithCalendars
         {
             var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
-            //ExStart:ReadCalendarProps            
+            //ExStart:ReadCalendarProps
+            //ExFor: Project.Calendars
+            //ExFor: Calendar.IsBaseCalendar
+            //ExFor: Calendar.WeekDays
+            //ExSummary: Shows how to read project calendars and their properties.
             // Load an existing project
             var project = new Project(dataDir + "Project_GeneralCalendarProperties.xml");
 
-            foreach (var cal in project.Calendars)
+            foreach (var calendar in project.Calendars)
             {
-                if (cal.Name == null)
+                if (calendar.Name == null)
                 {
                     continue;
                 }
 
-                Console.WriteLine("UID : " + cal.Uid + " Name: " + cal.Name);
+                Console.WriteLine("UID : " + calendar.Uid + " Name: " + calendar.Name);
 
                 // Show if it is has a base calendar
                 Console.Write("Base Calendar : ");
-                Console.WriteLine(cal.IsBaseCalendar ? "Self" : cal.BaseCalendar.Name);
+                Console.WriteLine(calendar.IsBaseCalendar ? "Self" : calendar.BaseCalendar.Name);
 
                 // Get Time in hours on each working day
-                foreach (var wd in cal.WeekDays)
+                foreach (var wd in calendar.WeekDays)
                 {
                     var ts = wd.GetWorkingTime();
                     Console.WriteLine("Day Type: " + wd.DayType + " Hours: " + ts);

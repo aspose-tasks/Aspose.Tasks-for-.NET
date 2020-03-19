@@ -12,7 +12,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.CreatingReadingAndSav
 
     using Aspose.Tasks.Connectivity;
 
-    public class ImportProjectDataFromMPDFile
+    internal class ImportProjectDataFromMPDFile
     {
         public static void Run()
         {

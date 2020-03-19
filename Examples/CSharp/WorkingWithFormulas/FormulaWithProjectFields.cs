@@ -10,7 +10,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithFormulas
 {
     using System;
 
-    public class FormulaWithProjectFields
+    internal class FormulaWithProjectFields
     {
         //ExStart:FormulaWithProjectFields
         public static void Run()
@@ -33,8 +33,8 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithFormulas
             project.ExtendedAttributes.Add(attr);
          
             var task = project.RootTask.Children.Add("Task");
-            var a = attr.CreateExtendedAttribute();
-            task.ExtendedAttributes.Add(a);
+            var attribute = attr.CreateExtendedAttribute();
+            task.ExtendedAttributes.Add(attribute);
             return project;
         }
         //ExEnd:FormulaWithProjectFields

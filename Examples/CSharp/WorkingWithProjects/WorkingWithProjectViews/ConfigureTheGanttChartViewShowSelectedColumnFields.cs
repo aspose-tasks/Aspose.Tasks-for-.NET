@@ -13,7 +13,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.WorkingWithProjectVie
 
     using Aspose.Tasks.Saving;
 
-    public class ConfigureTheGanttChartViewShowSelectedColumnFields
+    internal class ConfigureTheGanttChartViewShowSelectedColumnFields
     {
         public static void Run()
         {            

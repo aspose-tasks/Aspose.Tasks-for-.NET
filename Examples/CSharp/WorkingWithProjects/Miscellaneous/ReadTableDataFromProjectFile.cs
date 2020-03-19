@@ -10,7 +10,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.Miscellaneous
 {
     using System;
 
-    public class ReadTableDataFromProjectFile
+    internal class ReadTableDataFromProjectFile
     {
         public static void Run()
         {

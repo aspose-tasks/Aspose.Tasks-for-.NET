@@ -10,7 +10,7 @@ namespace Aspose.Tasks.Examples.CSharp.ConvertingProjectData
 {
     using Aspose.Tasks.Saving;
 
-    public class SaveProjectDataToSpreadsheet2003XML
+    internal class SaveProjectDataToSpreadsheet2003XML
     {
         public static void Run()
         {

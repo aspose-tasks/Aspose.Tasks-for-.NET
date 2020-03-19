@@ -12,7 +12,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.WorkingWithProjectPro
 
     using Aspose.Tasks.Saving;
 
-    public class WriteMPPProjectSummary
+    internal class WriteMPPProjectSummary
     {
         public static void Run()
         {

@@ -34,9 +34,9 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithResourceAssignments
             var nonMaterialResourceAssignment = project.ResourceAssignments.Add(task, nonMaterialResource);
             nonMaterialResourceAssignment.Set(Asn.RateScale, RateScaleType.Week);
 
-            project.Save("output.mpp", SaveFileFormat.MPP);
+            project.Save(dataDir + "ReadWriteRateScaleForResourceAssignment_out.mpp", SaveFileFormat.MPP);
 
-            var resavedProject = new Project("output.mpp");
+            var resavedProject = new Project(dataDir + "ReadWriteRateScaleForResourceAssignment_out.mpp");
 
             var resavedMaterialResourceAssignment = resavedProject.ResourceAssignments.GetByUid(1);
             Console.WriteLine(resavedMaterialResourceAssignment.Get(Asn.RateScale));

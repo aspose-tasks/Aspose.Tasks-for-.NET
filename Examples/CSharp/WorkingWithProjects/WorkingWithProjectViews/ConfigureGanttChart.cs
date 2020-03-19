@@ -13,7 +13,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.WorkingWithProjectVie
 
     using Aspose.Tasks.Saving;
 
-    public class ConfigureGanttChart
+    internal class ConfigureGanttChart
     {
         public static void Run()
         {

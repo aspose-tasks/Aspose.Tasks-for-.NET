@@ -8,21 +8,17 @@ please feel free to contact us using https://forum.aspose.com/c/tasks
 
 namespace Aspose.Tasks.Examples.CSharp.WorkingWithCurrencies
 {
-    using Aspose.Tasks.Saving;
-
     internal class SetCurrencyDigits
     {
         public static void Run()
         {
             //ExStart:SetCurrencyDigits
+            //ExFor: Prj.CurrencyDigits
+            //ExSummary: Shows how to set the project currency digits.
             // Create new project and set currency digits
             var project = new Project();
             project.Set(Prj.CurrencyDigits, 2);
             //ExEnd:SetCurrencyDigits
-
-            // Save project as XML
-            var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
-            project.Save(dataDir + "project_CurrencyDigits_out.xml", SaveFileFormat.XML);
         }
     }
 }

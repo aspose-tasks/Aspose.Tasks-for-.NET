@@ -10,7 +10,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.CreatingReadingAndSav
 {
     using System;
 
-    public class ReadPasswordProtectedProjectFile
+    internal class ReadPasswordProtectedProjectFile
     {
         public static void Run()
         {

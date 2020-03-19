@@ -2,7 +2,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.WorkingWithProjectPro
 {
     using System;
 
-    public class DetermineProjectVersion
+    internal class DetermineProjectVersion
     {
         public static void Run()
         {

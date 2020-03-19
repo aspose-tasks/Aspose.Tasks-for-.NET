@@ -12,7 +12,7 @@ namespace Aspose.Tasks.Examples.CSharp.ConvertingProjectData
 
     using Aspose.Tasks.Saving;
 
-    public class RenderProjectDataToFormat24bppRgb
+    internal class RenderProjectDataToFormat24bppRgb
     {
         public static void Run()
         {

@@ -2,7 +2,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.WorkingWithProjectPro
 {
     using System;
 
-    public class ReadProjectInfo
+    internal class ReadProjectInfo
     {
         public static void Run()
         {

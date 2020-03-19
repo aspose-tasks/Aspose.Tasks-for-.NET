@@ -14,7 +14,7 @@ namespace Aspose.Tasks.Examples.CSharp.ConvertingProjectData
     using Aspose.Tasks.Saving;
     using Aspose.Tasks.Visualization;
 
-    public class CustomizeTextStyle
+    internal class CustomizeTextStyle
     {
         public static void Run()
         {

@@ -2,7 +2,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.Miscellaneous
 {
     using System;
 
-    public class CalculateCriticalPath
+    internal class CalculateCriticalPath
     {
         public static void Run()
         {

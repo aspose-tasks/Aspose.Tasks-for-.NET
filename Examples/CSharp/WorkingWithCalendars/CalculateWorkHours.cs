@@ -6,9 +6,13 @@
     {
         public static void Run()
         {
-            //ExStart:CalculateWorkHours
-            // Load an existing project
             var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
+
+            //ExStart:CalculateWorkHours
+            //ExFor: Tsk.Calendar
+            //ExFor: Rsc.Calendar
+            //ExSummary: Shows how to calculate working hours.
+            // Load an existing project
             var project = new Project(dataDir + "CalculateWorkHours.mpp");
 
             // Access Task By Id
@@ -18,7 +22,6 @@
             var taskCalendar = task.Get(Tsk.Calendar);
             var startDate = task.Get(Tsk.Start);
             var endDate = task.Get(Tsk.Finish);
-            var tempDate = startDate;
 
             // Access resource and their calendar
             var resource = project.Resources.GetByUid(1);
@@ -28,6 +31,7 @@
 
             // Get Duration in Minutes
             double durationInMins = 0;
+            var tempDate = startDate;
             while (tempDate < endDate)
             {
                 if (taskCalendar.IsDayWorking(tempDate) && resourceCalendar.IsDayWorking(tempDate))
@@ -54,10 +58,9 @@
                 tempDate = tempDate.AddDays(1);
             }
 
-            tempDate = startDate;
-
             // Get Duration in Days
             double durationInDays = 0;
+            tempDate = startDate;
             while (tempDate < endDate)
             {
                 if (taskCalendar.IsDayWorking(tempDate) && resourceCalendar.IsDayWorking(tempDate))

@@ -10,7 +10,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.Miscellaneous
 {
     using System;
 
-    public class ReadFilterCriteriaData
+    internal class ReadFilterCriteriaData
     {
         public static void Run()
         {

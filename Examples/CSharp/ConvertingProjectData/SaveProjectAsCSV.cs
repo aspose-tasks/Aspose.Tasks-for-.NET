@@ -10,7 +10,7 @@ namespace Aspose.Tasks.Examples.CSharp.ConvertingProjectData
 {
     using Aspose.Tasks.Saving;
 
-    public class SaveProjectAsCSV
+    internal class SaveProjectAsCSV
     {
         public static void Run()
         {

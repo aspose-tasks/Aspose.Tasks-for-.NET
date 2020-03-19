@@ -2,40 +2,42 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithCalendars
 {
     using System;
 
-    public class RetrieveCalendarInfo
+    internal class RetrieveCalendarInfo
     {
         public static void Run()
         {
-            //ExStart:RetrieveCalendarInfo
             // The path to the documents directory.
             var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
+            //ExStart:RetrieveCalendarInfo
+            //ExFor: Calendar.Uid
+            //ExFor: Calendar.Name
+            //ExFor: Calendar.WeekDays
+            //ExSummary: Shows how to retrieve calendar info.
             // Create a project instance
             var project = new Project(dataDir + "RetrieveCalendarInfo.mpp");
 
             // Retrieve Calendars Information
-            var calendars = project.Calendars;
-            foreach (var cal in calendars)
+            foreach (var calendar in project.Calendars)
             {
-                if (cal.Name == null)
+                if (calendar.Name == null)
                 {
                     continue;
                 }
 
-                Console.WriteLine("Calendar UID : " + cal.Uid);
-                Console.WriteLine("Calendar Name : " + cal.Name);
+                Console.WriteLine("Calendar UID: " + calendar.Uid);
+                Console.WriteLine("Calendar Name: " + calendar.Name);
 
-                var days = cal.WeekDays;
-                foreach (var wd in days)
+                foreach (var weekDay in calendar.WeekDays)
                 {
-                    var ts = wd.GetWorkingTime();
-                    if (!wd.DayWorking) 
+                    if (!weekDay.DayWorking) 
                     {
                         continue;
                     }
 
-                    Console.WriteLine(wd.DayType + ":");
-                    Console.WriteLine(ts.ToString());
+                    var workingTime = weekDay.GetWorkingTime();
+                    Console.Write(weekDay.DayType + ": ");
+                    Console.WriteLine(workingTime.ToString());
                 }
             }
             //ExEnd:RetrieveCalendarInfo

@@ -13,7 +13,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects
 
     using Aspose.Tasks.Saving;
 
-    public class AddImageToPageHeaderFooter
+    internal class AddImageToPageHeaderFooter
     {
         public static void Run()
         {

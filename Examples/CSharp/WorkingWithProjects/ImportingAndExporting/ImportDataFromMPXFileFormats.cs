@@ -10,7 +10,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.ImportingAndExporting
 {
     using System;
 
-    public class ImportDataFromMPXFileFormats
+    internal class ImportDataFromMPXFileFormats
     {
         public static void Run()
         {

@@ -4,7 +4,7 @@
 
     using Aspose.Tasks.Saving;
 
-    public class SaveWithDefaultGanttChartView
+    internal class SaveWithDefaultGanttChartView
     {
         public static void Run()
         {

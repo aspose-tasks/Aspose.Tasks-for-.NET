@@ -12,7 +12,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects
 
     using Aspose.Tasks.Visualization;
 
-    public class GetNumberOfPages
+    internal class GetNumberOfPages
     {
         public static void Run()
         {

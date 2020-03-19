@@ -12,7 +12,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.WorkingWithProjectPro
 
     using Aspose.Tasks.Saving;
 
-    public class SetAttributesForNewTasks
+    internal class SetAttributesForNewTasks
     {
         public static void Run()
         {

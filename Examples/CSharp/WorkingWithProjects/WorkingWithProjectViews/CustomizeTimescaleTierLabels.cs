@@ -5,7 +5,7 @@
     using Aspose.Tasks.Saving;
     using Aspose.Tasks.Visualization;
 
-    public class CustomizeTimescaleTierLabels
+    internal class CustomizeTimescaleTierLabels
     {
         public static void Run()
         {

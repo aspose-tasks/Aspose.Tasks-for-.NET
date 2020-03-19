@@ -4,7 +4,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.Miscellaneous
 
     using Aspose.Tasks.Saving;
 
-    public class PrintTaskWritingException
+    internal class PrintTaskWritingException
     {
         public static void Run()
         {

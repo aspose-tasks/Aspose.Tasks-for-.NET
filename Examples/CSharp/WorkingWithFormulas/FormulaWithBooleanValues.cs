@@ -10,7 +10,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithFormulas
 {
     using System;
 
-    public class FormulaWithBooleanValues
+    internal class FormulaWithBooleanValues
     {
         public static void Run()
         {

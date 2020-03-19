@@ -2,7 +2,7 @@
 {
     using System;
 
-    public class TaskSettingStartFinishDates
+    internal class TaskSettingStartFinishDates
     {
         /// <summary>
         /// By default, the project calculation mode is set to automatic that recalculates everything and sets the dates. 

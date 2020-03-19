@@ -3,7 +3,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.Printing
     using Aspose.Tasks.Saving;
     using Aspose.Tasks.Visualization;
 
-    public class PrintLargeFiles
+    internal class PrintLargeFiles
     {
         public static void Run()
         {

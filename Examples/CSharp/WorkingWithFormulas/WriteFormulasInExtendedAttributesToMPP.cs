@@ -12,7 +12,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithFormulas
 
     using Aspose.Tasks.Saving;
 
-    public class WriteFormulasInExtendedAttributesToMPP
+    internal class WriteFormulasInExtendedAttributesToMPP
     {
         public static void Run()
         {

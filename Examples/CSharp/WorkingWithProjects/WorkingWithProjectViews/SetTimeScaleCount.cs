@@ -2,7 +2,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.WorkingWithProjectVie
 {
     using Aspose.Tasks.Saving;
 
-    public class SetTimeScaleCount
+    internal class SetTimeScaleCount
     {
         public static void Run()
         {

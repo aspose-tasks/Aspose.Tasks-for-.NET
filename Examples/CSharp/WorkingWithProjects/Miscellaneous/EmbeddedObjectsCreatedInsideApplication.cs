@@ -12,7 +12,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.Miscellaneous
     using System.Collections.Generic;
     using System.IO;
 
-    public class EmbeddedObjectsCreatedInsideApplication
+    internal class EmbeddedObjectsCreatedInsideApplication
     {
         public static void Run()
         {

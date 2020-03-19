@@ -14,7 +14,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.CreatingReadingAndSav
     using Aspose.Tasks.Connectivity;
     using Aspose.Tasks.Saving;
 
-    public class ImportProjectDataFromDatabase
+    internal class ImportProjectDataFromDatabase
     {
         public static void Run()
         {

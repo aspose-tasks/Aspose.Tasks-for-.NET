@@ -4,7 +4,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.CreatingReadingAndSav
 
     using Aspose.Tasks.Saving;
 
-    public class ReadProjectFileFromStream
+    internal class ReadProjectFileFromStream
     {
         public static void Run()
         {

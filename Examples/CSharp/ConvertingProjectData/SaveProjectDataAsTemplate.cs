@@ -12,7 +12,7 @@ namespace Aspose.Tasks.Examples.CSharp.ConvertingProjectData
 
     using Aspose.Tasks.Saving;
 
-    public class SaveProjectDataAsTemplate
+    internal class SaveProjectDataAsTemplate
     {
         public static void Run()
         {

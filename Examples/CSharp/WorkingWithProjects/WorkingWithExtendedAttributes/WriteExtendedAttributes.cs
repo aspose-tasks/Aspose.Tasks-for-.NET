@@ -2,7 +2,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.WorkingWithExtendedAt
 {
     using System;
 
-    public class WriteExtendedAttributes
+    internal class WriteExtendedAttributes
     {
         public static void Run()
         {

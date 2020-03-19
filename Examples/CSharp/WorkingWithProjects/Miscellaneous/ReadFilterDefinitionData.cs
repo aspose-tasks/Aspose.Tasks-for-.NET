@@ -11,7 +11,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.Miscellaneous
     using System;
     using System.Collections.Generic;
 
-    public class ReadFilterDefinitionData
+    internal class ReadFilterDefinitionData
     {
         public static void Run()
         {

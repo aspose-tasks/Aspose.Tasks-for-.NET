@@ -10,6 +10,8 @@
             var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
             //ExStart:GetCurrencySymbol
+            //ExFor: Prj.CurrencySymbol
+            //ExSummary: Shows how to get the project currency symbol.
             var project = new Project(dataDir + "project.mpp");
             Console.WriteLine(project.Get(Prj.CurrencySymbol));
             //ExEnd:GetCurrencySymbol

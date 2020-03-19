@@ -9,19 +9,23 @@
             // Create a project instance
             var project = new Project();
 
-            // Define Calendar
+            // Define a calendar
             var cal = project.Calendars.Add("Calendar1");
 
             //ExStart:HandleExceptionOccurrences
+            //ExFor: CalendarException.EnteredByOccurrences
+            //ExFor: CalendarException.Occurrences
+            //ExFor: CalendarException.Type
+            //ExSummary: Shows how to define a calendar exception by occurrences.
             // Define exception and specify occurrences
-            var except = new CalendarException();
-            except.EnteredByOccurrences = true;
-            except.Occurrences = 5;
-            except.Type = CalendarExceptionType.YearlyByDay;
+            var exception = new CalendarException();
+            exception.EnteredByOccurrences = true;
+            exception.Occurrences = 5;
+            exception.Type = CalendarExceptionType.YearlyByDay;
             //ExEnd:HandleExceptionOccurrences
 
             // Add exception to calendar and save the Project
-            cal.Exceptions.Add(except);
+            cal.Exceptions.Add(exception);
             project.Save(dataDir + "Project_HandleExceptionOccurrences_out.xml", Saving.SaveFileFormat.XML);
         }
     }

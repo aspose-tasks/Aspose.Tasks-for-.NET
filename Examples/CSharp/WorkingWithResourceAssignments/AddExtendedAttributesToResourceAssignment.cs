@@ -2,7 +2,7 @@
 {
     using Aspose.Tasks.Saving;
 
-    public class AddExtendedAttributesToResourceAssignment
+    internal class AddExtendedAttributesToResourceAssignment
     {
         public static void Run()
         {

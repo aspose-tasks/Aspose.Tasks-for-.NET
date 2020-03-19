@@ -2,7 +2,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.WorkingWithProjectPro
 {
     using System;
 
-    public class ReadWeekdayProperties
+    internal class ReadWeekdayProperties
     {
         public static void Run()
         {

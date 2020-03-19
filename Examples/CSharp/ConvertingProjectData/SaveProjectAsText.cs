@@ -10,7 +10,7 @@ namespace Aspose.Tasks.Examples.CSharp.ConvertingProjectData
 {
     using Aspose.Tasks.Saving;
 
-    public class SaveProjectAsText
+    internal class SaveProjectAsText
     {
         public static void Run()
         {

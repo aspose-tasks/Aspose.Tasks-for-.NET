@@ -13,7 +13,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.WorkingWithProjectVie
 
     using Aspose.Tasks.Visualization;
 
-    public class ReadSpecificGanttChartViewData
+    internal class ReadSpecificGanttChartViewData
     {
         public static void Run()
         {

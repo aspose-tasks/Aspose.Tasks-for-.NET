@@ -12,7 +12,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithFormulas
 
     using Aspose.Tasks.Saving;
 
-    public class UsingTasksAndResourceFieldsInFormulaCalculations
+    internal class UsingTasksAndResourceFieldsInFormulaCalculations
     {
         //ExStart:UsingTasksAndResourceFieldsInFormulaCalculations
         public static void Run()

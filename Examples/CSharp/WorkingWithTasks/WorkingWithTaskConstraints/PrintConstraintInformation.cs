@@ -18,6 +18,9 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithTasks.WorkingWithTaskConstrain
         {
             var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
             //ExStart:GetConstraints
+            //ExFor: Tsk.ConstraintType
+            //ExFor: Tsk.ConstraintDate
+            //ExSummary: Shows how to read task constraints' information.
             var project = new Project(dataDir + "Project2.mpp");
 
             // Create a ChildTasksCollector instance
@@ -27,11 +30,10 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithTasks.WorkingWithTaskConstrain
             TaskUtils.Apply(project.RootTask, collector, 0);
 
             // Parse through all the collected tasks
-            foreach (var tsk1 in collector.Tasks)
+            foreach (var task in collector.Tasks)
             {
-                Console.WriteLine(tsk1.Get(Tsk.ConstraintDate).ToShortDateString() == "1/1/2000" ? "NA" : tsk1.Get(Tsk.ConstraintDate).ToShortDateString());
-
-                Console.WriteLine(tsk1.Get(Tsk.ConstraintType).ToString());
+                Console.WriteLine(task.Get(Tsk.ConstraintType).ToString());
+                Console.WriteLine(task.Get(Tsk.ConstraintDate).ToShortDateString() == "1/1/2000" ? "NA" : task.Get(Tsk.ConstraintDate).ToShortDateString());
             }
             //ExEnd:GetConstraints
         }

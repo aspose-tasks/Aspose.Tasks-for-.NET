@@ -12,7 +12,7 @@ namespace Aspose.Tasks.Examples.CSharp.ConvertingProjectData
 
     using Aspose.Tasks.Saving;
 
-    public class SaveToMultiplePDFFiles
+    internal class SaveToMultiplePDFFiles
     {
         public static void Run()
         {

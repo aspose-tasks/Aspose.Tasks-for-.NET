@@ -8,22 +8,17 @@ please feel free to contact us using https://forum.aspose.com/c/tasks
 
 namespace Aspose.Tasks.Examples.CSharp.WorkingWithCurrencies
 {
-    using Aspose.Tasks.Saving;
-
     internal class SetCurrencyCodes
     {
         public static void Run()
         {
-            var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
-
             //ExStart:SetCurrencyCodes
+            //ExFor: Prj.CurrencyCode
+            //ExSummary: Shows how to set the project currency code.
             // Create new project and set currency code
             var project = new Project();            
             project.Set(Prj.CurrencyCode, "USD");
             //ExEnd:SetCurrencyCodes
-
-            // Save project as XML
-            project.Save(dataDir + "project_CurrencyCodes_out.xml", SaveFileFormat.XML);
         }
     }
 }

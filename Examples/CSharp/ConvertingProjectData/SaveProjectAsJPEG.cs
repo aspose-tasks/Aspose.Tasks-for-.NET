@@ -15,6 +15,7 @@ namespace Aspose.Tasks.Examples.CSharp.ConvertingProjectData
         public static void Run()
         {
             var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
+            
             //ExStart: SaveProjectAsJPEG
             //ExFor: ImageSaveOptions.JpegQuality
             //ExSummary: Shows how to set JPEG quality of output JPEG files.

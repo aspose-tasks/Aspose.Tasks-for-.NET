@@ -7,7 +7,7 @@
     using Aspose.Tasks.Visualization;
 
     //ExStart:ResourcePrefixForNestedResources
-    public class ResourcePrefixForNestedResources : ICssSavingCallback, IFontSavingCallback, IImageSavingCallback
+    internal class ResourcePrefixForNestedResources : ICssSavingCallback, IFontSavingCallback, IImageSavingCallback
     {
         // The path to the documents directory.
         private static readonly string DataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);

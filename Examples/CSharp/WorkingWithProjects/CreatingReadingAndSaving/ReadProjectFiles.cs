@@ -2,7 +2,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.CreatingReadingAndSav
 {
     using Aspose.Tasks.Saving;
 
-    public class ReadProjectFiles
+    internal class ReadProjectFiles
     {
         public static void Run()
         {

@@ -8,7 +8,7 @@ please feel free to contact us using https://forum.aspose.com/c/tasks
 
 namespace Aspose.Tasks.Examples.CSharp.Miscellaneous
 {
-    using Aspose.Tasks.Visualization;
+    using System.IO;
 
     internal class SaveProjectOverviewReport
     {
@@ -17,8 +17,19 @@ namespace Aspose.Tasks.Examples.CSharp.Miscellaneous
             var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
             //ExStart:SaveProjectOverviewReport
+            //ExFor: Project.SaveReport(String)
+            //ExFor: Project.SaveReport(Stream)
+            //ExSummary: Shows how to save the project overview report to PDF file.
             var project = new Project(dataDir + "Cyclic stucture.mpp");
-            project.SaveReport(dataDir + "ProjectOverView_out.pdf", ReportType.ProjectOverview);
+            
+            // one can save the overview report to PDF file to the specified path
+            project.SaveReport(dataDir + "ProjectOverView_out.pdf");
+            
+            // or save the overview report to PDF file to the specified stream.
+            using (var stream = new FileStream(dataDir + "ProjectOverView2_out.pdf", FileMode.Create))
+            {
+                project.SaveReport(stream);
+            }
             //ExEnd:SaveProjectOverviewReport
         }
     }

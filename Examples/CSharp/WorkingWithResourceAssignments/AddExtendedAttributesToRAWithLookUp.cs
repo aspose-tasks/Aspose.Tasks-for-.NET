@@ -2,7 +2,7 @@
 {
     using Aspose.Tasks.Saving;
 
-    public class AddExtendedAttributesToRAWithLookUp
+    internal class AddExtendedAttributesToRAWithLookUp
     {
         public static void Run()
         {

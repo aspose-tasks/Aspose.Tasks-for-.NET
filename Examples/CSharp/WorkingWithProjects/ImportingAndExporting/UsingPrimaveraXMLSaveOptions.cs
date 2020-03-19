@@ -23,7 +23,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.ImportingAndExporting
             // Specify xml save options
             var options = new PrimaveraXmlSaveOptions();
             options.SaveRootTask = false;
-            project.Save("UsingPrimaveraXMLSaveOptions_out.xml", options);
+            project.Save(dataDir + "UsingPrimaveraXMLSaveOptions_out.xml", options);
             //ExEnd:UsingPrimaveraXMLSaveOptions
         }
     }

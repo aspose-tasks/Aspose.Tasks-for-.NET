@@ -22,13 +22,20 @@ namespace Aspose.Tasks.Examples.CSharp.Miscellaneous
             //ExFor: RiskAnalysisSettings
             //ExFor: RiskAnalysisSettings.IterationsCount
             //ExSummary: Shows how to prepare risk analysis settings for Monte-Carlo simulations.
-            var settings = new RiskAnalysisSettings();
+            var riskAnalysisSettings = new RiskAnalysisSettings();
 
             // Set number of iterations for Monte Carlo simulation (the default value is 100).
-            settings.IterationsCount = 200;
+            riskAnalysisSettings.IterationsCount = 200;
             //ExEnd:PrepareAnalysisSettings
 
             //ExStart:IdentifyAnalysisInput
+            //ExFor: RiskPattern(Task)
+            //ExFor: RiskPattern.Distribution
+            //ExFor: RiskPattern.Optimistic
+            //ExFor: RiskPattern.Pessimistic
+            //ExFor: RiskPattern.ConfidenceLevel
+            //ExFor: RiskAnalysisSettings.Patterns
+            //ExSummary: Shows how to define risk simulation settings.
             var project = new Project(dataDir + "Software Development Plan-1.mpp");
             var task = project.RootTask.Children.GetById(17);
 
@@ -51,16 +58,21 @@ namespace Aspose.Tasks.Examples.CSharp.Miscellaneous
             // You can think of it as a value of standard deviation: the more uncertain about your estimates you are, the more the value of standard deviation used in random number generator is
             pattern.ConfidenceLevel = ConfidenceLevel.CL75;
             
-            settings.Patterns.Add(pattern);
+            riskAnalysisSettings.Patterns.Add(pattern);
             //ExEnd:IdentifyAnalysisInput
 
             //ExStart:AnalyzeRisks
+            //ExFor: RiskAnalyzer(RiskAnalysisSettings)
+            //ExFor: RiskAnalyzer.Analyze(Project)
+            //ExSummary: Shows how to start analysis of risks by using <see cref="Aspose.Tasks.RiskAnalysis.RiskAnalysisSettings" />.
             // Analyze the project risks
-            var analyzer = new RiskAnalyzer(settings);
-            var analysisResult = analyzer.Analyze(project);
+            var analyzer = new RiskAnalyzer(riskAnalysisSettings);
+            RiskAnalysisResult analysisResult = analyzer.Analyze(project);
             //ExEnd:AnalyzeRisks
 
             //ExStart:UseAnalysisResult
+            //ExFor: RiskAnalysisResult.GetRiskItems(RiskItemType)
+            //ExSummary: Shows how to get results of risk simulation.
             // Select the desired output (here we get early finish of the root task)
             var rootEarlyFinish = analysisResult.GetRiskItems(RiskItemType.EarlyFinish).Get(project.RootTask);
 

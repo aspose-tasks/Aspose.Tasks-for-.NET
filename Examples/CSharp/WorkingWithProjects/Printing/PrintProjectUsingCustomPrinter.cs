@@ -10,7 +10,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.Printing
 {
     using System.Drawing.Printing;
 
-    public class PrintProjectUsingCustomPrinter
+    internal class PrintProjectUsingCustomPrinter
     {
         public static void Run()
         {

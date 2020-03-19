@@ -10,7 +10,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithFormulas
 {
     using System;
 
-    public class UsingArithmeticExpression
+    internal class UsingArithmeticExpression
     {
         public static void Run()
         {

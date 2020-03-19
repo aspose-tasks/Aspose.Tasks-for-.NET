@@ -10,7 +10,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.Miscellaneous
 {
     using System;
 
-    public class ReadGroupDefinitionData
+    internal class ReadGroupDefinitionData
     {
         public static void Run()
         {

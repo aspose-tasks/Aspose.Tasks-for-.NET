@@ -10,7 +10,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.ImportingAndExporting
 {
     using System;
 
-    public class ImportDataFromXMLFileFormats
+    internal class ImportDataFromXMLFileFormats
     {
         public static void Run()
         {

@@ -10,7 +10,7 @@ namespace Aspose.Tasks.Examples.CSharp.ConvertingProjectData
 {
     using Aspose.Tasks.Saving;
 
-    public class SaveProjectDataAsHTML
+    internal class SaveProjectDataAsHTML
     {
         public static void Run()
         {

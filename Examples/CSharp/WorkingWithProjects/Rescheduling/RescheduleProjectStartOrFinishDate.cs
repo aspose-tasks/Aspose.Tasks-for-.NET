@@ -10,7 +10,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.Rescheduling
 {
     using System;
 
-    public class RescheduleProjectStartOrFinishDate
+    internal class RescheduleProjectStartOrFinishDate
     {
         public static void Run()
         {

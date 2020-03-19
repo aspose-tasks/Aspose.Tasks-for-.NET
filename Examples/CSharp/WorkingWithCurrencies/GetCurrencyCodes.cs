@@ -10,6 +10,8 @@
             var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
             //ExStart:GetCurrencyCodes
+            //ExFor: Prj.CurrencyCode
+            //ExSummary: Shows how to get the project currency code.
             var project = new Project(dataDir + "project.mpp");
             Console.WriteLine(project.Get(Prj.CurrencyCode));
             //ExEnd:GetCurrencyCodes

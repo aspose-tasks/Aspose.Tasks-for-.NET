@@ -12,7 +12,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.Rescheduling
 
     using Aspose.Tasks.Saving;
 
-    public class UpdateProjectAndRescheduleUncompletedWork
+    internal class UpdateProjectAndRescheduleUncompletedWork
     {
         public static void Run()
         {

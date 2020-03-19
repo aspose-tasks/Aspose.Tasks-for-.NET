@@ -19,11 +19,11 @@ namespace Aspose.Tasks.Examples.CSharp.Articles
     //ExSummary: Shows how to set a comparer to sort tasks on Gantt chart and/or Task Sheet chart.
     internal class SortTasksByColumnInGanttChart
     {
+        // The path to the documents directory.
+        private static readonly string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
+        
         public static void Run()
         {
-            // The path to the documents directory.
-            var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
-
             var project = new Project(dataDir + "Project2.mpp");
             SaveOptions options = new PdfSaveOptions();
             options.Timescale = Timescale.Months;

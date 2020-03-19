@@ -14,7 +14,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.CreatingReadingAndSav
     using System.Text;
     using System.Text.RegularExpressions;
 
-    public class IgnoreInvalidCharactersDuringProjectLoading
+    internal class IgnoreInvalidCharactersDuringProjectLoading
     {
         //ExStart:IgnoreInvalidCharactersDuringLoadingProject 
         public static void Run()
