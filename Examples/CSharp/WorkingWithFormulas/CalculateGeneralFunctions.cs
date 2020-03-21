@@ -12,6 +12,8 @@
         }
 
         //ExStart:CalculateGeneralFunctions
+        //ExFor: ExtendedAttributeDefinition.Formula
+        //ExSummary: Shows how to use common math functions with extended attributes.
         private static void EvaluateChoose()
         {    
             var project = CreateTestProjectWithCustomField();

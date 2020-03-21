@@ -10,6 +10,10 @@
             var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
             //ExStart:GetResourceOvertime
+            //ExFor: Rsc.OvertimeCost
+            //ExFor: Rsc.OvertimeWork
+            //ExFor: Rsc.OvertimeRateFormat
+            //ExSummary: Shows how to read resource overtime values.
             // Create project instance
             var project = new Project(dataDir + "ResourceOvertime.mpp");
 

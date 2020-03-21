@@ -20,6 +20,9 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects
             var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
             //ExStart:GetNumberOfPages
+            //ExFor: Project.GetPageCount()
+            //ExFor: Project.GetPageCount(Timescale)
+            //ExSummary: Shows how to get page count for different timescales.
             // Read the input Project file
             var project = new Project(dataDir + "GetNumberOfPages.mpp");
 

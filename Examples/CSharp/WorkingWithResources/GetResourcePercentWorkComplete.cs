@@ -10,6 +10,8 @@
             var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
             //ExStart:GetResourcePercentWorkComplete
+            //ExFor: Rsc.PercentWorkComplete
+            //ExSummary: Shows how to read resource percent work complete.
             // Create project instance
             var project = new Project(dataDir + "ResourcePercentWorkComplete.mpp");
 

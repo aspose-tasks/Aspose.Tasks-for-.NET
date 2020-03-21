@@ -17,38 +17,40 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithTasks
     {
         public static void Run()
         {
-            //ExStart:ReadStopResumeDates
-            // Read project from file stream
             var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
-            var fs = new FileStream(dataDir + "StopResumeDates.mpp", FileMode.Open);
-            var prj = new Project(fs);
-            fs.Close();
+            
+            //ExStart:ReadStopResumeDates
+            //ExFor: Tsk.Stop
+            //ExFor: Tsk.Resume
+            //ExSummary: Shows how to read task's Stop/Resume dates.
+            // Read the project
+            var project = new Project(dataDir + "StopResumeDates.mpp");
 
             // Create a ChildTasksCollector instance
             var collector = new ChildTasksCollector();
 
             // Collect all the tasks from RootTask using TaskUtils
-            TaskUtils.Apply(prj.RootTask, collector, 0);
+            TaskUtils.Apply(project.RootTask, collector, 0);
 
             // Check Stop and Resume dates for all tasks
-            foreach (var tsk1 in collector.Tasks)
+            foreach (var task in collector.Tasks)
             {
-                if (tsk1.Get(Tsk.Stop).ToShortDateString() == "1/1/2000")
+                if (task.Get(Tsk.Stop).ToShortDateString() == "1/1/2000")
                 {
                     Console.WriteLine("Stop: NA");
                 }
                 else
                 {
-                    Console.WriteLine("Stop: " + tsk1.Get(Tsk.Stop).ToShortDateString());
+                    Console.WriteLine("Stop: " + task.Get(Tsk.Stop).ToShortDateString());
                 }
 
-                if (tsk1.Get(Tsk.Resume).ToShortDateString() == "1/1/2000")
+                if (task.Get(Tsk.Resume).ToShortDateString() == "1/1/2000")
                 {
                     Console.WriteLine("Resume: NA");
                 }
                 else
                 {
-                    Console.WriteLine("Resume: " + tsk1.Get(Tsk.Resume).ToShortDateString());
+                    Console.WriteLine("Resume: " + task.Get(Tsk.Resume).ToShortDateString());
                 }
             }
             //ExEnd:ReadStopResumeDates

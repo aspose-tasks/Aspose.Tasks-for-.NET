@@ -15,15 +15,18 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithResourceAssignments
         public static void Run()
         {
             //ExStart:CreateResourceAssignments
+            //ExFor: ResourceAssignmentCollection.Add(Task,Resource)
+            //ExFor: Project.ResourceAssignments
+            //ExSummary: Shows how to create a resource assignment.
             // Create empty project
             var project = new Project();
 
             // Add new task and resource
-            var task1 = project.RootTask.Children.Add("Task");
-            var rsc1 = project.Resources.Add("Rsc");
+            var task = project.RootTask.Children.Add("Task");
+            var resource = project.Resources.Add("Rsc");
             
             // Assign the resource desired task
-            project.ResourceAssignments.Add(task1, rsc1);
+            project.ResourceAssignments.Add(task, resource);
             //ExEnd:CreateResourceAssignments
 
             // Save project as PDF

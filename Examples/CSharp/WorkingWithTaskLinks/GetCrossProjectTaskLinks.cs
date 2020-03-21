@@ -5,10 +5,15 @@
     internal class GetCrossProjectTaskLinks
     {
         public static void Run()
-        {                        
-            //ExStart:GetCrossProjectTaskLinks
-            // Create project instance
+        {
             var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
+            
+            //ExStart:GetCrossProjectTaskLinks
+            //ExFor: Project.TaskLinks
+            //ExFor: TaskLink.CrossProjectName
+            //ExFor: TaskLink.CrossProjectName
+            //ExSummary: Shows how to find cross project task links. 
+            // Create project instance
             var project = new Project(dataDir + "GetCrossProjectTaskLinks.mpp");
 
             // Check cross project task links

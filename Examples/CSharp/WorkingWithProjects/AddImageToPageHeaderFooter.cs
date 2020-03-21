@@ -23,19 +23,26 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects
                 var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
                 //ExStart:AddImageToPageHeaderFooter
+                //ExFor: View.PageInfo
+                //ExFor: PageInfo.Header
+                //ExFor: PageInfo.Legend
+                //ExFor: PageInfo.Footer
+                //ExFor: PageLegend
+                //ExFor: HeaderFooterInfo
+                //ExSummary: Shows how to add image to page header/footer.
                 var project = new Project(dataDir + "AddImageToPageHeaderFooter.mpp");
 
                 project.RootTask.Children.Add("Task1");
-                var pageInfo = project.DefaultView.PageInfo;
+                var info = project.DefaultView.PageInfo;
                 
                 using (var image = Image.FromFile(dataDir + "Image1.png"))
                 {
-                    pageInfo.Header.CenteredImage = image;
-                    pageInfo.Legend.LeftImage = image;
-                    pageInfo.Legend.LeftText = string.Empty;
-                    var saveOptions = new MPPSaveOptions();
-                    saveOptions.WriteViewData = true;
-                    project.Save(dataDir + "AddImageToPageHeaderFooter_out.mpp", saveOptions);
+                    info.Header.CenteredImage = image;
+                    info.Legend.LeftImage = image;
+                    info.Legend.LeftText = string.Empty;
+                    var options = new MPPSaveOptions();
+                    options.WriteViewData = true;
+                    project.Save(dataDir + "AddImageToPageHeaderFooter_out.mpp", options);
                 }
                 //ExEnd:AddImageToPageHeaderFooter
             }

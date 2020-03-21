@@ -22,6 +22,9 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithTasks
                 var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
                 //ExStart:CreateTasks
+                //ExFor: Task.Children
+                //ExFor: Task.Children.Add(String)
+                //ExSummary: Shows how to create tasks.
                 // Create project instance
                 var project = new Project();
 

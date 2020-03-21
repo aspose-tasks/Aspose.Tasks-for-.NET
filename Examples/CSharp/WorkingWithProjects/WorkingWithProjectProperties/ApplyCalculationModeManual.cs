@@ -7,6 +7,9 @@
         public static void Run()
         {
             //ExStart:ApplyCalculationModeManual
+            //ExFor: CalculationMode.Manual
+            //ExFor: Project.CalculationMode
+            //ExSummary: Shows how to apply project's manual calculation mode.
             // Create empty project and set calculation mode to Manual
             var project = new Project();
             project.CalculationMode = CalculationMode.Manual;

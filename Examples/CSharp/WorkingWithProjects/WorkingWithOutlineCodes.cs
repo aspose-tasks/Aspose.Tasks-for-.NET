@@ -26,6 +26,8 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects
         private static void ReadOutlineCodes(string dataDir)
         {
             //ExStart:ReadOutlineCodes
+            //ExFor: Project.OutlineCodes
+            //ExSummary: Shows how to read outline codes.
             var project = new Project(dataDir + "OutlineCodes.mpp");
 
             foreach (var ocd in project.OutlineCodes)
@@ -61,24 +63,32 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects
         private static void CheckOutlineCodeIdUniqueness(string dataDir)
         {
             //ExStart:CheckOutlineCodeIdUniqueness
+            //ExFor: Project.OutlineCodes
+            //ExFor: OutlineMask
+            //ExFor: OutlineValue
+            //ExFor: OutlineCodeDefinition.FieldId
+            //ExFor: OutlineCodeDefinition.Alias
+            //ExFor: OutlineValueCollection.Add(OutlineValue)
+            //ExFor: OutlineMaskCollection.Add(OutlineMask)
+            //ExSummary: Shows how to check outline code ids uniqueness.
             var project = new Project(dataDir + "OutlineValues2010.mpp");
 
-            var textOutline = new OutlineCodeDefinition();
-            textOutline.FieldId = ExtendedAttributeTask.OutlineCode7.ToString("D");
-            textOutline.Alias = "My Outline Code";
+            var outline = new OutlineCodeDefinition();
+            outline.FieldId = ExtendedAttributeTask.OutlineCode7.ToString("D");
+            outline.Alias = "My Outline Code";
 
-            project.OutlineCodes.Add(textOutline);
+            project.OutlineCodes.Add(outline);
 
             var mask = new OutlineMask();
             mask.Type = MaskType.Characters;
-            textOutline.Masks.Add(mask);
+            outline.Masks.Add(mask);
 
-            var textValue = new OutlineValue();
-            textValue.Value = "Text value 1";
-            textValue.ValueId = 1;
-            textValue.Type = OutlineValueType.Text;
-            textValue.Description = "Text value descr 1";
-            textOutline.Values.Add(textValue);
+            var value = new OutlineValue();
+            value.Value = "Text value 1";
+            value.ValueId = 1;
+            value.Type = OutlineValueType.Text;
+            value.Description = "Text value descr 1";
+            outline.Values.Add(value);
 
             project.Save(dataDir + "MultipleOutlineValues.mpp", SaveFileFormat.MPP);
             //ExEnd:CheckOutlineCodeIdUniqueness

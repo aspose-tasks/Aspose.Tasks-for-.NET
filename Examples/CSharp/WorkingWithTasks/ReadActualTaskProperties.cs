@@ -16,10 +16,15 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithTasks
     {
         public static void Run()
         {
-            //ExStart:ReadActualTaskProperties
             // The path to the documents directory.
             var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
-
+            
+            //ExStart:ReadActualTaskProperties
+            //ExFor: Tsk.ActualStart
+            //ExFor: Tsk.ActualFinish
+            //ExFor: Tsk.ActualDuration
+            //ExFor: Tsk.ActualCost
+            //ExSummary: Shows how to read task's actual properties.
             // Create Project instance
             var project = new Project(dataDir + "ActualTaskProperties.mpp");
 

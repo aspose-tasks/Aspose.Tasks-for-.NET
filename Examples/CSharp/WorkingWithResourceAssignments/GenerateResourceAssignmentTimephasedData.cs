@@ -10,6 +10,8 @@
             var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
             //ExStart:GenerateResourceAssignmentTimephasedData
+            //ExFor: Asn.WorkContour
+            //ExSummary: Shows how to set different timephased data contours for resource assignments.
             // Create project instance
             var project = new Project(dataDir + "ResourceAssignmentTimephasedData.mpp");
 

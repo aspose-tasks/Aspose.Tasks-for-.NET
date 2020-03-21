@@ -12,6 +12,8 @@
                 var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
                 //ExStart:CreateRecurringTask
+                //ExFor: RecurringTaskParameters
+                //ExSummary: Shows how to create a recurring task.
                 // Create project instance
                 var project = new Project(dataDir + "Blank2010.mpp");
                 var parameters = new RecurringTaskParameters

@@ -6,10 +6,17 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.WorkingWithProjectPro
     {
         public static void Run()
         {
-            //ExStart:DefaultProperties
             // The path to the documents directory.
-            var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName); 
-            
+            var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
+
+            //ExStart:DefaultProperties
+            //ExFor: Prj.DefaultStartTime
+            //ExFor: Prj.DefaultTaskType
+            //ExFor: Prj.DefaultStandardRate
+            //ExFor: Prj.DefaultOvertimeRate
+            //ExFor: Prj.DefaultTaskEVMethod
+            //ExFor: Prj.DefaultFixedCostAccrual
+            //ExSummary: Shows how to read project's default properties.
             // Create project
             var project = new Project(dataDir + "DefaultProperties.mpp");
 

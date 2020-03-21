@@ -18,6 +18,9 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.ImportingAndExporting
             var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
             //ExStart:ReadXMLFileWithMultipleProjects
+            //ExFor: PrimaveraXmlReadingOptions
+            //ExFor: Project(String,PrimaveraXmlReadingOptions)
+            //ExSummary: Shows how to read a project from a Primavera XML file with multiple projects.
             var options = new PrimaveraXmlReadingOptions();
             options.ProjectUid = 4557;
             // Returns project with special Uid

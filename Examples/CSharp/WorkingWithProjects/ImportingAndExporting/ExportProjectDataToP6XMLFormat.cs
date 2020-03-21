@@ -10,19 +10,21 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.ImportingAndExporting
 {
     using Aspose.Tasks.Saving;
 
-    internal class ExportProjectDataToXMLFormat
+    internal class ExportProjectDataToP6XMLFormat
     {
         public static void Run()
         {
             // The path to the documents directory.
             var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
-            //ExStart:ExportProjectDataToXMLFormat
+            //ExStart:ExportProjectDataToP6XMLFormat
+            //ExFor: Project.Save(String, SaveFileFormat)
+            //ExSummary: Shows how to open an MPP file and then export it in Primavera P6 XML format.
             var project = new Project(dataDir + "Project1.mpp");
             
             // Save project in desired format
             project.Save(dataDir + "ExportProjectDataToXMLFormat_out.xml", SaveFileFormat.PrimaveraP6XML);             
-            //ExEnd:ExportProjectDataToXMLFormat
+            //ExEnd:ExportProjectDataToP6XMLFormat
         }
     }
 }

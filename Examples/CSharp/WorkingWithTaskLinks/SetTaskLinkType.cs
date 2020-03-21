@@ -4,7 +4,9 @@
     {
         public static void Run()
         {
-            //ExStart:SetTaskLinkType                        
+            //ExStart:SetTaskLinkType
+            //ExFor: TaskLink.LinkType
+            //ExSummary: Shows how to set a link type of a task link.
             // Create new project and add tasks
             var project = new Project();
             var pred = project.RootTask.Children.Add("Task 1");

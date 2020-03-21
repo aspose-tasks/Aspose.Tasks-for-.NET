@@ -18,6 +18,10 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.ImportingAndExporting
             var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
             //ExStart:ImportDataFromXMLFileFormats
+            //ExFor: Project.Save(String,SaveFileFormat)
+            //ExFor: Project.GetProjectFileInfo(String)
+            //ExFor: ProjectFileInfo.ProjectFileFormat
+            //ExSummary: Shows how to import a project from XML format.
             var info = Project.GetProjectFileInfo(dataDir + "Project.xml");
             Console.WriteLine(info.ProjectFileFormat);
             //ExEnd:ImportDataFromXMLFileFormats

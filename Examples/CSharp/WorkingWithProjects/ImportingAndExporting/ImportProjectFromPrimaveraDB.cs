@@ -18,6 +18,9 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.ImportingAndExporting
         public static void Run()
         {
             //ExStart:ImportProjectFromPrimaveraDB
+            //ExFor: PrimaveraDbSettings(String, int)
+            //ExFor: Project(DbSettings)
+            //ExSummary: Shows how to import a project from a Primavera database.
             var sb = new SqlConnectionStringBuilder();
             sb.DataSource = "192.168.56.3,1433";
             sb.Encrypt = true;

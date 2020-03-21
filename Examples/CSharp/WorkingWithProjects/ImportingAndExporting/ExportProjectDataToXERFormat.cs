@@ -18,6 +18,8 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.ImportingAndExporting
             var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
             //ExStart:ExportProjectDataToXERFormat
+            //ExFor: Project.Save(String,SaveFileFormat)
+            //ExSummary: Shows how to open an MPP file and then export it in XER format.
             var project = new Project(dataDir + "Project1.mpp");
 
             // Save project in desired format

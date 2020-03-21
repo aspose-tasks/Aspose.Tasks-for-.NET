@@ -17,24 +17,26 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithTasks
     {
         public static void Run()
         {
-            //ExStart:ReadTaskOutlineProperties
-            // Read project from file stream
             var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
-            var fs = new FileStream(dataDir + "TaskOutlineProperties.mpp", FileMode.Open);
-            var prj = new Project(fs);
-            fs.Close();
+            
+            //ExStart:ReadTaskOutlineProperties
+            //ExFor: Tsk.OutlineLevel
+            //ExFor: Tsk.OutlineNumber
+            //ExSummary: Shows how to read task outline properties.
+            // Read project 
+            var project = new Project(dataDir + "TaskOutlineProperties.mpp");
 
             // Create a ChildTasksCollector instance
             var collector = new ChildTasksCollector();
 
             // Collect all the tasks from RootTask using TaskUtils
-            TaskUtils.Apply(prj.RootTask, collector, 0);
+            TaskUtils.Apply(project.RootTask, collector, 0);
 
             // Parse through all the collected tasks
-            foreach (var tsk1 in collector.Tasks)
+            foreach (var task in collector.Tasks)
             {
-                Console.WriteLine(tsk1.Get(Tsk.Name) + " - Outline Level : " + tsk1.Get(Tsk.OutlineLevel));
-                Console.WriteLine(tsk1.Get(Tsk.Name) + " - Outline Number : " + tsk1.Get(Tsk.OutlineNumber));
+                Console.WriteLine(task.Get(Tsk.Name) + " - Outline Level : " + task.Get(Tsk.OutlineLevel));
+                Console.WriteLine(task.Get(Tsk.Name) + " - Outline Number : " + task.Get(Tsk.OutlineNumber));
             }
             //ExEnd:ReadTaskOutlineProperties
         }

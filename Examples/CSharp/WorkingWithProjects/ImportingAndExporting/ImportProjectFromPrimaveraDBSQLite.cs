@@ -13,7 +13,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.ImportingAndExporting
     using Aspose.Tasks.Connectivity;
     using Aspose.Tasks.Saving;
 
-    internal class SupportForSQLiteDatabase
+    internal class ImportProjectFromPrimaveraDBSQLite
     {
         public static void Run()
         {
@@ -22,7 +22,10 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.ImportingAndExporting
 
             try
             {
-                //ExStart:SupportForSQLiteDatabase
+                //ExStart:ImportProjectFromPrimaveraDBSQLite
+                //ExFor: PrimaveraDbSettings(String, Int32)
+                //ExFor: DbSettings.ProviderInvariantName
+                //ExSummary: Shows how to read a project from a Primavera XML file with multiple projects by using SQLite provider.
                 var connectionString = "Data Source=" + dataDir + "\\PPMDBSQLite.db";
                 const int ProjectId = 4502;
 
@@ -33,7 +36,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.ImportingAndExporting
                 // Create new project using primavera db settings
                 var project = new Project(settings);
                 project.Save(dataDir + "SupportForSQLiteDatabase_out.mpp", SaveFileFormat.MPP);
-                //ExEnd:SupportForSQLiteDatabase
+                //ExEnd:ImportProjectFromPrimaveraDBSQLite
             }
             catch (Exception ex)
             {

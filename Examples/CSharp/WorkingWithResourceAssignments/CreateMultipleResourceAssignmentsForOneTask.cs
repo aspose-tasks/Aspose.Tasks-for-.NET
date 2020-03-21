@@ -10,6 +10,9 @@
             var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
             //ExStart:CreateMultipleResourceAssignmentsForOneTask
+            //ExFor: Project.ResourceAssignments
+            //ExFor: ResourceAssignmentCollection.Add(Task,Resource)
+            //ExSummary: Shows how to create multiple resource assignments.
             var project = new Project(dataDir + "TemplateResource2010.mpp")
                               {
                                   CalculationMode = CalculationMode.Automatic
@@ -57,7 +60,6 @@
             assignment2.Set(Asn.Start, new DateTime(2019, 9, 16, 9, 0, 0));
             assignment2.Set(Asn.Finish, new DateTime(2019, 9, 24, 18, 0, 0));
 
-            // to match expected MPP fully
             assignment2.Set(Asn.WorkContour, WorkContourType.Contoured);
             tsk3.Set(Tsk.IsManual, new NullableBool(true));
             tsk1.Set(Tsk.IsManual, new NullableBool(true));

@@ -16,7 +16,12 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.CreatingReadingAndSav
 
     internal class IgnoreInvalidCharactersDuringProjectLoading
     {
+        // The path to the documents directory.
+        private static readonly string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName); 
+        
         //ExStart:IgnoreInvalidCharactersDuringLoadingProject 
+        //ExFor: Project(Stream, ParseErrorCallback)
+        //ExSummary: Shows how to read a project from XML file with invalid characters. 
         public static void Run()
         {         
             // Open modified xml stream
@@ -29,18 +34,13 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.CreatingReadingAndSav
 
         private static string GetModifiedXml()
         {
-            // The path to the documents directory.
-            var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName); 
-            string xml;
-
             // Open valid xml file and modify it
             using (TextReader reader = new StreamReader(dataDir + "IgnoreInvalidCharacters.xml"))
             {
-                xml = reader.ReadToEnd();
+                var xml = reader.ReadToEnd();
+                var regex = new Regex("PT(\\d+)H(\\d+)M(\\d+)S");
+                return regex.Replace(xml, "**$1Hrs$2Mins$3Secs**");
             }
-
-            var regex = new Regex("PT(\\d+)H(\\d+)M(\\d+)S");
-            return regex.Replace(xml, "**$1Hrs$2Mins$3Secs**");
         }
 
         private static object CustomDurationHandler(object sender, ParseErrorArgs args)

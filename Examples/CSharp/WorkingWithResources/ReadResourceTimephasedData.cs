@@ -10,6 +10,9 @@
             var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
             //ExStart:ReadResourceTimephasedData
+            //ExFor: Resource.GetTimephasedData(DateTime,DateTime)
+            //ExFor: Resource.GetTimephasedData(DateTime,DateTime,TimephasedDataType)
+            //ExSummary: Shows how to read timephased data of work/cost resources.
             // Create project instance
             var project = new Project(dataDir + "ResourceTimephasedData.mpp");
 
@@ -21,7 +24,7 @@
             foreach (var td in resource.GetTimephasedData(project.Get(Prj.StartDate), project.Get(Prj.FinishDate)))
             {
                 Console.Write("Start: " + td.Start.ToShortDateString());
-                Console.Write(" Work: " + td.Value + Environment.NewLine);
+                Console.WriteLine(" Work: " + td.Value);
             }
 
             // Print Timephased data of ResourceCost
@@ -29,7 +32,7 @@
             foreach (var td in resource.GetTimephasedData(project.Get(Prj.StartDate), project.Get(Prj.FinishDate), TimephasedDataType.ResourceCost))
             {
                 Console.Write("Start: " + td.Start.ToShortDateString());
-                Console.Write(" Cost: " + td.Value + Environment.NewLine);
+                Console.WriteLine(" Cost: " + td.Value);
             }
             //ExEnd:ReadResourceTimephasedData
         }

@@ -20,7 +20,9 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.WorkingWithProjectVie
             // The path to the documents directory.
             var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
             
-            //ExStart:ReadSpecificGanttChartViewData   
+            //ExStart:ReadSpecificGanttChartViewData
+            //ExFor: GanttChartView
+            //ExSummary: Shows how to read Gantt chart view data.
             var project = new Project(dataDir + @"ReadSpecificGantChartViewData.mpp"); 
 
             var view = (GanttChartView)project.Views.ToList()[0];

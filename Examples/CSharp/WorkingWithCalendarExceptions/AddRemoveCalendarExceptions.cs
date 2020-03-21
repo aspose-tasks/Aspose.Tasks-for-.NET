@@ -1,7 +1,6 @@
 ﻿namespace Aspose.Tasks.Examples.CSharp.WorkingWithCalendarExceptions
 {
     using System;
-    using System.IO;
 
     internal class AddRemoveCalendarExceptions
     {

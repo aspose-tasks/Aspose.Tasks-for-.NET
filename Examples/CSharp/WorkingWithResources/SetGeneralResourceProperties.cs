@@ -18,15 +18,18 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithResources
             var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
             //ExStart:SetGeneralResourceProperties
+            //ExFor: Rsc.StandardRate
+            //ExFor: Rsc.OvertimeRate
+            //ExSummary: Shows how to read general resource properties.
             // Create project instance
             var project = new Project();
 
             // Add resources
-            var rsc1 = project.Resources.Add("Rsc");
+            var resource = project.Resources.Add("Rsc");
 
             // Set resource properties, Resource properties are represented by static class Rsc
-            rsc1.Set(Rsc.StandardRate, 15);
-            rsc1.Set(Rsc.OvertimeRate, 20);
+            resource.Set(Rsc.StandardRate, 15);
+            resource.Set(Rsc.OvertimeRate, 20);
             //ExEnd:SetGeneralResourceProperties
 
             // Save project as XML

@@ -7,6 +7,11 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.WorkingWithProjectPro
         public static void Run()
         {
             //ExStart:WriteWeekdayProperties
+            //ExFor: Prj.WeekStartDay
+            //ExFor: Prj.DaysPerMonth
+            //ExFor: Prj.MinutesPerDay
+            //ExFor: Prj.MinutesPerWeek
+            //ExSummary: Shows how to write project's weekday properties.
             // The path to the documents directory.
             var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 

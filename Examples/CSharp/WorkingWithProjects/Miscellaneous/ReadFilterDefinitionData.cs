@@ -19,6 +19,10 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.Miscellaneous
             var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
             //ExStart:ReadFilterDefinitionData
+            //ExFor: Project.TaskFilters
+            //ExFor: Project.ResourceFilters
+            //ExFor: Filter
+            //ExSummary: Shows how to read task/resource filter definitions.
             // Instantiate project and access task filters
             var project = new Project(dataDir + "ReadFilterDefinitionData.mpp");
             List<Filter> taskFilters = project.TaskFilters.ToList();

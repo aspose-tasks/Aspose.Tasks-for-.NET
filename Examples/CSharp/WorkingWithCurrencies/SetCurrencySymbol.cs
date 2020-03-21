@@ -8,8 +8,6 @@ please feel free to contact us using https://forum.aspose.com/c/tasks
 
 namespace Aspose.Tasks.Examples.CSharp.WorkingWithCurrencies
 {
-    using Aspose.Tasks.Saving;
-
     internal class SetCurrencySymbol
     {
         public static void Run()

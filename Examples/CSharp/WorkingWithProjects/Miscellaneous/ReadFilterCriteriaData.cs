@@ -18,6 +18,12 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.Miscellaneous
             var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
             //ExStart:ReadFilterCriteriaData
+            //ExFor: Project.TaskFilters
+            //ExFor: Filter.Criteria
+            //ExFor: FilterCriteria.Test
+            //ExFor: FilterCriteria.Field
+            //ExFor: FilterCriteria.Values
+            //ExSummary: Shows how to read task filters and filter criteria.
             var project = new Project(dataDir + "Project2003.mpp");
 
             var filter = project.TaskFilters.ToList()[1];

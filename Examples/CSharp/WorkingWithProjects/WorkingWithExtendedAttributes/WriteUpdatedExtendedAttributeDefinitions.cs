@@ -23,19 +23,22 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.WorkingWithExtendedAt
                 var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
                 //ExStart:WriteUpdatedExtendedAttributeDefinitions
+                //ExFor: ExtendedAttributeDefinition.CreateLookupTaskDefinition(ExtendedAttributeTask,String)
+                //ExFor: ExtendedAttributeDefinition.CreateLookupResourceDefinition(ExtendedAttributeResource,String)
+                //ExSummary: Shows how to write updated extended attribute definitions.
                 var project = new Project(dataDir + "WriteUpdatedExtendedAttributeDefinitions.mpp");
 
                 // Add new text3 extended attribute with lookup and one lookup value
-                var taskTextAttributeDefinition = ExtendedAttributeDefinition.CreateLookupTaskDefinition(ExtendedAttributeTask.Text3, "New text3 attribute");
-                taskTextAttributeDefinition.ElementType = ElementType.Task;
-                project.ExtendedAttributes.Add(taskTextAttributeDefinition);
+                var definition = ExtendedAttributeDefinition.CreateLookupTaskDefinition(ExtendedAttributeTask.Text3, "New text3 attribute");
+                definition.ElementType = ElementType.Task;
+                project.ExtendedAttributes.Add(definition);
 
                 var textVal = new Value();
                 textVal.Id = 1;
                 textVal.Description = "Text value descr";
                 textVal.Val = "Text value1";
 
-                taskTextAttributeDefinition.AddLookupValue(textVal);
+                definition.AddLookupValue(textVal);
 
                 // Add new cost1 extended attribute with lookup and two cost values
                 var taskCostAttributeDefinition = ExtendedAttributeDefinition.CreateLookupTaskDefinition(ExtendedAttributeTask.Cost1, "New cost1 attribute");

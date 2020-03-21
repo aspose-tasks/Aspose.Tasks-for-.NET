@@ -19,6 +19,8 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithTasks
             var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
             
             //ExStart:ReadParentChildTasks
+            //ExFor: ChildTasksCollector
+            //ExSummary: Shows how to iterate over all tasks in a project as a plain list. 
             // Create project instance
             var project = new Project(dataDir + "ParentChildTasks.mpp");
             
@@ -29,9 +31,9 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithTasks
             TaskUtils.Apply(project.RootTask, collector, 0);
 
             // Parse through all the collected tasks
-            foreach (var tsk1 in collector.Tasks)
+            foreach (var task in collector.Tasks)
             {
-                Console.WriteLine(tsk1.Get(Tsk.Name));
+                Console.WriteLine(task.Get(Tsk.Name));
             }
             //ExEnd:ReadParentChildTasks
         }

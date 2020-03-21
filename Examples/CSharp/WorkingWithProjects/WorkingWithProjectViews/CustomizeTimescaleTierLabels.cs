@@ -13,6 +13,11 @@
             var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
             //ExStart:CustomizeTimescaleTierLabels
+            //ExFor: GanttChartView.MiddleTimescaleTier
+            //ExFor: TimescaleTier
+            //ExFor: TimescaleTier.Unit
+            //ExFor: TimescaleTier.DateTimeConverter
+            //ExSummary: Shows how to customize timescale tier labels.
             var project = new Project(dataDir + "Project5.mpp");
 
             // Add task links

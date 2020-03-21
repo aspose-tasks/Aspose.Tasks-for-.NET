@@ -128,7 +128,7 @@
     <Compile Include="ConvertingProjectData\SaveProjectAsText.cs" />
     <Compile Include="ConvertingProjectData\UsingSvgOptions.cs" />
     <Compile Include="WorkingWithProjects\ImportingAndExporting\ImportProjectFromPrimaveraDB.cs" />
-    <Compile Include="WorkingWithProjects\ImportingAndExporting\UsingPrimaveraXMLSaveOptions.cs" />
+    <Compile Include="WorkingWithProjects\ImportingAndExporting\ExportProjectDataToPrimaveraXML.cs" />
     <Compile Include="WorkingWithProjects\ReadHeaderFooterInfo.cs" />
     <Compile Include="WorkingWithProjects\Rescheduling\RescheduleProjectFromFinishDate.cs" />
     <Compile Include="WorkingWithFormulas\UsingArithmeticExpression.cs" />
@@ -155,7 +155,6 @@
     <Compile Include="WorkingWithProjects\CreatingReadingAndSaving\CreateEmptyProjectSaveXML.cs" />
     <Compile Include="WorkingWithProjects\WorkingWithProjectProperties\ReadDefaultProperties.cs" />
     <Compile Include="WorkingWithProjects\WorkingWithProjectProperties\DetermineProjectVersion.cs" />
-    <Compile Include="WorkingWithProjects\WorkingWithProjectViews\ConfigureTheGanttChartViewShowSelectedColumnFields.cs" />
     <Compile Include="ConvertingProjectData\RenderProjectDataToFormat24bppRgb.cs" />
     <Compile Include="WorkingWithProjects\WorkingWithProjectViews\ReadSpecificGanttChartViewData.cs" />
     <Compile Include="WorkingWithProjects\Miscellaneous\ReadTableDataFromProjectFile.cs" />
@@ -207,11 +206,11 @@
     <Compile Include="WorkingWithTasks\MoveTaskUnderSameParent.cs" />
     <Compile Include="WorkingWithProjects\MPPFileUpdate.cs" />
     <Compile Include="WorkingWithProjects\ImportingAndExporting\ImportDataFromXMLFileFormats.cs" />
-    <Compile Include="WorkingWithProjects\ImportingAndExporting\ExportProjectDataToXMLFormat.cs" />
+    <Compile Include="WorkingWithProjects\ImportingAndExporting\ExportProjectDataToP6XMLFormat.cs" />
     <Compile Include="ConvertingProjectData\PrintProjectPagesToSeparateFiles.cs" />
     <Compile Include="WorkingWithProjects\WorkingWithProjectViews\ConfigureGanttChart.cs" />
     <Compile Include="WorkingWithProjects\WorkingWithProjectViews\SetTimeScaleCount.cs" />
-    <Compile Include="WorkingWithProjects\ImportingAndExporting\SupportForSQLiteDatabase.cs" />
+    <Compile Include="WorkingWithProjects\ImportingAndExporting\ImportProjectFromPrimaveraDBSQLite.cs" />
     <Compile Include="WorkingWithProjects\ImportingAndExporting\ReadXMLFileWithMultipleProjects.cs" />
     <Compile Include="WorkingWithProjects\ImportingAndExporting\ReadProjectUIDsFromXMLFile.cs" />
     <Compile Include="WorkingWithProjects\Rescheduling\UpdateProjectAndRescheduleUncompletedWork.cs" />
@@ -221,7 +220,6 @@
     <Compile Include="ConvertingProjectData\SaveProjectDataToSpreadsheet2003XML.cs" />
     <Compile Include="ConvertingProjectData\SaveProjectAsXLSX.cs" />
     <Compile Include="WorkingWithProjects\Rescheduling\RescheduleProjectFromStartDate.cs" />
-    <Compile Include="WorkingWithProjects\Rescheduling\RescheduleProjectStartOrFinishDate.cs" />
     <Compile Include="ConvertingProjectData\UsingXlsxOptions.cs" />
     <Compile Include="WorkingWithProjects\Printing\PrintPrintOptionsAndPrinterSettings.cs" />
     <Compile Include="WorkingWithProjects\Miscellaneous\PrintTaskWritingException.cs" />
@@ -252,7 +250,7 @@
     <Compile Include="WorkingWithCalendars\CreatingUpdatingAndRemoving\ReplaceCalendarWithNewCalendar.cs" />
     <Compile Include="WorkingWithCalendars\RetrieveCalendarInfo.cs" />
     <Compile Include="WorkingWithProjects\WorkingWithProjectProperties\SetAttributesForNewTasks.cs" />
-    <Compile Include="WorkingWithProjects\TaskSettingStartFinishDates.cs" />
+    <Compile Include="WorkingWithProjects\ProjectRecalculations.cs" />
     <Compile Include="WorkingWithProjects\WorkingWithProjectProperties\WriteCurrencyProperties.cs" />
     <Compile Include="WorkingWithProjects\WorkingWithProjectProperties\WriteFiscalYearProperties.cs" />
     <Compile Include="WorkingWithProjects\Miscellaneous\ExtractEmbeddedObjects.cs" />

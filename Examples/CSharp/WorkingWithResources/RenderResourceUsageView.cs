@@ -19,6 +19,9 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithResources
             var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
             //ExStart:RenderResourceUsageView
+            //ExFor: SaveOptions.Timescale
+            //ExFor: SaveOptions.PresentationFormat
+            //ExSummary: Shows how to render resource usage view.
             // Create project instance
             var project = new Project(dataDir + "ResourceUsageView.mpp");
                         

@@ -1,6 +1,7 @@
 ﻿namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.CreatingReadingAndSaving
 {
     using System.IO;
+    using Saving;
 
     internal class CreateEmptyProjectSaveStream
     {
@@ -10,14 +11,16 @@
             var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
             //ExStart:CreateEmptyProjectSaveStream
+            //ExFor: Project.Save(Stream, SaveFileFormat);
+            //ExSummary: Shows how to save project into a stream in XML MS Project format.
             // Create a project instance
-            var newProject = new Project();
+            var project = new Project();
 
             // Create a file stream
-            using (var projectStream = new FileStream(dataDir + "EmptyProjectSaveStream_out.xml", FileMode.Create, FileAccess.Write))
+            using (var stream = new FileStream(dataDir + "EmptyProjectSaveStream_out.xml", FileMode.Create, FileAccess.Write))
             {
                 // Write the stream into XML format
-                newProject.Save(projectStream, Aspose.Tasks.Saving.SaveFileFormat.XML);
+                project.Save(stream, SaveFileFormat.XML);
             }
             //ExEnd: CreateEmptyProjectSaveStream
         }

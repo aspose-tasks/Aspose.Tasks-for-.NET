@@ -10,6 +10,8 @@
         }
 
         //ExStart:CalculateMathExpressions
+        //ExFor: ExtendedAttributeDefinition.Formula
+        //ExSummary: Shows how to use transcendent math functions with extended attributes.
         private static void EvaluateSine()
         {
             var project = CreateTestProjectWithCustomField();

@@ -15,6 +15,8 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithFormulas
         public static void Run()
         {
             //ExStart:UsingTaskNumberFields
+            //ExFor: ExtendedAttributeDefinition.Formula
+            //ExSummary: Shows how to use extended attribute functions by using task number fields.
             var project = CreateTestProjectWithCustomField();
 
             // Set formula

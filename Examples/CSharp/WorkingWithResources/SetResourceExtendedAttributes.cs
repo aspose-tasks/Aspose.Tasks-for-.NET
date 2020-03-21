@@ -22,24 +22,27 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithResources
                 var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
                 //ExStart:SetResourceExtendedAttributes
+                //ExFor: Resource.ExtendedAttributes
+                //ExFor: Resource.ExtendedAttributes.Add(ExtendedAttribute)
+                //ExSummary: Shows how to add resource extended attributes.
                 // Create project instance
                 var project = new Project(dataDir + "ResourceExtendedAttributes.mpp");
 
                 // Define extended attribute
-                var myNumber1 = project.ExtendedAttributes.GetById((int)ExtendedAttributeTask.Number1);
-                if (myNumber1 == null)
+                var definition = project.ExtendedAttributes.GetById((int)ExtendedAttributeTask.Number1);
+                if (definition == null)
                 {
-                    myNumber1 = ExtendedAttributeDefinition.CreateResourceDefinition(ExtendedAttributeResource.Number1, "Age");
-                    project.ExtendedAttributes.Add(myNumber1);
+                    definition = ExtendedAttributeDefinition.CreateResourceDefinition(ExtendedAttributeResource.Number1, "Age");
+                    project.ExtendedAttributes.Add(definition);
                 }
 
                 // Create extended attribute and set its value
-                var number1Resource = myNumber1.CreateExtendedAttribute();
-                number1Resource.NumericValue = 30.5345m;
+                var attribute = definition.CreateExtendedAttribute();
+                attribute.NumericValue = 30.5345m;
 
                 // Add a new resource and its extended attribute   
-                var rsc = project.Resources.Add("R1");
-                rsc.ExtendedAttributes.Add(number1Resource);
+                var resource = project.Resources.Add("R1");
+                resource.ExtendedAttributes.Add(attribute);
 
                 // Save project as MPP
                 project.Save(dataDir + "ResourceExtendedAttributes_out.mpp", SaveFileFormat.MPP);

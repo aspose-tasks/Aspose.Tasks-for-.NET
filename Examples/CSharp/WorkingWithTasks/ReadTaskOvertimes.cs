@@ -1,7 +1,6 @@
 ﻿namespace Aspose.Tasks.Examples.CSharp.WorkingWithTasks
 {
     using System;
-    using System.IO;
 
     internal class ReadTaskOvertimes
     {

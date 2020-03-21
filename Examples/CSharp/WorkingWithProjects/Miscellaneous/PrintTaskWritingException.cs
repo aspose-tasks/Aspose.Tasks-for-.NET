@@ -12,6 +12,8 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.Miscellaneous
             var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
             //ExStart:PrintTaskWritingException
+            //ExFor: TasksWritingException.LogText
+            //ExSummary: Shows how to read log text of exception to check problems with MPP export.
             try
             {
                 var project = new Project(dataDir + "PrintTaskWritingException.mpp");

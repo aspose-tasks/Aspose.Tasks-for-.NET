@@ -18,6 +18,8 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithResources
             var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
             //ExStart:SetResourceCalendar
+            //ExFor: Rsc.Calendar
+            //ExSummary: Shows how to set resource calendar.
             // Create project instance and add resource
             var project = new Project();
             var res = project.Resources.Add("Resource1");

@@ -14,10 +14,15 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.Rescheduling
     {
         public static void Run()
         {
-            //ExStart:RescheduleProjectFromFinishDate
             // The path to the documents directory.
             var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
+            //ExStart:RescheduleProjectFromFinishDate
+            //ExFor: Prj.ScheduleFromStart
+            //ExFor: Prj.FinishDate
+            //ExFor: Project.CriticalPath
+            //ExFor: Project.Recalculate
+            //ExSummary: Shows how to reschedule the project from finish date instead of the start one.
             var project = new Project(dataDir + "Project2.mpp");
             project.Set(Prj.ScheduleFromStart, false);
             project.Set(Prj.FinishDate, new DateTime(2020, 1, 1));

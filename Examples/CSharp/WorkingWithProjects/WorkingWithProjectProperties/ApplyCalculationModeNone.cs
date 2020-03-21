@@ -7,6 +7,9 @@
         public static void Run()
         {
             //ExStart:ApplyCalculationModeNone
+            //ExFor: CalculationMode.None
+            //ExFor: Project.CalculationMode
+            //ExSummary: Shows how to apply project's none calculation mode.
             // Create empty project and set calculation mode to None
             var project = new Project();
             project.CalculationMode = CalculationMode.None;

@@ -7,6 +7,9 @@
         public static void Run()
         {
             //ExStart:ApplyCalculationModeAuto
+            //ExFor: CalculationMode.Automatic
+            //ExFor: Project.CalculationMode
+            //ExSummary: Shows how to apply project's auto calculation mode.
             // Create empty project and set calculation mode to Automatic
             var project = new Project();
             project.CalculationMode = CalculationMode.Automatic;

@@ -19,6 +19,9 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.ImportingAndExporting
             var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
             //ExStart:ReadProjectUIDsFromXMLFile
+            //ExFor: PrimaveraXmlReader(String)
+            //ExFor: PrimaveraXmlReader.GetProjectUids
+            //ExSummary: Shows how to import a project from a Primavera XML file.
             var reader = new PrimaveraXmlReader(dataDir + "Project.xml");
             List<int> projectUids = reader.GetProjectUids();
             foreach (var projectUid in projectUids)

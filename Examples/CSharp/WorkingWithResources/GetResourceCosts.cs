@@ -10,6 +10,11 @@
             var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
             //ExStart:GetResourceCosts
+            //ExFor: Rsc.Cost
+            //ExFor: Rsc.ACWP
+            //ExFor: Rsc.BCWS
+            //ExFor: Rsc.BCWP
+            //ExSummary: Shows how to read resource costs.
             // Create project instance
             var project = new Project(dataDir + "ResourceCosts.mpp");
 

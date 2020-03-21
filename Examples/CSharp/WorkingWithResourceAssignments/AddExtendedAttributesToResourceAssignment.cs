@@ -10,15 +10,15 @@
             var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
             //ExStart: AddExtendedAttributesToResourceAssignment
+            //ExFor: ExtendedAttributeDefinition.CreateTaskDefinition(CustomFieldType,ExtendedAttributeTask,String)
+            //ExSummary: Shows how to add extended attribute to a resource assignment.
             // Create new project
             var project = new Project(dataDir + "Blank2010.mpp");
 
             // Add new task and resource
-            var task1 = project.RootTask.Children.Add("Task");
-            var rsc1 = project.Resources.Add("Rsc");
-
-            // Assign the resource to the desired task
-            var assignment = project.ResourceAssignments.Add(task1, rsc1);
+            var task = project.RootTask.Children.Add("Task");
+            var resource = project.Resources.Add("Rsc");
+            var assignment = project.ResourceAssignments.Add(task, resource);
 
             // Custom attributes which is visible in "Resource Usage" view can be created with ExtendedAttributeDefinition.CreateResourceDefinition method.
             {

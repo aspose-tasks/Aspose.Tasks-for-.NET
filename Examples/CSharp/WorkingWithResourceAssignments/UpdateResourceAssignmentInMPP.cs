@@ -22,6 +22,8 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithResourceAssignments
                 var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
                 //ExStart:UpdateResourceAssignmentInMPP
+                //ExFor: ResourceAssignmentCollection.Add(Task,Resource)
+                //ExSummary: Shows how to add/update resource assignments in MPP file.
                 // Create project instance and access first task and resource
                 var project = new Project(dataDir + "UpdateResourceAssignment.mpp");
                 var task = project.RootTask.Children.GetById(1);

@@ -9,36 +9,39 @@
             var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
             //ExStart:ReadTaskExtendedAttributes
+            //ExFor: Task.ExtendedAttributes
+            //ExFor: ExtendedAttribute.AttributeDefinition.CfType
+            //ExSummary: Shows how to read task extended attributes.
             // Create project instance
             var project = new Project(dataDir + "ReadTaskExtendedAttributes.mpp");
 
             // Read extended attributes for tasks
-            foreach (var tsk in project.RootTask.Children)
+            foreach (var task in project.RootTask.Children)
             {
-                foreach (var ea in tsk.ExtendedAttributes)
+                foreach (var attribute in task.ExtendedAttributes)
                 {
-                    Console.WriteLine(ea.FieldId);
-                    Console.WriteLine(ea.ValueGuid);
+                    Console.WriteLine(attribute.FieldId);
+                    Console.WriteLine(attribute.ValueGuid);
 
-                    switch (ea.AttributeDefinition.CfType)
+                    switch (attribute.AttributeDefinition.CfType)
                     {
                         case CustomFieldType.Date:
                         case CustomFieldType.Start:
                         case CustomFieldType.Finish:
-                            Console.WriteLine(ea.DateValue);
+                            Console.WriteLine(attribute.DateValue);
                             break;
                         case CustomFieldType.Text:
-                            Console.WriteLine(ea.TextValue);
+                            Console.WriteLine(attribute.TextValue);
                             break;
                         case CustomFieldType.Duration:
-                            Console.WriteLine(ea.DurationValue.ToString());
+                            Console.WriteLine(attribute.DurationValue.ToString());
                             break;
                         case CustomFieldType.Cost:
                         case CustomFieldType.Number:
-                            Console.WriteLine(ea.NumericValue);
+                            Console.WriteLine(attribute.NumericValue);
                             break;
                         case CustomFieldType.Flag:
-                            Console.WriteLine(ea.FlagValue);
+                            Console.WriteLine(attribute.FlagValue);
                             break;
                         case CustomFieldType.Null:
                         case CustomFieldType.RBS:

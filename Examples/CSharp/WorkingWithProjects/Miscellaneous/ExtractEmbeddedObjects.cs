@@ -10,6 +10,8 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.Miscellaneous
             var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
             //ExStart:ExtractEmbeddedObjects
+            //ExFor: OleObject.Content
+            //ExSummary: Shows how to extract an embedded OLE object.
             var project = new Project(dataDir + "ExtractEmbeddedObjects.mpp");
             var ole = project.OleObjects.ToList()[0];
 
@@ -19,9 +21,9 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.Miscellaneous
                 return;
             }
 
-            using (var fileStream = new FileStream(dataDir, FileMode.Create))
+            using (var stream = new FileStream(dataDir, FileMode.Create))
             {
-                fileStream.Write(ole.Content, 0, ole.Content.Length);
+                stream.Write(ole.Content, 0, ole.Content.Length);
             }
             //ExEnd:ExtractEmbeddedObjects
         }

@@ -146,7 +146,6 @@ namespace Aspose.Tasks.Examples.CSharp
             // DefineWeekdaysForCalendar.Run();
             // MakeAStandardCalendar.Run();
             // ReplaceCalendar.Run();
-            // ReplaceCalendarWithNewCalendar.Run();
             // WriteUpdatedCalendarDataToMPP.Run();
 
             // =====================================================
@@ -195,14 +194,14 @@ namespace Aspose.Tasks.Examples.CSharp
             // ReadHeaderFooterInfo.Run();
             // WorkingWithOutlineCodes.Run();
             // SaveProjectDataAsTemplate.Run();
-            // TaskSettingStartFinishDates.Run();
+            // ProjectRecalculations.Run();
 
             // Creating, Reading and Saving
             // =====================================================
 
             // CreateEmptyProjectSaveXML.Run();
             // CreateEmptyProjectSaveStream.Run();
-            // IgnoreInvalidCharactersDuringLoadingProject.Run();
+            // IgnoreInvalidCharactersDuringProjectLoading.Run();
             // ImportProjectDataFromDatabase.Run();
             // ReadPasswordProtectedProjectFile.Run();
             // ReadProjectFileFromStream.Run();
@@ -214,10 +213,10 @@ namespace Aspose.Tasks.Examples.CSharp
 
             // ExportProjectDataToPrimaveraMPXFormat.Run();
             // ExportProjectDataToXERFormat.Run();
-            // ExportProjectDataToXMLFormat.Run();
+            // ExportProjectDataToP6XMLFormat.Run();
             // ImportDataFromXMLFileFormats.Run();
-            // SupportForSQLiteDatabase.Run();
-            // UsingPrimaveraXMLSaveOptions.Run(); 
+            // ImportProjectFromPrimaveraDBSQLite.Run();
+            // ExportProjectDataToPrimaveraXML.Run(); 
 
             // Miscellaneous
             // =====================================================
@@ -270,7 +269,7 @@ namespace Aspose.Tasks.Examples.CSharp
             // WriteMPPProjectSummary.Run();
             // WriteProjectInfo.Run();
             // WriteWeekdayProperties.Run();
-            ReadMetaProperties.Run();
+            // ReadMetaProperties.Run();
 
             // Working with Project Views
             // =====================================================
@@ -280,7 +279,7 @@ namespace Aspose.Tasks.Examples.CSharp
             // CustomizeTimescaleTierLabels.Run();
             // ReadSpecificGanttChartViewData.Run();
             // SetTimeScaleCount.Run();
-            // SupportForTextStle.Run();
+            // SupportForTextStyle.Run();
             // SaveWithDefaultGanttChartView.Run();
 
             // =====================================================
@@ -333,7 +332,6 @@ namespace Aspose.Tasks.Examples.CSharp
 
             // CreateTaskBaseline.Run();
             // GetTaskBaselineDuration.Run();
-            // GetTaskBaselineSchedule.Run();
 
             // =====================================================
             // =====================================================
@@ -398,11 +396,6 @@ namespace Aspose.Tasks.Examples.CSharp
             // =====================================================
 
             // GetConstraints.Run();
-            // SetConstraintAsLateAsPossible.Run();
-            // SetConstraintFinishNoEarlierThan.Run();
-            // SetConstraintMustFinishOn.Run();
-            // SetConstraintMustStartOn.Run();
-            // SetConstraintStartNoEarlierThan.Run();
 
             // =====================================================
             // =====================================================

@@ -18,6 +18,11 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.Rescheduling
             var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
             
             //ExStart:RescheduleProjectFromStartDate
+            //ExFor: Prj.ScheduleFromStart
+            //ExFor: Prj.StartDate
+            //ExFor: Project.CriticalPath
+            //ExFor: Project.Recalculate
+            //ExSummary: Shows how to reschedule the project from start date instead of the finish one.
             var project = new Project(dataDir + "Project2.mpp");
             project.Set(Prj.ScheduleFromStart, true);
             project.Set(Prj.StartDate, new DateTime(2014, 1, 1));

@@ -2,7 +2,7 @@
 {
     using System;
 
-    internal class TaskSettingStartFinishDates
+    internal class ProjectRecalculations
     {
         /// <summary>
         /// By default, the project calculation mode is set to automatic that recalculates everything and sets the dates. 
@@ -11,7 +11,9 @@
         /// </summary>
         public static void Run()
         {
-            //ExStart:TaskSettingStartFinishDates
+            //ExStart:ProjectRecalculations
+            //ExFor: CalculationMode.None
+            //ExSummary: Shows how to work with calculation mode None.
             var project = new Project();
             Console.WriteLine(project.Get(Prj.StartDate));
             Console.WriteLine(project.CalculationMode.ToString());
@@ -29,14 +31,13 @@
             Console.WriteLine(task.Get(Tsk.Start));
             Console.WriteLine(task.Get(Tsk.Finish));
 
-
             project.Recalculate();
 
             Console.WriteLine("*************** After Recalculate *****************");
             Console.WriteLine(task.Get(Tsk.Start));
             Console.WriteLine(task.Get(Tsk.Finish));
 
-            //ExEnd:TaskSettingStartFinishDates
+            //ExEnd:ProjectRecalculations
         }
     }
 }

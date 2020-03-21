@@ -22,6 +22,10 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithTasks
                 var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
                 //ExStart:AddTaskExtendedAttributes
+                //ExFor: ExtendedAttributeDefinition.CreateTaskDefinition(CustomFieldType,ExtendedAttributeTask,String)
+                //ExFor: Task.ExtendedAttributes
+                //ExFor: ExtendedAttributeDefinition.AddLookupValue(Value)
+                //ExSummary: Shows how to work with task attributes.
                 // Create new project
                 var project = new Project(dataDir + "Blank2010.mpp");
 
@@ -117,8 +121,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithTasks
                 task4.ExtendedAttributes.Add(taskExtendedAttributeFinish2);
 
                 // Save the Project               
-                project3.Save(dataDir + "FinishExtendedAttributeWithLookup_out.mpp", SaveFileFormat.MPP);                
-
+                project3.Save(dataDir + "FinishExtendedAttributeWithLookup_out.mpp", SaveFileFormat.MPP);
                 //ExEnd:AddTaskExtendedAttributes
             }
             catch (Exception ex)

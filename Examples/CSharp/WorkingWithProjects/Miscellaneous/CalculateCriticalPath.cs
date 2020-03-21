@@ -10,6 +10,8 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.Miscellaneous
             var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
             //ExStart:CalculateCriticalPath
+            //ExFor: Project.CriticalPath
+            //ExSummary: Shows how to calculate a critical path of the project.
             var project = new Project(dataDir + "CalculateCriticalPath.mpp");
             project.CalculationMode = CalculationMode.Automatic;
 

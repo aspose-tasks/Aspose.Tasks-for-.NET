@@ -18,6 +18,8 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.CreatingReadingAndSav
             var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
             //ExStart:CreateEmptyProjectSaveXML
+            //ExFor: Project.Save(string, SaveFileFormat)
+            //ExSummary: Shows how to create an empty project and save it into MS Project XML format.
             // Create empty project
             var project = new Project();
 

@@ -9,7 +9,6 @@ please feel free to contact us using https://forum.aspose.com/c/tasks
 namespace Aspose.Tasks.Examples.CSharp.WorkingWithTasks
 {
     using System;
-    using System.IO;
 
     using Aspose.Tasks.Util;
 
@@ -17,26 +16,29 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithTasks
     {
         public static void Run()
         {
-            //ExStart:FindCriticalEffortDrivenTasks
-            // Read project from file stream
             var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
-            var fs = new FileStream(dataDir + "CriticalEffortDrivenTasks.mpp", FileMode.Open);
-            var prj = new Project(fs);
-            fs.Close();
+            
+            //ExStart:FindCriticalEffortDrivenTasks
+            //ExFor: Tsk.IsEffortDriven
+            //ExFor: Tsk.IsCritical
+            //ExSummary: Shows how to find critical and/or effort driven tasks.
+            // Read project from file stream
+            
+            var project = new Project(dataDir + "CriticalEffortDrivenTasks.mpp");
 
             // Create a ChildTasksCollector instance
             var collector = new ChildTasksCollector();
 
             // Collect all the tasks from RootTask using TaskUtils
-            TaskUtils.Apply(prj.RootTask, collector, 0);
+            TaskUtils.Apply(project.RootTask, collector, 0);
 
             // Parse through all the collected tasks
-            foreach (var tsk1 in collector.Tasks)
+            foreach (var task in collector.Tasks)
             {
-                var strED = tsk1.Get(Tsk.IsEffortDriven) ? "EffortDriven" : "Non-EffortDriven";
-                var nonCritical = tsk1.Get(Tsk.IsCritical) ? "Critical" : "Non-Critical";
-                Console.WriteLine(tsk1.Get(Tsk.Name) + " : " + strED);
-                Console.WriteLine(tsk1.Get(Tsk.Name) + " : " + nonCritical);
+                var effortDriven = task.Get(Tsk.IsEffortDriven) ? "EffortDriven" : "Non-EffortDriven";
+                var nonCritical = task.Get(Tsk.IsCritical) ? "Critical" : "Non-Critical";
+                Console.WriteLine(task.Get(Tsk.Name) + " : " + effortDriven);
+                Console.WriteLine(task.Get(Tsk.Name) + " : " + nonCritical);
             }
             //ExEnd:FindCriticalEffortDrivenTasks
         }

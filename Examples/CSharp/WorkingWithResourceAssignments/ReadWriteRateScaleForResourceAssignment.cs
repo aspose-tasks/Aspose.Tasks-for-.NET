@@ -18,6 +18,8 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithResourceAssignments
             var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
             //ExStart: ReadWriteRateScaleForResourceAssignment
+            //ExFor: Asn.RateScale
+            //ExSummary: Shows how to work with assignment's rate scale. 
             var project = new Project(dataDir + "New project 2013.mpp");
 
             var task = project.RootTask.Children.Add("t1");

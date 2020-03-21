@@ -10,16 +10,22 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.WorkingWithProjectVie
             var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
             //ExStart:SetTimeScaleCount
+            //ExFor: GanttChartView.TopTimescaleTier
+            //ExFor: GanttChartView.MiddleTimescaleTier
+            //ExFor: GanttChartView.BottomTimescaleTier
+            //ExSummary: Shows how to modify timescale tiers.
             var project = new Project();
 
             // Init Gantt Chart View
             var view = new GanttChartView();
 
             // Set Time Scale count
-            view.BottomTimescaleTier.Count = 2;
-            view.BottomTimescaleTier.ShowTicks = false; 
+            view.TopTimescaleTier.Count = 2;
+            view.TopTimescaleTier.ShowTicks = false;
             view.MiddleTimescaleTier.Count = 2;
             view.MiddleTimescaleTier.ShowTicks = false;
+            view.BottomTimescaleTier.Count = 2;
+            view.BottomTimescaleTier.ShowTicks = false;
             
             // Add Gantt Chart View to project
             project.Views.Add(view);

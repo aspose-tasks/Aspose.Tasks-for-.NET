@@ -22,20 +22,25 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.Printing
             var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
             // Read the input Project file
+            //ExFor: Project.Print(PrinterSettings,PrintOptions)
+            //ExFor: PrinterOptions
+            //ExFor: PrinterSettings
+            //ExFor: PageSettings
+            //ExSummary: Shows how to use printer options and settings to print the project.
             var project = new Project(dataDir + "Project2.mpp");
 
             var options = new PrintOptions();
             options.Timescale = Timescale.Months;
 
             // Print first two pages
-            var printerSettings = new PrinterSettings();
-            printerSettings.PrintRange = PrintRange.SomePages;
-            printerSettings.FromPage = 1;
-            printerSettings.ToPage = 2;
+            var settings = new PrinterSettings();
+            settings.PrintRange = PrintRange.SomePages;
+            settings.FromPage = 1;
+            settings.ToPage = 2;
 
-            var pageSettings = printerSettings.DefaultPageSettings;
+            var pageSettings = settings.DefaultPageSettings;
             pageSettings.PaperSize = new PaperSize(dataDir + "Custom Size", 1000, 700);
-            project.Print(printerSettings, options);
+            project.Print(settings, options);
             //ExEnd:PrintPrintOptionsAndPrinterSettings
         }
     }

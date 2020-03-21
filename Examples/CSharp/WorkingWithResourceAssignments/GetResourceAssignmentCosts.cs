@@ -10,6 +10,11 @@
             var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
             //ExStart:GetResourceAssignmentCosts
+            //ExFor: Asn.Cost
+            //ExFor: Asn.ACWP
+            //ExFor: Asn.BCWP
+            //ExFor: Asn.BCWS
+            //ExSummary: Shows how to read assignment's costs.
             // Create project instance
             var project = new Project(dataDir + "ResourceAssignmentCosts.mpp");
 

@@ -10,9 +10,13 @@
         {
             try
             {
-                //ExStart:SaveWithDefaultGanttChartView
                 // The path to the documents directory.
                 var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
+                
+                //ExStart:SaveWithDefaultGanttChartView
+                //ExFor: Project.Views
+                //ExFor: Project.DefaultView
+                //ExSummary: Shows how to set a default project view.
                 var project = new Project(dataDir + "Project5.mpp"); 
                                                                          
                 View view = null;

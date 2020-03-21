@@ -22,24 +22,26 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.Miscellaneous
                 var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
                 //ExStart:EmbeddedObjectsCreatedInsideApplication
-                IDictionary<string, string> fileFormatExt = new Dictionary<string, string>();
-                fileFormatExt.Add("RTF", "_rtfFile_out.rtf");
-                fileFormatExt.Add("MSWordDoc", "_wordFile_out.docx");
-                fileFormatExt.Add("ExcelML12", "_excelFile_out.xlsx");
+                //ExFor: Project.OleObjects
+                //ExSummary: Shows how to extract an embedded OLE objects.
+                IDictionary<string, string> formatExt = new Dictionary<string, string>();
+                formatExt.Add("RTF", "_rtfFile_out.rtf");
+                formatExt.Add("MSWordDoc", "_wordFile_out.docx");
+                formatExt.Add("ExcelML12", "_excelFile_out.xlsx");
 
                 var project = new Project(dataDir + "Embedded.mpp"); 
 
                 foreach (var oleObject in project.OleObjects)
                 {
-                    if (string.IsNullOrEmpty(oleObject.FileFormat) || !fileFormatExt.ContainsKey(oleObject.FileFormat))
+                    if (string.IsNullOrEmpty(oleObject.FileFormat) || !formatExt.ContainsKey(oleObject.FileFormat))
                     {
                         continue;
                     }
 
-                    var path = dataDir + "EmbeddedContent_" + fileFormatExt[oleObject.FileFormat];
-                    using (var fileStream = new FileStream(path, FileMode.Create))
+                    var path = dataDir + "EmbeddedContent_" + formatExt[oleObject.FileFormat];
+                    using (var stream = new FileStream(path, FileMode.Create))
                     {
-                        fileStream.Write(oleObject.Content, 0, oleObject.Content.Length);
+                        stream.Write(oleObject.Content, 0, oleObject.Content.Length);
                     }
                 }
                 //ExEnd:EmbeddedObjectsCreatedInsideApplication

@@ -16,10 +16,12 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithTasks
     {
         public static void Run()
         {
-            //ExStart:ReadTaskCalendar
             // The path to the documents directory.
             var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
+            //ExStart:ReadTaskCalendar
+            //ExFor: Tsk.Calendar
+            //ExSummary: Shows how to read task calendars.
             // Create project instance
             var prj = new Project(dataDir + "ReadTaskCalendar.mpp");
 
@@ -32,8 +34,8 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithTasks
             // Parse all the recursive children
             foreach (var tsk in collector.Tasks)
             {
-                var tskCal = tsk.Get(Tsk.Calendar);
-                Console.WriteLine("Task calendar name: {0}", tskCal == null ? "None" : tskCal.Name);
+                var calendar = tsk.Get(Tsk.Calendar);
+                Console.WriteLine("Task calendar name: {0}", calendar == null ? "None" : calendar.Name);
             }
             //ExEnd:ReadTaskCalendar
         }

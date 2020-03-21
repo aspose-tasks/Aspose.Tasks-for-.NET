@@ -18,10 +18,13 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.WorkingWithProjectPro
         {
             try
             {
-                //ExStart:WriteFiscalYearProperties
                 // The path to the documents directory.
                 var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
-
+                
+                //ExStart:WriteFiscalYearProperties
+                //ExFor: Prj.FyStartDate
+                //ExFor: Prj.FiscalYearStart
+                //ExSummary: Shows how to write fiscal year properties. 
                 // Create a project instance
                 var project = new Project(dataDir + "WriteFiscalYearProperties.mpp");
 

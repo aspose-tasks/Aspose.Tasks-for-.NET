@@ -10,11 +10,11 @@
             var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
             //ExStart:CreateEmptyProjectSaveMPP
-            // there is no more need to load MPP template to save it into MPP
-            // add tasks, resources, etc.
+            //ExFor: Project.Save(String, SaveFileFormat)
+            //ExSummary: Shows how to create a project and save it into MPP format without passing of an MPP template file.
             var project = new Project();
 
-            // !The project will be saved into MPP by using internal MPP template.
+            // The project will be saved into MPP by using internal MPP template.
             project.Save(dataDir + "project.mpp", SaveFileFormat.MPP);
             //ExEnd: CreateEmptyProjectSaveMPP
         }

@@ -10,21 +10,25 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.ImportingAndExporting
 {
     using Aspose.Tasks.Saving;
 
-    internal class UsingPrimaveraXMLSaveOptions
+    internal class ExportProjectDataToPrimaveraXML
     {
         public static void Run()
         {
             // The path to the documents directory.
             var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
-            //ExStart:UsingPrimaveraXMLSaveOptions
+            //ExStart:ExportProjectDataToPrimaveraXML
+            //ExFor: PrimaveraXmlSaveOptions
+            //ExFor: Project.Save(string, PrimaveraXmlSaveOptions)
+            //ExFor: PrimaveraXmlSaveOptions.SaveRootTask
+            //ExSummary: Shows how to export the to Primavera XML file.
             var project = new Project(dataDir + "project.xml");
 
             // Specify xml save options
             var options = new PrimaveraXmlSaveOptions();
             options.SaveRootTask = false;
             project.Save(dataDir + "UsingPrimaveraXMLSaveOptions_out.xml", options);
-            //ExEnd:UsingPrimaveraXMLSaveOptions
+            //ExEnd:ExportProjectDataToPrimaveraXML
         }
     }
 }

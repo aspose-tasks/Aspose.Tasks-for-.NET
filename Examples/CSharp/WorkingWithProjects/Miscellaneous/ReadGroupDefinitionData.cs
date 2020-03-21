@@ -18,6 +18,12 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.Miscellaneous
             var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
             //ExStart:ReadGroupDefinitionData
+            //ExFor: GroupCollection
+            //ExFor: GroupCriterionCollection
+            //ExFor: Group
+            //ExFor: GroupCriterion
+            //ExFor: GroupCriterion.Font
+            //ExSummary: Shows how to read task groups.
             var project = new Project(dataDir + "ReadGroupDefinitionData.mpp"); 
             
             Console.WriteLine("Task Groups Count: " + project.TaskGroups.Count);

@@ -20,6 +20,9 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.Rescheduling
             var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
             //ExStart:UpdateProjectAndRescheduleUncompletedWork
+            //ExFor: Project.UpdateProjectWorkAsComplete
+            //ExFor: Project.RescheduleUncompletedWorkToStartAfter
+            //ExSummary: Shows how to update the project and reschedule uncomplete work.
             // Create a new project and set start date
             var project = new Project();
             project.Set(Prj.StartDate, new DateTime(2014, 1, 27, 8, 0, 0));

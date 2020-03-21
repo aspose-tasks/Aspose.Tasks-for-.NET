@@ -10,6 +10,11 @@
             var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
             //ExStart:GetResourceAssignmentVariance
+            //ExFor: Asn.WorkVariance
+            //ExFor: Asn.CostVariance
+            //ExFor: Asn.StartVariance
+            //ExFor: Asn.FinishVariance
+            //ExSummary: Shows how to read assignment's variances.
             // Create project instance
             var project = new Project(dataDir + "ResourceAssignmentVariance.mpp");
 

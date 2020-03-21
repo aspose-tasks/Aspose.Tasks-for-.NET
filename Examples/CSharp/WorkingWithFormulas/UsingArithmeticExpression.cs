@@ -15,6 +15,8 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithFormulas
         public static void Run()
         {
             //ExStart:UsingArithmeticExpression
+            //ExFor: ExtendedAttributeDefinition.Formula
+            //ExSummary: Shows how to use arithmetic functions with extended attributes.
             var project = CreateTestProjectWithCustomField();
             
             // Set arithmetic formula for extended attribute

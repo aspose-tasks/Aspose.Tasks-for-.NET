@@ -14,14 +14,16 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithFormulas
 
     internal class UsingTasksAndResourceFieldsInFormulaCalculations
     {
+        // The path to the documents directory.
+        private static readonly string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
+
         //ExStart:UsingTasksAndResourceFieldsInFormulaCalculations
+        //ExFor: ExtendedAttributeDefinition.Formula
+        //ExSummary: Shows how to use extended attribute functions by using task's and/or resource's fields.
         public static void Run()
         {
             try
             {
-                // The path to the documents directory.
-                var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
-
                 var project = CreateTestProjectWithCustomField();
                 var task = project.RootTask.Children.GetById(1);
 
@@ -43,9 +45,6 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithFormulas
         // Helper method to create project
         private static Project CreateTestProjectWithCustomField()
         {
-            // The path to the documents directory.
-            var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
-
             // Create new project instance
             var project = new Project(dataDir + "Blank2010.mpp");
             project.Set(Prj.StartDate, new DateTime(2015, 3, 6, 8, 0, 0));

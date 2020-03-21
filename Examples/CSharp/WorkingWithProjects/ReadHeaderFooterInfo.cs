@@ -14,12 +14,19 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects
 
     internal class ReadHeaderFooterInfo
     {
+        // The path to the documents directory.
+        private static readonly string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
+        
         //ExStart:ReadHeaderFooterInfo
+        //ExFor: View.PageInfo
+        //ExFor: PageInfo.Header
+        //ExFor: PageInfo.Legend
+        //ExFor: PageInfo.Footer
+        //ExFor: PageLegend
+        //ExFor: HeaderFooterInfo
+        //ExSummary: Shows how to read page header/footer info.
         public static void Run()
         {
-            // The path to the documents directory.
-            var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
-
             // Create project and project info instances
             var project = new Project(dataDir + "Blank2010.mpp");
             var info = project.DefaultView.PageInfo;

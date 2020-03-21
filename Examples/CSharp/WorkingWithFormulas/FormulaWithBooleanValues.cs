@@ -15,6 +15,8 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithFormulas
         public static void Run()
         {
             //ExStart:FormulaWithBooleanValues
+            //ExFor: ExtendedAttributeDefinition.Formula
+            //ExSummary: Shows how to use boolean functions with extended attributes.
             var project = CreateTestProjectWithCustomField();
 
             // Set formula for extended attribute

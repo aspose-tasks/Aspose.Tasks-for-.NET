@@ -20,6 +20,15 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.WorkingWithProjectPro
             var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName); 
 
             //ExStart:WriteDefaultProperties
+            //ExFor: Prj.ScheduleFromStart
+            //ExFor: Prj.StartDate
+            //ExFor: Prj.DefaultStartTime
+            //ExFor: Prj.DefaultTaskType
+            //ExFor: Prj.DefaultStandardRate
+            //ExFor: Prj.DefaultOvertimeRate
+            //ExFor: Prj.DefaultTaskEVMethod
+            //ExFor: Prj.DefaultFixedCostAccrual
+            //ExSummary: Shows how to write project's default properties.
             // Create a project instance and Set default properties
             var project = new Project();
             project.Set(Prj.ScheduleFromStart, true);

@@ -6,10 +6,15 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.WorkingWithProjectPro
     {
         public static void Run()
         {
-            //ExStart:WriteCurrencyProperties
             // The path to the documents directory.
             var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
+            //ExStart:WriteCurrencyProperties
+            //ExFor: Prj.CurrencyCode
+            //ExFor: Prj.CurrencyDigits
+            //ExFor: Prj.CurrencySymbol
+            //ExFor: Prj.CurrencySymbolPosition
+            //ExSummary: Shows how to write project's currency properties.
             // Create a project instance
             var project = new Project(dataDir + "WriteCurrencyProperties.mpp");
 

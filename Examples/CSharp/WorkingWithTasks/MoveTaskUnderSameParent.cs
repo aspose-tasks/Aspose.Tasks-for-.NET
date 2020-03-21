@@ -18,10 +18,12 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithTasks
         {        
             try
             {
-                //ExStart:MoveTaskUnderSameParent
                 // The path to the documents directory.
-                var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);        
-             
+                var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
+                
+                //ExStart:MoveTaskUnderSameParent
+                //ExFor: Task.MoveToSibling(Int32)
+                //ExSummary: Shows how to move the task under the same parent.
                 // Loading project file
                 var project = new Project(dataDir + "MoveTask.mpp");
 

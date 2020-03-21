@@ -18,19 +18,22 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.Miscellaneous
             var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
             //ExStart:ReadTableDataFromProjectFile
+            //ExFor: Project.Tables
+            //ExFor: TableField
+            //ExSummary: Shows how to read project tables. 
             var project = new Project(dataDir + "ReadTableData.mpp");
 
             // Access table
-            var task1 = project.Tables.ToList()[0];
-            Console.WriteLine("Table Fields Count" + task1.TableFields.Count);
+            var task = project.Tables.ToList()[0];
+            Console.WriteLine("Table Fields Count" + task.TableFields.Count);
 
             // Display all table fields information
-            foreach (var tableField in task1.TableFields)
+            foreach (var field in task.TableFields)
             {
-                Console.WriteLine("Field width: " + tableField.Width);
-                Console.WriteLine("Field Title: " + tableField.Title);
-                Console.WriteLine("Field Title Alignment: " + tableField.AlignTitle);
-                Console.WriteLine("Field Align Data: " + tableField.AlignData);
+                Console.WriteLine("Field width: " + field.Width);
+                Console.WriteLine("Field Title: " + field.Title);
+                Console.WriteLine("Field Title Alignment: " + field.AlignTitle);
+                Console.WriteLine("Field Align Data: " + field.AlignData);
             }
             //ExEnd:ReadTableDataFromProjectFile
         }

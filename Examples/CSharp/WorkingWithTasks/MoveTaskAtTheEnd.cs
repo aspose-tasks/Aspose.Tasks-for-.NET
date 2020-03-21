@@ -22,6 +22,8 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithTasks
                 var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);   
 
                 //ExStart:MoveTaskAtTheEnd
+                //ExFor: Task.MoveToSibling(Int32)
+                //ExSummary: Shows how to move a task before the task with specified id.
                 // Loading project file
                 var project = new Project(dataDir + "MoveTask.mpp");
 

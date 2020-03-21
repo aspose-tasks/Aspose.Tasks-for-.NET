@@ -10,15 +10,17 @@
             var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
             //ExStart:GetResourceCalendar
+            //ExFor: Project.Resources
+            //ExSummary: Shows how to read project resources.
             // Create project instance
             var project = new Project(dataDir + "ResourceCalendar.mpp");
 
             // Display base calendar name for all resources
-            foreach (var res in project.Resources)
+            foreach (var resource in project.Resources)
             {
-                if (res.Get(Rsc.Name) != null)
+                if (resource.Get(Rsc.Name) != null)
                 {
-                    Console.WriteLine(res.Get(Rsc.Calendar).BaseCalendar.Name);
+                    Console.WriteLine(resource.Get(Rsc.Calendar).BaseCalendar.Name);
                 }
             }
             //ExEnd:GetResourceCalendar

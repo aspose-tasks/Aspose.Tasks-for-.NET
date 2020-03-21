@@ -18,9 +18,12 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithTasks
         {
             try
             {
-                //ExStart:CreateSubProjectTask
-                // Create project instance
                 var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
+
+                //ExStart:CreateSubProjectTask
+                //ExFor: Tsk.SubprojectName
+                //ExSummary: Shows how to create a subproject task.
+                // Create project instance
                 var project = new Project(dataDir + "SubProjectTask.mpp");
 
                 // Add task
@@ -30,7 +33,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithTasks
                 task.Set(Tsk.SubprojectName, dataDir + "subProject.mpp");
 
                 // Save project
-                project.Save(dataDir + "SubProjectTask_out.mpp", SaveFileFormat.MPP);
+                project.Save(dataDir + "CreateSubProjectTask_out.mpp", SaveFileFormat.MPP);
                 //ExEnd:CreateSubProjectTask
             }
             catch (Exception ex)

@@ -17,31 +17,34 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.WorkingWithProjectVie
     {
         public static void Run()
         {
+            // The path to the documents directory.
+            var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
+            
             try
             {
-                // The path to the documents directory.
-                var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
-
                 //ExStart:ConfigureGanttChart
+                //ExFor: Project.Tables
+                //ExFor: Table.TableFields
+                //ExSummary: Shows how to configure Gantt Chart properties.
                 var project = new Project(dataDir + "Project5.mpp"); // Create a new project task
                 var task = project.RootTask.Children.Add("New Activity");
 
                 // Define new custom attribute
-                var text1Definition = ExtendedAttributeDefinition.CreateTaskDefinition(ExtendedAttributeTask.Text1, null);
-                project.ExtendedAttributes.Add(text1Definition);
+                var definition = ExtendedAttributeDefinition.CreateTaskDefinition(ExtendedAttributeTask.Text1, null);
+                project.ExtendedAttributes.Add(definition);
                 // Add custom text attribute to created task.
-                task.ExtendedAttributes.Add(text1Definition.CreateExtendedAttribute("Activity attribute"));
+                task.ExtendedAttributes.Add(definition.CreateExtendedAttribute("Activity attribute"));
 
                 // Customize table by adding text attribute field
-                var attrField = new TableField();
-                attrField.Field = Field.TaskText1;
-                attrField.Width = 20;
-                attrField.Title = "Custom attribute";
-                attrField.AlignTitle = StringAlignment.Center;
-                attrField.AlignData = StringAlignment.Center;
+                var field = new TableField();
+                field.Field = Field.TaskText1;
+                field.Width = 20;
+                field.Title = "Custom attribute";
+                field.AlignTitle = StringAlignment.Center;
+                field.AlignData = StringAlignment.Center;
 
                 var table = project.Tables.ToList()[0];
-                table.TableFields.Insert(3, attrField);
+                table.TableFields.Insert(3, field);
 
                 project.Save(dataDir + @"ConfigureGantChart_out.mpp", new MPPSaveOptions { WriteViewData = true });
             }

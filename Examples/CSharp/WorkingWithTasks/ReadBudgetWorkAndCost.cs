@@ -9,13 +9,19 @@
             var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
             //ExStart:ReadBudgetWorkAndCost
+            //ExFor: Tsk.BudgetWork
+            //ExFor: Tsk.BudgetCost
+            //ExFor: Rsc.BudgetWork
+            //ExFor: Rsc.BudgetCost
+            //ExFor: Asn.BudgetWork
+            //ExFor: Asn.BudgetCost
+            //ExSummary: Shows how to read budget work/cost values of task/resource/assignment.
             // Create project instance
             var project = new Project(dataDir + "BudgetWorkAndCost.mpp");
 
             // Display budget work and budget cost for project summary task
-            var projSummary = project.RootTask;
-            Console.WriteLine("projSummary.BudgetWork = " + projSummary.Get(Tsk.BudgetWork));
-            Console.WriteLine("projSummary.BudgetCost = " + projSummary.Get(Tsk.BudgetCost));
+            Console.WriteLine("projSummary.BudgetWork = " + project.RootTask.Get(Tsk.BudgetWork));
+            Console.WriteLine("projSummary.BudgetCost = " + project.RootTask.Get(Tsk.BudgetCost));
 
             // Display resource budget work
             var rsc = project.Resources.GetByUid(6);            
@@ -26,7 +32,7 @@
             Console.WriteLine("Resource BudgetCost = " + rsc.Get(Rsc.BudgetCost));
 
             // Display assignment budget work and budget cost
-            foreach (var assn in projSummary.Assignments)
+            foreach (var assn in project.RootTask.Assignments)
             {
                 if (assn.Get(Asn.Resource).Get(Rsc.Type) == ResourceType.Work)
                 {

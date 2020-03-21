@@ -9,7 +9,8 @@
             var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
             //ExStart:IdentifyCrossProjectTasks
-            
+            //ExFor: Tsk.ExternalId
+            //ExSummary: Shows how to identify cross project tasks.
             // Create project instance and access task
             var project = new Project(dataDir + "External.mpp");
             var externalTask = project.RootTask.Children.GetByUid(1);

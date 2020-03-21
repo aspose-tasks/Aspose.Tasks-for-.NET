@@ -7,6 +7,11 @@
         public static void Run()
         {
             //ExStart:ReadTaskCosts
+            //ExFor: Tsk.Cost
+            //ExFor: Tsk.RemainingCost
+            //ExFor: Tsk.FixedCost
+            //ExFor: Tsk.CostVariance
+            //ExSummary: Shows how to read task costs.
             // Create new project
             var project = new Project();
 

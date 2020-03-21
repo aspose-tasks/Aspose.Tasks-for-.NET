@@ -12,10 +12,12 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.Printing
     {
         public static void Run()
         {
-            //ExStart:PrintTheProject
             // The path to the documents directory
             var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
-
+            
+            //ExStart:PrintTheProject
+            //ExFor: Project.Print
+            //ExSummary: Shows how to print a project.
             // Read the input Project file
             var project = new Project(dataDir + "Project2.mpp");
             project.Print();

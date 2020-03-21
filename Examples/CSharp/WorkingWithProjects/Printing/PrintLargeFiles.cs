@@ -11,6 +11,9 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.Printing
             var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
             //ExStart:PrintLargeFiles
+            //ExFor: PrintOptions
+            //ExFor: Project.Print(PrintOptions)
+            //ExSummary: Shows how to use print options.
             // Read the input Project file
             var project = new Project(dataDir + "Project2.mpp");
  

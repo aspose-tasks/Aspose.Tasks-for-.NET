@@ -16,17 +16,19 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.WorkingWithProjectPro
     {
         public static void Run()
         {
-            //ExStart:SetAttributesForNewTasks
             // The path to the documents directory.
-            var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName); 
-
+            var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
+            
+            //ExStart:SetAttributesForNewTasks
+            //ExFor: TaskStartDateType
+            //ExFor: TaskStartDateType.ProjectStartDate
+            //ExFor: TaskStartDateType.CurrentDate
+            //ExFor: Prj.NewTaskStartDate
+            //ExSummary: Shows how to set attributes for new tasks.
             // Create a project instance Set new task property and Save the project as XML project file
             var project = new Project();
             project.Set(Prj.NewTaskStartDate, TaskStartDateType.CurrentDate);
             project.Save(dataDir + "SetAttributesForNewTasks_out.xml", SaveFileFormat.XML);
- 
-            // Display Status.
-            Console.WriteLine("New Task created with start date successfully.");
             //ExEnd:SetAttributesForNewTasks
         }
     }

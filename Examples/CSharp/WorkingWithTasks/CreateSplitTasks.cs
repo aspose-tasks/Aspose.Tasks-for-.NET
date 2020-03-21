@@ -16,36 +16,38 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithTasks
     {
         public static void Run()
         {
+            var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
+
             //ExStart:CreateSplitTasks
+            //ExFor: ResourceAssignment.TimephasedDataFromTaskDuration(Calendar)
+            //ExFor: ResourceAssignment.SplitTask(DateTime, DateTime, Calendar)
+            //ExSummary: Shows how to add a split for a task.
             // Create new project
-            var splitTaskProject = new Project();
+            var project = new Project();
 
             // Get a standard calendar
-            var calendar = splitTaskProject.Get(Prj.Calendar);
+            var calendar = project.Get(Prj.Calendar);
 
             // Set project's calendar settings
-            splitTaskProject.Set(Prj.StartDate, new DateTime(2000, 3, 15, 8, 0, 0));
-            splitTaskProject.Set(Prj.FinishDate, new DateTime(2000, 4, 21, 17, 0, 0));
+            project.Set(Prj.StartDate, new DateTime(2000, 3, 15, 8, 0, 0));
+            project.Set(Prj.FinishDate, new DateTime(2000, 4, 21, 17, 0, 0));
 
             // Add a new task to root task
-            var rootTask = splitTaskProject.RootTask;
-            rootTask.Set(Tsk.Name, "Root");
-            var taskToSplit = rootTask.Children.Add("Task1");
-            taskToSplit.Set(Tsk.Duration, splitTaskProject.GetDuration(3));
+            var task = project.RootTask.Children.Add("Task1");
+            task.Set(Tsk.Duration, project.GetDuration(3));
 
             // Create a new resource assignment and generate timephased data
-            var splitResourceAssignment = splitTaskProject.ResourceAssignments.Add(taskToSplit, null);
-            splitResourceAssignment.TimephasedDataFromTaskDuration(calendar);
+            var assignment = project.ResourceAssignments.Add(task, null);
+            assignment.TimephasedDataFromTaskDuration(calendar);
 
             // Split the task into 3 parts.
             // Provide start date and finish date arguments to SplitTask method which will be used for split
-            splitResourceAssignment.SplitTask(new DateTime(2000, 3, 16, 8, 0, 0), new DateTime(2000, 3, 16, 17, 0, 0), calendar);
-            splitResourceAssignment.SplitTask(new DateTime(2000, 3, 18, 8, 0, 0), new DateTime(2000, 3, 18, 17, 0, 0), calendar);
-            splitResourceAssignment.Set(Asn.WorkContour, WorkContourType.Contoured);
+            assignment.SplitTask(new DateTime(2000, 3, 16, 8, 0, 0), new DateTime(2000, 3, 16, 17, 0, 0), calendar);
+            assignment.SplitTask(new DateTime(2000, 3, 18, 8, 0, 0), new DateTime(2000, 3, 18, 17, 0, 0), calendar);
+            assignment.Set(Asn.WorkContour, WorkContourType.Contoured);
 
             // Save the Project
-            var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
-            splitTaskProject.Save(dataDir + "CreateSplitTasks_out.xml", SaveFileFormat.XML);
+            project.Save(dataDir + "CreateSplitTasks_out.xml", SaveFileFormat.XML);
             //ExEnd:CreateSplitTasks
         }
     }

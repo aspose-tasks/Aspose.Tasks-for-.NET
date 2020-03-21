@@ -19,6 +19,9 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithResources
             var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
             //ExStart:RenderResourceSheetView
+            //ExFor: PresentationFormat.ResourceSheet
+            //ExFor: SaveOptions.PresentationFormat
+            //ExSummary: Shows how to render the resource sheet view.
             // Create project instance
             var project = new Project(dataDir + "ResourceSheetView.mpp");
 

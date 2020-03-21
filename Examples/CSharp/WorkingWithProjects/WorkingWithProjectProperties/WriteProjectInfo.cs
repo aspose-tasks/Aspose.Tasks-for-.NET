@@ -15,13 +15,19 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.WorkingWithProjectPro
     internal class WriteProjectInfo
     {
         public static void Run()
-        {         
+        {    
+            // The path to the documents directory.
+            var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
+            
             //ExStart:WriteProjectInfo
+            //ExFor: Prj.Author
+            //ExFor: Prj.LastAuthor
+            //ExFor: Prj.Revision
+            //ExFor: Prj.Keywords
+            //ExFor: Prj.Comments
+            //ExSummary: Shows how to set project meta information.
             try
             {
-                // The path to the documents directory.
-                var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName); 
-            
                 // Create project from template file
                 var project = new Project(dataDir + "WriteProjectInfo.mpp");
                 

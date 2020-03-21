@@ -22,13 +22,8 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithTasks
             //ExStart:ReadTaskPriority
             //ExFor: Tsk.Priority
             //ExSummary: Shows how to read a task priority.
-            // Read project from file stream
-
-            Project project;
-            using (var fs = new FileStream(dataDir + "TaskPriority.mpp", FileMode.Open))
-            {
-                project = new Project(fs);
-            }
+            // Read project 
+            var project = new Project(dataDir + "TaskPriority.mpp");
 
             // Create a ChildTasksCollector instance
             var collector = new ChildTasksCollector();

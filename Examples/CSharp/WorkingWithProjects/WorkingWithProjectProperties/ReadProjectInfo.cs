@@ -6,11 +6,17 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.WorkingWithProjectPro
     {
         public static void Run()
         {
-            //ExStart:ReadProjectInfo
             // The path to the documents directory.
-            var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName); 
-
-            // Create a project reader instance
+            var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
+            
+            //ExStart:ReadProjectInfo
+            //ExFor: Prj.Author
+            //ExFor: Prj.LastAuthor
+            //ExFor: Prj.Revision
+            //ExFor: Prj.Keywords
+            //ExFor: Prj.Comments
+            //ExSummary: Shows how to read meta project properties.
+            // Open the project
             var project = new Project(dataDir + "ReadProjectInfo.mpp");
 
             // Display project information

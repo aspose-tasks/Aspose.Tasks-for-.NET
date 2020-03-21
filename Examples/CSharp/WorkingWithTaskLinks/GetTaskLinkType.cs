@@ -7,13 +7,14 @@
         public static void Run()
         {
             var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
+            
             //ExStart:GetTaskLinkType
+            //ExFor: TaskLink.LinkType
+            //ExSummary: Shows how to read task link types.
             // Create project instance
             var project = new Project(dataDir + "GetTaskLinkType.mpp");
 
-            // Display task link types 
-            var taskLinks = project.TaskLinks;
-            foreach (var link in taskLinks)
+            foreach (var link in project.TaskLinks)
             {
                 Console.WriteLine(link.LinkType.ToString());
             }

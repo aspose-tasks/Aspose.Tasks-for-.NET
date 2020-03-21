@@ -14,22 +14,26 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithResourceAssignments
     {
         public static void Run()
         {
+            var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
+
             //ExStart:SetGeneralResourceAssignmentProperties
+            //ExFor: Rsc.StandardRate
+            //ExFor: Rsc.OvertimeRate
+            //ExSummary: Shows how to set standard/overtime rates of a resource.
             // Create empty project
             var project = new Project();
 
             // Add new task and resource
-            var task1 = project.RootTask.Children.Add("Task");
-            var rsc1 = project.Resources.Add("Rsc");
-            rsc1.Set(Rsc.StandardRate, 10);
-            rsc1.Set(Rsc.OvertimeRate, 15);
+            var task = project.RootTask.Children.Add("Task");
+            var resource = project.Resources.Add("Rsc");
+            resource.Set(Rsc.StandardRate, 10);
+            resource.Set(Rsc.OvertimeRate, 15);
 
             // Assign the resource desired task
-            project.ResourceAssignments.Add(task1, rsc1);
+            project.ResourceAssignments.Add(task, resource);
             //ExEnd:SetGeneralResourceAssignmentProperties
 
             // Save project as PDF
-            var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
             project.Save(dataDir + "SetGeneralResourceAssignmentProperties_out.pdf", SaveFileFormat.PDF);
         }
     }

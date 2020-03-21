@@ -11,6 +11,8 @@
         }
 
         //ExStart:CalculateTextFunctions
+        //ExFor: ExtendedAttributeDefinition.Formula
+        //ExSummary: Shows how to use text functions with extended attributes.
         private static void EvaluateStrConv()
         {
             var project = CreateTestProjectWithCustomField();

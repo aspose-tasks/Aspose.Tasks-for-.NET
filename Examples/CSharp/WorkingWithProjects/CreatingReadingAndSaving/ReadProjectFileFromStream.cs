@@ -12,11 +12,13 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.CreatingReadingAndSav
             var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);       
             
             //ExStart:ReadProjectFileFromStream
+            //ExFor: Project(Stream)
+            //ExSummary: Shows how to read XML project file from a stream.
             // Read project xml into file stream
-            using (Stream filesStream = new FileStream(dataDir + "ReadProjectFileFromStream.xml", FileMode.Open))
+            using (Stream stream = new FileStream(dataDir + "ReadProjectFileFromStream.xml", FileMode.Open))
             {
                 // Create project using file stream
-                var project = new Project(filesStream);
+                var project = new Project(stream);
                 project.Save(dataDir + "ReadProjectFileFromStream.xml", SaveFileFormat.XML);
             }
             //ExEnd:ReadProjectFileFromStream

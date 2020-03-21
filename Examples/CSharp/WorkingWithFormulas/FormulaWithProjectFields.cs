@@ -13,6 +13,8 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithFormulas
     internal class FormulaWithProjectFields
     {
         //ExStart:FormulaWithProjectFields
+        //ExFor: ExtendedAttributeDefinition.Formula
+        //ExSummary: Shows how to use extended attribute functions by using project fields.
         public static void Run()
         {            
             var project = CreateTestProjectWithCustomFieldWithoutResource();

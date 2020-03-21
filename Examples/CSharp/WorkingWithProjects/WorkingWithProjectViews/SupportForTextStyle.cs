@@ -12,6 +12,10 @@
             var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
             //ExStart:SupportForTextStyle
+            //ExFor: GanttChartView.TableTextStyles
+            //ExFor: GanttChartView.TableTextStyles.Add(TableTextStyle)
+            //ExFor: TableTextStyle
+            //ExSummary: Shows how to add custom table text styles.
             var project = new Project(dataDir + "Project5.mpp"); // Create a new project task
             var view = (GanttChartView)project.Views.ToList()[0];
             

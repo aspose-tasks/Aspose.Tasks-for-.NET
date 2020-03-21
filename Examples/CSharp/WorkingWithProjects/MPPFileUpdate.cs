@@ -10,10 +10,13 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects
         {
             try
             {
-                //ExStart:MPPFileUpdate
                 // The path to the documents directory.
                 var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
+                //ExStart:MPPFileUpdate
+                //ExFor: Tsk.Start
+                //ExFor: Tsk.Finish
+                //ExSummary: Shows how to update tasks in a MPP file.
                 // Read an existing project
                 var project = new Project(dataDir + "MPPFileUpdate.mpp");
 

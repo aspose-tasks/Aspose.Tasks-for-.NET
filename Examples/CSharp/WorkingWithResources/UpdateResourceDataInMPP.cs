@@ -22,14 +22,18 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithResources
                 var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
                 //ExStart:UpdateResourceDataInMPP
+                //ExFor: Rsc.StandardRate
+                //ExFor: Rsc.OvertimeRate
+                //ExFor: Rsc.Group
+                //ExSummary: Shows how to update common resource data.
                 // Create project instance
                 var project = new Project(dataDir + "UpdateResourceData.mpp");
 
                 // Add resource and set some properties
-                var rsc1 = project.Resources.Add("Rsc");
-                rsc1.Set(Rsc.StandardRate, 30);
-                rsc1.Set(Rsc.OvertimeRate, 45);
-                rsc1.Set(Rsc.Group, "Workgroup1");
+                var resource = project.Resources.Add("Rsc");
+                resource.Set(Rsc.StandardRate, 30);
+                resource.Set(Rsc.OvertimeRate, 45);
+                resource.Set(Rsc.Group, "Workgroup1");
 
                 // Save the Project
                 project.Save(dataDir + "UpdateResourceData_out.mpp", SaveFileFormat.MPP);

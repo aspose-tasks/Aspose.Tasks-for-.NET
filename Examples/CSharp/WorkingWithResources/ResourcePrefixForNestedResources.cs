@@ -7,6 +7,13 @@
     using Aspose.Tasks.Visualization;
 
     //ExStart:ResourcePrefixForNestedResources
+    //ExFor: ICssSavingCallback
+    //ExFor: IFontSavingCallback
+    //ExFor: IImageSavingCallback
+    //ExFor: CssSavingArgs
+    //ExFor: FontSavingArgs
+    //ExFor: ImageSavingArgs
+    //ExSummary: Shows how to set resource prefixes for nested resources.
     internal class ResourcePrefixForNestedResources : ICssSavingCallback, IFontSavingCallback, IImageSavingCallback
     {
         // The path to the documents directory.
@@ -14,15 +21,9 @@
         
         public static void Run()
         {
-            using (var fs = new FileStream(DataDir + "Project1.mpp", FileMode.Open))
-            {
-                var project = new Project(fs);
-                var options = GetSaveOptions(1);
-                using (var stream = new FileStream(DataDir + "document.html", FileMode.Create))
-                {
-                    project.Save(stream, options);
-                }
-            }
+            var project = new Project(DataDir + "Project1.mpp");
+            var options = GetSaveOptions(1);
+            project.Save(DataDir + "document.html", options);
         }
 
         public void CssSaving(CssSavingArgs args)
@@ -63,7 +64,7 @@
 
         private static HtmlSaveOptions GetSaveOptions(int pageNumber)
         {
-            var saveOptions = new HtmlSaveOptions
+            var options = new HtmlSaveOptions
             {
                 Pages = new List<int>(),
                 IncludeProjectNameInPageHeader = false,
@@ -78,12 +79,12 @@
             };
 
             var program = new ResourcePrefixForNestedResources();
-            saveOptions.FontSavingCallback = program;
-            saveOptions.CssSavingCallback = program;
-            saveOptions.ImageSavingCallback = program;
+            options.FontSavingCallback = program;
+            options.CssSavingCallback = program;
+            options.ImageSavingCallback = program;
 
-            saveOptions.Pages.Clear();
-            saveOptions.Pages.Add(pageNumber);
+            options.Pages.Clear();
+            options.Pages.Add(pageNumber);
 
             if (!Directory.Exists(DataDir + "fonts"))
             {
@@ -105,7 +106,7 @@
                 Directory.CreateDirectory(DataDir + "css");
             }
 
-            return saveOptions;
+            return options;
         }
     }
     //ExEnd:ResourcePrefixForNestedResources

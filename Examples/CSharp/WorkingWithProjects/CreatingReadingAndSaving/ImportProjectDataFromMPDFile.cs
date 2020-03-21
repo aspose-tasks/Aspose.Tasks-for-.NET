@@ -18,7 +18,11 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.CreatingReadingAndSav
         {
             // The path to the documents directory.
             var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
-            //ExStart:ImportProjectDataFromMPDFile 
+            
+            //ExStart:ImportProjectDataFromMPDFile
+            //ExFor: MpdSettings
+            //ExFor: Project(DbSettings)
+            //ExSummary: Shows how to read a project from an MPD file.
             DbSettings settings = new MpdSettings("Provider=Microsoft.Jet.OLEDB.4.0; Data Source=" + dataDir + "MpdFileToRead.mpd", 1);
             var project = new Project(settings);            
             Console.WriteLine(project.Get(Prj.Name));

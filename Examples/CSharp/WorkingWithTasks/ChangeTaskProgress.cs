@@ -7,6 +7,8 @@
         public static void Run()
         {
             //ExStart:ChangeTaskProgress
+            //ExFor: Tsk.PercentComplete 
+            //ExSummary: Shows how to change a task progress by updating of task percent complete.
             var project = new Project();
             Console.WriteLine("Project Calculation mode is Automatic: {0}", project.CalculationMode.Equals(CalculationMode.Automatic));
 

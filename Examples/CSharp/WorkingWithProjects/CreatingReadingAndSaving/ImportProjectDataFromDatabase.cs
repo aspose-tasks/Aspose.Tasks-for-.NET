@@ -21,21 +21,24 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.CreatingReadingAndSav
             // The path to the documents directory.
             var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
-            //ExStart:ImportProjectDataFromDatabase   
+            //ExStart:ImportProjectDataFromDatabase
+            //ExFor: MspDbSettings(String, Guid)
+            //ExFor: Project(MspDbSettings)
+            //ExSummary: Shows how to import a project from a database.
             try
             {
                 // Create connection string
-                var sqlConnectionString = new SqlConnectionStringBuilder();
-                sqlConnectionString.DataSource = "192.168.56.2,1433";
-                sqlConnectionString.Encrypt = true;
-                sqlConnectionString.TrustServerCertificate = true;
-                sqlConnectionString.InitialCatalog = "ProjectServer_Published";
-                sqlConnectionString.NetworkLibrary = "DBMSSOCN";
-                sqlConnectionString.UserID = "sa";
-                sqlConnectionString.Password = "*****";
+                var connectionString = new SqlConnectionStringBuilder();
+                connectionString.DataSource = "192.168.56.2,1433";
+                connectionString.Encrypt = true;
+                connectionString.TrustServerCertificate = true;
+                connectionString.InitialCatalog = "ProjectServer_Published";
+                connectionString.NetworkLibrary = "DBMSSOCN";
+                connectionString.UserID = "sa";
+                connectionString.Password = "*****";
 
                 // Use Aspose.Tasks.Connectivity namespace
-                var settings = new MspDbSettings(sqlConnectionString.ConnectionString, new Guid("E6426C44-D6CB-4B9C-AF16-48910ACE0F54"));
+                var settings = new MspDbSettings(connectionString.ConnectionString, new Guid("E6426C44-D6CB-4B9C-AF16-48910ACE0F54"));
                 var project = new Project(settings);
                 project.Save(dataDir + "ImportProjectDataFromDatabase_out.mpp", SaveFileFormat.MPP);
             }

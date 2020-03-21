@@ -18,10 +18,16 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.WorkingWithProjectPro
         {
             try
             {
-                //ExStart:WriteMPPProjectSummary
                 // The path to the documents directory.
                 var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
-
+                
+                //ExStart:WriteMPPProjectSummary
+                //ExFor: Prj.Author
+                //ExFor: Prj.LastAuthor
+                //ExFor: Prj.Revision
+                //ExFor: Prj.Keywords
+                //ExFor: Prj.Comments
+                //ExSummary: Shows how to write project's summary properties.
                 // Instantiate Project class
                 var project = new Project(dataDir + "WriteMPPProjectSummary.mpp");
 

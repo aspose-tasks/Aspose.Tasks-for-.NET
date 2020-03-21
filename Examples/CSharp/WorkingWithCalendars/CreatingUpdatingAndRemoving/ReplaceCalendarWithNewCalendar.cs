@@ -1,6 +1,5 @@
 namespace Aspose.Tasks.Examples.CSharp.WorkingWithCalendars.CreatingUpdatingAndRemoving
 {
-    using System;
     using Saving;
 
     internal class ReplaceCalendar

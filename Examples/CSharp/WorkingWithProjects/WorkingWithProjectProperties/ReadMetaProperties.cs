@@ -10,6 +10,11 @@
             var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
             //ExStart:ReadMetaProperties
+            //ExFor: CustomProjectProperty
+            //ExFor: BuiltInProjectProperty
+            //ExFor: Project.CustomProps
+            //ExFor: Project.BuiltInProps
+            //ExSummary: Shows how to read project meta properties.
             // Create a project reader instance
             var project = new Project(dataDir + "ReadProjectInfo.mpp");
 
@@ -25,7 +30,6 @@
             Console.WriteLine(project.BuiltInProps.Author);
             Console.WriteLine(project.BuiltInProps.Title);
 
-
             // or as an item of built-in property collection
             foreach (var property in project.BuiltInProps)
             {
@@ -33,7 +37,6 @@
                 Console.WriteLine(property.Value);
             }
             //ExEnd:ReadMetaProperties
-            Console.WriteLine("The program has run successfully");
         }
     }
 }
