@@ -240,7 +240,6 @@ namespace Aspose.Tasks.Examples.CSharp
 
             // RescheduleProjectFromFinishDate.Run();
             // RescheduleProjectFromStartDate.Run();
-            // RescheduleProjectStartOrFinishDate.Run();
             // UpdateProjectAndRescheduleUncompletedWork.Run();
 
             // Working with Extended Attributes
@@ -275,7 +274,6 @@ namespace Aspose.Tasks.Examples.CSharp
             // =====================================================
 
             // ConfigureGanttChart.Run();
-            // ConfigureTheGanttChartViewShowSelectedColumnFields.Run();
             // CustomizeTimescaleTierLabels.Run();
             // ReadSpecificGanttChartViewData.Run();
             // SetTimeScaleCount.Run();
