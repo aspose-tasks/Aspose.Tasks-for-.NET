@@ -9,7 +9,7 @@
             var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
             //ExStart:CalculateSplitTaskFinishDate
-            //ExFor: Calendar.GetTaskFinishDateFromDuration(Task, Duration)
+            //ExFor: Calendar.GetTaskFinishDateFromDuration(Task, TimeSpan)
             //ExSummary: Shows how to calculate finish date of a task by a custom duration.
             var project = new Project(dataDir + "SplitTaskFinishDate.mpp");
 

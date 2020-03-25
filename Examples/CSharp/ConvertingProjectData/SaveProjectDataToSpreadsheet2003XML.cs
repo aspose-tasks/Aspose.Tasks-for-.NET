@@ -18,7 +18,7 @@ namespace Aspose.Tasks.Examples.CSharp.ConvertingProjectData
             var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
             //ExStart:SaveProjectDataToSpreadsheet2003XML
-            //ExFor: SaveFileFormat.Spreadsheet2003
+            //ExFor: SaveFileFormat
             //ExSummary: Shows how to save project as Spreadsheet2003 file.
             var project = new Project(dataDir + "CreateProject2.mpp");
             project.Save(dataDir + "SaveProjectDataToSpreadsheet2003XML_out.xml", SaveFileFormat.Spreadsheet2003);

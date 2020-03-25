@@ -18,8 +18,9 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithVBA
             var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
             //ExStart:ReadReferencesInformation
-            //ExFor: Project.VbaProject.References
             //ExFor: VbaProject.References
+            //ExFor: VbaReferenceCollection
+            //ExFor: VbaReference
             //ExSummary: Shows how to read VBA project reference information.
             var project = new Project(dataDir + "VbaProject1.mpp");
 

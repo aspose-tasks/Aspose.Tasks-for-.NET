@@ -20,7 +20,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithTasks
             
             //ExStart: RenumberTaskWBSCodes
             //ExFor: Tsk.WBS
-            //ExFor: Project.RenumberWBSCode(List<int>)
+            //ExFor: Project.RenumberWBSCode
             //ExSummary: Shows how to renumber tasks' WBS codes.
             var project = new Project(dataDir + "RenumberExample.mpp");
 

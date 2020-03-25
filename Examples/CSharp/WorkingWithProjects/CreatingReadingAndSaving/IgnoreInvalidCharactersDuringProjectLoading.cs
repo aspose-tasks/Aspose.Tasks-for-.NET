@@ -20,7 +20,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.CreatingReadingAndSav
         private static readonly string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName); 
         
         //ExStart:IgnoreInvalidCharactersDuringLoadingProject 
-        //ExFor: Project(Stream, ParseErrorCallback)
+        //ExFor: Project.#ctor(Stream, ParseErrorCallback)
         //ExSummary: Shows how to read a project from XML file with invalid characters. 
         public static void Run()
         {         

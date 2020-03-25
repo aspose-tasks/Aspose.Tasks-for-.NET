@@ -23,7 +23,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithTasks
 
                 //ExStart:CreateTasks
                 //ExFor: Task.Children
-                //ExFor: Task.Children.Add(String)
+                //ExFor: TaskCollection.Add(String)
                 //ExSummary: Shows how to create tasks.
                 // Create project instance
                 var project = new Project();

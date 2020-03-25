@@ -15,8 +15,8 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithCalendars.CreatingUpdatingAndR
             var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
             //ExStart:CreatingCalendar
-            //ExFor: Project.Calendars.Add(String)
-            //ExFor: Project.Calendars.Add(String,Calendar)
+            //ExFor: CalendarCollection.Add(String)
+            //ExFor: CalendarCollection.Add(String,Calendar)
             //ExSummary: Shows how to add new calendars.
             var project = new Project();
 

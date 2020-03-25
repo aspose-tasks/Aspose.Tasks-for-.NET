@@ -18,7 +18,7 @@ namespace Aspose.Tasks.Examples.CSharp.ConvertingProjectData
             var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
             
             //ExStart:SaveProjectAsSVG
-            //ExFor: SaveFileFormat.SVG
+            //ExFor: SaveFileFormat
             //ExSummary: Shows how to save a project in SVG format.
             // Read the input Project file
             var project = new Project(dataDir + "CreateProject1.mpp");

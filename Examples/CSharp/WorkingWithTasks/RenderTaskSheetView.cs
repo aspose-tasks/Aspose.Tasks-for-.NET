@@ -18,7 +18,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithTasks
             var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
             
             //ExStart:RenderTaskSheetView
-            //ExFor: PresentationFormat.TaskSheet
+            //ExFor: PresentationFormat
             //ExFor: SaveOptions.PresentationFormat
             //ExSummary: Shows how to render task sheet view.
             // Create project instance

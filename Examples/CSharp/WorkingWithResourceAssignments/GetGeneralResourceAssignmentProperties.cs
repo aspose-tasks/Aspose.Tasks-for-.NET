@@ -13,7 +13,7 @@
             //ExFor: Asn.Uid
             //ExFor: Asn.Start
             //ExFor: Asn.Finish
-            //ExSummary: Shows how to common resource assignment's properties.
+            //ExSummary: Shows how to read common resource assignment's properties.
             // Create project instance
             var project = new Project(dataDir + "GetGeneralResourceAssignmentProperties.mpp");
 

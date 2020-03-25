@@ -18,12 +18,8 @@ namespace Aspose.Tasks.Examples.CSharp.Articles
             var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
             //ExStart:RenderMultipageTIFF
-            //ExFor: SaveFileFormat.TIFF
-            //ExFor: TiffCompression.None
-            //ExFor: TiffCompression.Rle
-            //ExFor: TiffCompression.Ccitt3
-            //ExFor: TiffCompression.Ccitt4
-            //ExFor: TiffCompression.Lzw
+            //ExFor: SaveFileFormat
+            //ExFor: TiffCompression
             //ExSummary: Shows how to set TIFF compression mode (can be one of the values of the <see cref="P:Aspose.Tasks.Saving.PageSize" /> enumeration).
             var project = new Project(dataDir + "Project2.mpp");
 

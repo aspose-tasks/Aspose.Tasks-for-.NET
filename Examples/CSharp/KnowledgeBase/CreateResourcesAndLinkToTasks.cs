@@ -22,8 +22,8 @@ namespace Aspose.Tasks.Examples.CSharp.KnowledgeBase
                 var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
                 //ExStart:CreateResourcesAndLinkToTasks
-                //ExFor: Project.Resources.Add(String)
-                //ExFor: Project.ResourceAssignments.Add(Task, Resource)
+                //ExFor: ResourceCollection.Add(String)
+                //ExFor: ResourceAssignmentCollection.Add(Task, Resource)
                 //ExSummary: Shows how to create resources and resource assignments.
                 var project = new Project(dataDir + "SampleProject.mpp");
 

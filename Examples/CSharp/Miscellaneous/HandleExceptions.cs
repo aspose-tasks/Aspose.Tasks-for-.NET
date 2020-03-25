@@ -11,7 +11,7 @@
             var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
             //ExStart:HandleExceptions
-            //ExFor: Project(String)
+            //ExFor: Project.#ctor(String)
             //ExSummary: Shows how to handle exceptions or project' reading/writing.
             try
             {

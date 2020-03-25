@@ -18,7 +18,7 @@ namespace Aspose.Tasks.Examples.CSharp.Articles
             var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
             //ExStart:RenderToXAML
-            //ExFor: SaveFileFormat.XAML
+            //ExFor: SaveFileFormat
             //ExSummary: Shows how to save project to XAML file by using <see cref="P:Aspose.Tasks.Saving.SaveFileFormat" /> enumeration.
             var project = new Project(dataDir + "Project2.mpp");
             project.Save(dataDir + "RenderToXAML_out.xaml", SaveFileFormat.XAML);

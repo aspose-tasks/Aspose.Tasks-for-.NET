@@ -18,7 +18,7 @@ namespace Aspose.Tasks.Examples.CSharp.ConvertingProjectData
             var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
             //ExStart:SaveProjectAsXLSX
-            //ExFor: SaveFileFormat.XLSX
+            //ExFor: SaveFileFormat
             //ExSummary: Shows how to save a project in XLSX format.  
             // Read the input Project file
             var project = new Project(dataDir + "CreateProject2.mpp");

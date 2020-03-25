@@ -10,6 +10,7 @@
             var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
             //ExStart:CreateEmptyProjectSaveMPP
+            //ExFor: Project.#ctor
             //ExFor: Project.Save(String, SaveFileFormat)
             //ExSummary: Shows how to create a project and save it into MPP format without passing of an MPP template file.
             var project = new Project();

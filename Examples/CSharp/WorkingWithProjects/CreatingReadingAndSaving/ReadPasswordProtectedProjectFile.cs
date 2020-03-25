@@ -18,7 +18,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.CreatingReadingAndSav
             var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
             
             //ExStart:ReadingPasswordProtectedProjectFile
-            //ExFor: Project(String,String)
+            //ExFor: Project.#ctor(String,String)
             //ExSummary: Shows how to read password protected MPP files.
             var project = new Project(dataDir + "PasswordProtectedProject.mpp", "password");
             Console.WriteLine(project.Get(Prj.Name));

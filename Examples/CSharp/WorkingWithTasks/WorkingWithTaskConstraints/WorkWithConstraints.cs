@@ -12,7 +12,7 @@
             
             {
                 //ExStart:SetConstraintAsLateAsPossible
-                //ExFor: ConstraintType.AsLateAsPossible
+                //ExFor: ConstraintType
                 //ExFor: Tsk.ConstraintType
                 //ExFor: Tsk.ConstraintDate
                 //ExSummary: Shows how to set constraint <see cref="Aspose.Tasks.ConstraintType" /> ConstraintType.AsLateAsPossible constraint for a task.
@@ -32,7 +32,7 @@
 
             {
                 //ExStart:SetConstraintFinishNoEarlierThan
-                //ExFor: ConstraintType.FinishNoEarlierThan
+                //ExFor: ConstraintType
                 //ExSummary: Shows how to set constraint <see cref="Aspose.Tasks.ConstraintType" /> ConstraintType.FinishNoEarlierThan constraint for a task.
                 // Create project instance
                 var project = new Project(dataDir + "ConstraintFinishNoEarlierThan.mpp");
@@ -51,7 +51,7 @@
 
             {
                 //ExStart:SetConstraintMustFinishOn
-                //ExFor: ConstraintType.MustStartOn
+                //ExFor: ConstraintType
                 //ExSummary: Shows how to set constraint <see cref="Aspose.Tasks.ConstraintType" /> ConstraintType.MustFinishOn constraint for a task.
                 // Create project instance
                 var project = new Project(dataDir + "ConstraintMustFinishOn.mpp");
@@ -71,7 +71,7 @@
 
             {
                 //ExStart:SetConstraintMustStartOn
-                //ExFor: ConstraintType.MustStartOn
+                //ExFor: ConstraintType
                 //ExSummary: Shows how to set constraint <see cref="Aspose.Tasks.ConstraintType" /> ConstraintType.MustStartOn constraint for a task.
                 // Create project instance
                 var project = new Project(dataDir + "ConstraintMustStartOn.mpp");
@@ -91,7 +91,7 @@
             
             {
                 //ExStart:SetConstraintStartNoEarlierThan
-                //ExFor: ConstraintType.StartNoEarlierThan
+                //ExFor: ConstraintType
                 //ExSummary: Shows how to set constraint <see cref="Aspose.Tasks.ConstraintType" /> ConstraintType.StartNoEarlierThan constraint for a task.
                 // Create project instance
                 var project = new Project(dataDir + "ConstraintStartNoEarlierThan.mpp");

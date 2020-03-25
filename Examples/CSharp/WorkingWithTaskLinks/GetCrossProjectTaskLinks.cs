@@ -11,7 +11,6 @@
             //ExStart:GetCrossProjectTaskLinks
             //ExFor: Project.TaskLinks
             //ExFor: TaskLink.CrossProjectName
-            //ExFor: TaskLink.CrossProjectName
             //ExSummary: Shows how to find cross project task links. 
             // Create project instance
             var project = new Project(dataDir + "GetCrossProjectTaskLinks.mpp");

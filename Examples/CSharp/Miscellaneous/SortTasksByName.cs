@@ -19,7 +19,6 @@ namespace Aspose.Tasks.Examples.CSharp.Miscellaneous
 
         //ExStart:SortTasksByName
         //ExFor: ChildTasksCollector
-        //ExFor: TaskUtils.Apply(Task, ITreeAlgorithm<T>, int)
         //ExSummary: Shows how to sort tasks by name.
         public static void Run()
         {

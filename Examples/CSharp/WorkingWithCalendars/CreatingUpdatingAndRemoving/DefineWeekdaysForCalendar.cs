@@ -20,7 +20,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithCalendars.CreatingUpdatingAndR
             //ExFor: Project.Calendars
             //ExFor: Calendar.WeekDays
             //ExFor: WeekDay.CreateDefaultWorkingDay
-            //ExFor: WeekDay(DayType)
+            //ExFor: WeekDay.#ctor(DayType)
             //ExFor: WorkingTime
             //ExSummary: Shows how to define a new calendar, add week days to it and define working times for days.
             // Create a project instance

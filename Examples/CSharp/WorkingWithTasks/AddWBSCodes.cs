@@ -10,7 +10,7 @@
 
             //ExStart:AddWBSCodes
             //ExFor: Project.WBSCodeDefinition
-            //ExFor: Project.WBSCodeDefinition.CodeMaskCollection
+            //ExFor: WBSCodeDefinition.CodeMaskCollection
             //ExFor: WBSCodeMask
             //ExSummary: Shows how to add WBS codes.
             var project = new Project();

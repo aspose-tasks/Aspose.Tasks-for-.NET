@@ -10,7 +10,7 @@
 
             //ExStart:ReadTaskAndResources
             //ExFor: Project.Resources
-            //ExFor: Project.RootTask.Children
+            //ExFor: Task.Children
             //ExFor: Tsk.Name
             //ExFor: Rsc.Type
             //ExFor: Rsc.Name

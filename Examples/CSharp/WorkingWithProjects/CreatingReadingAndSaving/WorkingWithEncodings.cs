@@ -12,7 +12,7 @@
             var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
             //ExStart:WorkingWithEncodings
-            //ExFor: Project(Stream)
+            //ExFor: Project.#ctor(Stream)
             //ExSummary: Shows how to read MPX files with specific encoding.
             // Specify Encodings
             using (var streamReader = new StreamReader("Project.mpx", System.Text.Encoding.GetEncoding("ISO-8859-1")))

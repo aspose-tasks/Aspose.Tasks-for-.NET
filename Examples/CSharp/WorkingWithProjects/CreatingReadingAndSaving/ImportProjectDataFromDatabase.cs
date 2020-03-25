@@ -22,8 +22,8 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.CreatingReadingAndSav
             var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
             //ExStart:ImportProjectDataFromDatabase
-            //ExFor: MspDbSettings(String, Guid)
-            //ExFor: Project(MspDbSettings)
+            //ExFor: MspDbSettings.#ctor(String, Guid)
+            //ExFor: Project.#ctor(DbSettings)
             //ExSummary: Shows how to import a project from a database.
             try
             {

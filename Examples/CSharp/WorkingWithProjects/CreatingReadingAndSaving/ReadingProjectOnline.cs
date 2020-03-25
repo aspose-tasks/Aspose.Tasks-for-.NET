@@ -8,8 +8,8 @@
         public static void Run()
         {
             //ExStart:ReadingProjectOnline
-            //ExFor: ProjectServerCredentials(String,String,String)
-            //ExFor: ProjectServerManager(ProjectServerCredentials)
+            //ExFor: ProjectServerCredentials.#ctor(String,String,String)
+            //ExFor: ProjectServerManager.#ctor(ProjectServerCredentials)
             //ExFor: ProjectServerManager.GetProjectList
             //ExFor: ProjectServerManager.GetProject(Guid)
             //ExSummary: Shows how to read a project from MS Project Online.

@@ -23,7 +23,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithResources
 
                 //ExStart:SetResourceExtendedAttributes
                 //ExFor: Resource.ExtendedAttributes
-                //ExFor: Resource.ExtendedAttributes.Add(ExtendedAttribute)
+                //ExFor: ExtendedAttributeDefinitionCollection.Add(ExtendedAttributeDefinition)
                 //ExSummary: Shows how to add resource extended attributes.
                 // Create project instance
                 var project = new Project(dataDir + "ResourceExtendedAttributes.mpp");

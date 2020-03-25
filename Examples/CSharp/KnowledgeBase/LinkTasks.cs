@@ -13,7 +13,7 @@
                 var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
                 //ExStart:LinkTasks
-                //ExFor: Project.TaskLinks.Add(Task, Task, TaskLinkType)
+                //ExFor: TaskLinkCollection.Add(Task, Task, TaskLinkType)
                 //ExFor: TaskLink.PredTask
                 //ExFor: TaskLink.SuccTask
                 //ExSummary: Shows how to add task links.

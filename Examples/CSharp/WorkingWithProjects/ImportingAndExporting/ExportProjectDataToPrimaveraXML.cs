@@ -19,7 +19,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.ImportingAndExporting
 
             //ExStart:ExportProjectDataToPrimaveraXML
             //ExFor: PrimaveraXmlSaveOptions
-            //ExFor: Project.Save(string, PrimaveraXmlSaveOptions)
+            //ExFor: Project.Save(string, SaveOptions)
             //ExFor: PrimaveraXmlSaveOptions.SaveRootTask
             //ExSummary: Shows how to export the to Primavera XML file.
             var project = new Project(dataDir + "project.xml");

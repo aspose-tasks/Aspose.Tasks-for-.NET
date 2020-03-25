@@ -22,7 +22,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithTasks
                 var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);  
 
                 //ExStart:MoveTaskUnderAnotherParent
-                //ExFor: Task.Children.Add(Task)
+                //ExFor: TaskCollection.Add(Task)
                 //ExSummary: Shows how to move a task under another parent.
                 // Loading project file
                 var project = new Project(dataDir + "MoveTask.mpp")

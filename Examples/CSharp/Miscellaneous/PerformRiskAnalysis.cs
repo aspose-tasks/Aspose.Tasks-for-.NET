@@ -29,7 +29,7 @@ namespace Aspose.Tasks.Examples.CSharp.Miscellaneous
             //ExEnd:PrepareAnalysisSettings
 
             //ExStart:IdentifyAnalysisInput
-            //ExFor: RiskPattern(Task)
+            //ExFor: RiskPattern.#ctor(Task)
             //ExFor: RiskPattern.Distribution
             //ExFor: RiskPattern.Optimistic
             //ExFor: RiskPattern.Pessimistic
@@ -62,7 +62,7 @@ namespace Aspose.Tasks.Examples.CSharp.Miscellaneous
             //ExEnd:IdentifyAnalysisInput
 
             //ExStart:AnalyzeRisks
-            //ExFor: RiskAnalyzer(RiskAnalysisSettings)
+            //ExFor: RiskAnalyzer.#ctor(RiskAnalysisSettings)
             //ExFor: RiskAnalyzer.Analyze(Project)
             //ExSummary: Shows how to start analysis of risks by using <see cref="Aspose.Tasks.RiskAnalysis.RiskAnalysisSettings" />.
             // Analyze the project risks

@@ -23,7 +23,7 @@ namespace Aspose.Tasks.Examples.CSharp.ConvertingProjectData
 
             //ExStart:UsingSpreadsheet2003SaveOptions
             //ExFor: Spreadsheet2003SaveOptions
-            //ExFor: Spreadsheet2003SaveOptions.View
+            //ExFor: SaveOptions.View
             //ExFor: Spreadsheet2003SaveOptions.ResourceView
             //ExFor: Spreadsheet2003SaveOptions.AssignmentView
             //ExFor: AssignmentViewColumn

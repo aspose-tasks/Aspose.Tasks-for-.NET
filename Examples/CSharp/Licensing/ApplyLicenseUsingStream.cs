@@ -7,7 +7,7 @@
         public static void Run()
         {
             //ExStart:ApplyLicenseUsingStream
-            //ExFor: License(Stream)
+            //ExFor: License.SetLicense(Stream)
             //ExSummary: Shows how to apply a license of Aspose.Tasks read from <see cref="System.IO.FileStream" />.
             var license = new License();
             using (var stream = new FileStream("Aspose.Tasks.lic", FileMode.Open))

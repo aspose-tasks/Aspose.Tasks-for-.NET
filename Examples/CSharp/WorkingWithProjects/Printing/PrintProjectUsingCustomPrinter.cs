@@ -19,7 +19,6 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.Printing
 
             //ExStart:PrintProjectUsingCustomPrinter
             //ExFor: Project.Print(String)
-            //ExFor: PrinterSettings.InstalledPrinters
             //ExSummary: Shows how to print the project on the selected printer.
             // Read the input Project file
             var project = new Project(dataDir + "Project2.mpp");

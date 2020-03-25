@@ -18,7 +18,7 @@ namespace Aspose.Tasks.Examples.CSharp.ConvertingProjectData
             var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
             //ExStart:SaveProjectDataAsHTML
-            //ExFor: SaveFileFormat.HTML
+            //ExFor: SaveFileFormat
             //ExSummary: Shows how to save a project in HTML format.
             var project = new Project(dataDir + "CreateProject2.mpp");
             var option = new HtmlSaveOptions();

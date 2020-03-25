@@ -10,7 +10,7 @@ namespace Aspose.Tasks.Examples.CSharp.ConvertingProjectData
             var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
             //ExStart:SaveProjectAsPDF
-            //ExFor: SaveFileFormat.PDF
+            //ExFor: SaveFileFormat
             //ExSummary: Shows how to save a project in PDF format.
             var project = new Project(dataDir + "CreateProject2.mpp");
 

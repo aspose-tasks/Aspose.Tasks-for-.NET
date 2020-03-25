@@ -19,10 +19,10 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithVBA
 
             //ExStart:ReadVBAProjectInformation
             //ExFor: Project.VbaProject
-            //ExFor: Project.VbaProject.Name
-            //ExFor: Project.VbaProject.Description
-            //ExFor: Project.VbaProject.CompilationArguments
-            //ExFor: Project.VbaProject.HelpContextId
+            //ExFor: VbaProject.Name
+            //ExFor: VbaProject.Description
+            //ExFor: VbaProject.CompilationArguments
+            //ExFor: VbaProject.HelpContextId
             //ExSummary: Shows how to read VBA project information.
             // Loading project file
             var project = new Project(dataDir + "VbaProject1.mpp");

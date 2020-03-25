@@ -24,7 +24,7 @@ namespace Aspose.Tasks.Examples.CSharp.ConvertingProjectData
             //ExStart:CustomizeTextStyle
             //ExFor: TextStyle
             //ExFor: TextItemType
-            //ExFor: FontStyle
+            //ExFor: TextStyle.FontStyle
             //ExFor: SaveOptions.TextStyles
             //ExSummary: Shows how to customize text styles which are used to style different text items in a project.
             var project = new Project(dataDir + "CreateProject2.mpp");

@@ -21,7 +21,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithTasks
                 var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
                 //ExStart:UpdateTaskData
-                //ExFor: Task.Children.Add(String)
+                //ExFor: TaskCollection.Add(String)
                 //ExSummary: Shows how to build parent-child relation of tasks.
                 var project = new Project(dataDir + "UpdateTaskData.mpp");
 

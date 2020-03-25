@@ -18,7 +18,7 @@ namespace Aspose.Tasks.Examples.CSharp.ConvertingProjectData
             var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
             //ExStart:SaveProjectAsCSV
-            //ExFor: SaveFileFormat.CSV
+            //ExFor: SaveFileFormat
             //ExSummary: Shows how to save a project in CSV format.
             var project = new Project(dataDir + "CreateProject1.mpp");
             project.Save(dataDir + "SaveProjectAsCSV_out.csv", SaveFileFormat.CSV);

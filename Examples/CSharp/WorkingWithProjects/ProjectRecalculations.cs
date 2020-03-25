@@ -12,7 +12,7 @@
         public static void Run()
         {
             //ExStart:ProjectRecalculations
-            //ExFor: CalculationMode.None
+            //ExFor: CalculationMode
             //ExSummary: Shows how to work with calculation mode None.
             var project = new Project();
             Console.WriteLine(project.Get(Prj.StartDate));

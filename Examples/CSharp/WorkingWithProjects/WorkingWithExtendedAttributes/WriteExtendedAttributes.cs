@@ -11,7 +11,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.WorkingWithExtendedAt
             var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
 
             //ExStart:ExtendedAttributes
-            //ExFor: ExtendedAttributeDefinition.CreateTaskDefinition
+            //ExFor: ExtendedAttributeDefinition.CreateTaskDefinition(CustomFieldType,ExtendedAttributeTask,String)
             //ExFor: Task.ExtendedAttributes
             //ExSummary: Shows how to write extended attributes.
             var project = new Project(dataDir + "ExtendedAttributes.mpp");

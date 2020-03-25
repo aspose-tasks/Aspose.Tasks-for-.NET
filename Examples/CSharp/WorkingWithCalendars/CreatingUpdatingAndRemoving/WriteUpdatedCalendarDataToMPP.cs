@@ -21,7 +21,6 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithCalendars.CreatingUpdatingAndR
             //ExStart:WriteUpdatedCalendarDataToMPP
             //ExFor: CalendarException
             //ExFor: Calendar.MakeStandardCalendar(Calendar)
-            //ExFor: Calendar.Exceptions.Add(Calendar)
             //ExFor: CalendarExceptionCollection.Add(CalendarException)
             //ExSummary: Shows how to create a calendar with exception days.
             // Create project instance and access calendar

@@ -23,7 +23,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.ImportingAndExporting
             try
             {
                 //ExStart:ImportProjectFromPrimaveraDBSQLite
-                //ExFor: PrimaveraDbSettings(String, Int32)
+                //ExFor: PrimaveraDbSettings.#ctor(String, Int32)
                 //ExFor: DbSettings.ProviderInvariantName
                 //ExSummary: Shows how to read a project from a Primavera XML file with multiple projects by using SQLite provider.
                 var connectionString = "Data Source=" + dataDir + "\\PPMDBSQLite.db";

@@ -10,7 +10,7 @@
 
             //ExStart:ReadTaskExtendedAttributes
             //ExFor: Task.ExtendedAttributes
-            //ExFor: ExtendedAttribute.AttributeDefinition.CfType
+            //ExFor: ExtendedAttributeDefinition.CfType
             //ExSummary: Shows how to read task extended attributes.
             // Create project instance
             var project = new Project(dataDir + "ReadTaskExtendedAttributes.mpp");

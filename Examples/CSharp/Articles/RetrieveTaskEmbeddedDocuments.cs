@@ -14,7 +14,7 @@
 
             //ExStart:RetrieveTaskEmbeddedDocuments
             //ExFor: Tsk.NotesRTF
-            //ExFor: Shape.OleFormat
+            //ExFor: Shape
             //ExSummary: Shows how to extract embedded RTF and save OLE objects from it. 
             var project = new Project(dataDir + "TaskEmbeddedDocuments.mpp");
             var task = project.RootTask.Children.GetById(1);
