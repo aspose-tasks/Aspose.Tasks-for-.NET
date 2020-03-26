@@ -6,13 +6,12 @@
     {
         public static void Run()
         {
-            var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
+            var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod());
 
             //ExStart:ReadTaskExtendedAttributes
             //ExFor: Task.ExtendedAttributes
             //ExFor: ExtendedAttributeDefinition.CfType
             //ExSummary: Shows how to read task extended attributes.
-            // Create project instance
             var project = new Project(dataDir + "ReadTaskExtendedAttributes.mpp");
 
             // Read extended attributes for tasks

@@ -6,14 +6,12 @@
     {
         public static void Run()
         {
-            // The path to the documents directory.
-            var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
+            var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod());
 
             //ExStart:ReadResourceTimephasedData
             //ExFor: Resource.GetTimephasedData(DateTime,DateTime)
             //ExFor: Resource.GetTimephasedData(DateTime,DateTime,TimephasedDataType)
             //ExSummary: Shows how to read timephased data of work/cost resources.
-            // Create project instance
             var project = new Project(dataDir + "ResourceTimephasedData.mpp");
 
             // Get the Resource by its ID

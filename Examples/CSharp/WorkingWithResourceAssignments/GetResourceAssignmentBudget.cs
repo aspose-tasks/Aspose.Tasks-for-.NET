@@ -6,14 +6,12 @@
     {
         public static void Run()
         {
-            // The path to the documents directory.
-            var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
+            var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod());
 
             //ExStart:GetResourceAssignmentBudget
             //ExFor: Asn.BudgetWork
             //ExFor: Asn.BudgetCost
             //ExSummary: Shows how to read assignment's budget values.
-            // Create project instance
             var project = new Project(dataDir + "ResourceAssignmentBudget.mpp");
 
             // Print assignment budget cost and budget work

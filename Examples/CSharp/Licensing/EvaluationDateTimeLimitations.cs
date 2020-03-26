@@ -16,7 +16,8 @@ namespace Aspose.Tasks.Examples.CSharp.Licensing
     {
         public static void Run()
         {
-            var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
+            var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod());
+            
             //ExStart:DateTimeLimitations
             //ExFor: Project.Save(String,SaveFileFormat)
             //ExSummary: Shows that project' dates are reset in an evaluation mode.

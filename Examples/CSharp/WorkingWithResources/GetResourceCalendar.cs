@@ -6,13 +6,11 @@
     {
         public static void Run()
         {
-            // The path to the documents directory.
-            var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
+            var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod());
 
             //ExStart:GetResourceCalendar
             //ExFor: Project.Resources
             //ExSummary: Shows how to read project resources.
-            // Create project instance
             var project = new Project(dataDir + "ResourceCalendar.mpp");
 
             // Display base calendar name for all resources

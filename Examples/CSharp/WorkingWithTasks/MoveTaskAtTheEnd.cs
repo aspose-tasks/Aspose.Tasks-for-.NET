@@ -18,8 +18,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithTasks
         {   
             try
             {
-                // The path to the documents directory.
-                var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);   
+                var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod());   
 
                 //ExStart:MoveTaskAtTheEnd
                 //ExFor: Task.MoveToSibling(Int32)

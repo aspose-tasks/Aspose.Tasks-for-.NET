@@ -16,8 +16,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithTasks
     {
         public static void Run()
         {
-            // The path to the documents directory.
-            var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
+            var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod());
             
             //ExStart:ReadTaskProperties
             //ExFor: ChildTasksCollector.Tasks
@@ -27,7 +26,6 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithTasks
             //ExFor: Tsk.Start
             //ExFor: Tsk.Finish
             //ExSummary: Shows how to read task properties.
-            // Create project instance
             var prj = new Project(dataDir + "ReadTaskProperties.mpp");
 
             // Create a ChildTasksCollector instance

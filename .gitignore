@@ -9,6 +9,10 @@ bin/
 *_out*
 * out*
 *.ldb
+*.ttf
+*.css
+*.png
+*.svg
 Thumbs.db
 _ReSharper*/
 out/

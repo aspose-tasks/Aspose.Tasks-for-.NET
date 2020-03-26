@@ -18,8 +18,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.WorkingWithExtendedAt
         {
             try
             {
-                // The path to the documents directory.
-                var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
+                var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod());
 
                 //ExStart:CreateExtendedAttributes
                 //ExFor: ExtendedAttributeDefinition.CreateTaskDefinition(ExtendedAttributeTask,String)

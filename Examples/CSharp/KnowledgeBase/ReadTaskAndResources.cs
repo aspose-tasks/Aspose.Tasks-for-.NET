@@ -6,7 +6,7 @@
     {
         public static void Run()
         {
-            var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
+            var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod());
 
             //ExStart:ReadTaskAndResources
             //ExFor: Project.Resources
@@ -20,16 +20,22 @@
             // Load all tasks
             var tasks = project.RootTask.Children;
 
+            Console.WriteLine();
+            Console.WriteLine("===========================");
+            
             // Loop through each task and read information related to tasks
             foreach (var task in tasks)
             {
                 Console.WriteLine("Reading Task " + task.Get(Tsk.Name));
-                Console.WriteLine("\nID: " + task.Get(Tsk.Id));
+                Console.WriteLine("ID: " + task.Get(Tsk.Id));
                 Console.WriteLine("Start: " + task.Get(Tsk.Start));
                 Console.WriteLine("Finish: " + task.Get(Tsk.Finish));
-                Console.WriteLine("\n===========================\n");
+                Console.WriteLine("===========================");
             }
 
+            Console.WriteLine();
+            Console.WriteLine("===========================");
+            
             // Loop through each resource and read information related to resources
             foreach (var resource in project.Resources)
             {
@@ -50,9 +56,9 @@
                 }
 
                 Console.WriteLine("Reading Resource " + resource.Get(Rsc.Name));
-                Console.WriteLine("\nID: " + resource.Get(Rsc.Id));
+                Console.WriteLine("ID: " + resource.Get(Rsc.Id));
                 Console.WriteLine("Type: " + resourceType);
-                Console.WriteLine("\n===========================\n");
+                Console.WriteLine("===========================");
             }
             //ExEnd:ReadTaskAndResources
         }

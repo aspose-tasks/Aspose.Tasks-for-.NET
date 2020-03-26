@@ -6,15 +6,13 @@
     {
         public static void Run()
         {
-            // The path to the documents directory.
-            var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
+            var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod());
 
             //ExStart:GetResourceOvertime
             //ExFor: Rsc.OvertimeCost
             //ExFor: Rsc.OvertimeWork
             //ExFor: Rsc.OvertimeRateFormat
             //ExSummary: Shows how to read resource overtime values.
-            // Create project instance
             var project = new Project(dataDir + "ResourceOvertime.mpp");
 
             // Display overtime related parameters for all resources

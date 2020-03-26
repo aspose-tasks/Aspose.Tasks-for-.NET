@@ -6,13 +6,11 @@
     {
         public static void Run()
         {
-            // The path to the documents directory.
-            var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
+            var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod());
 
             //ExStart:GetResourceAssignmentPercentWorkComplete
             //ExFor: Asn.PercentWorkComplete
             //ExSummary: Shows how to read percent work complete of an assignment.
-            // Create project instance
             var project = new Project(dataDir + "ResourceAssignmentPercentWorkComplete.mpp");
 
             // Print assignment percent completion

@@ -1,5 +1,6 @@
 namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.CreatingReadingAndSaving
 {
+    using System;
     using System.IO;
 
     using Aspose.Tasks.Saving;
@@ -8,20 +9,26 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.CreatingReadingAndSav
     {
         public static void Run()
         {
-            // The path to the documents directory.
-            var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);       
-            
-            //ExStart:ReadProjectFileFromStream
-            //ExFor: Project.#ctor(Stream)
-            //ExSummary: Shows how to read XML project file from a stream.
-            // Read project xml into file stream
-            using (Stream stream = new FileStream(dataDir + "ReadProjectFileFromStream.xml", FileMode.Open))
+            var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod());
+
+            try
             {
-                // Create project using file stream
-                var project = new Project(stream);
-                project.Save(dataDir + "ReadProjectFileFromStream.xml", SaveFileFormat.XML);
+                //ExStart:ReadProjectFileFromStream
+                //ExFor: Project.#ctor(Stream)
+                //ExSummary: Shows how to read XML project file from a stream.
+                // Read project xml into file stream
+                using (Stream stream = new FileStream(dataDir + "Project.xml", FileMode.Open))
+                {
+                    // Create project using file stream
+                    var project = new Project(stream);
+                    project.Save(dataDir + "ReadProjectFileFromStream_out.xml", SaveFileFormat.XML);
+                }
+                //ExEnd:ReadProjectFileFromStream
             }
-            //ExEnd:ReadProjectFileFromStream
+            catch (NotSupportedException ex)
+            {
+                Console.WriteLine(ex.Message + "\nThis example will only work if you apply a valid Aspose License. You can purchase full license or get 30 day temporary license from http://www.aspose.com/purchase/default.aspx.");
+            }
         }
     }
 }

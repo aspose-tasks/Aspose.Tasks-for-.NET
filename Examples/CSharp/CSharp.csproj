@@ -114,6 +114,7 @@
     <Compile Include="WorkingWithProjects\CreatingReadingAndSaving\CreateEmptyProjectSaveMPP.cs" />
     <Compile Include="WorkingWithProjects\GetPageCountOnStartAndEndDates.cs" />
     <Compile Include="WorkingWithProjects\CreatingReadingAndSaving\WorkingWithEncodings.cs" />
+    <Compile Include="WorkingWithProjects\ProjectCreation.cs" />
     <Compile Include="WorkingWithProjects\WorkingWithProjectProperties\ReadMetaProperties.cs" />
     <Compile Include="WorkingWithProjects\WorkingWithProjectViews\SaveWithDefaultGanttChartView.cs" />
     <Compile Include="WorkingWithProjects\WorkingWithProjectViews\SupportForTextStyle.cs" />

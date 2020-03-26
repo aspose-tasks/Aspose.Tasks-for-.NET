@@ -6,13 +6,11 @@
     {
         public static void Run()
         {
-            // The path to the documents directory.
-            var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
+            var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod());
 
             //ExStart:GetResourcePercentWorkComplete
             //ExFor: Rsc.PercentWorkComplete
             //ExSummary: Shows how to read resource percent work complete.
-            // Create project instance
             var project = new Project(dataDir + "ResourcePercentWorkComplete.mpp");
 
             // Display work percentage completion for all resources

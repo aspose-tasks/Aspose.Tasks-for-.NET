@@ -6,12 +6,11 @@
     {
         public static void Run()
         {
-            var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
+            var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod());
 
             //ExStart:CalculateTaskDurations
             //ExFor: Duration.Convert(TimeUnitType)
             //ExSummary: Shows how to convert a duration into different time unit types.
-            // Create project instance
             var project = new Project(dataDir + "TaskDurations.mpp");
 
             // Get a task to calculate its duration in different formats

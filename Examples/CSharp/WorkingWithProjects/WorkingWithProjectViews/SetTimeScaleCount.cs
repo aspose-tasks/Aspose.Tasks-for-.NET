@@ -1,13 +1,13 @@
 namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.WorkingWithProjectViews
 {
     using Aspose.Tasks.Saving;
+    using Visualization;
 
     internal class SetTimeScaleCount
     {
         public static void Run()
         {
-            // The path to the documents directory.
-            var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
+            var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod());
 
             //ExStart:SetTimeScaleCount
             //ExFor: GanttChartView.TopTimescaleTier
@@ -18,6 +18,9 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.WorkingWithProjectVie
 
             // Init Gantt Chart View
             var view = new GanttChartView();
+            view.TopTimescaleTier = new TimescaleTier();
+            view.MiddleTimescaleTier = new TimescaleTier();
+            view.BottomTimescaleTier = new TimescaleTier();
 
             // Set Time Scale count
             view.TopTimescaleTier.Count = 2;

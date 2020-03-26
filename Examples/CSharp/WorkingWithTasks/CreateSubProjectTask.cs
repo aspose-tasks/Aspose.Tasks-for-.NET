@@ -18,12 +18,11 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithTasks
         {
             try
             {
-                var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
+                var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod());
 
                 //ExStart:CreateSubProjectTask
                 //ExFor: Tsk.SubprojectName
                 //ExSummary: Shows how to create a subproject task.
-                // Create project instance
                 var project = new Project(dataDir + "SubProjectTask.mpp");
 
                 // Add task

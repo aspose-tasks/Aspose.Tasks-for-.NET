@@ -16,9 +16,8 @@ namespace Aspose.Tasks.Examples.CSharp.Articles
     internal class RenderProjectToPredefinedPageSizes
     {
         public static void Run()
-        {  
-            // The path to the documents directory.
-            var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
+        {
+            var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod());
 
             //ExStart:RenderProjectToPredefinedPageSizes
             //ExFor: SaveOptions.PageSize

@@ -8,16 +8,13 @@ please feel free to contact us using https://forum.aspose.com/c/tasks
 
 namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.WorkingWithProjectProperties
 {
-    using System;
-
     using Aspose.Tasks.Saving;
 
     internal class SetAttributesForNewTasks
     {
         public static void Run()
         {
-            // The path to the documents directory.
-            var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
+            var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod());
             
             //ExStart:SetAttributesForNewTasks
             //ExFor: TaskStartDateType

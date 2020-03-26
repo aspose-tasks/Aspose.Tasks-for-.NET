@@ -6,24 +6,26 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.Miscellaneous
     {
         public static void Run()
         {
-            // The path to the documents directory.
-            var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
+            var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod());
 
             //ExStart:ExtractEmbeddedObjects
             //ExFor: OleObject.Content
+            //ExFor: Project.OleObjects
             //ExSummary: Shows how to extract an embedded OLE object.
             var project = new Project(dataDir + "ExtractEmbeddedObjects.mpp");
-            var ole = project.OleObjects.ToList()[0];
 
-            // We have to check this property because it can be null if the embedded object was created inside the ms project application Or, alternatively, you can use this check: if (ole.FileFormat == "Package")
-            if (string.IsNullOrEmpty(ole.FullPath))
+            foreach (var ole in project.OleObjects.ToList())
             {
-                return;
-            }
+                // We have to check this property because it can be null if the embedded object was created inside the ms project application Or, alternatively, you can use this check: if (ole.FileFormat == "Package")
+                if (string.IsNullOrEmpty(ole.FullPath) || ole.Content == null)
+                {
+                    continue;
+                }
 
-            using (var stream = new FileStream(dataDir, FileMode.Create))
-            {
-                stream.Write(ole.Content, 0, ole.Content.Length);
+                using (var stream = new FileStream(dataDir + Path.GetFileName(ole.FullPath), FileMode.Create))
+                {
+                    stream.Write(ole.Content, 0, ole.Content.Length);
+                }
             }
             //ExEnd:ExtractEmbeddedObjects
         }

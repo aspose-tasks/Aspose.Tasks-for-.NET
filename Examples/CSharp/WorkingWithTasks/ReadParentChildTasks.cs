@@ -16,12 +16,11 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithTasks
     {
         public static void Run()
         {
-            var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
+            var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod());
             
             //ExStart:ReadParentChildTasks
             //ExFor: ChildTasksCollector
             //ExSummary: Shows how to iterate over all tasks in a project as a plain list. 
-            // Create project instance
             var project = new Project(dataDir + "ParentChildTasks.mpp");
             
             // Create a ChildTasksCollector instance

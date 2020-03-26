@@ -14,13 +14,11 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithFormulas
     {
         public static void Run()
         {
-            // The path to the documents directory.
-            var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
+            var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod());
 
             //ExStart:ReadFormulasExtendedAttributesFromMPP
             //ExFor: ExtendedAttributeDefinition.Formula
             //ExSummary: Shows how to read extended attribute formulas.
-            // Create project instance
             var project = new Project(dataDir + "ReadFormulas.mpp"); // Attached test mpp
            
             // Read extended attribute formula

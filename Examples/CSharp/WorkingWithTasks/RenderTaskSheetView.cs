@@ -15,13 +15,12 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithTasks
     {
         public static void Run()
         {
-            var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
+            var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod());
             
             //ExStart:RenderTaskSheetView
             //ExFor: PresentationFormat
             //ExFor: SaveOptions.PresentationFormat
             //ExSummary: Shows how to render task sheet view.
-            // Create project instance
             var project = new Project(dataDir + "TaskSheetView.mpp");
 
             // Set presentation format Task Sheet and save project as PDF

@@ -6,8 +6,7 @@
     {
         public static void Run()
         {
-            // The path to the documents directory.
-            var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
+            var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod());
 
             //ExStart:GetResourceAssignmentOvertimes
             //ExFor: Asn.OvertimeWork
@@ -17,7 +16,6 @@
             //ExFor: Asn.RemainingOvertimeWork
             //ExFor: Asn.RemainingOvertimeCost
             //ExSummary: Shows how to read overtime/remaining works/costs of an assignment.
-            // Create project instance
             var project = new Project(dataDir + "ResourceAssignmentOvertimes.mpp");
 
             // Print assignment overtimes

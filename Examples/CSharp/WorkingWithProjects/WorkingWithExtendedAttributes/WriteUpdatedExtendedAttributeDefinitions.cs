@@ -19,8 +19,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.WorkingWithExtendedAt
             // This example requires Aspose.Task for .NET, a trial version can be download from  http://www.aspose.com/corporate/purchase/temporary-license.aspx
             try
             {
-                // The path to the documents directory.
-                var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
+                var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod());
 
                 //ExStart:WriteUpdatedExtendedAttributeDefinitions
                 //ExFor: ExtendedAttributeDefinition.CreateLookupTaskDefinition(ExtendedAttributeTask,String)

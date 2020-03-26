@@ -7,7 +7,6 @@
             //ExStart:CreateTaskBaseline
             //ExFor: Project.SetBaseline(BaselineType)
             //ExSummary: Shows how to create task baselines.
-            // Create project instance
             var project = new Project();
 
             // Creating TaskBaseline:

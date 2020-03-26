@@ -18,8 +18,7 @@ namespace Aspose.Tasks.Examples.CSharp.ConvertingProjectData
         {
             try
             {
-                // The path to the documents directory.
-                var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
+                var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod());
 
                 //ExStart:SaveProjectDataAsTemplate
                 //ExFor: SaveTemplateOptions

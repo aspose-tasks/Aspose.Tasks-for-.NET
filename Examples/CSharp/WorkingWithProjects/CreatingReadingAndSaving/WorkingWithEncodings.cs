@@ -1,5 +1,6 @@
 ﻿namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.CreatingReadingAndSaving
 {
+    using System;
     using System.IO;
 
     using Aspose.Tasks.Saving;
@@ -8,16 +9,15 @@
     {
         public static void Run()
         {
-            // The path to the documents directory.
-            var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
+            var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod());
 
             //ExStart:WorkingWithEncodings
-            //ExFor: Project.#ctor(Stream)
+            //ExFor: Project.#ctor(StreamReader)
             //ExSummary: Shows how to read MPX files with specific encoding.
-            // Specify Encodings
-            using (var streamReader = new StreamReader("Project.mpx", System.Text.Encoding.GetEncoding("ISO-8859-1")))
+            using (var streamReader = new StreamReader(dataDir + "EUC-KR-encoding.mpx", System.Text.Encoding.GetEncoding("ISO-8859-1")))
             {
-                var project = new Project(streamReader.BaseStream);
+                var project = new Project(streamReader);
+                Console.WriteLine(project.RootTask.Children.ToList()[0].Get(Tsk.Name));
                 project.Save(dataDir + "WorkingWithEncodings_out.mpx", SaveFileFormat.MPX);
             }
             //ExEnd:WorkingWithEncodings

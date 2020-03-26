@@ -6,15 +6,13 @@
     {
         public static void Run()
         {
-            // The path to the documents directory.
-            var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
+            var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod());
 
             //ExStart:GetGeneralResourceAssignmentProperties
             //ExFor: Asn.Uid
             //ExFor: Asn.Start
             //ExFor: Asn.Finish
             //ExSummary: Shows how to read common resource assignment's properties.
-            // Create project instance
             var project = new Project(dataDir + "GetGeneralResourceAssignmentProperties.mpp");
 
             // Print general resource assignment properties

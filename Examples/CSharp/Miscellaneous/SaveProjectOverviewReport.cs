@@ -14,7 +14,7 @@ namespace Aspose.Tasks.Examples.CSharp.Miscellaneous
     {
         public static void Run()
         {
-            var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
+            var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod());
 
             //ExStart:SaveProjectOverviewReport
             //ExFor: Project.SaveReport(String)

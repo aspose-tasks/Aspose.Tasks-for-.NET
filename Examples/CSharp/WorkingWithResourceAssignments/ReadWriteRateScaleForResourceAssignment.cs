@@ -15,37 +15,45 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithResourceAssignments
     {
         public static void Run()
         {
-            var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
+            var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod());
 
-            //ExStart: ReadWriteRateScaleForResourceAssignment
-            //ExFor: Asn.RateScale
-            //ExSummary: Shows how to work with assignment's rate scale. 
-            var project = new Project(dataDir + "New project 2013.mpp");
+            try
+            {
+                //ExStart: ReadWriteRateScaleForResourceAssignment
+                //ExFor: Asn.RateScale
+                //ExSummary: Shows how to work with assignment's rate scale. 
+                var project = new Project(dataDir + "New project 2013.mpp");
 
-            var task = project.RootTask.Children.Add("t1");
+                var task = project.RootTask.Children.Add("t1");
 
-            var materialResource = project.Resources.Add("materialResource");
-            materialResource.Set(Rsc.Type, ResourceType.Material);
+                var materialResource = project.Resources.Add("materialResource");
+                materialResource.Set(Rsc.Type, ResourceType.Material);
 
-            var nonMaterialResource = project.Resources.Add("nonMaterialResource");
-            nonMaterialResource.Set(Rsc.Type, ResourceType.Work);
+                var nonMaterialResource = project.Resources.Add("nonMaterialResource");
+                nonMaterialResource.Set(Rsc.Type, ResourceType.Work);
 
-            var materialResourceAssignment = project.ResourceAssignments.Add(task, materialResource);
-            materialResourceAssignment.Set(Asn.RateScale, RateScaleType.Week);
+                var materialResourceAssignment = project.ResourceAssignments.Add(task, materialResource);
+                materialResourceAssignment.Set(Asn.RateScale, RateScaleType.Week);
 
-            var nonMaterialResourceAssignment = project.ResourceAssignments.Add(task, nonMaterialResource);
-            nonMaterialResourceAssignment.Set(Asn.RateScale, RateScaleType.Week);
+                var nonMaterialResourceAssignment = project.ResourceAssignments.Add(task, nonMaterialResource);
+                nonMaterialResourceAssignment.Set(Asn.RateScale, RateScaleType.Week);
 
-            project.Save(dataDir + "ReadWriteRateScaleForResourceAssignment_out.mpp", SaveFileFormat.MPP);
+                project.Save(dataDir + "ReadWriteRateScaleForResourceAssignment_out.mpp", SaveFileFormat.MPP);
 
-            var resavedProject = new Project(dataDir + "ReadWriteRateScaleForResourceAssignment_out.mpp");
+                var resavedProject = new Project(dataDir + "ReadWriteRateScaleForResourceAssignment_out.mpp");
 
-            var resavedMaterialResourceAssignment = resavedProject.ResourceAssignments.GetByUid(1);
-            Console.WriteLine(resavedMaterialResourceAssignment.Get(Asn.RateScale));
+                var resavedMaterialResourceAssignment = resavedProject.ResourceAssignments.GetByUid(2);
+                Console.WriteLine(resavedMaterialResourceAssignment.Get(Asn.RateScale));
 
-            // only material resource assignments can have non-zero rate scale value.
-            resavedProject.ResourceAssignments.GetByUid(2);
-            //ExEnd: ReadWriteRateScaleForResourceAssignment
+                // only material resource assignments can have non-zero rate scale value.
+                var resavedNonMaterialResourceAssignment = resavedProject.ResourceAssignments.GetByUid(3);
+                Console.WriteLine(resavedNonMaterialResourceAssignment.Get(Asn.RateScale));
+                //ExEnd: ReadWriteRateScaleForResourceAssignment
+            }
+            catch (NotSupportedException ex)
+            {
+                Console.WriteLine(ex.Message + "\nThis example will only work if you apply a valid Aspose License. You can purchase full license or get 30 day temporary license from http://www.aspose.com/purchase/default.aspx.");
+            }
         }
     }
 }

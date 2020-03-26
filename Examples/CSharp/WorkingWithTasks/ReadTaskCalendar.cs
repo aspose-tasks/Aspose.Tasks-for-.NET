@@ -16,13 +16,11 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithTasks
     {
         public static void Run()
         {
-            // The path to the documents directory.
-            var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
+            var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod());
 
             //ExStart:ReadTaskCalendar
             //ExFor: Tsk.Calendar
             //ExSummary: Shows how to read task calendars.
-            // Create project instance
             var prj = new Project(dataDir + "ReadTaskCalendar.mpp");
 
             // Declare ChildTasksCollector class object

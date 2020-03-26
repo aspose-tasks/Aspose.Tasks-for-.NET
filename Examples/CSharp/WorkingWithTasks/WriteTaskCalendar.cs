@@ -15,7 +15,6 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithTasks
             //ExStart:WriteTaskCalendar
             //ExFor: Tsk.Calendar
             //ExSummary: Shows how to set a task calendar.
-            // Create project instance
             var project = new Project();
 
             // Add task

@@ -8,13 +8,11 @@
         {
             try
             {
-                // The path to the documents directory.
-                var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
+                var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod());
 
                 //ExStart:CreateRecurringTask
                 //ExFor: RecurringTaskParameters
                 //ExSummary: Shows how to create a recurring task.
-                // Create project instance
                 var project = new Project(dataDir + "Blank2010.mpp");
                 var parameters = new RecurringTaskParameters
                 {
@@ -28,13 +26,13 @@
                                                      RepetitionInterval = 2,
                                                      WeekDays =
                                                                               WeekdayType.Sunday | WeekdayType.Monday
-                                                                                                 | WeekdayType.Friday,
+                                                                                                 | WeekdayType.Friday
                                                  },
                                                  RecurrenceRange =
                                                          new EndByRecurrenceRange
                                                          {
                                                              Start = new DateTime(2018, 7, 1, 8, 0, 0),
-                                                             Finish = new DateTime(2018, 7, 20, 17, 0, 0),
+                                                             Finish = new DateTime(2018, 7, 20, 17, 0, 0)
                                                          }
                                              }
                 };

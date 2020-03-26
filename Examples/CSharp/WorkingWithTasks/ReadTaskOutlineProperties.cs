@@ -9,7 +9,6 @@ please feel free to contact us using https://forum.aspose.com/c/tasks
 namespace Aspose.Tasks.Examples.CSharp.WorkingWithTasks
 {
     using System;
-    using System.IO;
 
     using Aspose.Tasks.Util;
 
@@ -17,7 +16,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithTasks
     {
         public static void Run()
         {
-            var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
+            var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod());
             
             //ExStart:ReadTaskOutlineProperties
             //ExFor: Tsk.OutlineLevel

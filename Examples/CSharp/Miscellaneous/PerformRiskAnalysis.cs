@@ -16,7 +16,7 @@ namespace Aspose.Tasks.Examples.CSharp.Miscellaneous
     {
         public static void Run()
         {
-            var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
+            var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod());
 
             //ExStart:PrepareAnalysisSettings
             //ExFor: RiskAnalysisSettings
@@ -67,7 +67,7 @@ namespace Aspose.Tasks.Examples.CSharp.Miscellaneous
             //ExSummary: Shows how to start analysis of risks by using <see cref="Aspose.Tasks.RiskAnalysis.RiskAnalysisSettings" />.
             // Analyze the project risks
             var analyzer = new RiskAnalyzer(riskAnalysisSettings);
-            RiskAnalysisResult analysisResult = analyzer.Analyze(project);
+            var analysisResult = analyzer.Analyze(project);
             //ExEnd:AnalyzeRisks
 
             //ExStart:UseAnalysisResult

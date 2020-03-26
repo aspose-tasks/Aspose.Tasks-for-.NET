@@ -15,8 +15,7 @@ namespace Aspose.Tasks.Examples.CSharp.Articles
     {
         public static void Run()
         {
-            // The path to the documents directory.
-            var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
+            var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod());
 
             //ExStart:RenderXAMLWithOptions
             //ExFor: XamlOptions

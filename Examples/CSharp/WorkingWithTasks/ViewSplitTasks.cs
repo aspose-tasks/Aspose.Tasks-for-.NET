@@ -6,12 +6,11 @@
     {
         public static void Run()
         {
-            var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
+            var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod());
 
             //ExStart:ViewSplitTasks
             //ExFor: Task.SplitParts
             //ExSummary: Shows how to display task's split parts.
-            // Create project instance
             var project = new Project(dataDir + "ViewSplitTasks.mpp");
             
             // Access task 

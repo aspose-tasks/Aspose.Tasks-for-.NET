@@ -18,15 +18,13 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithResources
         {
             try
             {
-                // The path to the documents directory.
-                var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
+                var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod());
 
                 //ExStart:UpdateResourceDataInMPP
                 //ExFor: Rsc.StandardRate
                 //ExFor: Rsc.OvertimeRate
                 //ExFor: Rsc.Group
                 //ExSummary: Shows how to update common resource data.
-                // Create project instance
                 var project = new Project(dataDir + "UpdateResourceData.mpp");
 
                 // Add resource and set some properties

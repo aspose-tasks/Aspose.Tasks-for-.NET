@@ -6,8 +6,7 @@
     {
         public static void Run()
         {
-            // The path to the documents directory.
-            var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
+            var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod());
 
             //ExStart:GetResourceAssignmentVariance
             //ExFor: Asn.WorkVariance
@@ -15,7 +14,6 @@
             //ExFor: Asn.StartVariance
             //ExFor: Asn.FinishVariance
             //ExSummary: Shows how to read assignment's variances.
-            // Create project instance
             var project = new Project(dataDir + "ResourceAssignmentVariance.mpp");
 
             // Print assignment variances

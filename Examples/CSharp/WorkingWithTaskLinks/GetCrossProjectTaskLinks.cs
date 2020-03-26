@@ -6,13 +6,12 @@
     {
         public static void Run()
         {
-            var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
+            var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod());
             
             //ExStart:GetCrossProjectTaskLinks
             //ExFor: Project.TaskLinks
             //ExFor: TaskLink.CrossProjectName
             //ExSummary: Shows how to find cross project task links. 
-            // Create project instance
             var project = new Project(dataDir + "GetCrossProjectTaskLinks.mpp");
 
             // Check cross project task links

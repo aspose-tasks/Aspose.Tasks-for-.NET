@@ -18,14 +18,12 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithTasks
         {
             try
             {
-                // The path to the documents directory.
-                var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
+                var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod());
 
                 //ExStart:CreateTasks
                 //ExFor: Task.Children
                 //ExFor: TaskCollection.Add(String)
                 //ExSummary: Shows how to create tasks.
-                // Create project instance
                 var project = new Project();
 
                 // Add task, sub task and save project

@@ -18,8 +18,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.CreatingReadingAndSav
     {
         public static void Run()
         {
-            // The path to the documents directory.
-            var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
+            var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod());
 
             //ExStart:ImportProjectDataFromDatabase
             //ExFor: MspDbSettings.#ctor(String, Guid)
@@ -44,7 +43,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.CreatingReadingAndSav
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.Message + "\nPlease setup proper data source (DataSource, InitialCatalog etc)");
+                Console.WriteLine(ex.Message + " Please setup proper data source (DataSource, InitialCatalog etc)");
             }
             //ExEnd:ImportProjectDataFromDatabase
         }

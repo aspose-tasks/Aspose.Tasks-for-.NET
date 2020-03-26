@@ -18,12 +18,11 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithFormulas
         {
             try
             {
-                var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
+                var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod());
                 
                 //ExStart:WriteFormulasInExtendedAttributesToMPP
                 //ExFor: ExtendedAttributeDefinition.Formula
                 //ExSummary: Shows how to use extended attribute formulas with aliases.
-                // Create project instance
                 var project = new Project(dataDir + "Project1.mpp");
                 project.Set(Prj.NewTasksAreManual, false);
 

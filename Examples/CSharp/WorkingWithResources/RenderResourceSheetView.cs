@@ -15,14 +15,12 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithResources
     {
         public static void Run()
         {
-            // The path to the documents directory.
-            var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
+            var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod());
 
             //ExStart:RenderResourceSheetView
             //ExFor: PresentationFormat
             //ExFor: SaveOptions.PresentationFormat
             //ExSummary: Shows how to render the resource sheet view.
-            // Create project instance
             var project = new Project(dataDir + "ResourceSheetView.mpp");
 
             // Define rendering options

@@ -6,13 +6,12 @@
     {
         public static void Run()
         {
-            var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
+            var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod());
             
             //ExStart:GetPredecessorSuccessorTasks
             //ExFor: TaskLink.PredTask
             //ExFor: TaskLink.SuccTask
             //ExSummary: Shows how to read predecessor/successor by task links.
-            // Create project instance
             var project = new Project(dataDir + "GetPredecessorSuccessorTasks.mpp");
 
             // Display names of predecessor and successor tasks

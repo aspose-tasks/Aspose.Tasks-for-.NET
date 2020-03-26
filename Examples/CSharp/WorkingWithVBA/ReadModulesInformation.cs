@@ -14,8 +14,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithVBA
     {
         public static void Run()
         {
-            // The path to the documents directory.
-            var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
+            var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod());
 
             //ExStart:ReadModulesInformation
             //ExFor: VbaModule

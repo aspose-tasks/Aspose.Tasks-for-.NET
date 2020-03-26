@@ -8,30 +8,39 @@ please feel free to contact us using https://forum.aspose.com/c/tasks
 
 namespace Aspose.Tasks.Examples.CSharp.WorkingWithResourceAssignments
 {
+    using System;
     using Aspose.Tasks.Saving;
 
     internal class CreateResourceAssignments
     {
         public static void Run()
         {
-            //ExStart:CreateResourceAssignments
-            //ExFor: ResourceAssignmentCollection.Add(Task,Resource)
-            //ExFor: Project.ResourceAssignments
-            //ExSummary: Shows how to create a resource assignment.
-            // Create empty project
-            var project = new Project();
+            var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod());
 
-            // Add new task and resource
-            var task = project.RootTask.Children.Add("Task");
-            var resource = project.Resources.Add("Rsc");
+            try
+            {
+                //ExStart:CreateResourceAssignments
+                //ExFor: ResourceAssignmentCollection.Add(Task,Resource)
+                //ExFor: Project.ResourceAssignments
+                //ExSummary: Shows how to create a resource assignment.
+                // Create empty project
+                var project = new Project();
+
+                // Add new task and resource
+                var task = project.RootTask.Children.Add("Task");
+                var resource = project.Resources.Add("Rsc");
             
-            // Assign the resource desired task
-            project.ResourceAssignments.Add(task, resource);
-            //ExEnd:CreateResourceAssignments
+                // Assign the resource desired task
+                project.ResourceAssignments.Add(task, resource);
+                //ExEnd:CreateResourceAssignments
 
-            // Save project as PDF
-            var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
-            project.Save(dataDir + "CreateResourceAssignments_out.pdf", SaveFileFormat.PDF);
+                // Save project as PDF
+                project.Save(dataDir + "CreateResourceAssignments_out.pdf", SaveFileFormat.PDF);
+            }
+            catch (NotSupportedException ex)
+            {
+                Console.WriteLine(ex.Message + "\nThis example will only work if you apply a valid Aspose License. You can purchase full license or get 30 day temporary license from http://www.aspose.com/purchase/default.aspx.");
+            }
         }
     }
 }

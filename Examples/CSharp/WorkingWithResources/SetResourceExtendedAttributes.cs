@@ -18,14 +18,12 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithResources
         {
             try
             {
-                // The path to the documents directory.
-                var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
+                var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod());
 
                 //ExStart:SetResourceExtendedAttributes
                 //ExFor: Resource.ExtendedAttributes
                 //ExFor: ExtendedAttributeDefinitionCollection.Add(ExtendedAttributeDefinition)
                 //ExSummary: Shows how to add resource extended attributes.
-                // Create project instance
                 var project = new Project(dataDir + "ResourceExtendedAttributes.mpp");
 
                 // Define extended attribute

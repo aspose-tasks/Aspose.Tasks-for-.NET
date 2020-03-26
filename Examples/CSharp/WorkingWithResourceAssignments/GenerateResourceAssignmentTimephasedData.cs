@@ -6,13 +6,11 @@
     {
         public static void Run()
         {
-            // The path to the documents directory.
-            var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
+            var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod());
 
             //ExStart:GenerateResourceAssignmentTimephasedData
             //ExFor: Asn.WorkContour
             //ExSummary: Shows how to set different timephased data contours for resource assignments.
-            // Create project instance
             var project = new Project(dataDir + "ResourceAssignmentTimephasedData.mpp");
 
             // Get the first task of the Project
@@ -31,8 +29,8 @@
             }
 
             // Change contour
-            firstRA.Set(Asn.WorkContour, WorkContourType.Turtle);
             Console.WriteLine("Turtle contour");
+            firstRA.Set(Asn.WorkContour, WorkContourType.Turtle);
             collection = task.GetTimephasedData(project.Get(Prj.StartDate), project.Get(Prj.FinishDate));
             foreach (var td in collection)
             {
@@ -40,8 +38,8 @@
             }
 
             // Change contour
-            firstRA.Set(Asn.WorkContour, WorkContourType.BackLoaded);
             Console.WriteLine("BackLoaded contour");
+            firstRA.Set(Asn.WorkContour, WorkContourType.BackLoaded);
             collection = task.GetTimephasedData(project.Get(Prj.StartDate), project.Get(Prj.FinishDate));
             foreach (var td in collection)
             {
@@ -49,8 +47,8 @@
             }
 
             // Change contour
-            firstRA.Set(Asn.WorkContour, WorkContourType.FrontLoaded);
             Console.WriteLine("FrontLoaded contour");
+            firstRA.Set(Asn.WorkContour, WorkContourType.FrontLoaded);
             collection = task.GetTimephasedData(project.Get(Prj.StartDate), project.Get(Prj.FinishDate));
             foreach (var td in collection)
             {
@@ -58,8 +56,8 @@
             }
 
             // Change contour
-            firstRA.Set(Asn.WorkContour, WorkContourType.Bell);
             Console.WriteLine("Bell contour");
+            firstRA.Set(Asn.WorkContour, WorkContourType.Bell);
             collection = task.GetTimephasedData(project.Get(Prj.StartDate), project.Get(Prj.FinishDate));
             foreach (var td in collection)
             {
@@ -67,8 +65,8 @@
             }
 
             // Change contour
-            firstRA.Set(Asn.WorkContour, WorkContourType.EarlyPeak);
             Console.WriteLine("EarlyPeak contour");
+            firstRA.Set(Asn.WorkContour, WorkContourType.EarlyPeak);
             collection = task.GetTimephasedData(project.Get(Prj.StartDate), project.Get(Prj.FinishDate));
             foreach (var td in collection)
             {
@@ -76,8 +74,8 @@
             }
 
             // Change contour
-            firstRA.Set(Asn.WorkContour, WorkContourType.LatePeak);
             Console.WriteLine("LatePeak contour");
+            firstRA.Set(Asn.WorkContour, WorkContourType.LatePeak);
             collection = task.GetTimephasedData(project.Get(Prj.StartDate), project.Get(Prj.FinishDate));
             foreach (var td in collection)
             {
@@ -85,8 +83,8 @@
             }
             
             // Change contour
-            firstRA.Set(Asn.WorkContour, WorkContourType.DoublePeak);
             Console.WriteLine("DoublePeak contour");
+            firstRA.Set(Asn.WorkContour, WorkContourType.DoublePeak);
             collection = task.GetTimephasedData(project.Get(Prj.StartDate), project.Get(Prj.FinishDate));
             foreach (var td in collection)
             {

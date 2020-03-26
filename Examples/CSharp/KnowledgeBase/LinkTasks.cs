@@ -10,7 +10,7 @@
         {
             try
             {
-                var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
+                var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod());
 
                 //ExStart:LinkTasks
                 //ExFor: TaskLinkCollection.Add(Task, Task, TaskLinkType)

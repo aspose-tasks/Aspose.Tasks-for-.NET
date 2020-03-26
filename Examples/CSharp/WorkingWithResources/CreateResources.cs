@@ -14,13 +14,11 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithResources
     {
         public static void Run()
         {
-            // The path to the documents directory.
-            var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
+            var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod());
 
             //ExStart:CreateResources
             //ExFor: Project.Resources
             //ExSummary: Shows how to create project resources.
-            // Create project instance
             var project = new Project();
 
             // Add resources

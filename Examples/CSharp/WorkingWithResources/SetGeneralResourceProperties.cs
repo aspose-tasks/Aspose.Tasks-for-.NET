@@ -14,14 +14,12 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithResources
     {
         public static void Run()
         {
-            // The path to the documents directory.
-            var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
+            var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod());
 
             //ExStart:SetGeneralResourceProperties
             //ExFor: Rsc.StandardRate
             //ExFor: Rsc.OvertimeRate
             //ExSummary: Shows how to read general resource properties.
-            // Create project instance
             var project = new Project();
 
             // Add resources

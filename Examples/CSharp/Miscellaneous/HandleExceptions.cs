@@ -8,7 +8,7 @@
     {
         public static void Run()
         {
-            var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
+            var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod());
 
             //ExStart:HandleExceptions
             //ExFor: Project.#ctor(String)
@@ -16,7 +16,7 @@
             try
             {
                 var project = new Project(dataDir + "project.mpp");
-                project.Save(dataDir + "HandleExceptions.mpp", SaveFileFormat.MPP);
+                project.Save(dataDir + "HandleExceptions_out.mpp", SaveFileFormat.MPP);
             }
             catch (TasksReadingException ex)
             {

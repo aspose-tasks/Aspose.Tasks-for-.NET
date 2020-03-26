@@ -10,8 +10,8 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects
 {
     using System;
     using System.Drawing;
-
-    using Aspose.Tasks.Saving;
+    using System.Reflection;
+    using Saving;
 
     internal class AddImageToPageHeaderFooter
     {
@@ -19,8 +19,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects
         {
             try
             {
-                // The path to the documents directory.
-                var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
+                var dataDir = RunExamples.GetDataDir(MethodBase.GetCurrentMethod());
 
                 //ExStart:AddImageToPageHeaderFooter
                 //ExFor: View.PageInfo
@@ -34,7 +33,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects
 
                 project.RootTask.Children.Add("Task1");
                 var info = project.DefaultView.PageInfo;
-                
+
                 using (var image = Image.FromFile(dataDir + "Image1.png"))
                 {
                     info.Header.CenteredImage = image;
@@ -48,7 +47,9 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.Message + "\nThis example will only work if you apply a valid Aspose License. You can purchase full license or get 30 day temporary license from http://www.aspose.com/purchase/default.aspx.");
+                Console.WriteLine(
+                    ex.Message
+                    + "\nThis example will only work if you apply a valid Aspose License. You can purchase full license or get 30 day temporary license from http://www.aspose.com/purchase/default.aspx.");
             }
         }
     }

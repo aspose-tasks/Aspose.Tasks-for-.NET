@@ -16,14 +16,13 @@
     //ExSummary: Shows how to set resource prefixes for nested resources.
     internal class ResourcePrefixForNestedResources : ICssSavingCallback, IFontSavingCallback, IImageSavingCallback
     {
-        // The path to the documents directory.
-        private static readonly string DataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
+        private static readonly string DataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod());
         
         public static void Run()
         {
             var project = new Project(DataDir + "Project1.mpp");
             var options = GetSaveOptions(1);
-            project.Save(DataDir + "document.html", options);
+            project.Save(DataDir + "document_out.html", options);
         }
 
         public void CssSaving(CssSavingArgs args)

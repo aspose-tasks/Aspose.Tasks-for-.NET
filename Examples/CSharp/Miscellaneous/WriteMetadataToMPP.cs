@@ -18,7 +18,7 @@ namespace Aspose.Tasks.Examples.CSharp.Miscellaneous
         {
             try
             {
-                var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
+                var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod());
                 
                 //ExStart:WriteMetadataToMPP
                 //ExFor: Tsk.Contact

@@ -6,14 +6,12 @@
     {
         public static void Run()
         {
-            // The path to the documents directory.
-            var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
+            var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod());
 
             //ExStart:GetResourceAssignmentStopResumeDates
             //ExFor: Asn.Stop
             //ExFor: Asn.Resume
             //ExSummary: Shows how to read assignment's stop/resume dates. 
-            // Create project instance
             var project = new Project(dataDir + "ResourceAssignmentStopResumeDates.mpp");
 
             // Print resource assignment's stop and resume dates

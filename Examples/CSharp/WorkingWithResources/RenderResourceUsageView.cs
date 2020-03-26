@@ -15,14 +15,12 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithResources
     {
         public static void Run()
         {
-            // The path to the documents directory.
-            var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
+            var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod());
 
             //ExStart:RenderResourceUsageView
             //ExFor: SaveOptions.Timescale
             //ExFor: SaveOptions.PresentationFormat
             //ExSummary: Shows how to render resource usage view.
-            // Create project instance
             var project = new Project(dataDir + "ResourceUsageView.mpp");
                         
             // Define the SaveOptions with required TimeScale settings as Days

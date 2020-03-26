@@ -16,8 +16,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.CreatingReadingAndSav
 
     internal class IgnoreInvalidCharactersDuringProjectLoading
     {
-        // The path to the documents directory.
-        private static readonly string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName); 
+        private static readonly string DataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod()); 
         
         //ExStart:IgnoreInvalidCharactersDuringLoadingProject 
         //ExFor: Project.#ctor(Stream, ParseErrorCallback)
@@ -35,7 +34,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.CreatingReadingAndSav
         private static string GetModifiedXml()
         {
             // Open valid xml file and modify it
-            using (TextReader reader = new StreamReader(dataDir + "IgnoreInvalidCharacters.xml"))
+            using (TextReader reader = new StreamReader(DataDir + "IgnoreInvalidCharacters.xml"))
             {
                 var xml = reader.ReadToEnd();
                 var regex = new Regex("PT(\\d+)H(\\d+)M(\\d+)S");

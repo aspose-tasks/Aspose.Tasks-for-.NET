@@ -6,12 +6,11 @@
     {
         public static void Run()
         {
-            var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
+            var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod());
 
             //ExStart:RetrieveCalendarExceptions
             //ExFor: Calendar.Exceptions
             //ExSummary: Shows how to retrieve info about calendar exceptions.
-            // Create project instance
             var project = new Project(dataDir + "project_RetrieveExceptions_test.mpp");
 
             // Iterate over calendars

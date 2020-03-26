@@ -12,8 +12,8 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.WorkingWithProjectPro
             //ExFor: Prj.MinutesPerDay
             //ExFor: Prj.MinutesPerWeek
             //ExSummary: Shows how to write project's weekday properties.
-            // The path to the documents directory.
-            var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
+
+            var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod());
 
             // Create a project instance
             var project = new Project(dataDir + "WriteWeekdayProperties.mpp");

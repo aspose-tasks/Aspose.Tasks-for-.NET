@@ -15,7 +15,7 @@ namespace Aspose.Tasks.Examples.CSharp.ConvertingProjectData
     {
         public static void Run()
         {
-            var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
+            var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod());
 
             //ExStart: AddDefaultFontDuringSavingAsPDF
             //ExFor: PdfSaveOptions.DefaultFontName

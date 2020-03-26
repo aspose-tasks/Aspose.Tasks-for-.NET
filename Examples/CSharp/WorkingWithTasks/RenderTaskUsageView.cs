@@ -15,12 +15,11 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithTasks
     {
         public static void Run()
         {
-            var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
+            var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod());
 
             //ExStart:RenderTaskUsageView
             //ExFor: TaskUsageView
             //ExSummary: Shows how to render task usage view.
-            // Create project instance
             var project = new Project(dataDir + "TaskUsageView.mpp");
 
             // Define the SaveOptions with required TimeScale settings as Days

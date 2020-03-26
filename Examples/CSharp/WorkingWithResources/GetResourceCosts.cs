@@ -6,8 +6,7 @@
     {
         public static void Run()
         {
-            // The path to the documents directory.
-            var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
+            var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod());
 
             //ExStart:GetResourceCosts
             //ExFor: Rsc.Cost
@@ -15,7 +14,6 @@
             //ExFor: Rsc.BCWS
             //ExFor: Rsc.BCWP
             //ExSummary: Shows how to read resource costs.
-            // Create project instance
             var project = new Project(dataDir + "ResourceCosts.mpp");
 
             // Display all resources costs

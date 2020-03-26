@@ -27,16 +27,15 @@
             task.Set(Tsk.Start, new DateTime(2012, 8, 1));
             task.Set(Tsk.Finish, new DateTime(2012, 8, 5));
 
-            Console.WriteLine("*************** Before Recalculate *****************");
+            Console.WriteLine("*************** Before Recalculation *****************");
             Console.WriteLine(task.Get(Tsk.Start));
             Console.WriteLine(task.Get(Tsk.Finish));
 
             project.Recalculate();
 
-            Console.WriteLine("*************** After Recalculate *****************");
+            Console.WriteLine("*************** After Recalculation *****************");
             Console.WriteLine(task.Get(Tsk.Start));
             Console.WriteLine(task.Get(Tsk.Finish));
-
             //ExEnd:ProjectRecalculations
         }
     }

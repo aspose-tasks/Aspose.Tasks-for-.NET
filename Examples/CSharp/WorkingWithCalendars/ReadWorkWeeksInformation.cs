@@ -14,13 +14,12 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithCalendars
     {
         public static void Run()
         {
-            var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
+            var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod());
             
             //ExStart:ReadWorkWeeksInformation
             //ExFor: WorkWeekCollection
             //ExFor: Calendar.WorkWeeks
             //ExSummary: Shows how to read work week information.
-            // Create project instance and access calendar and work weeks collection
             var project = new Project(dataDir + "ReadWorkWeeksInformation.mpp");
             var calendar = project.Calendars.GetByUid(3);
             var workWeeks = calendar.WorkWeeks;

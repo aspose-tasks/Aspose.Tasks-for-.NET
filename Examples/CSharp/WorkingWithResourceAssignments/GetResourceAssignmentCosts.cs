@@ -6,8 +6,7 @@
     {
         public static void Run()
         {
-            // The path to the documents directory.
-            var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
+            var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod());
 
             //ExStart:GetResourceAssignmentCosts
             //ExFor: Asn.Cost
@@ -15,7 +14,6 @@
             //ExFor: Asn.BCWP
             //ExFor: Asn.BCWS
             //ExSummary: Shows how to read assignment's costs.
-            // Create project instance
             var project = new Project(dataDir + "ResourceAssignmentCosts.mpp");
 
             // Print resource assignment costs

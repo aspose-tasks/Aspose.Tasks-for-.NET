@@ -14,8 +14,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithFormulas
 
     internal class UsingTasksAndResourceFieldsInFormulaCalculations
     {
-        // The path to the documents directory.
-        private static readonly string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
+        private static readonly string DataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod());
 
         //ExStart:UsingTasksAndResourceFieldsInFormulaCalculations
         //ExFor: ExtendedAttributeDefinition.Formula
@@ -34,7 +33,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithFormulas
 
                 // Set Task Deadline and save project
                 task.Set(Tsk.Deadline, new DateTime(2015, 3, 20, 17, 0, 0));
-                project.Save(dataDir + "project_UsingTasksAndResourceFields_out.mpp", SaveFileFormat.MPP);             
+                project.Save(DataDir + "project_UsingTasksAndResourceFields_out.mpp", SaveFileFormat.MPP);             
             }
             catch (Exception ex)
             {
@@ -46,7 +45,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithFormulas
         private static Project CreateTestProjectWithCustomField()
         {
             // Create new project instance
-            var project = new Project(dataDir + "Blank2010.mpp");
+            var project = new Project(DataDir + "Blank2010.mpp");
             project.Set(Prj.StartDate, new DateTime(2015, 3, 6, 8, 0, 0));
 
             // Add new task with extended attribute

@@ -16,11 +16,17 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects
     {
         public static void Run()
         {
-            // The path to the documents directory.
-            var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
+            var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod());
 
-            ReadOutlineCodes(dataDir);
-            CheckOutlineCodeIdUniqueness(dataDir);
+            try
+            {
+                ReadOutlineCodes(dataDir);
+                CheckOutlineCodeIdUniqueness(dataDir);
+            }
+            catch (NotSupportedException ex)
+            {
+                Console.WriteLine(ex.Message + "\nThis example will only work if you apply a valid Aspose License. You can purchase full license or get 30 day temporary license from http://www.aspose.com/purchase/default.aspx.");
+            }
         }
 
         private static void ReadOutlineCodes(string dataDir)

@@ -15,6 +15,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithFormulas
 
             // create new task extended attribute definition.
             var attribute = ExtendedAttributeDefinition.CreateTaskDefinition(CustomFieldType.Cost, ExtendedAttributeTask.Cost1, string.Empty);
+            
             // add a formula to the attribute.
             attribute.Formula  = "[Cost]-[Actual Cost]";
            

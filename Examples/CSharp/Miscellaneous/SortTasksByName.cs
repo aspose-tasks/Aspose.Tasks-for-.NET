@@ -15,14 +15,14 @@ namespace Aspose.Tasks.Examples.CSharp.Miscellaneous
 
     internal class SortTasksByName
     {
-        private static readonly string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
+        private static readonly string DataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod());
 
         //ExStart:SortTasksByName
         //ExFor: ChildTasksCollector
         //ExSummary: Shows how to sort tasks by name.
         public static void Run()
         {
-            var project = new Project(dataDir + "project-sort.mpp");
+            var project = new Project(DataDir + "project-sort.mpp");
             var coll = new ChildTasksCollector();
             TaskUtils.Apply(project.RootTask, coll, 0);
             List<Task> tasks = coll.Tasks;
@@ -39,6 +39,21 @@ namespace Aspose.Tasks.Examples.CSharp.Miscellaneous
         {
             public int Compare(Task x, Task y)
             {
+                if (x == null && y == null)
+                {
+                    return 0;
+                }
+
+                if (x == null)
+                {
+                    return -1;
+                }
+
+                if (y == null)
+                {
+                    return 1;
+                }
+
                 if (string.IsNullOrEmpty(x.Get(Tsk.Name)))
                 {
                     return 1;

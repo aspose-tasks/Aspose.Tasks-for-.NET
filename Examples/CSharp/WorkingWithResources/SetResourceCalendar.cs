@@ -14,13 +14,11 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithResources
     {
         public static void Run()
         {
-            // The path to the documents directory.
-            var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
+            var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod());
 
             //ExStart:SetResourceCalendar
             //ExFor: Rsc.Calendar
             //ExSummary: Shows how to set resource calendar.
-            // Create project instance and add resource
             var project = new Project();
             var res = project.Resources.Add("Resource1");
 

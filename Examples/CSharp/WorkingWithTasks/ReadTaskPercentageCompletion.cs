@@ -6,14 +6,13 @@
     {
         public static void Run()
         {
-            var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
+            var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod());
             
             //ExStart:ReadTaskPercentageCompletion
             //ExFor: Tsk.PercentComplete
             //ExFor: Tsk.PercentWorkComplete
             //ExFor: Tsk.PhysicalPercentComplete
             //ExSummary: Shows how to read task's percentages.
-            // Create project instance
             var project = new Project(dataDir + "TaskPercentageCompletion.mpp");
 
             // Access tasks and display percentage completion

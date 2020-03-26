@@ -11,7 +11,6 @@
             //ExFor: TaskBaseline.Start
             //ExFor: TaskBaseline.Finish
             //ExSummary: Shows how to get access to a baseline information.
-            // Create project instance
             var project = new Project();
 
             // Creating TaskBaseline

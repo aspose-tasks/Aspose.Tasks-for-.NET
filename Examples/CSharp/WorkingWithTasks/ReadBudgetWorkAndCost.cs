@@ -6,7 +6,7 @@
     {
         public static void Run()
         {
-            var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
+            var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod());
 
             //ExStart:ReadBudgetWorkAndCost
             //ExFor: Tsk.BudgetWork
@@ -16,7 +16,6 @@
             //ExFor: Asn.BudgetWork
             //ExFor: Asn.BudgetCost
             //ExSummary: Shows how to read budget work/cost values of task/resource/assignment.
-            // Create project instance
             var project = new Project(dataDir + "BudgetWorkAndCost.mpp");
 
             // Display budget work and budget cost for project summary task

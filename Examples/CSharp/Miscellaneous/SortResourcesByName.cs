@@ -5,14 +5,14 @@
 
     internal class SortResourcesByName
     {
-        private static readonly string dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
+        private static readonly string DataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod());
         
         //ExStart:SortResourcesByName
         //ExFor: Project.Resources
         //ExSummary: Shows how to sort resources by name.
         public static void Run()
         {
-            var project = new Project(dataDir + "project-sort.mpp");
+            var project = new Project(DataDir + "project-sort.mpp");
 
             List<Resource> resources = project.Resources.ToList();
             resources.Sort(new RscNameComparer());
@@ -27,6 +27,21 @@
         {
             public int Compare(Resource x, Resource y)
             {
+                if (x == null && y == null)
+                {
+                    return 0;
+                }
+
+                if (x == null)
+                {
+                    return -1;
+                }
+
+                if (y == null)
+                {
+                    return 1;
+                }
+
                 if (string.IsNullOrEmpty(x.Get(Rsc.Name)))
                 {
                     return 1;

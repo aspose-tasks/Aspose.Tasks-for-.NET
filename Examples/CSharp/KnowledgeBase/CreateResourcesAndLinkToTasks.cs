@@ -19,7 +19,7 @@ namespace Aspose.Tasks.Examples.CSharp.KnowledgeBase
         {
             try
             {
-                var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
+                var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod());
 
                 //ExStart:CreateResourcesAndLinkToTasks
                 //ExFor: ResourceCollection.Add(String)

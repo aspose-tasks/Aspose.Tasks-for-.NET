@@ -6,8 +6,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.WorkingWithProjectPro
     {
         public static void Run()
         {
-            // The path to the documents directory.
-            var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName);
+            var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod());
             
             //ExStart:ReadWeekdayProperties
             //ExFor: Prj.WeekStartDay
@@ -15,7 +14,6 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.WorkingWithProjectPro
             //ExFor: Prj.MinutesPerDay
             //ExFor: Prj.MinutesPerWeek
             //ExSummary: Shows how to read project's weekday properties.
-            // Create project instance
             var project = new Project(dataDir + "ReadWeekdayProperties.mpp");
 
             // Display week days properties
