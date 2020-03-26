@@ -17,6 +17,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.Miscellaneous
             var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod());
 
             //ExStart:ReadGroupDefinitionData
+            //ExFor: Project.TaskGroups
             //ExFor: GroupCollection
             //ExFor: GroupCriterionCollection
             //ExFor: Group

@@ -55,7 +55,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.ImportingAndExporting
                 //ExStart:ReadBrokenPrimaveraXmlStreamWithMultipleProjects
                 //ExFor: PrimaveraXmlReadingOptions
                 //ExFor: Project.#ctor(Stream,ParseErrorCallback,PrimaveraXmlReadingOptions)
-                //ExSummary: Shows how to read a project from a stream with Primavera XML file with multiple projects.
+                //ExSummary: Shows how to read a project from a stream with Primavera XML file with error parsing.
                 var options = new PrimaveraXmlReadingOptions();
                 options.ProjectUid = 4557;
                 using (var stream = new MemoryStream(brokenXmlFileBytes))
@@ -73,7 +73,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.ImportingAndExporting
                 //ExStart:ReadBrokenPrimaveraXmlFileWithMultipleProjects
                 //ExFor: PrimaveraXmlReadingOptions
                 //ExFor: Project.#ctor(String,ParseErrorCallback,PrimaveraXmlReadingOptions)
-                //ExSummary: Shows how to read a project from a stream with Primavera XML file with multiple projects.
+                //ExSummary: Shows how to read a project from a Primavera XML file with error parsing.
                 var options = new PrimaveraXmlReadingOptions();
                 options.ProjectUid = 4557;
                 

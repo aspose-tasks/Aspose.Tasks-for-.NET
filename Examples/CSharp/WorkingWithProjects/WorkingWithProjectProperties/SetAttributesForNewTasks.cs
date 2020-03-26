@@ -18,6 +18,8 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.WorkingWithProjectPro
             
             //ExStart:SetAttributesForNewTasks
             //ExFor: TaskStartDateType
+            //ExFor: Project.Set``1(Key{``0,PrjKey},``0)
+            //ExFor: Project.Set(Aspose.Tasks.Key{System.DateTime,Aspose.Tasks.PrjKey},System.DateTime)
             //ExFor: Prj.NewTaskStartDate
             //ExSummary: Shows how to set attributes for new tasks.
             // Create a project instance Set new task property and Save the project as XML project file

@@ -94,6 +94,7 @@
     <Compile Include="Miscellaneous\SortResourcesByName.cs" />
     <Compile Include="Miscellaneous\SortTasksByName.cs" />
     <Compile Include="Miscellaneous\UpdateOutlineCodes.cs" />
+    <Compile Include="Miscellaneous\WorkWithDurations.cs" />
     <Compile Include="Miscellaneous\WriteMetadataToMPP.cs" />
     <Compile Include="WorkingWithCalendarExceptions\AddRemoveCalendarExceptions.cs" />
     <Compile Include="WorkingWithCalendarExceptions\DefineWeekdayExceptions.cs" />
@@ -118,7 +119,13 @@
     <Compile Include="WorkingWithProjects\CreatingReadingAndSaving\UpdateInProjectServer.cs" />
     <Compile Include="WorkingWithProjects\GetPageCountOnStartAndEndDates.cs" />
     <Compile Include="WorkingWithProjects\CreatingReadingAndSaving\WorkingWithEncodings.cs" />
+    <Compile Include="WorkingWithProjects\Miscellaneous\GetProjectDefaultWeekWorkingDays.cs" />
+    <Compile Include="WorkingWithProjects\Miscellaneous\ProjectDisplayOptionsUsage.cs" />
+    <Compile Include="WorkingWithProjects\Miscellaneous\ReadWriteProjectCustomProperties.cs" />
+    <Compile Include="WorkingWithProjects\Miscellaneous\WorkWithBaselineSaveTime.cs" />
+    <Compile Include="WorkingWithProjects\ProjectCopying.cs" />
     <Compile Include="WorkingWithProjects\ProjectCreation.cs" />
+    <Compile Include="WorkingWithProjects\CreateProjectWithLoadOptions.cs" />
     <Compile Include="WorkingWithProjects\WorkingWithProjectProperties\ReadMetaProperties.cs" />
     <Compile Include="WorkingWithProjects\WorkingWithProjectViews\SaveWithDefaultGanttChartView.cs" />
     <Compile Include="WorkingWithProjects\WorkingWithProjectViews\SupportForTextStyle.cs" />

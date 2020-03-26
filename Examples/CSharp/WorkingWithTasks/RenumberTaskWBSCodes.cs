@@ -17,34 +17,64 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithTasks
         public static void Run()
         {
             var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod());
-            
-            //ExStart: RenumberTaskWBSCodes
-            //ExFor: Tsk.WBS
-            //ExFor: Project.RenumberWBSCode
-            //ExSummary: Shows how to renumber tasks' WBS codes.
-            var project = new Project(dataDir + "RenumberExample.mpp");
 
-            List<Task> tasks = project.RootTask.SelectAllChildTasks().ToList();
-
-            Console.WriteLine("WBS codes before: ");
-
-            // output: ""; "1"; "2"; "4"
-            foreach (var task in tasks)
             {
-                Console.WriteLine("\"" + task.Get(Tsk.WBS) + "\"" + "; ");
+                //ExStart: RenumberSelectedTasksWBSCodes
+                //ExFor: Tsk.WBS
+                //ExFor: Project.RenumberWBSCode(System.Collections.Generic.List{System.Int32})
+                //ExFor: Project.SelectAllChildTasks
+                //ExSummary: Shows how to renumber selected tasks' WBS codes.
+                var project = new Project(dataDir + "RenumberExample.mpp");
+
+                List<Task> tasks = project.RootTask.SelectAllChildTasks().ToList();
+
+                Console.WriteLine("WBS codes before: ");
+
+                // output: ""; "1"; "2"; "4"
+                foreach (var task in tasks)
+                {
+                    Console.WriteLine("\"" + task.Get(Tsk.WBS) + "\"" + "; ");
+                }
+
+                project.RenumberWBSCode(new List<int> { 1, 2, 3 });
+
+                Console.WriteLine("\nWBS codes after: ");
+
+                // output: ""; "1"; "2"; "3"
+                foreach (var task in tasks)
+                {
+                    Console.WriteLine("\"" + task.Get(Tsk.WBS) + "\"" + "; ");
+                }
+                //ExEnd: RenumberSelectedTasksWBSCodes
             }
 
-            // project.RenumberWBSCode(); // this overload could have used too
-            project.RenumberWBSCode(new List<int> { 1, 2, 3 });
-
-            Console.WriteLine("\nWBS codes after: ");
-
-            // output: ""; "1"; "2"; "3"
-            foreach (var task in tasks)
             {
-                Console.WriteLine("\"" + task.Get(Tsk.WBS) + "\"" + "; ");
+                //ExStart: RenumberSelectedTasksWBSCodes
+                //ExFor: Project.RenumberWBSCode()
+                //ExSummary: Shows how to renumber tasks' WBS codes.
+                var project = new Project(dataDir + "RenumberExample.mpp");
+
+                List<Task> tasks = project.RootTask.SelectAllChildTasks().ToList();
+
+                Console.WriteLine("WBS codes before: ");
+
+                // output: ""; "1"; "2"; "4"
+                foreach (var task in tasks)
+                {
+                    Console.WriteLine("\"" + task.Get(Tsk.WBS) + "\"" + "; ");
+                }
+
+                project.RenumberWBSCode();
+
+                Console.WriteLine("\nWBS codes after: ");
+
+                // output: ""; "1"; "2"; "3"
+                foreach (var task in tasks)
+                {
+                    Console.WriteLine("\"" + task.Get(Tsk.WBS) + "\"" + "; ");
+                }
+                //ExEnd: RenumberSelectedTasksWBSCodes
             }
-            //ExEnd: RenumberTaskWBSCodes
         }
     }
 }

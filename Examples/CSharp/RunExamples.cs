@@ -39,7 +39,7 @@ namespace Aspose.Tasks.Examples.CSharp
             Console.WriteLine("Open RunExamples.cs. \nIn Main() method, uncomment the example that you want to run");
             Console.WriteLine("=====================================================");
 
-            // RunAllExamples();
+            RunAllExamples();
             
             // License lic = new License();
             // lic.SetLicense(@"Aspose.Total.NET.lic");
@@ -198,6 +198,8 @@ namespace Aspose.Tasks.Examples.CSharp
 
             // CreateEmptyProjectSaveMPP.Run();
             // ProjectCreation.Run();
+            // ProjectCopying.Run();
+            // CreateProjectWithLoadOptions.Run();
             // AddImageToPageHeaderFooter.Run();
             // GetNumberOfPages.Run();
             // GetNumberOfPagesForViews.Run();
@@ -238,7 +240,7 @@ namespace Aspose.Tasks.Examples.CSharp
             // ImportProjectFromPrimaveraDB.Run();
             // ExportProjectDataToPrimaveraXML.Run(); 
 
-            // Miscellaneous
+            // Project's Miscellaneous
             // =====================================================
 
             // CalculateCriticalPath.Run();
@@ -249,6 +251,11 @@ namespace Aspose.Tasks.Examples.CSharp
             // ReadFilterDefinitionData.Run();
             // ReadGroupDefinitionData.Run();
             // ReadTableDataFromProjectFile.Run();
+            // ReadWriteProjectCustomProperties.Run();
+            // GetProjectDefaultWeekWorkingDays.Run();
+            // ProjectDisplayOptionsUsage.Run();
+            // WorkWithBaselineSaveTime.Run();
+            // WorkWithDurations.Run();
 
             // Printing
             // =====================================================
@@ -594,6 +601,8 @@ namespace Aspose.Tasks.Examples.CSharp
 
             CreateEmptyProjectSaveMPP.Run();
             ProjectCreation.Run();
+            ProjectCopying.Run();
+            CreateProjectWithLoadOptions.Run();
             AddImageToPageHeaderFooter.Run();
             GetNumberOfPages.Run();
             GetNumberOfPagesForViews.Run();
@@ -636,7 +645,7 @@ namespace Aspose.Tasks.Examples.CSharp
             ImportProjectFromPrimaveraDB.Run();
             ExportProjectDataToPrimaveraXML.Run(); 
 
-            // Miscellaneous
+            // Project's Miscellaneous
             // =====================================================
 
             CalculateCriticalPath.Run();
@@ -647,6 +656,11 @@ namespace Aspose.Tasks.Examples.CSharp
             ReadFilterDefinitionData.Run();
             ReadGroupDefinitionData.Run();
             ReadTableDataFromProjectFile.Run();
+            ReadWriteProjectCustomProperties.Run();
+            GetProjectDefaultWeekWorkingDays.Run();
+            ProjectDisplayOptionsUsage.Run();
+            WorkWithBaselineSaveTime.Run();
+            WorkWithDurations.Run();
 
             // Printing
             // =====================================================

@@ -17,19 +17,34 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects
         public static void Run()
         {
             var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod());
-            
-            //ExStart: GetPageCountOnStartAndEndDates
-            //ExFor: Project.GetPageCount(PageSize,Timescale,DateTime,DateTime)
-            //ExSummary: Shows how to get count of pages by page size, timescale, start and finish dates.
-            var project = new Project(dataDir + "GetNumberOfPages.mpp");
-            var pageCount = project.GetPageCount(
-                PageSize.A3,
-                Timescale.Months,
-                project.Get(Prj.StartDate) - TimeSpan.FromDays(10),
-                project.Get(Prj.FinishDate) + TimeSpan.FromDays(30));
 
-            Console.WriteLine(pageCount);
-            //ExEnd: GetPageCountOnStartAndEndDates
+            {
+                //ExStart: GetPageCountOnStartAndEndDates
+                //ExFor: Project.GetPageCount(PageSize,Timescale,DateTime,DateTime)
+                //ExSummary: Shows how to get count of pages by page size, timescale, start and finish dates.
+                var project = new Project(dataDir + "GetNumberOfPages.mpp");
+                var pageCount = project.GetPageCount(
+                    PageSize.A3,
+                    Timescale.Months,
+                    project.Get(Prj.StartDate) - TimeSpan.FromDays(10),
+                    project.Get(Prj.FinishDate) + TimeSpan.FromDays(30));
+
+                Console.WriteLine(pageCount);
+                //ExEnd: GetPageCountOnStartAndEndDates
+            }
+            
+            {
+                //ExStart: GetPageCountForDefaultProjectDates
+                //ExFor: Project.GetPageCount(PageSize,Timescale)
+                //ExSummary: Shows how to get count of pages by a page size and a timescale.
+                var project = new Project(dataDir + "GetNumberOfPages.mpp");
+                var pageCount = project.GetPageCount(
+                    PageSize.A3,
+                    Timescale.Months);
+
+                Console.WriteLine(pageCount);
+                //ExEnd: GetPageCountForDefaultProjectDates
+            }
         }
     }
 }

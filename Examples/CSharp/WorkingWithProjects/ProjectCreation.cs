@@ -10,7 +10,7 @@
         {
             var dataDir = RunExamples.GetDataDir(MethodBase.GetCurrentMethod());
             
-            //ExStart
+            //ExStart:ProjectCreation
             //ExFor: Project
             //ExSummary: Shows how to work with a <see cref="Aspose.Tasks.Project"/> instance.
             var project = new Project();
@@ -46,7 +46,7 @@
             // save project in the one of available formats
             // here we are saving it in Microsoft Project XML file format.
             project.Save(dataDir + "ProjectCreation_out.xml", SaveFileFormat.XML);
-            //ExEnd
+            //ExEnd:ProjectCreation
         }
     }
 }

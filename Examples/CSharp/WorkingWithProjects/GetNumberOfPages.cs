@@ -11,6 +11,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects
     using System;
 
     using Aspose.Tasks.Visualization;
+    using Saving;
 
     internal class GetNumberOfPages
     {
@@ -18,21 +19,41 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects
         {
             var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod());
 
-            //ExStart:GetNumberOfPages
-            //ExFor: Project.GetPageCount()
-            //ExFor: Project.GetPageCount(Timescale)
-            //ExSummary: Shows how to get page count for different timescales.
-            // Read the input Project file
-            var project = new Project(dataDir + "GetNumberOfPages.mpp");
+            {
+                //ExStart:GetNumberOfPages
+                //ExFor: Project.GetPageCount()
+                //ExFor: Project.GetPageCount(Timescale)
+                //ExSummary: Shows how to get page count for different timescales.
+                var project = new Project(dataDir + "GetNumberOfPages.mpp");
 
-            // Get number of pages, Timescale.Months, Timescale.ThirdsOfMonths
-            var pageCount = project.GetPageCount();
-            Console.WriteLine("Page count:" + pageCount);
-            pageCount = project.GetPageCount(Timescale.Months);
-            Console.WriteLine("Page count (Month):" + pageCount);
-            pageCount = project.GetPageCount(Timescale.ThirdsOfMonths);
-            Console.WriteLine("Page count (Thirds of Months):" + pageCount);
-            //ExEnd:GetNumberOfPages
+                // Get number of pages, Timescale.Months, Timescale.ThirdsOfMonths
+                var pageCount = project.GetPageCount();
+                Console.WriteLine("Page count:" + pageCount);
+                pageCount = project.GetPageCount(Timescale.Months);
+                Console.WriteLine("Page count (Month):" + pageCount);
+                pageCount = project.GetPageCount(Timescale.ThirdsOfMonths);
+                Console.WriteLine("Page count (Thirds of Months):" + pageCount);
+                //ExEnd:GetNumberOfPages
+            }
+
+            {
+                //ExStart:GetNumberOfPagesBySaveOptions
+                //ExFor: Project.GetPageCount(SaveOptions)
+                //ExSummary: Shows how to get page count for specific save options.
+                var project = new Project(dataDir + "GetNumberOfPages.mpp");
+                var options = new HtmlSaveOptions
+                {
+                    IncludeProjectNameInPageHeader = false,
+                    IncludeProjectNameInTitle = false,
+                    PageSize = PageSize.A4,
+                    Timescale = Timescale.Days,
+                    StartDate = project.Get(Prj.StartDate).Date,
+                    EndDate = project.Get(Prj.FinishDate).Date
+                };
+                
+                Console.WriteLine(project.GetPageCount(options));
+                //ExEnd:GetNumberOfPagesBySaveOptions
+            }
         }
     }
 }

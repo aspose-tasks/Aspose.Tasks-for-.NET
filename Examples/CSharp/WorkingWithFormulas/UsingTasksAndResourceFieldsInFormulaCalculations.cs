@@ -17,6 +17,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithFormulas
         private static readonly string DataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod());
 
         //ExStart:UsingTasksAndResourceFieldsInFormulaCalculations
+        //ExFor: Project.ExtendedAttributes
         //ExFor: ExtendedAttributeDefinition.Formula
         //ExSummary: Shows how to use extended attribute functions by using task's and/or resource's fields.
         public static void Run()

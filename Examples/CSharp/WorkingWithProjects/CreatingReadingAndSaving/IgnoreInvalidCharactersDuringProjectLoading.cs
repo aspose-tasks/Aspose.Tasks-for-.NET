@@ -27,7 +27,7 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.CreatingReadingAndSav
         }
 
         //ExStart:IgnoreInvalidCharactersDuringLoadingProjectFromStream
-        //ExFor: Project.#ctor(Stream, ParseErrorCallback)
+        //ExFor: Project.#ctor(String, ParseErrorCallback)
         //ExSummary: Shows how to read a project from a stream with XML file with invalid characters.
         private static void LoadProjectFromFile(string pathToModifiedXml)
         {

@@ -11,6 +11,7 @@
     //ExFor: IFontSavingCallback
     //ExFor: IImageSavingCallback
     //ExFor: CssSavingArgs
+    //ExFor: CssSavingArgs.#ctor
     //ExFor: FontSavingArgs
     //ExFor: ImageSavingArgs
     //ExSummary: Shows how to set resource prefixes for nested resources.

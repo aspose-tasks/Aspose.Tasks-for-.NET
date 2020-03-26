@@ -11,12 +11,14 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects
             var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod());
             
             //ExStart:GetNumberOfPagesForViews
+            //ExFor: Project.GetPageCount(PresentationFormat)
             //ExFor: Project.GetPageCount(PresentationFormat,Timescale)
             //ExSummary: Shows how to get count of pages by presentation format and timescale.
             // Read the source Project
             var project = new Project(dataDir + "GetNumberOfPagesForViews.mpp");
 
-            // Get number of pages,  Months and  ThirdsOfMonths
+            // Get number of pages for Days (by default), Months and ThirdsOfMonths
+            Console.WriteLine("Number of Pages = '{0}'", project.GetPageCount(PresentationFormat.ResourceUsage));
             Console.WriteLine("Number of Pages = '{0}'", project.GetPageCount(PresentationFormat.ResourceUsage, Timescale.Days));
             Console.WriteLine("Number of Pages = '{0}'", project.GetPageCount(PresentationFormat.ResourceUsage, Timescale.Months));
             Console.WriteLine("Number of Pages = '{0}'", project.GetPageCount(PresentationFormat.ResourceUsage, Timescale.ThirdsOfMonths));

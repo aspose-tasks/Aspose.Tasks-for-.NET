@@ -21,8 +21,8 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithTasks
                 var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod());
 
                 //ExStart:AddTaskExtendedAttributes
-                //ExFor: ExtendedAttributeDefinition.CreateTaskDefinition(CustomFieldType,ExtendedAttributeTask,String)
                 //ExFor: Task.ExtendedAttributes
+                //ExFor: ExtendedAttributeDefinition.CreateTaskDefinition(CustomFieldType,ExtendedAttributeTask,String)
                 //ExFor: ExtendedAttributeDefinition.AddLookupValue(Value)
                 //ExSummary: Shows how to work with task attributes.
                 // Create new project

@@ -9,8 +9,9 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.WorkingWithProjectPro
             var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod());  
 
             //ExStart:DetermineProjectVersion
-            //ExFor: Prj.SaveVersion
             //ExFor: Prj.LastSaved
+            //ExFor: Prj.SaveVersion
+            //ExFor: Project.Get``1(Key{``0,PrjKey})
             //ExSummary: Shows how to check a project version.
             // Read project from template file
             var project = new Project(dataDir + "DetermineProjectVersion.mpp");

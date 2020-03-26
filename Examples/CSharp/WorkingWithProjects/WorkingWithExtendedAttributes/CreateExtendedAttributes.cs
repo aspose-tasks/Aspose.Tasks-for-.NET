@@ -21,8 +21,9 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.WorkingWithExtendedAt
                 var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod());
 
                 //ExStart:CreateExtendedAttributes
-                //ExFor: ExtendedAttributeDefinition.CreateTaskDefinition(ExtendedAttributeTask,String)
+                //ExFor: Project.ExtendedAttributes
                 //ExFor: ExtendedAttributeDefinition.CreateExtendedAttribute
+                //ExFor: ExtendedAttributeDefinition.CreateTaskDefinition(ExtendedAttributeTask,String)
                 //ExSummary: Shows how to create extended attributes.
                 var project = new Project(dataDir + "Blank2010.mpp");
 

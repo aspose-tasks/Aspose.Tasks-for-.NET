@@ -20,6 +20,7 @@ namespace Aspose.Tasks.Examples.CSharp.KnowledgeBase
 
             //ExStart:AddNewTask
             //ExFor: Task
+            //ExFor: Project.RootTask
             //ExFor: Tsk.ActualStart
             //ExFor: Tsk.Duration
             //ExFor: Tsk.DurationFormat
