@@ -114,6 +114,8 @@
     <Compile Include="WorkingWithProjects\CreatingReadingAndSaving\ReadAndCreateInProjectServer.cs" />
     <Compile Include="WorkingWithProjects\CreatingReadingAndSaving\ReadingProjectOnline.cs" />
     <Compile Include="WorkingWithProjects\CreatingReadingAndSaving\CreateEmptyProjectSaveMPP.cs" />
+    <Compile Include="WorkingWithProjects\CreatingReadingAndSaving\UpdateProjectOnline.cs" />
+    <Compile Include="WorkingWithProjects\CreatingReadingAndSaving\UpdateInProjectServer.cs" />
     <Compile Include="WorkingWithProjects\GetPageCountOnStartAndEndDates.cs" />
     <Compile Include="WorkingWithProjects\CreatingReadingAndSaving\WorkingWithEncodings.cs" />
     <Compile Include="WorkingWithProjects\ProjectCreation.cs" />

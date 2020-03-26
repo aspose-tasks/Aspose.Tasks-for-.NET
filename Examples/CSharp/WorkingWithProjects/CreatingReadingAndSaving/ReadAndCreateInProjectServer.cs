@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Net;
-using System.Text;
 
 namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.CreatingReadingAndSaving
 {
@@ -12,11 +9,11 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.CreatingReadingAndSav
         {
             var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod());
             
-            ReadProjectFromProjectServer(dataDir);
+            ReadProjectFromProjectServer();
             CreateProjectInProjectServer(dataDir);
         }
 
-        public static void ReadProjectFromProjectServer(string dataDir)
+        public static void ReadProjectFromProjectServer()
         {
             try
             {
@@ -45,9 +42,9 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.CreatingReadingAndSav
 
         private static void CreateProjectInProjectServer(string dataDir)
         {
+            // ExStart:CreateProjectInProjectServer
             try
             {
-                // ExStart:CreateProjectInProjectServer
                 string url = "https://contoso.sharepoint.com";
                 string domain = "CONTOSO.COM";
                 string userName = "Administrator";
@@ -59,16 +56,52 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.CreatingReadingAndSav
                 var projectServerCredentials = new ProjectServerCredentials(url, windowsCredentials);
                 ProjectServerManager manager = new ProjectServerManager(projectServerCredentials);
                 manager.CreateNewProject(project);
-                // ExEnd:CreateProjectInProjectServer
             }
             catch (ProjectOnlineException ex)
             {
                 Console.WriteLine(ex.Message);
             }
+            // ExEnd:CreateProjectInProjectServer
             catch (NotSupportedException ex)
             {
                 Console.WriteLine(ex.Message + "\nThis example will only work if you apply a valid Aspose License. You can purchase full license or get 30 day temporary license from http://www.aspose.com/purchase/default.aspx.");
             }
         }
+        
+        private static void CreateProjectInProjectServerWithOptions(string dataDir)
+        {
+            // ExStart:CreateProjectInProjectServerWithOptions
+            try
+            {
+                string url = "https://contoso.sharepoint.com";
+                string domain = "CONTOSO.COM";
+                string userName = "Administrator";
+                string password = "MyPassword";
+
+                var project = new Project(dataDir + @"TestProject1.mpp");
+
+                var windowsCredentials = new NetworkCredential(userName, password, domain);
+                var projectServerCredentials = new ProjectServerCredentials(url, windowsCredentials);
+                ProjectServerManager manager = new ProjectServerManager(projectServerCredentials);
+                ProjectServerSaveOptions saveOptions = new ProjectServerSaveOptions()
+                {
+                    ProjectGuid = Guid.NewGuid(),
+                    ProjectName = "New project",
+                    Timeout = TimeSpan.FromMinutes(5)
+                };
+                
+                manager.CreateNewProject(project, saveOptions);
+            }
+            catch (ProjectOnlineException ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            // ExEnd:CreateProjectInProjectServerWithOptions
+            catch (NotSupportedException ex)
+            {
+                Console.WriteLine(ex.Message + "\nThis example will only work if you apply a valid Aspose License. You can purchase full license or get 30 day temporary license from http://www.aspose.com/purchase/default.aspx.");
+            }
+        }
+
     }
 }

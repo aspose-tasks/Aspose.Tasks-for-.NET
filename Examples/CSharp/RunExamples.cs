@@ -604,8 +604,10 @@ namespace Aspose.Tasks.Examples.CSharp
             SaveProjectDataAsTemplate.Run();
             ProjectRecalculations.Run();
             CreateProjectOnline.Run();
+            UpdateProjectOnline.Run();
             ReadingProjectOnline.Run();
             ReadAndCreateInProjectServer.Run();
+            UpdateInProjectServer.Run();
 
             // Creating, Reading and Saving
             // =====================================================
