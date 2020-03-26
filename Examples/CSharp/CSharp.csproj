@@ -110,6 +110,8 @@
     <Compile Include="WorkingWithFormulas\CalculateGeneralFunctions.cs" />
     <Compile Include="WorkingWithFormulas\CalculateMathExpressions.cs" />
     <Compile Include="WorkingWithFormulas\CalculateTextFunctions.cs" />
+    <Compile Include="WorkingWithProjects\CreatingReadingAndSaving\CreateProjectOnline.cs" />
+    <Compile Include="WorkingWithProjects\CreatingReadingAndSaving\ReadAndCreateInProjectServer.cs" />
     <Compile Include="WorkingWithProjects\CreatingReadingAndSaving\ReadingProjectOnline.cs" />
     <Compile Include="WorkingWithProjects\CreatingReadingAndSaving\CreateEmptyProjectSaveMPP.cs" />
     <Compile Include="WorkingWithProjects\GetPageCountOnStartAndEndDates.cs" />

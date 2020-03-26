@@ -31,9 +31,9 @@
                 }
                 //ExEnd:ReadingProjectOnline
             }
-            catch (ProjectOnlineException e)
+            catch (ProjectOnlineException ex)
             {
-                Console.WriteLine(e.Message);
+                Console.WriteLine(ex.Message);
             }
         }
     }

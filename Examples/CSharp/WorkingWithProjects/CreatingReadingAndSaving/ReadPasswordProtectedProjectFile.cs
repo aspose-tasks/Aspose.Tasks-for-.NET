@@ -9,19 +9,34 @@ please feel free to contact us using https://forum.aspose.com/c/tasks
 namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.CreatingReadingAndSaving
 {
     using System;
+    using System.IO;
 
     internal class ReadPasswordProtectedProjectFile
     {
         public static void Run()
         {
             var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod());
-            
-            //ExStart:ReadingPasswordProtectedProjectFile
-            //ExFor: Project.#ctor(String,String)
-            //ExSummary: Shows how to read password protected MPP files.
-            var project = new Project(dataDir + "PasswordProtectedProject.mpp", "password");
-            Console.WriteLine(project.Get(Prj.Name));
-            //ExEnd:ReadingPasswordProtectedProjectFile
+
+            {
+                //ExStart:ReadingPasswordProtectedProjectFile
+                //ExFor: Project.#ctor(String,String)
+                //ExSummary: Shows how to read password protected MPP files.
+                var project = new Project(dataDir + "PasswordProtectedProject.mpp", "password");
+                Console.WriteLine(project.Get(Prj.Name));
+                //ExEnd:ReadingPasswordProtectedProjectFile
+            }
+
+            {
+                //ExStart:ReadingPasswordProtectedProjectStream
+                //ExFor: Project.#ctor(Stream,String)
+                //ExSummary: Shows how to read password protected MPP files from a stream.
+                using (var fileStream = new FileStream(dataDir + "PasswordProtectedProject.mpp", FileMode.Open))
+                {
+                    var project = new Project(fileStream, "password");
+                    Console.WriteLine(project.Get(Prj.Name));
+                }
+                //ExEnd:ReadingPasswordProtectedProjectStream
+            }
         }
     }
 }

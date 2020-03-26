@@ -39,7 +39,7 @@ namespace Aspose.Tasks.Examples.CSharp
             Console.WriteLine("Open RunExamples.cs. \nIn Main() method, uncomment the example that you want to run");
             Console.WriteLine("=====================================================");
 
-            RunAllExamples();
+            // RunAllExamples();
             
             // License lic = new License();
             // lic.SetLicense(@"Aspose.Total.NET.lic");
@@ -207,7 +207,9 @@ namespace Aspose.Tasks.Examples.CSharp
             // WorkingWithOutlineCodes.Run();
             // SaveProjectDataAsTemplate.Run();
             // ProjectRecalculations.Run();
+            // CreateProjectOnline.Run();
             // ReadingProjectOnline.Run();
+            // ReadAndCreateInProjectServer.Run();
 
             // Creating, Reading and Saving
             // =====================================================
@@ -601,7 +603,9 @@ namespace Aspose.Tasks.Examples.CSharp
             WorkingWithOutlineCodes.Run();
             SaveProjectDataAsTemplate.Run();
             ProjectRecalculations.Run();
+            CreateProjectOnline.Run();
             ReadingProjectOnline.Run();
+            ReadAndCreateInProjectServer.Run();
 
             // Creating, Reading and Saving
             // =====================================================
@@ -626,7 +630,7 @@ namespace Aspose.Tasks.Examples.CSharp
             ExportProjectDataToP6XMLFormat.Run();
             ImportDataFromXMLFileFormats.Run();
             ImportProjectFromPrimaveraDBSQLite.Run();
-            ImportProjectDataFromMPDFile.Run();
+            // ImportProjectDataFromMPDFile.Run();
             ImportProjectFromPrimaveraDB.Run();
             ExportProjectDataToPrimaveraXML.Run(); 
 
@@ -704,7 +708,7 @@ namespace Aspose.Tasks.Examples.CSharp
             AddExtendedAttributesToResourceAssignment.Run();
             AddExtendedAttributesToRAWithLookUp.Run();
             CreateResourceAssignments.Run();
-            GenerateResourceAssignmentTimephasedData.Run();
+            // GenerateResourceAssignmentTimephasedData.Run();
             GetGeneralResourceAssignmentProperties.Run();
             GetResourceAssignmentBudget.Run();
             GetResourceAssignmentCosts.Run();

@@ -1,25 +1,31 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.CreatingReadingAndSaving
+﻿namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.CreatingReadingAndSaving
 {
-    class CreateProjectOnline
+    using System;
+
+    internal class CreateProjectOnline
     {
         public static void Run()
         {
-            // ExStart:CreateProjectOnline
-            string sharepointDomainAddress = "https://contoso.sharepoint.com";
-            string userName = "admin@contoso.onmicrosoft.com";
-            string password = "MyPassword";
+            var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod());
 
-            var credentials = new ProjectServerCredentials(sharepointDomainAddress, userName, password);
+            try
+            {
+                // ExStart:CreateProjectOnline
+                string sharepointDomainAddress = "https://contoso.sharepoint.com";
+                string userName = "admin@contoso.onmicrosoft.com";
+                string password = "MyPassword";
 
-            var project = new Project(@"sample.mpp");
+                var credentials = new ProjectServerCredentials(sharepointDomainAddress, userName, password);
 
-            ProjectServerManager manager = new ProjectServerManager(credentials);
-            manager.CreateNewProject(project);
+                var project = new Project(dataDir + @"TestProject1.mpp");
+
+                ProjectServerManager manager = new ProjectServerManager(credentials);
+                manager.CreateNewProject(project);
+            }
+            catch (ProjectOnlineException ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
             // ExEnd:CreateProjectOnline
         }
     }
