@@ -120,12 +120,19 @@
     <Compile Include="WorkingWithProjects\GetPageCountOnStartAndEndDates.cs" />
     <Compile Include="WorkingWithProjects\CreatingReadingAndSaving\WorkingWithEncodings.cs" />
     <Compile Include="WorkingWithProjects\Miscellaneous\GetProjectDefaultWeekWorkingDays.cs" />
+    <Compile Include="WorkingWithProjects\Miscellaneous\GetWorkWithDefaultProjectFormat.cs" />
     <Compile Include="WorkingWithProjects\Miscellaneous\ProjectDisplayOptionsUsage.cs" />
     <Compile Include="WorkingWithProjects\Miscellaneous\ReadWriteProjectCustomProperties.cs" />
+    <Compile Include="WorkingWithProjects\Miscellaneous\ProjectRemoveInvalidAssignments.cs" />
     <Compile Include="WorkingWithProjects\Miscellaneous\WorkWithBaselineSaveTime.cs" />
+    <Compile Include="WorkingWithProjects\Printing\PrintPrinterSettings.cs" />
+    <Compile Include="WorkingWithProjects\Printing\PrintPrinterSettingsAndDocumentName.cs" />
     <Compile Include="WorkingWithProjects\ProjectCopying.cs" />
     <Compile Include="WorkingWithProjects\ProjectCreation.cs" />
     <Compile Include="WorkingWithProjects\CreateProjectWithLoadOptions.cs" />
+    <Compile Include="WorkingWithProjects\Rescheduling\ProjectRecalculateResourceFields.cs" />
+    <Compile Include="WorkingWithProjects\Rescheduling\ProjectRecalculateResourceStartFinish.cs" />
+    <Compile Include="WorkingWithProjects\Rescheduling\ProjectRecalculateWithValidation.cs" />
     <Compile Include="WorkingWithProjects\WorkingWithProjectProperties\ReadMetaProperties.cs" />
     <Compile Include="WorkingWithProjects\WorkingWithProjectViews\SaveWithDefaultGanttChartView.cs" />
     <Compile Include="WorkingWithProjects\WorkingWithProjectViews\SupportForTextStyle.cs" />
@@ -134,6 +141,7 @@
     <Compile Include="WorkingWithResourceAssignments\ReadWriteRateScaleForResourceAssignment.cs" />
     <Compile Include="WorkingWithResourceAssignments\AddExtendedAttributesToResourceAssignment.cs" />
     <Compile Include="WorkingWithResources\ResourcePrefixForNestedResources.cs" />
+    <Compile Include="WorkingWithTaskLinks\WorkWithPredecessors.cs" />
     <Compile Include="WorkingWithTasks\AddWBSCodes.cs" />
     <Compile Include="WorkingWithProjects\CreatingReadingAndSaving\CreateEmptyProjectSaveStream.cs" />
     <Compile Include="WorkingWithProjects\CreatingReadingAndSaving\ReadPasswordProtectedProjectFile.cs" />
@@ -207,7 +215,7 @@
     <Compile Include="WorkingWithTaskBaselines\GetTaskBaselineDuration.cs" />
     <Compile Include="WorkingWithTaskLinks\CreateTaskLinks.cs" />
     <Compile Include="WorkingWithTaskLinks\GetCrossProjectTaskLinks.cs" />
-    <Compile Include="WorkingWithTaskLinks\GetPredecessorSuccessorTasks.cs" />
+    <Compile Include="WorkingWithTaskLinks\WorkWithTaskLinks.cs" />
     <Compile Include="WorkingWithTaskLinks\GetTaskLinkType.cs" />
     <Compile Include="WorkingWithTaskLinks\IdentifyCrossProjectTasks.cs" />
     <Compile Include="WorkingWithTaskLinks\SetTaskLinkType.cs" />

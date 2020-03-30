@@ -9,6 +9,7 @@ please feel free to contact us using https://forum.aspose.com/c/tasks
 namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.ImportingAndExporting
 {
     using System;
+    using System.IO;
 
     internal class ImportDataFromXMLFileFormats
     {
@@ -16,17 +17,37 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.ImportingAndExporting
         {
             var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod());
 
-            //ExStart:ImportDataFromXMLFileFormats
-            //ExFor: Project.GetProjectFileInfo(String)
-            //ExFor: ProjectFileInfo.CanRead
-            //ExFor: ProjectFileInfo.ProjectFileFormat
-            //ExFor: ProjectFileInfo.ProjectApplicationInfo
-            //ExSummary: Shows how to import a project from XML format.
-            var info = Project.GetProjectFileInfo(dataDir + "Project.xml");
-            Console.WriteLine("CanRead: " + info.CanRead);
-            Console.WriteLine("ProjectApplicationInfo: " + info.ProjectApplicationInfo);
-            Console.WriteLine("ProjectFileFormat: " + info.ProjectFileFormat);
-            //ExEnd:ImportDataFromXMLFileFormats
+            {
+                //ExStart:ImportDataFromXMLFileFormats
+                //ExFor: Project.GetProjectFileInfo(String)
+                //ExFor: ProjectFileInfo
+                //ExFor: ProjectFileInfo.CanRead
+                //ExFor: ProjectFileInfo.ProjectFileFormat
+                //ExFor: ProjectFileInfo.ProjectApplicationInfo
+                //ExSummary: Shows how to read project file info were read from an XML file.
+                var info = Project.GetProjectFileInfo(dataDir + "Project.xml");
+                Console.WriteLine("CanRead: " + info.CanRead);
+                Console.WriteLine("ProjectApplicationInfo: " + info.ProjectApplicationInfo);
+                Console.WriteLine("ProjectFileFormat: " + info.ProjectFileFormat);
+                //ExEnd:ImportDataFromXMLFileFormats
+            }
+
+            {
+                //ExStart
+                //ExFor: Project.GetProjectFileInfo(Stream)
+                //ExFor: ProjectFileInfo.CanRead
+                //ExFor: ProjectFileInfo.ProjectFileFormat
+                //ExFor: ProjectFileInfo.ProjectApplicationInfo
+                //ExSummary: Shows how to read project file info were read from a stream with an XML file.
+                using (var stream = new FileStream(dataDir + "Project.xml", FileMode.Open))
+                {
+                    var info = Project.GetProjectFileInfo(stream);
+                    Console.WriteLine("CanRead: " + info.CanRead);
+                    Console.WriteLine("ProjectApplicationInfo: " + info.ProjectApplicationInfo);
+                    Console.WriteLine("ProjectFileFormat: " + info.ProjectFileFormat);
+                }
+                //ExEnd
+            }
         }
     }
 }

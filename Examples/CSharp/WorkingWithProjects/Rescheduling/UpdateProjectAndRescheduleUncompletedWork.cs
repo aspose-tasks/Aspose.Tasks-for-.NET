@@ -9,7 +9,7 @@ please feel free to contact us using https://forum.aspose.com/c/tasks
 namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.Rescheduling
 {
     using System;
-
+    using System.Collections.Generic;
     using Aspose.Tasks.Saving;
 
     internal class UpdateProjectAndRescheduleUncompletedWork
@@ -20,9 +20,10 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.Rescheduling
 
             //ExStart:UpdateProjectAndRescheduleUncompletedWork
             //ExFor: Project.UpdateProjectWorkAsComplete(DateTime,bool)
+            //ExFor: Project.UpdateProjectWorkAsComplete(DateTime,bool,List{Aspose.Tasks.Task})
             //ExFor: Project.RescheduleUncompletedWorkToStartAfter(DateTime)
-            //ExSummary: Shows how to update the project and reschedule uncomplete work.
-            // Create a new project and set start date
+            //ExFor: Project.RescheduleUncompletedWorkToStartAfter(DateTime,List{Aspose.Tasks.Task})
+            //ExSummary: Shows how to update the project and reschedule uncompleted work.
             var project = new Project();
             project.Set(Prj.StartDate, new DateTime(2014, 1, 27, 8, 0, 0));
 
@@ -69,12 +70,23 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.Rescheduling
             
             // Save project before and after updating work as completed 
             project.Save(dataDir + "RescheduleUncompletedWork_not updated_out.xml", SaveFileFormat.XML);
+            
+            // Save project after updating project work as complete only for specified tasks
+            project.UpdateProjectWorkAsComplete(new DateTime(2014, 1, 28, 17, 0, 0), false, new List<Task> { task10 });
+            project.Save(dataDir + "RescheduleUncompletedWork_specific_updated_out.xml", SaveFileFormat.XML);
+            
+            // Save project after updating all project work as complete
             project.UpdateProjectWorkAsComplete(new DateTime(2014, 1, 28, 17, 0, 0), false);
             project.Save(dataDir + "RescheduleUncompletedWork_updated_out.xml", SaveFileFormat.XML);
 
+            // Save project after rescheduling uncompleted work only for specified tasks
+            project.RescheduleUncompletedWorkToStartAfter(new DateTime(2014, 2, 8, 8, 0, 0), new List<Task> { task10 });
+            project.Save(dataDir + "RescheduleUncompletedWork_specific_rescheduled_out.xml", SaveFileFormat.XML);
+            
             // Save project after rescheduling uncompleted work
             project.RescheduleUncompletedWorkToStartAfter(new DateTime(2014, 2, 7, 8, 0, 0));
             project.Save(dataDir + "RescheduleUncompletedWork_rescheduled_out.xml", SaveFileFormat.XML);
+
             //ExEnd:UpdateProjectAndRescheduleUncompletedWork
         }
     }

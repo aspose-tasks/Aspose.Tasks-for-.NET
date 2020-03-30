@@ -28,8 +28,8 @@ namespace Aspose.Tasks.Examples.CSharp.WorkingWithProjects.Rescheduling
 
             // Now all tasks dates (Start, Finish, EarlyStart, EarlyFinish, LateStart, LateFinish) are calculated. To get the critical path we need to calculate slacks (can be invoked in separate thread, but only after calculation of all early/late dates)
             project.Recalculate();
-            var criticalPath = project.CriticalPath;
-            foreach (var task in criticalPath)
+
+            foreach (var task in project.CriticalPath)
             {
                 Console.WriteLine(task.Get(Tsk.Id));
                 Console.WriteLine(task.Get(Tsk.Name));

@@ -126,6 +126,7 @@ namespace Aspose.Tasks.Examples.CSharp
             // ApplyLicenseUsingFile.Run();
             // ApplyLicenseUsingStream.Run();
             // EvaluationDateTimeLimitations.Run();
+            // GetWorkWithDefaultProjectFormat.Run();
 
             // =====================================================
             // =====================================================
@@ -256,6 +257,10 @@ namespace Aspose.Tasks.Examples.CSharp
             // ProjectDisplayOptionsUsage.Run();
             // WorkWithBaselineSaveTime.Run();
             // WorkWithDurations.Run();
+            // ProjectRecalculateWithValidation.Run();
+            // ProjectRecalculateResourceStartFinish.Run();
+            // ProjectRecalculateResourceFields.Run();
+            // ProjectRemoveInvalidAssignments.Run();
 
             // Printing
             // =====================================================
@@ -264,6 +269,8 @@ namespace Aspose.Tasks.Examples.CSharp
             // PrintTheProject.Run();
             // PrintLargeFiles.Run();
             // PrintPrintOptionsAndPrinterSettings.Run();
+            // PrintPrinterSettingsAndDocumentName.Run();
+            // PrintPrinterSettings.Run();
 
             // Rescheduling
             // =====================================================
@@ -370,10 +377,11 @@ namespace Aspose.Tasks.Examples.CSharp
 
             // CreateTaskLinks.Run();
             // GetCrossProjectTaskLinks.Run();
-            // GetPredecessorSuccessorTasks.Run();
+            // WorkWithTaskLinks.Run();
             // GetTaskLinkType.Run();
-            // IdentifyCrossProjectTasks.Run();
             // SetTaskLinkType.Run();
+            // IdentifyCrossProjectTasks.Run();
+            // WorkWithPredecessors.Run();
 
             // =====================================================
             // =====================================================
@@ -529,6 +537,7 @@ namespace Aspose.Tasks.Examples.CSharp
             ApplyLicenseUsingFile.Run();
             ApplyLicenseUsingStream.Run();
             EvaluationDateTimeLimitations.Run();
+            GetWorkWithDefaultProjectFormat.Run();
 
             // =====================================================
             // =====================================================
@@ -661,6 +670,10 @@ namespace Aspose.Tasks.Examples.CSharp
             ProjectDisplayOptionsUsage.Run();
             WorkWithBaselineSaveTime.Run();
             WorkWithDurations.Run();
+            ProjectRecalculateWithValidation.Run();
+            ProjectRecalculateResourceStartFinish.Run();
+            ProjectRecalculateResourceFields.Run();
+            ProjectRemoveInvalidAssignments.Run();
 
             // Printing
             // =====================================================
@@ -669,6 +682,8 @@ namespace Aspose.Tasks.Examples.CSharp
             // PrintTheProject.Run();
             // PrintLargeFiles.Run();
             // PrintPrintOptionsAndPrinterSettings.Run();
+            // PrintPrinterSettingsAndDocumentName.Run();
+            // PrintPrinterSettings.Run();
 
             // Rescheduling
             // =====================================================
@@ -775,10 +790,11 @@ namespace Aspose.Tasks.Examples.CSharp
 
             CreateTaskLinks.Run();
             GetCrossProjectTaskLinks.Run();
-            GetPredecessorSuccessorTasks.Run();
-            GetTaskLinkType.Run();
+            WorkWithTaskLinks.Run();
             IdentifyCrossProjectTasks.Run();
+            GetTaskLinkType.Run();
             SetTaskLinkType.Run();
+            WorkWithPredecessors.Run();
 
             // =====================================================
             // =====================================================

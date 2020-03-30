@@ -2,16 +2,17 @@
 {
     using System;
 
-    internal class GetPredecessorSuccessorTasks
+    internal class WorkWithTaskLinks
     {
         public static void Run()
         {
             var dataDir = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod());
             
-            //ExStart:GetPredecessorSuccessorTasks
+            //ExStart:WorkWithTaskLinks
+            //ExFor: Project.TaskLinks
             //ExFor: TaskLink.PredTask
             //ExFor: TaskLink.SuccTask
-            //ExSummary: Shows how to read predecessor/successor by task links.
+            //ExSummary: Shows how to read project task links.
             var project = new Project(dataDir + "GetPredecessorSuccessorTasks.mpp");
 
             // Display names of predecessor and successor tasks
@@ -20,7 +21,7 @@
                 Console.WriteLine("Predecessor " + taskLink.PredTask.Get(Tsk.Name));
                 Console.WriteLine("Successor " + taskLink.SuccTask.Get(Tsk.Name));
             }
-            //ExEnd:GetPredecessorSuccessorTasks
+            //ExEnd:WorkWithTaskLinks
         }
     }
 }
