@@ -1,6 +1,7 @@
 ﻿namespace Aspose.Tasks.Examples.CSharp.WorkingWithTasks
 {
     using System;
+    using Util;
 
     internal class ReadBudgetWorkAndCost
     {
@@ -30,16 +31,21 @@
             rsc = project.Resources.GetByUid(7);
             Console.WriteLine("Resource BudgetCost = " + rsc.Get(Rsc.BudgetCost));
 
-            // Display assignment budget work and budget cost
-            foreach (var assn in project.RootTask.Assignments)
+            ChildTasksCollector collector = new ChildTasksCollector();
+            TaskUtils.Apply(project.RootTask, collector, 0);
+            foreach (Task tsk in collector.Tasks)
             {
-                if (assn.Get(Asn.Resource).Get(Rsc.Type) == ResourceType.Work)
+                // Display assignment budget work and budget cost
+                foreach (var assignment in tsk.Assignments)
                 {
-                    Console.WriteLine("Assignment BudgetWork = " + assn.Get(Asn.BudgetWork));
-                }
-                else
-                {
-                    Console.WriteLine("Assignment BudgetCost = " + assn.Get(Asn.BudgetCost));
+                    if (assignment.Get(Asn.Resource).Get(Rsc.Type) == ResourceType.Work)
+                    {
+                        Console.WriteLine("Assignment BudgetWork = " + assignment.Get(Asn.BudgetWork));
+                    }
+                    else
+                    {
+                        Console.WriteLine("Assignment BudgetCost = " + assignment.Get(Asn.BudgetCost));
+                    }
                 }
             }
             //ExEnd:ReadBudgetWorkAndCost
