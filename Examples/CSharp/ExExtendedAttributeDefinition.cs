@@ -11,7 +11,6 @@
         public void AccessReadOnlyCustomFieldValuesUsingFormulas()
         {
             //ExStart:AccessReadOnlyCustomFieldValuesUsingFormulas
-            //ExFor: ExtendedAttributeDefinition.Formula
             //ExFor: ExtendedAttribute.ValueReadOnly
             //ExSummary: Shows how to add read-only custom field values by using formulas.
             var project = new Project();
@@ -41,7 +40,6 @@
         public void CalculateDateTimeFunctions()
         {
             //ExStart:CalculateDateTimeFunctions
-            //ExFor: ExtendedAttributeDefinition.Formula
             //ExFor: ExtendedAttribute.DurationValue
             //ExFor: ExtendedAttribute.TextValue
             //ExSummary: Shows how to add extended attributes that uses MS Project date/time formulas.
@@ -80,7 +78,6 @@
             Console.WriteLine(dateAttribute.DateValue);
 
             // We can set ProjDurConv formula to duration-valued attribute as well as to text-valued attribute.
-
             // Set ProjDurConv formula to duration-valued extended attribute and print its value.
             durationDefinition.Formula = "ProjDurConv([Duration], pjHours)";
             Console.WriteLine(durationAttribute.DurationValue);
@@ -298,7 +295,7 @@
             
             // Print if formula value is computed correctly
             var task = project.RootTask.Children.GetById(1);
-            Console.WriteLine("Check Total tasks: 1 Total resources: 0 - {0}", task.ExtendedAttributes[0].TextValue.Equals("Total tasks: 1 Total resources: 0"));            
+            Console.WriteLine("Check Total tasks: 1 Total resources: 0 - {0}", task.ExtendedAttributes[0].TextValue.Equals("Total tasks: 1 Total resources: 0"));
         }
 
         private static Project CreateTestProjectWithCustomFieldWithoutResource()
@@ -314,20 +311,6 @@
             return project;
         }
         //ExEnd:FormulaWithProjectFields
-        
-        [Test]
-        public void ReadFormulasExtendedAttributesFromMpp()
-        {
-            //ExStart:ReadFormulasExtendedAttributesFromMpp
-            //ExFor: ExtendedAttributeDefinition.Formula
-            //ExSummary: Shows how to read extended attribute formulas.
-            var project = new Project(DataDir + "ReadFormulas.mpp"); // Attached test mpp
-           
-            // Read extended attribute formula
-            var attribute = project.ExtendedAttributes[0];
-            Console.WriteLine("Attribute Formula: " + attribute.Formula);
-            //ExEnd:ReadFormulasExtendedAttributesFromMpp
-        }
         
         [Test]
         public void UsingArithmeticExpression()
@@ -414,7 +397,7 @@
 
                 // Set Task Deadline and save project
                 task.Set(Tsk.Deadline, new DateTime(2015, 3, 20, 17, 0, 0));
-                project.Save(OutDir + "project_UsingTasksAndResourceFields_out.mpp", SaveFileFormat.MPP);             
+                project.Save(OutDir + "project_UsingTasksAndResourceFields_out.mpp", SaveFileFormat.MPP);
             }
             catch (Exception ex)
             {
@@ -535,7 +518,7 @@
             try
             {
                 //ExStart: AddExtendedAttributesToResourceAssignment
-                //ExFor: ExtendedAttributeDefinition.CreateTaskDefinition(CustomFieldType,ExtendedAttributeTask,String)
+                //ExFor: ExtendedAttributeDefinition.CreateResourceDefinition(CustomFieldType,ExtendedAttributeResource,String)
                 //ExSummary: Shows how to add extended attribute to a resource assignment.
                 var project = new Project(DataDir + "Blank2010.mpp");
 

@@ -173,5 +173,25 @@
             }
         }
         //ExEnd:ResourcePrefixForNestedResources
+        
+        [Test]
+        public void SaveProjectDataAsHTML()
+        {
+            //ExStart:SaveProjectDataAsHTML
+            //ExFor: HtmlSaveOptions
+            //ExFor: HtmlSaveOptions.#ctor
+            //ExSummary: Shows how to save a project in HTML format.
+            var project = new Project(DataDir + "CreateProject2.mpp");
+            var option = new HtmlSaveOptions();
+            project.Save(OutDir + "SaveProjectDataAsHTML_out.html", option);
+
+            // OR
+
+            // Adding only one page (page number 2)
+            option = new HtmlSaveOptions();            
+            option.Pages.Add(2); 
+            project.Save(OutDir + "SaveProjectDataAsHTML2_out.html", option);
+            //ExEnd:SaveProjectDataAsHTML
+        }
     }
 }

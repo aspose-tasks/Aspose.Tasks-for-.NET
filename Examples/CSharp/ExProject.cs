@@ -53,19 +53,44 @@
         {
             //ExStart:SaveProjectOverviewReport
             //ExFor: Project.SaveReport(String)
-            //ExFor: Project.SaveReport(Stream)
-            //ExSummary: Shows how to save the project overview report to PDF file.
+            //ExSummary: Shows how to save the project overview report to PDF file into a stream.
             var project = new Project(DataDir + "Cyclic stucture.mpp");
             
             // one can save the overview report to PDF file to the specified path
             project.SaveReport(OutDir + "SaveProjectOverviewReport_out.pdf");
+            //ExEnd:SaveProjectOverviewReport
+        }
+        
+        [Test]
+        public void SaveProjectOverviewReport2()
+        {
+            //ExStart:SaveProjectOverviewReportStream
+            //ExFor: Project.SaveReport(Stream)
+            //ExSummary: Shows how to save the project overview report to PDF file.
+            var project = new Project(DataDir + "Cyclic stucture.mpp");
             
-            // or save the overview report to PDF file to the specified stream.
+            // save the overview report to PDF file to the specified stream.
             using (var stream = new FileStream(OutDir + "SaveProjectOverviewReport_out.pdf", FileMode.Create))
             {
                 project.SaveReport(stream);
             }
-            //ExEnd:SaveProjectOverviewReport
+            //ExEnd:SaveProjectOverviewReportStream
+        }
+        
+        [Test]
+        public void SaveProjectOverviewReport3()
+        {
+            //ExStart:SaveProjectOverviewReportStream
+            //ExFor: Project.SaveReport(Stream,ReportType)
+            //ExSummary: Shows how to save the project report to PDF file for specific report type.
+            var project = new Project(DataDir + "Cyclic stucture.mpp");
+            
+            // save the overview report to PDF file to the specified stream.
+            using (var stream = new FileStream(OutDir + "SaveProjectOverviewReport_out.pdf", FileMode.Create))
+            {
+                project.SaveReport(stream, ReportType.Burndown);
+            }
+            //ExEnd:SaveProjectOverviewReportStream
         }
 
         [Test]
@@ -98,193 +123,7 @@
             Console.WriteLine("Created duration: " + duration);
             //ExEnd:GetDefaultDurationFromProject
         }
-        
-        [Test]
-        public void SaveBestPracticeAnalyzerReport()
-        {
-            //ExStart:SaveBestPracticeAnalyzerReport
-            //ExFor: Project.SaveReport(String, ReportType)
-            //ExSummary: Shows how to save the project best practice analyzer report in PDF format to the specified file path.
-            var project = new Project(DataDir + "Cyclic stucture.mpp");
-            project.SaveReport(OutDir + "BestPracticeAnalyzer_out.pdf", ReportType.BestPracticeAnalyzer);
-            //ExEnd:SaveBestPracticeAnalyzerReport
-        }
-    
-        [Test]
-        public void SaveBurnDownReport()
-        {
-            //ExStart:SaveBurnDownReport
-            //ExFor: Project.SaveReport(Stream, ReportType)
-            //ExSummary: Shows how to save the project burndown report in PDF format to the specified stream.
-            var project = new Project(DataDir + "Homemoveplan.mpp");
-            using (var stream = new FileStream(OutDir + "Burndown_out.pdf", FileMode.Create))
-            {
-                project.SaveReport(stream, ReportType.Burndown);
-            }
-            //ExEnd:SaveBurnDownReport
-        }
-    
-        [Test]
-        public void SaveCashFlowReport()
-        {
-            //ExStart:SaveCashFlowReport
-            //ExFor: Project.SaveReport(String, ReportType)
-            //ExSummary: Shows how to save the project cash flow report to PDF format to the specified file path.
-            var project = new Project(DataDir + "OzBuild 16 Orig.mpp");
-            project.SaveReport(OutDir + "CashFlow_out.pdf", ReportType.CashFlow);
-            //ExEnd:SaveCashFlowReport
-        }
-    
-        [Test]
-        public void SaveCostOverrunsReport()
-        {
-            //ExStart:SaveCostOverrunsReport
-            //ExFor: Project.SaveReport(Stream, ReportType) 
-            //ExSummary: Shows how to save the project cost overrun report in PDF format to the specified stream.
-            var project = new Project(DataDir + "Software Development.mpp");
-            using (var stream = new FileStream(OutDir + "CostOverruns_out.pdf", FileMode.Create))
-            {
-                project.SaveReport(stream, ReportType.CostOverruns);
-            }
-            //ExEnd:SaveCostOverrunsReport
-        }
-    
-        [Test]
-        public void SaveWorkOverviewReport()
-        {
-            //ExStart:SaveWorkOverviewReport
-            //ExFor: Project.SaveReport(String, ReportType) 
-            //ExSummary: Shows how to save the project work overview report in PDF format to the specified file path.
-            var project = new Project(DataDir + "Residential Construction.mpp");
-            project.SaveReport(OutDir + "WorkOverview_out.pdf", ReportType.WorkOverview);
-            //ExEnd:SaveWorkOverviewReport
-        }
-    
-        [Test]
-        public void SaveUpcomingTasksReport()
-        {
-            //ExStart:SaveUpcomingTasksReport
-            //ExFor: Project.SaveReport(Stream, ReportType) 
-            //ExSummary: Shows how to save the project upcoming task report in PDF format to the specified stream.
-            var project = new Project(DataDir + "UpcomingTasks.mpp");
-            using (var stream = new FileStream(OutDir + "UpcomingTasks_out.pdf", FileMode.Create))
-            {
-                project.SaveReport(stream, ReportType.UpcomingTask);
-            }
-            //ExEnd:SaveUpcomingTasksReport
-        }
-    
-        [Test]
-        public void SaveTaskCostOverviewReport()
-        {
-            //ExStart:SaveTaskCostOverviewReport
-            //ExFor: Project.SaveReport(String, ReportType) 
-            //ExSummary: Shows how to save the project task cost overview report in PDF format to the specified file path.
-            var project = new Project(DataDir + "Software Development.mpp");
-            project.SaveReport(OutDir + "TaskCostOverview_out.pdf", ReportType.TaskCostOverview);
-            //ExEnd:SaveTaskCostOverviewReport
-        }
-    
-        [Test]
-        public void SaveSlippingTasksReport()
-        {
-            //ExStart:SaveSlippingTasksReport
-            //ExFor: Project.SaveReport(Stream, ReportType) 
-            //ExSummary: Shows how to save the project slipping task report in PDF format to the specified stream.
-            var project = new Project(DataDir + "Homemoveplan.mpp");
-            using (var stream = new FileStream(OutDir + "SlippingTasks_out.pdf", FileMode.Create))
-            {
-                project.SaveReport(stream, ReportType.SlippingTasks);
-            }
-            //ExEnd:SaveSlippingTasksReport
-        }
-    
-        [Test]
-        public void SaveResourceOverviewReport()
-        {
-            //ExStart:SaveResourceOverviewReport
-            //ExFor: Project.SaveReport(String, ReportType) 
-            //ExSummary: Shows how to save the project resource overview report in PDF format to the specified file path.
-            var project = new Project(DataDir + "Software Development Plan.mpp");
-            project.SaveReport(OutDir + "ResourceOverview_out.pdf", ReportType.ResourceOverview);
-            //ExEnd:SaveResourceOverviewReport
-        }
-    
-        [Test]
-        public void SaveResourceCostOverviewReport()
-        {
-            //ExStart:SaveResourceCostOverviewReport
-            //ExFor: Project.SaveReport(Stream, ReportType) 
-            //ExSummary: Shows how to save the project resource cost overview report in PDF format to the specified stream.
-            var project = new Project(DataDir + "OzBuild 16 Orig.mpp");
-            using (var stream = new FileStream(OutDir + "ResourceCostOverview_out.pdf", FileMode.Create))
-            {
-                project.SaveReport(stream, ReportType.ResourceCostOverview);
-            }
-            //ExEnd:SaveResourceCostOverviewReport
-        }
-    
-        [Test]
-        public void SaveOverallocatedResourcesReport()
-        {
-            //ExStart:SaveOverallocatedResourcesReport
-            //ExFor: Project.SaveReport(String, ReportType) 
-            //ExSummary: Shows how to save the project overallocated resource report in PDF format to the specified file path.
-            var project = new Project(DataDir + "Software Development Plan.mpp");
-            project.SaveReport(OutDir + "OverAllocatedResources_out.pdf", ReportType.OverallocatedResources);
-            //ExEnd:SaveOverallocatedResourcesReport
-        }
-    
-        [Test]
-        public void SaveMilestonesReport()
-        {
-            //ExStart:SaveMilestonesReport
-            //ExFor: Project.SaveReport(Stream, ReportType) 
-            //ExSummary: Shows how to save the project milestone report in PDF format to the specified stream.
-            var project = new Project(DataDir + "Residential Construction.mpp");
-            using (var stream = new FileStream(OutDir + "Milestones_out.pdf", FileMode.Create))
-            {
-                project.SaveReport(stream, ReportType.Milestones);
-            }
-            //ExEnd:SaveMilestonesReport
-        }
-    
-        [Test]
-        public void SaveCostOverviewReport()
-        {
-            //ExStart:SaveCostOverviewReport
-            //ExFor: Project.SaveReport(String, ReportType) 
-            //ExSummary: Shows how to save the project cost overview report in PDF format to the specified file path.
-            var project = new Project(DataDir + "OzBuild 16 Orig.mpp");
-            project.SaveReport(OutDir + "CostOverview_out.pdf", ReportType.CostOverview);
-            //ExEnd:SaveCostOverviewReport
-        }
-    
-        [Test]
-        public void SaveCriticalTasksReport()
-        {
-            //ExStart:SaveCriticalTasksReport
-            //ExFor: Project.SaveReport(Stream, ReportType) 
-            //ExSummary: Shows how to save the project critical tasks report in PDF format to the specified stream.
-            var project = new Project(DataDir + "Residential Construction.mpp");
-            using (var stream = new FileStream(OutDir + "CriticalTasks_out.pdf", FileMode.Create))
-            {
-                project.SaveReport(stream, ReportType.CriticalTasks);
-            }
-            //ExEnd:SaveCriticalTasksReport
-        }
-    
-        [Test]
-        public void SaveLateTasksReport()
-        {
-            //ExStart:SaveLateTasksReport
-            //ExFor: Project.SaveReport(String, ReportType) 
-            //ExSummary: Shows how to save the project late task report in PDF format to the specified file path.
-            var project = new Project(DataDir + "Residential Construction.mpp");
-            project.SaveReport(OutDir + "LateTasks_out.pdf", ReportType.LateTasks);
-            //ExEnd:SaveLateTasksReport
-        }
-        
+
         [Test]
         public void GetWorkWithDefaultProjectFormat()
         {
@@ -731,66 +570,64 @@
         [Test]
         public void RenumberSelectedTasksWBSCodes()
         {
+            //ExStart: RenumberSelectedTasksWBSCodes
+            //ExFor: Project.RenumberWBSCode(System.Collections.Generic.List{System.Int32})
+            //ExFor: Project.SelectAllChildTasks
+            //ExSummary: Shows how to renumber selected tasks' WBS codes.
+            var project = new Project(DataDir + "RenumberExample.mpp");
+
+            List<Task> tasks = project.RootTask.SelectAllChildTasks().ToList();
+
+            Console.WriteLine("WBS codes before: ");
+
+            // output: ""; "1"; "2"; "4"
+            foreach (var task in tasks)
             {
-                //ExStart: RenumberSelectedTasksWBSCodes
-                //ExFor: Project.RenumberWBSCode(System.Collections.Generic.List{System.Int32})
-                //ExFor: Project.SelectAllChildTasks
-                //ExSummary: Shows how to renumber selected tasks' WBS codes.
-                var project = new Project(DataDir + "RenumberExample.mpp");
-
-                List<Task> tasks = project.RootTask.SelectAllChildTasks().ToList();
-
-                Console.WriteLine("WBS codes before: ");
-
-                // output: ""; "1"; "2"; "4"
-                foreach (var task in tasks)
-                {
-                    Console.WriteLine("\"" + task.Get(Tsk.WBS) + "\"" + "; ");
-                }
-
-                project.RenumberWBSCode(new List<int> { 1, 2, 3 });
-
-                Console.WriteLine("\nWBS codes after: ");
-
-                // output: ""; "1"; "2"; "3"
-                foreach (var task in tasks)
-                {
-                    Console.WriteLine("\"" + task.Get(Tsk.WBS) + "\"" + "; ");
-                }
-                //ExEnd:RenumberSelectedTasksWBSCodes
+                Console.WriteLine("\"" + task.Get(Tsk.WBS) + "\"" + "; ");
             }
+
+            project.RenumberWBSCode(new List<int> {1, 2, 3});
+
+            Console.WriteLine("\nWBS codes after: ");
+
+            // output: ""; "1"; "2"; "3"
+            foreach (var task in tasks)
+            {
+                Console.WriteLine("\"" + task.Get(Tsk.WBS) + "\"" + "; ");
+            }
+
+            //ExEnd:RenumberSelectedTasksWBSCodes
         }
         
         [Test]
         public void RenumberSelectedTasksWBSCodes2()
         {
+            //ExStart: RenumberSelectedTasksWBSCodes
+            //ExFor: Project.RenumberWBSCode()
+            //ExSummary: Shows how to renumber tasks' WBS codes.
+            var project = new Project(DataDir + "RenumberExample.mpp");
+
+            List<Task> tasks = project.RootTask.SelectAllChildTasks().ToList();
+
+            Console.WriteLine("WBS codes before: ");
+
+            // output: ""; "1"; "2"; "4"
+            foreach (var task in tasks)
             {
-                //ExStart: RenumberSelectedTasksWBSCodes
-                //ExFor: Project.RenumberWBSCode()
-                //ExSummary: Shows how to renumber tasks' WBS codes.
-                var project = new Project(DataDir + "RenumberExample.mpp");
-
-                List<Task> tasks = project.RootTask.SelectAllChildTasks().ToList();
-
-                Console.WriteLine("WBS codes before: ");
-
-                // output: ""; "1"; "2"; "4"
-                foreach (var task in tasks)
-                {
-                    Console.WriteLine("\"" + task.Get(Tsk.WBS) + "\"" + "; ");
-                }
-
-                project.RenumberWBSCode();
-
-                Console.WriteLine("\nWBS codes after: ");
-
-                // output: ""; "1"; "2"; "3"
-                foreach (var task in tasks)
-                {
-                    Console.WriteLine("\"" + task.Get(Tsk.WBS) + "\"" + "; ");
-                }
-                //ExEnd:RenumberSelectedTasksWBSCodes
+                Console.WriteLine("\"" + task.Get(Tsk.WBS) + "\"" + "; ");
             }
+
+            project.RenumberWBSCode();
+
+            Console.WriteLine("\nWBS codes after: ");
+
+            // output: ""; "1"; "2"; "3"
+            foreach (var task in tasks)
+            {
+                Console.WriteLine("\"" + task.Get(Tsk.WBS) + "\"" + "; ");
+            }
+
+            //ExEnd:RenumberSelectedTasksWBSCodes
         }
         
         [Test]
@@ -892,7 +729,8 @@
             {
                 //ExStart:CreateEmptyProjectSaveMPP
                 //ExFor: Project.#ctor
-                //ExFor: Project.Save(String, SaveFileFormat)
+                //ExFor: SaveFileFormat.MPP
+                //ExFor: Project.Save(String,SaveFileFormat)
                 //ExSummary: Shows how to create a project and save it into MPP format without passing of an MPP template file.
                 var project = new Project();
 
@@ -910,7 +748,7 @@
         public void CreateEmptyProjectSaveXML()
         {
             //ExStart:CreateEmptyProjectSaveXML
-            //ExFor: Project.Save(string, SaveFileFormat)
+            //ExFor: SaveFileFormat.XML
             //ExSummary: Shows how to create an empty project and save it into MS Project XML format.
             var project = new Project();
             project.Save(OutDir + "EmptyProjectSaveXML_out.xml", SaveFileFormat.XML);
@@ -1026,7 +864,7 @@
         public void ExportProjectDataToXERFormat()
         {
             //ExStart:ExportProjectDataToXERFormat
-            //ExFor: Project.Save(String,SaveFileFormat)
+            //ExFor: SaveFileFormat.PrimaveraXER
             //ExSummary: Shows how to open an MPP file and then export it in XER format.
             var project = new Project(DataDir + "Project1.mpp");
             project.Save(OutDir + "ExportProjectDataToXERFormat_out.mpp", SaveFileFormat.PrimaveraXER);
@@ -1037,7 +875,7 @@
         public void ExportProjectDataToP6XMLFormat()
         {
             //ExStart:ExportProjectDataToP6XMLFormat
-            //ExFor: Project.Save(String, SaveFileFormat)
+            //ExFor: SaveFileFormat.PrimaveraP6XML
             //ExSummary: Shows how to open an MPP file and then export it in Primavera P6 XML format.
             var project = new Project(DataDir + "Project1.mpp");
             project.Save(OutDir + "ExportProjectDataToXMLFormat_out.xml", SaveFileFormat.PrimaveraP6XML);             
@@ -1048,7 +886,7 @@
         public void ExportProjectDataToPrimaveraMPXFormat()
         {
             //ExStart:ExportProjectDataToPrimaveraMPXFormat
-            //ExFor: Project.Save(String, SaveFileFormat)
+            //ExFor: SaveFileFormat.MPX
             //ExSummary: Shows how to open an MPP file and then export it in MPX format.
             var project = new Project(DataDir + "Project1.mpp");
             project.Save(OutDir + "ExportProjectDataToPrimaveraMPXFormat_out.xml", SaveFileFormat.MPX);
@@ -1267,7 +1105,7 @@
             try
             {
                 //ExStart:ImportProjectDataFromMpdFile
-                //ExFor: Project.#ctor(DbSettings)
+                //ExFor: MpdSettings.#ctor(String,Int32)
                 //ExSummary: Shows how to read a project from an MPD file.
                 DbSettings settings = new MpdSettings("Provider=Microsoft.Jet.OLEDB.4.0; Data Source=" + DataDir + "MpdFileToRead.mpd", 1);
                 var project = new Project(settings);            
@@ -1660,7 +1498,7 @@
         }
         
         [Test]
-        public void WriteWeekdayProperties()
+        public void ReadWriteWeekdayProperties()
         {
             //ExStart:ReadWriteWeekdayProperties
             //ExFor: Prj.WeekStartDay
@@ -1766,9 +1604,9 @@
             //ExStart:ReadingPasswordProtectedProjectStream2
             //ExFor: Project.#ctor(Stream,String)
             //ExSummary: Shows how to read password protected MPP files from a stream.
-            using (var fileStream = new FileStream(DataDir + "PasswordProtectedProject.mpp", FileMode.Open))
+            using (var stream = new FileStream(DataDir + "PasswordProtectedProject.mpp", FileMode.Open))
             {
-                var project = new Project(fileStream, "password");
+                var project = new Project(stream, "password");
                 Console.WriteLine(project.Get(Prj.Name));
             }
             //ExEnd:ReadingPasswordProtectedProjectStream2
@@ -2136,12 +1974,11 @@
             try
             {
                 //ExStart:CreateEmptyProjectToSaveToStreamWithMPPSaveOptions
-                //ExFor: Project.Save(String, MPPSaveOptions)
+                //ExFor: Project.Save(String,SaveOptions)
+                //ExFor: Project.Save(String,MPPSaveOptions)
                 //ExSummary: Shows how to save project as an MPP file.
                 var project = new Project();
-
                 var options = new MPPSaveOptions();
-
                 project.Save(OutDir + "EmptyProjectSaveStream_out.xml", options);
                 //ExEnd:CreateEmptyProjectToSaveToStreamWithMPPSaveOptions
             }
@@ -2180,6 +2017,66 @@
                 }
             }
             //ExEnd:ReadCalendarProps
+        }
+        
+        [Test]
+        public void SaveCostOverviewReport()
+        {
+            //ExStart:SaveCostOverviewReport
+            //ExFor: Project.SaveReport(String,ReportType)
+            //ExSummary: Shows how to save the project project report in PDF format.
+            var project = new Project(DataDir + "OzBuild 16 Orig.mpp");
+            project.SaveReport(OutDir + "CostOverview_out.pdf", ReportType.CostOverview);
+            //ExEnd:SaveCostOverviewReport
+        }
+        
+        [Test]
+        public void ApplyCalculationModeManual()
+        {
+            //ExStart:ApplyCalculationModeManual
+            //ExFor: Project.CalculationMode
+            //ExSummary: Shows how to use project calculation mode.
+            var project = new Project();
+            project.CalculationMode = CalculationMode.Manual;
+
+            // Set project start date and add new tasks
+            project.Set(Prj.StartDate, new DateTime(2015, 4, 15));           
+            var task1 = project.RootTask.Children.Add("Task 1");
+            var task2 = project.RootTask.Children.Add("Task 2");
+
+            // The necessary properties are set in manual mode
+            Console.WriteLine("Task1.Id Equals 1 : {0} ", task1.Get(Tsk.Id).Equals(1));
+            Console.WriteLine("Task1 OutlineLevel Equals 1 : {0} ", task1.Get(Tsk.OutlineLevel).Equals(1));
+            Console.WriteLine("Task1 Start Equals 15/04/2015 08:00 AM : {0} ", task1.Get(Tsk.Start).Equals(new DateTime(2015, 4, 15, 8, 0, 0)));
+            Console.WriteLine("Task1 Finish Equals 15/04/2015 05:00 PM : {0} ", task1.Get(Tsk.Finish).Equals(new DateTime(2015, 4, 15, 17, 0, 0)));
+            Console.WriteLine("Task1 Duration Equals 1 day : {0} ", task1.Get(Tsk.Duration).ToString().Equals("1 day"));
+            Console.WriteLine("Task2 Start Equals 15/04/2015 08:00 AM : {0} ", task2.Get(Tsk.Start).Equals(new DateTime(2015, 4, 15, 8, 0, 0)));
+            Console.WriteLine("Task2 Finish Equals 15/04/2015 05:00 PM : {0} ", task2.Get(Tsk.Finish).Equals(new DateTime(2015, 4, 15, 17, 0, 0)));
+            Console.WriteLine("Task2 Duration Equals 1 day : {0} ", task2.Get(Tsk.Duration).ToString().Equals("1 day"));
+            
+            // When we link two tasks together their dates are not recalculated in manual mode
+            project.TaskLinks.Add(task1, task2, TaskLinkType.FinishToStart);
+
+            // Task 2 Start has not been changed
+            Console.WriteLine("Task1 Start Equals Task2 Start : {0} ", task1.Get(Tsk.Start).Equals(task2.Get(Tsk.Start)));
+            Console.WriteLine("Task1 Finish Equals Task2 Finish : {0} ", task1.Get(Tsk.Finish).Equals(task2.Get(Tsk.Finish)));            
+            //ExEnd:ApplyCalculationModeManual
+        }
+        
+        [Test]
+        public void ReadVbaProjectInformation()
+        {
+            //ExStart:ReadVbaProjectInformation
+            //ExFor: Project.VbaProject
+            //ExSummary: Shows how to read VBA project information.
+            var project = new Project(DataDir + "VbaProject.mpp");
+
+            Console.WriteLine("VbaProject.Name " + project.VbaProject.Name);
+            Console.WriteLine("VbaProject.Description " + project.VbaProject.Description);
+            Console.WriteLine("VbaProject.CompilationArguments" + project.VbaProject.CompilationArguments);
+            Console.WriteLine("VbaProject.HelpContextId" + project.VbaProject.HelpContextId);
+            Console.WriteLine("VbaProject.HelpFile" + project.VbaProject.HelpFile);
+            //ExEnd:ReadVbaProjectInformation
         }
         
         private static object CustomDurationHandlerForStream(object sender, ParseErrorArgs args)

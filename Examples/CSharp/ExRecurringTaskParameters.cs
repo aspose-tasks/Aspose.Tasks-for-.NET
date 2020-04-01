@@ -25,9 +25,8 @@
                                                  Repetition = new WeeklyRepetition
                                                  {
                                                      RepetitionInterval = 2,
-                                                     WeekDays =
-                                                                              WeekdayType.Sunday | WeekdayType.Monday
-                                                                                                 | WeekdayType.Friday
+                                                     WeekDays = WeekdayType.Sunday | WeekdayType.Monday
+                                                                                   | WeekdayType.Friday
                                                  },
                                                  RecurrenceRange =
                                                          new EndByRecurrenceRange

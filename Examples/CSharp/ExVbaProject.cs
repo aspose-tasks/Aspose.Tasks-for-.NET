@@ -15,7 +15,7 @@
             //ExFor: VbaProject.CompilationArguments
             //ExFor: VbaProject.HelpContextId
             //ExFor: VbaProject.HelpFile
-            //ExSummary: Shows how to read VBA project information.
+            //ExSummary: Shows how to read VBA project properties.
             var project = new Project(DataDir + "VbaProject.mpp");
 
             Console.WriteLine("VbaProject.Name " + project.VbaProject.Name);

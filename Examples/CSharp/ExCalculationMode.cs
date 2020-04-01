@@ -10,7 +10,7 @@
         public void ApplyCalculationModeAuto()
         {
             //ExStart:ApplyCalculationModeAuto
-            //ExFor: CalculationMode
+            //ExFor: CalculationMode.Automatic
             //ExSummary: Shows how to use auto calculation mode.
             var project = new Project();
             project.CalculationMode = CalculationMode.Automatic;
@@ -36,6 +36,7 @@
         {
             //ExStart:ApplyCalculationModeManual
             //ExFor: CalculationMode
+            //ExFor: CalculationMode.Manual
             //ExSummary: Shows how to use manual calculation mode.
             var project = new Project();
             project.CalculationMode = CalculationMode.Manual;
@@ -60,7 +61,7 @@
 
             // Task 2 Start has not been changed
             Console.WriteLine("Task1 Start Equals Task2 Start : {0} ", task1.Get(Tsk.Start).Equals(task2.Get(Tsk.Start)));
-            Console.WriteLine("Task1 Finish Equals Task2 Finish : {0} ", task1.Get(Tsk.Finish).Equals(task2.Get(Tsk.Finish)));            
+            Console.WriteLine("Task1 Finish Equals Task2 Finish : {0} ", task1.Get(Tsk.Finish).Equals(task2.Get(Tsk.Finish)));
             //ExEnd:ApplyCalculationModeManual
         }
         
@@ -68,7 +69,7 @@
         public void ApplyCalculationModeNone()
         {
             //ExStart:ApplyCalculationModeNone
-            //ExFor: CalculationMode
+            //ExFor: CalculationMode.None
             //ExSummary: Shows how to use none calculation mode.
             var project = new Project();
             project.CalculationMode = CalculationMode.None;
@@ -84,7 +85,7 @@
             Console.WriteLine("Task Duration Equals 0 mins : {0} ", task.Get(Tsk.Duration).ToString().Equals("0 mins"));
 
             // Set duration property
-            task.Set(Tsk.Duration, project.GetDuration(2, TimeUnitType.Day));                        
+            task.Set(Tsk.Duration, project.GetDuration(2, TimeUnitType.Day));
             Console.WriteLine("Task Duration Equals 2 days : {0} ", task.Get(Tsk.Duration).ToString().Equals("2 days"));
             Console.WriteLine("Task Start Equals DateTime.MinValue  : {0} ", task.Get(Tsk.Start).Equals(DateTime.MinValue));
             Console.WriteLine("Task Finish Equals DateTime.MinValue  : {0} ", task.Get(Tsk.Finish).Equals(DateTime.MinValue));

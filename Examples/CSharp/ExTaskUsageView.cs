@@ -26,7 +26,7 @@
             project.Save(OutDir + outputProject, options);
 
             // Set the Timescale settings to ThirdsOfMonths
-            options.Timescale = Timescale.ThirdsOfMonths;            
+            options.Timescale = Timescale.ThirdsOfMonths;
             
             outputProject = "project_TaskUsageView_result_thirdsOfMonths_out.pdf";
             project.Save(OutDir + outputProject, options);

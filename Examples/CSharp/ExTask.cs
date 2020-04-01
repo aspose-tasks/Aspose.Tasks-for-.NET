@@ -7,7 +7,7 @@
     using Util;
     using Visualization;
 
-    public class ExTasks : ApiExampleBase
+    public class ExTask : ApiExampleBase
     {
         [Test]
         public void AddNewTask()
@@ -256,7 +256,7 @@
                 var project = new Project(DataDir + "MoveTask.mpp");
 
                 // Move tasks with id 5 before task with id 3
-                var task = project.RootTask.Children.GetById(5);                
+                var task = project.RootTask.Children.GetById(5);
 
                 task.MoveToSibling(3);
                 // OR
@@ -299,8 +299,6 @@
         public void ReadActualTaskProperties()
         {
             //ExStart:ReadActualTaskProperties
-            //ExFor: Tsk.ActualStart
-            //ExFor: Tsk.ActualFinish
             //ExFor: Tsk.ActualDuration
             //ExFor: Tsk.ActualCost
             //ExSummary: Shows how to read task's actual properties.
@@ -317,7 +315,6 @@
                 Console.WriteLine("Actual Finish: " + task.Get(Tsk.ActualFinish).ToLongDateString());
                 Console.WriteLine("Actual Duration: " + task.Get(Tsk.ActualDuration).TimeSpan.Hours);
                 Console.WriteLine("Actual Cost: " + task.Get(Tsk.ActualCost));
-                Console.WriteLine("---------------------------------------------");
             }
             //ExEnd:ReadActualTaskProperties
         }
@@ -508,6 +505,10 @@
             //ExFor: Tsk.Name
             //ExFor: Tsk.Start
             //ExFor: Tsk.Finish
+            //ExFor: Task.Get(Aspose.Tasks.Key{System.String,Aspose.Tasks.TaskKey})
+            //ExFor: Task.Get``1(Aspose.Tasks.Key{``0,Aspose.Tasks.TaskKey})
+            //ExFor: Task.Set(Aspose.Tasks.Key{System.DateTime,Aspose.Tasks.TaskKey},System.DateTime)
+            //ExFor: Task.Set``1(Aspose.Tasks.Key{``0,Aspose.Tasks.TaskKey},``0)
             //ExSummary: Shows how to read/write task properties.
             var project = new Project();
             
@@ -675,7 +676,7 @@
         }
         
         [Test]
-        public void ReadBudgetWorkAndCost()
+        public void ReadBudgetWorkCost()
         {
             //ExStart:ReadBudgetWorkAndCost
             //ExFor: Tsk.BudgetWork
@@ -688,7 +689,7 @@
             Console.WriteLine("projSummary.BudgetCost = " + project.RootTask.Get(Tsk.BudgetCost));
 
             // Display resource budget work
-            var rsc = project.Resources.GetByUid(6);            
+            var rsc = project.Resources.GetByUid(6);
             Console.WriteLine("Resource BudgetWork = " + rsc.Get(Rsc.BudgetWork));
 
             // Display resource budget cost
@@ -719,6 +720,363 @@
                 }
             }
             //ExEnd:ReadBudgetWorkAndCost
+        }
+        
+        [Test]
+        public void IterateOverTaskAssignments()
+        {
+            //ExStart:IterateOverTaskAssignments
+            //ExFor: Task.Assignments
+            //ExFor: Task.Equals(Task)
+            //ExFor: Task.Equals(Object)
+            //ExSummary: Shows how to iterate over task's assignments and print common assignment info.
+            var project = new Project(DataDir + "BudgetWorkAndCost.mpp");
+
+            var collector = new ChildTasksCollector();
+            TaskUtils.Apply(project.RootTask, collector, 0);
+            foreach (var task in collector.Tasks)
+            {
+                // display task's assignments
+                foreach (var assignment in task.Assignments)
+                {
+                    var resource = assignment.Get(Asn.Resource);
+                    if (resource == null)
+                    {
+                        continue;
+                    }
+
+                    Console.WriteLine(assignment.ToString());
+                }
+            }
+            //ExEnd:IterateOverTaskAssignments
+        }
+        
+        [Test]
+        public void ReadTaskBaselines()
+        {
+            //ExStart:ReadTaskBaselines
+            //ExFor: Task.Baselines
+            //ExSummary: Shows how to read task's baselines.
+            var project = new Project();
+
+            // set a baseline
+            var task = project.RootTask.Children.Add("Task");
+            project.SetBaseline(BaselineType.Baseline);
+
+            // Display task baseline duration
+            foreach (var baseline in task.Baselines)
+            {
+                Console.WriteLine("Baseline duration is 1 day: {0}", baseline.Duration.ToString().Equals("1 day"));
+                Console.WriteLine("BaselineStart is same as Task Start: {0}", baseline.Start.Equals(task.Get(Tsk.Start)));
+                Console.WriteLine("BaselineFinish is same as Task Finish: {0}", baseline.Finish.Equals(task.Get(Tsk.Finish)));
+            }
+            //ExEnd:ReadTaskBaselines
+        }
+        
+        [Test]
+        public void TaskDeepClone()
+        {
+            //ExStart:TaskDeepClone
+            //ExFor: Task.Clone
+            //ExSummary: Shows how to clone a task.
+            var project = new Project();
+
+            var originalTask = project.RootTask.Children.Add("Task");
+            var cloneTask = (Task)originalTask.Clone();
+
+            Console.WriteLine("Are tasks equal: " + cloneTask.Equals(originalTask));
+            //ExEnd:TaskDeepClone
+        }
+        
+        [Test]
+        public void TaskDeleteTest()
+        {
+            //ExStart:TaskDeleteTest
+            //ExFor: Task.Delete
+            //ExSummary: Shows how to delete a task.
+            var project = new Project();
+
+            var task = project.RootTask.Children.Add("Task");
+
+            Console.WriteLine("Number of tasks: " + project.RootTask.Children.Count);
+            
+            // delete a task
+            task.Delete();
+            
+            Console.WriteLine("Number of tasks: " + project.RootTask.Children.Count);
+            //ExEnd:TaskDeleteTest
+        }
+        
+        [Test]
+        public void TaskGetHashCodeTest()
+        {
+            //ExStart:TaskGetHashCode
+            //ExFor: Task.GetHashCode
+            //ExSummary: Shows how to get a hash code of a task.
+            var project = new Project();
+
+            var task = project.RootTask.Children.Add("Task");
+
+            // the hash code of a task is based on task's uid and name
+            Console.WriteLine("Hash code of the task: " + task.GetHashCode());
+            
+            task.Set(Tsk.Name, "Task 1");
+            
+            Console.WriteLine("Hash code of the task: " + task.GetHashCode());
+            //ExEnd:TaskGetHashCodeTest
+        }
+        
+        [Test]
+        public void TaskGetTimephasedDataTest()
+        {
+            var project = new Project();
+            var task1 = project.RootTask.Children.Add("Task");
+            task1.Set(Tsk.Start, new DateTime(2020, 4, 1, 8, 0, 0));
+            task1.Set(Tsk.Duration, project.GetDuration(1));
+            task1.Set(Tsk.Finish, new DateTime(2020, 4, 1, 17, 0, 0));
+
+            //ExStart:TaskGetTimephasedData
+            //ExFor: Task.GetTimephasedData(DateTime,DateTime)
+            //ExSummary: Shows how to get timephased data (with TaskWork type) of the task.
+            var task = project.RootTask.Children.GetById(1);
+
+            List<TimephasedData> data =
+                task.GetTimephasedData(
+                    project.Get(Prj.StartDate), 
+                    project.Get(Prj.FinishDate)).ToList();
+            foreach (var td in data)
+            {
+                Console.WriteLine("Start: " + td.Start);
+                Console.WriteLine("Finish: " + td.Finish);
+                Console.WriteLine("Type: " + td.TimephasedDataType);
+            }
+            //ExEnd:TaskGetTimephasedData
+        }
+        
+        [Test]
+        public void TaskGetTimephasedDataTest2()
+        {
+            //ExStart:TaskGetSpecificTimephasedData
+            //ExFor: Task.GetTimephasedData(DateTime,DateTime,TimephasedDataType)
+            //ExSummary: Shows how to get timephased data (with specific type) of the task.
+            var project = new Project(DataDir + "BaselineTD2010_3.mpp");
+            var task = project.RootTask.Children.GetById(1);
+
+            List<TimephasedData> data =
+                task.GetTimephasedData(project.Get(Prj.StartDate), project.Get(Prj.FinishDate).AddDays(2), TimephasedDataType.TaskBaselineWork).ToList();
+            foreach (var td in data)
+            {
+                Console.WriteLine("Start: " + td.Start);
+                Console.WriteLine("Finish: " + td.Finish);
+                Console.WriteLine("Type: " + td.TimephasedDataType);
+            }
+            //ExEnd:TaskGetSpecificTimephasedData
+        }
+        
+        [Test]
+        public void TaskOutlineCodeTest()
+        {
+            //ExStart:TaskOutlineCode
+            //ExFor: Task.OutlineCodes
+            //ExSummary: Show how to read task's outline code values.
+            var project = new Project(DataDir + "OutlineCodes2003.mpp");
+            var mapping = new Dictionary<string, OutlineValueCollection>();
+            foreach (var code in project.OutlineCodes)
+            {
+                mapping.Add(code.FieldId, code.Values);
+            }
+
+            Task task = project.RootTask.Children.GetById(2);
+            foreach (OutlineCode code in task.OutlineCodes)
+            {
+                var val = this.GetOutlineValue(mapping[code.FieldId], code.ValueId);
+                Console.WriteLine("Outline value: " + val);
+            }
+        }
+        
+        private object GetOutlineValue(OutlineValueCollection collection, int valueId)
+        {
+            object obj = null;
+            foreach (OutlineValue value in collection)
+            {
+                if (value.ValueId != valueId)
+                {
+                    continue;
+                }
+
+                obj = value.Value;
+                break;
+            }
+
+            return obj;
+        }
+        //ExEnd:TaskOutlineCode
+
+        [Test]
+        public void TaskOutlineIndent()
+        {
+            //ExStart
+            //ExFor: Task.OutlineIndent
+            //ExSummary: Shows how to indent a task.
+            var project = new Project();
+            var task1 = project.RootTask.Children.Add("Parent");
+            var task2 = project.RootTask.Children.Add("Task");
+            Console.WriteLine("Outline Level: " + task1.Get(Tsk.OutlineLevel));
+            Console.WriteLine("Outline Level: " + task2.Get(Tsk.OutlineLevel));
+            Console.WriteLine(); //ExSkip
+            
+            // indent the task
+            task2.OutlineIndent();
+            
+            Console.WriteLine("Outline Level: " + task1.Get(Tsk.OutlineLevel));
+            Console.WriteLine("Outline Level: " + task2.Get(Tsk.OutlineLevel));
+            //ExEnd
+        }
+        
+        [Test]
+        public void TaskOutlineOutdent()
+        {
+            //ExStart
+            //ExFor: Task.OutlineOutdent
+            //ExSummary: Shows how to outdent a task.
+            var project = new Project();
+            var task1 = project.RootTask.Children.Add("Parent");
+            var task2 = task1.Children.Add("Task");
+            Console.WriteLine("Outline Level: " + task1.Get(Tsk.OutlineLevel));
+            Console.WriteLine("Outline Level: " + task2.Get(Tsk.OutlineLevel));
+            Console.WriteLine(); //ExSkip
+            
+            // outdent the task
+            task2.OutlineOutdent();
+            
+            Console.WriteLine("Outline Level: " + task1.Get(Tsk.OutlineLevel));
+            Console.WriteLine("Outline Level: " + task2.Get(Tsk.OutlineLevel));
+            //ExEnd
+        }
+        
+        [Test]
+        public void TaskParentProject()
+        {
+            //ExStart
+            //ExFor: Task.ParentProject
+            //ExSummary: Shows how to use parent project of task.
+            var project = new Project();
+            var task = project.RootTask.Children.Add("Parent");
+            
+            // set a duration for the task by using default project time unit type.
+            task.Set(Tsk.Duration, task.ParentProject.GetDuration(1));
+
+            Console.WriteLine(task.Get(Tsk.Duration));
+            //ExEnd
+        }
+        
+        [Test]
+        public void TaskParentTask()
+        {
+            //ExStart
+            //ExFor: Task.ParentTask
+            //ExSummary: Shows how to use the parent task of a task.
+            var project = new Project();
+            var parent = project.RootTask.Children.Add("Parent");
+            var child = parent.Children.Add("Child1");
+
+            var child2 = child.ParentTask.Children.Add("Child11");
+
+            Console.WriteLine("Is parent is equal to the root task: " + child2.ParentTask.Equals(parent));
+            //ExEnd
+        }
+        
+        [Test]
+        public void GetTaskPredecessors()
+        {
+            //ExStart
+            //ExFor: Task.Predecessors
+            //ExSummary: Shows how to read task's predecessors.
+            var project = new Project();
+            var pred = project.RootTask.Children.Add("Predecessor");
+            var succ = project.RootTask.Children.Add("Successor");
+            
+            project.TaskLinks.Add(pred, succ);
+
+            foreach (var predecessor in succ.Predecessors)
+            {
+                Console.WriteLine("{0} {1}", predecessor.Get(Tsk.Id), predecessor.Get(Tsk.Name));
+            }
+            //ExEnd
+        }
+        
+        [Test]
+        public void GetTaskSuccessors()
+        {
+            //ExStart
+            //ExFor: Task.Successors
+            //ExSummary: Shows how to read task's successors.
+            var project = new Project();
+            var pred = project.RootTask.Children.Add("Predecessor");
+            var succ = project.RootTask.Children.Add("Successor");
+            
+            project.TaskLinks.Add(pred, succ);
+
+            foreach (var successor in pred.Successors)
+            {
+                Console.WriteLine("{0} {1}", successor.Get(Tsk.Id), successor.Get(Tsk.Name));
+            }
+            //ExEnd
+        }
+        
+        [Test]
+        public void GetTaskRecurringInfo()
+        {
+            //ExStart
+            //ExFor: Task.RecurringInfo
+            //ExSummary: Shows how to read task's recurring info.
+            var project = new Project(DataDir + "TestRecurringTask2016.mpp");
+            
+            Task task = project.RootTask.Children.GetById(1);
+
+            Console.WriteLine("Recurrence Pattern: " + task.RecurringInfo.RecurrencePattern);
+            Console.WriteLine("Start Date: " + task.RecurringInfo.StartDate);
+            Console.WriteLine("End Date: " + task.RecurringInfo.EndDate);
+            Console.WriteLine("Duration: " + task.RecurringInfo.Duration);
+            Console.WriteLine("Occurrences: " + task.RecurringInfo.Occurrences);
+            Console.WriteLine("Weekly Days: " + task.RecurringInfo.WeeklyDays);
+            Console.WriteLine("WeeklyRepetitions: " + task.RecurringInfo.WeeklyRepetitions);
+            //ExEnd
+        }
+        
+        [Test]
+        public void GetTaskSelectAllChildTasks()
+        {
+            //ExStart
+            //ExFor: Task.SelectAllChildTasks
+            //ExSummary: Shows how to iterate over child tasks.
+            var project = new Project();
+            var task = project.RootTask.Children.Add("Task 1");
+            var task2 = task.Children.Add("Task 2");
+
+            foreach (var tsk in project.RootTask.SelectAllChildTasks())
+            {
+                Console.WriteLine("{0} {1}", tsk.Get(Tsk.Id), tsk.Get(Tsk.Name));
+            }
+            //ExEnd
+        }
+        
+        [Test]
+        public void GetTaskTimephasedData()
+        {
+            //ExStart
+            //ExFor: Task.TimephasedData
+            //ExSummary: Shows how to iterate over task's timephased data.
+            var project = new Project(DataDir + "BaselineTD2010_3.mpp");
+            var task = project.RootTask.Children.GetById(1);
+
+            foreach (var td in task.TimephasedData)
+            {
+                Console.WriteLine("Start: " + td.Start);
+                Console.WriteLine("Finish: " + td.Finish);
+                Console.WriteLine("Type: " + td.TimephasedDataType);
+            }
+            //ExEnd
         }
     }
 }

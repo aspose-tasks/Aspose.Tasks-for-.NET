@@ -30,16 +30,16 @@ namespace Aspose.Tasks.Examples.CSharp
             var criteria1 = filter.Criteria.CriteriaRows[0];
             Console.WriteLine(criteria1.Test.ToString());
             Console.WriteLine(criteria1.Field.ToString());
-            Console.WriteLine(criteria1.Values[0].ToString());            
+            Console.WriteLine(criteria1.Values[0].ToString());
             
             var criteria2 = filter.Criteria.CriteriaRows[1];
             Console.WriteLine(criteria2.Operation.ToString());
-            Console.WriteLine(criteria2.CriteriaRows.Count);            
+            Console.WriteLine(criteria2.CriteriaRows.Count);
             
             var criteria21 = criteria2.CriteriaRows[0];
             Console.WriteLine(criteria21.Test.ToString());
             Console.WriteLine(criteria21.Field.ToString());
-            Console.WriteLine(criteria21.Values[0].ToString());            
+            Console.WriteLine(criteria21.Values[0].ToString());
             
             var criteria22 = criteria2.CriteriaRows[1];
             Console.WriteLine(criteria22.Test.ToString());

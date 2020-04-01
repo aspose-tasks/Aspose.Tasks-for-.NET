@@ -3,7 +3,6 @@
     using System;
     using System.Collections.Generic;
     using System.Drawing;
-    using System.IO;
     using NUnit.Framework;
     using Saving;
     using Visualization;
@@ -11,49 +10,6 @@
     [TestFixture]
     public class ExPdfSaveOptions : ApiExampleBase
     {
-        [Test]
-        public void RenderResourceUsageView()
-        {
-            //ExStart:RenderResourceUsageView
-            //ExFor: SaveOptions.PresentationFormat
-            //ExSummary: Shows how to render resource usage view.
-            var project = new Project(DataDir + "ResourceUsageView.mpp");
-                        
-            // Define the SaveOptions with required TimeScale settings as Days
-            SaveOptions options = new PdfSaveOptions();
-            options.Timescale = Timescale.Days;
-
-            // Set the Presentation format to ResourceUsage
-            options.PresentationFormat = PresentationFormat.ResourceUsage;
-            project.Save(OutDir + "ResourceUsageView_days_out.pdf", options);
-
-            // Set the Timescale settings to ThirdsOfMonths and save the Project
-            options.Timescale = Timescale.ThirdsOfMonths;
-            project.Save(OutDir + "ResourceUsageView_thirdsOfMonths_out.pdf", options);
-
-            // Set the Timescale settings to Months and save the Project
-            options.Timescale = Timescale.Months;
-            project.Save(OutDir + "ResourceUsageView_months_out.pdf", options);
-            //ExEnd:RenderResourceUsageView
-        }
-        
-        [Test]
-        public void RenderResourceSheetView()
-        {
-            //ExStart:RenderResourceSheetView
-            //ExFor: SaveOptions.PresentationFormat
-            //ExSummary: Shows how to render resource sheet view by using save options.
-            var project = new Project(DataDir + "ResourceSheetView.mpp");
-
-            // Define rendering options
-            SaveOptions options = new PdfSaveOptions();
-
-            // Set the Presentation Format to Resource Sheet
-            options.PresentationFormat = PresentationFormat.ResourceSheet;
-            project.Save(OutDir + "ResourceSheetView_out.pdf", options);
-            //ExEnd:RenderResourceSheetView
-        }
-        
         [Test]
         public void CustomizeTextWithTaskBars()
         {
@@ -350,20 +306,6 @@
             //ExEnd:SaveToMultiplePdfFiles
         }
         
-        [Test]
-        public void RenderTaskSheetView()
-        {
-            //ExStart:RenderTaskSheetView
-            //ExFor: SaveOptions.PresentationFormat
-            //ExSummary: Shows how to render task sheet view.
-            var project = new Project(DataDir + "TaskSheetView.mpp");
-
-            // Set presentation format Task Sheet and save project as PDF
-            SaveOptions options = new PdfSaveOptions();
-            options.PresentationFormat = PresentationFormat.TaskSheet;
-
-            project.Save(OutDir + "TaskSheetView_out.pdf", options);
-            //ExEnd:RenderTaskSheetView
-        }
+        
     }
 }

@@ -384,7 +384,7 @@
 
             // Set resource rates and task duration
             rsc.Set(Rsc.StandardRate, 10);
-            rsc.Set(Rsc.OvertimeRate, 15);            
+            rsc.Set(Rsc.OvertimeRate, 15);
             task.Set(Tsk.Duration, project.GetDuration(6));
 
             // Create resource assignment
@@ -422,7 +422,7 @@
             Console.WriteLine("projSummary.BudgetCost = " + project.RootTask.Get(Tsk.BudgetCost));
 
             // Display resource budget work
-            var rsc = project.Resources.GetByUid(6);            
+            var rsc = project.Resources.GetByUid(6);
             Console.WriteLine("Resource BudgetWork = " + rsc.Get(Rsc.BudgetWork));
 
             // Display resource budget cost

@@ -16,16 +16,14 @@
             var project = new Project(DataDir + "Blank2010.mpp");
             var info = project.DefaultView.PageInfo;
 
-            Console.WriteLine("Page data cannot be null : {0} ", !info.Equals(null));
-
-            AssertHeaderFooterCorrect(info);
-            AssertPageSettingsCorrect(info);
-            AssertPageViewSettingsCorrect(info);
-            AssertMarginsCorrect(info);
-            AssertLegendCorrect(info);
+            PrintHeaderFooter(info);
+            PrintPageSettings(info);
+            PrintPageViewSettings(info);
+            PrintMargins(info);
+            PrintLegend(info);
         }
 
-        private static void AssertHeaderFooterCorrect(PageInfo info)
+        private static void PrintHeaderFooter(PageInfo info)
         {
             Console.WriteLine("Header left text Equals LEFT HEADER : {0} ", info.Header.LeftText.Equals("LEFT HEADER"));
             Console.WriteLine("Header center text Equals CENTER HEADER : {0} ", info.Header.CenteredText.Equals("CENTER HEADER"));
@@ -36,7 +34,7 @@
             Console.WriteLine("Footer right text Equals RIGHT FOOTER : {0} ", info.Footer.RightText.Equals("RIGHT FOOTER"));
         }
 
-        private static void AssertPageSettingsCorrect(PageInfo info)
+        private static void PrintPageSettings(PageInfo info)
         {
             Console.WriteLine("Portrait Orientation is Portrait : {0} ", info.PageSettings.IsPortrait.Equals(true));
             Console.WriteLine("AdjustToPercentOfNormalSize is enabled : {0} ", info.PageSettings.AdjustToPercentOfNormalSize.Equals(true));
@@ -48,7 +46,7 @@
             Console.WriteLine("FirstPageNumber : {0} ", info.PageSettings.FirstPageNumber);
         }
 
-        private static void AssertPageViewSettingsCorrect(PageInfo info)
+        private static void PrintPageViewSettings(PageInfo info)
         {
             Console.WriteLine("PrintAllSheetColumns is set to false : {0} ", info.PageViewSettings.PrintAllSheetColumns.Equals(false));
             Console.WriteLine("PrintFirstColumnsCountOnAllPages is set to true : {0} ", info.PageViewSettings.PrintFirstColumnsCountOnAllPages.Equals(true));
@@ -59,7 +57,7 @@
             Console.WriteLine("FitTimescaleToEndOfPage is set to true : {0} ", info.PageViewSettings.FitTimescaleToEndOfPage.Equals(true));
         }
 
-        private static void AssertMarginsCorrect(PageInfo info)
+        private static void PrintMargins(PageInfo info)
         {
             Console.WriteLine("Margins.Left Equals 1 : {0} ", info.Margins.Left - 1 <= 1e-5);
             Console.WriteLine("Margins.Top Equals 1.1 : {0} ", info.Margins.Top - 1.1 <= 1e-5);
@@ -69,7 +67,7 @@
             Console.WriteLine("Margin.Borders Equals Border.AroundEveryPage : {0} ", info.Margins.Borders.Equals(Border.AroundEveryPage));
         }
 
-        private static void AssertLegendCorrect(PageInfo info)
+        private static void PrintLegend(PageInfo info)
         {
             Console.WriteLine("Legend left text Equals LEFT LEGEND : {0} ", info.Legend.LeftText.Equals("LEFT LEGEND"));
             Console.WriteLine("Legend center text Equals CENTER LEGEND : {0} ", info.Legend.CenteredText.Equals("CENTER LEGEND"));

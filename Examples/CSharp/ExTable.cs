@@ -9,12 +9,11 @@
     public class ExTable : ApiExampleBase
     {
         [Test]
-        public void ConfigureGanttChart()
+        public void UseTableFields()
         {
             try
             {
-                //ExStart:ConfigureGanttChart
-                //ExFor: Table
+                //ExStart:UseTableFields
                 //ExFor: Table.TableFields
                 //ExSummary: Shows how to work project's tables.
                 var project = new Project(DataDir + "Project5.mpp");
@@ -38,7 +37,7 @@
                 table.TableFields.Insert(3, field);
 
                 project.Save(OutDir + @"ConfigureGantChart_out.mpp", new MPPSaveOptions { WriteViewData = true });
-                //ExEnd:ConfigureGanttChart
+                //ExEnd:UseTableFields
             }
             catch (Exception ex)
             {

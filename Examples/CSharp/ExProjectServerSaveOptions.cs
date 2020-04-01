@@ -13,6 +13,9 @@
         {
             //ExStart:CreateProjectInProjectServerWithOptions
             //ExFor: ProjectServerSaveOptions
+            //ExFor: ProjectServerSaveOptions.#ctor
+            //ExFor: ProjectServerSaveOptions.ProjectGuid
+            //ExFor: ProjectServerSaveOptions.ProjectName
             //ExSummary: Shows how to use <see cref="Aspose.Tasks.ProjectServerSaveOptions" /> options to create a new project in Microsoft Project Online.
             try
             {

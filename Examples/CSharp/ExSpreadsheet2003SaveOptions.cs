@@ -51,16 +51,5 @@
             project.Save(OutDir + "UsingSpreadsheet2003SaveOptions_out.xml", options);
             //ExEnd:UsingSpreadsheet2003SaveOptions
         }
-        
-        [Test]
-        public void SaveProjectDataToSpreadsheet2003XML()
-        {
-            //ExStart:SaveProjectDataToSpreadsheet2003XML
-            //ExFor: SaveFileFormat
-            //ExSummary: Shows how to save a project in Spreadsheet2003 format.
-            var project = new Project(DataDir + "CreateProject2.mpp");
-            project.Save(OutDir + "SaveProjectDataToSpreadsheet2003XML_out.xml", SaveFileFormat.Spreadsheet2003);
-            //ExEnd:SaveProjectDataToSpreadsheet2003XML
-        }
     }
 }

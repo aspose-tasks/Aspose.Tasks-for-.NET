@@ -1,6 +1,7 @@
 ﻿namespace Aspose.Tasks.Examples.CSharp
 {
     using System;
+    using System.Collections.Generic;
     using NUnit.Framework;
     using Saving;
     using Util;
@@ -24,7 +25,7 @@
                 // Use TaskUtils to get all children tasks in RootTask
                 TaskUtils.Apply(project.RootTask, collector, 0);
 
-                // Define Resources
+                // add new resources
                 for (var i = 0; i <= 4; i++)
                 {
                     var name = "Developer0" + i;
@@ -294,25 +295,34 @@
         }
         
         [Test]
-        public void SetGeneralResourceProperties()
+        public void ReadWriteGeneralResourceProperties()
         {
             try
             {
-                //ExStart:UpdateResourceDataInMpp
+                //ExStart:ReadWriteGeneralResourceProperties
+                //ExFor: Resource.Get``1(Aspose.Tasks.Key{``0,Aspose.Tasks.RscKey})
+                //ExFor: Resource.Set(Key{System.DateTime,Aspose.Tasks.RscKey},System.DateTime)
+                //ExFor: Resource.Set``1(Aspose.Tasks.Key{``0,Aspose.Tasks.RscKey},``0)
                 //ExFor: Rsc.StandardRate
                 //ExFor: Rsc.OvertimeRate
                 //ExFor: Rsc.Group
-                //ExSummary: Shows how to update common resource data.
+                //ExSummary: Shows how to read/write common resource properties.
                 var project = new Project(DataDir + "UpdateResourceData.mpp");
 
                 // Add resource and set some properties
                 var resource = project.Resources.Add("Rsc");
+                resource.Set(Rsc.Start, new DateTime(2020, 4, 1, 8, 0, 0));
                 resource.Set(Rsc.StandardRate, 30);
                 resource.Set(Rsc.OvertimeRate, 45);
                 resource.Set(Rsc.Group, "Workgroup1");
 
+                Console.WriteLine("Resource Start: " + resource.Get(Rsc.Start));
+                Console.WriteLine("Resource Standard Rate: " + resource.Get(Rsc.StandardRate));
+                Console.WriteLine("Resource Overtime Rate: " + resource.Get(Rsc.OvertimeRate));
+                Console.WriteLine("Resource Group: " + resource.Get(Rsc.Group));
+
                 project.Save(OutDir + "UpdateResourceData_out.mpp", SaveFileFormat.MPP);
-                //ExEnd:UpdateResourceDataInMpp
+                //ExEnd:ReadWriteGeneralResourceProperties
             }
             catch (Exception ex)
             {
@@ -400,6 +410,252 @@
                 }
             }
             //ExEnd:ReadBudgetWorkAndCost
+        }
+        
+        [Test]
+        public void ReadAssignmentsOfResource()
+        {
+            //ExStart:ReadBudgetWorkAndCost
+            //ExFor: Resource.Assignments
+            //ExSummary: Shows how to read assignments of a resource.
+            var project = new Project(DataDir + "BudgetWorkAndCost.mpp");
+
+            foreach (var resource in project.Resources)
+            {
+                foreach (var assignment in resource.Assignments)
+                {
+                    Console.WriteLine("Assignment UID: " + assignment.Get(Asn.Uid));
+                    Console.WriteLine("Assignment's task name: " + assignment.Get(Asn.Task).Get(Tsk.Name));
+                }
+            }
+            //ExEnd:ReadBudgetWorkAndCost
+        }
+
+        [Test]
+        public void ResourceAvailabilityPeriods()
+        {
+            //ExStart
+            //ExFor: Resource.AvailabilityPeriods
+            //ExSummary: Shows how to add availability period for a resource.
+            var project = new Project();
+            var resource = project.Resources.Add("Resource");
+
+            var availabilityPeriod = new AvailabilityPeriod();
+            availabilityPeriod.AvailableFrom = new DateTime(2020, 4, 1, 8, 0, 0);
+            availabilityPeriod.AvailableTo = new DateTime(2020, 4, 1, 17, 0, 0);
+            availabilityPeriod.AvailableUnits = 2d;
+            resource.AvailabilityPeriods.Add(availabilityPeriod);
+            
+            var availabilityPeriod2 = new AvailabilityPeriod();
+            availabilityPeriod2.AvailableFrom = new DateTime(2020, 4, 2, 8, 0, 0);
+            availabilityPeriod2.AvailableTo = new DateTime(2020, 4, 2, 17, 0, 0);
+            availabilityPeriod2.AvailableUnits = 3d;
+            resource.AvailabilityPeriods.Add(availabilityPeriod2);
+            //ExEnd
+        }
+        
+        [Test]
+        public void ReadResourceBaselines()
+        {
+            //ExStart
+            //ExFor: Resource.Baselines
+            //ExSummary: Shows how to read resource's baselines.
+            var project = new Project(DataDir + "Baselines2010.mpp");
+
+            foreach (var resource in project.Resources)
+            {
+                foreach (var baseline in resource.Baselines)
+                {
+                    Console.WriteLine("BaselineNumber: " + baseline.BaselineNumber);
+                    Console.WriteLine("Bcwp: " + baseline.Bcwp);
+                    Console.WriteLine("Bcws: " + baseline.Bcws);
+                    Console.WriteLine("Cost: " + baseline.Cost);
+                    Console.WriteLine("Work: " + baseline.Work);
+                }
+            }
+            //ExEnd
+        }
+        
+        [Test]
+        public void DeleteResource()
+        {
+            //ExStart
+            //ExFor: Resource.Delete
+            //ExSummary: Shows how to delete a resource.
+            var project = new Project(DataDir + "Baselines2010.mpp");
+
+            var resource = project.Resources.GetById(1);
+
+            Console.WriteLine("Number of resources (before): " + project.Resources.Count);
+            
+            // delete the resource
+            resource.Delete();
+            
+            Console.WriteLine("Number of resources (after): " + project.Resources.Count);
+            //ExEnd
+        }
+        
+        [Test]
+        public void EqualsResource()
+        {
+            //ExStart
+            //ExFor: Resource.Equals(Resource)
+            //ExFor: Resource.Equals(Object)
+            //ExSummary: Shows how to check resource equality.
+            var project = new Project(DataDir + "Baselines2010.mpp");
+
+            var resource1 = project.Resources.GetById(1);
+            var resource2 = project.Resources.GetById(1);
+
+            Console.WriteLine("Resources are equal: " + resource1.Equals(resource2));
+            //ExEnd
+        }
+        
+        [Test]
+        public void GetResourceHashCode()
+        {
+            //ExStart
+            //ExFor: Resource.GetHashCode()
+            //ExSummary: Shows how to get a hash code of a resource.
+            var project = new Project(DataDir + "Project.mpp");
+
+            var resource1 = project.Resources.GetById(1);
+            var resource2 = project.Resources.GetById(2);
+
+            // hash code of a resource is equal to resource UID 
+            Console.WriteLine("Resource UID: {0} Hash Code: {0}", resource1.GetHashCode());
+            Console.WriteLine("Resource UID: {0} Hash Code: {0}", resource2.GetHashCode());
+            //ExEnd
+        }
+        
+        [Test]
+        public void GetResourceOutlineCode()
+        {
+            //ExStart:GetResourceOutlineCode
+            //ExFor: Resource.OutlineCode
+            //ExSummary: Shows how to work with resource outline values.
+            Project project = new Project(DataDir + "OutlineCodes2003.mpp");
+
+            Resource res = project.Resources.GetById(2);
+            Assert.AreEqual(2, res.OutlineCode.Count);
+            foreach (OutlineCode code in res.OutlineCode)
+            {
+                object val = null;
+                foreach (OutlineCodeDefinition def in project.OutlineCodes)
+                {
+                    if (def.FieldId != code.FieldId)
+                    {
+                        continue;
+                    }
+
+                    foreach (OutlineValue value in def.Values)
+                    {
+                        if (value.ValueId != code.ValueId)
+                        {
+                            continue;
+                        }
+
+                        val = value.Value;
+                        break;
+                    }
+                }
+
+                Console.WriteLine(val.ToString());
+            }
+            //ExEnd:GetResourceOutlineCode
+        }
+        
+        [Test]
+        public void ResourceParentProject()
+        {
+            //ExStart
+            //ExFor: Resource.ParentProject
+            //ExSummary: Shows how to use parent project of resource.
+            var project = new Project();
+            var resource = project.Resources.Add("Resource");
+            
+            // set a work for the resource by using default project work time unit type.
+            resource.Set(Rsc.Work, resource.ParentProject.GetWork(1));
+
+            Console.WriteLine(resource.Get(Rsc.Work));
+            //ExEnd
+        }
+        
+        [Test]
+        public void ResourceToString()
+        {
+            //ExStart
+            //ExFor: Resource.ToString
+            //ExSummary: Shows how to use resource ToString method.
+            var project = new Project();
+            var resource = project.Resources.Add("Resource");
+
+            // print resource common information
+            Console.WriteLine(resource.ToString());
+            //ExEnd
+        }
+        
+        [Test]
+        public void ReadResourceTimephasedData2()
+        {
+            var project = new Project();
+            var task = project.RootTask.Children.Add("Task");
+            task.Set(Tsk.Start, new DateTime(2020, 4, 1, 8, 0, 0));
+            task.Set(Tsk.Duration, project.GetDuration(1));
+            task.Set(Tsk.Finish, new DateTime(2020, 4, 1, 17, 0, 0));
+            var resource = project.Resources.Add("Resource");
+            project.ResourceAssignments.Add(task, resource);
+            
+            //ExStart
+            //ExFor: Resource.TimephasedData
+            //ExSummary: Shows how to read resource timephased data.
+            resource.Set(Rsc.Work, resource.ParentProject.GetWork(2));
+            
+            project.SetBaseline(BaselineType.Baseline);
+            
+            // iterate over timephased data of the resource 
+            foreach (var td in resource.TimephasedData)
+            {
+                Console.WriteLine(td.Start);
+                Console.WriteLine(td.Finish);
+            }
+            //ExEnd
+        }
+        
+        [Test]
+        public void ReadResourceRates()
+        {
+            //ExStart
+            //ExFor: Resource.Rates
+            //ExSummary: Shows how to read resource rates.
+            var project = new Project();
+            var resource = project.Resources.Add();
+            resource.Set(Rsc.Uid, 1);
+            resource.Set(Rsc.Name, "Test Resource 1");
+            resource.Set(Rsc.Type, ResourceType.Work);
+            resource.Set(Rsc.Work, project.GetDuration(2d, TimeUnitType.Hour));
+            resource.Set(Rsc.StandardRate, 20m);
+
+            var rate1 = resource.Rates.Add(new DateTime(2019, 1, 1, 8, 0, 0));
+            rate1.RatesTo = new DateTime(2019, 11, 11, 17, 0, 0);
+            rate1.StandardRate = 5m;
+            rate1.StandardRateFormat = RateFormatType.Hour;
+
+            var rate2 = resource.Rates.Add(new DateTime(2019, 11, 12, 8, 0, 0));
+            rate2.RatesTo = new DateTime(2019, 12, 31, 17, 0, 0);
+            rate2.StandardRate = 10m;
+            rate2.StandardRateFormat = RateFormatType.Hour;
+            
+            // iterate over rates
+            foreach (KeyValuePair<RateType, RateByDateCollection> rate in resource.Rates)
+            {
+                foreach (KeyValuePair<DateTime, Rate> pair in rate.Value)
+                {
+                    Console.WriteLine(pair.Value.RatesFrom);
+                    Console.WriteLine(pair.Value.RatesTo);
+                }
+            }
+            //ExEnd
         }
     }
 }

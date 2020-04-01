@@ -52,16 +52,19 @@
         public void EvaluationDateTimeLimitations()
         {
             //ExStart:DateTimeLimitations
-            //ExFor: Project.Save(String,SaveFileFormat)
+            //ExFor: Tsk.ActualStart
+            //ExFor: Tsk.ActualFinish
             //ExSummary: Shows that project' dates are reset in an evaluation mode.
             var project = new Project();
 
-            // Define Tasks
+            // create new tasks
             var task1 = project.RootTask.Children.Add("Task1");
-            task1.Set(Tsk.ActualStart, DateTime.Parse("06-Apr-2010"));
+            task1.Set(Tsk.ActualStart, new DateTime(2010, 4, 10, 8, 0, 0));
+            task1.Set(Tsk.ActualFinish, new DateTime(2010, 4, 10, 17, 0, 0));
 
             var task2 = project.RootTask.Children.Add("Task2");
-            task2.Set(Tsk.ActualStart, DateTime.Parse("10-Apr-2010"));
+            task2.Set(Tsk.ActualStart, new DateTime(2010, 4, 10, 8, 0, 0));
+            task2.Set(Tsk.ActualFinish, new DateTime(2010, 4, 10, 17, 0, 0));
 
             project.Save(OutDir + "EvaluationDateTimeLimitations_out.xml", SaveFileFormat.XML);
             //ExEnd:DateTimeLimitations

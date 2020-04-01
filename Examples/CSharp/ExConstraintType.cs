@@ -12,7 +12,7 @@
         public void ExConstraintType0()
         {
             //ExStart:SetConstraintAsLateAsPossible
-            //ExFor: ConstraintType
+            //ExFor: ConstraintType.AsLateAsPossible
             //ExSummary: Shows how to set constraint <see cref="Aspose.Tasks.ConstraintType" /> ConstraintType.AsLateAsPossible constraint for a task.
             var project = new Project(DataDir + "ConstraintAsLateAsPossible.mpp");
 
@@ -31,7 +31,7 @@
         public void ExConstraintType1()
         {
             //ExStart:SetConstraintFinishNoEarlierThan
-            //ExFor: ConstraintType
+            //ExFor: ConstraintType.FinishNoEarlierThan
             //ExSummary: Shows how to set constraint <see cref="Aspose.Tasks.ConstraintType" /> ConstraintType.FinishNoEarlierThan constraint for a task.
             var project = new Project(DataDir + "ConstraintFinishNoEarlierThan.mpp");
 
@@ -50,28 +50,8 @@
         [Test]
         public void ExConstraintType2()
         {
-            //ExStart:SetConstraintMustFinishOn
-            //ExFor: ConstraintType
-            //ExSummary: Shows how to set constraint <see cref="Aspose.Tasks.ConstraintType" /> ConstraintType.MustFinishOn constraint for a task.
-            var project = new Project(DataDir + "ConstraintMustFinishOn.mpp");
-
-            // Set constraint Must Finish On for task with Id 15
-            var interiorFixtures = project.RootTask.Children.GetById(15);
-            interiorFixtures.Set(Tsk.ConstraintType, ConstraintType.MustFinishOn);
-            interiorFixtures.Set(Tsk.ConstraintDate, new DateTime(2017, 3, 1, 18, 0, 0));
-
-            SaveOptions options = new PdfSaveOptions();
-            options.StartDate = project.Get(Prj.StartDate);
-            options.Timescale = Timescale.ThirdsOfMonths;
-            project.Save(OutDir + "project_MustFinishOn_out.pdf", options);
-            //ExEnd:SetConstraintMustFinishOn
-        }
-
-        [Test]
-        public void ExConstraintType3()
-        {
             //ExStart:SetConstraintMustStartOn
-            //ExFor: ConstraintType
+            //ExFor: ConstraintType.MustStartOn
             //ExSummary: Shows how to set constraint <see cref="Aspose.Tasks.ConstraintType" /> ConstraintType.MustStartOn constraint for a task.
             var project = new Project(DataDir + "ConstraintMustStartOn.mpp");
 
@@ -88,10 +68,30 @@
         }
 
         [Test]
+        public void ExConstraintType3()
+        {
+            //ExStart:SetConstraintMustFinishOn
+            //ExFor: ConstraintType.MustFinishOn
+            //ExSummary: Shows how to set constraint <see cref="Aspose.Tasks.ConstraintType" /> ConstraintType.MustFinishOn constraint for a task.
+            var project = new Project(DataDir + "ConstraintMustFinishOn.mpp");
+
+            // Set constraint Must Finish On for task with Id 15
+            var interiorFixtures = project.RootTask.Children.GetById(15);
+            interiorFixtures.Set(Tsk.ConstraintType, ConstraintType.MustFinishOn);
+            interiorFixtures.Set(Tsk.ConstraintDate, new DateTime(2017, 3, 1, 18, 0, 0));
+
+            SaveOptions options = new PdfSaveOptions();
+            options.StartDate = project.Get(Prj.StartDate);
+            options.Timescale = Timescale.ThirdsOfMonths;
+            project.Save(OutDir + "project_MustFinishOn_out.pdf", options);
+            //ExEnd:SetConstraintMustFinishOn
+        }
+
+        [Test]
         public void ExConstraintType4()
         {
             //ExStart:SetConstraintStartNoEarlierThan
-            //ExFor: ConstraintType
+            //ExFor: ConstraintType.StartNoEarlierThan
             //ExSummary: Shows how to set constraint <see cref="Aspose.Tasks.ConstraintType" /> ConstraintType.StartNoEarlierThan constraint for a task.
             var project = new Project(DataDir + "ConstraintStartNoEarlierThan.mpp");
 
