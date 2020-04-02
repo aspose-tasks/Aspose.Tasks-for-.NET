@@ -493,7 +493,7 @@
                 project.Save(OutDir + "CreateExtendedAttributes_out.mpp", SaveFileFormat.MPP);
                 //ExEnd:CreateExtendedAttributes
             }
-            catch (Exception ex)
+            catch (NotSupportedException ex)
             {
                 Console.Write(ex.Message + "\nThis example will only work if you apply a valid Aspose License. You can purchase full license or get 30 day temporary license from http://www.aspose.com/purchase/default.aspx.");
             }
@@ -529,7 +529,7 @@
 
                 project.Save(OutDir + @"ConfigureGantChart_out.mpp", new MPPSaveOptions { WriteViewData = true });
             }
-            catch (Exception ex)
+            catch (NotSupportedException ex)
             {
                 Console.WriteLine(ex.Message + "\nThis example will only work if you apply a valid Aspose License. You can purchase full license or get 30 day temporary license from http:// Www.aspose.com/purchase/default.aspx.");
             }
@@ -561,7 +561,7 @@
                 project.Save(OutDir + @"SaveGantChartView_out.mpp", new MPPSaveOptions { WriteViewData = true });
                 //ExEnd:SaveWithDefaultGanttChartView
             }
-            catch (Exception ex)
+            catch (NotSupportedException ex)
             {
                 Console.WriteLine(ex.Message + "\nThis example will only work if you apply a valid Aspose License. You can purchase full license or get 30 day temporary license from http:// Www.aspose.com/purchase/default.aspx.");
             }
@@ -962,7 +962,7 @@
                 }
                 //ExEnd:EmbeddedObjectsCreatedInsideApplication
             }
-            catch (Exception ex)
+            catch (NotSupportedException ex)
             {
                 Console.WriteLine(ex.Message + "\nThis example will only work if you apply a valid Aspose License. You can purchase full license or get 30 day temporary license from http:// Www.aspose.com/purchase/default.aspx.");
             }
@@ -1217,9 +1217,9 @@
                 // recalculate the project with post validation
                 project.Recalculate(true);
             }
-            catch (Exception e)
+            catch (Exception ex)
             {
-                Console.WriteLine(e.Message);
+                Console.WriteLine(ex.Message);
             }
             //ExEnd:ProjectRecalculateWithValidation
         }
@@ -1490,7 +1490,7 @@
                 
                 project.Save(OutDir + "WriteProjectInfo_out.mpp", SaveFileFormat.MPP);
             }
-            catch (Exception ex)
+            catch (NotSupportedException ex)
             {
                 Console.WriteLine(ex.Message + "\nThis example will only work if you apply a valid Aspose License. You can purchase full license or get 30 day temporary license from http://www.aspose.com/purchase/default.aspx.");
             }             
@@ -1546,7 +1546,7 @@
                 project.Save(OutDir + "WriteFiscalYearProperties_out.mpp", SaveFileFormat.MPP);
                 //ExEnd:ReadWriteFiscalYearProperties
             }
-            catch (Exception ex)
+            catch (NotSupportedException ex)
             {
                 Console.WriteLine(ex.Message + "\nThis example will only work if you apply a valid Aspose License. You can purchase full license or get 30 day temporary license from http://www.aspose.com/purchase/default.aspx.");
             }            
@@ -1796,7 +1796,7 @@
                 Console.WriteLine(project.Get(Prj.Name));
                 //ExEnd:ImportProjectFromPrimaveraDB
             }
-            catch (Exception ex)
+            catch (NotSupportedException ex)
             {
                 Console.WriteLine(ex.Message + "\nPlease setup proper data source (connectionString, ProviderInvariantName) etc");
             }

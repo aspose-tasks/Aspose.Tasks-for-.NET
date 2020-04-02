@@ -8,10 +8,11 @@
     public class ExCalendarException : ApiExampleBase
     {
         [Test]
-        public void DefineWeekdayExceptions()
+        public void DefineCalendarExceptions()
         {
-            //ExStart:DefineWeekdayExceptions
+            //ExStart:DefineCalendarExceptions
             //ExFor: CalendarException
+            //ExFor: CalendarException.#ctor
             //ExFor: CalendarException.FromDate
             //ExFor: CalendarException.ToDate
             //ExFor: CalendarException.Type
@@ -19,10 +20,10 @@
             //ExSummary: Shows how to add/remove calendar exceptions.
             var project = new Project(DataDir + "project_test.mpp");
 
-            // Define a calendar
+            // create a calendar
             var calendar = project.Calendars.Add("Calendar1");
 
-            // Define week days exception for a holiday
+            // create week days exception for a holiday
             var newException = new CalendarException();
             newException.EnteredByOccurrences = false;
             newException.FromDate = new DateTime(2009, 12, 24, 0, 0, 0);
@@ -31,7 +32,7 @@
             newException.DayWorking = false;
             calendar.Exceptions.Add(newException);
             
-            // Remove an exception
+            // remove an exception
             var cal = project.Calendars.ToList()[0];
             if (cal.Exceptions.Count > 1)
             {
@@ -39,21 +40,21 @@
                 cal.Exceptions.Remove(excToRemove);
             }
 
-            // Add an exception
+            // add an exception
             var calendarException = new CalendarException();
             calendarException.FromDate = new System.DateTime(2009, 1, 1);
             calendarException.ToDate = new System.DateTime(2009, 1, 3);
             cal.Exceptions.Add(calendarException);
 
-            // Display exceptions
+            // print exceptions
             foreach (var exception in cal.Exceptions)
             {
                 Console.WriteLine("From" + exception.FromDate.ToShortDateString());
                 Console.WriteLine("To" + exception.ToDate.ToShortDateString());
             }
 
-            project.Save(OutDir + "DefineWeekdayExceptions_out.xml", SaveFileFormat.XML);
-            //ExEnd:DefineWeekdayExceptions
+            project.Save(OutDir + "DefineCalendarExceptions_out.xml", SaveFileFormat.XML);
+            //ExEnd:DefineCalendarExceptions
         }
         
         [Test]

@@ -60,6 +60,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ApiExampleBase.cs" />
+    <Compile Include="ExApplicationInfo.cs" />
     <Compile Include="ExBuiltInProjectPropertyCollection.cs" />
     <Compile Include="ExCustomProjectPropertyCollection.cs" />
     <Compile Include="ExDbSettings.cs" />
@@ -89,6 +90,7 @@
     <Compile Include="ExPrimaveraXmlSaveOptions.cs" />
     <Compile Include="ExPrintOptions.cs" />
     <Compile Include="ExProjectDisplayOptions.cs" />
+    <Compile Include="ExProjectFileFormat.cs" />
     <Compile Include="ExProjectFileInfo.cs" />
     <Compile Include="ExProjectOnlineException.cs" />
     <Compile Include="ExProjectServerCredentials.cs" />
@@ -96,6 +98,7 @@
     <Compile Include="ExProjectServerSaveOptions.cs" />
     <Compile Include="ExRecurringTaskParameters.cs" />
     <Compile Include="ExReportType.cs" />
+    <Compile Include="ExResourceAssignmentCollection.cs" />
     <Compile Include="ExSaveFileFormat.cs" />
     <Compile Include="ExSaveTemplateOptions.cs" />
     <Compile Include="ExSpreadsheet2003SaveOptions.cs" />

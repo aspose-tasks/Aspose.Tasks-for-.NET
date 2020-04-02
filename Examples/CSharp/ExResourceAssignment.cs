@@ -10,74 +10,6 @@
     public class ExResourceAssignment : ApiExampleBase
     {
         [Test]
-        public void CreateMultipleResourceAssignmentsForOneTask()
-        {
-            try
-            {
-                //ExStart:CreateMultipleResourceAssignmentsForOneTask
-                //ExFor: ResourceAssignmentCollection.Add(Task,Resource)
-                //ExSummary: Shows how to create multiple resource assignments.
-                var project = new Project(DataDir + "TemplateResource2010.mpp")
-                {
-                    CalculationMode = CalculationMode.Automatic
-                };
-
-                project.Set(Prj.DateFormat, DateFormat.DateDddMmDdYy);
-                project.Set(Prj.StartDate, new DateTime(2019, 9, 16, 9, 0, 0));
-                project.Set(Prj.NewTasksAreManual, false);
-                project.Set(Prj.ActualsInSync, false);
-
-                var workResource = project.Resources.Add("Servente (Work)");
-                workResource.Set(Rsc.Name, "Servente (Work)");
-                workResource.Set(Rsc.Initials, "S");
-                workResource.Set(Rsc.Type, ResourceType.Work);
-                workResource.Set(Rsc.StandardRateFormat, RateFormatType.Hour);
-                workResource.Set(Rsc.Code, "1503");
-
-                var materialResource = project.Resources.Add("Tijolo (Material)");
-                materialResource.Set(Rsc.Name, "Tijolo (Material)");
-                materialResource.Set(Rsc.Initials, "T");
-                materialResource.Set(Rsc.Type, ResourceType.Material);
-                materialResource.Set(Rsc.StandardRateFormat, RateFormatType.MaterialResourceRate);
-                materialResource.Set(Rsc.Code, "21341");
-
-                var tsk1 = project.RootTask.Children.Add("Task - 01");
-                tsk1.Set(Tsk.IsRollup, new NullableBool(true));
-                tsk1.Set(Tsk.IsPublished, new NullableBool(false));
-                var tsk2 = tsk1.Children.Add("Task - 01.01");
-                tsk2.Set(Tsk.IsRollup, new NullableBool(true));
-                tsk2.Set(Tsk.IsPublished, new NullableBool(false));
-                var tsk3 = tsk2.Children.Add("Task - 01.01.001");
-                tsk3.Set(Tsk.IsEstimated, new NullableBool(false));
-                tsk3.Set(Tsk.Start, new DateTime(2019, 9, 16, 9, 0, 0));
-                tsk3.Set(Tsk.Duration, project.GetDuration(10, TimeUnitType.Day));
-                tsk3.Set(Tsk.Work, project.GetDuration(10, TimeUnitType.Day));
-                tsk3.Set(Tsk.IsRollup, new NullableBool(true));
-                tsk3.Set(Tsk.IsPublished, new NullableBool(false));
-
-                var assignment1 = project.ResourceAssignments.Add(tsk3, materialResource);
-                assignment1.Set(Asn.Delay, project.GetDuration(40, TimeUnitType.Hour));
-                assignment1.Set(Asn.Start, new DateTime(2019, 9, 23, 9, 0, 0));
-                assignment1.Set(Asn.Finish, new DateTime(2019, 9, 27, 18, 0, 0));
-                var assignment2 = project.ResourceAssignments.Add(tsk3, workResource);
-                assignment2.Set(Asn.Work, project.GetDuration(56, TimeUnitType.Hour));
-                assignment2.Set(Asn.Start, new DateTime(2019, 9, 16, 9, 0, 0));
-                assignment2.Set(Asn.Finish, new DateTime(2019, 9, 24, 18, 0, 0));
-
-                assignment2.Set(Asn.WorkContour, WorkContourType.Contoured);
-                tsk3.Set(Tsk.IsManual, new NullableBool(true));
-                tsk1.Set(Tsk.IsManual, new NullableBool(true));
-
-                project.Save(OutDir + @"Assignment_Dates_out.mpp", SaveFileFormat.MPP);
-                //ExEnd:CreateMultipleResourceAssignmentsForOneTask
-            }
-            catch (NotSupportedException ex)
-            {
-                Console.WriteLine(ex.Message + "\nThis example will only work if you apply a valid Aspose License. You can purchase full license or get 30 day temporary license from http://www.aspose.com/purchase/default.aspx.");
-            }
-        }
-        
-        [Test]
         public void GenerateResourceAssignmentTimephasedData()
         {
             //ExStart:GenerateResourceAssignmentTimephasedData
@@ -371,21 +303,19 @@
             //ExStart:ReadWriteTimephasedData
             //ExFor: ResourceAssignment.GetTimephasedData(DateTime, DateTime)
             //ExFor: ResourceAssignment.GetTimephasedData(DateTime, DateTime, TimephasedDataType)
-            //ExSummary: Shows how to read timephased data of a resource assignment.
+            //ExSummary: Shows how to generate timephased data of a resource assignment within a date range.
             var project = new Project(DataDir + "ReadWriteTimephasedData.mpp");
 
             // Set project properties
             project.Set(Prj.StartDate, new DateTime(2013, 10, 30, 9, 0, 0));
             project.Set(Prj.NewTasksAreManual, false);
 
-            // Add task and resources
             var task = project.RootTask.Children.Add("Task");
+            task.Set(Tsk.Duration, project.GetDuration(6));
+            
             var rsc = project.Resources.Add("Rsc");
-
-            // Set resource rates and task duration
             rsc.Set(Rsc.StandardRate, 10);
             rsc.Set(Rsc.OvertimeRate, 15);
-            task.Set(Tsk.Duration, project.GetDuration(6));
 
             // Create resource assignment
             var assn = project.ResourceAssignments.Add(task, rsc);
@@ -398,7 +328,7 @@
             project.SetBaseline(BaselineType.Baseline);
             task.Set(Tsk.PercentComplete, 50);
 
-            // Read timephased data
+            // get timephased data
             List<TimephasedData> td = assn.GetTimephasedData(assn.Get(Asn.Start), assn.Get(Asn.Finish), TimephasedDataType.AssignmentRemainingWork).ToList();
             Console.WriteLine(td.Count);
             foreach (var timePhasedValue in td)
@@ -406,6 +336,37 @@
                 Console.WriteLine(timePhasedValue.Value);
             }
             //ExEnd:ReadWriteTimephasedData
+        }
+        
+        [Test]
+        public void ReadResourceAssignmentTimephasedData()
+        {
+            //ExStart:ReadResourceAssignmentTimephasedData
+            //ExFor: ResourceAssignment.TimephasedData
+            //ExSummary: Shows how to read timephased data of a resource assignment.
+            var project = new Project(DataDir + "ReadWriteTimephasedData.mpp");
+            project.Set(Prj.StartDate, new DateTime(2013, 10, 30, 9, 0, 0));
+            project.Set(Prj.NewTasksAreManual, false);
+
+            var task = project.RootTask.Children.Add("Task");
+            task.Set(Tsk.Duration, project.GetDuration(6));
+            
+            var rsc = project.Resources.Add("Rsc");
+            rsc.Set(Rsc.StandardRate, 10);
+            rsc.Set(Rsc.OvertimeRate, 15);
+
+            // Create resource assignment
+            var assn = project.ResourceAssignments.Add(task, rsc);
+            assn.Set(Asn.Stop, DateTime.MinValue);
+            assn.Set(Asn.Resume, DateTime.MinValue);
+            assn.Set(Asn.WorkContour, WorkContourType.BackLoaded);
+
+            // get timephased data
+            foreach (var td in assn.TimephasedData)
+            {                    
+                Console.WriteLine(td.Value);
+            }
+            //ExEnd:ReadResourceAssignmentTimephasedData
         }
         
         [Test]
@@ -474,10 +435,236 @@
                 project.Save(OutDir + "UpdateResourceAssignment_out.mpp", SaveFileFormat.MPP);
                 //ExEnd:UpdateResourceAssignmentNotes
             }
-            catch (Exception ex)
+            catch (NotSupportedException ex)
             {
                 Console.WriteLine(ex.Message + "\nThis example will only work if you apply a valid Aspose License. You can purchase full license or get 30 day temporary license from http://www.aspose.com/purchase/default.aspx.");
             }
+        }
+        
+        [Test]
+        public void PrintResourceAssignmentCommonInformation()
+        {
+            //ExStart:PrintAssignmentCommonInformation
+            //ExFor: ResourceAssignment.ToString()
+            //ExSummary: Shows how to print common assignment info.
+            var project = new Project(DataDir + "BudgetWorkAndCost.mpp");
+
+            var collector = new ChildTasksCollector();
+            TaskUtils.Apply(project.RootTask, collector, 0);
+            foreach (var task in collector.Tasks)
+            {
+                // display task's assignments
+                foreach (var assignment in task.Assignments)
+                {
+                    Console.WriteLine(assignment.ToString());
+                }
+            }
+            //ExEnd:PrintAssignmentCommonInformation
+        }
+        
+        [Test]
+        public void CreateAndGetSetResourceAssignmentCommonProperties()
+        {
+            //ExStart:CreateAndGetSetResourceAssignmentCommonProperties
+            //ExFor: ResourceAssignment
+            //ExFor: ResourceAssignment.Get``1(Aspose.Tasks.Key{``0,Aspose.Tasks.AsnKey})
+            //ExFor: ResourceAssignment.Set(Aspose.Tasks.Key{System.DateTime,Aspose.Tasks.AsnKey},System.DateTime)
+            //ExFor: ResourceAssignment.Set``1(Aspose.Tasks.Key{``0,Aspose.Tasks.AsnKey},``0)
+            //ExSummary: Shows how to create an assignment and get/set common assignment properties.
+            var project = new Project(DataDir + "BudgetWorkAndCost.mpp");
+
+            var task = project.RootTask.Children.Add("Task");
+            task.Set(Tsk.Start, new DateTime(2020, 4, 2, 8, 0, 0));
+            task.Set(Tsk.Duration, project.GetDuration(1));
+            task.Set(Tsk.Finish, new DateTime(2020, 4, 2, 17, 0, 0));
+            var resource = project.Resources.Add("Resource");
+            var resourceAssignment = project.ResourceAssignments.Add(task, resource);
+            resourceAssignment.Set(Asn.Start, new DateTime(2020, 4, 2, 8, 0, 0));
+            resourceAssignment.Set(Asn.Work, project.GetWork(1));
+            resourceAssignment.Set(Asn.Finish, new DateTime(2020, 4, 2, 17, 0, 0));
+
+            Console.WriteLine(resourceAssignment.Get(Asn.Start));
+            Console.WriteLine(resourceAssignment.Get(Asn.Work));
+            Console.WriteLine(resourceAssignment.Get(Asn.Finish));
+            //ExEnd:CreateAndGetSetResourceAssignmentCommonProperties
+        }
+        
+        [Test]
+        public void ResourceAssignmentEquals()
+        {
+            //ExStart
+            //ExFor: ResourceAssignment.Equals(ResourceAssignment)
+            //ExFor: ResourceAssignment.Equals(Object)
+            //ExSummary: Shows how to check resource assignment equality.
+            var project = new Project(DataDir + "BaselineTD2010_3.mpp");
+
+            var resourceAssignment1 = project.ResourceAssignments.GetByUid(1);
+            var resourceAssignment2 = project.ResourceAssignments.GetByUid(1);
+
+            Console.WriteLine("Are resource assignments equal: " + resourceAssignment1.Equals(resourceAssignment2));
+            //ExEnd
+        }
+        
+        [Test]
+        public void GetResourceAssignmentHashCode()
+        {
+            //ExStart
+            //ExFor: ResourceAssignment.GetHashCode()
+            //ExSummary: Shows how to get a hash code of a resource assignment.
+            var project = new Project(DataDir + "BaselineTD2010_3.mpp");
+
+            var resourceAssignment1 = project.ResourceAssignments.GetByUid(2);
+            var resourceAssignment2 = project.ResourceAssignments.GetByUid(3);
+
+            // print assignment's hash codes
+            Console.WriteLine("Resource Assignment UID: {0} Hash Code: {0}", resourceAssignment1.GetHashCode());
+            Console.WriteLine("Resource Assignment UID: {0} Hash Code: {0}", resourceAssignment2.GetHashCode());
+            //ExEnd
+        }
+        
+        [Test]
+        public void ResourceAssignmentParentProject()
+        {
+            //ExStart
+            //ExFor: ResourceAssignment.ParentProject
+            //ExSummary: Shows how to use parent project of a resource assignment.
+            var project = new Project();
+            var task = project.RootTask.Children.Add("Task");
+            var resource = project.Resources.Add("Resource");
+            var resourceAssignment = project.ResourceAssignments.Add(task, resource);
+            
+            // set a duration of the assignment by using default project time unit type.
+            resourceAssignment.Set(Asn.Work, resource.ParentProject.GetWork(1));
+
+            Console.WriteLine(resourceAssignment.Get(Asn.Work));
+            //ExEnd
+        }
+        
+        [Test]
+        public void GetResourceAssignmentBaselines()
+        {                        
+            //ExStart
+            //ExFor: ResourceAssignment.Baselines
+            //ExSummary: Shows how to get access to assignment's baselines.
+            var project = new Project();
+            var task = project.RootTask.Children.Add("Task");
+            var resource = project.Resources.Add("Resource");
+            var resourceAssignment = project.ResourceAssignments.Add(task, resource);
+            
+            project.SetBaseline(BaselineType.Baseline);
+
+            foreach (var assignmentBaseline in resourceAssignment.Baselines)
+            {
+                Console.WriteLine("Baseline Start: {0}", assignmentBaseline.Start);
+                Console.WriteLine("Baseline Finish: {0}", assignmentBaseline.Finish);    
+            }
+            //ExEnd            
+        }
+
+        [Test]
+        public void ResourceAssignmentDelete()
+        {                        
+            //ExStart
+            //ExFor: ResourceAssignment.Delete
+            //ExSummary: Shows how to delete a resource assignment.
+            var project = new Project();
+            var task = project.RootTask.Children.Add("Task");
+            var resource = project.Resources.Add("Resource");
+            var resourceAssignment = project.ResourceAssignments.Add(task, resource);
+            
+            Console.WriteLine("Assignment count (before): {0}", project.ResourceAssignments.Count);
+            
+            resourceAssignment.Delete();
+
+            Console.WriteLine("Assignment count (after): {0}", project.ResourceAssignments.Count);
+            //ExEnd            
+        }
+        
+        [Test]
+        public void ResourceAssignmentExtendedAttributes()
+        {
+            //ExStart
+            //ExFor: ResourceAssignment.ExtendedAttributes
+            //ExSummary: Shows how to add extended attributes for an assignment.
+            var project = new Project(DataDir + "Blank2010.mpp");
+
+            // Assign resource "1 TRG: Trade Group" to the "TASK 1" by creating a ResourceAssignment object.
+            var task = project.RootTask.Children.Add("Task");
+            var resource = project.Resources.Add("Resource");
+            var assignment = project.ResourceAssignments.Add(task, resource);
+
+            // Create custom attribute definition with lookup.
+            var definition = ExtendedAttributeDefinition.CreateLookupResourceDefinition(
+                CustomFieldType.Cost,
+                ExtendedAttributeResource.Cost5,
+                "My lookup resource cost");
+            project.ExtendedAttributes.Add(definition);
+
+            var firstValue = new Value { NumericValue = 1500, Description = "Val 1", Id = 1, Val = "1500" };
+            var secondValue = new Value { NumericValue = 2500, Description = "Val 2", Id = 2 };
+            definition.AddLookupValue(firstValue);
+            definition.AddLookupValue(secondValue);
+
+            // This value can be seen in "Resource usage" view of MS Project.
+            var attributeValue = definition.CreateExtendedAttribute(firstValue);
+            assignment.ExtendedAttributes.Add(attributeValue);
+
+            Console.WriteLine("Number of assignment's extended attribute: " + assignment.ExtendedAttributes.Count);
+            foreach (var attribute in assignment.ExtendedAttributes)
+            {
+                Console.WriteLine("Extended attribute alias: " + attribute.AttributeDefinition.Alias);
+            }
+            //ExEnd
+        }
+        
+        [Test]
+        public void ResourceAssignmentGuid()
+        {
+            //ExStart
+            //ExFor: ResourceAssignment.Guid
+            //ExSummary: Shows how to read an resource assignment GUID.
+            var project = new Project();
+            var task = project.RootTask.Children.Add("Task");
+            var resource = project.Resources.Add("Resource");
+            var assignment = project.ResourceAssignments.Add(task, resource);
+
+            Console.WriteLine(assignment.Guid);
+            //ExEnd
+        }
+        
+        [Test]
+        public void ResourceAssignmentMakeTPs()
+        {
+            //ExStart
+            //ExFor: ResourceAssignment.MakeTPs(System.DateTime,System.TimeSpan,Aspose.Tasks.Calendar,System.Collections.Generic.List{Aspose.Tasks.TimephasedData},System.Boolean,System.Int32)
+            //ExSummary: Shows how to generate TPs by parameters.
+            var project = new Project();
+
+            var task = project.RootTask.Children.Add("Task");
+            task.Set(Tsk.Start, new DateTime(2020, 3, 30, 8, 0, 0));
+            var resource = project.Resources.Add("Resource");
+            var assignment = project.ResourceAssignments.Add(task, resource);
+            assignment.Set(Asn.Start, new DateTime(2020, 4, 1, 8, 0, 0));
+
+            var tps = new List<TimephasedData>();
+            var lastDate = assignment.MakeTPs(
+                assignment.Get(Asn.Start), 
+                TimeSpan.FromHours(32),
+                project.Calendars.GetByName("Standard"),
+                tps,
+                true,
+                (int)TimephasedDataType.AssignmentRemainingWork);
+
+            foreach (var data in tps)
+            {
+                Console.WriteLine("Start: " + data.Start);
+                Console.WriteLine("Finish: " + data.Finish);
+                Console.WriteLine("TimephasedDataType: " + data.TimephasedDataType);
+                Console.WriteLine();
+            }
+            
+            Assert.AreEqual(tps[tps.Count - 1].Finish, lastDate); //ExSkip
+            //ExEnd
         }
     }
 }

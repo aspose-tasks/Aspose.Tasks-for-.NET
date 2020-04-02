@@ -15,7 +15,9 @@
             try
             {
                 //ExStart:ImportProjectFromPrimaveraDB
+                //ExFor: PrimaveraDbSettings
                 //ExFor: PrimaveraDbSettings.#ctor(String,Int32)
+                //ExFor: PrimaveraDbSettings.ProjectId
                 //ExSummary: Shows how to import a project from a Primavera database.
                 var sb = new SqlConnectionStringBuilder();
                 sb.DataSource = "192.168.56.3,1433";
@@ -29,12 +31,14 @@
                 // Initialize a new instance of the PrimaveraDbSettings class with connection string and project id
                 var settings = new PrimaveraDbSettings(sb.ConnectionString, 4502);
 
-                // Initialize a new instance of the Project class
+                Console.WriteLine("Project UID to read: " + settings.ProjectId);
+
+                // read the project with UID = 4502
                 var project = new Project(settings);
-                Console.WriteLine(project.Get(Prj.Name));
+                Console.WriteLine(project.Get(Prj.Uid));
                 //ExEnd:ImportProjectFromPrimaveraDB
             }
-            catch (Exception ex)
+            catch (NotSupportedException ex)
             {
                 Console.WriteLine(ex.Message + "\nPlease setup proper data source (connectionString, ProviderInvariantName) etc");
             }

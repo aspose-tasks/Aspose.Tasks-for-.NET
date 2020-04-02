@@ -128,7 +128,7 @@
                 project.Save(OutDir + "WriteMetaData_out.mpp", SaveFileFormat.MPP);
                 //ExEnd:WriteMetadataToMpp
             }
-            catch (Exception ex)
+            catch (NotSupportedException ex)
             {
                 Console.WriteLine(ex.Message + "\nThis example will only work if you apply a valid Aspose License. You can purchase full license or get 30 day temporary license from http://www.aspose.com/purchase/default.aspx.");
             }
@@ -324,7 +324,7 @@
                 project.Save(OutDir + "UpdateResourceData_out.mpp", SaveFileFormat.MPP);
                 //ExEnd:ReadWriteGeneralResourceProperties
             }
-            catch (Exception ex)
+            catch (NotSupportedException ex)
             {
                 Console.WriteLine(ex.Message + "\nThis example will only work if you apply a valid Aspose License. You can purchase full license or get 30 day temporary license from http://www.aspose.com/purchase/default.aspx.");
             }
@@ -359,7 +359,7 @@
                 project.Save(OutDir + "ResourceExtendedAttributes_out.mpp", SaveFileFormat.MPP);
                 //ExEnd:SetResourceExtendedAttributes
             }
-            catch (Exception ex)
+            catch (NotSupportedException ex)
             {
                 Console.WriteLine(ex.Message + "\nThis example will only work if you apply a valid Aspose License. You can purchase full license or get 30 day temporary license from http://www.aspose.com/purchase/default.aspx.");
             }
@@ -507,7 +507,7 @@
             var resource1 = project.Resources.GetById(1);
             var resource2 = project.Resources.GetById(1);
 
-            Console.WriteLine("Resources are equal: " + resource1.Equals(resource2));
+            Console.WriteLine("Are resources equal: " + resource1.Equals(resource2));
             //ExEnd
         }
         

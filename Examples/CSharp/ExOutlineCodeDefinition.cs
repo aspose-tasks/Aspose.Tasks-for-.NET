@@ -13,6 +13,8 @@
             try
             {
                 //ExStart:CheckOutlineCodeIdUniqueness
+                //ExFor: OutlineCodeDefinition
+                //ExFor: OutlineCodeDefinition.#ctor
                 //ExFor: OutlineCodeDefinition.FieldId
                 //ExFor: OutlineCodeDefinition.Alias
                 //ExSummary:  how to work with outline code definitions.
@@ -101,7 +103,7 @@
                 project.Save(OutDir + "Updated_project_out.mpp", SaveFileFormat.MPP);
                 //ExEnd:UpdateOutlineCodes
             }
-            catch (Exception ex)
+            catch (NotSupportedException ex)
             {
                 Console.WriteLine(ex.Message + "\nThis example will only work if you apply a valid Aspose License. You can purchase full license or get 30 day temporary license from http://www.aspose.com/purchase/default.aspx.");
             }         

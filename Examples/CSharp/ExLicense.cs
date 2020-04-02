@@ -15,6 +15,7 @@
             {
                 //ExStart:ApplyLicenseUsingFile
                 //ExFor: License
+                //ExFor: License.#ctor
                 //ExFor: License.SetLicense(String)
                 //ExSummary: Shows how to apply a license of Aspose.Tasks.
                 var license = new License();

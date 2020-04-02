@@ -54,9 +54,10 @@
         //ExFor: IFontSavingCallback
         //ExFor: IImageSavingCallback
         //ExFor: CssSavingArgs
-        //ExFor: CssSavingArgs.#ctor
         //ExFor: FontSavingArgs
         //ExFor: ImageSavingArgs
+        //ExFor: CssSavingArgs.#ctor
+        //ExFor: ImageSavingArgs.#ctor
         //ExSummary: Shows how to set resource prefixes for nested resources.
         [TestFixture] //ExSkip
         internal class ResourcePrefixForNestedResources : ApiExampleBase, ICssSavingCallback, IFontSavingCallback, IImageSavingCallback

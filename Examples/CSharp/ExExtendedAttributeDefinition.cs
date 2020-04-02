@@ -399,7 +399,7 @@
                 task.Set(Tsk.Deadline, new DateTime(2015, 3, 20, 17, 0, 0));
                 project.Save(OutDir + "project_UsingTasksAndResourceFields_out.mpp", SaveFileFormat.MPP);
             }
-            catch (Exception ex)
+            catch (NotSupportedException ex)
             {
                 Console.WriteLine(ex.Message + "\nThis example will only work if you apply a valid Aspose License. You can purchase full license or get 30 day temporary license from http://www.aspose.com/purchase/default.aspx.");
             }            
@@ -451,7 +451,7 @@
                 project.Save(OutDir + "WriteFormulasInExtendedAttributesToMPP_out.mpp", SaveFileFormat.MPP);
                 //ExEnd:WriteFormulasInExtendedAttributesToMpp
             }
-            catch (Exception ex)
+            catch (NotSupportedException ex)
             {
                 Console.WriteLine(ex.Message + "\nThis example will only work if you apply a valid Aspose License. You can purchase full license or get 30 day temporary license from http://www.aspose.com/purchase/default.aspx.");
             }            
@@ -600,7 +600,7 @@
                 project.Save(OutDir + "CreateExtendedAttributes_out.mpp", SaveFileFormat.MPP);
                 //ExEnd:CreateExtendedAttributes
             }
-            catch (Exception ex)
+            catch (NotSupportedException ex)
             {
                 Console.Write(ex.Message + "\nThis example will only work if you apply a valid Aspose License. You can purchase full license or get 30 day temporary license from http://www.aspose.com/purchase/default.aspx.");
             }
@@ -724,7 +724,7 @@
                 project.Save(OutDir + "WriteUpdatedExtendedAttributeDefinitions_out.mpp", mppSaveOptions);
                 //ExEnd:WriteUpdatedExtendedAttributeDefinitions
             }
-            catch (Exception ex)
+            catch (NotSupportedException ex)
             {
                 Console.Write(ex.Message + "\nThis example will only work if you apply a valid Aspose License. You can purchase full license or get 30 day temporary license from http://www.aspose.com/purchase/default.aspx.");
             }
@@ -834,7 +834,7 @@
                 project3.Save(OutDir + "FinishExtendedAttributeWithLookup_out.mpp", SaveFileFormat.MPP);
                 //ExEnd:AddTaskExtendedAttributes
             }
-            catch (Exception ex)
+            catch (NotSupportedException ex)
             {
                 Console.WriteLine(ex.Message + "\nThis example will only work if you apply a valid Aspose License. You can purchase full license or get 30 day temporary license from http://www.aspose.com/purchase/default.aspx.");
             }

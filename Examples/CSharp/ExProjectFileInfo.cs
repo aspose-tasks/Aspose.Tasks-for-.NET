@@ -7,19 +7,19 @@
     public class ExProjectFileInfo : ApiExampleBase
     {
         [Test]
-        public void ImportDataFromXMLFileFormats()
+        public void ReadProjectFileInfo()
         {
-            //ExStart:ImportDataFromXMLFileFormats
+            //ExStart:ReadProjectFileInfo
             //ExFor: ProjectFileInfo
             //ExFor: ProjectFileInfo.CanRead
             //ExFor: ProjectFileInfo.ProjectFileFormat
             //ExFor: ProjectFileInfo.ProjectApplicationInfo
-            //ExSummary: Shows how to read project file info from a XML project.
+            //ExSummary: Shows how to read project file info.
             var info = Project.GetProjectFileInfo(DataDir + "Project.xml");
             Console.WriteLine("CanRead: " + info.CanRead);
             Console.WriteLine("ProjectApplicationInfo: " + info.ProjectApplicationInfo);
             Console.WriteLine("ProjectFileFormat: " + info.ProjectFileFormat);
-            //ExEnd:ImportDataFromXMLFileFormats
+            //ExEnd:ReadProjectFileInfo
         }
     }
 }

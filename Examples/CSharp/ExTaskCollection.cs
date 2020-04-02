@@ -42,7 +42,7 @@
                 project.Save(OutDir + "project_UpdateTaskData_updated_out.mpp", SaveFileFormat.MPP);
                 //ExEnd:UpdateTaskData
             }
-            catch (Exception ex)
+            catch (NotSupportedException ex)
             {
                 Console.WriteLine(ex.Message + "\nThis example will only work if you apply a valid Aspose License. You can purchase full license or get 30 day temporary license from http://www.aspose.com/purchase/default.aspx.");
             }
@@ -64,7 +64,7 @@
                 project.Save(OutDir + "CreateTasks_out.xml", SaveFileFormat.XML);
                 //ExEnd:CreateTasks
             }
-            catch (Exception ex)
+            catch (NotSupportedException ex)
             {
                 Console.WriteLine(ex.Message + "\nThis example will only work if you apply a valid Aspose License. You can purchase full license or get 30 day temporary license from http://www.aspose.com/purchase/default.aspx.");
             }
@@ -93,9 +93,9 @@
                 project.Save(OutDir + "MoveTaskUnderAnotherParent_out.mpp", SaveFileFormat.MPP);
                 //ExEnd:MoveTaskUnderAnotherParent
             }
-            catch (Exception exception)
+            catch (NotSupportedException ex)
             {
-                Console.WriteLine(exception.Message + "\nThis example will only work if you apply a valid Aspose.Tasks License. You can purchase full license or get 30 day temporary license from http://www.aspose.com/purchase/default.aspx.");  
+                Console.WriteLine(ex.Message + "\nThis example will only work if you apply a valid Aspose.Tasks License. You can purchase full license or get 30 day temporary license from http://www.aspose.com/purchase/default.aspx.");  
             }
         }
     }

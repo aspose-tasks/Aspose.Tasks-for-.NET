@@ -39,7 +39,7 @@
                 project.RootTask.Children.Add(parameters);
                 //ExEnd:CreateRecurringTask
             }
-            catch (Exception ex)
+            catch (NotSupportedException ex)
             {
                 Console.WriteLine(ex.Message + "\nThis example will only work if you apply a valid Aspose License. You can purchase full license or get 30 day temporary license from http://www.aspose.com/purchase/default.aspx.");
             }

@@ -21,8 +21,6 @@
 
             var task = project.RootTask.Children.Add("Task1");
             task.Set(Tsk.ActualStart, DateTime.Parse("23-Aug-2012"));
-
-            // Set duration in hours
             task.Set(Tsk.Duration, project.GetDuration(24, TimeUnitType.Hour));
             task.Set(Tsk.DurationFormat, TimeUnitType.Day);
             
@@ -37,9 +35,9 @@
         public void SortTasksByName()
         {
             var project = new Project(DataDir + "project-sort.mpp");
-            var coll = new ChildTasksCollector();
-            TaskUtils.Apply(project.RootTask, coll, 0);
-            List<Task> tasks = coll.Tasks;
+            var collector = new ChildTasksCollector();
+            TaskUtils.Apply(project.RootTask, collector, 0);
+            List<Task> tasks = collector.Tasks;
 
             tasks.Sort(new TaskNameComparer());
 
@@ -124,10 +122,10 @@
             var project = new Project(DataDir + "ViewSplitTasks.mpp");
             
             // Access task 
-            var splitTask = project.RootTask.Children.GetById(4);
+            var task = project.RootTask.Children.GetById(4);
 
             // Display split parts of task
-            var collection = splitTask.SplitParts;
+            var collection = task.SplitParts;
             foreach (var splitPart in collection)
             {
                 Console.WriteLine("Index: " + splitPart.Index + "\nStart: " + splitPart.Start + "\nFinish: " + splitPart.Finish + "\n");
@@ -266,9 +264,9 @@
                 project.Save(OutDir + "MoveTaskUnderSameParent_out.mpp", SaveFileFormat.MPP);
                 //ExEnd:MoveTaskUnderSameParent
             }
-            catch (Exception exception)
+            catch (NotSupportedException ex)
             {
-                Console.WriteLine(exception.Message + "\nThis example will only work if you apply a valid Aspose.Tasks License. You can purchase full license or get 30 day temporary license from http://www.aspose.com/purchase/default.aspx.");
+                Console.WriteLine(ex.Message + "\nThis example will only work if you apply a valid Aspose.Tasks License. You can purchase full license or get 30 day temporary license from http://www.aspose.com/purchase/default.aspx.");
             }
         }
         
@@ -358,7 +356,7 @@
                 project.Save(OutDir + "CreateSubProjectTask_out.mpp", SaveFileFormat.MPP);
                 //ExEnd:CreateSubProjectTask
             }
-            catch (Exception ex)
+            catch (NotSupportedException ex)
             {
                 Console.WriteLine(ex.Message + "\nThis example will only work if you apply a valid Aspose.Tasks License. You can purchase full license or get 30 day temporary license from http://www.aspose.com/purchase/default.aspx.");
             }
@@ -729,7 +727,7 @@
             //ExFor: Task.Assignments
             //ExFor: Task.Equals(Task)
             //ExFor: Task.Equals(Object)
-            //ExSummary: Shows how to iterate over task's assignments and print common assignment info.
+            //ExSummary: Shows how to iterate over task's assignments.
             var project = new Project(DataDir + "BudgetWorkAndCost.mpp");
 
             var collector = new ChildTasksCollector();
@@ -739,12 +737,6 @@
                 // display task's assignments
                 foreach (var assignment in task.Assignments)
                 {
-                    var resource = assignment.Get(Asn.Resource);
-                    if (resource == null)
-                    {
-                        continue;
-                    }
-
                     Console.WriteLine(assignment.ToString());
                 }
             }
@@ -789,9 +781,9 @@
         }
         
         [Test]
-        public void TaskDeleteTest()
+        public void TaskDelete()
         {
-            //ExStart:TaskDeleteTest
+            //ExStart:TaskDelete
             //ExFor: Task.Delete
             //ExSummary: Shows how to delete a task.
             var project = new Project();
@@ -804,7 +796,7 @@
             task.Delete();
             
             Console.WriteLine("Number of tasks: " + project.RootTask.Children.Count);
-            //ExEnd:TaskDeleteTest
+            //ExEnd:TaskDelete
         }
         
         [Test]
@@ -978,9 +970,8 @@
             //ExSummary: Shows how to use the parent task of a task.
             var project = new Project();
             var parent = project.RootTask.Children.Add("Parent");
-            var child = parent.Children.Add("Child1");
-
-            var child2 = child.ParentTask.Children.Add("Child11");
+            var child1 = parent.Children.Add("Child1");
+            var child2 = child1.ParentTask.Children.Add("Child2");
 
             Console.WriteLine("Is parent is equal to the root task: " + child2.ParentTask.Equals(parent));
             //ExEnd
@@ -1032,7 +1023,7 @@
             //ExSummary: Shows how to read task's recurring info.
             var project = new Project(DataDir + "TestRecurringTask2016.mpp");
             
-            Task task = project.RootTask.Children.GetById(1);
+            var task = project.RootTask.Children.GetById(1);
 
             Console.WriteLine("Recurrence Pattern: " + task.RecurringInfo.RecurrencePattern);
             Console.WriteLine("Start Date: " + task.RecurringInfo.StartDate);
