@@ -1,5 +1,6 @@
 ﻿namespace Aspose.Tasks.Examples.CSharp
 {
+    using System;
     using NUnit.Framework;
     using Saving;
 
@@ -81,6 +82,70 @@
             var project = new Project(DataDir + "CreateProject2.mpp");
             project.Save(OutDir + "SaveProjectDataToSpreadsheet2003XML_out.xml", SaveFileFormat.Spreadsheet2003);
             //ExEnd:SaveProjectDataToSpreadsheet2003XML
+        }
+        
+        [Test]
+        public void CreateEmptyProjectSaveMPP()
+        {
+            try
+            {
+                //ExStart
+                //ExFor: SaveFileFormat.MPP
+                //ExSummary: Shows how to save a project into MPP format without passing of an MPP template file.
+                var project = new Project();
+
+                // The project will be saved into MPP by using internal MPP template.
+                project.Save(OutDir + "CreateEmptyProjectSaveMPP_out.mpp", SaveFileFormat.MPP);
+                //ExEnd:CreateEmptyProjectSaveMPP
+            }
+            catch (NotSupportedException ex)
+            {
+                Console.WriteLine(ex.Message + "\nThis example will only work if you apply a valid Aspose License. You can purchase full license or get 30 day temporary license from http://www.aspose.com/purchase/default.aspx.");
+            }
+        }
+        
+        [Test]
+        public void CreateEmptyProjectSaveXML()
+        {
+            //ExStart:CreateEmptyProjectSaveXML
+            //ExFor: SaveFileFormat.XML
+            //ExSummary: Shows how to create an empty project and save it into MS Project XML format.
+            var project = new Project();
+            project.Save(OutDir + "EmptyProjectSaveXML_out.xml", SaveFileFormat.XML);
+            //ExEnd:CreateEmptyProjectSaveXML
+        }
+        
+        [Test]
+        public void ExportProjectDataToXERFormat()
+        {
+            //ExStart:ExportProjectDataToXERFormat
+            //ExFor: SaveFileFormat.PrimaveraXER
+            //ExSummary: Shows how to open an MPP file and then export it in XER format.
+            var project = new Project(DataDir + "Project1.mpp");
+            project.Save(OutDir + "ExportProjectDataToXERFormat_out.mpp", SaveFileFormat.PrimaveraXER);
+            //ExEnd:ExportProjectDataToXERFormat
+        }
+        
+        [Test]
+        public void ExportProjectDataToP6XMLFormat()
+        {
+            //ExStart:ExportProjectDataToP6XMLFormat
+            //ExFor: SaveFileFormat.PrimaveraP6XML
+            //ExSummary: Shows how to open an MPP file and then export it in Primavera P6 XML format.
+            var project = new Project(DataDir + "Project1.mpp");
+            project.Save(OutDir + "ExportProjectDataToXMLFormat_out.xml", SaveFileFormat.PrimaveraP6XML);             
+            //ExEnd:ExportProjectDataToP6XMLFormat
+        }
+        
+        [Test]
+        public void ExportProjectDataToPrimaveraMPXFormat()
+        {
+            //ExStart:ExportProjectDataToPrimaveraMPXFormat
+            //ExFor: SaveFileFormat.MPX
+            //ExSummary: Shows how to open an MPP file and then export it in MPX format.
+            var project = new Project(DataDir + "Project1.mpp");
+            project.Save(OutDir + "ExportProjectDataToPrimaveraMPXFormat_out.xml", SaveFileFormat.MPX);
+            //ExEnd:ExportProjectDataToPrimaveraMPXFormat
         }
     }
 }

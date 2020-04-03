@@ -16,6 +16,29 @@ namespace Aspose.Tasks.Examples.CSharp
     internal class ExFilter : ApiExampleBase
     {
         [Test]
+        public void ReadFilterDefinitionData()
+        {
+            //ExStart:ReadFilterDefinitionData
+            //ExFor: Filter
+            //ExSummary: Shows how to work with filters.
+            var project = new Project(DataDir + "ReadFilterDefinitionData.mpp");
+            List<Filter> taskFilters = project.TaskFilters.ToList();
+            Console.WriteLine("Task Filters Count: " + taskFilters.Count);
+            Console.WriteLine("All Tasks: " + taskFilters[0].Name);
+            Console.WriteLine("Task Item: " + taskFilters[0].FilterType);
+            Console.WriteLine("Task Filters Show In Menu: " + taskFilters[0].ShowInMenu);
+            Console.WriteLine("Task filter ShowRelatedSummaryRows: " + taskFilters[0].ShowRelatedSummaryRows);
+
+            // Access resource filters
+            List<Filter> rscFilters = project.ResourceFilters.ToList();
+            Console.WriteLine("Project.ResourceFilters count: " + rscFilters.Count);
+            Console.WriteLine("Resource Filter Item Type: Item.ResourceType: " + rscFilters[0].FilterType);
+            Console.WriteLine("Resource filter ShowInMenu" + rscFilters[0].ShowInMenu);
+            Console.WriteLine("Resource filter ShowRelatedSummaryRows: " + rscFilters[0].ShowRelatedSummaryRows);
+            //ExEnd:ReadFilterDefinitionData
+        }
+
+        [Test]
         public static void ReadFilterCriteriaData()
         {
             //ExStart:ReadFilterCriteriaData
@@ -47,29 +70,6 @@ namespace Aspose.Tasks.Examples.CSharp
             Console.WriteLine(criteria22.Values[0].ToString());            
             Console.WriteLine(filter.Criteria);
             //ExEnd:ReadFilterCriteriaData
-        }
-        
-        [Test]
-        public void ReadFilterDefinitionData()
-        {
-            //ExStart:ReadFilterDefinitionData
-            //ExFor: Filter
-            //ExSummary: Shows how to work with filters.
-            var project = new Project(DataDir + "ReadFilterDefinitionData.mpp");
-            List<Filter> taskFilters = project.TaskFilters.ToList();
-            Console.WriteLine("Task Filters Count: " + taskFilters.Count);
-            Console.WriteLine("All Tasks: " + taskFilters[0].Name);
-            Console.WriteLine("Task Item: " + taskFilters[0].FilterType);
-            Console.WriteLine("Task Filters Show In Menu: " + taskFilters[0].ShowInMenu);
-            Console.WriteLine("Task filter ShowRelatedSummaryRows: " + taskFilters[0].ShowRelatedSummaryRows);
-
-            // Access resource filters
-            List<Filter> rscFilters = project.ResourceFilters.ToList();
-            Console.WriteLine("Project.ResourceFilters count: " + rscFilters.Count);
-            Console.WriteLine("Resource Filter Item Type: Item.ResourceType: " + rscFilters[0].FilterType);
-            Console.WriteLine("Resource filter ShowInMenu" + rscFilters[0].ShowInMenu);
-            Console.WriteLine("Resource filter ShowRelatedSummaryRows: " + rscFilters[0].ShowRelatedSummaryRows);
-            //ExEnd:ReadFilterDefinitionData
         }
     }
 }

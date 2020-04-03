@@ -17,37 +17,7 @@
 
     [TestFixture]
     public class ExProject : ApiExampleBase
-    { 
-        [Test]
-        public void HandleProjectReadingException()
-        {
-            //ExStart:HandleProjectReadingException
-            //ExFor: TasksReadingException
-            //ExSummary: Shows how to handle exceptions or project' reading/writing.
-            try
-            {
-                var project = new Project(DataDir + "project.mpp");
-                project.Save(OutDir + "HandleExceptions_out.mpp", SaveFileFormat.MPP);
-            }
-            catch (TasksReadingException ex)
-            {
-                Console.WriteLine("Message:");
-                Console.WriteLine(ex.Message);
-                Console.WriteLine("Log:");
-                Console.WriteLine(ex.LogText);
-                if (ex.InnerException != null)
-                {
-                    Console.WriteLine("Inner exception message:");
-                    Console.WriteLine(ex.InnerException.Message);
-                }
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.Message);
-            }
-            //ExEnd:HandleProjectReadingException
-        }
-
+    {
         [Test]
         public void SaveProjectOverviewReport()
         {
@@ -129,8 +99,7 @@
         {
             //ExStart:GetWorkWithDefaultProjectFormat
             //ExFor: Project.GetWork(Double)
-            //ExFor: Prj.WorkFormat
-            //ExSummary: Shows how to get a duration with default work format.
+            //ExSummary: Shows how to get a work with default work format.
             var project = new Project(DataDir + "Blank2010.mpp");
 
             Console.WriteLine("Project's work format: " + project.Get(Prj.WorkFormat));
@@ -273,25 +242,6 @@
             }
         }
         //ExEnd:CreateResources
-        
-        [Test]
-        public void SetGanttChartViewStartDate()
-        {            
-            try
-            {
-                //ExStart:SetGanttChartViewStartDate
-                //ExFor: Prj.TimescaleStart
-                //ExSummary: Shows how to set timescale start date to tune the date where the view should start.
-                var project = new Project(DataDir + "Project2.mpp");
-                project.Set(Prj.TimescaleStart, new DateTime(2012, 4, 30));
-                project.Save(OutDir + "SetGanttChartViewStartDate_out.mpp", SaveFileFormat.MPP);
-                //ExEnd:SetGanttChartViewStartDate
-            }
-            catch (NotSupportedException ex)
-            {
-                Console.WriteLine(ex.Message + "\nThis example will only work if you apply a valid Aspose License. You can purchase full license or get 30 day temporary license from http://www.aspose.com/purchase/default.aspx.");
-            }
-        }
         
         [Test]
         public void CreateResourceAssignments()
@@ -729,7 +679,6 @@
             {
                 //ExStart:CreateEmptyProjectSaveMPP
                 //ExFor: Project.#ctor
-                //ExFor: SaveFileFormat.MPP
                 //ExFor: Project.Save(String,SaveFileFormat)
                 //ExSummary: Shows how to create a project and save it into MPP format without passing of an MPP template file.
                 var project = new Project();
@@ -743,18 +692,7 @@
                 Console.WriteLine(ex.Message + "\nThis example will only work if you apply a valid Aspose License. You can purchase full license or get 30 day temporary license from http://www.aspose.com/purchase/default.aspx.");
             }
         }
-        
-        [Test]
-        public void CreateEmptyProjectSaveXML()
-        {
-            //ExStart:CreateEmptyProjectSaveXML
-            //ExFor: SaveFileFormat.XML
-            //ExSummary: Shows how to create an empty project and save it into MS Project XML format.
-            var project = new Project();
-            project.Save(OutDir + "EmptyProjectSaveXML_out.xml", SaveFileFormat.XML);
-            //ExEnd:CreateEmptyProjectSaveXML
-        }
-        
+
         [Test]
         public void ReadProjectFileFromStream()
         {
@@ -859,40 +797,7 @@
             Console.WriteLine(project.GetPageCount(options));
             //ExEnd:GetNumberOfPagesBySaveOptions
         }
-        
-        [Test]
-        public void ExportProjectDataToXERFormat()
-        {
-            //ExStart:ExportProjectDataToXERFormat
-            //ExFor: SaveFileFormat.PrimaveraXER
-            //ExSummary: Shows how to open an MPP file and then export it in XER format.
-            var project = new Project(DataDir + "Project1.mpp");
-            project.Save(OutDir + "ExportProjectDataToXERFormat_out.mpp", SaveFileFormat.PrimaveraXER);
-            //ExEnd:ExportProjectDataToXERFormat
-        }
-        
-        [Test]
-        public void ExportProjectDataToP6XMLFormat()
-        {
-            //ExStart:ExportProjectDataToP6XMLFormat
-            //ExFor: SaveFileFormat.PrimaveraP6XML
-            //ExSummary: Shows how to open an MPP file and then export it in Primavera P6 XML format.
-            var project = new Project(DataDir + "Project1.mpp");
-            project.Save(OutDir + "ExportProjectDataToXMLFormat_out.xml", SaveFileFormat.PrimaveraP6XML);             
-            //ExEnd:ExportProjectDataToP6XMLFormat
-        }
-        
-        [Test]
-        public void ExportProjectDataToPrimaveraMPXFormat()
-        {
-            //ExStart:ExportProjectDataToPrimaveraMPXFormat
-            //ExFor: SaveFileFormat.MPX
-            //ExSummary: Shows how to open an MPP file and then export it in MPX format.
-            var project = new Project(DataDir + "Project1.mpp");
-            project.Save(OutDir + "ExportProjectDataToPrimaveraMPXFormat_out.xml", SaveFileFormat.MPX);
-            //ExEnd:ExportProjectDataToPrimaveraMPXFormat
-        }
-        
+
         [Test]
         public void CalculateCriticalPath()
         {
@@ -1098,26 +1003,7 @@
             Console.WriteLine(pageCount);
             //ExEnd:GetPageCountForDefaultProjectDates
         }
-        
-        [Test]
-        public void ImportProjectDataFromMpdFile()
-        {
-            try
-            {
-                //ExStart:ImportProjectDataFromMpdFile
-                //ExFor: MpdSettings.#ctor(String,Int32)
-                //ExSummary: Shows how to read a project from an MPD file.
-                DbSettings settings = new MpdSettings("Provider=Microsoft.Jet.OLEDB.4.0; Data Source=" + DataDir + "MpdFileToRead.mpd", 1);
-                var project = new Project(settings);            
-                Console.WriteLine(project.Get(Prj.Name));
-                //ExEnd:ImportProjectDataFromMpdFile
-            }
-            catch (NotSupportedException ex)
-            {
-                Console.WriteLine(ex.Message + "\nThis example will only work if you apply a valid Aspose License. You can purchase full license or get 30 day temporary license from http://www.aspose.com/purchase/default.aspx.");
-            }
-        }
-        
+
         [Test]
         public void ProjectRecalculateResourceFields()
         {
@@ -1223,29 +1109,7 @@
             }
             //ExEnd:ProjectRecalculateWithValidation
         }
-        
-        [Test]
-        public void RescheduleProjectFromFinishDate()
-        {
-            //ExStart:RescheduleProjectFromFinishDate
-            //ExFor: Prj.ScheduleFromStart
-            //ExFor: Prj.FinishDate
-            //ExSummary: Shows how to reschedule the project from finish date instead of the start one.
-            var project = new Project(DataDir + "Project2.mpp");
-            project.Set(Prj.ScheduleFromStart, false);
-            project.Set(Prj.FinishDate, new DateTime(2020, 1, 1));
 
-            // Now all tasks dates (Start, Finish, EarlyStart, EarlyFinish, LateStart, LateFinish) are calculated. To get the critical path we need to calculate slacks (can be invoked in separate thread, but only after calculation of all early/late dates)
-            project.Recalculate();
-
-            foreach (var task in project.CriticalPath)
-            {
-                Console.WriteLine(task.Get(Tsk.Id));
-                Console.WriteLine(task.Get(Tsk.Name));
-            }
-            //ExEnd:RescheduleProjectFromFinishDate
-        }
-        
         [Test]
         public void RescheduleProjectFromStartDate()
         {
@@ -1422,8 +1286,6 @@
         public void DetermineProjectVersion()
         {
             //ExStart:DetermineProjectVersion
-            //ExFor: Prj.LastSaved
-            //ExFor: Prj.SaveVersion
             //ExFor: Project.Get``1(Key{``0,PrjKey})
             //ExSummary: Shows how to check a project version.
             var project = new Project(DataDir + "DetermineProjectVersion.mpp");
@@ -1433,160 +1295,7 @@
             Console.WriteLine("Last Saved : " + project.Get(Prj.LastSaved).ToShortDateString());
             //ExEnd:DetermineProjectVersion
         }
-        
-        [Test]
-        public void ReadWriteCurrencyProperties()
-        {
-            //ExStart:ReadWriteCurrencyProperties
-            //ExFor: Prj.CurrencyCode
-            //ExFor: Prj.CurrencyDigits
-            //ExFor: Prj.CurrencySymbol
-            //ExFor: Prj.CurrencySymbolPosition
-            //ExSummary: Shows how to write project's currency properties.
-            var project = new Project(DataDir + "WriteCurrencyProperties.mpp");
 
-            // Set currency properties
-            project.Set(Prj.CurrencyCode, "AUD");
-            project.Set(Prj.CurrencyDigits, 2);
-            project.Set(Prj.CurrencySymbol, "$");
-            project.Set(Prj.CurrencySymbolPosition, CurrencySymbolPositionType.After);
-            
-            // Display currency properties
-            Console.WriteLine("Currency Code: " + project.Get(Prj.CurrencyCode));
-            Console.WriteLine("Currency Digits: " + project.Get(Prj.CurrencyDigits));
-            Console.WriteLine("Currency Symbol: " + project.Get(Prj.CurrencySymbol));
-            Console.WriteLine("Currency Symbol Position: " + project.Get(Prj.CurrencySymbolPosition));
-
-            project.Save(OutDir + "WriteCurrencyProperties_out.xml", SaveFileFormat.XML);
-            //ExEnd:ReadWriteCurrencyProperties
-        }
-        
-        [Test]
-        public void ReadWriteProjectInfo()
-        {    
-            //ExStart:ReadWriteProjectInfo
-            //ExFor: Prj.Author
-            //ExFor: Prj.LastAuthor
-            //ExFor: Prj.Revision
-            //ExFor: Prj.Keywords
-            //ExFor: Prj.Comments
-            //ExSummary: Shows how to set project meta information.
-            try
-            {
-                var project = new Project(DataDir + "WriteProjectInfo.mpp");
-                
-                // Set project information
-                project.Set(Prj.Author, "Author");
-                project.Set(Prj.LastAuthor, "Last Author");
-                project.Set(Prj.Revision, 15);
-                project.Set(Prj.Keywords, "MSP Aspose");
-                project.Set(Prj.Comments, "Comments");
-                
-                Console.WriteLine(project.Get(Prj.Author));
-                Console.WriteLine(project.Get(Prj.LastAuthor));
-                Console.WriteLine(project.Get(Prj.Revision));
-                Console.WriteLine(project.Get(Prj.Keywords));
-                Console.WriteLine(project.Get(Prj.Comments));
-                
-                project.Save(OutDir + "WriteProjectInfo_out.mpp", SaveFileFormat.MPP);
-            }
-            catch (NotSupportedException ex)
-            {
-                Console.WriteLine(ex.Message + "\nThis example will only work if you apply a valid Aspose License. You can purchase full license or get 30 day temporary license from http://www.aspose.com/purchase/default.aspx.");
-            }             
-            //ExEnd:ReadWriteProjectInfo
-        }
-        
-        [Test]
-        public void ReadWriteWeekdayProperties()
-        {
-            //ExStart:ReadWriteWeekdayProperties
-            //ExFor: Prj.WeekStartDay
-            //ExFor: Prj.DaysPerMonth
-            //ExFor: Prj.MinutesPerDay
-            //ExFor: Prj.MinutesPerWeek
-            //ExSummary: Shows how to read/write project's weekday properties.
-            var project = new Project(DataDir + "WriteWeekdayProperties.mpp");
-
-            // Set week days properties
-            project.Set(Prj.WeekStartDay, DayType.Monday);
-            project.Set(Prj.DaysPerMonth, 24);
-            project.Set(Prj.MinutesPerDay, 540);
-            project.Set(Prj.MinutesPerWeek, 3240);
-
-            // Display week days properties
-            Console.WriteLine("Week Start Date: " + project.Get(Prj.WeekStartDay));
-            Console.WriteLine("Days Per Month: " + project.Get(Prj.DaysPerMonth));
-            Console.WriteLine("Minutes Per Day: " + project.Get(Prj.MinutesPerDay));
-            Console.WriteLine("Minutes Per Week: " + project.Get(Prj.MinutesPerWeek));
-
-            project.Save(OutDir + "WriteWeekdayProperties_out.xml", SaveFileFormat.XML);
-            //ExEnd:ReadWriteWeekdayProperties            
-        }
-        
-        [Test]
-        public void ReadWriteFiscalYearProperties()
-        {
-            try
-            {
-                //ExStart:ReadWriteFiscalYearProperties
-                //ExFor: Prj.FyStartDate
-                //ExFor: Prj.FiscalYearStart
-                //ExSummary: Shows how to write fiscal year properties. 
-                var project = new Project(DataDir + "WriteFiscalYearProperties.mpp");
-
-                // Set fiscal year properties
-                project.Set(Prj.FyStartDate, Month.July);
-                project.Set(Prj.FiscalYearStart, true);
-                
-                // Display fiscal year properties
-                Console.WriteLine("Fiscal Year Start Date: " + project.Get(Prj.FyStartDate));
-                Console.WriteLine("Fiscal Year Numbering: " + project.Get(Prj.FiscalYearStart));
-
-                project.Save(OutDir + "WriteFiscalYearProperties_out.mpp", SaveFileFormat.MPP);
-                //ExEnd:ReadWriteFiscalYearProperties
-            }
-            catch (NotSupportedException ex)
-            {
-                Console.WriteLine(ex.Message + "\nThis example will only work if you apply a valid Aspose License. You can purchase full license or get 30 day temporary license from http://www.aspose.com/purchase/default.aspx.");
-            }            
-        }
-        
-        [Test]
-        public void ReadWriteDefaultProperties()
-        {
-            //ExStart:ReadWriteDefaultProperties
-            //ExFor: Prj.DefaultStartTime
-            //ExFor: Prj.DefaultTaskType
-            //ExFor: Prj.DefaultStandardRate
-            //ExFor: Prj.DefaultOvertimeRate
-            //ExFor: Prj.DefaultTaskEVMethod
-            //ExFor: Prj.DefaultFixedCostAccrual
-            //ExSummary: Shows how to read project's default properties.
-            var project = new Project(DataDir + "DefaultProperties.mpp");
-            
-            // Set default properties
-            project.Set(Prj.ScheduleFromStart, true);
-            project.Set(Prj.StartDate, DateTime.Now);
-            project.Set(Prj.DefaultStartTime, project.Get(Prj.StartDate));
-            project.Set(Prj.DefaultTaskType, TaskType.FixedDuration);
-            project.Set(Prj.DefaultStandardRate, 15);
-            project.Set(Prj.DefaultOvertimeRate, 12);
-            project.Set(Prj.DefaultTaskEVMethod, EarnedValueMethodType.PercentComplete);
-            project.Set(Prj.DefaultFixedCostAccrual, CostAccrualType.Prorated);
-
-            // Display default properties
-            Console.WriteLine("New Task Default Start: " + project.Get(Prj.DefaultStartTime).ToShortDateString());
-            Console.WriteLine("New Task Default Type: " + project.Get(Prj.DefaultTaskType));
-            Console.WriteLine("Resource Default Standard Rate: " + project.Get(Prj.DefaultStandardRate));
-            Console.WriteLine("Resource Default Overtime Rate: " + project.Get(Prj.DefaultOvertimeRate));
-            Console.WriteLine("Default Task EV Method: " + project.Get(Prj.DefaultTaskEVMethod));
-            Console.WriteLine("Default Cost Accrual: " + project.Get(Prj.DefaultFixedCostAccrual));
-
-            project.Save(OutDir + "WriteDefaultProperties_out.xml", SaveFileFormat.XML);
-            //ExEnd:ReadWriteDefaultProperties
-        }
-        
         [Test]
         public void ReadingPasswordProtectedProjectFile()
         {
@@ -1704,8 +1413,7 @@
             //ExStart:SetAttributesForNewTasks
             //ExFor: Project.Set``1(Key{``0,PrjKey},``0)
             //ExFor: Project.Set(Aspose.Tasks.Key{System.DateTime,Aspose.Tasks.PrjKey},System.DateTime)
-            //ExFor: Prj.NewTaskStartDate
-            //ExSummary: Shows how to set attributes for new tasks.
+            //ExSummary: Shows how to set task's attributes.
             var project = new Project();
             project.Set(Prj.NewTaskStartDate, TaskStartDateType.CurrentDate);
             project.Save(OutDir + "SetAttributesForNewTasks_out.xml", SaveFileFormat.XML);
@@ -2118,6 +1826,121 @@
                 var regex = new Regex("PT(\\d+)H(\\d+)M(\\d+)S");
                 return regex.Replace(xml, "**$1Hrs$2Mins$3Secs**");
             }
+        }
+        
+        [Test]
+        public void CreateEmptyProjectToSaveToStreamFormat()
+        {
+            //ExStart:CreateEmptyProjectToSaveToStream
+            //ExFor: Project.Save(Stream, SaveFileFormat);
+            //ExSummary: Shows how to save project into a stream as an XML MS Project file.
+            var project = new Project();
+
+            using (var stream = new FileStream(DataDir + "EmptyProjectSaveStream_out.xml", FileMode.Create, FileAccess.Write))
+            {
+                // Write the stream into XML format
+                project.Save(stream, SaveFileFormat.XML);
+            }
+            //ExEnd:CreateEmptyProjectToSaveToStream
+        }
+
+        [Test]
+        public void CreateTaskBaseline()
+        {
+            //ExStart:CreateTaskBaseline
+            //ExFor: Project.SetBaseline(BaselineType)
+            //ExSummary: Shows how to create baselines for a whole project.
+            var project = new Project();
+
+            // Adding tasks
+            project.RootTask.Children.Add("Task");
+            project.RootTask.Children.Add("Task2");
+
+            // Set baseline for specified tasks
+            project.SetBaseline(BaselineType.Baseline);
+            //ExEnd:CreateTaskBaseline
+        }
+
+        [Test]
+        public void CreateTaskBaselineForTasks()
+        {
+            //ExStart:CreateTaskBaselineForTasks
+            //ExFor: Project.SetBaseline(BaselineType,IEnumerable{Aspose.Tasks.Task})
+            //ExSummary: Shows how to create set baselines for specific tasks.
+            var project = new Project();
+
+            // Adding tasks
+            var task = project.RootTask.Children.Add("Task");
+            var task2 = project.RootTask.Children.Add("Task2");
+
+            // Set baseline for specified tasks
+            project.SetBaseline(BaselineType.Baseline, new[] {task, task2});
+            //ExEnd:CreateTaskBaselineForTasks
+        }
+        
+        [Test]
+        public void AddNewTask()
+        {
+            //ExStart:AddNewTask
+            //ExFor: Project.RootTask
+            //ExSummary: Shows how to add a task into a project by using the root project task. 
+            var project = new Project(DataDir + "Project.mpp");
+
+            var task = project.RootTask.Children.Add("Task1");
+            task.Set(Tsk.ActualStart, DateTime.Parse("23-Aug-2012"));
+            task.Set(Tsk.Duration, project.GetDuration(24, TimeUnitType.Hour));
+            task.Set(Tsk.DurationFormat, TimeUnitType.Day);
+            
+            project.Save(OutDir + "AddNewTask_out.xml", SaveFileFormat.XML);
+            //ExEnd:AddNewTask        
+        }
+        
+        [Test]
+        public void CreateTaskLinks()
+        {
+            //ExStart:CreateTaskLinks
+            //ExFor: Project.TaskLinks
+            //ExSummary: Shows how to create task links.
+            var project = new Project();
+            
+            // Add new tasks
+            var pred = project.RootTask.Children.Add("Task 1");
+            var succ = project.RootTask.Children.Add("Task 2");
+
+            // Link tasks
+            project.TaskLinks.Add(pred, succ);
+            
+            foreach (var link in project.TaskLinks)
+            {
+                Console.WriteLine("Predecessor Task: " + link.PredTask);
+                Console.WriteLine("Successor Task: " + link.SuccTask);
+                Console.WriteLine("LagFormat: " + link.LagFormat);
+                Console.WriteLine("LinkType: " + link.LinkType);
+                Console.WriteLine("LinkLag: " + link.LinkLag);
+                Console.WriteLine("CrossProjectName: " + link.CrossProjectName);
+                Console.WriteLine("IsCrossProject: " + link.IsCrossProject);
+            }
+            //ExEnd:CreateTaskLinks
+        }
+        
+        [Test]
+        public static void WorkWithPredecessors()
+        {
+            //ExStart:WorkWithPredecessors
+            //ExFor: Project.GetPredecessors(Task)
+            //ExSummary: Shows how to get predecessors for the specific task.
+            var project = new Project(DataDir + "GetPredecessorSuccessorTasks.mpp");
+            var task = project.RootTask.Children.GetById(10);
+
+            var predecessors = project.GetPredecessors(task);
+            
+            // Display names of predecessor and successor tasks
+            foreach (var predecessor in predecessors)
+            {
+                Console.WriteLine("Predecessor " + predecessor.PredTask.Get(Tsk.Name));
+                Console.WriteLine("Successor " + predecessor.SuccTask.Get(Tsk.Name));
+            }
+            //ExEnd:WorkWithPredecessors
         }
     }
 }

@@ -17,7 +17,7 @@
             {
                 var project = new Project(DataDir + "PrintTaskWritingException.mpp");
                 Console.Write("This example will only work if you apply a valid Aspose License. You can purchase full license or get 30 day temporary license from http://www.aspose.com/purchase/default.aspx.");
-                project.Save(OutDir + "project_out.MPP", SaveFileFormat.MPP);
+                project.Save(OutDir + "PrintTaskWritingException_out.MPP", SaveFileFormat.MPP);
             }
             catch (TasksWritingException ex)
             {

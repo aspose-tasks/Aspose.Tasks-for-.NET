@@ -1,5 +1,6 @@
 ﻿namespace Aspose.Tasks.Examples.CSharp
 {
+    using System;
     using NUnit.Framework;
     using Saving;
 
@@ -7,10 +8,15 @@
     public class ExWbsCodeMask : ApiExampleBase
     {
         [Test]
-        public void AddWBSCodes()
+        public void CreateWbsCodeMask()
         {
-            //ExStart:AddWBSCodes
+            //ExStart:CreateWbsCodeMask
             //ExFor: WBSCodeMask
+            //ExFor: WBSCodeMask.#ctor
+            //ExFor: WBSCodeMask.Length
+            //ExFor: WBSCodeMask.Level
+            //ExFor: WBSCodeMask.Separator
+            //ExFor: WBSCodeMask.Sequence
             //ExSummary: Shows how to create WBS code masks.
             var project = new Project();
 
@@ -31,13 +37,20 @@
             mask.Sequence = WBSSequence.OrderedUppercaseLetters;
             project.WBSCodeDefinition.CodeMaskCollection.Add(mask);
             
-            var tsk = project.RootTask.Children.Add("Task 1");
-            tsk.Children.Add("Task 2");
+            var task = project.RootTask.Children.Add("Task 1");
+            task.Children.Add("Task 2");
 
             project.Recalculate();
 
+            Console.WriteLine("Number of WBS masks: " + project.WBSCodeDefinition.CodeMaskCollection.Count);
+            int i = 0;
+            foreach (var cm in project.WBSCodeDefinition.CodeMaskCollection)
+            {
+                Console.WriteLine("WBS Mask #{0}: Level->{1}", ++i, cm.Level);
+            }
+
             project.Save(OutDir + @"AddWBSCodes_out.xml", SaveFileFormat.XML);
-            //ExEnd:AddWBSCodes
+            //ExEnd:CreateWbsCodeMask
         }
     }
 }

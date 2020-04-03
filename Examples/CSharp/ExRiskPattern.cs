@@ -5,20 +5,22 @@
     using RiskAnalysis;
 
     [TestFixture]
-    public class ExRiskAnalysisSettings : ApiExampleBase
+    public class ExRiskPattern : ApiExampleBase
     {
         [Test]
-        public void PrepareAnalysisSettings()
+        public void UseRiskPattern()
         {
-            //ExStart:PrepareAnalysisSettings
-            //ExFor: RiskAnalysisSettings
-            //ExFor: RiskAnalysisSettings.Patterns
-            //ExFor: RiskAnalysisSettings.IterationsCount
-            //ExSummary: Shows how to prepare risk analysis settings for Monte-Carlo simulations.
-            var riskAnalysisSettings = new RiskAnalysisSettings();
-            // Set number of iterations for Monte Carlo simulation (the default value is 100).
-            riskAnalysisSettings.IterationsCount = 200;
-
+            //ExStart:UseRiskPattern
+            //ExFor: RiskPattern.#ctor(Task)
+            //ExFor: RiskPattern.Distribution
+            //ExFor: RiskPattern.Optimistic
+            //ExFor: RiskPattern.Pessimistic
+            //ExFor: RiskPattern.ConfidenceLevel
+            //ExSummary: Shows how to define risk simulation settings.
+            
+            var settings = new RiskAnalysisSettings();
+            settings.IterationsCount = 200;
+            
             var project = new Project(DataDir + "Software Development Plan-1.mpp");
             var task = project.RootTask.Children.GetById(17);
 
@@ -41,22 +43,22 @@
             // You can think of it as a value of standard deviation: the more uncertain about your estimates you are, the more the value of standard deviation used in random number generator is
             pattern.ConfidenceLevel = ConfidenceLevel.CL75;
             
-            riskAnalysisSettings.Patterns.Add(pattern);
-
-            var analyzer = new RiskAnalyzer(riskAnalysisSettings);
+            settings.Patterns.Add(pattern);
+            
+            var analyzer = new RiskAnalyzer(settings);
             var analysisResult = analyzer.Analyze(project);
-            var rootEarlyFinish = analysisResult.GetRiskItems(RiskItemType.EarlyFinish).Get(project.RootTask);
+            var earlyFinish = analysisResult.GetRiskItems(RiskItemType.EarlyFinish).Get(project.RootTask);
 
-            Console.WriteLine("Expected value: {0}", rootEarlyFinish.ExpectedValue);
-            Console.WriteLine("StandardDeviation: {0}", rootEarlyFinish.StandardDeviation);
-            Console.WriteLine("10% Percentile: {0}", rootEarlyFinish.GetPercentile(10));
-            Console.WriteLine("50% Percentile: {0}", rootEarlyFinish.GetPercentile(50));
-            Console.WriteLine("90% Percentile: {0}", rootEarlyFinish.GetPercentile(90));
-            Console.WriteLine("Minimum: {0}", rootEarlyFinish.Minimum);
-            Console.WriteLine("Maximum: {0}", rootEarlyFinish.Maximum);
+            Console.WriteLine("Expected value: {0}", earlyFinish.ExpectedValue);
+            Console.WriteLine("StandardDeviation: {0}", earlyFinish.StandardDeviation);
+            Console.WriteLine("10% Percentile: {0}", earlyFinish.GetPercentile(10));
+            Console.WriteLine("50% Percentile: {0}", earlyFinish.GetPercentile(50));
+            Console.WriteLine("90% Percentile: {0}", earlyFinish.GetPercentile(90));
+            Console.WriteLine("Minimum: {0}", earlyFinish.Minimum);
+            Console.WriteLine("Maximum: {0}", earlyFinish.Maximum);
 
             analysisResult.SaveReport(OutDir + "AnalysisReport_out.pdf");
-            //ExEnd:PrepareAnalysisSettings
+            //ExEnd:UseRiskPattern
         }
     }
 }

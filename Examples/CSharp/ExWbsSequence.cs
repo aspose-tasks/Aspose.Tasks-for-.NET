@@ -4,19 +4,18 @@
     using Saving;
 
     [TestFixture]
-    public class ExWbsCodeDefinition : ApiExampleBase
+    public class ExWbsSequence : ApiExampleBase
     {
         [Test]
-        public void AddWbsCodeDefinition()
+        public void AddWbsSequence()
         {
-            //ExStart:AddWbsCodeDefinition
-            //ExFor: WBSCodeDefinition
-            //ExFor: WBSCodeDefinition.#ctor
-            //ExFor: WBSCodeDefinition.CodeMaskCollection
-            //ExFor: WBSCodeDefinition.GenerateWBSCode
-            //ExFor: WBSCodeDefinition.VerifyUniqueness
-            //ExFor: WBSCodeDefinition.CodePrefix
-            //ExSummary: Shows how to add WBS code masks.
+            //ExStart:AddWbsSequence
+            //ExFor: WBSSequence
+            //ExFor: WBSSequence.OrderedNumbers
+            //ExFor: WBSSequence.OrderedUppercaseLetters
+            //ExFor: WBSSequence.OrderedLowercaseLetters
+            //ExFor: WBSSequence.UnorderedCharacters
+            //ExSummary: Shows how to set WBS sequences.
             var project = new Project();
 
             project.WBSCodeDefinition = new WBSCodeDefinition();
@@ -42,7 +41,7 @@
             project.Recalculate();
 
             project.Save(OutDir + @"AddWBSCodes_out.xml", SaveFileFormat.XML);
-            //ExEnd:AddWbsCodeDefinition
+            //ExEnd:AddWbsSequence
         }
     }
 }

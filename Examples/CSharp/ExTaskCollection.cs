@@ -39,7 +39,7 @@
                     child.Set(Tsk.Deadline, task.Get(Tsk.Deadline).AddDays(i + 1));
                 }
 
-                project.Save(OutDir + "project_UpdateTaskData_updated_out.mpp", SaveFileFormat.MPP);
+                project.Save(OutDir + "UpdateTaskData_updated_out.mpp", SaveFileFormat.MPP);
                 //ExEnd:UpdateTaskData
             }
             catch (NotSupportedException ex)
@@ -47,29 +47,7 @@
                 Console.WriteLine(ex.Message + "\nThis example will only work if you apply a valid Aspose License. You can purchase full license or get 30 day temporary license from http://www.aspose.com/purchase/default.aspx.");
             }
         }
-        
-        [Test]
-        public void CreateTasks()
-        {
-            try
-            {
-                //ExStart:CreateTasks
-                //ExFor: Task.Children
-                //ExSummary: Shows how to use task collection to add a task.
-                var project = new Project();
 
-                // Add task, sub task and save project
-                var task = project.RootTask.Children.Add("Summary1");
-                task.Children.Add("Subtask1");
-                project.Save(OutDir + "CreateTasks_out.xml", SaveFileFormat.XML);
-                //ExEnd:CreateTasks
-            }
-            catch (NotSupportedException ex)
-            {
-                Console.WriteLine(ex.Message + "\nThis example will only work if you apply a valid Aspose License. You can purchase full license or get 30 day temporary license from http://www.aspose.com/purchase/default.aspx.");
-            }
-        }
-        
         [Test]
         public void MoveTaskUnderAnotherParent()
         {        

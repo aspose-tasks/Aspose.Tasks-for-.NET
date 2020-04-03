@@ -9,22 +9,6 @@
     public class ExMppSaveOptions : ApiExampleBase
     {
         [Test]
-        public void CreateEmptyProjectToSaveToStreamFormat()
-        {
-            //ExStart:CreateEmptyProjectToSaveToStream
-            //ExFor: Project.Save(Stream, SaveFileFormat);
-            //ExSummary: Shows how to save project into a stream as an XML MS Project file.
-            var project = new Project();
-
-            using (var stream = new FileStream(DataDir + "EmptyProjectSaveStream_out.xml", FileMode.Create, FileAccess.Write))
-            {
-                // Write the stream into XML format
-                project.Save(stream, SaveFileFormat.XML);
-            }
-            //ExEnd:CreateEmptyProjectToSaveToStream
-        }
-
-        [Test]
         public void CreateEmptyProjectToSaveToStreamOptions()
         {
             try

@@ -1,5 +1,7 @@
 ﻿namespace Aspose.Tasks.Examples.CSharp
 {
+    using System.Collections.Generic;
+    using System.Drawing;
     using System.Drawing.Imaging;
     using System.IO;
     using NUnit.Framework;
@@ -9,29 +11,6 @@
     [TestFixture]
     public class ExImageSaveOptions : ApiExampleBase
     {
-        [Test]
-        public void TimescaleSettingsExample()
-        {
-            //ExStart:TimescaleSettings
-            //ExFor: SaveOptions.Timescale
-            //ExSummary: Shows how to set the minimal time period to render. The default value is <see cref="P:Aspose.Tasks.Saving.SaveOptions.Timescale">Days</see>.
-            var project = new Project(DataDir + "Project2.mpp");
-
-            // Save to one page image (Timescale.days by default)
-            project.Save(OutDir + "NewProductDevDays_out.jpeg", new ImageSaveOptions(SaveFileFormat.JPEG));
-
-            // Save to one page image (Timescale.ThirdsOfMonths)
-            var options = new ImageSaveOptions(SaveFileFormat.JPEG);
-            options.Timescale = Timescale.ThirdsOfMonths;
-
-            project.Save(OutDir + "NewProductDevThirdsOfMonths_out.jpeg", options);
-
-            // Save to one page image (Timescale.Months)
-            options.Timescale = Timescale.Months;
-            project.Save(OutDir + "NewProductDevMonths_out.jpeg", options);
-            //ExEnd:TimescaleSettings
-        }
-        
         [Test]
         public void RenderProjectDataToFormat24bppRgb()
         {
@@ -80,6 +59,65 @@
                 project.Save(stream, options);
             }
             //ExEnd:SaveToStreamWithOptions
+        }
+        
+        [Test]
+        public void ReducingGapBetweenTasksListAndFooter()
+        {
+            //ExStart: ReducingGapBetweenTasksListAndFooter
+            //ExFor: ImageSaveOptions.ReduceFooterGap
+            //ExSummary: Shows how to set a value indicating whether a gap between last task and the footer must be reduced.
+            var project = new Project(DataDir + "CreateProject2.mpp");
+
+            //Use ReduceFooterGap property to reduce the gap between list of tasks and Footer
+            var imageSaveOptions =
+                new ImageSaveOptions(SaveFileFormat.PNG) { ReduceFooterGap = true, /* set to true */ SaveToSeparateFiles = true, PageSize = PageSize.A0, Timescale = Timescale.Days };
+            project.Save(OutDir + "ReducingGapBetweenTasksListAndFooter_out.png", imageSaveOptions);
+
+            var pdfSaveOptions = new PdfSaveOptions { ReduceFooterGap = true, /* set to true */ SaveToSeparateFiles = true, PageSize = PageSize.A0, Timescale = Timescale.Days };
+            project.Save(OutDir + "ReducingGapBetweenTasksListAndFooter_out.pdf", pdfSaveOptions);
+
+            var htmlSaveOptions = new HtmlSaveOptions
+            {
+                ReduceFooterGap = false, // set to true
+                IncludeProjectNameInPageHeader = false,
+                IncludeProjectNameInTitle = false,
+                PageSize = PageSize.A0,
+                Timescale = Timescale.Days
+            };
+            project.Save(OutDir + "ReducingGapBetweenTasksListAndFooter_out.html", htmlSaveOptions);
+            //ExEnd:ReducingGapBetweenTasksListAndFooter
+        }
+        
+        [Test]
+        public void PrintProjectPagesToSeparateFiles()
+        {
+            //ExStart:PrintProjectPagesToSeparateFiles
+            //ExFor: ImageSaveOptions.SaveToSeparateFiles
+            //ExSummary: Shows how to save layout to separate files. 
+            var project = new Project(DataDir + "CreateProject2.mpp");
+            var options = new ImageSaveOptions(SaveFileFormat.PNG);
+            options.StartDate = project.Get(Prj.StartDate).AddDays(-3);
+            options.EndDate = project.Get(Prj.FinishDate);
+            options.MarkCriticalTasks = true;
+            options.LegendOnEachPage = false;
+            
+            options.Gridlines = new List<Gridline>();
+
+            var gridline = new Gridline
+            {
+                GridlineType = GridlineType.GanttRow, 
+                Color = Color.CornflowerBlue, 
+                Pattern = LinePattern.Dashed
+            };
+            options.Gridlines.Add(gridline);
+ 
+            project.Save(OutDir + "PrintProjectPagesToSeparateFiles1_out.png", options);
+            
+            // Save project layout to separate files
+            options.SaveToSeparateFiles = true;
+            project.Save(OutDir + "PrintProjectPagesToSeparateFiles2_out.png", options);
+            //ExEnd:PrintProjectPagesToSeparateFiles
         }
     }
 }

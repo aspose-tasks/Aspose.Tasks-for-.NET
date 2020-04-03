@@ -7,15 +7,14 @@
     using Visualization;
 
     [TestFixture]
-    public class ExTextStyle : ApiExampleBase
+    public class ExTextItemType : ApiExampleBase
     {
         [Test]
         public void CustomizeTextStyle()
         {
-            //ExStart:CustomizeTextStyle
-            //ExFor: TextStyle
-            //ExFor: TextStyle.FontStyle
-            //ExSummary: Shows how to customize text styles which are used to style different text items in a project.
+            //ExStart
+            //ExFor: TextItemType
+            //ExSummary: Shows how to work with text item types.
             var project = new Project(DataDir + "CreateProject2.mpp");
             SaveOptions options = new PdfSaveOptions();
             options.PresentationFormat = PresentationFormat.ResourceSheet;
@@ -29,7 +28,7 @@
             options.TextStyles = new List<TextStyle>();
             options.TextStyles.Add(style);
             project.Save(OutDir + "CustomizeTextStyle_out.pdf", options);
-            //ExEnd:CustomizeTextStyle
+            //ExEnd
         }
     }
 }

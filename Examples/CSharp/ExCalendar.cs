@@ -26,18 +26,6 @@
 
                 Console.WriteLine("Calendar UID: " + calendar.Uid);
                 Console.WriteLine("Calendar Name: " + calendar.Name);
-
-                foreach (var weekDay in calendar.WeekDays)
-                {
-                    if (!weekDay.DayWorking) 
-                    {
-                        continue;
-                    }
-
-                    var workingTime = weekDay.GetWorkingTime();
-                    Console.Write(weekDay.DayType + ": ");
-                    Console.WriteLine(workingTime.ToString());
-                }
             }
             //ExEnd:RetrieveCalendarInfo
         }
@@ -47,13 +35,11 @@
         {
             //ExStart:ReadWorkWeeksInformation
             //ExFor: Calendar.WorkWeeks
-            //ExFor: WorkWeekCollection
             //ExSummary: Shows how to read work week information.
             var project = new Project(DataDir + "ReadWorkWeeksInformation.mpp");
             var calendar = project.Calendars.GetByUid(3);
-            var workWeeks = calendar.WorkWeeks;
 
-            foreach (var workWeek in workWeeks)
+            foreach (var workWeek in calendar.WorkWeeks)
             {
                 // Display work week name, from and to dates
                 var name = workWeek.Name;  
@@ -64,12 +50,10 @@
                 Console.WriteLine("To Date: " + toDate);
 
                 // This data is all about "Details." button you can set special working times for special WeekDay or even make it nonworking
-                var weekDays = workWeek.WeekDays;  
-                foreach (var day in weekDays) 
+                foreach (var day in workWeek.WeekDays) 
                 {
                     // You can further traverse through working times and display these
-                    var workingTimes = day.WorkingTimes;
-                    foreach (var workingTime in workingTimes)
+                    foreach (var workingTime in day.WorkingTimes)
                     {
                         Console.WriteLine(workingTime.FromTime);
                         Console.WriteLine(workingTime.ToTime);
@@ -83,7 +67,6 @@
         public void ReadCalendarProps()
         {
             //ExStart:ReadCalendarProps
-            //ExFor: CalendarCollection
             //ExFor: Calendar.IsBaseCalendar
             //ExSummary: Shows how to read project calendars and their properties.
             var project = new Project(DataDir + "Project_GeneralCalendarProperties.xml");
@@ -184,32 +167,12 @@
             Console.WriteLine("Duration in Days = " + durationInDays);
             //ExEnd:CalculateWorkHours
         }
-        
-        [Test]
-        public void CreatingCalendar()
-        {
-            //ExStart:CreatingCalendar
-            //ExFor: CalendarCollection.Add(String,Calendar)
-            //ExSummary: Shows how to add new calendars.
-            var project = new Project();
 
-            // new calendars can be added to a project's calendar collection by using the collection's Add overloads.
-            project.Calendars.Add("Calendar");
-            var calendar = project.Calendars.Add("Parent");
-            project.Calendars.Add("Child", calendar);
-
-            project.Save(OutDir + "CreatingCalendar_out.Xml", SaveFileFormat.XML);
-            //ExEnd:CreatingCalendar
-        }
-        
         [Test]
         public void DefineWeekdaysForCalendar()
         {
             //ExStart:DefineWeekdaysForCalendar
             //ExFor: Calendar.WeekDays
-            //ExFor: WeekDay.CreateDefaultWorkingDay
-            //ExFor: WeekDay.#ctor(DayType)
-            //ExFor: WorkingTime
             //ExSummary: Shows how to define a new calendar, add week days to it and define working times for days.
             var project = new Project();
 
@@ -239,54 +202,10 @@
             weekDay.DayWorking = true;
             calendar.WeekDays.Add(weekDay);
 
-            project.Save(OutDir + "Project_DefineCalendarWeekdays_out.xml", SaveFileFormat.XML);
+            project.Save(OutDir + "DefineCalendarWeekdays_out.xml", SaveFileFormat.XML);
             //ExEnd:DefineWeekdaysForCalendar
         }
-        
-        [Test]
-        public void MakeAStandardCalendar()
-        {
-            //ExStart:MakeAStandardCalendar
-            //ExFor: CalendarCollection.Add(String)
-            //ExSummary: Shows how to make a standard calendar.
-            var project = new Project();
 
-            // Define a calendar and make it standard
-            var calendar = project.Calendars.Add("New Standard Calendar");
-            Calendar.MakeStandardCalendar(calendar);
-
-            project.Save(OutDir + "MakeAStandardCalendar_out.xml", SaveFileFormat.XML);
-            //ExEnd:MakeAStandardCalendar
-        }
-        
-        [Test]
-        public void ReplaceCalendarWithNewCalendar()
-        {
-            try
-            {
-                //ExStart:ReplaceCalendarWithNewCalendar
-                //ExFor: CalendarCollection.GetByName(String)
-                //ExFor: CalendarCollection.Remove(Calendar)
-                //ExSummary: Shows how to replace a calendar in the collection. 
-                var project = new Project(DataDir + "Project5.mpp");
-
-                var calendar = project.Calendars.GetByName("TestCalendar");
-                if (calendar != null)
-                {
-                    project.Calendars.Remove(calendar);
-                }
-
-                // add new calendar
-                project.Calendars.Add("New Calendar");
-                project.Save(OutDir + "ReplaceCalendarWithNewCalendar_out.mpp", SaveFileFormat.MPP);
-                //ExEnd:ReplaceCalendarWithNewCalendar
-            }
-            catch (NotSupportedException ex)
-            {
-                Console.WriteLine(ex.Message + "\nThis example will only work if you apply a valid Aspose License. You can purchase full license or get 30 day temporary license from http://www.aspose.com/purchase/default.aspx.");
-            }
-        }
-        
         [Test]
         public void WriteUpdatedCalendarDataToMPP()
         {
@@ -294,7 +213,6 @@
             {
                 //ExStart:WriteUpdatedCalendarDataToMPP
                 //ExFor: Calendar.MakeStandardCalendar(Calendar)
-                //ExFor: CalendarExceptionCollection.Add(CalendarException)
                 //ExSummary: Shows how to create a calendar with exception days.
                 var project = new Project(DataDir + "project_update_test.mpp");
                 var calendar = project.Calendars.GetByUid(3);
@@ -389,6 +307,30 @@
                 }
             }
             //ExEnd:RetrieveCalendarExceptions
+        }
+        
+        [Test]
+        public void GetBaseResourceCalendar()
+        {
+            //ExStart:GetBaseResourceCalendar
+            //ExFor: Calendar.BaseCalendar
+            //ExSummary: Shows how to work with a base calendar of the resource's calendar.
+            var project = new Project(DataDir + "ResourceCalendar.mpp");
+            var res = project.Resources.Add("Resource1");
+            
+            // Add standard calendar and assign to resource
+            var cal = project.Calendars.Add("Resource1");
+            res.Set(Rsc.Calendar, cal);
+            
+            // Display base calendar name for all resources
+            foreach (var resource in project.Resources)
+            {
+                if (resource.Get(Rsc.Name) != null)
+                {
+                    Console.WriteLine(resource.Get(Rsc.Calendar).BaseCalendar.Name);
+                }
+            }
+            //ExEnd:GetBaseResourceCalendar
         }
     }
 }

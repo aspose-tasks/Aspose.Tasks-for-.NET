@@ -5,16 +5,14 @@
     using Visualization;
 
     [TestFixture]
-    public class ExSpreadsheet2003SaveOptions : ApiExampleBase
+    public class ExResourceViewColumn : ApiExampleBase
     {
         [Test]
-        public void UsingSpreadsheet2003SaveOptions()
+        public void UsingAssignmentViewColumn()
         {
             //ExStart:UsingSpreadsheet2003SaveOptions
-            //ExFor: Spreadsheet2003SaveOptions
-            //ExFor: Spreadsheet2003SaveOptions.ResourceView
-            //ExFor: Spreadsheet2003SaveOptions.AssignmentView
-            //ExSummary: Shows how to use add columns to be exported during export project into Spreadsheet2003 format.
+            //ExFor: ResourceViewColumn
+            //ExSummary: Shows how to use add resource view columns to be exported.
             var project = new Project(DataDir + "CreateProject2.mpp");
 
             var options = new Spreadsheet2003SaveOptions();
