@@ -4,6 +4,7 @@
     using NUnit.Framework;
     using Saving;
 
+    [TestFixture]
     public class ExUsageView : ApiExampleBase
     {
         [Test]

@@ -4,6 +4,7 @@
     using NUnit.Framework;
     using Saving;
 
+    [TestFixture]
     public class ExSaveTemplateOptions : ApiExampleBase
     {
         [Test]

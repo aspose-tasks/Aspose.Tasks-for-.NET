@@ -4,7 +4,6 @@
     using System.Data.SqlClient;
     using Connectivity;
     using NUnit.Framework;
-    using Saving;
 
     [TestFixture]
     public class ExPrimaveraDbSettings : ApiExampleBase
@@ -27,6 +26,7 @@
                 sb.NetworkLibrary = "DBMSSOCN";
                 sb.UserID = "privuser";
                 sb.Password = "***";
+                sb.ConnectTimeout = 2; //ExSkip
 
                 // Initialize a new instance of the PrimaveraDbSettings class with connection string and project id
                 var settings = new PrimaveraDbSettings(sb.ConnectionString, 4502);
@@ -41,6 +41,10 @@
             catch (NotSupportedException ex)
             {
                 Console.WriteLine(ex.Message + "\nPlease setup proper data source (connectionString, ProviderInvariantName) etc");
+            }
+            catch (TasksReadingException ex)
+            {
+                Console.WriteLine(ex.Message);
             }
         }
     }

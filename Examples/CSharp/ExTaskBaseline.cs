@@ -3,6 +3,7 @@
     using System;
     using NUnit.Framework;
 
+    [TestFixture]
     public class ExTaskBaseline
     {
         [Test]

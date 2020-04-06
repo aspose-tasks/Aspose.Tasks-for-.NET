@@ -11,7 +11,7 @@
         {
             //ExStart:ReadTaskGroupDefinitionData
             //ExFor: GroupCriterionCollection
-            //ExSummary: Shows how to work with a collaction of group criterion.
+            //ExSummary: Shows how to work with a collection of group criterion.
             var project = new Project(DataDir + "ReadGroupDefinitionData.mpp");
 
             Console.WriteLine("Task Groups Count: " + project.TaskGroups.Count);

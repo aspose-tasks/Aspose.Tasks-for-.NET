@@ -3,7 +3,6 @@
     using System;
     using System.IO;
     using NUnit.Framework;
-    using Saving;
 
     [TestFixture]
     public class ExLicense : ApiExampleBase

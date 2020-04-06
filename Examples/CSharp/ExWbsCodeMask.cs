@@ -43,7 +43,7 @@
             project.Recalculate();
 
             Console.WriteLine("Number of WBS masks: " + project.WBSCodeDefinition.CodeMaskCollection.Count);
-            int i = 0;
+            var i = 0;
             foreach (var cm in project.WBSCodeDefinition.CodeMaskCollection)
             {
                 Console.WriteLine("WBS Mask #{0}: Level->{1}", ++i, cm.Level);

@@ -6,6 +6,7 @@
     using Util;
     using Visualization;
 
+    [TestFixture]
     public class ExTsk : ApiExampleBase
     {
         [Test]
@@ -19,12 +20,12 @@
 
             // create new tasks
             var task1 = project.RootTask.Children.Add("Task1");
-            task1.Set(Tsk.ActualStart, new DateTime(2010, 4, 10, 8, 0, 0));
-            task1.Set(Tsk.ActualFinish, new DateTime(2010, 4, 10, 17, 0, 0));
+            task1.Set(Tsk.ActualStart, new DateTime(2000, 2, 10, 8, 0, 0));
+            task1.Set(Tsk.ActualFinish, new DateTime(2000, 2, 10, 17, 0, 0));
 
             var task2 = project.RootTask.Children.Add("Task2");
-            task2.Set(Tsk.ActualStart, new DateTime(2010, 4, 10, 8, 0, 0));
-            task2.Set(Tsk.ActualFinish, new DateTime(2010, 4, 10, 17, 0, 0));
+            task2.Set(Tsk.ActualStart, new DateTime(2000, 2, 10, 8, 0, 0));
+            task2.Set(Tsk.ActualFinish, new DateTime(2000, 2, 10, 17, 0, 0));
 
             project.Save(OutDir + "EvaluationDateTimeLimitations_out.xml", SaveFileFormat.XML);
             //ExEnd:DateTimeLimitations
@@ -340,14 +341,15 @@
             //ExFor: Tsk.Duration
             //ExFor: Tsk.DurationFormat
             //ExSummary: Shows how to set duration of the task. 
-            var project = new Project(DataDir + "Project.mpp");
+            var project = new Project();
 
             var task = project.RootTask.Children.Add("Task1");
-            task.Set(Tsk.ActualStart, DateTime.Parse("23-Aug-2012"));
-            task.Set(Tsk.Duration, project.GetDuration(24, TimeUnitType.Hour));
             task.Set(Tsk.DurationFormat, TimeUnitType.Day);
+            task.Set(Tsk.Start, new DateTime(2012, 8, 23, 8, 0, 0));
+            task.Set(Tsk.Duration, project.GetDuration(24, TimeUnitType.Hour));
+            task.Set(Tsk.ActualStart, new DateTime(2012, 8, 23, 8, 0, 0));
 
-            project.Save(OutDir + "AddNewTask_out.xml", SaveFileFormat.XML);
+            project.Save(OutDir + "AddTaskDuration_out.xml", SaveFileFormat.XML);
             //ExEnd:AddTaskDuration        
         }
         

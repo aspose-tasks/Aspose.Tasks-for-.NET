@@ -1,8 +1,6 @@
 ﻿namespace Aspose.Tasks.Examples.CSharp
 {
-    using System;
     using System.Collections.Generic;
-    using System.Drawing;
     using NUnit.Framework;
     using Saving;
     using Visualization;

@@ -29,6 +29,7 @@
                 connectionString.NetworkLibrary = "DBMSSOCN";
                 connectionString.UserID = "sa";
                 connectionString.Password = "*****";
+                connectionString.ConnectTimeout = 2; //ExSkip
 
                 // create settings to load from MS database
                 var settings = new MspDbSettings(connectionString.ConnectionString, new Guid("E6426C44-D6CB-4B9C-AF16-48910ACE0F54"));

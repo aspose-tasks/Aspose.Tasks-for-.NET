@@ -47,7 +47,7 @@
             //ExEnd:SaveProjectOverviewReportStream
         }
         
-        [Test]
+        [Test, Explicit("Too long time running.")]
         public void SaveProjectOverviewReport3()
         {
             //ExStart:SaveProjectOverviewReportStream
@@ -1495,6 +1495,7 @@
                 sb.NetworkLibrary = "DBMSSOCN";
                 sb.UserID = "privuser";
                 sb.Password = "***";
+                sb.ConnectTimeout = 2; //ExSkip
 
                 // Initialize a new instance of the PrimaveraDbSettings class with connection string and project id
                 var settings = new PrimaveraDbSettings(sb.ConnectionString, 4502);
@@ -1507,6 +1508,10 @@
             catch (NotSupportedException ex)
             {
                 Console.WriteLine(ex.Message + "\nPlease setup proper data source (connectionString, ProviderInvariantName) etc");
+            }
+            catch (TasksReadingException ex)
+            {
+                Console.WriteLine(ex.Message);
             }
         }
         
@@ -1884,13 +1889,14 @@
             //ExStart:AddNewTask
             //ExFor: Project.RootTask
             //ExSummary: Shows how to add a task into a project by using the root project task. 
-            var project = new Project(DataDir + "Project.mpp");
+            var project = new Project();
 
             var task = project.RootTask.Children.Add("Task1");
-            task.Set(Tsk.ActualStart, DateTime.Parse("23-Aug-2012"));
-            task.Set(Tsk.Duration, project.GetDuration(24, TimeUnitType.Hour));
             task.Set(Tsk.DurationFormat, TimeUnitType.Day);
-            
+            task.Set(Tsk.Start, new DateTime(2012, 8, 23, 8, 0, 0));
+            task.Set(Tsk.Duration, project.GetDuration(24, TimeUnitType.Hour));
+            task.Set(Tsk.ActualStart, new DateTime(2012, 8, 23, 8, 0, 0));
+
             project.Save(OutDir + "AddNewTask_out.xml", SaveFileFormat.XML);
             //ExEnd:AddNewTask        
         }

@@ -4,7 +4,6 @@
     using System.Collections.Generic;
     using NUnit.Framework;
     using Saving;
-    using Util;
 
     [TestFixture]
     public class ExResource : ApiExampleBase
@@ -244,21 +243,21 @@
             //ExStart:GetResourceOutlineCode
             //ExFor: Resource.OutlineCode
             //ExSummary: Shows how to work with resource outline values.
-            Project project = new Project(DataDir + "OutlineCodes2003.mpp");
+            var project = new Project(DataDir + "OutlineCodes2003.mpp");
 
-            Resource res = project.Resources.GetById(2);
+            var res = project.Resources.GetById(2);
             Assert.AreEqual(2, res.OutlineCode.Count);
-            foreach (OutlineCode code in res.OutlineCode)
+            foreach (var code in res.OutlineCode)
             {
                 object val = null;
-                foreach (OutlineCodeDefinition def in project.OutlineCodes)
+                foreach (var def in project.OutlineCodes)
                 {
                     if (def.FieldId != code.FieldId)
                     {
                         continue;
                     }
 
-                    foreach (OutlineValue value in def.Values)
+                    foreach (var value in def.Values)
                     {
                         if (value.ValueId != code.ValueId)
                         {

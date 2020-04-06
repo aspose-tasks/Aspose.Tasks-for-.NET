@@ -1,10 +1,8 @@
 ﻿namespace Aspose.Tasks.Examples.CSharp
 {
     using System.Collections.Generic;
-    using System.IO;
     using NUnit.Framework;
     using Saving;
-    using Visualization;
 
     [TestFixture]
     public class ExHtmlSaveOptions : ApiExampleBase

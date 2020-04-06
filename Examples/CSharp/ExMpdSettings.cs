@@ -14,7 +14,7 @@
             //ExFor: MpdSettings
             //ExFor: MpdSettings.ProjectId
             //ExSummary: Shows how to use MPD settings to control import of project from the database.
-            MpdSettings settings = new MpdSettings("Provider=Microsoft.Jet.OLEDB.4.0; Data Source=" + DataDir + "MpdFileToRead.mpd", 1);
+            var settings = new MpdSettings("Provider=Microsoft.Jet.OLEDB.4.0; Data Source=" + DataDir + "MpdFileToRead.mpd", 1);
 
             Console.WriteLine("Project ID to load: " + settings.ProjectId);
             

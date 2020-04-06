@@ -4,6 +4,7 @@
     using Saving;
     using Visualization;
 
+    [TestFixture]
     public class ExSvgOptions : ApiExampleBase
     {
         [Test]
