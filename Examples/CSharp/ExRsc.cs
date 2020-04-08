@@ -134,9 +134,9 @@
                 var project = new Project(DataDir + "Project.mpp");
                    
                 // Add resource and set resource meta data
-                var rsc1 = project.Resources.Add("Rsc 1");
-                rsc1.Set(Rsc.EMailAddress, "1@gmail.com");
-                rsc1.Set(Rsc.WindowsUserAccount, "user_acc1");
+                var resource = project.Resources.Add("Rsc 1");
+                resource.Set(Rsc.EMailAddress, "1@gmail.com");
+                resource.Set(Rsc.WindowsUserAccount, "user_acc1");
                 //ExEnd:SetResourceMetaProperties
             }
             catch (NotSupportedException ex)
@@ -153,7 +153,6 @@
                 //ExStart:ReadWriteGeneralResourceProperties
                 //ExFor: Rsc.StandardRate
                 //ExFor: Rsc.OvertimeRate
-                //ExFor: Rsc.Group
                 //ExSummary: Shows how to read/write resource rates.
                 var project = new Project(DataDir + "UpdateResourceData.mpp");
 

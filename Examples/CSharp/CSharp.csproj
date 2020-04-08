@@ -61,6 +61,7 @@
   <ItemGroup>
     <Compile Include="ApiExampleBase.cs" />
     <Compile Include="ExApplicationInfo.cs" />
+    <Compile Include="ExApsLayoutBuilderOutOfMemoryException.cs" />
     <Compile Include="ExAsn.cs" />
     <Compile Include="ExAssignmentViewColumn.cs" />
     <Compile Include="ExBuiltInProjectPropertyCollection.cs" />

@@ -110,19 +110,124 @@
         public void GetGeneralResourceAssignmentProperties()
         {
             //ExStart:GetGeneralResourceAssignmentProperties
+            //ExFor: Asn
             //ExFor: Asn.Uid
+            //ExFor: Asn.AssignmentOwner
+            //ExFor: Asn.AssignmentOwnerGuid
+            //ExFor: Asn.BookingType
+            //ExFor: Asn.Created
             //ExFor: Asn.Start
+            //ExFor: Asn.ActualStart
+            //ExFor: Asn.Work
+            //ExFor: Asn.ActualWork
+            //ExFor: Asn.ActualWorkProtected
+            //ExFor: Asn.ActualOvertimeWork
+            //ExFor: Asn.ActualOvertimeWorkProtected
+            //ExFor: Asn.Cost
+            //ExFor: Asn.ActualCost
+            //ExFor: Asn.ActualOvertimeCost
             //ExFor: Asn.Finish
-            //ExSummary: Shows how to read common resource assignment's properties.
-            var project = new Project(DataDir + "GetGeneralResourceAssignmentProperties.mpp");
+            //ExFor: Asn.ActualFinish
+            //ExFor: Asn.Confirmed
+            //ExFor: Asn.ResponsePending
+            //ExFor: Asn.CostRateTableType
+            //ExFor: Asn.Task
+            //ExFor: Asn.Resource
+            //ExFor: Asn.Delay
+            //ExFor: Asn.FixedMaterial
+            //ExFor: Asn.HasFixedRateUnits
+            //ExFor: Asn.Hyperlink
+            //ExFor: Asn.HyperlinkAddress
+            //ExFor: Asn.HyperlinkSubAddress
+            //ExFor: Asn.LevelingDelay
+            //ExFor: Asn.LevelingDelayFormat
+            //ExFor: Asn.LinkedFields
+            //ExFor: Asn.Milestone
+            //ExFor: Asn.Overallocated
+            //ExFor: Asn.Units
+            //ExFor: Asn.PeakUnits
+            //ExFor: Asn.RegularWork
+            //ExFor: Asn.Summary
+            //ExFor: Asn.UpdateNeeded
+            //ExFor: Asn.VAC
+            //ExSummary: Shows how to read/write common resource assignment's properties.
+            var project = new Project();
 
-            // Print general resource assignment properties
-            foreach (var ra in project.ResourceAssignments)
-            {
-                Console.WriteLine(ra.Get(Asn.Uid));
-                Console.WriteLine(ra.Get(Asn.Start).ToShortDateString());
-                Console.WriteLine(ra.Get(Asn.Finish).ToShortDateString());
-            }
+            var task = project.RootTask.Children.Add("Task 1");
+            task.Set(Tsk.Start, new DateTime(2000, 1, 3, 8, 0, 0));
+            task.Set(Tsk.Duration, project.GetDuration(8));
+
+            var resource = project.Resources.Add("Resource 1");
+            resource.Set(Rsc.Type, ResourceType.Work);
+            resource.Set(Rsc.StandardRate, 10m);
+            resource.Set(Rsc.OvertimeRate, 15m);
+
+            var assignment = project.ResourceAssignments.Add(task, resource);
+            assignment.Set(Asn.AssignmentOwner, "Michael");
+            assignment.Set(Asn.BookingType, BookingType.Proposed);
+            assignment.Set(Asn.Confirmed, true);
+            assignment.Set(Asn.ResponsePending, true);
+            assignment.Set(Asn.AssignmentOwnerGuid, "1d440f0c-7839-4802-af5f-4bb30e8b75ab");
+            assignment.Set(Asn.Delay, project.GetDuration(0, TimeUnitType.Day));
+            assignment.Set(Asn.Start, new DateTime(2000, 1, 3, 8, 0, 0));
+            assignment.Set(Asn.Work, project.GetWork(8));
+            assignment.Set(Asn.Finish, new DateTime(2000, 1, 3, 17, 0, 0));
+            assignment.Set(Asn.ActualStart, new DateTime(2000, 1, 3, 8, 0, 0));
+            assignment.Set(Asn.ActualWork, project.GetDuration(8, TimeUnitType.Hour));
+            assignment.Set(Asn.ActualFinish, new DateTime(2000, 1, 3, 17, 0, 0));
+            assignment.Set(Asn.ActualOvertimeWork, project.GetWork(1));
+            assignment.Set(Asn.ActualOvertimeCost, 1);
+            assignment.Set(Asn.FixedMaterial, false);
+            assignment.Set(Asn.Hyperlink, "aspose.com");
+            assignment.Set(Asn.HyperlinkAddress, "products.aspose.com");
+            assignment.Set(Asn.HyperlinkSubAddress, "/total/net");
+            assignment.Set(Asn.LevelingDelayFormat, TimeUnitType.Hour);
+            assignment.Set(Asn.LevelingDelay, project.GetDuration(0d));
+            assignment.Set(Asn.LinkedFields, false);
+            assignment.Set(Asn.Units, 1d);
+            assignment.Set(Asn.PeakUnits, 1d);
+            
+            Console.WriteLine("UID: " + assignment.Get(Asn.Uid));
+            Console.WriteLine("Assigned Task Name: " + assignment.Get(Asn.Task).Get(Tsk.Name));
+            Console.WriteLine("Assigned Resource Name: " + assignment.Get(Asn.Resource).Get(Rsc.Name));
+            Console.WriteLine("Assignment Owner: " + assignment.Get(Asn.AssignmentOwner));
+            Console.WriteLine("Assignment Owner Guid: " + assignment.Get(Asn.AssignmentOwnerGuid));
+            Console.WriteLine("Start: " + assignment.Get(Asn.Start));
+            Console.WriteLine("Work: " + assignment.Get(Asn.Work));
+            Console.WriteLine("Regular Work: " + assignment.Get(Asn.RegularWork));
+            Console.WriteLine("Units: " + assignment.Get(Asn.Units));
+            Console.WriteLine("Peak Units: " + assignment.Get(Asn.PeakUnits));
+            Console.WriteLine("Finish: " + assignment.Get(Asn.Finish));
+            Console.WriteLine("Delay: " + assignment.Get(Asn.Delay));
+            Console.WriteLine("Booking Type: " + assignment.Get(Asn.BookingType));
+            Console.WriteLine("Confirmed: " + assignment.Get(Asn.Confirmed));
+            Console.WriteLine("Created: " + assignment.Get(Asn.Created));
+            Console.WriteLine("Response Pending: " + assignment.Get(Asn.ResponsePending));
+            Console.WriteLine("Actual Start: " + assignment.Get(Asn.ActualStart));
+            Console.WriteLine("Actual Work: " + assignment.Get(Asn.ActualWork));
+            Console.WriteLine("Actual Work Protected: " + assignment.Get(Asn.ActualWorkProtected));
+            Console.WriteLine("Cost Rate Table Type: " + assignment.Get(Asn.CostRateTableType));
+            Console.WriteLine("Actual Cost: " + assignment.Get(Asn.ActualCost));
+            Console.WriteLine("Actual Finish: " + assignment.Get(Asn.ActualFinish));
+            Console.WriteLine("Regular Work: " + assignment.Get(Asn.RegularWork));
+            Console.WriteLine("Actual Overtime Work: " + assignment.Get(Asn.ActualOvertimeWork));
+            Console.WriteLine("Actual Overtime Cost: " + assignment.Get(Asn.ActualOvertimeCost));
+            Console.WriteLine("Actual Overtime Work Protected: " + assignment.Get(Asn.ActualOvertimeWorkProtected));
+            Console.WriteLine("Fixed Material: " + assignment.Get(Asn.FixedMaterial));
+            Console.WriteLine("Has Fixed Rate Units: " + assignment.Get(Asn.HasFixedRateUnits));
+            Console.WriteLine("Hyperlink: " + assignment.Get(Asn.Hyperlink));
+            Console.WriteLine("Hyperlink Address: " + assignment.Get(Asn.HyperlinkAddress));
+            Console.WriteLine("Hyperlink Sub Address: " + assignment.Get(Asn.HyperlinkSubAddress));
+            Console.WriteLine("Leveling Delay: " + assignment.Get(Asn.LevelingDelay));
+            Console.WriteLine("Leveling Delay Format: " + assignment.Get(Asn.LevelingDelayFormat));
+            Console.WriteLine("Linked Fields: " + assignment.Get(Asn.LinkedFields));
+            Console.WriteLine("Milestone: " + assignment.Get(Asn.Milestone));
+            Console.WriteLine("Overallocated: " + assignment.Get(Asn.Overallocated));
+            Console.WriteLine("Summary: " + assignment.Get(Asn.Summary));
+            Console.WriteLine("Units: " + assignment.Get(Asn.Units));
+            Console.WriteLine("Peak Units: " + assignment.Get(Asn.PeakUnits));
+            Console.WriteLine("Update Needed: " + assignment.Get(Asn.UpdateNeeded));
+            Console.WriteLine("VAC: " + assignment.Get(Asn.VAC));
             //ExEnd:GetGeneralResourceAssignmentProperties
         }
         
@@ -130,10 +235,11 @@
         public void GetResourceAssignmentCosts()
         {
             //ExStart:GetResourceAssignmentCosts
-            //ExFor: Asn.Cost
             //ExFor: Asn.ACWP
             //ExFor: Asn.BCWP
             //ExFor: Asn.BCWS
+            //ExFor: Asn.CV
+            //ExFor: Asn.SV
             //ExSummary: Shows how to read assignment's costs.
             var project = new Project(DataDir + "ResourceAssignmentCosts.mpp");
 
@@ -142,8 +248,13 @@
             {
                 Console.WriteLine(ra.Get(Asn.Cost));
                 Console.WriteLine(ra.Get(Asn.ACWP));
+                // CV = BCWP - ACWP
+                Console.WriteLine(ra.Get(Asn.CV));
+                
                 Console.WriteLine(ra.Get(Asn.BCWP));
                 Console.WriteLine(ra.Get(Asn.BCWS));
+                // SV = BCWP - BCWS
+                Console.WriteLine(ra.Get(Asn.SV));
             }
             //ExEnd:GetResourceAssignmentCosts
         }

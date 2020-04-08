@@ -137,8 +137,8 @@
         public void ReadActualTaskProperties()
         {
             //ExStart:ReadActualTaskProperties
-            //ExFor: Tsk.ActualDuration
             //ExFor: Tsk.ActualCost
+            //ExFor: Tsk.ActualDuration
             //ExSummary: Shows how to read task's actual properties.
             var project = new Project(DataDir + "ActualTaskProperties.mpp");
 
