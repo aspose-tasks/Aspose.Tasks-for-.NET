@@ -17,7 +17,7 @@
             //ExStart:RenderProjectDataToFormat24bppRgb
             //ExFor: ImageSaveOptions.PixelFormat
             //ExSummary: Shows how to set pixel format which is used during conversion into image formats. 
-            var project = new Project(DataDir + "TestProject1.mpp");
+            var project = new Project(DataDir + "Project1.mpp");
             var options = new ImageSaveOptions(SaveFileFormat.TIFF);
             options.HorizontalResolution = 72;
             options.VerticalResolution = 72;

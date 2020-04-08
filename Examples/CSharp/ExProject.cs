@@ -307,7 +307,7 @@
             }
         }
         
-        [Test]
+        [Test, Explicit]
         public void PrintLargeFiles()
         {
             //ExStart:PrintLargeFiles
@@ -324,7 +324,7 @@
             //ExEnd:PrintLargeFiles
         }
         
-        [Test]
+        [Test, Explicit]
         public void PrintPrinterSettings()
         {
             //ExStart:PrintPrinterSettings
@@ -342,7 +342,7 @@
             //ExEnd:PrintPrinterSettings
         }
         
-        [Test]
+        [Test, Explicit]
         public void PrintPrinterSettingsAndDocumentName()
         {
             //ExStart:PrintPrinterSettingsAndDocumentName
@@ -360,7 +360,7 @@
             //ExEnd:PrintPrinterSettingsAndDocumentName
         }
         
-        [Test]
+        [Test, Explicit]
         public void PrintPrintOptionsAndPrinterSettings()
         {
             //ExStart:PrintPrintOptionsAndPrinterSettings
@@ -381,7 +381,7 @@
             //ExEnd:PrintPrintOptionsAndPrinterSettings
         }
         
-        [Test]
+        [Test, Explicit]
         public void PrintProjectUsingCustomPrinter()
         {
             //ExStart:PrintProjectUsingCustomPrinter
@@ -402,7 +402,7 @@
             //ExEnd:PrintProjectUsingCustomPrinter
         }
         
-        [Test]
+        [Test, Explicit]
         public void PrintTheProject()
         {
             //ExStart:PrintTheProject

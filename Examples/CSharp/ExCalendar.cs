@@ -172,6 +172,8 @@
         public void DefineWeekdaysForCalendar()
         {
             //ExStart:DefineWeekdaysForCalendar
+            //ExFor: Calendar
+            //ExFor: Calendar.#ctor(String)
             //ExFor: Calendar.WeekDays
             //ExSummary: Shows how to define a new calendar, add week days to it and define working times for days.
             var project = new Project();
@@ -316,21 +318,379 @@
             //ExFor: Calendar.BaseCalendar
             //ExSummary: Shows how to work with a base calendar of the resource's calendar.
             var project = new Project(DataDir + "ResourceCalendar.mpp");
-            var res = project.Resources.Add("Resource1");
+            var resource = project.Resources.Add("Resource1");
             
             // Add standard calendar and assign to resource
-            var cal = project.Calendars.Add("Resource1");
-            res.Set(Rsc.Calendar, cal);
+            var calendar = project.Calendars.Add("Resource1");
+            resource.Set(Rsc.Calendar, calendar);
             
             // Display base calendar name for all resources
-            foreach (var resource in project.Resources)
+            foreach (var rsc in project.Resources)
             {
-                if (resource.Get(Rsc.Name) != null)
+                if (rsc.Get(Rsc.Name) != null)
                 {
-                    Console.WriteLine(resource.Get(Rsc.Calendar).BaseCalendar.Name);
+                    Console.WriteLine(rsc.Get(Rsc.Calendar).BaseCalendar.Name);
                 }
             }
             //ExEnd:GetBaseResourceCalendar
+        }
+        
+        [Test]
+        public void DeleteCalendar()
+        {
+            //ExStart:DeleteCalendar
+            //ExFor: Calendar.Delete
+            //ExSummary: Shows how to delete a calendar from a project.
+            var project = new Project(DataDir + "BrokenCalendar.mpp");
+
+            // get the calendar by name
+            var calendar = project.Calendars.GetByName("Broken Calendar");
+        
+            // delete the calendar
+            calendar.Delete();
+            //ExEnd:DeleteCalendar
+            
+            Assert.AreEqual(1, project.Calendars.Count);
+        }
+        
+        [Test]
+        public void GetFinishDateByStartAndWork()
+        {
+            //ExStart:GetFinishDateByStartAndWork
+            //ExFor: Calendar.GetFinishDateByStartAndWork(DateTime,Duration)
+            //ExSummary: Shows how to calculate a finish date by start date and work using a calendar instance.
+            var project = new Project(DataDir + "Blank2010.mpp");
+
+            var calendar = project.Calendars.GetByName("Standard");
+
+            var start = new DateTime(2017, 10, 26, 8, 0, 0);
+            var work = project.GetWork(7);
+
+            // calculate finish date by using a standard calendar
+            var finish = calendar.GetFinishDateByStartAndWork(start, work);
+
+            Console.WriteLine("Task start date: " + start);
+            Console.WriteLine("Task work: " + work);
+            Console.WriteLine("Task finish date: " + finish);
+            //ExEnd:GetFinishDateByStartAndWork
+        }
+        
+        [Test]
+        public void GetFinishDateByStartAndWork2()
+        {
+            //ExStart:GetFinishDateByStartAndWork
+            //ExFor: Calendar.GetFinishDateByStartAndWork(DateTime,TimeSpan)
+            //ExSummary: Shows how to calculate a finish date by start date and work (as a time span) using a calendar instance.
+            var project = new Project(DataDir + "Blank2010.mpp");
+
+            var calendar = project.Calendars.GetByName("Standard");
+
+            var start = new DateTime(2017, 10, 26, 8, 0, 0);
+            var work = project.GetWork(7);
+
+            // calculate finish date by using a standard calendar
+            var finish = calendar.GetFinishDateByStartAndWork(start, work.TimeSpan);
+
+            Console.WriteLine("Task start date: " + start);
+            Console.WriteLine("Task work: " + work);
+            Console.WriteLine("Task finish date: " + finish);
+            //ExEnd:GetFinishDateByStartAndWork
+        }
+        
+        [Test]
+        public void CalendarEquals()
+        {
+            //ExStart
+            //ExFor: Calendar.Equals(Object)
+            //ExSummary: Shows how to check calendar equality.
+            var project = new Project(DataDir + "Project2.mpp");
+
+            var calendar1 = project.Calendars.GetByUid(1);
+            var calendar2 = project.Calendars.GetByUid(3);
+
+            // the equality of calendars is checked against to calendar's UID.
+            Console.WriteLine("Calendar 1 UID: " + calendar1.Uid);
+            Console.WriteLine("Calendar 2 UID: " + calendar2.Uid);
+            Console.WriteLine("Are calendars equal: " + calendar1.Equals(calendar2));
+            //ExEnd
+        }
+        
+        [Test]
+        public void GetCalendarHashCode()
+        {
+            //ExStart
+            //ExFor: Calendar.GetHashCode
+            //ExSummary: Shows how to get a hash code of a calendar.
+            var project = new Project(DataDir + "Project2.mpp");
+
+            var calendar1 = project.Calendars.GetByUid(1);
+            var calendar2 = project.Calendars.GetByUid(3);
+
+            // the hash code of a calendar is equal to calendar UID 
+            Console.WriteLine("Calendar UID: {0} Hash Code: {0}", calendar1.GetHashCode());
+            Console.WriteLine("Calendar UID: {0} Hash Code: {0}", calendar2.GetHashCode());
+            //ExEnd
+        }
+        
+        [Test]
+        public void GetNextWorkingDayStart()
+        {
+            //ExStart
+            //ExFor: Calendar.GetNextWorkingDayStart(DateTime)
+            //ExSummary: Shows how to get a next working day start by using a calendar.
+            var project = new Project(DataDir + "Project1.mpp");
+
+            var calendar = project.Calendars.GetByUid(1);
+
+            // get next working day start (weekend is skipped)
+            var nextWorkingDayStart = calendar.GetNextWorkingDayStart(new DateTime(2020, 4, 10, 13, 0, 0));
+
+            // 13 April 2020 9:00 AM will be printed
+            Console.WriteLine(nextWorkingDayStart);
+            //ExEnd
+        }
+        
+        [Test]
+        public void GetPreviousWorkingDayEnd()
+        {
+            //ExStart
+            //ExFor: Calendar.GetPreviousWorkingDayEnd(DateTime)
+            //ExSummary: Shows how to get a previous working day end by using a calendar.
+            var project = new Project(DataDir + "Project1.mpp");
+
+            var calendar = project.Calendars.GetByUid(1);
+
+            // get previous working day end
+            var previousWorkingDayEnd = calendar.GetPreviousWorkingDayEnd(new DateTime(2020, 4, 10, 13, 0, 0));
+
+            // 9 April 2020 18:00 PM will be printed
+            Console.WriteLine(previousWorkingDayEnd);
+            //ExEnd
+        }
+        
+        [Test]
+        public void GetStartDateFromFinishAndDuration()
+        {
+            //ExStart
+            //ExFor: Calendar.GetStartDateFromFinishAndDuration(DateTime,Duration)
+            //ExSummary: Shows how to get a start date by finish date and duration.
+            var project = new Project(DataDir + "Project1.mpp");
+
+            var calendar = project.Calendars.GetByUid(1);
+
+            // get start date by finish date and a duration
+            var startDate = calendar.GetStartDateFromFinishAndDuration(new DateTime(2020, 4, 10, 9, 0, 0), project.GetDuration(16, TimeUnitType.Hour));
+
+            // 8 April 2020 9:00 AM will be printed
+            Console.WriteLine(startDate);
+            //ExEnd
+        }
+        
+        [Test]
+        public void GetStartDateFromFinishAndDuration2()
+        {
+            //ExStart
+            //ExFor: Calendar.GetStartDateFromFinishAndDuration(DateTime,TimeSpan)
+            //ExSummary: Shows how to get a start date by finish date and duration (as a time span).
+            var project = new Project(DataDir + "Project1.mpp");
+
+            var calendar = project.Calendars.GetByUid(1);
+
+            // get start date by finish date and a duration
+            var startDate = calendar.GetStartDateFromFinishAndDuration(new DateTime(2020, 4, 10, 9, 0, 0), TimeSpan.FromHours(16));
+
+            // 8 April 2020 9:00 AM will be printed
+            Console.WriteLine(startDate);
+            //ExEnd
+        }
+        
+        [Test]
+        public void GetWorkingHours()
+        {
+            //ExStart
+            //ExFor: Calendar.GetWorkingHours(DateTime)
+            //ExSummary: Shows how to get working hours for a specific date.
+            var project = new Project(DataDir + "Project1.mpp");
+
+            var calendar = project.Calendars.GetByUid(1);
+
+            // get working hours for specific date
+            var workingHours = calendar.GetWorkingHours(new DateTime(2020, 4, 10));
+
+            // 8 hours will be printed
+            Console.WriteLine(workingHours.Hours);
+            //ExEnd
+            
+            Assert.AreEqual(8, workingHours.Hours);
+        }
+        
+        [Test]
+        public void GetWorkingHours2()
+        {
+            //ExStart
+            //ExFor: Calendar.GetWorkingHours(DateTime,DateTime)
+            //ExSummary: Shows how to get working hours for specific dates.
+            var project = new Project(DataDir + "Project1.mpp");
+
+            var calendar = project.Calendars.GetByUid(1);
+
+            // get working hours for specific date
+            var workUnit = calendar.GetWorkingHours(new DateTime(2020, 4, 8, 8, 0, 0), new DateTime(2020, 4, 9, 17, 0, 0));
+
+            // 16 hours will be printed
+            Console.WriteLine(workUnit.WorkingHours);
+            //ExEnd
+            
+            Assert.AreEqual(16, workUnit.WorkingHours);
+        }
+        
+        [Test]
+        public void GetWorkingTimes()
+        {
+            //ExStart
+            //ExFor: Calendar.GetWorkingTimes(DateTime)
+            //ExSummary: Shows how to get working times for a specific date.
+            var project = new Project(DataDir + "Project1.mpp");
+
+            var calendar = project.Calendars.GetByUid(1);
+
+            // get working times for specific date
+            var workingTimes = calendar.GetWorkingTimes(new DateTime(2020, 4, 8, 8, 0, 0));
+
+            // 16 hours will be printed
+            foreach (var workingTime in workingTimes)
+            {
+                Console.WriteLine("From: " + workingTime.FromTime);
+                Console.WriteLine("To: " + workingTime.ToTime);
+            }
+            //ExEnd
+            
+            Assert.AreEqual(2, workingTimes.Count);
+        }
+        
+        [Test]
+        public void IsBaselineCalendar()
+        {
+            //ExStart
+            //ExFor: Calendar.IsBaselineCalendar
+            //ExSummary: Shows how to check whether a calendar is baseline calendar or not.
+            var project = new Project(DataDir + "IsBaselineCalendar.mpp");
+
+            var calendar = project.Calendars.GetByUid(3);
+
+            Console.WriteLine("Is baseline calendar: " + calendar.IsBaselineCalendar);
+            //ExEnd
+        }
+        
+        [Test]
+        public void Make24HourCalendar()
+        {
+            //ExStart
+            //ExFor: Calendar.Make24HourCalendar
+            //ExSummary: Shows how to create a 24 hours calendar.
+            var calendar = Calendar.Make24HourCalendar();
+
+            var workingHours = calendar.GetWorkingHours(new DateTime(2020, 4, 8, 8, 0, 0));
+            
+            // 24 hours will be printed
+            Console.WriteLine("Hours: " + workingHours.TotalHours);
+            //ExEnd
+        }
+        
+        [Test]
+        public void Make24HourCalendar2()
+        {
+            //ExStart
+            //ExFor: Calendar.Make24HourCalendar(Calendar)
+            //ExSummary: Shows how to transform a new calendar into a 24 hours calendar.
+            var project = new Project();
+
+            var calendar = project.Calendars.Add("24 Hours");
+            calendar = Calendar.Make24HourCalendar(calendar);
+
+            var workingHours = calendar.GetWorkingHours(new DateTime(2020, 4, 8, 8, 0, 0));
+            
+            // 24 hours will be printed
+            Console.WriteLine("Hours: " + workingHours.TotalHours);
+            //ExEnd
+        }
+        
+        [Test]
+        public void MakeNightShiftCalendar()
+        {
+            //ExStart
+            //ExFor: Calendar.MakeNightShiftCalendar
+            //ExSummary: Shows how to create a night shift calendar.
+            var calendar = Calendar.MakeNightShiftCalendar();
+
+            var workingHours = calendar.GetWorkingTimes(new DateTime(2020, 4, 8));
+            
+            // show working hours
+            foreach (var wh in workingHours)
+            {
+                Console.WriteLine("From: " + wh.FromTime);
+                Console.WriteLine("To: " + wh.ToTime);
+            }
+            //ExEnd
+        }
+        
+        [Test]
+        public void MakeNightShiftCalendar2()
+        {
+            //ExStart
+            //ExFor: Calendar.MakeNightShiftCalendar(Calendar)
+            //ExSummary: Shows how to transform a calendar into a night shift calendar.
+            var project = new Project();
+
+            var calendar = project.Calendars.Add("Night Shift");
+            calendar = Calendar.MakeNightShiftCalendar(calendar);
+
+            var workingHours = calendar.GetWorkingTimes(new DateTime(2020, 4, 8));
+            
+            // show working hours
+            foreach (var wh in workingHours)
+            {
+                Console.WriteLine("From: " + wh.FromTime);
+                Console.WriteLine("To: " + wh.ToTime);
+            }
+            //ExEnd
+        }
+        
+        [Test]
+        public void MakeStandardCalendar()
+        {
+            //ExStart
+            //ExFor: Calendar.MakeStandardCalendar
+            //ExSummary: Shows how to create a standard calendar.
+            var calendar = Calendar.MakeStandardCalendar();
+
+            var workingHours = calendar.GetWorkingTimes(new DateTime(2020, 4, 8));
+            
+            // show working hours
+            foreach (var wh in workingHours)
+            {
+                Console.WriteLine("From: " + wh.FromTime);
+                Console.WriteLine("To: " + wh.ToTime);
+            }
+            //ExEnd
+        }
+        
+        [Test]
+        public void CalendarParentProject()
+        {
+            //ExStart
+            //ExFor: Calendar.ParentProject
+            //ExSummary: Shows how to use parent project of a calendar.
+            var project = new Project();
+            var calendar = project.Calendars.Add("Calendar");
+
+            var task = project.RootTask.Children.Add("Task");
+
+            // set a duration for the task by using default project time unit type.
+            task.Set(Tsk.Duration, calendar.ParentProject.GetDuration(1));
+
+            Console.WriteLine(task.Get(Tsk.Duration));
+            //ExEnd
         }
     }
 }

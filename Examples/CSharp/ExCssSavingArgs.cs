@@ -10,7 +10,8 @@
     public class ExCssSavingArgs : ApiExampleBase
     {
         //ExStart
-        //ExFor: IImageSavingCallback
+        //ExFor: CssSavingArgs
+        //ExFor: CssSavingArgs.#ctor
         //ExSummary: Shows how to specify CSS saving args.
         [TestFixture] //ExSkip
         internal class ResourcePrefixForNestedResources : ApiExampleBase, ICssSavingCallback, IFontSavingCallback, IImageSavingCallback

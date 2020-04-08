@@ -7,7 +7,7 @@
     [TestFixture]
     public class ExReportType : ApiExampleBase
     {
-        [Test]
+        [Test, Explicit]
         public void SaveBurnDownReport()
         {
             //ExStart:SaveBurnDownReport
@@ -21,7 +21,7 @@
             //ExEnd:SaveBurnDownReport
         }
     
-        [Test]
+        [Test, Explicit]
         public void SaveCashFlowReport()
         {
             //ExStart:SaveCashFlowReport
@@ -32,7 +32,7 @@
             //ExEnd:SaveCashFlowReport
         }
     
-        [Test]
+        [Test, Explicit]
         public void SaveCostOverrunsReport()
         {
             //ExStart:SaveCostOverrunsReport
@@ -46,7 +46,7 @@
             //ExEnd:SaveCostOverrunsReport
         }
     
-        [Test]
+        [Test, Explicit]
         public void SaveWorkOverviewReport()
         {
             //ExStart:SaveWorkOverviewReport
@@ -57,7 +57,7 @@
             //ExEnd:SaveWorkOverviewReport
         }
     
-        [Test]
+        [Test, Explicit]
         public void SaveUpcomingTasksReport()
         {
             //ExStart:SaveUpcomingTasksReport
@@ -71,7 +71,7 @@
             //ExEnd:SaveUpcomingTasksReport
         }
     
-        [Test]
+        [Test, Explicit]
         public void SaveTaskCostOverviewReport()
         {
             //ExStart:SaveTaskCostOverviewReport
@@ -82,7 +82,7 @@
             //ExEnd:SaveTaskCostOverviewReport
         }
     
-        [Test]
+        [Test, Explicit]
         public void SaveSlippingTasksReport()
         {
             //ExStart:SaveSlippingTasksReport
@@ -96,7 +96,7 @@
             //ExEnd:SaveSlippingTasksReport
         }
     
-        [Test]
+        [Test, Explicit]
         public void SaveResourceOverviewReport()
         {
             //ExStart:SaveResourceOverviewReport
@@ -107,7 +107,7 @@
             //ExEnd:SaveResourceOverviewReport
         }
     
-        [Test]
+        [Test, Explicit]
         public void SaveResourceCostOverviewReport()
         {
             //ExStart:SaveResourceCostOverviewReport
@@ -121,7 +121,7 @@
             //ExEnd:SaveResourceCostOverviewReport
         }
     
-        [Test]
+        [Test, Explicit]
         public void SaveOverallocatedResourcesReport()
         {
             //ExStart:SaveOverallocatedResourcesReport
@@ -132,7 +132,7 @@
             //ExEnd:SaveOverallocatedResourcesReport
         }
     
-        [Test]
+        [Test, Explicit]
         public void SaveMilestonesReport()
         {
             //ExStart:SaveMilestonesReport
@@ -146,7 +146,7 @@
             //ExEnd:SaveMilestonesReport
         }
     
-        [Test]
+        [Test, Explicit]
         public void SaveCostOverviewReport()
         {
             //ExStart:SaveCostOverviewReport
@@ -157,7 +157,7 @@
             //ExEnd:SaveCostOverviewReport
         }
     
-        [Test]
+        [Test, Explicit]
         public void SaveCriticalTasksReport()
         {
             //ExStart:SaveCriticalTasksReport
@@ -171,7 +171,7 @@
             //ExEnd:SaveCriticalTasksReport
         }
     
-        [Test]
+        [Test, Explicit]
         public void SaveLateTasksReport()
         {
             //ExStart:SaveLateTasksReport
@@ -182,7 +182,7 @@
             //ExEnd:SaveLateTasksReport
         }
         
-        [Test]
+        [Test, Explicit]
         public void SaveBestPracticeAnalyzerReport()
         {
             //ExStart:SaveBestPracticeAnalyzerReport

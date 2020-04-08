@@ -23,7 +23,7 @@
 
                 var credentials = new ProjectServerCredentials(sharepointDomainAddress, userName, password);
 
-                var newProject = new Project(DataDir + @"TestProject1.mpp");
+                var newProject = new Project(DataDir + @"Project1.mpp");
 
                 var manager = new ProjectServerManager(credentials);
                 manager.CreateNewProject(newProject);
@@ -57,7 +57,7 @@
                 var userName = "Administrator";
                 var password = "MyPassword";
 
-                var project = new Project(DataDir + @"TestProject1.mpp");
+                var project = new Project(DataDir + @"Project1.mpp");
 
                 var windowsCredentials = new NetworkCredential(userName, password, domain);
                 var projectServerCredentials = new ProjectServerCredentials(url, windowsCredentials);

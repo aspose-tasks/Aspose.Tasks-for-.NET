@@ -8,7 +8,7 @@
     [TestFixture]
     public class ExPrintOptions : ApiExampleBase
     {
-        [Test]
+        [Test, Explicit]
         public void PrintLargeFiles()
         {
             try

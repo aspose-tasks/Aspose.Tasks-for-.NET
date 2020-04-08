@@ -24,7 +24,7 @@
                 const string userName = "Administrator";
                 const string password = "MyPassword";
 
-                var project = new Project(DataDir + @"TestProject1.mpp");
+                var project = new Project(DataDir + @"Project1.mpp");
 
                 var windowsCredentials = new NetworkCredential(userName, password, domain);
                 var projectServerCredentials = new ProjectServerCredentials(url, windowsCredentials);

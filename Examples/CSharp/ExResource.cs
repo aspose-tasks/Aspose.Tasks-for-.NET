@@ -205,7 +205,7 @@
         }
         
         [Test]
-        public void EqualsResource()
+        public void ResourceEquals()
         {
             //ExStart
             //ExFor: Resource.Equals(Resource)
@@ -231,9 +231,9 @@
             var resource1 = project.Resources.GetById(1);
             var resource2 = project.Resources.GetById(2);
 
-            // hash code of a resource is equal to resource UID 
-            Console.WriteLine("Resource UID: {0} Hash Code: {0}", resource1.GetHashCode());
-            Console.WriteLine("Resource UID: {0} Hash Code: {0}", resource2.GetHashCode());
+            // the hash code of a resource is equal to resource UID 
+            Console.WriteLine("Resource UID: {0} Hash Code: {1}", resource1.GetHashCode(), resource1.Get(Rsc.Uid));
+            Console.WriteLine("Resource UID: {0} Hash Code: {1}", resource2.GetHashCode(), resource2.Get(Rsc.Uid));
             //ExEnd
         }
         
