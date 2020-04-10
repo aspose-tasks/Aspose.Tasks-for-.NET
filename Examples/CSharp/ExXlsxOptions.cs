@@ -12,6 +12,7 @@
         {
             //ExStart:UsingXlsxOptions
             //ExFor: XlsxOptions
+            //ExFor: XlsxOptions.#ctor
             //ExSummary: Shows how to save a project into XLSX file by using <see cref="P:Aspose.Tasks.Saving.XlsxOptions">Days</see> options.
             var project = new Project(DataDir + "CreateProject2.mpp");
 

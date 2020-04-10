@@ -11,6 +11,8 @@
         {
             //ExStart:ReadTaskGroupDefinitionData
             //ExFor: Group
+            //ExFor: Group.#ctor
+            //ExFor: Group.GroupCriteria
             //ExSummary: Shows how to work with groups.
             var project = new Project(DataDir + "ReadGroupDefinitionData.mpp");
 

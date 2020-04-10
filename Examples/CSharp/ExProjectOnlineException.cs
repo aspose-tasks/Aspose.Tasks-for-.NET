@@ -12,6 +12,7 @@
         {
             //ExStart:CreateProjectInProjectServer
             //ExFor: ProjectOnlineException
+            //ExFor: ProjectOnlineException.#ctor(SerializationInfo,StreamingContext)
             //ExSummary: Shows how to catch exception while reading a project from MS Project Online.
             try
             {

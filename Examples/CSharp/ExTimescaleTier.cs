@@ -13,6 +13,7 @@
         {
             //ExStart:CustomizeTimescaleTierLabels
             //ExFor: TimescaleTier
+            //ExFor: TimescaleTier.#ctor
             //ExFor: TimescaleTier.Unit
             //ExFor: TimescaleTier.DateTimeConverter
             //ExSummary: Shows how to customize timescale tier labels.

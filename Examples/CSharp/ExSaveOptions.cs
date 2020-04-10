@@ -280,6 +280,9 @@
         public void FitContentsToCellSize()
         {
             //ExStart:FitContentsToCellSize
+            //ExFor: SaveOptions
+            //ExFor: SaveOptions.#ctor
+            //ExFor: SaveOptions.#ctor(SaveOptions)
             //ExFor: SaveOptions.FitContent
             //ExSummary: Shows how to set the option whether row height should be increased to fit its content.
             var project = new Project(DataDir + "CreateProject2.mpp");

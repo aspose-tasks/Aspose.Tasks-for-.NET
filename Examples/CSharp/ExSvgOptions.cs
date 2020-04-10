@@ -12,6 +12,7 @@
         {
             //ExStart:UseSvgOptions
             //ExFor: SvgOptions
+            //ExFor: SvgOptions.#ctor
             //ExSummary: Shows how to save project as SVG file.
             var project = new Project(DataDir + "CreateProject2.mpp");
             SaveOptions options = new SvgOptions();

@@ -11,6 +11,7 @@
     {
         //ExStart
         //ExFor: ICssSavingCallback
+        //ExFor: ICssSavingCallback.CssSaving(CssSavingArgs)
         //ExSummary: Shows how to set use CSS saving callbacks.
         [TestFixture] //ExSkip
         internal class ResourcePrefixForNestedResources : ApiExampleBase, ICssSavingCallback, IFontSavingCallback, IImageSavingCallback

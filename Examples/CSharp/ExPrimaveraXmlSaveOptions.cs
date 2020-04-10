@@ -11,6 +11,7 @@
         {
             //ExStart:ExportProjectDataToPrimaveraXML
             //ExFor: PrimaveraXmlSaveOptions
+            //ExFor: PrimaveraXmlSaveOptions.#ctor
             //ExFor: PrimaveraXmlSaveOptions.SaveRootTask
             //ExSummary: Shows how to export the to Primavera XML file.
             var project = new Project(DataDir + "project.xml");

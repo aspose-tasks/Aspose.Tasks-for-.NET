@@ -10,7 +10,9 @@
         public void AccessReadOnlyCustomFieldValuesUsingFormulas()
         {
             //ExStart:AccessReadOnlyCustomFieldValuesUsingFormulas
+            //ExFor: ExtendedAttribute
             //ExFor: ExtendedAttribute.ValueReadOnly
+            //ExFor: ExtendedAttribute.NumericValue
             //ExSummary: Shows how to add read-only custom field values by using formulas.
             var project = new Project();
 

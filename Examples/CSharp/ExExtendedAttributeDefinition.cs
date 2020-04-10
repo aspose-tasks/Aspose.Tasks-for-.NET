@@ -16,6 +16,7 @@
         }
 
         //ExStart:CalculateGeneralFunctions
+        //ExFor: ExtendedAttributeDefinition
         //ExFor: ExtendedAttributeDefinition.Formula
         //ExSummary: Shows how to use common math functions with extended attributes.
         private static void EvaluateChoose()
@@ -220,6 +221,7 @@
         public void UsingArithmeticExpression()
         {
             //ExStart:UsingArithmeticExpression
+            //ExFor: ExtendedAttributeDefinition.Alias
             //ExFor: ExtendedAttributeDefinition.Formula
             //ExSummary: Shows how to use arithmetic functions with extended attributes.
             var project = CreateTestProjectWithCustomField5();

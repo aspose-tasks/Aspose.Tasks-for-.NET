@@ -54,11 +54,11 @@
             options.PresentationFormat = PresentationFormat.ResourceUsage;
             project.Save(OutDir + "ResourceUsageView_days_out.pdf", options);
 
-            // Set the Timescale settings to ThirdsOfMonths and save the Project
+            // Set the Timescale settings to ThirdsOfMonths
             options.Timescale = Timescale.ThirdsOfMonths;
             project.Save(OutDir + "ResourceUsageView_thirdsOfMonths_out.pdf", options);
 
-            // Set the Timescale settings to Months and save the Project
+            // Set the Timescale settings to Months
             options.Timescale = Timescale.Months;
             project.Save(OutDir + "ResourceUsageView_months_out.pdf", options);
             //ExEnd:RenderResourceUsageView

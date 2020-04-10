@@ -10,7 +10,9 @@
     public class ExImageSavingArgs : ApiExampleBase
     {
         //ExStart
-        //ExFor: IImageSavingCallback
+        //ExFor: ImageSavingArgs
+        //ExFor: ImageSavingArgs.#ctor
+        //ExFor: ImageSavingArgs.ImageType
         //ExSummary: Shows how to work with image saving arguments.
         [TestFixture] //ExSkip
         internal class ResourcePrefixForNestedResources : ApiExampleBase, ICssSavingCallback, IFontSavingCallback, IImageSavingCallback

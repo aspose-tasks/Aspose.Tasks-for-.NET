@@ -11,6 +11,7 @@
     {
         //ExStart
         //ExFor: IFontSavingCallback
+        //ExFor: IFontSavingCallback.FontSaving(FontSavingArgs)
         //ExSummary: Shows how to work with font saving callbacks.
         [TestFixture] //ExSkip
         internal class ResourcePrefixForNestedResources : ApiExampleBase, ICssSavingCallback, IFontSavingCallback, IImageSavingCallback

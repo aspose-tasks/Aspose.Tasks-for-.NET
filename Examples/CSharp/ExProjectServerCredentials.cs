@@ -3,6 +3,8 @@
     using System;
     using System.Collections.Generic;
     using System.Net;
+    using System.Security;
+    using Microsoft.SharePoint.Client;
     using NUnit.Framework;
 
     [TestFixture]
@@ -72,6 +74,52 @@
             catch (NotSupportedException ex)
             {
                 Console.WriteLine(ex.Message + "\nThis example will only work if you apply a valid Aspose License. You can purchase full license or get 30 day temporary license from http://www.aspose.com/purchase/default.aspx.");
+            }
+        }
+        
+        [Test]
+        public void CreateProjectInProjectServer2()
+        {
+            //ExStart
+            //ExFor: ProjectServerCredentials.#ctor(String,String)
+            //ExFor: ProjectServerCredentials.AuthToken
+            //ExFor: ProjectServerCredentials.SiteUrl
+            //ExFor: ProjectServerCredentials.UserName
+            //ExSummary: Shows how to use Project Server credentials with SharePointOnlineCredentials while reading a project from Microsoft Project Online.
+            try
+            {
+                var url = new System.Uri("https://contoso.sharepoint.com");
+                var project = new Project(DataDir + "Project1.mpp");
+                var username = "your.login@nstincorporated.onmicrosoft.com";
+                var password = new SecureString();
+                var securedPassword = "MyPassword";
+                foreach (char c in securedPassword)
+                {
+                    password.AppendChar(c);
+                }
+                
+                var onlineCredentials = new SharePointOnlineCredentials(username, password);
+                var projectServerCredentials = new ProjectServerCredentials(url.ToString(), onlineCredentials.GetAuthenticationCookie(url, true));
+
+                Console.WriteLine("Project Server Auth Token: " + projectServerCredentials.AuthToken);
+                Console.WriteLine("Project Server Site Url: " + projectServerCredentials.SiteUrl);
+                Console.WriteLine("Project Server User Name: " + projectServerCredentials.UserName);
+                
+                var manager = new ProjectServerManager(projectServerCredentials);
+                manager.CreateNewProject(project);
+            }
+            catch (ProjectOnlineException ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            //ExEnd
+            catch (NotSupportedException ex)
+            {
+                Console.WriteLine(ex.Message + "\nThis example will only work if you apply a valid Aspose License. You can purchase full license or get 30 day temporary license from http://www.aspose.com/purchase/default.aspx.");
+            }
+            catch (WebException ex)
+            {
+                Console.WriteLine(ex.Message);
             }
         }
     }

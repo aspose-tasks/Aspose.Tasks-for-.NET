@@ -12,6 +12,7 @@
         {
             //ExStart:ReadParentChildTasks
             //ExFor: ChildTasksCollector
+            //ExFor: ChildTasksCollector.#ctor
             //ExFor: ChildTasksCollector.Tasks
             //ExSummary: Shows how to iterate over all tasks in a project as a plain list. 
             var project = new Project(DataDir + "ParentChildTasks.mpp");

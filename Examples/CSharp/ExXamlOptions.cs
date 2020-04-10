@@ -12,6 +12,7 @@
         {
             //ExStart:RenderXAMLWithOptions
             //ExFor: XamlOptions
+            //ExFor: XamlOptions.#ctor
             //ExSummary: Shows how to save a project in XAML format by using save options.
             var project = new Project(DataDir + "Project2.mpp");
             SaveOptions options = new XamlOptions();

@@ -10,7 +10,7 @@
     public class ExFontSavingArgs : ApiExampleBase
     {
         //ExStart
-        //ExFor: IImageSavingCallback
+        //ExFor: FontSavingArgs
         //ExSummary: Shows how to work with font saving args.
         [TestFixture] //ExSkip
         internal class ResourcePrefixForNestedResources : ApiExampleBase, ICssSavingCallback, IFontSavingCallback, IImageSavingCallback

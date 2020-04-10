@@ -13,6 +13,7 @@
         {
             //ExStart:SaveToMultiplePdfFiles
             //ExFor: PdfSaveOptions
+            //ExFor: PdfSaveOptions.#ctor
             //ExFor: PdfSaveOptions.SaveToSeparateFiles
             //ExFor: PdfSaveOptions.Pages
             //ExSummary: Shows how to save selected pages of a project into PDF file. 

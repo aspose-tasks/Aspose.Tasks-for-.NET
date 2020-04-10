@@ -9,6 +9,7 @@
     {
         //ExStart:ReadHeaderFooterInfo
         //ExFor: HeaderFooterInfo
+        //ExFor: HeaderFooterInfo.#ctor
         //ExSummary: Shows how to read page header/footer info.
         [Test] //ExSkip
         public void ReadHeaderFooterInfo()

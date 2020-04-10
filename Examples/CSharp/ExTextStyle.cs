@@ -14,6 +14,7 @@
         {
             //ExStart:CustomizeTextStyle
             //ExFor: TextStyle
+            //ExFor: TextStyle.#ctor
             //ExFor: TextStyle.FontStyle
             //ExSummary: Shows how to customize text styles which are used to style different text items in a project.
             var project = new Project(DataDir + "CreateProject2.mpp");

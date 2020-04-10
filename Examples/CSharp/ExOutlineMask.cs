@@ -14,6 +14,7 @@
             {
                 //ExStart:CheckOutlineCodeIdUniqueness
                 //ExFor: OutlineMask
+                //ExFor: OutlineMask.#ctor
                 //ExSummary: Shows how to work with outline masks.
                 var project = new Project(DataDir + "OutlineValues2010.mpp");
 

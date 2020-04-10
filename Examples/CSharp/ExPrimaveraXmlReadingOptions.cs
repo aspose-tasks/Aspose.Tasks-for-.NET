@@ -11,6 +11,8 @@
         {
             //ExStart:ReadXMLFileWithMultipleProjects
             //ExFor: PrimaveraXmlReadingOptions
+            //ExFor: PrimaveraXmlReadingOptions.#ctor
+            //ExFor: PrimaveraXmlReadingOptions.ProjectUid
             //ExSummary: Shows how to read a project from a Primavera XML file with multiple projects.
             var options = new PrimaveraXmlReadingOptions();
             options.ProjectUid = 4557;

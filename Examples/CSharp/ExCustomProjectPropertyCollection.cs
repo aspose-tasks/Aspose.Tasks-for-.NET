@@ -11,6 +11,7 @@
         {
             //ExStart:ReadProjectMetaProperties
             //ExFor: CustomProjectPropertyCollection
+            //ExFor: CustomProjectPropertyCollection.#ctor
             //ExSummary: Shows how to read project meta properties.
             var project = new Project(DataDir + "ReadProjectInfo.mpp");
 

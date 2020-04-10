@@ -13,6 +13,18 @@
         {
             //ExStart:GenerateResourceAssignmentTimephasedData
             //ExFor: Asn.WorkContour
+            //ExFor: AsnKey.WorkContour
+            //ExFor: WorkContourType
+            //ExFor: WorkContourType.BackLoaded
+            //ExFor: WorkContourType.Bell
+            //ExFor: WorkContourType.Contoured
+            //ExFor: WorkContourType.DoublePeak
+            //ExFor: WorkContourType.EarlyPeak
+            //ExFor: WorkContourType.Flat
+            //ExFor: WorkContourType.FrontLoaded
+            //ExFor: WorkContourType.LatePeak
+            //ExFor: WorkContourType.Turtle
+            //ExFor: WorkContourType.Undefined
             //ExSummary: Shows how to set different timephased data contours for resource assignments.
             var project = new Project();
             project.Set(Prj.StartDate, new DateTime(2000, 1, 3, 8, 0, 0));
@@ -105,132 +117,7 @@
             }
             //ExEnd:GenerateResourceAssignmentTimephasedData
         }
-        
-        [Test]
-        public void GetGeneralResourceAssignmentProperties()
-        {
-            //ExStart:GetGeneralResourceAssignmentProperties
-            //ExFor: Asn
-            //ExFor: Asn.Uid
-            //ExFor: Asn.AssignmentOwner
-            //ExFor: Asn.AssignmentOwnerGuid
-            //ExFor: Asn.BookingType
-            //ExFor: Asn.Created
-            //ExFor: Asn.Start
-            //ExFor: Asn.ActualStart
-            //ExFor: Asn.Work
-            //ExFor: Asn.ActualWork
-            //ExFor: Asn.ActualWorkProtected
-            //ExFor: Asn.ActualOvertimeWork
-            //ExFor: Asn.ActualOvertimeWorkProtected
-            //ExFor: Asn.Cost
-            //ExFor: Asn.ActualCost
-            //ExFor: Asn.ActualOvertimeCost
-            //ExFor: Asn.Finish
-            //ExFor: Asn.ActualFinish
-            //ExFor: Asn.Confirmed
-            //ExFor: Asn.ResponsePending
-            //ExFor: Asn.CostRateTableType
-            //ExFor: Asn.Task
-            //ExFor: Asn.Resource
-            //ExFor: Asn.Delay
-            //ExFor: Asn.FixedMaterial
-            //ExFor: Asn.HasFixedRateUnits
-            //ExFor: Asn.Hyperlink
-            //ExFor: Asn.HyperlinkAddress
-            //ExFor: Asn.HyperlinkSubAddress
-            //ExFor: Asn.LevelingDelay
-            //ExFor: Asn.LevelingDelayFormat
-            //ExFor: Asn.LinkedFields
-            //ExFor: Asn.Milestone
-            //ExFor: Asn.Overallocated
-            //ExFor: Asn.Units
-            //ExFor: Asn.PeakUnits
-            //ExFor: Asn.RegularWork
-            //ExFor: Asn.Summary
-            //ExFor: Asn.UpdateNeeded
-            //ExFor: Asn.VAC
-            //ExSummary: Shows how to read/write common resource assignment's properties.
-            var project = new Project();
 
-            var task = project.RootTask.Children.Add("Task 1");
-            task.Set(Tsk.Start, new DateTime(2000, 1, 3, 8, 0, 0));
-            task.Set(Tsk.Duration, project.GetDuration(8));
-
-            var resource = project.Resources.Add("Resource 1");
-            resource.Set(Rsc.Type, ResourceType.Work);
-            resource.Set(Rsc.StandardRate, 10m);
-            resource.Set(Rsc.OvertimeRate, 15m);
-
-            var assignment = project.ResourceAssignments.Add(task, resource);
-            assignment.Set(Asn.AssignmentOwner, "Michael");
-            assignment.Set(Asn.BookingType, BookingType.Proposed);
-            assignment.Set(Asn.Confirmed, true);
-            assignment.Set(Asn.ResponsePending, true);
-            assignment.Set(Asn.AssignmentOwnerGuid, "1d440f0c-7839-4802-af5f-4bb30e8b75ab");
-            assignment.Set(Asn.Delay, project.GetDuration(0, TimeUnitType.Day));
-            assignment.Set(Asn.Start, new DateTime(2000, 1, 3, 8, 0, 0));
-            assignment.Set(Asn.Work, project.GetWork(8));
-            assignment.Set(Asn.Finish, new DateTime(2000, 1, 3, 17, 0, 0));
-            assignment.Set(Asn.ActualStart, new DateTime(2000, 1, 3, 8, 0, 0));
-            assignment.Set(Asn.ActualWork, project.GetDuration(8, TimeUnitType.Hour));
-            assignment.Set(Asn.ActualFinish, new DateTime(2000, 1, 3, 17, 0, 0));
-            assignment.Set(Asn.ActualOvertimeWork, project.GetWork(1));
-            assignment.Set(Asn.ActualOvertimeCost, 1);
-            assignment.Set(Asn.FixedMaterial, false);
-            assignment.Set(Asn.Hyperlink, "aspose.com");
-            assignment.Set(Asn.HyperlinkAddress, "products.aspose.com");
-            assignment.Set(Asn.HyperlinkSubAddress, "/total/net");
-            assignment.Set(Asn.LevelingDelayFormat, TimeUnitType.Hour);
-            assignment.Set(Asn.LevelingDelay, project.GetDuration(0d));
-            assignment.Set(Asn.LinkedFields, false);
-            assignment.Set(Asn.Units, 1d);
-            assignment.Set(Asn.PeakUnits, 1d);
-            
-            Console.WriteLine("UID: " + assignment.Get(Asn.Uid));
-            Console.WriteLine("Assigned Task Name: " + assignment.Get(Asn.Task).Get(Tsk.Name));
-            Console.WriteLine("Assigned Resource Name: " + assignment.Get(Asn.Resource).Get(Rsc.Name));
-            Console.WriteLine("Assignment Owner: " + assignment.Get(Asn.AssignmentOwner));
-            Console.WriteLine("Assignment Owner Guid: " + assignment.Get(Asn.AssignmentOwnerGuid));
-            Console.WriteLine("Start: " + assignment.Get(Asn.Start));
-            Console.WriteLine("Work: " + assignment.Get(Asn.Work));
-            Console.WriteLine("Regular Work: " + assignment.Get(Asn.RegularWork));
-            Console.WriteLine("Units: " + assignment.Get(Asn.Units));
-            Console.WriteLine("Peak Units: " + assignment.Get(Asn.PeakUnits));
-            Console.WriteLine("Finish: " + assignment.Get(Asn.Finish));
-            Console.WriteLine("Delay: " + assignment.Get(Asn.Delay));
-            Console.WriteLine("Booking Type: " + assignment.Get(Asn.BookingType));
-            Console.WriteLine("Confirmed: " + assignment.Get(Asn.Confirmed));
-            Console.WriteLine("Created: " + assignment.Get(Asn.Created));
-            Console.WriteLine("Response Pending: " + assignment.Get(Asn.ResponsePending));
-            Console.WriteLine("Actual Start: " + assignment.Get(Asn.ActualStart));
-            Console.WriteLine("Actual Work: " + assignment.Get(Asn.ActualWork));
-            Console.WriteLine("Actual Work Protected: " + assignment.Get(Asn.ActualWorkProtected));
-            Console.WriteLine("Cost Rate Table Type: " + assignment.Get(Asn.CostRateTableType));
-            Console.WriteLine("Actual Cost: " + assignment.Get(Asn.ActualCost));
-            Console.WriteLine("Actual Finish: " + assignment.Get(Asn.ActualFinish));
-            Console.WriteLine("Regular Work: " + assignment.Get(Asn.RegularWork));
-            Console.WriteLine("Actual Overtime Work: " + assignment.Get(Asn.ActualOvertimeWork));
-            Console.WriteLine("Actual Overtime Cost: " + assignment.Get(Asn.ActualOvertimeCost));
-            Console.WriteLine("Actual Overtime Work Protected: " + assignment.Get(Asn.ActualOvertimeWorkProtected));
-            Console.WriteLine("Fixed Material: " + assignment.Get(Asn.FixedMaterial));
-            Console.WriteLine("Has Fixed Rate Units: " + assignment.Get(Asn.HasFixedRateUnits));
-            Console.WriteLine("Hyperlink: " + assignment.Get(Asn.Hyperlink));
-            Console.WriteLine("Hyperlink Address: " + assignment.Get(Asn.HyperlinkAddress));
-            Console.WriteLine("Hyperlink Sub Address: " + assignment.Get(Asn.HyperlinkSubAddress));
-            Console.WriteLine("Leveling Delay: " + assignment.Get(Asn.LevelingDelay));
-            Console.WriteLine("Leveling Delay Format: " + assignment.Get(Asn.LevelingDelayFormat));
-            Console.WriteLine("Linked Fields: " + assignment.Get(Asn.LinkedFields));
-            Console.WriteLine("Milestone: " + assignment.Get(Asn.Milestone));
-            Console.WriteLine("Overallocated: " + assignment.Get(Asn.Overallocated));
-            Console.WriteLine("Summary: " + assignment.Get(Asn.Summary));
-            Console.WriteLine("Units: " + assignment.Get(Asn.Units));
-            Console.WriteLine("Peak Units: " + assignment.Get(Asn.PeakUnits));
-            Console.WriteLine("Update Needed: " + assignment.Get(Asn.UpdateNeeded));
-            Console.WriteLine("VAC: " + assignment.Get(Asn.VAC));
-            //ExEnd:GetGeneralResourceAssignmentProperties
-        }
-        
         [Test]
         public void GetResourceAssignmentCosts()
         {
@@ -240,21 +127,26 @@
             //ExFor: Asn.BCWS
             //ExFor: Asn.CV
             //ExFor: Asn.SV
-            //ExSummary: Shows how to read assignment's costs.
+            //ExFor: AsnKey.ACWP
+            //ExFor: AsnKey.BCWP
+            //ExFor: AsnKey.BCWS
+            //ExFor: AsnKey.CV
+            //ExFor: AsnKey.SV
+            //ExSummary: Shows how to read assignment's cost values.
             var project = new Project(DataDir + "ResourceAssignmentCosts.mpp");
 
             // Print resource assignment costs
-            foreach (var ra in project.ResourceAssignments)
+            foreach (var assignment in project.ResourceAssignments)
             {
-                Console.WriteLine(ra.Get(Asn.Cost));
-                Console.WriteLine(ra.Get(Asn.ACWP));
+                Console.WriteLine(assignment.Get(Asn.Cost));
+                Console.WriteLine(assignment.Get(Asn.ACWP));
                 // CV = BCWP - ACWP
-                Console.WriteLine(ra.Get(Asn.CV));
+                Console.WriteLine(assignment.Get(Asn.CV));
                 
-                Console.WriteLine(ra.Get(Asn.BCWP));
-                Console.WriteLine(ra.Get(Asn.BCWS));
+                Console.WriteLine(assignment.Get(Asn.BCWP));
+                Console.WriteLine(assignment.Get(Asn.BCWS));
                 // SV = BCWP - BCWS
-                Console.WriteLine(ra.Get(Asn.SV));
+                Console.WriteLine(assignment.Get(Asn.SV));
             }
             //ExEnd:GetResourceAssignmentCosts
         }
@@ -269,6 +161,12 @@
             //ExFor: Asn.RemainingCost
             //ExFor: Asn.RemainingOvertimeWork
             //ExFor: Asn.RemainingOvertimeCost
+            //ExFor: AsnKey.OvertimeWork
+            //ExFor: AsnKey.OvertimeCost
+            //ExFor: AsnKey.RemainingWork
+            //ExFor: AsnKey.RemainingCost
+            //ExFor: AsnKey.RemainingOvertimeWork
+            //ExFor: AsnKey.RemainingOvertimeCost
             //ExSummary: Shows how to read overtime/remaining works/costs of an assignment.
             var project = new Project(DataDir + "ResourceAssignmentOvertimes.mpp");
 
@@ -290,6 +188,7 @@
         {
             //ExStart:GetResourceAssignmentPercentWorkComplete
             //ExFor: Asn.PercentWorkComplete
+            //ExFor: AsnKey.PercentWorkComplete
             //ExSummary: Shows how to read percent work complete of an assignment.
             var project = new Project(DataDir + "ResourceAssignmentPercentWorkComplete.mpp");
 
@@ -307,6 +206,8 @@
             //ExStart:GetResourceAssignmentStopResumeDates
             //ExFor: Asn.Stop
             //ExFor: Asn.Resume
+            //ExFor: AsnKey.Stop
+            //ExFor: AsnKey.Resume
             //ExSummary: Shows how to read assignment's stop/resume dates. 
             var project = new Project(DataDir + "ResourceAssignmentStopResumeDates.mpp");
 
@@ -327,6 +228,10 @@
             //ExFor: Asn.CostVariance
             //ExFor: Asn.StartVariance
             //ExFor: Asn.FinishVariance
+            //ExFor: AsnKey.WorkVariance
+            //ExFor: AsnKey.CostVariance
+            //ExFor: AsnKey.StartVariance
+            //ExFor: AsnKey.FinishVariance
             //ExSummary: Shows how to read assignment's variances.
             var project = new Project(DataDir + "ResourceAssignmentVariance.mpp");
 
@@ -348,6 +253,7 @@
             {
                 //ExStart: ReadWriteRateScaleForResourceAssignment
                 //ExFor: Asn.RateScale
+                //ExFor: AsnKey.RateScale
                 //ExSummary: Shows how to work with assignment's rate scale. 
                 var project = new Project(DataDir + "New project 2013.mpp");
 
@@ -389,6 +295,8 @@
             //ExStart:ReadBudgetWorkAndCost
             //ExFor: Asn.BudgetWork
             //ExFor: Asn.BudgetCost
+            //ExFor: AsnKey.BudgetWork
+            //ExFor: AsnKey.BudgetCost
             //ExSummary: Shows how to read budget work/cost values of a resource assignment.
             var project = new Project(DataDir + "BudgetWorkAndCost.mpp");
 
@@ -431,28 +339,594 @@
         }
         
         [Test]
-        public void UpdateResourceAssignmentNotes()
+        public void GetSetResourceAssignmentNotes()
         {
-            try
-            {
-                //ExStart:UpdateResourceAssignmentNotes
-                //ExFor: Asn.Notes
-                //ExSummary: Shows how to add/update resource assignments in MPP file.
-                var project = new Project(DataDir + "UpdateResourceAssignment.mpp");
-                var task = project.RootTask.Children.GetById(1);
-                var rsc = project.Resources.GetById(1);
+            //ExStart
+            //ExFor: Asn.Notes
+            //ExFor: AsnKey.Notes
+            //ExSummary: Shows how to get/set resource assignment notes.
+            var project = new Project(DataDir + "UpdateResourceAssignment.mpp");
+            var task = project.RootTask.Children.GetById(1);
+            var rsc = project.Resources.GetById(1);
 
-                // Create resource assignment
-                var assn = project.ResourceAssignments.Add(task, rsc);
-                assn.Set(Asn.Notes, "Newly added assignment");
+            // create resource assignment
+            var assn = project.ResourceAssignments.Add(task, rsc);
+            
+            // set resource assignment notes 
+            assn.Set(Asn.Notes, "Newly added assignment");
 
-                project.Save(OutDir + "UpdateResourceAssignment_out.mpp", SaveFileFormat.MPP);
-                //ExEnd:UpdateResourceAssignmentNotes
-            }
-            catch (NotSupportedException ex)
-            {
-                Console.WriteLine(ex.Message + "\nThis example will only work if you apply a valid Aspose License. You can purchase full license or get 30 day temporary license from http://www.aspose.com/purchase/default.aspx.");
-            }
+            Console.WriteLine("Notes: " + assn.Get(Asn.Notes));
+            //ExEnd
+        }
+        
+        [Test]
+        public void GetSetUid()
+        {
+            //ExStart
+            //ExFor: Asn
+            //ExFor: Asn.Uid
+            //ExFor: AsnKey.Uid
+            //ExSummary: Shows how to read/write Asn.Uid property.
+            var project = new Project();
+
+            var task = project.RootTask.Children.Add("Task 1");
+            task.Set(Tsk.Start, new DateTime(2000, 1, 3, 8, 0, 0));
+            task.Set(Tsk.Duration, project.GetDuration(8));
+
+            var resource = project.Resources.Add("Resource 1");
+            resource.Set(Rsc.Type, ResourceType.Work);
+
+            var assignment = project.ResourceAssignments.Add(task, resource);
+            assignment.Set(Asn.Uid, 30);
+            
+            Console.WriteLine("UID: " + assignment.Get(Asn.Uid));
+            //ExEnd
+        }
+        
+        [Test]
+        public void GetSetAssignmentOwnerAndGuid()
+        {
+            //ExStart
+            //ExFor: Asn.AssignmentOwner
+            //ExFor: Asn.AssignmentOwnerGuid
+            //ExFor: AsnKey.AssignmentOwner
+            //ExFor: AsnKey.AssignmentOwnerGuid
+            //ExSummary: Shows how to read/write Asn.AssignmentOwner and Asn.AssignmentOwnerGuid properties.
+            var project = new Project();
+
+            var task = project.RootTask.Children.Add("Task 1");
+            task.Set(Tsk.Start, new DateTime(2000, 1, 3, 8, 0, 0));
+            task.Set(Tsk.Duration, project.GetDuration(8));
+
+            var resource = project.Resources.Add("Resource 1");
+            resource.Set(Rsc.Type, ResourceType.Work);
+
+            var assignment = project.ResourceAssignments.Add(task, resource);
+            assignment.Set(Asn.AssignmentOwner, "Assignment Owner");
+            assignment.Set(Asn.AssignmentOwnerGuid, "1d440f0c-7839-4802-af5f-4bb30e8b75ab");
+            
+            Console.WriteLine("Assignment Owner: " + assignment.Get(Asn.AssignmentOwner));
+            Console.WriteLine("Assignment Owner GUID: " + assignment.Get(Asn.AssignmentOwnerGuid));
+            //ExEnd
+        }
+        
+        [Test]
+        public void GetSetBookingType()
+        {
+            //ExStart
+            //ExFor: Asn.BookingType
+            //ExFor: AsnKey.BookingType
+            //ExSummary: Shows how to read/write Asn.BookingType property.
+            var project = new Project();
+
+            var task = project.RootTask.Children.Add("Task 1");
+            task.Set(Tsk.Start, new DateTime(2000, 1, 3, 8, 0, 0));
+            task.Set(Tsk.Duration, project.GetDuration(8));
+
+            var resource = project.Resources.Add("Resource 1");
+            resource.Set(Rsc.Type, ResourceType.Work);
+
+            var assignment = project.ResourceAssignments.Add(task, resource);
+            assignment.Set(Asn.BookingType, BookingType.Proposed);
+            
+            Console.WriteLine("Booking Type: " + assignment.Get(Asn.BookingType));
+            //ExEnd
+        }
+        
+        [Test]
+        public void GetSetCreated()
+        {
+            //ExStart
+            //ExFor: Asn.Created
+            //ExFor: AsnKey.Created
+            //ExSummary: Shows how to read/write Asn.Created property.
+            var project = new Project();
+
+            var task = project.RootTask.Children.Add("Task 1");
+            task.Set(Tsk.Start, new DateTime(2000, 1, 3, 8, 0, 0));
+            task.Set(Tsk.Duration, project.GetDuration(8));
+
+            var resource = project.Resources.Add("Resource 1");
+            resource.Set(Rsc.Type, ResourceType.Work);
+
+            var assignment = project.ResourceAssignments.Add(task, resource);
+            assignment.Set(Asn.Created, new DateTime(2020, 4, 9, 8, 0, 0));
+            
+            Console.WriteLine("Created: " + assignment.Get(Asn.Created));
+            //ExEnd
+        }
+        
+        [Test]
+        public void GetSetCommonProps()
+        {
+            //ExStart
+            //ExFor: Asn.Start
+            //ExFor: Asn.Finish
+            //ExFor: Asn.Work
+            //ExFor: Asn.Units
+            //ExFor: Asn.PeakUnits
+            //ExFor: AsnKey.Start
+            //ExFor: AsnKey.Finish
+            //ExFor: AsnKey.Work
+            //ExFor: AsnKey.Units
+            //ExFor: AsnKey.PeakUnits
+            //ExSummary: Shows how to read/write common properties.
+            var project = new Project();
+            project.Set(Prj.WorkFormat, TimeUnitType.Day);
+
+            var task = project.RootTask.Children.Add("Task 1");
+            task.Set(Tsk.Start, new DateTime(2000, 1, 3, 8, 0, 0));
+            task.Set(Tsk.Duration, project.GetDuration(8));
+
+            var resource = project.Resources.Add("Resource 1");
+            resource.Set(Rsc.Type, ResourceType.Work);
+
+            var assignment = project.ResourceAssignments.Add(task, resource);
+            assignment.Set(Asn.Start, new DateTime(2020, 4, 9, 8, 0, 0));
+            assignment.Set(Asn.Work, project.GetWork(1));
+            assignment.Set(Asn.Finish, new DateTime(2020, 4, 9, 17, 0, 0));
+            assignment.Set(Asn.Units, 1);
+            assignment.Set(Asn.PeakUnits, 1);
+            
+            Console.WriteLine("Start: " + assignment.Get(Asn.Start));
+            Console.WriteLine("Work: " + assignment.Get(Asn.Work));
+            Console.WriteLine("Finish: " + assignment.Get(Asn.Finish));
+            Console.WriteLine("Units: " + assignment.Get(Asn.Units));
+            Console.WriteLine("Peak Units: " + assignment.Get(Asn.PeakUnits));
+            //ExEnd
+        }
+        
+        [Test]
+        public void GetSetHyperlinkProperties()
+        {
+            //ExStart
+            //ExFor: Asn.Hyperlink
+            //ExFor: Asn.HyperlinkAddress
+            //ExFor: Asn.HyperlinkSubAddress
+            //ExFor: AsnKey.Hyperlink
+            //ExFor: AsnKey.HyperlinkAddress
+            //ExFor: AsnKey.HyperlinkSubAddress
+            //ExSummary: Shows how to read/write hyperlink properties.
+            var project = new Project();
+
+            var task = project.RootTask.Children.Add("Task 1");
+            task.Set(Tsk.Start, new DateTime(2000, 1, 3, 8, 0, 0));
+            task.Set(Tsk.Duration, project.GetDuration(8));
+
+            var resource = project.Resources.Add("Resource 1");
+
+            var assignment = project.ResourceAssignments.Add(task, resource);
+            assignment.Set(Asn.Hyperlink, "aspose.com");
+            assignment.Set(Asn.HyperlinkAddress, "products.aspose.com");
+            assignment.Set(Asn.HyperlinkSubAddress, "/total/net");
+            
+            Console.WriteLine("Hyperlink: " + assignment.Get(Asn.Hyperlink));
+            Console.WriteLine("Hyperlink Address: " + assignment.Get(Asn.HyperlinkAddress));
+            Console.WriteLine("Hyperlink Sub Address: " + assignment.Get(Asn.HyperlinkSubAddress));
+            //ExEnd
+        }
+        
+        [Test]
+        public void GetSetActualsProperties()
+        {
+            //ExStart
+            //ExFor: Asn.ActualStart
+            //ExFor: Asn.ActualWork
+            //ExFor: Asn.ActualWorkProtected
+            //ExFor: Asn.ActualFinish
+            //ExFor: Asn.ActualOvertimeWork
+            //ExFor: Asn.ActualOvertimeCost
+            //ExFor: Asn.ActualOvertimeWorkProtected
+            //ExFor: AsnKey
+            //ExFor: AsnKey.ActualStart
+            //ExFor: AsnKey.ActualWork
+            //ExFor: AsnKey.ActualWorkProtected
+            //ExFor: AsnKey.ActualFinish
+            //ExFor: AsnKey.ActualOvertimeWork
+            //ExFor: AsnKey.ActualOvertimeCost
+            //ExFor: AsnKey.ActualOvertimeWorkProtected
+            //ExSummary: Shows how to read/write actual properties.
+            var project = new Project();
+
+            var task = project.RootTask.Children.Add("Task 1");
+            task.Set(Tsk.Start, new DateTime(2000, 1, 3, 8, 0, 0));
+            task.Set(Tsk.Duration, project.GetDuration(8));
+
+            var resource = project.Resources.Add("Resource 1");
+
+            var assignment = project.ResourceAssignments.Add(task, resource);
+            assignment.Set(Asn.Start, new DateTime(2000, 1, 3, 8, 0, 0));
+            assignment.Set(Asn.Work, project.GetWork(8));
+            assignment.Set(Asn.Finish, new DateTime(2000, 1, 3, 17, 0, 0));
+            assignment.Set(Asn.ActualStart, new DateTime(2000, 1, 3, 8, 0, 0));
+            assignment.Set(Asn.ActualWork, project.GetDuration(8, TimeUnitType.Hour));
+            assignment.Set(Asn.ActualWorkProtected, project.GetDuration(8, TimeUnitType.Hour));
+            assignment.Set(Asn.ActualFinish, new DateTime(2000, 1, 3, 17, 0, 0));
+            assignment.Set(Asn.ActualOvertimeWork, project.GetWork(1));
+            assignment.Set(Asn.ActualOvertimeCost, 1m);
+            assignment.Set(Asn.ActualOvertimeWorkProtected, project.GetWork(1));
+
+            Console.WriteLine("Start: " + assignment.Get(Asn.Start));
+            Console.WriteLine("Work: " + assignment.Get(Asn.Work));
+            Console.WriteLine("Finish: " + assignment.Get(Asn.Finish));
+            Console.WriteLine("Actual Start: " + assignment.Get(Asn.ActualStart));
+            Console.WriteLine("Actual Work: " + assignment.Get(Asn.ActualWork));
+            Console.WriteLine("Actual Work Protected: " + assignment.Get(Asn.ActualWorkProtected));
+            Console.WriteLine("Actual Finish: " + assignment.Get(Asn.ActualFinish));
+            Console.WriteLine("Actual Overtime Work: " + assignment.Get(Asn.ActualOvertimeWork));
+            Console.WriteLine("Actual Overtime Cost: " + assignment.Get(Asn.ActualOvertimeCost));
+            Console.WriteLine("Actual Overtime Work Protected: " + assignment.Get(Asn.ActualOvertimeWorkProtected));
+            //ExEnd
+        }
+        
+        [Test]
+        public void GetSetCostsProperties()
+        {
+            //ExStart
+            //ExFor: Asn.Cost
+            //ExFor: Asn.ActualCost
+            //ExFor: AsnKey.Cost
+            //ExFor: AsnKey.ActualCost
+            //ExSummary: Shows how to read/write actual cost properties.
+            var project = new Project();
+
+            var task = project.RootTask.Children.Add("Task 1");
+            task.Set(Tsk.Start, new DateTime(2000, 1, 3, 8, 0, 0));
+            task.Set(Tsk.Duration, project.GetDuration(8));
+
+            var resource = project.Resources.Add("Resource 1");
+
+            var assignment = project.ResourceAssignments.Add(task, resource);
+            assignment.Set(Asn.Start, new DateTime(2000, 1, 3, 8, 0, 0));
+            assignment.Set(Asn.Cost, 10);
+            assignment.Set(Asn.Finish, new DateTime(2000, 1, 3, 17, 0, 0));
+            assignment.Set(Asn.ActualStart, new DateTime(2000, 1, 3, 8, 0, 0));
+            assignment.Set(Asn.ActualCost, 10m);
+            assignment.Set(Asn.ActualFinish, new DateTime(2000, 1, 3, 17, 0, 0));
+
+            Console.WriteLine("Start: " + assignment.Get(Asn.Start));
+            Console.WriteLine("Cost: " + assignment.Get(Asn.Cost));
+            Console.WriteLine("Finish: " + assignment.Get(Asn.Finish));
+            Console.WriteLine("Actual Start: " + assignment.Get(Asn.ActualStart));
+            Console.WriteLine("Actual Cost: " + assignment.Get(Asn.ActualCost));
+            Console.WriteLine("Actual Finish: " + assignment.Get(Asn.ActualFinish));
+            //ExEnd
+        }
+        
+        [Test]
+        public void GetSetConfirmedProperty()
+        {
+            //ExStart
+            //ExFor: Asn.Confirmed
+            //ExFor: AsnKey.Confirmed
+            //ExSummary: Shows how to read/write Asn.Confirmed property.
+            var project = new Project();
+
+            var task = project.RootTask.Children.Add("Task 1");
+            task.Set(Tsk.Start, new DateTime(2000, 1, 3, 8, 0, 0));
+            task.Set(Tsk.Duration, project.GetDuration(8));
+
+            var resource = project.Resources.Add("Resource 1");
+
+            var assignment = project.ResourceAssignments.Add(task, resource);
+            assignment.Set(Asn.Confirmed, true);
+
+            Console.WriteLine("Confirmed: " + assignment.Get(Asn.Confirmed));
+            //ExEnd
+        }
+        
+        [Test]
+        public void GetSetResponsePendingProperty()
+        {
+            //ExStart
+            //ExFor: Asn.ResponsePending
+            //ExFor: AsnKey.ResponsePending
+            //ExSummary: Shows how to read/write Asn.ResponsePending property.
+            var project = new Project();
+
+            var task = project.RootTask.Children.Add("Task 1");
+            task.Set(Tsk.Start, new DateTime(2000, 1, 3, 8, 0, 0));
+            task.Set(Tsk.Duration, project.GetDuration(8));
+
+            var resource = project.Resources.Add("Resource 1");
+
+            var assignment = project.ResourceAssignments.Add(task, resource);
+            assignment.Set(Asn.ResponsePending, true);
+
+            Console.WriteLine("Response Pending: " + assignment.Get(Asn.ResponsePending));
+            //ExEnd
+        }
+        
+        [Test]
+        public void GetSetUpdateNeededProperty()
+        {
+            //ExStart
+            //ExFor: Asn.UpdateNeeded
+            //ExFor: AsnKey.UpdateNeeded
+            //ExSummary: Shows how to read/write Asn.UpdateNeeded property.
+            var project = new Project();
+
+            var task = project.RootTask.Children.Add("Task 1");
+            task.Set(Tsk.Start, new DateTime(2000, 1, 3, 8, 0, 0));
+            task.Set(Tsk.Duration, project.GetDuration(8));
+
+            var resource = project.Resources.Add("Resource 1");
+
+            var assignment = project.ResourceAssignments.Add(task, resource);
+            assignment.Set(Asn.UpdateNeeded, true);
+
+            Console.WriteLine("Update Needed: " + assignment.Get(Asn.UpdateNeeded));
+            //ExEnd
+        }
+        
+        [Test]
+        public void GetSetHasFixedRateUnitsProperty()
+        {
+            //ExStart
+            //ExFor: Asn.HasFixedRateUnits
+            //ExFor: AsnKey.HasFixedRateUnits
+            //ExSummary: Shows how to read/write Asn.HasFixedRateUnits property.
+            var project = new Project();
+
+            var task = project.RootTask.Children.Add("Task 1");
+            task.Set(Tsk.Start, new DateTime(2000, 1, 3, 8, 0, 0));
+            task.Set(Tsk.Duration, project.GetDuration(8));
+
+            var resource = project.Resources.Add("Resource 1");
+
+            var assignment = project.ResourceAssignments.Add(task, resource);
+            assignment.Set(Asn.HasFixedRateUnits, true);
+
+            Console.WriteLine("Has Fixed Rate Units: " + assignment.Get(Asn.HasFixedRateUnits));
+            //ExEnd
+        }
+        
+        [Test]
+        public void GetSetFixedMaterialProperty()
+        {
+            //ExStart
+            //ExFor: Asn.FixedMaterial
+            //ExFor: AsnKey.FixedMaterial
+            //ExSummary: Shows how to read/write Asn.FixedMaterial property.
+            var project = new Project();
+
+            var task = project.RootTask.Children.Add("Task 1");
+            task.Set(Tsk.Start, new DateTime(2000, 1, 3, 8, 0, 0));
+            task.Set(Tsk.Duration, project.GetDuration(8));
+
+            var resource = project.Resources.Add("Resource 1");
+
+            var assignment = project.ResourceAssignments.Add(task, resource);
+            assignment.Set(Asn.FixedMaterial, true);
+
+            Console.WriteLine("Fixed Material: " + assignment.Get(Asn.FixedMaterial));
+            //ExEnd
+        }
+        
+        [Test]
+        public void GetTaskResourceProperties()
+        {
+            //ExStart
+            //ExFor: Asn.Task
+            //ExFor: Asn.Resource
+            //ExFor: AsnKey.Task
+            //ExFor: AsnKey.TaskUid
+            //ExFor: AsnKey.Resource
+            //ExFor: AsnKey.ResourceUid
+            //ExSummary: Shows how to read Asn.Task and Asn.Resource properties.
+            var project = new Project();
+
+            var task = project.RootTask.Children.Add("Task 1");
+            task.Set(Tsk.Start, new DateTime(2000, 1, 3, 8, 0, 0));
+            task.Set(Tsk.Duration, project.GetDuration(8));
+
+            var resource = project.Resources.Add("Resource 1");
+
+            var assignment = project.ResourceAssignments.Add(task, resource);
+
+            Console.WriteLine("Assigned Task Name: " + assignment.Get(Asn.Task).Get(Tsk.Name));
+            Console.WriteLine("Assigned Resource Name: " + assignment.Get(Asn.Resource).Get(Rsc.Name));
+            //ExEnd
+        }
+        
+        [Test]
+        public void GetSetLevelingDelayProperties()
+        {
+            //ExStart
+            //ExFor: Asn.Delay
+            //ExFor: Asn.LevelingDelay
+            //ExFor: Asn.LevelingDelayFormat
+            //ExFor: AsnKey.Delay
+            //ExFor: AsnKey.LevelingDelay
+            //ExFor: AsnKey.LevelingDelayFormat
+            //ExSummary: Shows how to read/write Asn.Delay, Asn.LevelingDelay, and Asn.LevelingDelayFormat properties.
+            var project = new Project();
+
+            var task = project.RootTask.Children.Add("Task 1");
+            task.Set(Tsk.Start, new DateTime(2000, 1, 3, 8, 0, 0));
+            task.Set(Tsk.Duration, project.GetDuration(8));
+
+            var resource = project.Resources.Add("Resource 1");
+
+            var assignment = project.ResourceAssignments.Add(task, resource);
+            assignment.Set(Asn.Delay, project.GetDuration(0, TimeUnitType.Day));
+            
+            Console.WriteLine("Delay: " + assignment.Get(Asn.Delay));
+            Console.WriteLine("Leveling Delay: " + assignment.Get(Asn.LevelingDelay));
+            Console.WriteLine("Leveling Delay Format: " + assignment.Get(Asn.LevelingDelayFormat));
+            //ExEnd
+        }
+        
+        [Test]
+        public void GetSetCostRateTableTypeProperties()
+        {
+            //ExStart
+            //ExFor: Asn.CostRateTableType
+            //ExFor: AsnKey.CostRateTableType
+            //ExSummary: Shows how to read/write Asn.CostRateTableType property.
+            var project = new Project();
+
+            var task = project.RootTask.Children.Add("Task 1");
+            task.Set(Tsk.Start, new DateTime(2000, 1, 3, 8, 0, 0));
+            task.Set(Tsk.Duration, project.GetDuration(8));
+
+            var resource = project.Resources.Add("Resource 1");
+
+            var assignment = project.ResourceAssignments.Add(task, resource);
+            assignment.Set(Asn.CostRateTableType, RateType.B);
+            
+            Console.WriteLine("Cost Rate Table Type: " + assignment.Get(Asn.CostRateTableType));
+            //ExEnd
+        }
+        
+        [Test]
+        public void GetSetRegularWorkProperties()
+        {
+            //ExStart
+            //ExFor: Asn.RegularWork
+            //ExFor: AsnKey.RegularWork
+            //ExSummary: Shows how to read/write Asn.RegularWork property.
+            var project = new Project();
+
+            var task = project.RootTask.Children.Add("Task 1");
+            task.Set(Tsk.Start, new DateTime(2000, 1, 3, 8, 0, 0));
+            task.Set(Tsk.Duration, project.GetDuration(8));
+
+            var resource = project.Resources.Add("Resource 1");
+
+            var assignment = project.ResourceAssignments.Add(task, resource);
+            assignment.Set(Asn.RegularWork, project.GetWork(1));
+            
+            Console.WriteLine("Regular Work: " + assignment.Get(Asn.RegularWork));
+            //ExEnd
+        }
+        
+        [Test]
+        public void GetSetLinkedFieldsProperty()
+        {
+            //ExStart
+            //ExFor: Asn.LinkedFields
+            //ExFor: AsnKey.LinkedFields
+            //ExSummary: Shows how to read Asn.LinkedFields property.
+            var project = new Project();
+
+            var task = project.RootTask.Children.Add("Task 1");
+            task.Set(Tsk.Start, new DateTime(2000, 1, 3, 8, 0, 0));
+            task.Set(Tsk.Duration, project.GetDuration(8));
+
+            var resource = project.Resources.Add("Resource 1");
+
+            var assignment = project.ResourceAssignments.Add(task, resource);
+            
+            Console.WriteLine("Linked Fields: " + assignment.Get(Asn.LinkedFields));
+            //ExEnd
+        }
+        
+        [Test]
+        public void GetSetMilestoneProperty()
+        {
+            //ExStart
+            //ExFor: Asn.Milestone
+            //ExFor: AsnKey.Milestone
+            //ExSummary: Shows how to read Asn.Milestone property.
+            var project = new Project();
+
+            var task = project.RootTask.Children.Add("Task 1");
+            task.Set(Tsk.Start, new DateTime(2000, 1, 3, 8, 0, 0));
+            task.Set(Tsk.Duration, project.GetDuration(8));
+
+            var resource = project.Resources.Add("Resource 1");
+
+            var assignment = project.ResourceAssignments.Add(task, resource);
+            
+            Console.WriteLine("Milestone: " + assignment.Get(Asn.Milestone));
+            //ExEnd
+        }
+        
+        [Test]
+        public void GetSetOverallocatedProperty()
+        {
+            //ExStart
+            //ExFor: Asn.Overallocated
+            //ExFor: AsnKey.Overallocated
+            //ExSummary: Shows how to read Asn.Overallocated property.
+            var project = new Project();
+
+            var task = project.RootTask.Children.Add("Task 1");
+            task.Set(Tsk.Start, new DateTime(2000, 1, 3, 8, 0, 0));
+            task.Set(Tsk.Duration, project.GetDuration(8));
+
+            var resource = project.Resources.Add("Resource 1");
+
+            var assignment = project.ResourceAssignments.Add(task, resource);
+            assignment.Set(Asn.Overallocated, true);
+            
+            Console.WriteLine("Overallocated: " + assignment.Get(Asn.Overallocated));
+            //ExEnd
+        }
+        
+        [Test]
+        public void GetSetSummaryProperty()
+        {
+            //ExStart
+            //ExFor: Asn.Summary
+            //ExFor: AsnKey.Summary
+            //ExSummary: Shows how to read Asn.Summary property.
+            var project = new Project();
+
+            var task = project.RootTask.Children.Add("Task 1");
+            task.Set(Tsk.Start, new DateTime(2000, 1, 3, 8, 0, 0));
+            task.Set(Tsk.Duration, project.GetDuration(8));
+
+            var resource = project.Resources.Add("Resource 1");
+
+            var assignment = project.ResourceAssignments.Add(task, resource);
+            assignment.Set(Asn.Summary, true);
+            
+            Console.WriteLine("Summary: " + assignment.Get(Asn.Summary));
+            //ExEnd
+        }
+        
+        [Test]
+        public void GetSetVACProperty()
+        {
+            //ExStart
+            //ExFor: Asn.VAC
+            //ExFor: AsnKey.VAC
+            //ExSummary: Shows how to read Asn.VAC property.
+            var project = new Project();
+
+            var task = project.RootTask.Children.Add("Task 1");
+            task.Set(Tsk.Start, new DateTime(2000, 1, 3, 8, 0, 0));
+            task.Set(Tsk.Duration, project.GetDuration(8));
+
+            var resource = project.Resources.Add("Resource 1");
+
+            var assignment = project.ResourceAssignments.Add(task, resource);
+            assignment.Set(Asn.VAC, 10);
+
+            Console.WriteLine("VAC: " + assignment.Get(Asn.VAC));
+            //ExEnd
         }
     }
 }

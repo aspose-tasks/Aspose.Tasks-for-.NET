@@ -16,6 +16,7 @@
             //ExFor: ProjectServerSaveOptions.#ctor
             //ExFor: ProjectServerSaveOptions.ProjectGuid
             //ExFor: ProjectServerSaveOptions.ProjectName
+            //ExFor: ProjectServerSaveOptions.PollingInterval
             //ExSummary: Shows how to use <see cref="Aspose.Tasks.ProjectServerSaveOptions" /> options to create a new project in Microsoft Project Online.
             try
             {
@@ -29,14 +30,15 @@
                 var windowsCredentials = new NetworkCredential(userName, password, domain);
                 var projectServerCredentials = new ProjectServerCredentials(url, windowsCredentials);
                 var manager = new ProjectServerManager(projectServerCredentials);
-                var saveOptions = new ProjectServerSaveOptions
+                var options = new ProjectServerSaveOptions
                 {
                     ProjectGuid = Guid.NewGuid(),
                     ProjectName = "New project",
-                    Timeout = TimeSpan.FromMinutes(5)
+                    Timeout = TimeSpan.FromMinutes(5),
+                    PollingInterval = TimeSpan.FromSeconds(3)
                 };
                 
-                manager.CreateNewProject(project, saveOptions);
+                manager.CreateNewProject(project, options);
             }
             catch (ProjectOnlineException ex)
             {

@@ -11,6 +11,7 @@
         {
             //ExStart:ReadTableDataFromProjectFile
             //ExFor: TableField
+            //ExFor: TableField.#ctor
             //ExSummary: Shows how to read project tables. 
             var project = new Project(DataDir + "ReadTableData.mpp");
 

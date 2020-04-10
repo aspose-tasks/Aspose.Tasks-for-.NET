@@ -10,6 +10,8 @@
         public void GetTaskBaselineDuration()
         {                        
             //ExStart:GetTaskBaselineDuration
+            //ExFor: BaselineType
+            //ExFor: BaselineType.Baseline
             //ExFor: TaskBaseline.Duration
             //ExFor: TaskBaseline.Start
             //ExFor: TaskBaseline.Finish

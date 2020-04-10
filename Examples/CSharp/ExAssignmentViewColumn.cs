@@ -1,5 +1,6 @@
 ﻿namespace Aspose.Tasks.Examples.CSharp
 {
+    using System;
     using NUnit.Framework;
     using Saving;
     using Visualization;
@@ -12,6 +13,8 @@
         {
             //ExStart:UsingSpreadsheet2003SaveOptions
             //ExFor: AssignmentViewColumn
+            //ExFor: AssignmentViewColumn.#ctor(String,Int32,AssignmentToColumnTextConverter)
+            //ExFor: AssignmentViewColumn.Field
             //ExSummary: Shows how to use add columns for assignment views.
             var project = new Project(DataDir + "CreateProject2.mpp");
 
@@ -42,6 +45,11 @@
                     return assignment.Get(Asn.Notes);
                 });
             options.AssignmentView.Columns.Add(assignmentViewColumn);
+
+            foreach (var column in options.AssignmentView.Columns)
+            {
+                Console.WriteLine(column.Field);
+            }
 
             project.Save(OutDir + "UsingSpreadsheet2003SaveOptions_out.xml", options);
             //ExEnd:UsingSpreadsheet2003SaveOptions

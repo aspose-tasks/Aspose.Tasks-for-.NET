@@ -12,6 +12,7 @@
         {
             //ExStart:PrepareAnalysisSettings
             //ExFor: RiskAnalysisSettings
+            //ExFor: RiskAnalysisSettings.#ctor
             //ExFor: RiskAnalysisSettings.Patterns
             //ExFor: RiskAnalysisSettings.IterationsCount
             //ExSummary: Shows how to prepare risk analysis settings for Monte-Carlo simulations.

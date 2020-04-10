@@ -13,6 +13,7 @@
         {
             //ExStart:ReadCustomBarStyle
             //ExFor: GanttBarStyle
+            //ExFor: GanttBarStyle.#ctor
             //ExFor: GanttBarStyle.LeftField
             //ExFor: GanttBarStyle.TopField
             //ExFor: GanttBarStyle.InsideField

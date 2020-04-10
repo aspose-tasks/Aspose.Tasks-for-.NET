@@ -15,6 +15,7 @@
             {
                 //ExStart:PrintLargeFiles
                 //ExFor: PrintOptions
+                //ExFor: PrintOptions.#ctor
                 //ExSummary: Shows how to use print options.
                 var project = new Project(DataDir + "Project2.mpp");
                 var options = new PrintOptions();

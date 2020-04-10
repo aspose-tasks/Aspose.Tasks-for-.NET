@@ -14,6 +14,7 @@
         {
             //ExStart:PrintProjectPagesToSeparateFiles
             //ExFor: Gridline
+            //ExFor: Gridline.#ctor
             //ExSummary: Shows how to use gridlines. 
             var project = new Project(DataDir + "CreateProject2.mpp");
             var options = new ImageSaveOptions(SaveFileFormat.PNG);

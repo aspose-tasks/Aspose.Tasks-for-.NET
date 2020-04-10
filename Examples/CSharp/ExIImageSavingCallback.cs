@@ -11,6 +11,7 @@
     {
         //ExStart
         //ExFor: IImageSavingCallback
+        //ExFor: IImageSavingCallback.ImageSaving(ImageSavingArgs)
         //ExSummary: Shows how to work with image saving callbacks.
         [TestFixture] //ExSkip
         internal class ResourcePrefixForNestedResources : ApiExampleBase, ICssSavingCallback, IFontSavingCallback, IImageSavingCallback
