@@ -33,10 +33,10 @@
         [Test]
         public static void ReadWorkWeeksInformation()
         {
-            //ExStart:ReadWorkWeeksInformation
+            //ExStart:WorkWithWorkWeekCollection
             //ExFor: Calendar.WorkWeeks
             //ExSummary: Shows how to read work week information.
-            var project = new Project(DataDir + "ReadWorkWeeksInformation.mpp");
+            var project = new Project(DataDir + "WorkWithWorkWeekCollection.mpp");
             var calendar = project.Calendars.GetByUid(3);
 
             foreach (var workWeek in calendar.WorkWeeks)
@@ -60,7 +60,7 @@
                     }
                 }
             }
-            //ExEnd:ReadWorkWeeksInformation
+            //ExEnd:WorkWithWorkWeekCollection
         }
         
         [Test]
@@ -541,7 +541,7 @@
             Console.WriteLine(workUnit.WorkingHours);
             //ExEnd
             
-            Assert.AreEqual(16, workUnit.WorkingHours);
+            Assert.AreEqual(16, workUnit.WorkingHours.TotalHours);
         }
         
         [Test]

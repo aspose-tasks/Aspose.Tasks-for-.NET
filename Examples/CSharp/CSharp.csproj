@@ -119,7 +119,10 @@
     <Compile Include="ExApplicationInfo.cs" />
     <Compile Include="ExApsLayoutBuilderOutOfMemoryException.cs" />
     <Compile Include="ExAsn.cs" />
+    <Compile Include="ExAssignmentBaselineCollection.cs" />
     <Compile Include="ExAssignmentViewColumn.cs" />
+    <Compile Include="ExAvailabilityPeriod.cs" />
+    <Compile Include="ExAvailabilityPeriodCollection.cs" />
     <Compile Include="ExBuiltInProjectPropertyCollection.cs" />
     <Compile Include="ExCalendarCollection.cs" />
     <Compile Include="ExCalendarExceptionCollection.cs" />
@@ -224,8 +227,14 @@
     <Compile Include="ExViewColumn.cs" />
     <Compile Include="ExWbsCodeDefinition.cs" />
     <Compile Include="ExWbsCodeMask.cs" />
+    <Compile Include="ExWBSCodeMaskCollection.cs" />
     <Compile Include="ExWbsSequence.cs" />
     <Compile Include="ExWeekDay.cs" />
+    <Compile Include="ExWeekDayCollection.cs" />
+    <Compile Include="ExWorkingTime.cs" />
+    <Compile Include="ExWorkingTimeCollection.cs" />
+    <Compile Include="ExWorkWeek.cs" />
+    <Compile Include="ExWorkUnit.cs" />
     <Compile Include="ExWorkWeekCollection.cs" />
     <Compile Include="ExXamlOptions.cs" />
     <Compile Include="ExXlsxOptions.cs" />

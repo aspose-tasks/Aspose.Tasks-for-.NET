@@ -44,9 +44,9 @@
             weekDay.WorkingTimes.Add(workingTime2);
             weekDay.DayWorking = true;
             calendar.WeekDays.Add(weekDay);
-
-            project.Save(OutDir + "DefineCalendarWeekdays_out.xml", SaveFileFormat.XML);
             //ExEnd
+            
+            project.Save(OutDir + "DefineCalendarWeekdays_out.xml", SaveFileFormat.XML);
         }
     }
 }
