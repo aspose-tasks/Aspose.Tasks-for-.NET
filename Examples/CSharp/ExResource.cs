@@ -17,7 +17,7 @@
             var project = new Project();
 
             // Add resources
-            project.Resources.Add("Rsc");
+            project.Resources.Add("Resource");
 
             project.Save(OutDir + "CreateResources_out.xml", SaveFileFormat.XML);
             //ExEnd:CreateResources

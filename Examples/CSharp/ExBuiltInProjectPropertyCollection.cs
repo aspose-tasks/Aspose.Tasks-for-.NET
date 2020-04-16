@@ -2,7 +2,6 @@
 {
     using System;
     using NUnit.Framework;
-    using Properties;
 
     [TestFixture]
     internal class ExBuiltInProjectPropertyCollection : ApiExampleBase
@@ -39,7 +38,7 @@
             Console.WriteLine("Title: " + project.BuiltInProps.Title);
             
             // iterate over built-in property collection
-            foreach (BuiltInProjectProperty property in project.BuiltInProps)
+            foreach (var property in project.BuiltInProps)
             {
                 Console.WriteLine("Name: " + property.Name);
                 Console.WriteLine("Value: " + property.Value);

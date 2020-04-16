@@ -43,7 +43,7 @@
         {
             //ExStart:RenderResourceUsageView
             //ExFor: PresentationFormat.ResourceUsage
-            //ExSummary: Shows how to render resource usage view.
+            //ExSummary: Shows how to use presentation formats to print views of Microsoft Project.
             var project = new Project(DataDir + "ResourceUsageView.mpp");
                         
             // Define the SaveOptions with required TimeScale settings as Days

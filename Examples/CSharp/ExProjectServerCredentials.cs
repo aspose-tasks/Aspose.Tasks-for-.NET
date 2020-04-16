@@ -19,9 +19,9 @@
             //ExSummary: Shows how to use project server credentials to log on MS Project Online.
             try
             {
-                var sharepointDomainAddress = "https://contoso.sharepoint.com";
-                var userName = "admin@contoso.onmicrosoft.com";
-                var password = "MyPassword";
+                const string sharepointDomainAddress = "https://contoso.sharepoint.com";
+                const string userName = "admin@contoso.onmicrosoft.com";
+                const string password = "MyPassword";
 
                 var credentials = new ProjectServerCredentials(sharepointDomainAddress, userName, password);
 
@@ -54,10 +54,10 @@
             //ExSummary: Shows how to use Project Server credentials with network credentials while reading a project from Microsoft Project Online.
             try
             {
-                var url = "https://contoso.sharepoint.com";
-                var domain = "CONTOSO.COM";
-                var userName = "Administrator";
-                var password = "MyPassword";
+                const string url = "https://contoso.sharepoint.com";
+                const string domain = "CONTOSO.COM";
+                const string userName = "Administrator";
+                const string password = "MyPassword";
 
                 var project = new Project(DataDir + @"Project1.mpp");
 
@@ -88,12 +88,12 @@
             //ExSummary: Shows how to use Project Server credentials with SharePointOnlineCredentials while reading a project from Microsoft Project Online.
             try
             {
+                const string username = "your.login@nstincorporated.onmicrosoft.com";
+                const string securedPassword = "MyPassword";
                 var url = new System.Uri("https://contoso.sharepoint.com");
                 var project = new Project(DataDir + "Project1.mpp");
-                var username = "your.login@nstincorporated.onmicrosoft.com";
                 var password = new SecureString();
-                var securedPassword = "MyPassword";
-                foreach (char c in securedPassword)
+                foreach (var c in securedPassword)
                 {
                     password.AppendChar(c);
                 }

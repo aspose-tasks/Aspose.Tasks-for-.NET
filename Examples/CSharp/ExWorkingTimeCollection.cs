@@ -67,9 +67,9 @@
 
             foreach (var day in calendar.WeekDays)
             {
-                Console.WriteLine(day.DayType + ":");
+                Console.WriteLine(day.DayType + ": ");
                 // You can further traverse through working times and display these
-                foreach (WorkingTime workingTime in day.WorkingTimes)
+                foreach (var workingTime in day.WorkingTimes)
                 {
                     Console.WriteLine(workingTime.FromTime);
                     Console.WriteLine(workingTime.ToTime);

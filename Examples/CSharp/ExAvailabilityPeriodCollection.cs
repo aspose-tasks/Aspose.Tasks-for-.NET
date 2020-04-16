@@ -12,16 +12,16 @@
         //ExFor: AvailabilityPeriodCollection.Add(AvailabilityPeriod)
         //ExFor: AvailabilityPeriodCollection.Clear
         //ExFor: AvailabilityPeriodCollection.Contains(AvailabilityPeriod)
-        //ExFor: AvailabilityPeriodCollection.CopyTo(AvailabilityPeriod[],System.Int32)
+        //ExFor: AvailabilityPeriodCollection.CopyTo(AvailabilityPeriod[],Int32)
         //ExFor: AvailabilityPeriodCollection.Count
         //ExFor: AvailabilityPeriodCollection.GetEnumerator
         //ExFor: AvailabilityPeriodCollection.IndexOf(AvailabilityPeriod)
-        //ExFor: AvailabilityPeriodCollection.Insert(System.Int32,AvailabilityPeriod)
+        //ExFor: AvailabilityPeriodCollection.Insert(Int32,AvailabilityPeriod)
         //ExFor: AvailabilityPeriodCollection.IsReadOnly
-        //ExFor: AvailabilityPeriodCollection.Item(System.Int32)
+        //ExFor: AvailabilityPeriodCollection.Item(Int32)
         //ExFor: AvailabilityPeriodCollection.ParentResource
         //ExFor: AvailabilityPeriodCollection.Remove(AvailabilityPeriod)
-        //ExFor: AvailabilityPeriodCollection.RemoveAt(System.Int32)
+        //ExFor: AvailabilityPeriodCollection.RemoveAt(Int32)
         //ExSummary: Shows how to work with availability period collection of resource.
         [Test] //ExSkip
         public void WorkWithAvailabilityPeriodCollection()
@@ -33,7 +33,7 @@
 
             // Add availability periods (2012 and 2014 years) to the new resource
             IEnumerable<AvailabilityPeriod> periods = this.GetPeriods();
-            foreach (AvailabilityPeriod period in periods)
+            foreach (var period in periods)
             {
                 if (!resource.AvailabilityPeriods.IsReadOnly)
                 {
@@ -54,7 +54,7 @@
             }
 
             Console.WriteLine("Count of availability periods: " + resource.AvailabilityPeriods.Count);
-            foreach (AvailabilityPeriod period in resource.AvailabilityPeriods)
+            foreach (var period in resource.AvailabilityPeriods)
             {
                 Console.WriteLine("Available From: " + period.AvailableFrom);
                 Console.WriteLine("Available To: " + period.AvailableTo);
@@ -62,7 +62,7 @@
                 Console.WriteLine();
             }
 
-            AvailabilityPeriod[] periodsToCopy = new AvailabilityPeriod[resource.AvailabilityPeriods.Count];
+            var periodsToCopy = new AvailabilityPeriod[resource.AvailabilityPeriods.Count];
             resource.AvailabilityPeriods.CopyTo(periodsToCopy, 0);
 
             var otherResource = project.Resources.GetById(2);
@@ -109,7 +109,7 @@
             
             Console.WriteLine("Print resource availability periods of the resource: " + otherResource.Get(Rsc.Name));
             Console.WriteLine("Count of availability periods: " + resource.AvailabilityPeriods.Count);
-            foreach (AvailabilityPeriod period in resource.AvailabilityPeriods)
+            foreach (var period in resource.AvailabilityPeriods)
             {
                 Console.WriteLine("Available From: " + period.AvailableFrom);
                 Console.WriteLine("Available To: " + period.AvailableTo);

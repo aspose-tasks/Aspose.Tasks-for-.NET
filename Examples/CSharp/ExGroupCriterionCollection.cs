@@ -1,41 +1,73 @@
 ﻿namespace Aspose.Tasks.Examples.CSharp
 {
     using System;
+    using System.Collections.Generic;
     using NUnit.Framework;
 
     [TestFixture]
     public class ExGroupCriterionCollection : ApiExampleBase
     {
         [Test]
-        public void ReadTaskGroupDefinitionData()
+        public void WorkWithGroupCriterionCollection()
         {
-            //ExStart:ReadTaskGroupDefinitionData
+            //ExStart:WorkWithGroupCriterionCollection
             //ExFor: GroupCriterionCollection
+            //ExFor: GroupCriterionCollection.Add(GroupCriterion)
+            //ExFor: GroupCriterionCollection.Clear
+            //ExFor: GroupCriterionCollection.Contains(GroupCriterion)
+            //ExFor: GroupCriterionCollection.CopyTo(GroupCriterion[],Int32)
+            //ExFor: GroupCriterionCollection.Count
+            //ExFor: GroupCriterionCollection.GetEnumerator
+            //ExFor: GroupCriterionCollection.IsReadOnly 
+            //ExFor: GroupCriterionCollection.ParentGroup
+            //ExFor: GroupCriterionCollection.Remove(GroupCriterion)
+            //ExFor: GroupCriterionCollection.ToList
             //ExSummary: Shows how to work with a collection of group criterion.
             var project = new Project(DataDir + "ReadGroupDefinitionData.mpp");
 
-            Console.WriteLine("Task Groups Count: " + project.TaskGroups.Count);
-            var taskGroup = project.TaskGroups.ToList()[1];
-            Console.WriteLine("Task Group Name: " + taskGroup.Name);
-            Console.WriteLine("Task Group Criteria count: " + taskGroup.GroupCriteria.Count);
-            Console.WriteLine("\n************* Retrieving Task Group's Criterion information *************");
-            var taskCriterion = taskGroup.GroupCriteria.ToList()[0];
-            Console.WriteLine("Task Criterion Field: " + taskCriterion.Field);
-            Console.WriteLine("Task Criterion GroupOn: " + taskCriterion.GroupOn);
-            Console.WriteLine("Task Criterion Cell Color: " + taskCriterion.CellColor);
-            Console.WriteLine("Task Criterion Pattern: " + taskCriterion.Pattern);
-
-            if (taskGroup == taskCriterion.ParentGroup)
+            var group = project.TaskGroups.ToList()[0];
+            
+            // iterate over group criterion
+            Console.WriteLine("Print group criteria of {0} group: ", group.GroupCriteria.ParentGroup.Name);
+            Console.WriteLine("Group criterion count: " + group.GroupCriteria.Count);
+            foreach (var criterion in group.GroupCriteria)
             {
-                Console.WriteLine("Parent Group is equal to task Group.");
+                Console.WriteLine("Index: " + criterion.Index);
+                Console.WriteLine("Field: " + criterion.Field);
+                Console.WriteLine("Group On: " + criterion.GroupOn);
+                Console.WriteLine();
             }
+            
+            group.GroupCriteria.Clear();
 
-            Console.WriteLine("\n*********** Retrieving Criterion's Font Information ***********");
-            Console.WriteLine("Font Name: " + taskCriterion.Font.Name);
-            Console.WriteLine("Font Size: " + taskCriterion.Font.Size);
-            Console.WriteLine("Font Style: " + taskCriterion.Font.Style);
-            Console.WriteLine("Ascending/Descending: " + taskCriterion.Ascending);
-            //ExEnd:ReadTaskGroupDefinitionData
+            if (!group.GroupCriteria.IsReadOnly)
+            {
+                List<GroupCriterion> groupCriteria = group.GroupCriteria.ToList();
+                foreach (var criterion in groupCriteria)
+                {
+                    group.GroupCriteria.Remove(criterion);
+                }
+            }
+            
+            var criterionToAdd = new GroupCriterion();
+            criterionToAdd.Ascending = true;
+            criterionToAdd.Field = Field.TaskActive;
+
+            if (!group.GroupCriteria.Contains(criterionToAdd))
+            {
+                group.GroupCriteria.Add(criterionToAdd);
+            }
+            
+            // copy criteria to other group
+            var otherGroup = project.TaskGroups.ToList()[0];
+            
+            var criteria = new GroupCriterion[group.GroupCriteria.Count];
+            group.GroupCriteria.CopyTo(criteria, 0);
+            foreach (var criterion in criteria)
+            {
+                otherGroup.GroupCriteria.Add(criterion);
+            }
+            //ExEnd:WorkWithGroupCriterionCollection
         }
     }
 }

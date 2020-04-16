@@ -30,7 +30,7 @@
                 options.RemoveBaselineValues = true;
 
                 const string TemplateName = "SaveProjectDataAsTemplate_out.mpt";
-                project.SaveAsTemplate(DataDir + TemplateName);
+                project.SaveAsTemplate(OutDir + TemplateName);
 
                 var templateFileInfo = Project.GetProjectFileInfo(DataDir + TemplateName);
                 if (FileFormat.MPT14 == templateFileInfo.ProjectFileFormat)

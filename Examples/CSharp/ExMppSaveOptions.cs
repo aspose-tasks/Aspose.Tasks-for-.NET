@@ -16,7 +16,7 @@
                 //ExStart:CreateEmptyProjectToSaveToStreamWithMPPSaveOptions
                 //ExFor: MPPSaveOptions
                 //ExSummary: Shows how to save project into a stream as an MPP file.
-                using (var stream = new FileStream(DataDir + "EmptyProjectSaveStream_out.xml", FileMode.Create, FileAccess.Write))
+                using (var stream = new FileStream(OutDir + "EmptyProjectSaveStream_out.xml", FileMode.Create, FileAccess.Write))
                 {
                     var project = new Project();
                     var options = new MPPSaveOptions();

@@ -20,21 +20,32 @@ namespace Aspose.Tasks.Examples.CSharp
         {
             //ExStart:ReadFilterDefinitionData
             //ExFor: Filter
+            //ExFor: Filter.Uid
+            //ExFor: Filter.Name
+            //ExFor: Filter.ParentProject
+            //ExFor: Filter.FilterType
+            //ExFor: Filter.ShowInMenu
+            //ExFor: Filter.ShowRelatedSummaryRows
             //ExSummary: Shows how to work with filters.
             var project = new Project(DataDir + "ReadFilterDefinitionData.mpp");
-            List<Filter> taskFilters = project.TaskFilters.ToList();
-            Console.WriteLine("Task Filters Count: " + taskFilters.Count);
-            Console.WriteLine("All Tasks: " + taskFilters[0].Name);
-            Console.WriteLine("Task Item: " + taskFilters[0].FilterType);
-            Console.WriteLine("Task Filters Show In Menu: " + taskFilters[0].ShowInMenu);
-            Console.WriteLine("Task filter ShowRelatedSummaryRows: " + taskFilters[0].ShowRelatedSummaryRows);
+            List<Filter> filters = project.TaskFilters.ToList();
+            Console.WriteLine("Task filters count: " + filters.Count);
+            foreach (var filter in filters)
+            {
+                Console.WriteLine("Uid: " + filter.Uid);
+                Console.WriteLine("Name: " + filter.Name);
+                Console.WriteLine("Type: " + filter.FilterType);
+                Console.WriteLine("Show In Menu: " + filter.ShowInMenu);
+                Console.WriteLine("Show Related Summary Rows: " + filter.ShowRelatedSummaryRows);
+                Console.WriteLine("Parent project: " + filter.ParentProject.Get(Prj.Name));
+            }
 
-            // Access resource filters
-            List<Filter> rscFilters = project.ResourceFilters.ToList();
-            Console.WriteLine("Project.ResourceFilters count: " + rscFilters.Count);
-            Console.WriteLine("Resource Filter Item Type: Item.ResourceType: " + rscFilters[0].FilterType);
-            Console.WriteLine("Resource filter ShowInMenu" + rscFilters[0].ShowInMenu);
-            Console.WriteLine("Resource filter ShowRelatedSummaryRows: " + rscFilters[0].ShowRelatedSummaryRows);
+            // check resource filters
+            List<Filter> resourceFilters = project.ResourceFilters.ToList();
+            Console.WriteLine("Project.ResourceFilters count: " + resourceFilters.Count);
+            Console.WriteLine("Resource Filter Item Type: Item.ResourceType: " + resourceFilters[0].FilterType);
+            Console.WriteLine("Resource filter ShowInMenu" + resourceFilters[0].ShowInMenu);
+            Console.WriteLine("Resource filter ShowRelatedSummaryRows: " + resourceFilters[0].ShowRelatedSummaryRows);
             //ExEnd:ReadFilterDefinitionData
         }
 

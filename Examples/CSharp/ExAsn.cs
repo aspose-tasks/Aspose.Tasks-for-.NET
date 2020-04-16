@@ -273,7 +273,7 @@
 
                 project.Save(OutDir + "ReadWriteRateScaleForResourceAssignment_out.mpp", SaveFileFormat.MPP);
 
-                var resavedProject = new Project(DataDir + "ReadWriteRateScaleForResourceAssignment_out.mpp");
+                var resavedProject = new Project(OutDir + "ReadWriteRateScaleForResourceAssignment_out.mpp");
 
                 var resavedMaterialResourceAssignment = resavedProject.ResourceAssignments.GetByUid(2);
                 Console.WriteLine(resavedMaterialResourceAssignment.Get(Asn.RateScale));
@@ -414,6 +414,10 @@
         public void GetSetBookingType()
         {
             //ExStart
+            //ExFor: BookingType
+            //ExFor: BookingType.Committed
+            //ExFor: BookingType.Proposed
+            //ExFor: BookingType.Undefined
             //ExFor: Asn.BookingType
             //ExFor: AsnKey.BookingType
             //ExSummary: Shows how to read/write Asn.BookingType property.

@@ -45,7 +45,7 @@
 
             Console.WriteLine("WBS Code mask's count: " + project.WBSCodeDefinition.CodeMaskCollection.Count);
             Console.WriteLine("Is WBS Code mask collection read-only?: " + project.WBSCodeDefinition.CodeMaskCollection.IsReadOnly);
-            Console.WriteLine("Masks:");
+            Console.WriteLine("Masks: ");
             Console.WriteLine();
             foreach (var wbsMask in project.WBSCodeDefinition.CodeMaskCollection)
             {
@@ -57,7 +57,7 @@
             }
             
             var task1 = project.RootTask.Children.Add("Task 1");
-            var task2 = task1.Children.Add("Task 2");
+            task1.Children.Add("Task 2");
 
             project.Recalculate();
 
@@ -101,11 +101,11 @@
             }
             
             var otherTask1 = project.RootTask.Children.Add("Other task 1");
-            var otherTask2 = otherTask1.Children.Add("Other task 2");
+            otherTask1.Children.Add("Other task 2");
             
             otherProject.Recalculate();
 
-            Console.WriteLine("Print WBS codes of the other project:");
+            Console.WriteLine("Print WBS codes of the other project: ");
             IEnumerable<Task> otherChildTasks = otherProject.RootTask.SelectAllChildTasks();
             foreach (var childTask in otherChildTasks)
             {

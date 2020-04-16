@@ -1,5 +1,6 @@
 ﻿namespace Aspose.Tasks.Examples.CSharp
 {
+    using System;
     using NUnit.Framework;
     using Saving;
     using Visualization;
@@ -37,6 +38,22 @@
             outputProject = "TaskUsageView_result_months_out.pdf";
             project.Save(OutDir + outputProject, options);
             //ExEnd:RenderTaskUsageView
+        }
+        
+        [Test]
+        public void ReadFieldCollectionOfTaskUsageView()
+        {
+            //ExStart
+            //ExFor: TaskUsageView.FieldCollection
+            //ExSummary: Shows how to read task usage view fields.
+            var project = new Project(DataDir + "TaskUsageView.mpp");
+
+            var view = (TaskUsageView)project.Views.ToList()[2];
+            foreach (TaskUsageViewField field in view.FieldCollection)
+            {
+                Console.WriteLine("Field: " + field);
+            }
+            //ExEnd
         }
     }
 }

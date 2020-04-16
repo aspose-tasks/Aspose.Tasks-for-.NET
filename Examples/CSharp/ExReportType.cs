@@ -11,12 +11,27 @@
         public void SaveBurnDownReport()
         {
             //ExStart:SaveBurnDownReport
+            //ExFor: ReportType
             //ExFor: ReportType.Burndown
             //ExSummary: Shows how to save the project burndown report in PDF format to the specified stream.
             var project = new Project(DataDir + "Homemoveplan.mpp");
             using (var stream = new FileStream(OutDir + "Burndown_out.pdf", FileMode.Create))
             {
                 project.SaveReport(stream, ReportType.Burndown);
+            }
+            //ExEnd:SaveBurnDownReport
+        }
+
+        [Test, Explicit]
+        public void SaveProjectOverview()
+        {
+            //ExStart:SaveBurnDownReport
+            //ExFor: ReportType.ProjectOverview
+            //ExSummary: Shows how to save the project overiview report in PDF format to the specified stream.
+            var project = new Project(DataDir + "Homemoveplan.mpp");
+            using (var stream = new FileStream(OutDir + "ProjectOverview_out.pdf", FileMode.Create))
+            {
+                project.SaveReport(stream, ReportType.ProjectOverview);
             }
             //ExEnd:SaveBurnDownReport
         }

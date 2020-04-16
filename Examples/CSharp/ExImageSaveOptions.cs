@@ -51,7 +51,7 @@
             //ExSummary: Shows how to save project into a stream as an image.
             var project = new Project();
 
-            using (var stream = new FileStream(DataDir + "EmptyProjectSaveStream_out.xml", FileMode.Create, FileAccess.Write))
+            using (var stream = new FileStream(OutDir + "EmptyProjectSaveStream_out.xml", FileMode.Create, FileAccess.Write))
             {
                 var options = new ImageSaveOptions(SaveFileFormat.PNG);
 

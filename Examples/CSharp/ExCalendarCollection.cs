@@ -100,7 +100,7 @@
             //ExSummary: Shows how to iterate over calendar collection. 
             var project = new Project(DataDir + "Project5.mpp");
 
-            Console.WriteLine("Number of calendars in the project:" + project.Calendars.Count);
+            Console.WriteLine("Number of calendars in the project: " + project.Calendars.Count);
             List<Calendar> calendars = project.Calendars.ToList();
             foreach (var calendar in calendars)
             {

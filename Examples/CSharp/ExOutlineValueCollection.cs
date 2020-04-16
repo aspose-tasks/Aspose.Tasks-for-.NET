@@ -2,46 +2,113 @@
 {
     using System;
     using NUnit.Framework;
-    using Saving;
 
     [TestFixture]
     public class ExOutlineValueCollection : ApiExampleBase
     {
         [Test]
-        public void CheckOutlineCodeIdUniqueness()
+        public void WorkWithOutlineValueCollection()
         {
-            try
+            //ExStart
+            //ExFor: OutlineValueCollection
+            //ExFor: OutlineValueCollection.Add(OutlineValue)
+            //ExFor: OutlineValueCollection.Clear
+            //ExFor: OutlineValueCollection.Contains(OutlineValue)
+            //ExFor: OutlineValueCollection.CopyTo(OutlineValue[],Int32)
+            //ExFor: OutlineValueCollection.Count
+            //ExFor: OutlineValueCollection.GetEnumerator
+            //ExFor: OutlineValueCollection.IndexOf(OutlineValue)
+            //ExFor: OutlineValueCollection.Insert(Int32,OutlineValue)
+            //ExFor: OutlineValueCollection.IsReadOnly
+            //ExFor: OutlineValueCollection.Item(Int32)
+            //ExFor: OutlineValueCollection.Remove(OutlineValue)
+            //ExFor: OutlineValueCollection.RemoveAt(Int32)
+            //ExSummary: Shows how to work with outline value collections.
+            var project = new Project(DataDir + "OutlineValues2010.mpp");
+            
+            // clear value collections
+            foreach (var outlineCode in project.OutlineCodes)
             {
-                //ExStart:CheckOutlineCodeIdUniqueness
-                //ExFor: OutlineValueCollection.Add(OutlineValue)
-                //ExFor: OutlineMaskCollection.Add(OutlineMask)
-                //ExSummary: Shows how to check outline code ids uniqueness.
-                var project = new Project(DataDir + "OutlineValues2010.mpp");
+                // clear outline masks
+                if (outlineCode.Values.Count <= 0)
+                {
+                    continue;
+                }
 
-                var outline = new OutlineCodeDefinition();
-                outline.FieldId = ExtendedAttributeTask.OutlineCode7.ToString("D");
-                outline.Alias = "My Outline Code";
-
-                project.OutlineCodes.Add(outline);
-
-                var mask = new OutlineMask();
-                mask.Type = MaskType.Characters;
-                outline.Masks.Add(mask);
-
-                var value = new OutlineValue();
-                value.Value = "Text value 1";
-                value.ValueId = 1;
-                value.Type = OutlineValueType.Text;
-                value.Description = "Text value descr 1";
-                outline.Values.Add(value);
-
-                project.Save(OutDir + "MultipleOutlineValues.mpp", SaveFileFormat.MPP);
-                //ExEnd:CheckOutlineCodeIdUniqueness
+                if (!outlineCode.Values.IsReadOnly)
+                {
+                    outlineCode.Values.Clear();
+                }
             }
-            catch (NotSupportedException ex)
+
+            var codeDefinition = new OutlineCodeDefinition
             {
-                Console.WriteLine(ex.Message + "\nThis example will only work if you apply a valid Aspose License. You can purchase full license or get 30 day temporary license from http://www.aspose.com/purchase/default.aspx.");
+                Alias = "New task outline code1",
+                FieldId = ((int)ExtendedAttributeTask.OutlineCode1).ToString(),
+                FieldName = "Outline Code1"
+            };
+            var value = new OutlineValue
+            {
+                Description = "Value description",
+                ValueId = 1,
+                Value = "123456",
+                Type = OutlineValueType.Number
+            };
+            codeDefinition.Values.Add(value);
+            project.OutlineCodes.Add(codeDefinition);
+            
+            // update value by index access
+            codeDefinition.Values[0].Value = "654321";
+
+            // iterate over outline values
+            foreach (var definitionValue in codeDefinition.Values)
+            {
+                Console.WriteLine("Value: " + definitionValue.Value);
+                Console.WriteLine("Value Id: " + definitionValue.ValueId);
+                Console.WriteLine("Value Guid: " + definitionValue.ValueGuid);
+                Console.WriteLine();
             }
+            
+            // ...
+            // work with outline values
+            // ...
+
+            // remove a value when needed
+            if (codeDefinition.Values.Contains(value))
+            {
+                codeDefinition.Values.Remove(value);
+            }
+            
+            // insert a value in the start position
+            codeDefinition.Values.Insert(0, value);
+            
+            // check the position of inserted value
+            Console.WriteLine("Index of inserted value: " + codeDefinition.Values.IndexOf(value));
+            
+            // ...
+            // work with outline values
+            // ...
+            
+            // remove the last value from the collection
+            codeDefinition.Values.RemoveAt(codeDefinition.Values.Count - 1);
+
+            // one can create the another outline code definition
+            var codeDefinition2 = new OutlineCodeDefinition
+            {
+                Alias = "New outline code 2",
+                FieldId = ((int)ExtendedAttributeTask.OutlineCode2).ToString(),
+                FieldName = "Outline Code2"
+            };
+            
+            // and then copy outline values
+            var outlineValues = new OutlineValue[codeDefinition.Values.Count];
+            codeDefinition.Values.CopyTo(outlineValues, 0);
+            
+            foreach (var outlineValue in outlineValues)
+            {
+                codeDefinition2.Values.Add(outlineValue);
+            }
+            //ExEnd
         }
     }
 }

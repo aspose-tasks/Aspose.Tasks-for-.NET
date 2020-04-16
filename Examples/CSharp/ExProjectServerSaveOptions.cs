@@ -57,9 +57,9 @@
             //ExStart:UpdateProjectOnlineWithOptions
             //ExFor: ProjectServerSaveOptions.Timeout
             //ExSummary: Shows how to update project on Microsoft Project Online and control save timeout value.
-            var sharepointDomainAddress = "https://contoso.sharepoint.com";
-            var userName = "admin@contoso.onmicrosoft.com";
-            var password = "MyPassword";
+            const string sharepointDomainAddress = "https://contoso.sharepoint.com";
+            const string userName = "admin@contoso.onmicrosoft.com";
+            const string password = "MyPassword";
 
             var credentials = new ProjectServerCredentials(sharepointDomainAddress, userName, password);
             try

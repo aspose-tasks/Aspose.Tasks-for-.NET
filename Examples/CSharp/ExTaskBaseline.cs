@@ -10,11 +10,22 @@
         public void GetTaskBaselineDuration()
         {                        
             //ExStart:GetTaskBaselineDuration
-            //ExFor: BaselineType
-            //ExFor: BaselineType.Baseline
             //ExFor: TaskBaseline.Duration
             //ExFor: TaskBaseline.Start
             //ExFor: TaskBaseline.Finish
+            //ExFor: BaselineType
+            //ExFor: BaselineType.Baseline
+            //ExFor: BaselineType.Baseline1
+            //ExFor: BaselineType.Baseline2
+            //ExFor: BaselineType.Baseline3
+            //ExFor: BaselineType.Baseline4
+            //ExFor: BaselineType.Baseline5
+            //ExFor: BaselineType.Baseline6
+            //ExFor: BaselineType.Baseline7
+            //ExFor: BaselineType.Baseline8
+            //ExFor: BaselineType.Baseline9
+            //ExFor: BaselineType.Baseline10
+            //ExFor: BaselineType.Undefined
             //ExSummary: Shows how to get access to a baseline information.
             var project = new Project();
 

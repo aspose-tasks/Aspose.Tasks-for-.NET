@@ -11,6 +11,7 @@
         public void GetSetActualsInSync()
         {
             //ExStart
+            //ExFor: Key`2
             //ExFor: Prj.ActualsInSync
             //ExFor: PrjKey.ActualsInSync
             //ExSummary: Shows how to read/write Prj.ActualsInSync property.

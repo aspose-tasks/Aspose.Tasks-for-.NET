@@ -2,7 +2,6 @@
 {
     using System;
     using NUnit.Framework;
-    using Saving;
 
     [TestFixture]
     public class ExCalendarException : ApiExampleBase
@@ -106,7 +105,7 @@
             cal.Exceptions.Add(exception2);
 
             // print exceptions
-            foreach (CalendarException exc in cal.Exceptions)
+            foreach (var exc in cal.Exceptions)
             {
                 Console.WriteLine("Name: " + exc.Name);
                 Console.WriteLine("From: " + exc.FromDate.ToShortDateString());
@@ -188,6 +187,15 @@
         {            
             //ExStart:HandleExceptionOccurrences
             //ExFor: CalendarExceptionType
+            //ExFor: CalendarExceptionType.ByDayCount
+            //ExFor: CalendarExceptionType.ByWeekDayCount
+            //ExFor: CalendarExceptionType.Daily
+            //ExFor: CalendarExceptionType.MonthlyByDay
+            //ExFor: CalendarExceptionType.MonthlyByPosition
+            //ExFor: CalendarExceptionType.NoExceptionType
+            //ExFor: CalendarExceptionType.Weekly
+            //ExFor: CalendarExceptionType.YearlyByDay
+            //ExFor: CalendarExceptionType.YearlyByPosition
             //ExFor: CalendarException.EnteredByOccurrences
             //ExFor: CalendarException.Occurrences
             //ExSummary: Shows how to define a calendar exception by occurrences.

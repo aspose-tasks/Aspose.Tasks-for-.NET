@@ -11,6 +11,7 @@
         public void SaveProjectAsCSV()
         {
             //ExStart:SaveProjectAsCSV
+            //ExFor: SaveFileFormat
             //ExFor: SaveFileFormat.CSV
             //ExSummary: Shows how to save a project in CSV format.
             var project = new Project(DataDir + "CreateProject1.mpp");
@@ -38,6 +39,17 @@
             var project = new Project(DataDir + "CreateProject1.mpp");
             project.Save(OutDir + "SaveProjectAsSVG_out.SVG", SaveFileFormat.SVG);
             //ExEnd:SaveProjectAsSVG
+        }
+        
+        [Test]
+        public void SaveProjectAsBMP()
+        {
+            //ExStart:SaveProjectAsBMP
+            //ExFor: SaveFileFormat.BMP
+            //ExSummary: Shows how to save a project in BMP format.
+            var project = new Project(DataDir + "CreateProject1.mpp");
+            project.Save(OutDir + "SaveProjectAsBMP_out.bmp", SaveFileFormat.BMP);
+            //ExEnd:SaveProjectAsBMP
         }
         
         [Test]

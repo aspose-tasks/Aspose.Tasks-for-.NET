@@ -46,7 +46,9 @@
 
             var analyzer = new RiskAnalyzer(riskAnalysisSettings);
             var analysisResult = analyzer.Analyze(project);
-            var rootEarlyFinish = analysisResult.GetRiskItems(RiskItemType.EarlyFinish).Get(project.RootTask);
+            var rootEarlyFinish = analysisResult
+                .GetRiskItems(RiskItemType.EarlyFinish)
+                .Get(project.RootTask);
 
             Console.WriteLine("Expected value: {0}", rootEarlyFinish.ExpectedValue);
             Console.WriteLine("StandardDeviation: {0}", rootEarlyFinish.StandardDeviation);

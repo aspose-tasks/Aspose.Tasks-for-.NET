@@ -292,9 +292,9 @@
                 options.RemoveActualValues = true;
                 options.RemoveBaselineValues = true;
 
-                project.SaveAsTemplate(DataDir + "SaveProjectDataAsTemplate_out.mpt");
+                project.SaveAsTemplate(OutDir + "SaveProjectDataAsTemplate_out.mpt");
 
-                var templateFileInfo = Project.GetProjectFileInfo(DataDir + "SaveProjectDataAsTemplate_out.mpt");
+                var templateFileInfo = Project.GetProjectFileInfo(OutDir + "SaveProjectDataAsTemplate_out.mpt");
                 if (FileFormat.MPT14 == templateFileInfo.ProjectFileFormat)
                 {
                     Console.WriteLine("Template FileFormat is ok");
@@ -748,7 +748,7 @@
             //ExSummary: Shows how to save project into a stream as an image and to control image options.
             var project = new Project();
 
-            using (var stream = new FileStream(DataDir + "EmptyProjectSaveStream_out.xml", FileMode.Create, FileAccess.Write))
+            using (var stream = new FileStream(OutDir + "EmptyProjectSaveStream_out.xml", FileMode.Create, FileAccess.Write))
             {
                 var options = new ImageSaveOptions(SaveFileFormat.PNG);
 
@@ -769,11 +769,11 @@
 
             // Get number of pages, Timescale.Months, Timescale.ThirdsOfMonths
             var pageCount = project.GetPageCount();
-            Console.WriteLine("Page count:" + pageCount);
+            Console.WriteLine("Page count: " + pageCount);
             pageCount = project.GetPageCount(Timescale.Months);
-            Console.WriteLine("Page count (Month):" + pageCount);
+            Console.WriteLine("Page count (Month): " + pageCount);
             pageCount = project.GetPageCount(Timescale.ThirdsOfMonths);
-            Console.WriteLine("Page count (Thirds of Months):" + pageCount);
+            Console.WriteLine("Page count (Thirds of Months): " + pageCount);
             //ExEnd:GetNumberOfPages
         }
         
@@ -859,7 +859,7 @@
                         continue;
                     }
 
-                    var path = DataDir + "EmbeddedContent_" + formatExt[oleObject.FileFormat];
+                    var path = OutDir + "EmbeddedContent_" + formatExt[oleObject.FileFormat];
                     using (var stream = new FileStream(path, FileMode.Create))
                     {
                         stream.Write(oleObject.Content, 0, oleObject.Content.Length);
@@ -885,7 +885,7 @@
                 Console.WriteLine("From: " + weekDay.FromDate);
                 Console.WriteLine("From: " + weekDay.ToDate);
                 Console.WriteLine("Day type: " + weekDay.DayType);
-                Console.WriteLine("Is day working:" + weekDay.DayWorking);
+                Console.WriteLine("Is day working: " + weekDay.DayWorking);
             }
             //ExEnd:GetProjectDefaultWeekWorkingDays
         }
@@ -898,6 +898,7 @@
             //ExSummary: Shows how to remove invalid assignments.
             var project = new Project(DataDir + "InvalidResourceAssignments.mpp");
             var invalid = 0;
+            // ReSharper disable once LoopCanBeConvertedToQuery //ExSkip
             foreach (var ra in project.ResourceAssignments)
             {
                 if (ra.Get(Asn.Resource) == null)
@@ -906,12 +907,12 @@
                 }
             }
 
-            Console.WriteLine("Count of invalid assignments (before):" + invalid);
+            Console.WriteLine("Count of invalid assignments (before): " + invalid);
             
             // remove invalid assignments
             project.RemoveInvalidResourceAssignments();
             
-            Console.WriteLine("Count of invalid assignments (after):" + invalid);
+            Console.WriteLine("Count of invalid assignments (after): " + invalid);
             //ExEnd:ProjectRemoveInvalidAssignments
         }
         
@@ -1666,7 +1667,7 @@
                 //ExStart:CreateEmptyProjectToSaveToStreamWithMPPSaveOptions
                 //ExFor: Project.Save(Stream, MPPSaveOptions)
                 //ExSummary: Shows how to save project into a stream as an MPP file by using MPP save options.
-                using (var stream = new FileStream(DataDir + "EmptyProjectSaveStream_out.xml", FileMode.Create, FileAccess.Write))
+                using (var stream = new FileStream(OutDir + "EmptyProjectSaveStream_out.xml", FileMode.Create, FileAccess.Write))
                 {
                     var project = new Project();
                     var options = new MPPSaveOptions();
@@ -1841,7 +1842,7 @@
             //ExSummary: Shows how to save project into a stream as an XML MS Project file.
             var project = new Project();
 
-            using (var stream = new FileStream(DataDir + "EmptyProjectSaveStream_out.xml", FileMode.Create, FileAccess.Write))
+            using (var stream = new FileStream(OutDir + "EmptyProjectSaveStream_out.xml", FileMode.Create, FileAccess.Write))
             {
                 // Write the stream into XML format
                 project.Save(stream, SaveFileFormat.XML);

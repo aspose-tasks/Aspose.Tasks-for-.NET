@@ -16,7 +16,7 @@
             //ExFor: WeekDayCollection.Clear
             //ExFor: WeekDayCollection.Contains(WeekDay)
             //ExFor: WeekDayCollection.Insert(Int32,WeekDay)
-            //ExFor: WeekDayCollection.Item(System.Int32)
+            //ExFor: WeekDayCollection.Item(Int32)
             //ExFor: WeekDayCollection.Count
             //ExFor: WeekDayCollection.GetEnumerator
             //ExFor: WeekDayCollection.ParentCalendar
@@ -76,7 +76,7 @@
                 calendar.WeekDays.Remove(sunday);
             }
 
-            Console.WriteLine("Working times after weekend was removed:");
+            Console.WriteLine("Working times after weekend was removed: ");
             List<WeekDay> weekDays = calendar.WeekDays.ToList();
             foreach (var day in weekDays)
             {

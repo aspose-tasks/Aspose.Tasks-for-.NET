@@ -26,6 +26,10 @@
             {
                 Console.WriteLine(ex.Message);
             }
+            catch (BitmapInvalidSizeException ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
             //ExEnd
         }
     }

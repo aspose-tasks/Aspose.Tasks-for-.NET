@@ -37,7 +37,7 @@
             //ExFor: Calendar.WorkWeeks
             //ExSummary: Shows how to read work week information.
             var project = new Project(DataDir + "WorkWithWorkWeekCollection.mpp");
-            var calendar = project.Calendars.GetByUid(3);
+            var calendar = project.Calendars.GetByUid(1);
 
             foreach (var workWeek in calendar.WorkWeeks)
             {

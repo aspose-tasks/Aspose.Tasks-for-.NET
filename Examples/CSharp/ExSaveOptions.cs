@@ -234,6 +234,7 @@
                 public int Compare(Task x, Task y)
                 {
                     // ReSharper disable once ConvertIfStatementToSwitchStatement
+                    // ReSharper disable once ConvertIfStatementToSwitchExpression
                     if (x == null && y == null)
                     {
                         return 0;

@@ -20,13 +20,13 @@
             }
             catch (TasksReadingException ex)
             {
-                Console.WriteLine("Message:");
+                Console.WriteLine("Message: ");
                 Console.WriteLine(ex.Message);
-                Console.WriteLine("Log:");
+                Console.WriteLine("Log: ");
                 Console.WriteLine(ex.LogText);
                 if (ex.InnerException != null)
                 {
-                    Console.WriteLine("Inner exception message:");
+                    Console.WriteLine("Inner exception message: ");
                     Console.WriteLine(ex.InnerException.Message);
                 }
             }

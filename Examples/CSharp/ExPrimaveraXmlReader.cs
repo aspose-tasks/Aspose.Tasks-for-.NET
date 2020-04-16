@@ -31,7 +31,7 @@
             //ExStart:ReadProjectUIDsStream
             //ExFor: PrimaveraXmlReader.#ctor(Stream)
             //ExSummary: Shows how to import a project from a Primavera XML stream.
-            using (FileStream stream = new FileStream(DataDir + "primavera.xml", FileMode.Open))
+            using (var stream = new FileStream(DataDir + "primavera.xml", FileMode.Open))
             {
                 var reader = new PrimaveraXmlReader(stream);
                 List<int> projectUids = reader.GetProjectUids();

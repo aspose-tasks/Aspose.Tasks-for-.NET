@@ -12,31 +12,45 @@
             //ExStart:ReadTaskGroupDefinitionData
             //ExFor: Group
             //ExFor: Group.#ctor
+            //ExFor: Group.Name
+            //ExFor: Group.Index
             //ExFor: Group.GroupCriteria
+            //ExFor: Group.MaintainHierarchy
+            //ExFor: Group.ParentProject
+            //ExFor: Group.ShowSummary
+            //ExFor: Group.ShowInMenu
             //ExSummary: Shows how to work with groups.
             var project = new Project(DataDir + "ReadGroupDefinitionData.mpp");
 
             Console.WriteLine("Task Groups Count: " + project.TaskGroups.Count);
-            var taskGroup = project.TaskGroups.ToList()[1];
-            Console.WriteLine("Task Group Name: " + taskGroup.Name);
-            Console.WriteLine("Task Group Criteria count: " + taskGroup.GroupCriteria.Count);
+            var group = project.TaskGroups.ToList()[1];
+            Console.WriteLine("Task Group Uid: " + group.Uid);
+            Console.WriteLine("Task Group Index: " + group.Index);
+            Console.WriteLine("Task Group Name: " + group.Name);
+            Console.WriteLine("Is Task Group Maintain Hierarchy?: " + group.MaintainHierarchy);
+            Console.WriteLine("Is Task Group Show In Menu?: " + group.ShowInMenu);
+            Console.WriteLine("Is Task Group Show Summary?: " + group.ShowSummary);
+            Console.WriteLine("Task Group Parent Project: " + group.ParentProject.Get(Prj.Name));
+            Console.WriteLine("Task Group Criteria count: " + group.GroupCriteria.Count);
             Console.WriteLine("\n************* Retrieving Task Group's Criterion information *************");
-            var taskCriterion = taskGroup.GroupCriteria.ToList()[0];
-            Console.WriteLine("Task Criterion Field: " + taskCriterion.Field);
-            Console.WriteLine("Task Criterion GroupOn: " + taskCriterion.GroupOn);
-            Console.WriteLine("Task Criterion Cell Color: " + taskCriterion.CellColor);
-            Console.WriteLine("Task Criterion Pattern: " + taskCriterion.Pattern);
 
-            if (taskGroup == taskCriterion.ParentGroup)
+            foreach (var criterion in group.GroupCriteria)
             {
-                Console.WriteLine("Parent Group is equal to task Group.");
-            }
+                Console.WriteLine("Task Criterion Field: " + criterion.Field);
+                Console.WriteLine("Task Criterion GroupOn: " + criterion.GroupOn);
+                Console.WriteLine("Task Criterion Cell Color: " + criterion.CellColor);
+                Console.WriteLine("Task Criterion Pattern: " + criterion.Pattern);
 
-            Console.WriteLine("\n*********** Retrieving Criterion's Font Information ***********");
-            Console.WriteLine("Font Name: " + taskCriterion.Font.Name);
-            Console.WriteLine("Font Size: " + taskCriterion.Font.Size);
-            Console.WriteLine("Font Style: " + taskCriterion.Font.Style);
-            Console.WriteLine("Ascending/Descending: " + taskCriterion.Ascending);
+                if (group == criterion.ParentGroup)
+                {
+                    Console.WriteLine("Parent Group is equal to task Group.");
+                }
+
+                Console.WriteLine("Font Name: " + criterion.Font.Name);
+                Console.WriteLine("Font Size: " + criterion.Font.Size);
+                Console.WriteLine("Font Style: " + criterion.Font.Style);
+                Console.WriteLine("Ascending/Descending: " + criterion.Ascending);
+            }
             //ExEnd:ReadTaskGroupDefinitionData
         }
     }

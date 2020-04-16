@@ -11,9 +11,6 @@
             CodeBaseDir = GetCodeBaseDir(Assembly.GetExecutingAssembly());
             DataDir = new Uri(new Uri(CodeBaseDir), @"Data/").LocalPath;
             OutDir = new Uri(new Uri(CodeBaseDir), @"Data/Out/").LocalPath;
-            
-            var l = new License();
-            l.SetLicense(@"C:\Users\HOME\Source\Repos\aspose-tasks-net\aspose-tasks-testdata\testdata\Aspose.Tasks.lic");
         }
 
         /// <summary>

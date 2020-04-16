@@ -1,47 +1,69 @@
 ﻿namespace Aspose.Tasks.Examples.CSharp
 {
     using System;
+    using System.Collections.Generic;
     using NUnit.Framework;
-    using Saving;
-    using Util;
 
     [TestFixture]
     public class ExResourceCollection : ApiExampleBase
     {
         [Test]
-        public void CreateResourcesAndLinkToTasks()
+        public void WorkWithResourceCollection()
         {
-            try
+            //ExStart:WorkWithResourceCollection
+            //ExFor: ResourceCollection
+            //ExFor: ResourceCollection.Add
+            //ExFor: ResourceCollection.Add(String)
+            //ExFor: ResourceCollection.Add(String,Int32)
+            //ExFor: ResourceCollection.Clear
+            //ExFor: ResourceCollection.Count
+            //ExFor: ResourceCollection.GetById(Int32)
+            //ExFor: ResourceCollection.GetByUid(Int32)
+            //ExFor: ResourceCollection.GetEnumerator
+            //ExFor: ResourceCollection.ParentProject
+            //ExFor: ResourceCollection.ToList
+            //ExSummary: Shows how to work with resource collections.
+            var project = new Project(DataDir + "SampleProject.mpp");
+
+            // add empty resource
+            var resource = project.Resources.Add();
+            resource.Set(Rsc.Type, ResourceType.Work);
+            
+            // add resource with a name
+            var developer = project.Resources.Add("Developer");
+            developer.Set(Rsc.Type, ResourceType.Work);
+            
+            // add resource before the resource with specified ID
+            var manager = project.Resources.Add("Manager", developer.Get(Rsc.Id));
+            manager.Set(Rsc.Type, ResourceType.Work);
+
+            var devResource = project.Resources.GetById(4);
+            devResource.Set(Rsc.Code, "12345");
+
+            var manResource = project.Resources.GetByUid(4);
+            manResource.Set(Rsc.Code, "54321");
+            
+            // get resource by id
+            project.Resources.GetById(1);
+
+            Console.WriteLine("Print the resources of " + project.Resources.ParentProject.Get(Prj.Name) + " project.");
+            Console.WriteLine("Count of resources: " + project.Resources.Count);
+            foreach (var rsc in project.Resources)
             {
-                //ExStart:CreateResourcesAndLinkToTasks
-                //ExFor: ResourceCollection.Add(String)
-                //ExSummary: Shows how to create resources and resource assignments.
-                var project = new Project(DataDir + "SampleProject.mpp");
-
-                // Declare ChildTasksCollector instance
-                var collector = new ChildTasksCollector();
-
-                // Use TaskUtils to get all children tasks in RootTask
-                TaskUtils.Apply(project.RootTask, collector, 0);
-
-                // add new resources
-                for (var i = 0; i <= 4; i++)
-                {
-                    // Add resource to project
-                    var resource = project.Resources.Add("Developer0" + i);
-                    resource.Set(Rsc.Type, ResourceType.Work);
-
-                    // Add assignment
-                    project.ResourceAssignments.Add(collector.Tasks[i], resource);                    
-                }
-
-                project.Save(OutDir + "CreateResourcesAndLinkToTasks_out.mpp", SaveFileFormat.MPP);
-                //ExEnd:CreateResourcesAndLinkToTasks
+                Console.WriteLine("Resource Name: " + rsc.Get(Rsc.Name));
             }
-            catch (NotSupportedException ex)
+
+            Console.WriteLine();
+            
+            // resource collections does not support Clear operation
+            // project.Resources.Clear();
+            // use next code sample instead
+            List<Resource> list = project.Resources.ToList();
+            foreach (var rsc in list)
             {
-                Console.WriteLine(ex.Message + "\nThis example will only work if you apply a valid Aspose License. You can purchase full license or get 30 day temporary license from http://www.aspose.com/purchase/default.aspx.");
+                rsc.Delete();
             }
+            //ExEnd:WorkWithResourceCollection
         }
     }
 }

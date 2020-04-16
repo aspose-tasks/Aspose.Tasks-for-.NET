@@ -11,8 +11,16 @@
         public void PrepareRiskAnalyzer()
         {
             //ExStart:AnalyzeRisks
+            //ExFor: RiskAnalyzer
             //ExFor: RiskAnalyzer.#ctor(RiskAnalysisSettings)
             //ExFor: RiskAnalyzer.Analyze(Project)
+            //ExFor: RiskAnalyzer.Settings
+            //ExFor: RiskAnalysis.ConfidenceLevel
+            //ExFor: RiskAnalysis.ConfidenceLevel.CL75
+            //ExFor: RiskAnalysis.ConfidenceLevel.CL85
+            //ExFor: RiskAnalysis.ConfidenceLevel.CL90
+            //ExFor: RiskAnalysis.ConfidenceLevel.CL95
+            //ExFor: RiskAnalysis.ConfidenceLevel.CL99
             //ExSummary: Shows how to start analysis of risks by using <see cref="Aspose.Tasks.RiskAnalysis.RiskAnalysisSettings" />.
             var settings = new RiskAnalysisSettings();
             settings.IterationsCount = 200;
@@ -39,7 +47,24 @@
             // Analyze the project risks
             var analyzer = new RiskAnalyzer(settings);
             var analysisResult = analyzer.Analyze(project);
-            var earlyFinish = analysisResult.GetRiskItems(RiskItemType.EarlyFinish).Get(project.RootTask);
+            RiskItemStatistics earlyFinish = analysisResult.GetRiskItems(RiskItemType.EarlyFinish).Get(project.RootTask);
+
+            Console.WriteLine("Expected value: {0}", earlyFinish.ExpectedValue);
+            Console.WriteLine("StandardDeviation: {0}", earlyFinish.StandardDeviation);
+            Console.WriteLine("10% Percentile: {0}", earlyFinish.GetPercentile(10));
+            Console.WriteLine("50% Percentile: {0}", earlyFinish.GetPercentile(50));
+            Console.WriteLine("90% Percentile: {0}", earlyFinish.GetPercentile(90));
+            Console.WriteLine("Minimum: {0}", earlyFinish.Minimum);
+            Console.WriteLine("Maximum: {0}", earlyFinish.Maximum);
+            
+            settings = new RiskAnalysisSettings();
+            settings.IterationsCount = 300;
+
+            // change settings
+            analyzer.Settings = settings;
+            
+            analysisResult = analyzer.Analyze(project);
+            earlyFinish = analysisResult.GetRiskItems(RiskItemType.EarlyFinish).Get(project.RootTask);
 
             Console.WriteLine("Expected value: {0}", earlyFinish.ExpectedValue);
             Console.WriteLine("StandardDeviation: {0}", earlyFinish.StandardDeviation);

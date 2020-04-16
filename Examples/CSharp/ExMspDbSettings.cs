@@ -35,7 +35,7 @@
                 var settings = new MspDbSettings(connectionString.ConnectionString, new Guid("E6426C44-D6CB-4B9C-AF16-48910ACE0F54"));
                 settings.Schema = "dbo";
                 
-                Console.WriteLine("Project GUID to load:" + settings.ProjectGuid);
+                Console.WriteLine("Project GUID to load: " + settings.ProjectGuid);
                 
                 var project = new Project(settings);
 

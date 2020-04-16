@@ -11,11 +11,13 @@
         public void UseRiskPattern()
         {
             //ExStart:UseRiskPattern
+            //ExFor: RiskPattern
             //ExFor: RiskPattern.#ctor(Task)
             //ExFor: RiskPattern.Distribution
             //ExFor: RiskPattern.Optimistic
             //ExFor: RiskPattern.Pessimistic
             //ExFor: RiskPattern.ConfidenceLevel
+            //ExFor: RiskPattern.Task
             //ExSummary: Shows how to define risk simulation settings.
             
             var settings = new RiskAnalysisSettings();

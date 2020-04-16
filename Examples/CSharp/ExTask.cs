@@ -461,6 +461,7 @@
             //ExSummary: Show how to read task's outline code values.
             var project = new Project(DataDir + "OutlineCodes2003.mpp");
             var mapping = new Dictionary<string, OutlineValueCollection>();
+            // ReSharper disable once LoopCanBeConvertedToQuery //ExSkip
             foreach (var code in project.OutlineCodes)
             {
                 mapping.Add(code.FieldId, code.Values);
@@ -477,6 +478,7 @@
         private object GetOutlineValue(OutlineValueCollection collection, int valueId)
         {
             object obj = null;
+            // ReSharper disable once LoopCanBeConvertedToQuery //ExSkip
             foreach (var value in collection)
             {
                 if (value.ValueId != valueId)
