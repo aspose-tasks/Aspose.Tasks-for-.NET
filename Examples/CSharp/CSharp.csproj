@@ -172,7 +172,6 @@
     <Compile Include="ExFilter.cs" />
     <Compile Include="ExFilterCriteria.cs" />
     <Compile Include="ExMpdSettings.cs" />
-    <Compile Include="ExMppSaveOptions.cs" />
     <Compile Include="ExMspDbSettings.cs" />
     <Compile Include="ExOutlineCodeDefinition.cs" />
     <Compile Include="ExOutlineMask.cs" />
@@ -180,7 +179,6 @@
     <Compile Include="ExOutlineValueCollection.cs" />
     <Compile Include="ExPageViewSettings.cs" />
     <Compile Include="ExPrimaveraXmlReadingOptions.cs" />
-    <Compile Include="ExPrimaveraXmlSaveOptions.cs" />
     <Compile Include="ExPrintOptions.cs" />
     <Compile Include="ExPrj.cs" />
     <Compile Include="ExProjectDisplayOptions.cs" />
@@ -189,7 +187,6 @@
     <Compile Include="ExProjectOnlineException.cs" />
     <Compile Include="ExProjectServerCredentials.cs" />
     <Compile Include="ExProjectServerManager.cs" />
-    <Compile Include="ExProjectServerSaveOptions.cs" />
     <Compile Include="ExRateCollection.cs" />
     <Compile Include="ExResourceType.cs" />
     <Compile Include="ExResourceUsageView.cs" />
@@ -198,6 +195,7 @@
     <Compile Include="ExRiskItemStatistics.cs" />
     <Compile Include="ExRiskItemStatisticsCollection.cs" />
     <Compile Include="ExRiskPatternCollection.cs" />
+    <Compile Include="SavingOptions\ExSaveOptions.cs" />
     <Compile Include="ExSplitPartCollection.cs" />
     <Compile Include="ExTableCollection.cs" />
     <Compile Include="ExTableFieldCollection.cs" />
@@ -213,9 +211,6 @@
     <Compile Include="ExRiskPattern.cs" />
     <Compile Include="ExRsc.cs" />
     <Compile Include="ExSaveFileFormat.cs" />
-    <Compile Include="ExSaveOptions.cs" />
-    <Compile Include="ExSaveTemplateOptions.cs" />
-    <Compile Include="ExSpreadsheet2003SaveOptions.cs" />
     <Compile Include="ExTable.cs" />
     <Compile Include="ExTableField.cs" />
     <Compile Include="ExTaskCollection.cs" />
@@ -233,17 +228,13 @@
     <Compile Include="ExDateFormat.cs" />
     <Compile Include="ExExtendedAttributeDefinition.cs" />
     <Compile Include="ExGanttChartView.cs" />
-    <Compile Include="ExHtmlSaveOptions.cs" />
-    <Compile Include="ExImageSaveOptions.cs" />
     <Compile Include="ExLicense.cs" />
     <Compile Include="ExPresentationFormat.cs" />
     <Compile Include="ExProject.cs" />
     <Compile Include="ExResource.cs" />
     <Compile Include="ExResourceAssignment.cs" />
     <Compile Include="ExRiskAnalysisSettings.cs" />
-    <Compile Include="ExPdfSaveOptions.cs" />
     <Compile Include="ExShape.cs" />
-    <Compile Include="ExSvgOptions.cs" />
     <Compile Include="ExTaskBaseline.cs" />
     <Compile Include="ExTaskLink.cs" />
     <Compile Include="ExTask.cs" />
@@ -275,6 +266,15 @@
     <Compile Include="ExXlsxOptions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RunExamples.cs" />
+    <Compile Include="SavingOptions\ExHtmlSaveOptions.cs" />
+    <Compile Include="SavingOptions\ExImageSaveOptions.cs" />
+    <Compile Include="SavingOptions\ExMppSaveOptions.cs" />
+    <Compile Include="SavingOptions\ExPdfSaveOptions.cs" />
+    <Compile Include="SavingOptions\ExPrimaveraXmlSaveOptions.cs" />
+    <Compile Include="SavingOptions\ExProjectServerSaveOptions.cs" />
+    <Compile Include="SavingOptions\ExSaveTemplateOptions.cs" />
+    <Compile Include="SavingOptions\ExSpreadsheet2003SaveOptions.cs" />
+    <Compile Include="SavingOptions\ExSvgOptions.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
