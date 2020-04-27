@@ -11,9 +11,9 @@
         [Test]
         public void RetrieveTaskEmbeddedDocuments()
         {
-            //ExStart:RetrieveTaskEmbeddedDocuments
-            //ExFor: Shape
-            //ExSummary: Shows how to extract embedded RTF and save OLE objects from it. 
+            // ExStart:RetrieveTaskEmbeddedDocuments
+            // ExFor: Shape
+            // ExSummary: Shows how to extract embedded RTF and save OLE objects from it. 
             var project = new Project(DataDir + "TaskEmbeddedDocuments.mpp");
             var task = project.RootTask.Children.GetById(1);
 
@@ -33,9 +33,7 @@
             foreach (var node in shapes)
             {
                 var shape = (Shape)node;
-                if (shape.OleFormat == null 
-                    || shape.OleFormat.IsLink
-                    || shape.OleFormat.ProgId != "Word.Document.12")
+                if (shape.OleFormat == null || shape.OleFormat.IsLink || shape.OleFormat.ProgId != "Word.Document.12")
                 {
                     continue;
                 }
@@ -49,7 +47,8 @@
                     newDocument.Save(OutDir + "RetrieveTaskEmbeddedDocuments_out.doc");
                 }
             }
-            //ExEnd:RetrieveTaskEmbeddedDocuments
+
+            // ExEnd:RetrieveTaskEmbeddedDocuments
         }
     }
 }

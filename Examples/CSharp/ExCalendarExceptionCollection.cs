@@ -10,26 +10,26 @@
         [Test]
         public void UseCalendarExceptionCollection()
         {
-            //ExStart:UseCalendarExceptionCollection
-            //ExFor: CalendarExceptionCollection
-            //ExFor: CalendarExceptionCollection.Add(CalendarException)
-            //ExFor: CalendarExceptionCollection.AddRange(IEnumerable{Aspose.Tasks.CalendarException})
-            //ExFor: CalendarExceptionCollection.Clear
-            //ExFor: CalendarExceptionCollection.Count
-            //ExFor: CalendarExceptionCollection.GetEnumerator
-            //ExFor: CalendarExceptionCollection.ParentCalendar
-            //ExFor: CalendarExceptionCollection.Remove(CalendarException)
-            //ExFor: CalendarExceptionCollection.ToList
-            //ExSummary: Shows how to use calendar exception collection to define calendar exceptions.
+            // ExStart:UseCalendarExceptionCollection
+            // ExFor: CalendarExceptionCollection
+            // ExFor: CalendarExceptionCollection.Add(CalendarException)
+            // ExFor: CalendarExceptionCollection.AddRange(IEnumerable{Aspose.Tasks.CalendarException})
+            // ExFor: CalendarExceptionCollection.Clear
+            // ExFor: CalendarExceptionCollection.Count
+            // ExFor: CalendarExceptionCollection.GetEnumerator
+            // ExFor: CalendarExceptionCollection.ParentCalendar
+            // ExFor: CalendarExceptionCollection.Remove(CalendarException)
+            // ExFor: CalendarExceptionCollection.ToList
+            // ExSummary: Shows how to use calendar exception collection to define calendar exceptions.
             var project = new Project(DataDir + "project_update_test.mpp");
             var calendar = project.Calendars.GetByUid(3);
-            
+
             calendar.Exceptions.Clear();
             Calendar.MakeStandardCalendar(calendar);
 
             var exception = new CalendarException();
             exception.FromDate = new DateTime(2020, 3, 30, 8, 0, 0);
-            exception.ToDate =  new DateTime(2020, 4, 3, 17, 0, 0);
+            exception.ToDate = new DateTime(2020, 4, 3, 17, 0, 0);
             exception.DayWorking = true;
             exception.Name = "Exception 1";
 
@@ -79,7 +79,8 @@
                 Console.WriteLine();
                 calendar.Exceptions.Remove(calendarException);
             }
-            //ExEnd:UseCalendarExceptionCollection
+
+            // ExEnd:UseCalendarExceptionCollection
         }
     }
 }

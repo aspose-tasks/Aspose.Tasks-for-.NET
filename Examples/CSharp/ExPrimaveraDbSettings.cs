@@ -13,11 +13,11 @@
         {
             try
             {
-                //ExStart:ImportProjectFromPrimaveraDB
-                //ExFor: PrimaveraDbSettings
-                //ExFor: PrimaveraDbSettings.#ctor(String,Int32)
-                //ExFor: PrimaveraDbSettings.ProjectId
-                //ExSummary: Shows how to import a project from a Primavera database.
+                // ExStart:ImportProjectFromPrimaveraDB
+                // ExFor: PrimaveraDbSettings
+                // ExFor: PrimaveraDbSettings.#ctor(String,Int32)
+                // ExFor: PrimaveraDbSettings.ProjectId
+                // ExSummary: Shows how to import a project from a Primavera database.
                 var sb = new SqlConnectionStringBuilder();
                 sb.DataSource = "192.168.56.3,1433";
                 sb.Encrypt = true;
@@ -26,7 +26,7 @@
                 sb.NetworkLibrary = "DBMSSOCN";
                 sb.UserID = "privuser";
                 sb.Password = "***";
-                sb.ConnectTimeout = 2; //ExSkip
+                sb.ConnectTimeout = 2; // ExSkip
 
                 // Initialize a new instance of the PrimaveraDbSettings class with connection string and project id
                 var settings = new PrimaveraDbSettings(sb.ConnectionString, 4502);
@@ -36,7 +36,8 @@
                 // read the project with UID = 4502
                 var project = new Project(settings);
                 Console.WriteLine(project.Get(Prj.Uid));
-                //ExEnd:ImportProjectFromPrimaveraDB
+
+                // ExEnd:ImportProjectFromPrimaveraDB
             }
             catch (NotSupportedException ex)
             {

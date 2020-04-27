@@ -9,13 +9,13 @@
         [Test]
         public static void WorkWithWorkUnit()
         {
-            //ExStart
-            //ExFor: WorkUnit
-            //ExFor: WorkUnit.#ctor(DateTime,DateTime)
-            //ExFor: WorkUnit.From
-            //ExFor: WorkUnit.To
-            //ExFor: WorkUnit.WorkingHours
-            //ExSummary: Shows how to work with work unit information.
+            // ExStart
+            // ExFor: WorkUnit
+            // ExFor: WorkUnit.#ctor(DateTime,DateTime)
+            // ExFor: WorkUnit.From
+            // ExFor: WorkUnit.To
+            // ExFor: WorkUnit.WorkingHours
+            // ExSummary: Shows how to work with work unit information.
             var project = new Project(DataDir + "Project1.mpp");
 
             var calendar = project.Calendars.GetByUid(1);
@@ -26,8 +26,8 @@
             Console.WriteLine("From: " + workUnit.From);
             Console.WriteLine("To: " + workUnit.To);
             Console.WriteLine("Working hours: " + workUnit.WorkingHours);
-            //ExEnd
-            
+
+            // ExEnd
             Assert.AreEqual(16, workUnit.WorkingHours.TotalHours);
         }
     }

@@ -11,10 +11,10 @@
         [Test]
         public void SaveToStreamWithOptionsAndCatchException()
         {
-            //ExStart
-            //ExFor: ApsLayoutBuilderOutOfMemoryException
-            //ExFor: ApsLayoutBuilderOutOfMemoryException.#ctor(SerializationInfo,StreamingContext)
-            //ExSummary: Shows how to save project as an image and catch exceptions.
+            // ExStart
+            // ExFor: ApsLayoutBuilderOutOfMemoryException
+            // ExFor: ApsLayoutBuilderOutOfMemoryException.#ctor(SerializationInfo,StreamingContext)
+            // ExSummary: Shows how to save project as an image and catch exceptions.
             try
             {
                 var project = new Project(DataDir + "Blank2010.mpp");
@@ -30,7 +30,8 @@
             {
                 Console.WriteLine(ex.Message);
             }
-            //ExEnd
+
+            // ExEnd
         }
     }
 }

@@ -12,23 +12,30 @@
         [Test]
         public void CustomizeTextStyle()
         {
-            //ExStart
-            //ExFor: TextItemType
-            //ExSummary: Shows how to work with text item types.
+            // ExStart
+            // ExFor: TextItemType
+            // ExSummary: Shows how to work with text item types.
             var project = new Project(DataDir + "CreateProject2.mpp");
-            SaveOptions options = new PdfSaveOptions();
-            options.PresentationFormat = PresentationFormat.ResourceSheet;
+            SaveOptions options = new PdfSaveOptions
+            {
+                PresentationFormat = PresentationFormat.ResourceSheet
+            };
 
-            var style = new TextStyle();
-            style.Color = Color.OrangeRed;
-            style.FontStyle = FontStyle.Bold;
+            var style = new TextStyle
+            {
+                Color = Color.OrangeRed,
+                FontStyle = FontStyle.Bold
+            };
             style.FontStyle |= FontStyle.Italic;
             style.ItemType = TextItemType.OverallocatedResources;
 
-            options.TextStyles = new List<TextStyle>();
-            options.TextStyles.Add(style);
+            options.TextStyles = new List<TextStyle>
+            {
+                style
+            };
             project.Save(OutDir + "CustomizeTextStyle_out.pdf", options);
-            //ExEnd
+
+            // ExEnd
         }
     }
 }

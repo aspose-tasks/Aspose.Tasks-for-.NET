@@ -9,21 +9,21 @@
         [Test]
         public void ReadProjectMetaProperties()
         {
-            //ExStart:ReadProjectMetaProperties
-            //ExFor: BuiltInProjectPropertyCollection
-            //ExFor: BuiltInProjectProperty
-            //ExFor: BuiltInProjectProperty.Value
-            //ExFor: BuiltInProjectPropertyCollection.Author
-            //ExFor: BuiltInProjectPropertyCollection.Category
-            //ExFor: BuiltInProjectPropertyCollection.Comments
-            //ExFor: BuiltInProjectPropertyCollection.Company
-            //ExFor: BuiltInProjectPropertyCollection.HyperlinkBase
-            //ExFor: BuiltInProjectPropertyCollection.IsReadOnly
-            //ExFor: BuiltInProjectPropertyCollection.Keywords
-            //ExFor: BuiltInProjectPropertyCollection.Manager
-            //ExFor: BuiltInProjectPropertyCollection.Subject
-            //ExFor: BuiltInProjectPropertyCollection.Title
-            //ExSummary: Shows how to read project builtin properties.
+            // ExStart:ReadProjectMetaProperties
+            // ExFor: BuiltInProjectPropertyCollection
+            // ExFor: BuiltInProjectProperty
+            // ExFor: BuiltInProjectProperty.Value
+            // ExFor: BuiltInProjectPropertyCollection.Author
+            // ExFor: BuiltInProjectPropertyCollection.Category
+            // ExFor: BuiltInProjectPropertyCollection.Comments
+            // ExFor: BuiltInProjectPropertyCollection.Company
+            // ExFor: BuiltInProjectPropertyCollection.HyperlinkBase
+            // ExFor: BuiltInProjectPropertyCollection.IsReadOnly
+            // ExFor: BuiltInProjectPropertyCollection.Keywords
+            // ExFor: BuiltInProjectPropertyCollection.Manager
+            // ExFor: BuiltInProjectPropertyCollection.Subject
+            // ExFor: BuiltInProjectPropertyCollection.Title
+            // ExSummary: Shows how to read project builtin properties.
             var project = new Project(DataDir + "ReadProjectInfo.mpp");
 
             Console.WriteLine("Author: " + project.BuiltInProps.Author);
@@ -36,7 +36,7 @@
             Console.WriteLine("Manager: " + project.BuiltInProps.Manager);
             Console.WriteLine("Subject: " + project.BuiltInProps.Subject);
             Console.WriteLine("Title: " + project.BuiltInProps.Title);
-            
+
             // iterate over built-in property collection
             foreach (var property in project.BuiltInProps)
             {
@@ -44,7 +44,8 @@
                 Console.WriteLine("Value: " + property.Value);
                 Console.WriteLine();
             }
-            //ExEnd:ReadProjectMetaProperties
-        }   
+
+            // ExEnd:ReadProjectMetaProperties
+        }
     }
 }

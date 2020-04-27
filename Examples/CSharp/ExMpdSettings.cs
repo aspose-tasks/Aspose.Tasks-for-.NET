@@ -10,31 +10,33 @@
         [Test]
         public void ImportProjectDataFromMpdFile()
         {
-            //ExStart:ImportProjectDataFromMpdFile
-            //ExFor: MpdSettings
-            //ExFor: MpdSettings.ProjectId
-            //ExSummary: Shows how to use MPD settings to control import of project from the database.
+            // ExStart:ImportProjectDataFromMpdFile
+            // ExFor: MpdSettings
+            // ExFor: MpdSettings.ProjectId
+            // ExSummary: Shows how to use MPD settings to control import of project from the database.
             var settings = new MpdSettings("Provider=Microsoft.Jet.OLEDB.4.0; Data Source=" + DataDir + "MpdFileToRead.mpd", 1);
 
             Console.WriteLine("Project ID to load: " + settings.ProjectId);
-            
+
             var project = new Project(settings);
             Console.WriteLine(project.Get(Prj.Name));
-            //ExEnd:ImportProjectDataFromMpdFile
+
+            // ExEnd:ImportProjectDataFromMpdFile
         }
-        
+
         [Test]
         public void ImportProjectDataFromMpdFile2()
         {
             try
             {
-                //ExStart:ImportProjectDataFromMpdFile
-                //ExFor: MpdSettings.#ctor(String,Int32)
-                //ExSummary: Shows how to read a project from an MPD file.
+                // ExStart:ImportProjectDataFromMpdFile
+                // ExFor: MpdSettings.#ctor(String,Int32)
+                // ExSummary: Shows how to read a project from an MPD file.
                 DbSettings settings = new MpdSettings("Provider=Microsoft.Jet.OLEDB.4.0; Data Source=" + DataDir + "MpdFileToRead.mpd", 1);
-                var project = new Project(settings);            
+                var project = new Project(settings);
                 Console.WriteLine(project.Get(Prj.Name));
-                //ExEnd:ImportProjectDataFromMpdFile
+
+                // ExEnd:ImportProjectDataFromMpdFile
             }
             catch (NotSupportedException ex)
             {

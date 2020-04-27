@@ -10,21 +10,21 @@
         [Test]
         public void WorkWithFilterCollection()
         {
-            //ExStart
-            //ExFor: FilterCollection
-            //ExFor: FilterCollection.Add(Filter)
-            //ExFor: FilterCollection.Clear
-            //ExFor: FilterCollection.Contains(Filter)
-            //ExFor: FilterCollection.CopyTo(Filter[],Int32)
-            //ExFor: FilterCollection.Count
-            //ExFor: FilterCollection.GetEnumerator
-            //ExFor: FilterCollection.IsReadOnly
-            //ExFor: FilterCollection.ParentProject
-            //ExFor: FilterCollection.Remove(Filter)
-            //ExFor: FilterCollection.ToList
-            //ExSummary: Shows how to work with filter collections.
+            // ExStart
+            // ExFor: FilterCollection
+            // ExFor: FilterCollection.Add(Filter)
+            // ExFor: FilterCollection.Clear
+            // ExFor: FilterCollection.Contains(Filter)
+            // ExFor: FilterCollection.CopyTo(Filter[],Int32)
+            // ExFor: FilterCollection.Count
+            // ExFor: FilterCollection.GetEnumerator
+            // ExFor: FilterCollection.IsReadOnly
+            // ExFor: FilterCollection.ParentProject
+            // ExFor: FilterCollection.Remove(Filter)
+            // ExFor: FilterCollection.ToList
+            // ExSummary: Shows how to work with filter collections.
             var project = new Project(DataDir + "ReadFilterDefinitionData.mpp");
-            
+
             // iterate over task filters
             Console.WriteLine("Print task filters of {0} project: ", project.TaskFilters.ParentProject.Get(Prj.Name));
             Console.WriteLine("Task Filters Count: " + project.TaskFilters.Count);
@@ -45,12 +45,12 @@
                 Console.WriteLine("Resource filter ShowInMenu" + filter.ShowInMenu);
                 Console.WriteLine("Resource filter ShowRelatedSummaryRows: " + filter.ShowRelatedSummaryRows);
             }
-            
+
             var otherProject = new Project(DataDir + "Blank2010.mpp");
 
             // clear other project's filters
             otherProject.TaskFilters.Clear();
-            
+
             // copy filters to other project
             var filters = new Filter[project.TaskFilters.Count];
             project.TaskFilters.CopyTo(filters, 0);
@@ -80,7 +80,8 @@
             {
                 otherProject.TaskFilters.Remove(filter);
             }
-            //ExEnd
+
+            // ExEnd
         }
     }
 }

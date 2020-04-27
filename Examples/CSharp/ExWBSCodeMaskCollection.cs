@@ -10,25 +10,25 @@
         [Test]
         public void WorkWithWbsCodeMaskCollection()
         {
-            //ExStart
-            //ExFor: WBSCodeMaskCollection
-            //ExFor: WBSCodeMaskCollection.Add(WBSCodeMask)
-            //ExFor: WBSCodeMaskCollection.Clear
-            //ExFor: WBSCodeMaskCollection.Count
-            //ExFor: WBSCodeMaskCollection.GetEnumerator
-            //ExFor: WBSCodeMaskCollection.Remove(WBSCodeMask)
-            //ExFor: WBSCodeMaskCollection.Contains(WBSCodeMask)
-            //ExFor: WBSCodeMaskCollection.IsReadOnly
-            //ExFor: WBSCodeMaskCollection.CopyTo(WBSCodeMask[],Int32)
-            //ExFor: WBSCodeMaskCollection.ToList
-            //ExSummary: Shows how to work with WBS code mask collection.
+            // ExStart
+            // ExFor: WBSCodeMaskCollection
+            // ExFor: WBSCodeMaskCollection.Add(WBSCodeMask)
+            // ExFor: WBSCodeMaskCollection.Clear
+            // ExFor: WBSCodeMaskCollection.Count
+            // ExFor: WBSCodeMaskCollection.GetEnumerator
+            // ExFor: WBSCodeMaskCollection.Remove(WBSCodeMask)
+            // ExFor: WBSCodeMaskCollection.Contains(WBSCodeMask)
+            // ExFor: WBSCodeMaskCollection.IsReadOnly
+            // ExFor: WBSCodeMaskCollection.CopyTo(WBSCodeMask[],Int32)
+            // ExFor: WBSCodeMaskCollection.ToList
+            // ExSummary: Shows how to work with WBS code mask collection.
             var project = new Project();
 
             project.WBSCodeDefinition = new WBSCodeDefinition();
             project.WBSCodeDefinition.GenerateWBSCode = true;
             project.WBSCodeDefinition.VerifyUniqueness = true;
             project.WBSCodeDefinition.CodePrefix = "CRS-";
-            
+
             project.WBSCodeDefinition.CodeMaskCollection.Clear();
 
             var mask1 = new WBSCodeMask();
@@ -55,7 +55,7 @@
                 Console.WriteLine("Sequence: " + wbsMask.Sequence);
                 Console.WriteLine();
             }
-            
+
             var task1 = project.RootTask.Children.Add("Task 1");
             task1.Children.Add("Task 2");
 
@@ -67,7 +67,7 @@
                 Console.WriteLine("Task name: " + childTask.Get(Tsk.Name));
                 Console.WriteLine("Task WBS code: " + childTask.Get(Tsk.WBS));
             }
-           
+
             project.WBSCodeDefinition.CodeMaskCollection.Remove(mask2);
 
             if (project.WBSCodeDefinition.CodeMaskCollection.Contains(mask2))
@@ -80,7 +80,7 @@
             otherProject.WBSCodeDefinition.GenerateWBSCode = true;
             otherProject.WBSCodeDefinition.VerifyUniqueness = true;
             otherProject.WBSCodeDefinition.CodePrefix = "CRS-";
-            
+
             // copy code masks to other project
             var masks = new WBSCodeMask[project.WBSCodeDefinition.CodeMaskCollection.Count];
             project.WBSCodeDefinition.CodeMaskCollection.CopyTo(masks, 0);
@@ -99,10 +99,10 @@
                 Console.WriteLine("Sequence: " + wbsMask.Sequence);
                 Console.WriteLine();
             }
-            
+
             var otherTask1 = project.RootTask.Children.Add("Other task 1");
             otherTask1.Children.Add("Other task 2");
-            
+
             otherProject.Recalculate();
 
             Console.WriteLine("Print WBS codes of the other project: ");
@@ -112,7 +112,8 @@
                 Console.WriteLine("Task name: " + childTask.Get(Tsk.Name));
                 Console.WriteLine("Task WBS code: " + childTask.Get(Tsk.WBS));
             }
-            //ExEnd
+
+            // ExEnd
         }
     }
 }

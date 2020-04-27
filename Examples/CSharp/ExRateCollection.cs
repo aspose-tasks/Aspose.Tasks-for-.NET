@@ -10,22 +10,22 @@
         [Test]
         public void WorkWithRateCollection()
         {
-            //ExStart
-            //ExFor: RateCollection
-            //ExFor: RateCollection.Add(DateTime)
-            //ExFor: RateCollection.Add(DateTime,RateType)
-            //ExFor: RateCollection.Count
-            //ExFor: RateCollection.GetEnumerator
-            //ExFor: RateCollection.IsReadOnly
-            //ExFor: RateCollection.Item(RateType)
-            //ExFor: RateCollection.ParentResource
-            //ExFor: RateCollection.Remove(Rate)
-            //ExFor: RateCollection.ToList
-            //ExFor: RateCollection.ToList(RateType)
-            //ExFor: RateByDateCollection
-            //ExSummary: Shows how to work with rate collections.
+            // ExStart
+            // ExFor: RateCollection
+            // ExFor: RateCollection.Add(DateTime)
+            // ExFor: RateCollection.Add(DateTime,RateType)
+            // ExFor: RateCollection.Count
+            // ExFor: RateCollection.GetEnumerator
+            // ExFor: RateCollection.IsReadOnly
+            // ExFor: RateCollection.Item(RateType)
+            // ExFor: RateCollection.ParentResource
+            // ExFor: RateCollection.Remove(Rate)
+            // ExFor: RateCollection.ToList
+            // ExFor: RateCollection.ToList(RateType)
+            // ExFor: RateByDateCollection
+            // ExSummary: Shows how to work with rate collections.
             var project = new Project(DataDir + "Project1.mpp");
-            
+
             var resource = project.Resources.Add("Test Resource 1");
             resource.Set(Rsc.Type, ResourceType.Work);
             resource.Set(Rsc.Work, project.GetDuration(2d, TimeUnitType.Hour));
@@ -55,25 +55,25 @@
                     Console.WriteLine();
                 }
             }
-            
+
             // get the latest rate by index access
             var rateToUpdate = resource.Rates[RateType.B][new DateTime(2019, 11, 12, 8, 0, 0)];
             rateToUpdate.RatesTo = new DateTime(2020, 12, 31, 17, 0, 0);
             Console.WriteLine("Rates From: " + rateToUpdate.RatesFrom);
             Console.WriteLine("Rates To: " + rateToUpdate.RatesTo);
-            
+
             // ...
             // work with rates
             // ...
-            
+
             // remove all rates of type A
             List<Rate> rates = resource.Rates.ToList(RateType.A);
-            for (int i = 0; i < rates.Count; i++)
+            for (var i = 0; i < rates.Count; i++)
             {
                 var rateToRemove = rates[i];
                 resource.Rates.Remove(rateToRemove);
             }
-            
+
             // transform the rate collection into a flat list
             Console.WriteLine("Iterate over the rates after remove the A-typed values: ");
             List<Rate> list = resource.Rates.ToList();
@@ -83,7 +83,8 @@
                 Console.WriteLine("Rates To: " + rt.RatesTo);
                 Console.WriteLine("Rate Table: " + rt.RateTable);
             }
-            //ExEnd
+
+            // ExEnd
         }
     }
 }

@@ -10,21 +10,21 @@
         [Test]
         public void WorkWithViewCollection()
         {
-            //ExStart
-            //ExFor: ViewCollection
-            //ExFor: ViewCollection.Add(View)
-            //ExFor: ViewCollection.Clear
-            //ExFor: ViewCollection.Contains(View)
-            //ExFor: ViewCollection.CopyTo(View[],Int32)
-            //ExFor: ViewCollection.Count
-            //ExFor: ViewCollection.GetEnumerator
-            //ExFor: ViewCollection.IsReadOnly
-            //ExFor: ViewCollection.ParentProject
-            //ExFor: ViewCollection.Remove(View)
-            //ExFor: ViewCollection.ToList
-            //ExSummary: Shows how to work with view collections.
+            // ExStart
+            // ExFor: ViewCollection
+            // ExFor: ViewCollection.Add(View)
+            // ExFor: ViewCollection.Clear
+            // ExFor: ViewCollection.Contains(View)
+            // ExFor: ViewCollection.CopyTo(View[],Int32)
+            // ExFor: ViewCollection.Count
+            // ExFor: ViewCollection.GetEnumerator
+            // ExFor: ViewCollection.IsReadOnly
+            // ExFor: ViewCollection.ParentProject
+            // ExFor: ViewCollection.Remove(View)
+            // ExFor: ViewCollection.ToList
+            // ExSummary: Shows how to work with view collections.
             var project = new Project(DataDir + "Project1.mpp");
-            
+
             // convert to a plain list of views
             List<View> list = project.Views.ToList();
             for (var index = 0; index < list.Count; index++)
@@ -32,7 +32,7 @@
                 var viewToChange = list[index];
                 viewToChange.PageInfo.Header.CenteredText = "Header " + index;
             }
-            
+
             // add a new view
             var view = new GanttChartView();
             if (!project.Views.IsReadOnly)
@@ -48,13 +48,13 @@
             {
                 Console.WriteLine("Name: " + projectView.Name);
             }
-            
+
             // remove all views at once
             project.Views.Clear();
-            
+
             // or one by one
-            // approach 1
             {
+                // approach 1
                 List<View> listToDelete = project.Views.ToList();
                 foreach (var v in listToDelete)
                 {
@@ -64,8 +64,9 @@
                     }
                 }
             }
-            // approach 2
+
             {
+                // approach 2
                 var array = new View[project.Views.Count];
                 project.Views.CopyTo(array, 0);
                 foreach (var v in array)
@@ -76,7 +77,8 @@
                     }
                 }
             }
-            //ExEnd
+
+            // ExEnd
         }
     }
 }

@@ -10,20 +10,20 @@
         [Test]
         public void WorkWithBaselineCollection()
         {
-            //ExStart
-            //ExFor: BaselineCollection
-            //ExFor: BaselineCollection.ParentResource
-            //ExFor: BaselineCollection.Count
-            //ExFor: BaselineCollection.GetEnumerator
-            //ExFor: BaselineCollection.Remove(Baseline)
-            //ExFor: BaselineCollection.ToList
-            //ExSummary: Shows how to work with baseline collections.
+            // ExStart
+            // ExFor: BaselineCollection
+            // ExFor: BaselineCollection.ParentResource
+            // ExFor: BaselineCollection.Count
+            // ExFor: BaselineCollection.GetEnumerator
+            // ExFor: BaselineCollection.Remove(Baseline)
+            // ExFor: BaselineCollection.ToList
+            // ExSummary: Shows how to work with baseline collections.
             var project = new Project(DataDir + "WorkWithBaselineCollection.mpp");
             var resource = project.Resources.GetByUid(1);
 
             Console.WriteLine("Count of assignment baselines: " + resource.Baselines.Count);
             Console.WriteLine("Parent Resource Name: " + resource.Baselines.ParentResource.Get(Rsc.Name));
-            
+
             // read baseline information
             foreach (var baseline in resource.Baselines)
             {
@@ -42,7 +42,8 @@
                 Console.WriteLine("Delete baseline with name: " + baseline.BaselineNumber);
                 resource.Baselines.Remove(baseline);
             }
-            //ExEnd
+
+            // ExEnd
         }
     }
 }

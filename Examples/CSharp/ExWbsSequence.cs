@@ -9,13 +9,13 @@
         [Test]
         public void AddWbsSequence()
         {
-            //ExStart:AddWbsSequence
-            //ExFor: WBSSequence
-            //ExFor: WBSSequence.OrderedNumbers
-            //ExFor: WBSSequence.OrderedUppercaseLetters
-            //ExFor: WBSSequence.OrderedLowercaseLetters
-            //ExFor: WBSSequence.UnorderedCharacters
-            //ExSummary: Shows how to set WBS sequences.
+            // ExStart:AddWbsSequence
+            // ExFor: WBSSequence
+            // ExFor: WBSSequence.OrderedNumbers
+            // ExFor: WBSSequence.OrderedUppercaseLetters
+            // ExFor: WBSSequence.OrderedLowercaseLetters
+            // ExFor: WBSSequence.UnorderedCharacters
+            // ExSummary: Shows how to set WBS sequences.
             var project = new Project();
 
             project.WBSCodeDefinition = new WBSCodeDefinition();
@@ -34,14 +34,15 @@
             mask.Separator = "-";
             mask.Sequence = WBSSequence.OrderedUppercaseLetters;
             project.WBSCodeDefinition.CodeMaskCollection.Add(mask);
-            
+
             var tsk = project.RootTask.Children.Add("Task 1");
             tsk.Children.Add("Task 2");
 
             project.Recalculate();
 
             project.Save(OutDir + @"AddWBSCodes_out.xml", SaveFileFormat.XML);
-            //ExEnd:AddWbsSequence
+
+            // ExEnd:AddWbsSequence
         }
     }
 }

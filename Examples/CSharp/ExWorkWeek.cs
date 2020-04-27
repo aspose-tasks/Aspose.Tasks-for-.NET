@@ -10,15 +10,15 @@
         [Test]
         public static void WorkWithWorkWeek()
         {
-            //ExStart
-            //ExFor: WorkWeek
-            //ExFor: WorkWeek.#ctor
-            //ExFor: WorkWeek.Name
-            //ExFor: WorkWeek.ParentCalendar
-            //ExFor: WorkWeek.FromDate
-            //ExFor: WorkWeek.ToDate
-            //ExFor: WorkWeek.WeekDays
-            //ExSummary: Shows how to read work week information from the project.
+            // ExStart
+            // ExFor: WorkWeek
+            // ExFor: WorkWeek.#ctor
+            // ExFor: WorkWeek.Name
+            // ExFor: WorkWeek.ParentCalendar
+            // ExFor: WorkWeek.FromDate
+            // ExFor: WorkWeek.ToDate
+            // ExFor: WorkWeek.WeekDays
+            // ExSummary: Shows how to read work week information from the project.
             var project = new Project();
             var calendar = project.Calendars.Add("Standard");
             Calendar.MakeStandardCalendar(calendar);
@@ -51,6 +51,7 @@
                 foreach (var day in weekDays)
                 {
                     Console.WriteLine(day.DayType.ToString());
+
                     // You can further traverse through working times and display these
                     foreach (var workingTime in day.WorkingTimes)
                     {
@@ -61,7 +62,8 @@
 
                 Console.WriteLine();
             }
-            //ExEnd
+
+            // ExEnd
         }
     }
 }

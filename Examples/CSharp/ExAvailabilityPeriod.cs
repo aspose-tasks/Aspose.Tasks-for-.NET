@@ -7,14 +7,14 @@
     [TestFixture]
     public class ExAvailabilityPeriod : ApiExampleBase
     {
-        //ExStart
-        //ExFor: AvailabilityPeriod
-        //ExFor: AvailabilityPeriod.AvailableFrom
-        //ExFor: AvailabilityPeriod.AvailableTo
-        //ExFor: AvailabilityPeriod.AvailableUnits
-        //ExFor: AvailabilityPeriod.ParentResource
-        //ExSummary: Shows how to create availability periods for a resource.
-        [Test] //ExSkip
+        // ExStart
+        // ExFor: AvailabilityPeriod
+        // ExFor: AvailabilityPeriod.AvailableFrom
+        // ExFor: AvailabilityPeriod.AvailableTo
+        // ExFor: AvailabilityPeriod.AvailableUnits
+        // ExFor: AvailabilityPeriod.ParentResource
+        // ExSummary: Shows how to create availability periods for a resource.
+        [Test] // ExSkip
         public void WorkWithAvailabilityPeriod()
         {
             var project = new Project();
@@ -36,27 +36,18 @@
                 Console.WriteLine();
             }
         }
-        
+
         private IEnumerable<AvailabilityPeriod> GetPeriods()
         {
             var periods = new List<AvailabilityPeriod>(2);
-            var period = new AvailabilityPeriod
-            {
-                AvailableFrom = new DateTime(2011, 12, 12),
-                AvailableTo = new DateTime(2013, 12, 12),
-                AvailableUnits = 0.99
-            };
+            var period = new AvailabilityPeriod { AvailableFrom = new DateTime(2011, 12, 12), AvailableTo = new DateTime(2013, 12, 12), AvailableUnits = 0.99 };
             periods.Add(period);
-            
-            var period2 = new AvailabilityPeriod
-            {
-                AvailableFrom = new DateTime(2013, 12, 12),
-                AvailableTo = new DateTime(2015, 12, 12),
-                AvailableUnits = 0.94
-            };
+
+            var period2 = new AvailabilityPeriod { AvailableFrom = new DateTime(2013, 12, 12), AvailableTo = new DateTime(2015, 12, 12), AvailableUnits = 0.94 };
             periods.Add(period2);
             return periods;
         }
-        //ExEnd
+
+        // ExEnd
     }
 }

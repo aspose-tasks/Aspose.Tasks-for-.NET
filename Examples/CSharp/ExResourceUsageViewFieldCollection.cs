@@ -10,26 +10,27 @@
         [Test]
         public void WorkWithResourceUsageViewFieldCollection()
         {
-            //ExStart
-            //ExFor: ResourceUsageViewFieldCollection
-            //ExFor: ResourceUsageViewFieldCollection.GetEnumerator
-            //ExFor: ResourceUsageViewFieldCollection.ToList
-            //ExSummary: Shows how to work field collection of a ResourceUsageView instance.
+            // ExStart
+            // ExFor: ResourceUsageViewFieldCollection
+            // ExFor: ResourceUsageViewFieldCollection.GetEnumerator
+            // ExFor: ResourceUsageViewFieldCollection.ToList
+            // ExSummary: Shows how to work field collection of a ResourceUsageView instance.
             var project = new Project(DataDir + "ResourceUsageView.mpp");
 
             var view = (ResourceUsageView)project.Views.ToList()[2];
-            foreach (ResourceUsageViewField field in view.FieldCollection)
+            foreach (var field in view.FieldCollection)
             {
                 Console.WriteLine("Field: " + field);
             }
-            
+
             // one can transform collection into a list of ResourceUsageViewField
             IList<ResourceUsageViewField> fields = view.FieldCollection.ToList();
             foreach (var field in fields)
             {
                 Console.WriteLine("Field (from the list): " + field);
             }
-            //ExEnd
+
+            // ExEnd
         }
     }
 }

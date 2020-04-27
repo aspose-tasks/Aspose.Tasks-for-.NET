@@ -10,32 +10,32 @@
         [Test]
         public void WorkWithResourceAssignmentCollection()
         {
-            //ExStart:WorkWithResourceAssignmentCollection
-            //ExFor: ResourceAssignmentCollection
-            //ExFor: ResourceAssignmentCollection.Add(Task,Resource)
-            //ExFor: ResourceAssignmentCollection.Add(Task,Resource,Decimal)
-            //ExFor: ResourceAssignmentCollection.Add(Task,Resource,Double)
-            //ExFor: ResourceAssignmentCollection.Count
-            //ExFor: ResourceAssignmentCollection.GetByUid(Int32)
-            //ExFor: ResourceAssignmentCollection.GetEnumerator
-            //ExFor: ResourceAssignmentCollection.IsReadOnly
-            //ExFor: ResourceAssignmentCollection.ParentProject
-            //ExFor: ResourceAssignmentCollection.ToList
-            //ExSummary: Shows how to work with resource assignment collections.
+            // ExStart:WorkWithResourceAssignmentCollection
+            // ExFor: ResourceAssignmentCollection
+            // ExFor: ResourceAssignmentCollection.Add(Task,Resource)
+            // ExFor: ResourceAssignmentCollection.Add(Task,Resource,Decimal)
+            // ExFor: ResourceAssignmentCollection.Add(Task,Resource,Double)
+            // ExFor: ResourceAssignmentCollection.Count
+            // ExFor: ResourceAssignmentCollection.GetByUid(Int32)
+            // ExFor: ResourceAssignmentCollection.GetEnumerator
+            // ExFor: ResourceAssignmentCollection.IsReadOnly
+            // ExFor: ResourceAssignmentCollection.ParentProject
+            // ExFor: ResourceAssignmentCollection.ToList
+            // ExSummary: Shows how to work with resource assignment collections.
             var project = new Project(DataDir + "TemplateResource2010.mpp");
-            
+
             var task = project.RootTask.Children.Add("Task 1");
             var resource = project.Resources.Add("Resource 1");
             var assignment = project.ResourceAssignments.Add(task, resource);
             assignment.Set(Asn.Start, new DateTime(2019, 9, 23, 9, 0, 0));
             assignment.Set(Asn.Work, project.GetWork(40));
             assignment.Set(Asn.Finish, new DateTime(2019, 9, 27, 18, 0, 0));
-            
+
             var assignmentWithUnits = project.ResourceAssignments.Add(task, resource, 1d);
             assignmentWithUnits.Set(Asn.Start, new DateTime(2019, 9, 23, 9, 0, 0));
             assignmentWithUnits.Set(Asn.Work, project.GetWork(40));
             assignmentWithUnits.Set(Asn.Finish, new DateTime(2019, 9, 27, 18, 0, 0));
-            
+
             var assignmentWithCost = project.ResourceAssignments.Add(task, resource);
             assignmentWithCost.Set(Asn.Start, new DateTime(2019, 9, 23, 9, 0, 0));
             assignmentWithCost.Set(Asn.Work, project.GetWork(40));
@@ -54,20 +54,20 @@
 
             var assignmentByUid = project.ResourceAssignments.GetByUid(2);
             Console.WriteLine("Assignment By Uid Start: " + assignmentByUid.Get(Asn.Start));
-            
-            // work with assignment...
 
+            // work with assignment...
             Console.WriteLine("Is resource assignment collection read-only?: " + project.ResourceAssignments.IsReadOnly);
 
             // convert the collection into a list
             List<ResourceAssignment> resourceAssignments = project.ResourceAssignments.ToList();
-            
+
             // iterate over the list
             foreach (var ra in resourceAssignments)
             {
                 Console.WriteLine(ra.ToString());
             }
-            //ExEnd:WorkWithResourceAssignmentCollection
+
+            // ExEnd:WorkWithResourceAssignmentCollection
         }
     }
 }

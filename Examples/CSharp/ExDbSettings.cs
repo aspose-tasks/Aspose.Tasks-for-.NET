@@ -13,12 +13,12 @@
         {
             try
             {
-                //ExStart:ImportProjectFromPrimaveraDBSQLite
-                //ExFor: DbSettings
-                //ExFor: DbSettings.#ctor(String)
-                //ExFor: DbSettings.ConnectionString
-                //ExFor: DbSettings.ProviderInvariantName
-                //ExSummary: Shows how to read a project from a Primavera XML file with multiple projects by using a provider name.
+                // ExStart:ImportProjectFromPrimaveraDBSQLite
+                // ExFor: DbSettings
+                // ExFor: DbSettings.#ctor(String)
+                // ExFor: DbSettings.ConnectionString
+                // ExFor: DbSettings.ProviderInvariantName
+                // ExSummary: Shows how to read a project from a Primavera XML file with multiple projects by using a provider name.
                 var connectionString = "Data Source=" + DataDir + "\\PPMDBSQLite.db";
 
                 // Create Primavera DB Settings using connection string and project id
@@ -27,10 +27,11 @@
 
                 Console.WriteLine("Connection String: " + settings.ConnectionString);
                 Console.WriteLine("Provider Name: " + settings.ProviderInvariantName);
-                
+
                 var project = new Project(settings);
                 project.Save(OutDir + "SupportForSQLiteDatabase_out.mpp", SaveFileFormat.MPP);
-                //ExEnd:ImportProjectFromPrimaveraDBSQLite
+
+                // ExEnd:ImportProjectFromPrimaveraDBSQLite
             }
             catch (ArgumentException ex)
             {

@@ -11,10 +11,10 @@
         [Test]
         public void SaveToStreamWithOptionsAndCatchException()
         {
-            //ExStart
-            //ExFor: BitmapInvalidSizeException
-            //ExFor: BitmapInvalidSizeException.#ctor(SerializationInfo,StreamingContext)
-            //ExSummary: Shows how to save project as an image and catch invalid size exception.
+            // ExStart
+            // ExFor: BitmapInvalidSizeException
+            // ExFor: BitmapInvalidSizeException.#ctor(SerializationInfo,StreamingContext)
+            // ExSummary: Shows how to save project as an image and catch invalid size exception.
             try
             {
                 var project = new Project(DataDir + "Blank2010.mpp");
@@ -26,7 +26,8 @@
             {
                 Console.WriteLine(ex.Message);
             }
-            //ExEnd
+
+            // ExEnd
         }
     }
 }

@@ -11,14 +11,14 @@
         [Test]
         public void WorkWithAssignmentBaselineCollection()
         {
-            //ExStart
-            //ExFor: AssignmentBaselineCollection
-            //ExFor: AssignmentBaselineCollection.ParentAssignment
-            //ExFor: AssignmentBaselineCollection.Count
-            //ExFor: AssignmentBaselineCollection.GetEnumerator
-            //ExFor: AssignmentBaselineCollection.Remove(AssignmentBaseline)
-            //ExFor: AssignmentBaselineCollection.ToList
-            //ExSummary: Shows how to read assignment baselines.
+            // ExStart
+            // ExFor: AssignmentBaselineCollection
+            // ExFor: AssignmentBaselineCollection.ParentAssignment
+            // ExFor: AssignmentBaselineCollection.Count
+            // ExFor: AssignmentBaselineCollection.GetEnumerator
+            // ExFor: AssignmentBaselineCollection.Remove(AssignmentBaseline)
+            // ExFor: AssignmentBaselineCollection.ToList
+            // ExSummary: Shows how to read assignment baselines.
             var project = new Project(DataDir + "AssignmentBaseline2007.mpp");
 
             // read assignment baseline information
@@ -32,10 +32,12 @@
                     Console.WriteLine("Baseline Start: " + baseline.Start);
                     Console.WriteLine("Baseline Finish: " + baseline.Finish);
                 }
+
                 Console.WriteLine();
             }
 
             Console.WriteLine("Delete all assignment baselines: ");
+
             // delete assignment baselines
             foreach (var assignment in project.ResourceAssignments)
             {
@@ -45,7 +47,8 @@
                     assignment.Baselines.Remove(baseline);
                 }
             }
-            //ExEnd
+
+            // ExEnd
         }
     }
 }

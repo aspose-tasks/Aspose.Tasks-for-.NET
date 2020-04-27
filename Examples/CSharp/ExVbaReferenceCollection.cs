@@ -9,9 +9,9 @@
         [Test]
         public void ReadReferencesInformation()
         {
-            //ExStart:ReadReferencesInformation
-            //ExFor: VbaReferenceCollection
-            //ExSummary: Shows how to work with VBA reference collection.
+            // ExStart:ReadReferencesInformation
+            // ExFor: VbaReferenceCollection
+            // ExSummary: Shows how to work with VBA reference collection.
             var project = new Project(DataDir + "VbaProject.mpp");
 
             Console.WriteLine("Reference count " + project.VbaProject.References.Count);
@@ -21,7 +21,8 @@
                 Console.WriteLine("Identifier: " + reference.LibIdentifier);
                 Console.WriteLine("Name: " + reference.Name);
             }
-            //ExEnd:ReadReferencesInformation
+
+            // ExEnd:ReadReferencesInformation
         }
     }
 }

@@ -10,13 +10,14 @@
         [Test]
         public void PrepareAnalysisSettings()
         {
-            //ExStart:PrepareAnalysisSettings
-            //ExFor: RiskAnalysisSettings
-            //ExFor: RiskAnalysisSettings.#ctor
-            //ExFor: RiskAnalysisSettings.Patterns
-            //ExFor: RiskAnalysisSettings.IterationsCount
-            //ExSummary: Shows how to prepare risk analysis settings for Monte-Carlo simulations.
+            // ExStart:PrepareAnalysisSettings
+            // ExFor: RiskAnalysisSettings
+            // ExFor: RiskAnalysisSettings.#ctor
+            // ExFor: RiskAnalysisSettings.Patterns
+            // ExFor: RiskAnalysisSettings.IterationsCount
+            // ExSummary: Shows how to prepare risk analysis settings for Monte-Carlo simulations.
             var riskAnalysisSettings = new RiskAnalysisSettings();
+
             // Set number of iterations for Monte Carlo simulation (the default value is 100).
             riskAnalysisSettings.IterationsCount = 200;
 
@@ -41,14 +42,12 @@
             // Set a confidence level that correspond to the percentage of the time the actual values will be within optimistic and pessimistic estimates. 
             // You can think of it as a value of standard deviation: the more uncertain about your estimates you are, the more the value of standard deviation used in random number generator is
             pattern.ConfidenceLevel = ConfidenceLevel.CL75;
-            
+
             riskAnalysisSettings.Patterns.Add(pattern);
 
             var analyzer = new RiskAnalyzer(riskAnalysisSettings);
             var analysisResult = analyzer.Analyze(project);
-            var rootEarlyFinish = analysisResult
-                .GetRiskItems(RiskItemType.EarlyFinish)
-                .Get(project.RootTask);
+            var rootEarlyFinish = analysisResult.GetRiskItems(RiskItemType.EarlyFinish).Get(project.RootTask);
 
             Console.WriteLine("Expected value: {0}", rootEarlyFinish.ExpectedValue);
             Console.WriteLine("StandardDeviation: {0}", rootEarlyFinish.StandardDeviation);
@@ -59,7 +58,8 @@
             Console.WriteLine("Maximum: {0}", rootEarlyFinish.Maximum);
 
             analysisResult.SaveReport(OutDir + "AnalysisReport_out.pdf");
-            //ExEnd:PrepareAnalysisSettings
+
+            // ExEnd:PrepareAnalysisSettings
         }
     }
 }

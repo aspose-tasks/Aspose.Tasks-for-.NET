@@ -10,19 +10,19 @@
         [Test]
         public void ReadTaskGroupDefinitionData()
         {
-            //ExStart:ReadTaskGroupDefinitionData
-            //ExFor: GroupCollection
-            //ExFor: GroupCollection.Add(Group)
-            //ExFor: GroupCollection.Clear
-            //ExFor: GroupCollection.Contains(Group)
-            //ExFor: GroupCollection.CopyTo(Group[],Int32)
-            //ExFor: GroupCollection.Count
-            //ExFor: GroupCollection.GetEnumerator
-            //ExFor: GroupCollection.IsReadOnly
-            //ExFor: GroupCollection.ParentProject
-            //ExFor: GroupCollection.Remove(Group)
-            //ExFor: GroupCollection.ToList
-            //ExSummary: Shows how to work with collection of groups.
+            // ExStart:ReadTaskGroupDefinitionData
+            // ExFor: GroupCollection
+            // ExFor: GroupCollection.Add(Group)
+            // ExFor: GroupCollection.Clear
+            // ExFor: GroupCollection.Contains(Group)
+            // ExFor: GroupCollection.CopyTo(Group[],Int32)
+            // ExFor: GroupCollection.Count
+            // ExFor: GroupCollection.GetEnumerator
+            // ExFor: GroupCollection.IsReadOnly
+            // ExFor: GroupCollection.ParentProject
+            // ExFor: GroupCollection.Remove(Group)
+            // ExFor: GroupCollection.ToList
+            // ExSummary: Shows how to work with collection of groups.
             var project = new Project(DataDir + "ReadGroupDefinitionData.mpp");
 
             // iterate over task groups
@@ -44,12 +44,12 @@
                 Console.WriteLine("Resource group Name: " + group.Name);
                 Console.WriteLine("Resource group ShowInMenu" + group.ShowInMenu);
             }
-            
+
             var otherProject = new Project(DataDir + "Blank2010.mpp");
 
             // clear other project's groups
             otherProject.TaskGroups.Clear();
-            
+
             // copy groups to other project
             var groups = new Group[project.TaskGroups.Count];
             project.TaskGroups.CopyTo(groups, 0);
@@ -60,9 +60,11 @@
             }
 
             // add custom task group
-            var customGroup = new Group();
-            customGroup.Name = "Custom Group";
-            customGroup.ShowInMenu = true;
+            var customGroup = new Group
+            {
+                Name = "Custom Group",
+                ShowInMenu = true
+            };
 
             if (!otherProject.TaskGroups.Contains(customGroup))
             {
@@ -78,7 +80,8 @@
             {
                 otherProject.TaskGroups.Remove(group);
             }
-            //ExEnd:ReadTaskGroupDefinitionData
+
+            // ExEnd:ReadTaskGroupDefinitionData
         }
     }
 }

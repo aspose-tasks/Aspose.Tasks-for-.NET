@@ -10,14 +10,14 @@
         [Test]
         public static void WorkWithWorkWeekCollection()
         {
-            //ExStart
-            //ExFor: WorkWeekCollection
-            //ExFor: WorkWeekCollection.Add(WorkWeek)
-            //ExFor: WorkWeekCollection.Count
-            //ExFor: WorkWeekCollection.GetEnumerator
-            //ExFor: WorkWeekCollection.ParentCalendar
-            //ExFor: WorkWeekCollection.ToList()
-            //ExSummary: Shows how to create a custom work week for a calendar.
+            // ExStart
+            // ExFor: WorkWeekCollection
+            // ExFor: WorkWeekCollection.Add(WorkWeek)
+            // ExFor: WorkWeekCollection.Count
+            // ExFor: WorkWeekCollection.GetEnumerator
+            // ExFor: WorkWeekCollection.ParentCalendar
+            // ExFor: WorkWeekCollection.ToList()
+            // ExSummary: Shows how to create a custom work week for a calendar.
             var project = new Project();
             var calendar = project.Calendars.Add("Standard");
             Calendar.MakeStandardCalendar(calendar);
@@ -44,12 +44,13 @@
                 Console.WriteLine("From Date: " + workWeek.FromDate);
                 Console.WriteLine("To Date: " + workWeek.ToDate);
                 Console.WriteLine();
-                
+
                 // This data is all about "Details." button you can set special working times for special WeekDay or even make it nonworking
                 List<WeekDay> weekDays = workWeek.WeekDays.ToList();
-                foreach (var day in weekDays) 
+                foreach (var day in weekDays)
                 {
                     Console.WriteLine(day.DayType.ToString());
+
                     // You can further traverse through working times and display these
                     foreach (var workingTime in day.WorkingTimes)
                     {
@@ -60,7 +61,8 @@
 
                 Console.WriteLine();
             }
-            //ExEnd
+
+            // ExEnd
         }
     }
 }

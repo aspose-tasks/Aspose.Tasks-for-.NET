@@ -7,11 +7,11 @@
     [TestFixture]
     public class ExHeaderFooterInfo : ApiExampleBase
     {
-        //ExStart:ReadHeaderFooterInfo
-        //ExFor: HeaderFooterInfo
-        //ExFor: HeaderFooterInfo.#ctor
-        //ExSummary: Shows how to read page header/footer info.
-        [Test] //ExSkip
+        // ExStart:ReadHeaderFooterInfo
+        // ExFor: HeaderFooterInfo
+        // ExFor: HeaderFooterInfo.#ctor
+        // ExSummary: Shows how to read page header/footer info.
+        [Test] // ExSkip
         public void ReadHeaderFooterInfo()
         {
             var project = new Project(DataDir + "Blank2010.mpp");
@@ -41,7 +41,7 @@
         {
             Console.WriteLine("Portrait Orientation is Portrait : {0} ", info.PageSettings.IsPortrait.Equals(true));
             Console.WriteLine("AdjustToPercentOfNormalSize is enabled : {0} ", info.PageSettings.AdjustToPercentOfNormalSize.Equals(true));
-         
+
             Console.WriteLine("PercentOfNormalSize Equals 150 : {0} ", info.PageSettings.PercentOfNormalSize.Equals(150));
             Console.WriteLine("PagesInWidth Equals 3 : {0} ", info.PageSettings.PagesInWidth.Equals(3));
             Console.WriteLine("PagesInHeight Equals 7 : {0} ", info.PageSettings.PagesInHeight.Equals(7));
@@ -54,7 +54,7 @@
             Console.WriteLine("PrintAllSheetColumns is set to false : {0} ", info.PageViewSettings.PrintAllSheetColumns.Equals(false));
             Console.WriteLine("PrintFirstColumnsCountOnAllPages is set to true : {0} ", info.PageViewSettings.PrintFirstColumnsCountOnAllPages.Equals(true));
 
-            Console.WriteLine("FirstColumnsCount Equals 3 : {0} ",  info.PageViewSettings.FirstColumnsCount.Equals(3));
+            Console.WriteLine("FirstColumnsCount Equals 3 : {0} ", info.PageViewSettings.FirstColumnsCount.Equals(3));
             Console.WriteLine("PrintNotes is set to true : {0} ", info.PageViewSettings.PrintNotes.Equals(true));
             Console.WriteLine("PrintBlankPages is set to false : {0} ", info.PageViewSettings.PrintBlankPages.Equals(false));
             Console.WriteLine("FitTimescaleToEndOfPage is set to true : {0} ", info.PageViewSettings.FitTimescaleToEndOfPage.Equals(true));
@@ -79,6 +79,7 @@
             Console.WriteLine("LegendOn Equals Legend.OnEveryPage : {0} ", info.Legend.LegendOn.Equals(Legend.OnEveryPage));
             Console.WriteLine("Legend Width Equals 5 : {0} ", info.Legend.Width - 5 <= 1e-5);
         }
-        //ExEnd:ReadHeaderFooterInfo
+
+        // ExEnd:ReadHeaderFooterInfo
     }
 }

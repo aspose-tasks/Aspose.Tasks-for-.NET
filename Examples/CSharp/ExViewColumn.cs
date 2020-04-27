@@ -11,9 +11,9 @@
         [Test]
         public void AlignCellContents()
         {
-            //ExStart:AlignCellContents
-            //ExFor: ViewColumn.StringAlignment
-            //ExSummary: Shows how to set a alignment of the text in a column (can be one of the values of the <see cref="P:Aspose.Tasks.Visualization.ViewColumn.StringAlignment" /> enumeration).
+            // ExStart:AlignCellContents
+            // ExFor: ViewColumn.StringAlignment
+            // ExSummary: Shows how to set a alignment of the text in a column (can be one of the values of the <see cref="P:Aspose.Tasks.Visualization.ViewColumn.StringAlignment" /> enumeration).
             var project = new Project(DataDir + "Project2.mpp");
             SaveOptions options = new PdfSaveOptions();
             options.Timescale = Timescale.Months;
@@ -39,7 +39,8 @@
             column6.StringAlignment = StringAlignment.Far;
 
             project.Save(OutDir + "AlignCellContents_ResourceSheet_out.pdf", options);
-            //ExEnd:AlignCellContents
+
+            // ExEnd:AlignCellContents
         }
     }
 }

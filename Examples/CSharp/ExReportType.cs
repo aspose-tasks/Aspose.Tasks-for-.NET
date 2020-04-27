@@ -10,202 +10,218 @@
         [Test, Explicit]
         public void SaveBurnDownReport()
         {
-            //ExStart:SaveBurnDownReport
-            //ExFor: ReportType
-            //ExFor: ReportType.Burndown
-            //ExSummary: Shows how to save the project burndown report in PDF format to the specified stream.
+            // ExStart:SaveBurnDownReport
+            // ExFor: ReportType
+            // ExFor: ReportType.Burndown
+            // ExSummary: Shows how to save the project burndown report in PDF format to the specified stream.
             var project = new Project(DataDir + "Homemoveplan.mpp");
             using (var stream = new FileStream(OutDir + "Burndown_out.pdf", FileMode.Create))
             {
                 project.SaveReport(stream, ReportType.Burndown);
             }
-            //ExEnd:SaveBurnDownReport
+
+            // ExEnd:SaveBurnDownReport
         }
 
         [Test, Explicit]
         public void SaveProjectOverview()
         {
-            //ExStart:SaveBurnDownReport
-            //ExFor: ReportType.ProjectOverview
-            //ExSummary: Shows how to save the project overiview report in PDF format to the specified stream.
+            // ExStart:SaveBurnDownReport
+            // ExFor: ReportType.ProjectOverview
+            // ExSummary: Shows how to save the project overiview report in PDF format to the specified stream.
             var project = new Project(DataDir + "Homemoveplan.mpp");
             using (var stream = new FileStream(OutDir + "ProjectOverview_out.pdf", FileMode.Create))
             {
                 project.SaveReport(stream, ReportType.ProjectOverview);
             }
-            //ExEnd:SaveBurnDownReport
+
+            // ExEnd:SaveBurnDownReport
         }
-    
+
         [Test, Explicit]
         public void SaveCashFlowReport()
         {
-            //ExStart:SaveCashFlowReport
-            //ExFor: ReportType.CashFlow
-            //ExSummary: Shows how to save the project cash flow report to PDF format to the specified file path.
+            // ExStart:SaveCashFlowReport
+            // ExFor: ReportType.CashFlow
+            // ExSummary: Shows how to save the project cash flow report to PDF format to the specified file path.
             var project = new Project(DataDir + "OzBuild 16 Orig.mpp");
             project.SaveReport(OutDir + "CashFlow_out.pdf", ReportType.CashFlow);
-            //ExEnd:SaveCashFlowReport
+
+            // ExEnd:SaveCashFlowReport
         }
-    
+
         [Test, Explicit]
         public void SaveCostOverrunsReport()
         {
-            //ExStart:SaveCostOverrunsReport
-            //ExFor: ReportType.CostOverruns
-            //ExSummary: Shows how to save the project cost overrun report in PDF format to the specified stream.
+            // ExStart:SaveCostOverrunsReport
+            // ExFor: ReportType.CostOverruns
+            // ExSummary: Shows how to save the project cost overrun report in PDF format to the specified stream.
             var project = new Project(DataDir + "Software Development.mpp");
             using (var stream = new FileStream(OutDir + "CostOverruns_out.pdf", FileMode.Create))
             {
                 project.SaveReport(stream, ReportType.CostOverruns);
             }
-            //ExEnd:SaveCostOverrunsReport
+
+            // ExEnd:SaveCostOverrunsReport
         }
-    
+
         [Test, Explicit]
         public void SaveWorkOverviewReport()
         {
-            //ExStart:SaveWorkOverviewReport
-            //ExFor: ReportType.WorkOverview
-            //ExSummary: Shows how to save the project work overview report in PDF format to the specified file path.
+            // ExStart:SaveWorkOverviewReport
+            // ExFor: ReportType.WorkOverview
+            // ExSummary: Shows how to save the project work overview report in PDF format to the specified file path.
             var project = new Project(DataDir + "Residential Construction.mpp");
             project.SaveReport(OutDir + "WorkOverview_out.pdf", ReportType.WorkOverview);
-            //ExEnd:SaveWorkOverviewReport
+
+            // ExEnd:SaveWorkOverviewReport
         }
-    
+
         [Test, Explicit]
         public void SaveUpcomingTasksReport()
         {
-            //ExStart:SaveUpcomingTasksReport
-            //ExFor: ReportType.UpcomingTask
-            //ExSummary: Shows how to save the project upcoming task report in PDF format to the specified stream.
+            // ExStart:SaveUpcomingTasksReport
+            // ExFor: ReportType.UpcomingTask
+            // ExSummary: Shows how to save the project upcoming task report in PDF format to the specified stream.
             var project = new Project(DataDir + "UpcomingTasks.mpp");
             using (var stream = new FileStream(OutDir + "UpcomingTasks_out.pdf", FileMode.Create))
             {
                 project.SaveReport(stream, ReportType.UpcomingTask);
             }
-            //ExEnd:SaveUpcomingTasksReport
+
+            // ExEnd:SaveUpcomingTasksReport
         }
-    
+
         [Test, Explicit]
         public void SaveTaskCostOverviewReport()
         {
-            //ExStart:SaveTaskCostOverviewReport
-            //ExFor: ReportType.TaskCostOverview
-            //ExSummary: Shows how to save the project task cost overview report in PDF format to the specified file path.
+            // ExStart:SaveTaskCostOverviewReport
+            // ExFor: ReportType.TaskCostOverview
+            // ExSummary: Shows how to save the project task cost overview report in PDF format to the specified file path.
             var project = new Project(DataDir + "Software Development.mpp");
             project.SaveReport(OutDir + "TaskCostOverview_out.pdf", ReportType.TaskCostOverview);
-            //ExEnd:SaveTaskCostOverviewReport
+
+            // ExEnd:SaveTaskCostOverviewReport
         }
-    
+
         [Test, Explicit]
         public void SaveSlippingTasksReport()
         {
-            //ExStart:SaveSlippingTasksReport
-            //ExFor: ReportType.SlippingTasks
-            //ExSummary: Shows how to save the project slipping task report in PDF format to the specified stream.
+            // ExStart:SaveSlippingTasksReport
+            // ExFor: ReportType.SlippingTasks
+            // ExSummary: Shows how to save the project slipping task report in PDF format to the specified stream.
             var project = new Project(DataDir + "Homemoveplan.mpp");
             using (var stream = new FileStream(OutDir + "SlippingTasks_out.pdf", FileMode.Create))
             {
                 project.SaveReport(stream, ReportType.SlippingTasks);
             }
-            //ExEnd:SaveSlippingTasksReport
+
+            // ExEnd:SaveSlippingTasksReport
         }
-    
+
         [Test, Explicit]
         public void SaveResourceOverviewReport()
         {
-            //ExStart:SaveResourceOverviewReport
-            //ExFor: ReportType.ResourceOverview
-            //ExSummary: Shows how to save the project resource overview report in PDF format to the specified file path.
+            // ExStart:SaveResourceOverviewReport
+            // ExFor: ReportType.ResourceOverview
+            // ExSummary: Shows how to save the project resource overview report in PDF format to the specified file path.
             var project = new Project(DataDir + "Software Development Plan.mpp");
             project.SaveReport(OutDir + "ResourceOverview_out.pdf", ReportType.ResourceOverview);
-            //ExEnd:SaveResourceOverviewReport
+
+            // ExEnd:SaveResourceOverviewReport
         }
-    
+
         [Test, Explicit]
         public void SaveResourceCostOverviewReport()
         {
-            //ExStart:SaveResourceCostOverviewReport
-            //ExFor: ReportType.ResourceCostOverview
-            //ExSummary: Shows how to save the project resource cost overview report in PDF format to the specified stream.
+            // ExStart:SaveResourceCostOverviewReport
+            // ExFor: ReportType.ResourceCostOverview
+            // ExSummary: Shows how to save the project resource cost overview report in PDF format to the specified stream.
             var project = new Project(DataDir + "OzBuild 16 Orig.mpp");
             using (var stream = new FileStream(OutDir + "ResourceCostOverview_out.pdf", FileMode.Create))
             {
                 project.SaveReport(stream, ReportType.ResourceCostOverview);
             }
-            //ExEnd:SaveResourceCostOverviewReport
+
+            // ExEnd:SaveResourceCostOverviewReport
         }
-    
+
         [Test, Explicit]
         public void SaveOverallocatedResourcesReport()
         {
-            //ExStart:SaveOverallocatedResourcesReport
-            //ExFor: ReportType.OverallocatedResources
-            //ExSummary: Shows how to save the project overallocated resource report in PDF format to the specified file path.
+            // ExStart:SaveOverallocatedResourcesReport
+            // ExFor: ReportType.OverallocatedResources
+            // ExSummary: Shows how to save the project overallocated resource report in PDF format to the specified file path.
             var project = new Project(DataDir + "Software Development Plan.mpp");
             project.SaveReport(OutDir + "OverAllocatedResources_out.pdf", ReportType.OverallocatedResources);
-            //ExEnd:SaveOverallocatedResourcesReport
+
+            // ExEnd:SaveOverallocatedResourcesReport
         }
-    
+
         [Test, Explicit]
         public void SaveMilestonesReport()
         {
-            //ExStart:SaveMilestonesReport
-            //ExFor: ReportType.Milestones
-            //ExSummary: Shows how to save the project milestone report in PDF format to the specified stream.
+            // ExStart:SaveMilestonesReport
+            // ExFor: ReportType.Milestones
+            // ExSummary: Shows how to save the project milestone report in PDF format to the specified stream.
             var project = new Project(DataDir + "Residential Construction.mpp");
             using (var stream = new FileStream(OutDir + "Milestones_out.pdf", FileMode.Create))
             {
                 project.SaveReport(stream, ReportType.Milestones);
             }
-            //ExEnd:SaveMilestonesReport
+
+            // ExEnd:SaveMilestonesReport
         }
-    
+
         [Test, Explicit]
         public void SaveCostOverviewReport()
         {
-            //ExStart:SaveCostOverviewReport
-            //ExFor: ReportType.CostOverview
-            //ExSummary: Shows how to save the project cost overview report in PDF format to the specified file path.
+            // ExStart:SaveCostOverviewReport
+            // ExFor: ReportType.CostOverview
+            // ExSummary: Shows how to save the project cost overview report in PDF format to the specified file path.
             var project = new Project(DataDir + "OzBuild 16 Orig.mpp");
             project.SaveReport(OutDir + "CostOverview_out.pdf", ReportType.CostOverview);
-            //ExEnd:SaveCostOverviewReport
+
+            // ExEnd:SaveCostOverviewReport
         }
-    
+
         [Test, Explicit]
         public void SaveCriticalTasksReport()
         {
-            //ExStart:SaveCriticalTasksReport
-            //ExFor: ReportType.CriticalTasks
-            //ExSummary: Shows how to save the project critical tasks report in PDF format to the specified stream.
+            // ExStart:SaveCriticalTasksReport
+            // ExFor: ReportType.CriticalTasks
+            // ExSummary: Shows how to save the project critical tasks report in PDF format to the specified stream.
             var project = new Project(DataDir + "Residential Construction.mpp");
             using (var stream = new FileStream(OutDir + "CriticalTasks_out.pdf", FileMode.Create))
             {
                 project.SaveReport(stream, ReportType.CriticalTasks);
             }
-            //ExEnd:SaveCriticalTasksReport
+
+            // ExEnd:SaveCriticalTasksReport
         }
-    
+
         [Test, Explicit]
         public void SaveLateTasksReport()
         {
-            //ExStart:SaveLateTasksReport
-            //ExFor: ReportType.LateTasks
-            //ExSummary: Shows how to save the project late task report in PDF format to the specified file path.
+            // ExStart:SaveLateTasksReport
+            // ExFor: ReportType.LateTasks
+            // ExSummary: Shows how to save the project late task report in PDF format to the specified file path.
             var project = new Project(DataDir + "Residential Construction.mpp");
             project.SaveReport(OutDir + "LateTasks_out.pdf", ReportType.LateTasks);
-            //ExEnd:SaveLateTasksReport
+
+            // ExEnd:SaveLateTasksReport
         }
-        
+
         [Test, Explicit]
         public void SaveBestPracticeAnalyzerReport()
         {
-            //ExStart:SaveBestPracticeAnalyzerReport
-            //ExFor: ReportType.BestPracticeAnalyzer
-            //ExSummary: Shows how to save the project best practice analyzer report in PDF format to the specified file path.
+            // ExStart:SaveBestPracticeAnalyzerReport
+            // ExFor: ReportType.BestPracticeAnalyzer
+            // ExSummary: Shows how to save the project best practice analyzer report in PDF format to the specified file path.
             var project = new Project(DataDir + "Cyclic stucture.mpp");
             project.SaveReport(OutDir + "BestPracticeAnalyzer_out.pdf", ReportType.BestPracticeAnalyzer);
-            //ExEnd:SaveBestPracticeAnalyzerReport
+
+            // ExEnd:SaveBestPracticeAnalyzerReport
         }
     }
 }

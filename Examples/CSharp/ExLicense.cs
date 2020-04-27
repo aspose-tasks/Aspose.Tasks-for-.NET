@@ -12,14 +12,15 @@
         {
             try
             {
-                //ExStart:ApplyLicenseUsingFile
-                //ExFor: License
-                //ExFor: License.#ctor
-                //ExFor: License.SetLicense(String)
-                //ExSummary: Shows how to apply a license of Aspose.Tasks.
+                // ExStart:ApplyLicenseUsingFile
+                // ExFor: License
+                // ExFor: License.#ctor
+                // ExFor: License.SetLicense(String)
+                // ExSummary: Shows how to apply a license of Aspose.Tasks.
                 var license = new License();
                 license.SetLicense("Aspose.Tasks.lic");
-                //ExEnd:ApplyLicenseUsingFile
+
+                // ExEnd:ApplyLicenseUsingFile
             }
             catch (InvalidOperationException)
             {
@@ -32,15 +33,16 @@
         {
             try
             {
-                //ExStart:ApplyLicenseUsingStream
-                //ExFor: License.SetLicense(Stream)
-                //ExSummary: Shows how to apply a license of Aspose.Tasks read from <see cref="System.IO.FileStream" />.
+                // ExStart:ApplyLicenseUsingStream
+                // ExFor: License.SetLicense(Stream)
+                // ExSummary: Shows how to apply a license of Aspose.Tasks read from <see cref="System.IO.FileStream" />.
                 var license = new License();
                 using (var stream = new FileStream("Aspose.Tasks.lic", FileMode.Open))
                 {
                     license.SetLicense(stream);
                 }
-                //ExEnd:ApplyLicenseUsingStream
+
+                // ExEnd:ApplyLicenseUsingStream
             }
             catch (FileNotFoundException)
             {

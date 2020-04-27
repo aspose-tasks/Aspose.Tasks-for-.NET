@@ -11,11 +11,11 @@
         [Test]
         public void CreateCalendar()
         {
-            //ExStart
-            //ExFor: CalendarCollection
-            //ExFor: CalendarCollection.Add(String,Calendar)
-            //ExFor: CalendarCollection.GetEnumerator()
-            //ExSummary: Shows how to add new calendars.
+            // ExStart
+            // ExFor: CalendarCollection
+            // ExFor: CalendarCollection.Add(String,Calendar)
+            // ExFor: CalendarCollection.GetEnumerator()
+            // ExSummary: Shows how to add new calendars.
             var project = new Project();
 
             // new calendars can be added to a project's calendar collection by using the collection's Add overloads.
@@ -27,17 +27,18 @@
             {
                 Console.WriteLine("Calendar Name: " + calendar.Name);
             }
-            //ExEnd
+
+            // ExEnd
         }
-        
+
         [Test]
         public void ReplaceCalendarWithNewCalendar()
         {
             try
             {
-                //ExStart:ReplaceCalendarWithNewCalendar
-                //ExFor: CalendarCollection.Remove(Calendar)
-                //ExSummary: Shows how to replace a calendar in the collection. 
+                // ExStart:ReplaceCalendarWithNewCalendar
+                // ExFor: CalendarCollection.Remove(Calendar)
+                // ExSummary: Shows how to replace a calendar in the collection. 
                 var project = new Project(DataDir + "Project5.mpp");
 
                 var calendar = project.Calendars.GetByName("TestCalendar");
@@ -49,7 +50,8 @@
                 // add new calendar
                 project.Calendars.Add("New Calendar");
                 project.Save(OutDir + "ReplaceCalendarWithNewCalendar_out.mpp", SaveFileFormat.MPP);
-                //ExEnd:ReplaceCalendarWithNewCalendar
+
+                // ExEnd:ReplaceCalendarWithNewCalendar
             }
             catch (NotSupportedException ex)
             {
@@ -60,10 +62,10 @@
         [Test]
         public void GetCalendarByNameOrId()
         {
-            //ExStart
-            //ExFor: CalendarCollection.GetByName(String)
-            //ExFor: CalendarCollection.GetByUid(Int32)
-            //ExSummary: Shows how to get calendars by name or by id. 
+            // ExStart
+            // ExFor: CalendarCollection.GetByName(String)
+            // ExFor: CalendarCollection.GetByUid(Int32)
+            // ExSummary: Shows how to get calendars by name or by id. 
             var project = new Project(DataDir + "Project5.mpp");
 
             var calendarByName = project.Calendars.GetByName("TestCalendar");
@@ -72,32 +74,33 @@
             Console.WriteLine("Calendar Name: " + calendarByName.Name);
             Console.WriteLine("Calendar Name: " + calendarByUid.Name);
             Console.WriteLine("Are calendars equals: " + calendarByName.Equals(calendarByUid));
-            //ExEnd
-            
+
+            // ExEnd
             Assert.AreEqual(calendarByName, calendarByUid);
         }
-        
+
         [Test]
         public void GetParentProjectName()
         {
-            //ExStart
-            //ExFor: CalendarCollection.ParentProject
-            //ExSummary: Shows how to read calendar parent project properties. 
+            // ExStart
+            // ExFor: CalendarCollection.ParentProject
+            // ExSummary: Shows how to read calendar parent project properties. 
             var project = new Project(DataDir + "Project5.mpp");
 
             var calendarByName = project.Calendars.GetByName("TestCalendar");
-             
+
             Console.WriteLine("Calendar Name: " + calendarByName.ParentProject.Get(Prj.Name));
-            //ExEnd
+
+            // ExEnd
         }
-        
+
         [Test]
         public void IterateOverCalendars()
         {
-            //ExStart
-            //ExFor: CalendarCollection.Count
-            //ExFor: CalendarCollection.ToList()
-            //ExSummary: Shows how to iterate over calendar collection. 
+            // ExStart
+            // ExFor: CalendarCollection.Count
+            // ExFor: CalendarCollection.ToList()
+            // ExSummary: Shows how to iterate over calendar collection. 
             var project = new Project(DataDir + "Project5.mpp");
 
             Console.WriteLine("Number of calendars in the project: " + project.Calendars.Count);
@@ -106,15 +109,16 @@
             {
                 Console.WriteLine("Calendar Name: " + calendar.Name);
             }
-            //ExEnd
+
+            // ExEnd
         }
-        
+
         [Test]
         public void MakeAStandardCalendar()
         {
-            //ExStart:MakeAStandardCalendar
-            //ExFor: CalendarCollection.Add(String)
-            //ExSummary: Shows how to make a standard calendar.
+            // ExStart:MakeAStandardCalendar
+            // ExFor: CalendarCollection.Add(String)
+            // ExSummary: Shows how to make a standard calendar.
             var project = new Project();
 
             // Define a calendar and make it standard
@@ -122,7 +126,8 @@
             Calendar.MakeStandardCalendar(calendar);
 
             project.Save(OutDir + "MakeAStandardCalendar_out.xml", SaveFileFormat.XML);
-            //ExEnd:MakeAStandardCalendar
+
+            // ExEnd:MakeAStandardCalendar
         }
     }
 }

@@ -9,9 +9,9 @@
         [Test]
         public void ReadModuleAttributesInformation()
         {
-            //ExStart:ReadModuleAttributesInformation
-            //ExFor: VbaModuleAttributeCollection
-            //ExSummary: Shows how to iterate over VBA module collection.
+            // ExStart:ReadModuleAttributesInformation
+            // ExFor: VbaModuleAttributeCollection
+            // ExSummary: Shows how to iterate over VBA module collection.
             var project = new Project(DataDir + "VbaProject.mpp");
 
             foreach (var module in project.VbaProject.Modules)
@@ -23,7 +23,8 @@
                     Console.WriteLine("Module: " + attribute.Value);
                 }
             }
-            //ExEnd:ReadModuleAttributesInformation
+
+            // ExEnd:ReadModuleAttributesInformation
         }
     }
 }

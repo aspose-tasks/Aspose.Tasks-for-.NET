@@ -11,15 +11,15 @@
         [Test]
         public void DefineWeekdaysForCalendar()
         {
-            //ExStart
-            //ExFor: WeekDay
-            //ExFor: WeekDay.#ctor
-            //ExFor: WeekDay.#ctor(DayType)
-            //ExFor: WeekDay.#ctor(DayType,IEnumerable{Aspose.Tasks.WorkingTime})
-            //ExFor: WeekDay.CreateDefaultWorkingDay(DayType)
-            //ExFor: WeekDay.WorkingTimes
-            //ExFor: WeekDay.DayWorking
-            //ExSummary: Shows how to create a new calendar by defining of week days. 
+            // ExStart
+            // ExFor: WeekDay
+            // ExFor: WeekDay.#ctor
+            // ExFor: WeekDay.#ctor(DayType)
+            // ExFor: WeekDay.#ctor(DayType,IEnumerable{Aspose.Tasks.WorkingTime})
+            // ExFor: WeekDay.CreateDefaultWorkingDay(DayType)
+            // ExFor: WeekDay.WorkingTimes
+            // ExFor: WeekDay.DayWorking
+            // ExSummary: Shows how to create a new calendar by defining of week days. 
             var project = new Project();
 
             // Define a calendar
@@ -42,16 +42,12 @@
             var workingTime2 = new WorkingTime();
             workingTime2.FromTime = new DateTime(1, 1, 1, 13, 0, 0, 0);
             workingTime2.ToTime = new DateTime(1, 1, 1, 16, 0, 0, 0);
-            var workingTimes = new List<WorkingTime>
-            {
-                workingTime,
-                workingTime2
-            };
+            var workingTimes = new List<WorkingTime> { workingTime, workingTime2 };
             var weekDay = new WeekDay(DayType.Friday, workingTimes);
             weekDay.DayWorking = true;
             calendar.WeekDays.Add(weekDay);
-            //ExEnd
-            
+
+            // ExEnd
             project.Save(OutDir + "DefineCalendarWeekdays_out.xml", SaveFileFormat.XML);
         }
     }

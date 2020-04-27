@@ -10,22 +10,22 @@
         [Test]
         public void CreateCustomizedWeekDayCollection()
         {
-            //ExStart
-            //ExFor: WeekDayCollection
-            //ExFor: WeekDayCollection.Add(WeekDay)
-            //ExFor: WeekDayCollection.Clear
-            //ExFor: WeekDayCollection.Contains(WeekDay)
-            //ExFor: WeekDayCollection.Insert(Int32,WeekDay)
-            //ExFor: WeekDayCollection.Item(Int32)
-            //ExFor: WeekDayCollection.Count
-            //ExFor: WeekDayCollection.GetEnumerator
-            //ExFor: WeekDayCollection.ParentCalendar
-            //ExFor: WeekDayCollection.Remove(WeekDay)
-            //ExFor: WeekDayCollection.RemoveAt(Int32)
-            //ExFor: WeekDayCollection.ToList
-            //ExFor: WeekDayCollection.IndexOf(WeekDay)
-            //ExFor: WeekDayCollection.CopyTo(WeekDay[],Int32)
-            //ExSummary: Shows how to work week day collections.
+            // ExStart
+            // ExFor: WeekDayCollection
+            // ExFor: WeekDayCollection.Add(WeekDay)
+            // ExFor: WeekDayCollection.Clear
+            // ExFor: WeekDayCollection.Contains(WeekDay)
+            // ExFor: WeekDayCollection.Insert(Int32,WeekDay)
+            // ExFor: WeekDayCollection.Item(Int32)
+            // ExFor: WeekDayCollection.Count
+            // ExFor: WeekDayCollection.GetEnumerator
+            // ExFor: WeekDayCollection.ParentCalendar
+            // ExFor: WeekDayCollection.Remove(WeekDay)
+            // ExFor: WeekDayCollection.RemoveAt(Int32)
+            // ExFor: WeekDayCollection.ToList
+            // ExFor: WeekDayCollection.IndexOf(WeekDay)
+            // ExFor: WeekDayCollection.CopyTo(WeekDay[],Int32)
+            // ExSummary: Shows how to work week day collections.
             var project = new Project();
             var calendar = project.Calendars.GetByName("Standard");
 
@@ -39,15 +39,12 @@
             calendar.WeekDays.Add(WeekDay.CreateDefaultWorkingDay(DayType.Friday));
             var saturday = WeekDay.CreateDefaultWorkingDay(DayType.Saturday);
             var sunday = WeekDay.CreateDefaultWorkingDay(DayType.Sunday);
-            
+
             calendar.WeekDays.Add(saturday);
             calendar.WeekDays.Add(sunday);
 
-            var fridayWorkingTimes = new List<WorkingTime>
-            {
-                new WorkingTime(new DateTime(2020, 4, 13, 8, 0, 0), new DateTime(2020, 4, 13, 12, 0, 0))
-            };
-            
+            var fridayWorkingTimes = new List<WorkingTime> { new WorkingTime(new DateTime(2020, 4, 13, 8, 0, 0), new DateTime(2020, 4, 13, 12, 0, 0)) };
+
             var friday = new WeekDay(DayType.Friday, fridayWorkingTimes);
             if (calendar.WeekDays.Contains(friday))
             {
@@ -66,10 +63,10 @@
                     Console.WriteLine();
                 }
             }
-            
+
             // remove saturday week day
             calendar.WeekDays.RemoveAt(5);
-            
+
             // remove sunday week day
             if (calendar.WeekDays.IndexOf(saturday) > 0)
             {
@@ -88,19 +85,20 @@
                     Console.WriteLine();
                 }
             }
-            
+
             var hour24Calendar = project.Calendars.Add("24 Hours");
             Calendar.Make24HourCalendar(hour24Calendar);
-            
+
             // copy week days
             var weekDaysArray = new WeekDay[calendar.WeekDays.Count];
             calendar.WeekDays.CopyTo(weekDaysArray, 0);
-            
+
             foreach (var weekDay in weekDaysArray)
             {
                 hour24Calendar.WeekDays.Add(weekDay);
             }
-            //ExEnd
+
+            // ExEnd
         }
     }
 }

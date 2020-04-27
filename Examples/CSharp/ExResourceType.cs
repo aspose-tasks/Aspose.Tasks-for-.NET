@@ -8,12 +8,12 @@
         [Test]
         public void WorkWithResourceType()
         {
-            //ExStart:WorkWithResourceType
-            //ExFor: ResourceType
-            //ExFor: ResourceType.Cost
-            //ExFor: ResourceType.Material
-            //ExFor: ResourceType.Work
-            //ExSummary: Shows how to work with resource types.
+            // ExStart:WorkWithResourceType
+            // ExFor: ResourceType
+            // ExFor: ResourceType.Cost
+            // ExFor: ResourceType.Material
+            // ExFor: ResourceType.Work
+            // ExSummary: Shows how to work with resource types.
             var project = new Project();
 
             // add a work resource
@@ -27,11 +27,11 @@
             
             // add a material resource
             var cost = project.Resources.Add("Cost resource");
-            material.Set(Rsc.Type, ResourceType.Cost);
-            material.Set(Rsc.Cost, 59.99m);
+            cost.Set(Rsc.Type, ResourceType.Cost);
+            cost.Set(Rsc.Cost, 59.99m);
             
             // work with resources: create tasks, assign resources and so on...
-            //ExEnd:WorkWithResourceType
+            // ExEnd:WorkWithResourceType
         }
     }
 }

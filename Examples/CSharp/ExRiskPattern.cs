@@ -10,19 +10,18 @@
         [Test]
         public void UseRiskPattern()
         {
-            //ExStart:UseRiskPattern
-            //ExFor: RiskPattern
-            //ExFor: RiskPattern.#ctor(Task)
-            //ExFor: RiskPattern.Distribution
-            //ExFor: RiskPattern.Optimistic
-            //ExFor: RiskPattern.Pessimistic
-            //ExFor: RiskPattern.ConfidenceLevel
-            //ExFor: RiskPattern.Task
-            //ExSummary: Shows how to define risk simulation settings.
-            
+            // ExStart:UseRiskPattern
+            // ExFor: RiskPattern
+            // ExFor: RiskPattern.#ctor(Task)
+            // ExFor: RiskPattern.Distribution
+            // ExFor: RiskPattern.Optimistic
+            // ExFor: RiskPattern.Pessimistic
+            // ExFor: RiskPattern.ConfidenceLevel
+            // ExFor: RiskPattern.Task
+            // ExSummary: Shows how to define risk simulation settings.
             var settings = new RiskAnalysisSettings();
             settings.IterationsCount = 200;
-            
+
             var project = new Project(DataDir + "Software Development Plan-1.mpp");
             var task = project.RootTask.Children.GetById(17);
 
@@ -44,9 +43,9 @@
             // Set a confidence level that correspond to the percentage of the time the actual values will be within optimistic and pessimistic estimates. 
             // You can think of it as a value of standard deviation: the more uncertain about your estimates you are, the more the value of standard deviation used in random number generator is
             pattern.ConfidenceLevel = ConfidenceLevel.CL75;
-            
+
             settings.Patterns.Add(pattern);
-            
+
             var analyzer = new RiskAnalyzer(settings);
             var analysisResult = analyzer.Analyze(project);
             var earlyFinish = analysisResult.GetRiskItems(RiskItemType.EarlyFinish).Get(project.RootTask);
@@ -60,7 +59,8 @@
             Console.WriteLine("Maximum: {0}", earlyFinish.Maximum);
 
             analysisResult.SaveReport(OutDir + "AnalysisReport_out.pdf");
-            //ExEnd:UseRiskPattern
+
+            // ExEnd:UseRiskPattern
         }
     }
 }

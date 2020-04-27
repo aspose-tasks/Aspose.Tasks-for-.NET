@@ -10,14 +10,14 @@
         [Test]
         public void CreateWbsCodeMask()
         {
-            //ExStart:CreateWbsCodeMask
-            //ExFor: WBSCodeMask
-            //ExFor: WBSCodeMask.#ctor
-            //ExFor: WBSCodeMask.Length
-            //ExFor: WBSCodeMask.Level
-            //ExFor: WBSCodeMask.Separator
-            //ExFor: WBSCodeMask.Sequence
-            //ExSummary: Shows how to create WBS code masks.
+            // ExStart:CreateWbsCodeMask
+            // ExFor: WBSCodeMask
+            // ExFor: WBSCodeMask.#ctor
+            // ExFor: WBSCodeMask.Length
+            // ExFor: WBSCodeMask.Level
+            // ExFor: WBSCodeMask.Separator
+            // ExFor: WBSCodeMask.Sequence
+            // ExSummary: Shows how to create WBS code masks.
             var project = new Project();
 
             project.WBSCodeDefinition = new WBSCodeDefinition();
@@ -36,7 +36,7 @@
             mask.Separator = "-";
             mask.Sequence = WBSSequence.OrderedUppercaseLetters;
             project.WBSCodeDefinition.CodeMaskCollection.Add(mask);
-            
+
             var task = project.RootTask.Children.Add("Task 1");
             task.Children.Add("Task 2");
 
@@ -50,7 +50,8 @@
             }
 
             project.Save(OutDir + @"AddWBSCodes_out.xml", SaveFileFormat.XML);
-            //ExEnd:CreateWbsCodeMask
+
+            // ExEnd:CreateWbsCodeMask
         }
     }
 }

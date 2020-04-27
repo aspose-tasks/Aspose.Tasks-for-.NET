@@ -10,18 +10,18 @@
         [Test]
         public void WorkWithTaskLinkCollection()
         {
-            //ExStart:WorkWithTaskLinkCollection
-            //ExFor: TaskLinkCollection
-            //ExFor: TaskLinkCollection.Add(Task,Task)
-            //ExFor: TaskLinkCollection.Add(Task,Task,TaskLinkType)
-            //ExFor: TaskLinkCollection.Add(Task,Task,TaskLinkType,Duration)
-            //ExFor: TaskLinkCollection.Count
-            //ExFor: TaskLinkCollection.GetEnumerator
-            //ExFor: TaskLinkCollection.Item(Int32)
-            //ExFor: TaskLinkCollection.ParentProject
-            //ExFor: TaskLinkCollection.Remove(TaskLink)
-            //ExFor: TaskLinkCollection.ToList
-            //ExSummary: Shows how to work with task link collections.
+            // ExStart:WorkWithTaskLinkCollection
+            // ExFor: TaskLinkCollection
+            // ExFor: TaskLinkCollection.Add(Task,Task)
+            // ExFor: TaskLinkCollection.Add(Task,Task,TaskLinkType)
+            // ExFor: TaskLinkCollection.Add(Task,Task,TaskLinkType,Duration)
+            // ExFor: TaskLinkCollection.Count
+            // ExFor: TaskLinkCollection.GetEnumerator
+            // ExFor: TaskLinkCollection.Item(Int32)
+            // ExFor: TaskLinkCollection.ParentProject
+            // ExFor: TaskLinkCollection.Remove(TaskLink)
+            // ExFor: TaskLinkCollection.ToList
+            // ExSummary: Shows how to work with task link collections.
             var project = new Project(DataDir + "SampleProject.mpp");
 
             // get tasks
@@ -46,17 +46,18 @@
                 Console.WriteLine("From ID = " + link.PredTask.Get(Tsk.Id) + " => To ID = " + link.SuccTask.Get(Tsk.Id));
                 Console.WriteLine();
             }
-            
+
             // edit link by index access
             project.TaskLinks[0].LagFormat = TimeUnitType.Hour;
-            
+
             // remove all task links
             List<TaskLink> taskLinks = project.TaskLinks.ToList();
             foreach (var link in taskLinks)
             {
                 project.TaskLinks.Remove(link);
             }
-            //ExEnd:WorkWithTaskLinkCollection
+
+            // ExEnd:WorkWithTaskLinkCollection
         }
     }
 }

@@ -10,14 +10,14 @@
         [Test]
         public void RenderTaskUsageViewWithDetails()
         {
-            //ExStart:RenderTaskUsageViewWithDetails
-            //ExFor: UsageView
-            //ExFor: UsageView.#ctor
-            //ExFor: UsageView.DisplayDetailsHeaderColumn
-            //ExFor: UsageView.RepeatDetailsHeaderOnAllRows
-            //ExFor: UsageView.DisplayShortDetailHeaderNames
-            //ExFor: UsageView.AlignDetailsData
-            //ExSummary: Shows how to render task usage view with details.
+            // ExStart:RenderTaskUsageViewWithDetails
+            // ExFor: UsageView
+            // ExFor: UsageView.#ctor
+            // ExFor: UsageView.DisplayDetailsHeaderColumn
+            // ExFor: UsageView.RepeatDetailsHeaderOnAllRows
+            // ExFor: UsageView.DisplayShortDetailHeaderNames
+            // ExFor: UsageView.AlignDetailsData
+            // ExSummary: Shows how to render task usage view with details.
             var project = new Project(DataDir + "TaskUsageViewWithDetails.mpp");
 
             // get the view
@@ -37,7 +37,8 @@
             view.RepeatDetailsHeaderOnAllRows = true;
             view.AlignDetailsData = StringAlignment.Far;
             project.Save(OutDir + "task usage2_out.pdf", SaveFileFormat.PDF);
-            //ExEnd:RenderTaskUsageViewWithDetails
+
+            // ExEnd:RenderTaskUsageViewWithDetails
         }
     }
 }
