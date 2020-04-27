@@ -7,7 +7,7 @@
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{D2E76A96-92DA-44F6-AB1D-F8A6FA3B4452}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Aspose.Tasks.Examples.CSharp</RootNamespace>
     <AssemblyName>Aspose.Tasks.Examples.CSharp</AssemblyName>
@@ -36,7 +36,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>Aspose.Tasks.Examples.CSharp.RunExamples</StartupObject>
+    <StartupObject>
+    </StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Aspose.Tasks, Version=20.4.0.0, Culture=neutral, PublicKeyToken=716fcc553a201e56">
@@ -116,6 +117,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ApiExampleBase.cs" />
+    <Compile Include="ExAnd.cs" />
+    <Compile Include="ExAndAllCondition.cs" />
     <Compile Include="ExApplicationInfo.cs" />
     <Compile Include="ExApsLayoutBuilderOutOfMemoryException.cs" />
     <Compile Include="ExAsn.cs" />
@@ -138,7 +141,10 @@
     <Compile Include="ExCheckCircuit.cs" />
     <Compile Include="ExCompoundDocumentHeaderException.cs" />
     <Compile Include="ExCssSavingArgs.cs" />
+    <Compile Include="ExCsvOptions.cs" />
     <Compile Include="ExCustomProjectPropertyCollection.cs" />
+    <Compile Include="ExDailyCalendarRepetition.cs" />
+    <Compile Include="ExDailyWorkRepetition.cs" />
     <Compile Include="ExDayTypeCollection.cs" />
     <Compile Include="ExDbSettings.cs" />
     <Compile Include="ExDuration.cs" />
@@ -158,8 +164,18 @@
     <Compile Include="ExIFontSavingCallback.cs" />
     <Compile Include="ExIImageSavingCallback.cs" />
     <Compile Include="ExImageSavingArgs.cs" />
+    <Compile Include="ExInvalidPasswordException.cs" />
+    <Compile Include="ExITreeAlgorithm.cs" />
+    <Compile Include="ExLabelDisplay.cs" />
     <Compile Include="ExListUtils.cs" />
+    <Compile Include="ExLoadOptions.cs" />
+    <Compile Include="ExMetered.cs" />
+    <Compile Include="ExMonthlyRecurrencePattern.cs" />
+    <Compile Include="ExNot.cs" />
+    <Compile Include="ExNullableBool.cs" />
+    <Compile Include="ExOleObject.cs" />
     <Compile Include="ExOleObjectCollection.cs" />
+    <Compile Include="ExOutlineCode.cs" />
     <Compile Include="ExOutlineCodeCollection.cs" />
     <Compile Include="ExOutlineCodeDefinitionCollection.cs" />
     <Compile Include="ExOutlineMaskCollection.cs" />
@@ -184,10 +200,15 @@
     <Compile Include="ExProjectDisplayOptions.cs" />
     <Compile Include="ExProjectFileFormat.cs" />
     <Compile Include="ExProjectFileInfo.cs" />
+    <Compile Include="ExProjectInfo.cs" />
     <Compile Include="ExProjectOnlineException.cs" />
+    <Compile Include="ExProjectOnlineReader.cs" />
     <Compile Include="ExProjectServerCredentials.cs" />
     <Compile Include="ExProjectServerManager.cs" />
+    <Compile Include="ExRate.cs" />
     <Compile Include="ExRateCollection.cs" />
+    <Compile Include="ExRecurringTaskInfo.cs" />
+    <Compile Include="ExRemoveTask.cs" />
     <Compile Include="ExResourceType.cs" />
     <Compile Include="ExResourceUsageView.cs" />
     <Compile Include="ExResourceUsageViewFieldCollection.cs" />
@@ -195,6 +216,15 @@
     <Compile Include="ExRiskItemStatistics.cs" />
     <Compile Include="ExRiskItemStatisticsCollection.cs" />
     <Compile Include="ExRiskPatternCollection.cs" />
+    <Compile Include="ExSplitPart.cs" />
+    <Compile Include="ExTaskLinks.cs" />
+    <Compile Include="ExTaskUtils.cs" />
+    <Compile Include="ExTaskValidationException.cs" />
+    <Compile Include="ExTimephasedData.cs" />
+    <Compile Include="ExValidationException.cs" />
+    <Compile Include="ExWorkGroupType.cs" />
+    <Compile Include="ExYearlyRecurrencePattern.cs" />
+    <Compile Include="SavingOptions\ExPrimaveraSaveOptions.cs" />
     <Compile Include="SavingOptions\ExSaveOptions.cs" />
     <Compile Include="ExSplitPartCollection.cs" />
     <Compile Include="ExTableCollection.cs" />
@@ -248,7 +278,7 @@
     <Compile Include="ExVbaModuleCollection.cs" />
     <Compile Include="ExVbaProject.cs" />
     <Compile Include="ExVbaReferenceCollection.cs" />
-    <Compile Include="ExVbaReferences.cs" />
+    <Compile Include="ExVbaReference.cs" />
     <Compile Include="ExView.cs" />
     <Compile Include="ExViewColumn.cs" />
     <Compile Include="ExWbsCodeDefinition.cs" />
@@ -265,7 +295,6 @@
     <Compile Include="ExXamlOptions.cs" />
     <Compile Include="ExXlsxOptions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RunExamples.cs" />
     <Compile Include="SavingOptions\ExHtmlSaveOptions.cs" />
     <Compile Include="SavingOptions\ExImageSaveOptions.cs" />
     <Compile Include="SavingOptions\ExMppSaveOptions.cs" />
@@ -275,6 +304,7 @@
     <Compile Include="SavingOptions\ExSaveTemplateOptions.cs" />
     <Compile Include="SavingOptions\ExSpreadsheet2003SaveOptions.cs" />
     <Compile Include="SavingOptions\ExSvgOptions.cs" />
+    <Compile Include="SavingOptions\ExXpsOptions.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />

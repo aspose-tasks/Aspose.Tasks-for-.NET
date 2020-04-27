@@ -9,17 +9,18 @@
         [Test]
         public void ReadTaskGroupDefinitionData()
         {
-            //ExStart:ReadTaskGroupDefinitionData
-            //ExFor: Group
-            //ExFor: Group.#ctor
-            //ExFor: Group.Name
-            //ExFor: Group.Index
-            //ExFor: Group.GroupCriteria
-            //ExFor: Group.MaintainHierarchy
-            //ExFor: Group.ParentProject
-            //ExFor: Group.ShowSummary
-            //ExFor: Group.ShowInMenu
-            //ExSummary: Shows how to work with groups.
+            // ExStart:ReadTaskGroupDefinitionData
+            // ExFor: Group
+            // ExFor: Group.#ctor
+            // ExFor: Group.Uid
+            // ExFor: Group.Name
+            // ExFor: Group.Index
+            // ExFor: Group.GroupCriteria
+            // ExFor: Group.MaintainHierarchy
+            // ExFor: Group.ParentProject
+            // ExFor: Group.ShowSummary
+            // ExFor: Group.ShowInMenu
+            // ExSummary: Shows how to work with groups.
             var project = new Project(DataDir + "ReadGroupDefinitionData.mpp");
 
             Console.WriteLine("Task Groups Count: " + project.TaskGroups.Count);
@@ -51,7 +52,8 @@
                 Console.WriteLine("Font Style: " + criterion.Font.Style);
                 Console.WriteLine("Ascending/Descending: " + criterion.Ascending);
             }
-            //ExEnd:ReadTaskGroupDefinitionData
+
+            // ExEnd:ReadTaskGroupDefinitionData
         }
     }
 }

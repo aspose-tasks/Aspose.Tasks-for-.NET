@@ -12,32 +12,41 @@
         {
             try
             {
-                //ExStart:SaveProjectDataAsTemplate
-                //ExFor: SaveTemplateOptions
-                //ExFor: SaveTemplateOptions.RemoveActualValues
-                //ExFor: SaveTemplateOptions.RemoveBaselineValues
-                //ExSummary: Shows how to save project as a template by using options.
-                var project = new Project(DataDir + "Project2.mpp");
-                var projectFileInfo = Project.GetProjectFileInfo(DataDir + "Project2.mpp");
+                // ExStart:SaveProjectDataAsTemplate
+                // ExFor: SaveTemplateOptions
+                // ExFor: SaveTemplateOptions.RemoveActualValues
+                // ExFor: SaveTemplateOptions.RemoveBaselineValues
+                // ExFor: SaveTemplateOptions.RemoveFixedCosts
+                // ExFor: SaveTemplateOptions.RemoveResourceRates
+                // ExSummary: Shows how to save project as a template by using options.
+                var project = new Project(DataDir + "EstimatedMilestoneTasks.mpp");
+                var projectFileInfo = Project.GetProjectFileInfo(DataDir + "EstimatedMilestoneTasks.mpp");
 
-                if (FileFormat.MPP14 == projectFileInfo.ProjectFileFormat)
+                Console.WriteLine("Project File Format: " + projectFileInfo.ProjectFileFormat);
+
+                // create template save options
+                // and tune its properties
+                var options = new SaveTemplateOptions
                 {
-                    Console.WriteLine("Project file format is ok");
-                }
+                    // set a value indicating whether all fixed costs from a project template should be removed
+                    RemoveFixedCosts = true,
 
-                var options = new SaveTemplateOptions();
-                options.RemoveActualValues = true;
-                options.RemoveBaselineValues = true;
+                    // set a value indicating whether all actual values from a project template should be removed
+                    RemoveActualValues = true,
 
-                const string TemplateName = "SaveProjectDataAsTemplate_out.mpt";
-                project.SaveAsTemplate(OutDir + TemplateName);
+                    // set a value indicating whether resource rates from a project template should be removed
+                    RemoveResourceRates = true,
 
-                var templateFileInfo = Project.GetProjectFileInfo(DataDir + TemplateName);
-                if (FileFormat.MPT14 == templateFileInfo.ProjectFileFormat)
-                {
-                    Console.WriteLine("Template FileFormat is ok");
-                }
-                //ExEnd:SaveProjectDataAsTemplate
+                    // set a value indicating whether all baseline values from a project template should be removed
+                    RemoveBaselineValues = true
+                };
+
+                project.SaveAsTemplate(OutDir + "SaveProjectDataAsTemplate_out.mpt", options);
+
+                var templateFileInfo = Project.GetProjectFileInfo(DataDir + "SaveProjectDataAsTemplate_out.mpt");
+                Console.WriteLine("Project File Format: " + templateFileInfo.ProjectFileFormat);
+
+                // ExEnd:SaveProjectDataAsTemplate
             }
             catch (NotSupportedException ex)
             {

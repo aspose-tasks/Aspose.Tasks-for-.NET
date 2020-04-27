@@ -13,17 +13,27 @@
         {
             try
             {
-                //ExStart:CreateEmptyProjectToSaveToStreamWithMPPSaveOptions
-                //ExFor: MPPSaveOptions
-                //ExSummary: Shows how to save project into a stream as an MPP file.
+                // ExStart:CreateEmptyProjectToSaveToStreamWithMPPSaveOptions
+                // ExFor: MPPSaveOptions
+                // ExFor: MPPSaveOptions.RemoveInvalidAssignments
+                // ExFor: MPPSaveOptions.WriteViewData
+                // ExSummary: Shows how to save project into a stream as an MPP file.
                 using (var stream = new FileStream(OutDir + "EmptyProjectSaveStream_out.xml", FileMode.Create, FileAccess.Write))
                 {
-                    var project = new Project();
-                    var options = new MPPSaveOptions();
-                    // save in MPP format by using of save options 
+                    var project = new Project(DataDir + "EstimatedMilestoneTasks.mpp");
+
+                    // create save options
+                    var options = new MPPSaveOptions
+                    {
+                        // sets a value indicating whether to remove invalid resource assignments when saving to MPP
+                        RemoveInvalidAssignments = true
+                    };
+
+                    // save MPP with options
                     project.Save(stream, options);
                 }
-                //ExEnd:CreateEmptyProjectToSaveToStreamWithMPPSaveOptions
+
+                // ExEnd:CreateEmptyProjectToSaveToStreamWithMPPSaveOptions
             }
             catch (NotSupportedException ex)
             {

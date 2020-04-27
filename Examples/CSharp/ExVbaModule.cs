@@ -9,11 +9,14 @@
         [Test]
         public void ReadModulesInformation()
         {
-            //ExStart:ReadModulesInformation
-            //ExFor: VbaModule
-            //ExFor: VbaModule.Name
-            //ExFor: VbaModule.SourceCode
-            //ExSummary: Shows how to read modules of VBA project.
+            // ExStart:ReadModulesInformation
+            // ExFor: VbaModule
+            // ExFor: VbaModule.Name
+            // ExFor: VbaModule.SourceCode
+            // ExFor: IVbaModule
+            // ExFor: IVbaModule.Name
+            // ExFor: IVbaModule.SourceCode
+            // ExSummary: Shows how to read modules of VBA project.
             var project = new Project(DataDir + "VbaProject.mpp");
 
             Console.WriteLine("Total Modules Count: " + project.VbaProject.Modules.Count);
@@ -23,15 +26,17 @@
                 Console.WriteLine("Module Name: " + module.Name);
                 Console.WriteLine("Source Code: " + module.SourceCode);
             }
-            //ExEnd:ReadModulesInformation
+
+            // ExEnd:ReadModulesInformation
         }
-        
+
         [Test]
         public void ReadModuleAttributesInformation()
         {
-            //ExStart:ReadModuleAttributesInformation
-            //ExFor: VbaModule.Attributes
-            //ExSummary: Shows how to read VBA module's attributes.
+            // ExStart:ReadModuleAttributesInformation
+            // ExFor: VbaModule.Attributes
+            // ExFor: IVbaModule.Attributes
+            // ExSummary: Shows how to read VBA module's attributes.
             var project = new Project(DataDir + "VbaProject.mpp");
 
             foreach (var module in project.VbaProject.Modules)
@@ -43,7 +48,8 @@
                     Console.WriteLine("Module: " + attribute.Value);
                 }
             }
-            //ExEnd:ReadModuleAttributesInformation
+
+            // ExEnd:ReadModuleAttributesInformation
         }
     }
 }

@@ -9,13 +9,17 @@
     [TestFixture]
     public class ExFontSavingArgs : ApiExampleBase
     {
-        //ExStart
-        //ExFor: FontSavingArgs
-        //ExSummary: Shows how to work with font saving args.
-        [TestFixture] //ExSkip
+        // ExStart
+        // ExFor: FontSavingArgs
+        // ExFor: HtmlSaveOptions.ExportCss
+        // ExFor: HtmlSaveOptions.ExportFonts
+        // ExFor: HtmlSaveOptions.ExportImages
+        // ExFor: HtmlSaveOptions.FontFaceTypes
+        // ExSummary: Shows how to work with font saving args.
+        [TestFixture] // ExSkip
         internal class ResourcePrefixForNestedResources : ApiExampleBase, ICssSavingCallback, IFontSavingCallback, IImageSavingCallback
         {
-            [Test] //ExSkip
+            [Test] // ExSkip
             public void ResourcePrefixForNestedResourcesExample()
             {
                 var project = new Project(DataDir + "Project1.mpp");
@@ -42,7 +46,7 @@
                 {
                     Directory.CreateDirectory(OutDir + "fonts/");
                 }
-				
+
                 var stream = new FileStream(OutDir + "fonts/" + args.FileName, FileMode.Create);
                 args.Stream = stream;
                 args.KeepStreamOpen = false;
@@ -55,12 +59,12 @@
                 {
                     Directory.CreateDirectory(OutDir + "resources/");
                 }
-				
+
                 if (!Directory.Exists(OutDir + "resources/nestedResources/"))
                 {
                     Directory.CreateDirectory(OutDir + "resources/nestedResources/");
                 }
-				
+
                 if (args.FileName.EndsWith("png"))
                 {
                     var stream1 = new FileStream(OutDir + "resources/nestedResources/" + args.FileName, FileMode.Create);
@@ -82,18 +86,18 @@
             private static HtmlSaveOptions GetSaveOptions(int pageNumber)
             {
                 var options = new HtmlSaveOptions
-                {
-                    Pages = new List<int>(),
-                    IncludeProjectNameInPageHeader = false,
-                    IncludeProjectNameInTitle = false,
-                    PageSize = PageSize.A3,
-                    Timescale = Timescale.ThirdsOfMonths,
-                    ReduceFooterGap = true,
-                    FontFaceTypes = FontFaceType.Ttf,
-                    ExportCss = ResourceExportType.AsFile,
-                    ExportFonts = ResourceExportType.AsFile,
-                    ExportImages = ResourceExportType.AsFile
-                };
+                                  {
+                                      Pages = new List<int>(),
+                                      IncludeProjectNameInPageHeader = false,
+                                      IncludeProjectNameInTitle = false,
+                                      PageSize = PageSize.A3,
+                                      Timescale = Timescale.ThirdsOfMonths,
+                                      ReduceFooterGap = true,
+                                      FontFaceTypes = FontFaceType.Ttf,
+                                      ExportCss = ResourceExportType.AsFile,
+                                      ExportFonts = ResourceExportType.AsFile,
+                                      ExportImages = ResourceExportType.AsFile
+                                  };
 
                 var program = new ResourcePrefixForNestedResources();
                 options.FontSavingCallback = program;
@@ -126,6 +130,7 @@
                 return options;
             }
         }
-        //ExEnd
+
+        // ExEnd
     }
 }

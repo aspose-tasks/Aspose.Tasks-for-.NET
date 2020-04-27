@@ -1,18 +1,22 @@
 ﻿namespace Aspose.Tasks.Examples.CSharp
 {
     using System;
+    using System.Diagnostics.CodeAnalysis;
+
     using NUnit.Framework;
     using Saving;
 
     [TestFixture]
+    [SuppressMessage("ReSharper", "StyleCop.SA1108", Justification = "Reviewed. Suppression is OK here.")]
     public class ExTasksReadingException : ApiExampleBase
     {
         [Test]
         public void HandleProjectReadingException()
         {
-            //ExStart:ExTasksReadingException
-            //ExFor: TasksReadingException
-            //ExSummary: Shows how to handle project' reading/writing exceptions.
+            // ExStart:ExTasksReadingException
+            // ExFor: TasksReadingException
+            // ExFor: TasksReadingException.#ctor(SerializationInfo,StreamingContext)
+            // ExSummary: Shows how to handle project' reading/writing exceptions.
             try
             {
                 var project = new Project(DataDir + "project.mpp");
@@ -30,11 +34,8 @@
                     Console.WriteLine(ex.InnerException.Message);
                 }
             }
-            //ExEnd:ExTasksReadingException
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.Message);
-            }
+            
+            // ExEnd:ExTasksReadingException
         }
     }
 }
