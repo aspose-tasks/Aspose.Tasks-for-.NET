@@ -7,7 +7,7 @@
     public class ExCopyOptions : ApiExampleBase
     {
         [Test]
-        public void ProjectCopyToTest()
+        public void WorkWithCopyOptions()
         {
             // ExStart:ProjectCopyingWithOptions
             // ExFor: CopyToOptions

@@ -52,7 +52,7 @@
         }
 
         [Test]
-        public void SaveProjectDataAsHTML()
+        public void WorkWithHtmlSaveOptions()
         {
             // ExStart:SaveProjectDataAsHTML
             // ExFor: HtmlSaveOptions

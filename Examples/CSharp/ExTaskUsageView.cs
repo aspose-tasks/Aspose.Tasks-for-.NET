@@ -13,7 +13,7 @@
         {
             // ExStart:RenderTaskUsageView
             // ExFor: TaskUsageView
-            // ExSummary: Shows how to render task usage view.
+            // ExSummary: Shows how to work with  task usage view.
             var project = new Project(DataDir + "TaskUsageView.mpp");
 
             // Define the SaveOptions with required TimeScale settings as Days

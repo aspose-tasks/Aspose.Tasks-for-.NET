@@ -89,11 +89,11 @@
         }
 
         [Test]
-        public void UsingSaveOptionsView()
+        public void WorkWithSaveOptionsView()
         {
             // ExStart
             // ExFor: SaveOptions.View
-            // ExSummary: Shows how to use add columns of view to be exported during export project.
+            // ExSummary: Shows how to add columns of view to be exported during export project.
             var project = new Project(DataDir + "CreateProject2.mpp");
 
             var options = new Spreadsheet2003SaveOptions();

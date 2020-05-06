@@ -8,7 +8,7 @@
     public class ExChildTasksCollector : ApiExampleBase
     {
         [Test]
-        public void ReadParentChildTasks()
+        public void WorkWithChildTasksCollector()
         {
             // ExStart:ReadParentChildTasks
             // ExFor: ChildTasksCollector

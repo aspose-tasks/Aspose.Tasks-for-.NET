@@ -11,6 +11,7 @@
         public void RenderResourceSheetView()
         {
             // ExStart:RenderResourceSheetView
+            // ExFor: PresentationFormat
             // ExFor: PresentationFormat.ResourceSheet
             // ExSummary: Shows how to render resource sheet view.
             var project = new Project(DataDir + "ResourceSheetView.mpp");
@@ -82,6 +83,23 @@
             project.Save(OutDir + "TaskSheetView_out.pdf", options);
 
             // ExEnd:RenderTaskSheetView
+        }
+        
+        [Test]
+        public void RenderTaskUsage()
+        {
+            // ExStart:RenderTaskUsage
+            // ExFor: PresentationFormat.TaskUsage
+            // ExSummary: Shows how to render task usage view.
+            var project = new Project(DataDir + "TaskUsageView.mpp");
+
+            // Set presentation format Task Usage and save project as PDF
+            SaveOptions options = new PdfSaveOptions();
+            options.PresentationFormat = PresentationFormat.TaskUsage;
+
+            project.Save(OutDir + "TaskUsageView_out.pdf", options);
+
+            // ExEnd:RenderTaskUsage
         }
     }
 }

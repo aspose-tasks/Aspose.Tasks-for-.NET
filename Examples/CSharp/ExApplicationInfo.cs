@@ -7,7 +7,7 @@
     public class ExApplicationInfo : ApiExampleBase
     {
         [Test]
-        public void ReadApplicationInfo()
+        public void WorkWithApplicationInfo()
         {
             // ExStart:ReadApplicationInfo
             // ExFor: ApplicationInfo

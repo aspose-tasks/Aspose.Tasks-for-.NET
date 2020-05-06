@@ -9,7 +9,7 @@
     public class ExApsLayoutBuilderOutOfMemoryException : ApiExampleBase
     {
         [Test]
-        public void SaveToStreamWithOptionsAndCatchException()
+        public void WorkWithApsLayoutBuilderOutOfMemoryException()
         {
             // ExStart
             // ExFor: ApsLayoutBuilderOutOfMemoryException

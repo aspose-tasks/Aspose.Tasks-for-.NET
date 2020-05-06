@@ -2,14 +2,17 @@
 {
     using System;
     using NUnit.Framework;
+    using Properties;
 
     [TestFixture]
     internal class ExCustomProjectPropertyCollection : ApiExampleBase
     {
         [Test]
-        public void ReadProjectMetaProperties()
+        public void WorkWithCustomProjectPropertyCollection()
         {
             // ExStart:ReadProjectMetaProperties
+            // ExFor: CustomProjectProperty
+            // ExFor: CustomProjectProperty.Type
             // ExFor: CustomProjectPropertyCollection
             // ExFor: CustomProjectPropertyCollection.#ctor
             // ExFor: CustomProjectPropertyCollection.Add(String,Boolean)
@@ -43,7 +46,7 @@
 
             // custom properties are available through the typed collection
             Console.WriteLine("Count of custom properties: " + project.CustomProps.Count);
-            foreach (var property in project.CustomProps)
+            foreach (CustomProjectProperty property in project.CustomProps)
             {
                 Console.WriteLine(property.Type);
                 Console.WriteLine(property.Name);

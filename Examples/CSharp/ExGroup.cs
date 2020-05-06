@@ -7,9 +7,9 @@
     public class ExGroup : ApiExampleBase
     {
         [Test]
-        public void ReadTaskGroupDefinitionData()
+        public void WorkWithGroup()
         {
-            // ExStart:ReadTaskGroupDefinitionData
+            // ExStart:WorkWithGroup
             // ExFor: Group
             // ExFor: Group.#ctor
             // ExFor: Group.Uid
@@ -53,7 +53,7 @@
                 Console.WriteLine("Ascending/Descending: " + criterion.Ascending);
             }
 
-            // ExEnd:ReadTaskGroupDefinitionData
+            // ExEnd:WorkWithGroup
         }
     }
 }

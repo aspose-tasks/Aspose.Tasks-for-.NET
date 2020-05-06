@@ -12,6 +12,7 @@
         // ExStart
         // ExFor: CssSavingArgs
         // ExFor: CssSavingArgs.#ctor
+        // ExFor: HtmlSaveOptions.CssSavingCallback
         // ExSummary: Shows how to specify CSS saving args.
         [TestFixture] // ExSkip
         internal class ResourcePrefixForNestedResources : ApiExampleBase, ICssSavingCallback, IFontSavingCallback, IImageSavingCallback

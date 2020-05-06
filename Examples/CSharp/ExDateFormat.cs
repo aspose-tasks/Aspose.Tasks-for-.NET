@@ -8,7 +8,7 @@
     public class ExDateFormat : ApiExampleBase
     {
         [Test]
-        public void CustomizeDateFormats()
+        public void WorkWithDateFormat()
         {
             // ExStart:CustomizeDateFormats
             // ExFor: DateFormat

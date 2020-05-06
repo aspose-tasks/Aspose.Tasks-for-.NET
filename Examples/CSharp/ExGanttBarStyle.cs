@@ -9,7 +9,7 @@
     public class ExGanttBarStyle : ApiExampleBase
     {
         [Test]
-        public void ReadCustomBarStyle()
+        public void WorkWithGanttBarStyle()
         {
             // ExStart:ReadCustomBarStyle
             // ExFor: GanttBarStyle
@@ -19,13 +19,14 @@
             // ExFor: GanttBarStyle.InsideField
             // ExFor: GanttBarStyle.RightField
             // ExFor: GanttBarStyle.BottomField
+            // ExFor: GanttChartView.BarStyles
             // ExSummary: Shows how to read custom bar styles of a view. 
             var project = new Project(DataDir + "CustomBarStyle.mpp");
 
             var view = (GanttChartView)project.DefaultView;
             Console.WriteLine("Custom bar styles count: {0}", view.CustomBarStyles.Count);
 
-            var style1 = view.CustomBarStyles[0];
+            GanttBarStyle style1 = view.CustomBarStyles[0];
             Console.WriteLine("Style1.LeftField is TaskDurationText : {0}", style1.LeftField.Equals(Field.TaskDurationText));
             Console.WriteLine("Style1.RightField is TaskResourceNames : {0}", style1.RightField.Equals(Field.TaskResourceNames));
             Console.WriteLine("Style1.TopField is TaskACWP: {0}", style1.TopField.Equals(Field.TaskACWP));

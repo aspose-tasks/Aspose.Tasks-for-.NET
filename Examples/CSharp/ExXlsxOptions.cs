@@ -9,7 +9,7 @@
     public class ExXlsxOptions : ApiExampleBase
     {
         [Test]
-        public void UsingXlsxOptions()
+        public void WorkWithXlsxOptions()
         {
             // ExStart:UsingXlsxOptions
             // ExFor: XlsxOptions

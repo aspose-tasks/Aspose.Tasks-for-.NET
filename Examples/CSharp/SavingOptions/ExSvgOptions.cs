@@ -8,7 +8,7 @@
     public class ExSvgOptions : ApiExampleBase
     {
         [Test]
-        public void UseSvgOptions()
+        public void WorkWithSvgOptions()
         {
             // ExStart:UseSvgOptions
             // ExFor: SvgOptions

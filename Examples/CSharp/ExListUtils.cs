@@ -25,7 +25,7 @@
 
             Assert.AreEqual(3, taskFilters.Count, "Project.TaskFilters count");
 
-            var filter = ListUtils.Find(taskFilters, new FilterNameFilter("&All Tasks"));
+            var filter = ListUtils.Find(taskFilters, new FilterByName("&All Tasks"));
 
             Console.WriteLine("Name: " + filter.Name);
             Console.WriteLine("Filter Type: " + filter.FilterType);
@@ -33,11 +33,11 @@
             Console.WriteLine("Show Related Summary Rows: " + filter.ShowRelatedSummaryRows);
         }
 
-        public class FilterNameFilter : ICondition<Filter>
+        public class FilterByName : ICondition<Filter>
         {
             private readonly string name;
 
-            public FilterNameFilter(string name)
+            public FilterByName(string name)
             {
                 this.name = name;
             }
@@ -69,7 +69,7 @@
 
             Assert.AreEqual(3, filters.Count, "Project.TaskFilters count");
 
-            ListUtils.Filter(filters, new FilterByNameFilter("&All Tasks"));
+            ListUtils.Filter(filters, new FilterByIndex(1));
 
             foreach (var filter in filters)
             {
@@ -81,13 +81,13 @@
             }
         }
 
-        public class FilterByNameFilter : ICondition<Filter>
+        public class FilterByIndex : ICondition<Filter>
         {
-            private readonly string name;
+            private readonly int index;
 
-            public FilterByNameFilter(string name)
+            public FilterByIndex(int index)
             {
-                this.name = name;
+                this.index = index;
             }
 
             /// <summary>
@@ -98,7 +98,7 @@
             /// <inheritdoc />
             public bool Check(Filter el)
             {
-                return el.Name == this.name;
+                return el.Index == this.index;
             }
         }
 

@@ -7,7 +7,7 @@
     public class ExDayTypeCollection : ApiExampleBase
     {
         [Test]
-        public void UseDayTypeCollection()
+        public void WorkWithDayTypeCollection()
         {
             // ExStart
             // ExFor: DayTypeCollection

@@ -1,15 +1,22 @@
 ﻿namespace Aspose.Tasks.Examples.CSharp
 {
     using System;
+    using System.Diagnostics.CodeAnalysis;
     using NUnit.Framework;
+    using Properties;
 
     [TestFixture]
     internal class ExBuiltInProjectPropertyCollection : ApiExampleBase
     {
         [Test]
+        [SuppressMessage("ReSharper", "RedundantToStringCall", Justification = "Reviewed. Suppression is OK here.")]
         public void ReadProjectMetaProperties()
         {
             // ExStart:ReadProjectMetaProperties
+            // ExFor: Property
+            // ExFor: Property.Name
+            // ExFor: Property.Value
+            // ExFor: Property.ToString
             // ExFor: BuiltInProjectPropertyCollection
             // ExFor: BuiltInProjectProperty
             // ExFor: BuiltInProjectProperty.Value
@@ -36,12 +43,14 @@
             Console.WriteLine("Manager: " + project.BuiltInProps.Manager);
             Console.WriteLine("Subject: " + project.BuiltInProps.Subject);
             Console.WriteLine("Title: " + project.BuiltInProps.Title);
-
+            Console.WriteLine();
+            
             // iterate over built-in property collection
-            foreach (var property in project.BuiltInProps)
+            foreach (Property property in project.BuiltInProps)
             {
                 Console.WriteLine("Name: " + property.Name);
                 Console.WriteLine("Value: " + property.Value);
+                Console.WriteLine("Prop As String: " + property.ToString());
                 Console.WriteLine();
             }
 

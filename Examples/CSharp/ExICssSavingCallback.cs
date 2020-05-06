@@ -12,7 +12,12 @@
         // ExStart
         // ExFor: ICssSavingCallback
         // ExFor: ICssSavingCallback.CssSaving(CssSavingArgs)
-        // ExFor: HtmlSaveOptions.CssSavingCallback
+        // ExFor: ResourceSavingArgs
+        // ExFor: ResourceSavingArgs.CloseStreamIfRequired
+        // ExFor: ResourceSavingArgs.FileName
+        // ExFor: ResourceSavingArgs.KeepStreamOpen
+        // ExFor: ResourceSavingArgs.Stream
+        // ExFor: ResourceSavingArgs.Uri
         // ExSummary: Shows how to set use CSS saving callbacks.
         [TestFixture] // ExSkip
         internal class ResourcePrefixForNestedResources : ApiExampleBase, ICssSavingCallback, IFontSavingCallback, IImageSavingCallback

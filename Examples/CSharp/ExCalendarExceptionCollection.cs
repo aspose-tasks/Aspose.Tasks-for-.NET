@@ -8,7 +8,7 @@
     public class ExCalendarExceptionCollection : ApiExampleBase
     {
         [Test]
-        public void UseCalendarExceptionCollection()
+        public void WorkWithCalendarExceptionCollection()
         {
             // ExStart:UseCalendarExceptionCollection
             // ExFor: CalendarExceptionCollection

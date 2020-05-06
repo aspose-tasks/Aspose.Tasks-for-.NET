@@ -4,7 +4,7 @@
     using NUnit.Framework;
 
     [TestFixture]
-    public class ExTaskBaseline
+    public class ExTaskBaseline : ApiExampleBase
     {
         [Test]
         public void WorkWithTaskBaseline()

@@ -15,7 +15,7 @@
             // ExFor: Spreadsheet2003SaveOptions.#ctor
             // ExFor: Spreadsheet2003SaveOptions.ResourceView
             // ExFor: Spreadsheet2003SaveOptions.AssignmentView
-            // ExSummary: Shows how to use add columns to be exported during export project into Spreadsheet2003 format.
+            // ExSummary: Shows how to add columns to be exported during export project into Spreadsheet2003 format.
             var project = new Project(DataDir + "CreateProject2.mpp");
 
             var options = new Spreadsheet2003SaveOptions();

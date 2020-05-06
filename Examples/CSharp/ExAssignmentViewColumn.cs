@@ -9,33 +9,36 @@
     public class ExAssignmentViewColumn : ApiExampleBase
     {
         [Test]
-        public void UsingAssignmentViewColumn()
+        public void WorkWithAssignmentViewColumn()
         {
-            // ExStart:UsingSpreadsheet2003SaveOptions
+            // ExStart
             // ExFor: AssignmentViewColumn
             // ExFor: AssignmentViewColumn.#ctor(String,Int32,AssignmentToColumnTextConverter)
             // ExFor: AssignmentViewColumn.Field
-            // ExSummary: Shows how to use add columns for assignment views.
+            // ExFor: AssignmentViewColumn.GetColumnText(ResourceAssignment)
+            // ExFor: AssignmentToColumnTextConverter
+            // ExSummary: Shows how to add columns for assignment views.
             var project = new Project(DataDir + "CreateProject2.mpp");
 
             var options = new Spreadsheet2003SaveOptions();
-            var ganttChartColumn = new GanttChartColumn("WBS", 100, delegate(Task task) { return task.Get(Tsk.WBS); });
-            options.View.Columns.Add(ganttChartColumn);
 
-            var resourceViewColumn = new ResourceViewColumn("Cost center", 100, delegate(Resource resource) { return resource.Get(Rsc.CostCenter); });
-            options.ResourceView.Columns.Add(resourceViewColumn);
+            var column = new AssignmentViewColumn("Notes", 200, delegate(ResourceAssignment assignment) { return assignment.Get(Asn.Notes); });
+            options.AssignmentView.Columns.Add(column);
 
-            var assignmentViewColumn = new AssignmentViewColumn("Notes", 200, delegate(ResourceAssignment assignment) { return assignment.Get(Asn.Notes); });
-            options.AssignmentView.Columns.Add(assignmentViewColumn);
-
-            foreach (var column in options.AssignmentView.Columns)
+            foreach (var assignment in project.ResourceAssignments)
             {
-                Console.WriteLine(column.Field);
+                foreach (var col in options.AssignmentView.Columns)
+                {
+                    var assnCol = (AssignmentViewColumn)col;
+                    Console.WriteLine("Column Field: " + assnCol.Field);
+                    Console.WriteLine("Column Text ( converted ): " + assnCol.GetColumnText(assignment));
+                    Console.WriteLine();
+                }
             }
 
             project.Save(OutDir + "UsingSpreadsheet2003SaveOptions_out.xml", options);
 
-            // ExEnd:UsingSpreadsheet2003SaveOptions
+            // ExEnd
         }
     }
 }
