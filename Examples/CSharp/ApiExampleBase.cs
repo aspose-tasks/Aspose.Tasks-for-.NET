@@ -13,15 +13,6 @@
             OutDir = new Uri(new Uri(CodeBaseDir), @"Data/Out/").LocalPath;
         }
 
-        
-        protected bool IsLicensed
-        {
-            get
-            {
-                return false;
-            }
-        }
-
         /// <summary>
         /// Gets the path to the documents used by the code examples. Ends with a back slash.
         /// </summary>

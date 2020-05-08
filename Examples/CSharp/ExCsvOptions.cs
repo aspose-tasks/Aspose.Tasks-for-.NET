@@ -18,14 +18,7 @@
             // ExFor: CsvOptions.IncludeHeaders
             // ExFor: CsvOptions.TextDelimiter
             // ExFor: CsvTextDelimiter
-            // ExFor: CsvTextDelimiter.Comma
-            // ExFor: CsvTextDelimiter.Semicolon
-            // ExFor: CsvTextDelimiter.Space
-            // ExFor: CsvTextDelimiter.Tab
             // ExFor: DataCategory
-            // ExFor: DataCategory.Assignments
-            // ExFor: DataCategory.Resources
-            // ExFor: DataCategory.Tasks
             // ExSummary: Shows how to use <see cref="Aspose.Tasks.Saving.CsvOptions" /> to save a project as CSV file.
             var project = new Project(DataDir + "EstimatedMilestoneTasks.mpp");
             var options = new CsvOptions

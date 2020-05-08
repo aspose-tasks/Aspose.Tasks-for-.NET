@@ -16,11 +16,7 @@
             // ExFor: RiskAnalyzer.Analyze(Project)
             // ExFor: RiskAnalyzer.Settings
             // ExFor: RiskAnalysis.ConfidenceLevel
-            // ExFor: RiskAnalysis.ConfidenceLevel.CL75
-            // ExFor: RiskAnalysis.ConfidenceLevel.CL85
-            // ExFor: RiskAnalysis.ConfidenceLevel.CL90
-            // ExFor: RiskAnalysis.ConfidenceLevel.CL95
-            // ExFor: RiskAnalysis.ConfidenceLevel.CL99
+            // ExFor: ProbabilityDistributionType
             // ExSummary: Shows how to start analysis of risks by using <see cref="Aspose.Tasks.RiskAnalysis.RiskAnalysisSettings" />.
             var settings = new RiskAnalysisSettings
             {

@@ -19,6 +19,7 @@
                 // ExFor: ByYearDayRepetition.Month
                 // ExFor: YearlyRepetitionBase
                 // ExFor: YearlyRepetitionBase.#ctor
+                // ExFor: Month
                 // ExSummary: Shows how to work with year day repetitions while create a new recurring tasks.
                 var project = new Project(DataDir + "Project1.mpp");
                 var parameters = new RecurringTaskParameters

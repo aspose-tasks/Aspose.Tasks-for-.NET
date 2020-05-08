@@ -15,6 +15,7 @@
         {
             // ExStart:GetSetTaskLinkType
             // ExFor: TaskLink.LinkType
+            // ExFor: TaskLinkType
             // ExSummary: Shows how to get/set a link type of a task link.
             var project = new Project();
 

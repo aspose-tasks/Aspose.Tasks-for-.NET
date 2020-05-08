@@ -33,6 +33,7 @@
             // ExFor: RecurringTaskInfo.YearlyOrdinalMonth
             // ExFor: RecurringTaskInfo.YearlyOrdinalNumber
             // ExFor: RecurringTaskInfo.YearlyUseOrdinalDay
+            // ExFor: OrdinalNumber
             // ExSummary: Shows how to read with recurring info of tasks.
             var project = new Project(DataDir + "TestRecurringTask2016.mpp");
 

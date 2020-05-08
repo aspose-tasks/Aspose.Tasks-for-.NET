@@ -19,7 +19,10 @@
             {
                 var project = new Project(DataDir + "Blank2010.mpp");
 
-                var options = new ImageSaveOptions(SaveFileFormat.PNG) { TimescaleTier = new TimescaleTier(TimescaleUnit.Minutes, 1) };
+                var options = new ImageSaveOptions(SaveFileFormat.PNG)
+                {
+                    TimescaleTier = new TimescaleTier(TimescaleUnit.Minutes, 1)
+                };
                 project.Save(OutDir + "SaveToStreamAndCatchException_out.mpp", options);
             }
             catch (BitmapInvalidSizeException ex)

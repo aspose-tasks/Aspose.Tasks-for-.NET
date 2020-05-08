@@ -12,30 +12,6 @@
         {
             // ExStart:CustomizeDateFormats
             // ExFor: DateFormat
-            // ExFor: DateFormat.Custom
-            // ExFor: DateFormat.DateDd
-            // ExFor: DateFormat.DateDddDd
-            // ExFor: DateFormat.DateDddHhMmAM
-            // ExFor: DateFormat.DateDddMmDd
-            // ExFor: DateFormat.DateDddMmDdYy
-            // ExFor: DateFormat.DateDddMmDdYyHhMmAM
-            // ExFor: DateFormat.DateDddMmmDd
-            // ExFor: DateFormat.DateDddMmmDdYyy
-            // ExFor: DateFormat.DateDdMmYyyy
-            // ExFor: DateFormat.DateHhMmAm
-            // ExFor: DateFormat.DateMmDd
-            // ExFor: DateFormat.DateMmDdYy
-            // ExFor: DateFormat.DateMmDdYyHhMmAM
-            // ExFor: DateFormat.DateMmDdYyyy
-            // ExFor: DateFormat.DateMmmDd
-            // ExFor: DateFormat.DateMmmDdHhMmAM
-            // ExFor: DateFormat.DateMmmDdYyy
-            // ExFor: DateFormat.DateMmmmDd
-            // ExFor: DateFormat.DateMmmmDdYyyy
-            // ExFor: DateFormat.DateMmmmDdYyyyHhMmAM
-            // ExFor: DateFormat.DateWwwDd
-            // ExFor: DateFormat.DateWwwDdYyHhMmAm
-            // ExFor: DateFormat.Default
             // ExSummary: Shows how to customize date format of all dates in the project to be exported. 
             var project = new Project(DataDir + "CreateProject2.mpp");
             project.Set(Prj.StartDate, new DateTime(2014, 9, 22));

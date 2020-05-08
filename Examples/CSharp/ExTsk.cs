@@ -14,7 +14,6 @@
         {
             // ExStart
             // ExFor: Tsk.ActualOvertimeCost
-            // ExFor: TaskKey.ActualOvertimeCost
             // ExSummary: Shows how to read/write Tsk.ActualOvertimeCost property.
             var project = new Project();
 
@@ -32,7 +31,6 @@
         {
             // ExStart
             // ExFor: Tsk.ActualOvertimeWork
-            // ExFor: TaskKey.ActualOvertimeWork
             // ExSummary: Shows how to read/write Tsk.ActualOvertimeWork property.
             var project = new Project();
             project.Set(Prj.WorkFormat, TimeUnitType.Day);
@@ -51,7 +49,6 @@
         {
             // ExStart
             // ExFor: Tsk.ActualOvertimeWorkProtected
-            // ExFor: TaskKey.ActualOvertimeWorkProtected
             // ExSummary: Shows how to read/write Tsk.ActualOvertimeWorkProtected property.
             var project = new Project();
             project.Set(Prj.WorkFormat, TimeUnitType.Day);
@@ -70,7 +67,6 @@
         {
             // ExStart
             // ExFor: Tsk.ActualWork
-            // ExFor: TaskKey.ActualWork
             // ExSummary: Shows how to read/write Tsk.ActualWork property.
             var project = new Project();
             project.Set(Prj.WorkFormat, TimeUnitType.Day);
@@ -89,7 +85,6 @@
         {
             // ExStart
             // ExFor: Tsk.ActualWorkProtected
-            // ExFor: TaskKey.ActualWorkProtected
             // ExSummary: Shows how to read/write Tsk.ActualWorkProtected property.
             var project = new Project();
             project.Set(Prj.WorkFormat, TimeUnitType.Day);
@@ -108,7 +103,6 @@
         {
             // ExStart
             // ExFor: Tsk.CommitmentFinish
-            // ExFor: TaskKey.CommitmentFinish
             // ExSummary: Shows how to read/write Tsk.CommitmentFinish property.
             var project = new Project();
 
@@ -126,7 +120,6 @@
         {
             // ExStart
             // ExFor: Tsk.CommitmentStart
-            // ExFor: TaskKey.CommitmentStart
             // ExSummary: Shows how to read/write Tsk.CommitmentStart property.
             var project = new Project();
 
@@ -144,7 +137,6 @@
         {
             // ExStart
             // ExFor: Tsk.CommitmentType
-            // ExFor: TaskKey.CommitmentType
             // ExSummary: Shows how to read/write Tsk.CommitmentType property.
             var project = new Project();
 
@@ -162,7 +154,6 @@
         {
             // ExStart
             // ExFor: Tsk.Contact
-            // ExFor: TaskKey.Contact
             // ExSummary: Shows how to read/write Tsk.Contact property.
             var project = new Project();
 
@@ -180,7 +171,6 @@
         {
             // ExStart
             // ExFor: Tsk.Created
-            // ExFor: TaskKey.Created
             // ExSummary: Shows how to read/write Tsk.Created property.
             var project = new Project();
 
@@ -198,7 +188,6 @@
         {
             // ExStart
             // ExFor: Tsk.Deadline
-            // ExFor: TaskKey.Deadline
             // ExSummary: Shows how to read/write Tsk.Deadline property.
             var project = new Project();
 
@@ -216,7 +205,6 @@
         {
             // ExStart
             // ExFor: Tsk.DisplayAsSummary
-            // ExFor: TaskKey.DisplayAsSummary
             // ExSummary: Shows how to read/write Tsk.DisplayAsSummary property.
             var project = new Project();
 
@@ -234,7 +222,6 @@
         {
             // ExStart
             // ExFor: Tsk.DisplayOnTimeline
-            // ExFor: TaskKey.DisplayOnTimeline
             // ExSummary: Shows how to read/write Tsk.DisplayOnTimeline property.
             var project = new Project();
 
@@ -252,7 +239,6 @@
         {
             // ExStart
             // ExFor: Tsk.DurationText
-            // ExFor: TaskKey.DurationText
             // ExSummary: Shows how to read/write Tsk.DurationText property.
             var project = new Project();
 
@@ -270,7 +256,6 @@
         {
             // ExStart
             // ExFor: Tsk.DurationVariance
-            // ExFor: TaskKey.DurationVariance
             // ExSummary: Shows how to read/write Tsk.DurationVariance property.
             var project = new Project();
             project.Set(Prj.WorkFormat, TimeUnitType.Hour);
@@ -289,7 +274,6 @@
         {
             // ExStart
             // ExFor: Tsk.EarlyFinish
-            // ExFor: TaskKey.EarlyFinish
             // ExSummary: Shows how to read/write Tsk.EarlyFinish property.
             var project = new Project();
 
@@ -307,7 +291,6 @@
         {
             // ExStart
             // ExFor: Tsk.EarlyStart
-            // ExFor: TaskKey.EarlyStart
             // ExSummary: Shows how to read/write Tsk.EarlyStart property.
             var project = new Project();
 
@@ -325,7 +308,6 @@
         {
             // ExStart
             // ExFor: Tsk.EarnedValueMethod
-            // ExFor: TaskKey.EarnedValueMethod
             // ExSummary: Shows how to read/write Tsk.EarnedValueMethod property.
             var project = new Project();
 
@@ -343,7 +325,6 @@
         {
             // ExStart
             // ExFor: Tsk.ExternalTaskProject
-            // ExFor: TaskKey.ExternalTaskProject
             // ExSummary: Shows how to read/write Tsk.ExternalTaskProject property.
             var project = new Project();
 
@@ -361,7 +342,6 @@
         {
             // ExStart
             // ExFor: Tsk.FinishSlack
-            // ExFor: TaskKey.FinishSlack
             // ExSummary: Shows how to read/write Tsk.FinishSlack property.
             var project = new Project();
 
@@ -379,7 +359,6 @@
         {
             // ExStart
             // ExFor: Tsk.FinishText
-            // ExFor: TaskKey.FinishText
             // ExSummary: Shows how to read/write Tsk.FinishText property.
             var project = new Project();
 
@@ -397,7 +376,6 @@
         {
             // ExStart
             // ExFor: Tsk.FinishVariance
-            // ExFor: TaskKey.FinishVariance
             // ExSummary: Shows how to read/write Tsk.FinishVariance property.
             var project = new Project();
 
@@ -415,7 +393,6 @@
         {
             // ExStart
             // ExFor: Tsk.FixedCostAccrual
-            // ExFor: TaskKey.FixedCostAccrual
             // ExSummary: Shows how to read/write Tsk.FixedCostAccrual property.
             var project = new Project();
 
@@ -433,7 +410,6 @@
         {
             // ExStart
             // ExFor: Tsk.FreeSlack
-            // ExFor: TaskKey.FreeSlack
             // ExSummary: Shows how to read/write Tsk.FreeSlack property.
             var project = new Project();
 
@@ -451,7 +427,6 @@
         {
             // ExStart
             // ExFor: Tsk.Guid
-            // ExFor: TaskKey.Guid
             // ExSummary: Shows how to read/write Tsk.Guid property.
             var project = new Project();
 
@@ -469,7 +444,6 @@
         {
             // ExStart
             // ExFor: Tsk.HideBar
-            // ExFor: TaskKey.HideBar
             // ExSummary: Shows how to read/write Tsk.HideBar property.
             var project = new Project();
 
@@ -489,9 +463,6 @@
             // ExFor: Tsk.Hyperlink
             // ExFor: Tsk.HyperlinkAddress
             // ExFor: Tsk.HyperlinkSubAddress
-            // ExFor: TaskKey.Hyperlink
-            // ExFor: TaskKey.HyperlinkAddress
-            // ExFor: TaskKey.HyperlinkSubAddress
             // ExSummary: Shows how to read/write Tsk.Hyperlink properties.
             var project = new Project();
 
@@ -513,7 +484,6 @@
         {
             // ExStart
             // ExFor: Tsk.IgnoreResourceCalendar
-            // ExFor: TaskKey.IgnoreResourceCalendar
             // ExSummary: Shows how to read/write Tsk.IgnoreResourceCalendar property.
             var project = new Project();
 
@@ -531,7 +501,6 @@
         {
             // ExStart
             // ExFor: Tsk.IgnoreWarnings
-            // ExFor: TaskKey.IgnoreWarnings
             // ExSummary: Shows how to read/write Tsk.IgnoreWarnings property.
             var project = new Project();
 
@@ -549,7 +518,6 @@
         {
             // ExStart
             // ExFor: Tsk.IsActive
-            // ExFor: TaskKey.IsActive
             // ExSummary: Shows how to read/write Tsk.IsActive property.
             var project = new Project();
 
@@ -567,7 +535,6 @@
         {
             // ExStart
             // ExFor: Tsk.IsExpanded
-            // ExFor: TaskKey.IsExpanded
             // ExSummary: Shows how to read/write Tsk.IsExpanded property.
             var project = new Project();
 
@@ -585,7 +552,6 @@
         {
             // ExStart
             // ExFor: Tsk.IsExternalTask
-            // ExFor: TaskKey.IsExternalTask
             // ExSummary: Shows how to read/write Tsk.IsExternalTask property.
             var project = new Project();
 
@@ -603,7 +569,6 @@
         {
             // ExStart
             // ExFor: Tsk.IsManual
-            // ExFor: TaskKey.IsManual
             // ExSummary: Shows how to read/write Tsk.IsManual property.
             var project = new Project();
 
@@ -621,7 +586,6 @@
         {
             // ExStart
             // ExFor: Tsk.IsMarked
-            // ExFor: TaskKey.IsMarked
             // ExSummary: Shows how to read/write Tsk.IsMarked property.
             var project = new Project();
 
@@ -639,7 +603,6 @@
         {
             // ExStart
             // ExFor: Tsk.IsNull
-            // ExFor: TaskKey.IsNull
             // ExSummary: Shows how to read/write Tsk.IsNull property.
             var project = new Project();
 
@@ -657,7 +620,6 @@
         {
             // ExStart
             // ExFor: Tsk.IsOverallocated
-            // ExFor: TaskKey.IsOverallocated
             // ExSummary: Shows how to read/write Tsk.IsOverallocated property.
             var project = new Project();
 
@@ -675,7 +637,6 @@
         {
             // ExStart
             // ExFor: Tsk.IsPublished
-            // ExFor: TaskKey.IsPublished
             // ExSummary: Shows how to read/write Tsk.IsPublished property.
             var project = new Project();
 
@@ -693,7 +654,6 @@
         {
             // ExStart
             // ExFor: Tsk.IsRecurring
-            // ExFor: TaskKey.IsRecurring
             // ExSummary: Shows how to read/write Tsk.IsRecurring property.
             var project = new Project();
 
@@ -711,7 +671,6 @@
         {
             // ExStart
             // ExFor: Tsk.IsResumeValid
-            // ExFor: TaskKey.IsResumeValid
             // ExSummary: Shows how to read/write Tsk.IsResumeValid property.
             var project = new Project();
 
@@ -729,7 +688,6 @@
         {
             // ExStart
             // ExFor: Tsk.IsRollup
-            // ExFor: TaskKey.IsRollup
             // ExSummary: Shows how to read/write Tsk.IsRollup property.
             var project = new Project();
 
@@ -747,7 +705,6 @@
         {
             // ExStart
             // ExFor: Tsk.IsSubproject
-            // ExFor: TaskKey.IsSubproject
             // ExSummary: Shows how to read/write Tsk.IsSubproject property.
             var project = new Project();
 
@@ -765,7 +722,6 @@
         {
             // ExStart
             // ExFor: Tsk.IsSubprojectReadOnly
-            // ExFor: TaskKey.IsSubprojectReadOnly
             // ExSummary: Shows how to read/write Tsk.IsSubprojectReadOnly property.
             var project = new Project();
 
@@ -783,7 +739,6 @@
         {
             // ExStart
             // ExFor: Tsk.IsSummary
-            // ExFor: TaskKey.IsSummary
             // ExSummary: Shows how to read/write Tsk.IsSummary property.
             var project = new Project();
 
@@ -801,7 +756,6 @@
         {
             // ExStart
             // ExFor: Tsk.LateFinish
-            // ExFor: TaskKey.LateFinish
             // ExSummary: Shows how to read/write Tsk.LateFinish property.
             var project = new Project();
 
@@ -819,7 +773,6 @@
         {
             // ExStart
             // ExFor: Tsk.LateStart
-            // ExFor: TaskKey.LateStart
             // ExSummary: Shows how to read/write Tsk.LateStart property.
             var project = new Project();
 
@@ -837,7 +790,6 @@
         {
             // ExStart
             // ExFor: Tsk.LevelAssignments
-            // ExFor: TaskKey.LevelAssignments
             // ExSummary: Shows how to read/write Tsk.LevelAssignments property.
             var project = new Project();
 
@@ -855,7 +807,6 @@
         {
             // ExStart
             // ExFor: Tsk.LevelingCanSplit
-            // ExFor: TaskKey.LevelingCanSplit
             // ExSummary: Shows how to read/write Tsk.LevelingCanSplit property.
             var project = new Project();
 
@@ -873,7 +824,6 @@
         {
             // ExStart
             // ExFor: Tsk.LevelingDelay
-            // ExFor: TaskKey.LevelingDelay
             // ExSummary: Shows how to read/write Tsk.LevelingDelay property.
             var project = new Project();
 
@@ -891,7 +841,6 @@
         {
             // ExStart
             // ExFor: Tsk.LevelingDelayFormat
-            // ExFor: TaskKey.LevelingDelayFormat
             // ExSummary: Shows how to read/write Tsk.LevelingDelayFormat property.
             var project = new Project();
 
@@ -909,7 +858,6 @@
         {
             // ExStart
             // ExFor: Tsk.ManualDuration
-            // ExFor: TaskKey.ManualDuration
             // ExSummary: Shows how to read/write Tsk.ManualDuration property.
             var project = new Project();
 
@@ -927,7 +875,6 @@
         {
             // ExStart
             // ExFor: Tsk.ManualFinish
-            // ExFor: TaskKey.ManualFinish
             // ExSummary: Shows how to read/write Tsk.ManualFinish property.
             var project = new Project();
 
@@ -945,7 +892,6 @@
         {
             // ExStart
             // ExFor: Tsk.ManualStart
-            // ExFor: TaskKey.ManualStart
             // ExSummary: Shows how to read/write Tsk.ManualStart property.
             var project = new Project();
 
@@ -963,7 +909,6 @@
         {
             // ExStart
             // ExFor: Tsk.NotesRTF
-            // ExFor: TaskKey.NotesRTF
             // ExSummary: Shows how to read/write Tsk.NotesRTF property.
             var project = new Project();
 
@@ -986,7 +931,6 @@
         {
             // ExStart
             // ExFor: Tsk.NotesText
-            // ExFor: TaskKey.NotesText
             // ExSummary: Shows how to read/write Tsk.NotesText property.
             var project = new Project();
 
@@ -1004,7 +948,6 @@
         {
             // ExStart
             // ExFor: Tsk.PercentWorkComplete
-            // ExFor: TaskKey.PercentWorkComplete
             // ExSummary: Shows how to read/write Tsk.PercentWorkComplete property.
             var project = new Project();
 
@@ -1022,7 +965,6 @@
         {
             // ExStart
             // ExFor: Tsk.PhysicalPercentComplete
-            // ExFor: TaskKey.PhysicalPercentComplete
             // ExSummary: Shows how to read/write Tsk.PhysicalPercentComplete property.
             var project = new Project();
 
@@ -1040,7 +982,6 @@
         {
             // ExStart
             // ExFor: Tsk.PreleveledFinish
-            // ExFor: TaskKey.PreleveledFinish
             // ExSummary: Shows how to read/write Tsk.PreleveledFinish property.
             var project = new Project();
 
@@ -1058,7 +999,6 @@
         {
             // ExStart
             // ExFor: Tsk.PreleveledStart
-            // ExFor: TaskKey.PreleveledStart
             // ExSummary: Shows how to read/write Tsk.PreleveledStart property.
             var project = new Project();
 
@@ -1076,7 +1016,6 @@
         {
             // ExStart
             // ExFor: Tsk.RegularWork
-            // ExFor: TaskKey.RegularWork
             // ExSummary: Shows how to read/write Tsk.RegularWork property.
             var project = new Project();
             project.Set(Prj.WorkFormat, TimeUnitType.Hour);
@@ -1095,7 +1034,6 @@
         {
             // ExStart
             // ExFor: Tsk.RemainingDuration
-            // ExFor: TaskKey.RemainingDuration
             // ExSummary: Shows how to read/write Tsk.RemainingDuration property.
             var project = new Project();
 
@@ -1113,7 +1051,6 @@
         {
             // ExStart
             // ExFor: Tsk.RemainingOvertimeCost
-            // ExFor: TaskKey.RemainingOvertimeCost
             // ExSummary: Shows how to read/write Tsk.RemainingOvertimeCost property.
             var project = new Project();
 
@@ -1131,7 +1068,6 @@
         {
             // ExStart
             // ExFor: Tsk.RemainingOvertimeWork
-            // ExFor: TaskKey.RemainingOvertimeWork
             // ExSummary: Shows how to read/write Tsk.RemainingOvertimeWork property.
             var project = new Project();
             project.Set(Prj.WorkFormat, TimeUnitType.Hour);
@@ -1150,7 +1086,6 @@
         {
             // ExStart
             // ExFor: Tsk.RemainingWork
-            // ExFor: TaskKey.RemainingWork
             // ExSummary: Shows how to read/write Tsk.RemainingWork property.
             var project = new Project();
             project.Set(Prj.WorkFormat, TimeUnitType.Hour);
@@ -1169,7 +1104,6 @@
         {
             // ExStart
             // ExFor: Tsk.StartSlack
-            // ExFor: TaskKey.StartSlack
             // ExSummary: Shows how to read/write Tsk.StartSlack property.
             var project = new Project();
 
@@ -1187,7 +1121,6 @@
         {
             // ExStart
             // ExFor: Tsk.StartText
-            // ExFor: TaskKey.StartText
             // ExSummary: Shows how to read/write Tsk.StartText property.
             var project = new Project();
 
@@ -1205,7 +1138,6 @@
         {
             // ExStart
             // ExFor: Tsk.StartVariance
-            // ExFor: TaskKey.StartVariance
             // ExSummary: Shows how to read/write Tsk.StartVariance property.
             var project = new Project();
 
@@ -1223,7 +1155,6 @@
         {
             // ExStart
             // ExFor: Tsk.StatusManager
-            // ExFor: TaskKey.StatusManager
             // ExSummary: Shows how to read/write Tsk.StatusManager property.
             var project = new Project();
 
@@ -1241,7 +1172,6 @@
         {
             // ExStart
             // ExFor: Tsk.TotalSlack
-            // ExFor: TaskKey.TotalSlack
             // ExSummary: Shows how to read/write Tsk.TotalSlack property.
             var project = new Project();
 
@@ -1259,7 +1189,6 @@
         {
             // ExStart
             // ExFor: Tsk.Type
-            // ExFor: TaskKey.Type
             // ExSummary: Shows how to read/write Tsk.Type property.
             var project = new Project();
 
@@ -1277,7 +1206,6 @@
         {
             // ExStart
             // ExFor: Tsk.Work
-            // ExFor: TaskKey.Work
             // ExSummary: Shows how to read/write Tsk.Work property.
             var project = new Project();
             project.Set(Prj.WorkFormat, TimeUnitType.Hour);
@@ -1296,7 +1224,6 @@
         {
             // ExStart
             // ExFor: Tsk.WorkVariance
-            // ExFor: TaskKey.WorkVariance
             // ExSummary: Shows how to read/write Tsk.WorkVariance property.
             var project = new Project();
 
@@ -1315,8 +1242,6 @@
             // ExStart:DateTimeLimitations
             // ExFor: Tsk.ActualStart
             // ExFor: Tsk.ActualFinish
-            // ExFor: TaskKey.ActualStart
-            // ExFor: TaskKey.ActualFinish
             // ExSummary: Shows that project' dates are reset in an evaluation mode.
             var project = new Project();
 
@@ -1340,8 +1265,6 @@
             // ExStart:ReadBudgetWorkAndCost
             // ExFor: Tsk.BudgetWork
             // ExFor: Tsk.BudgetCost
-            // ExFor: TaskKey.BudgetWork
-            // ExFor: TaskKey.BudgetCost
             // ExSummary: Shows how to read budget work/cost values of task/resource/assignment.
             var project = new Project(DataDir + "BudgetWorkAndCost.mpp");
 
@@ -1389,7 +1312,6 @@
         {
             // ExStart:ChangeTaskProgress
             // ExFor: Tsk.PercentComplete 
-            // ExFor: TaskKey.PercentComplete 
             // ExSummary: Shows how to change a task progress by updating of task percent complete.
             var project = new Project();
             Console.WriteLine("Project Calculation mode is Automatic: {0}", project.CalculationMode.Equals(CalculationMode.Automatic));
@@ -1420,11 +1342,6 @@
             // ExFor: Tsk.Start
             // ExFor: Tsk.Finish
             // ExFor: TaskKey
-            // ExFor: TaskKey.Id
-            // ExFor: TaskKey.Uid
-            // ExFor: TaskKey.Name
-            // ExFor: TaskKey.Start
-            // ExFor: TaskKey.Finish
             // ExSummary: Shows how to read/write task properties.
             var project = new Project();
 
@@ -1456,8 +1373,6 @@
             // ExStart:ReadActualTaskProperties
             // ExFor: Tsk.ActualCost
             // ExFor: Tsk.ActualDuration
-            // ExFor: TaskKey.ActualCost
-            // ExFor: TaskKey.ActualDuration
             // ExSummary: Shows how to read task's actual properties.
             var project = new Project(DataDir + "ActualTaskProperties.mpp");
 
@@ -1482,7 +1397,6 @@
         {
             // ExStart:ReadTaskPriority
             // ExFor: Tsk.Priority
-            // ExFor: TaskKey.Priority
             // ExSummary: Shows how to read a task priority.
             var project = new Project(DataDir + "TaskPriority.mpp");
 
@@ -1505,7 +1419,6 @@
             {
                 // ExStart:CreateSubProjectTask
                 // ExFor: Tsk.SubprojectName
-                // ExFor: TaskKey.SubprojectName
                 // ExSummary: Shows how to create a subproject task.
                 var project = new Project(DataDir + "SubProjectTask.mpp");
 
@@ -1530,7 +1443,6 @@
         {
             // ExStart:ReadWriteTaskCalendar
             // ExFor: Tsk.Calendar
-            // ExFor: TaskKey.Calendar
             // ExSummary: Shows how to read/write task calendars.
             var project = new Project(DataDir + "ReadTaskCalendar.mpp");
             var task = project.RootTask.Children.Add("Task1");
@@ -1560,10 +1472,6 @@
             // ExFor: Tsk.RemainingCost
             // ExFor: Tsk.FixedCost
             // ExFor: Tsk.CostVariance
-            // ExFor: TaskKey.Cost
-            // ExFor: TaskKey.RemainingCost
-            // ExFor: TaskKey.FixedCost
-            // ExFor: TaskKey.CostVariance
             // ExSummary: Shows how to read task costs.
             var project = new Project();
 
@@ -1589,8 +1497,6 @@
             // ExStart:ReadTaskOutlineProperties
             // ExFor: Tsk.OutlineLevel
             // ExFor: Tsk.OutlineNumber
-            // ExFor: TaskKey.OutlineLevel
-            // ExFor: TaskKey.OutlineNumber
             // ExSummary: Shows how to read task outline properties.
             var project = new Project(DataDir + "TaskOutlineProperties.mpp");
 
@@ -1613,8 +1519,6 @@
             // ExStart:ReadStopResumeDates
             // ExFor: Tsk.Stop
             // ExFor: Tsk.Resume
-            // ExFor: TaskKey.Stop
-            // ExFor: TaskKey.Resume
             // ExSummary: Shows how to read task's Stop/Resume dates.
             var project = new Project(DataDir + "StopResumeDates.mpp");
 
@@ -1652,8 +1556,6 @@
             // ExStart:ReadTaskOvertimes
             // ExFor: Tsk.OvertimeCost
             // ExFor: Tsk.OvertimeWork
-            // ExFor: TaskKey.OvertimeCost
-            // ExFor: TaskKey.OvertimeWork
             // ExSummary: Shows how to read task overtimes.
             var project = new Project(DataDir + "TaskOvertimes.mpp");
 
@@ -1679,8 +1581,6 @@
             // ExStart:AddTaskDuration
             // ExFor: Tsk.Duration
             // ExFor: Tsk.DurationFormat
-            // ExFor: TaskKey.Duration
-            // ExFor: TaskKey.DurationFormat
             // ExSummary: Shows how to set duration of the task. 
             var project = new Project();
 
@@ -1700,7 +1600,6 @@
         {
             // ExStart:TaskWarning
             // ExFor: Tsk.Warning
-            // ExFor: TaskKey.Warning
             // ExSummary: Shows how to read a task warning.
             var project = new Project(DataDir + "schedule-conflict.mpp");
             var task = project.RootTask.Children.GetById(1);
@@ -1715,8 +1614,6 @@
             // ExStart:ReadTaskWBS
             // ExFor: Tsk.WBS
             // ExFor: Tsk.WBSLevel
-            // ExFor: TaskKey.WBS
-            // ExFor: TaskKey.WBSLevel
             // ExSummary: Shows how to read task's WBS codes.
             var project = new Project(DataDir + "TaskWBS.mpp");
 
@@ -1739,8 +1636,6 @@
             // ExStart:GetSetTaskConstraint
             // ExFor: Tsk.ConstraintType
             // ExFor: Tsk.ConstraintDate
-            // ExFor: TaskKey.ConstraintType
-            // ExFor: TaskKey.ConstraintDate
             // ExSummary: Shows how to get/set a constraint for a task.
             var project = new Project(DataDir + "ConstraintAsLateAsPossible.mpp");
 
@@ -1775,8 +1670,6 @@
             // ExStart:FindCriticalEffortDrivenTasks
             // ExFor: Tsk.IsCritical
             // ExFor: Tsk.IsEffortDriven
-            // ExFor: TaskKey.IsCritical
-            // ExFor: TaskKey.IsEffortDriven
             // ExSummary: Shows how to find critical and/or effort driven tasks.
             var project = new Project(DataDir + "CriticalEffortDrivenTasks.mpp");
 
@@ -1801,8 +1694,6 @@
             // ExStart:FindEstimatedMilestoneTasks
             // ExFor: Tsk.IsEstimated
             // ExFor: Tsk.IsMilestone
-            // ExFor: TaskKey.IsEstimated
-            // ExFor: TaskKey.IsMilestone
             // ExSummary: Shows how to find estimated and/or milestone tasks.
             var prj = new Project(DataDir + "EstimatedMilestoneTasks.mpp");
 
@@ -1826,7 +1717,6 @@
         {
             // ExStart:IdentifyCrossProjectTasks
             // ExFor: Tsk.ExternalId
-            // ExFor: TaskKey.ExternalId
             // ExSummary: Shows how to identify cross project tasks.
             var project = new Project(DataDir + "External.mpp");
             var externalTask = project.RootTask.Children.GetByUid(1);
@@ -1848,10 +1738,6 @@
             // ExFor: Tsk.BCWP
             // ExFor: Tsk.BCWS
             // ExFor: Tsk.CV
-            // ExFor: TaskKey.ACWP
-            // ExFor: TaskKey.BCWP
-            // ExFor: TaskKey.BCWS
-            // ExFor: TaskKey.CV
             // ExSummary: Shows how to read task cost values.
             var project = new Project(DataDir + "ResourceAssignmentCosts.mpp");
 

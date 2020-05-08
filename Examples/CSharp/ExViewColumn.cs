@@ -75,7 +75,7 @@
             columns[0].TextStyleModificationCallback = new MyTextStyleCallback();
             
             // iterate over columns
-            foreach (ViewColumn column in columns)
+            foreach (var column in columns)
             {
                 Console.WriteLine("Column Name: " + column.Name);
                 Console.WriteLine("Column Field: " + column.Field);

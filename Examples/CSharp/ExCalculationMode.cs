@@ -10,7 +10,7 @@
         public void ApplyCalculationModeAuto()
         {
             // ExStart:ApplyCalculationModeAuto
-            // ExFor: CalculationMode.Automatic
+            // ExFor: CalculationMode
             // ExSummary: Shows how to use auto calculation mode.
             var project = new Project
             {
@@ -39,7 +39,6 @@
         {
             // ExStart:ApplyCalculationModeManual
             // ExFor: CalculationMode
-            // ExFor: CalculationMode.Manual
             // ExSummary: Shows how to use manual calculation mode.
             var project = new Project
             {
@@ -75,7 +74,7 @@
         public void ApplyCalculationModeNone()
         {
             // ExStart:ApplyCalculationModeNone
-            // ExFor: CalculationMode.None
+            // ExFor: CalculationMode
             // ExSummary: Shows how to use none calculation mode.
             var project = new Project
             {

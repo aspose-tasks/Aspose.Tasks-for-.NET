@@ -15,6 +15,7 @@
         // ExFor: HtmlSaveOptions.ExportFonts
         // ExFor: HtmlSaveOptions.ExportImages
         // ExFor: HtmlSaveOptions.FontFaceTypes
+        // ExFor: FontFaceType
         // ExSummary: Shows how to work with font saving args.
         [TestFixture] // ExSkip
         internal class ResourcePrefixForNestedResources : ApiExampleBase, ICssSavingCallback, IFontSavingCallback, IImageSavingCallback

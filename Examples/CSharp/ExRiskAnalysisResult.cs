@@ -15,6 +15,7 @@
             // ExFor: RiskAnalysis.RiskAnalysisResult.GetRiskItems(RiskItemType)
             // ExFor: RiskAnalysis.RiskAnalysisResult.SaveReport(Stream)
             // ExFor: RiskAnalysis.RiskAnalysisResult.SaveReport(String)
+            // ExFor: RiskItemType
             // ExSummary: Shows how to calculate statistic of risks and save it into as PDF report.
             var settings = new RiskAnalysisSettings
             {

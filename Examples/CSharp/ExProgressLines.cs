@@ -36,6 +36,7 @@
                 // ExFor: ProgressLines.SelectedDates
                 // ExFor: ProgressLines.ShowDate
                 // ExFor: GanttChartView.ProgressLines
+                // ExFor: LinePattern
                 // ExSummary: Shows how to work with progress lines.
                 var project = new Project(DataDir + "Project2.mpp");
                 project.Set(Prj.StatusDate, project.Get(Prj.StartDate));

@@ -17,6 +17,8 @@
             // ExFor: PdfEncryptionDetails.OwnerPassword
             // ExFor: PdfEncryptionDetails.Permissions
             // ExFor: PdfEncryptionDetails.UserPassword
+            // ExFor: PdfPermissions
+            // ExFor: PdfEncryptionAlgorithm
             // ExSummary: Shows how to use specify PDF encryption details while saving a project as PDF file.
             var project = new Project(DataDir + "CreateProject2.mpp");
 

@@ -180,14 +180,6 @@
             // ExFor: Calendar.#ctor(String)
             // ExFor: Calendar.WeekDays
             // ExFor: Aspose.Tasks.DayType
-            // ExFor: Aspose.Tasks.DayType.Exception
-            // ExFor: Aspose.Tasks.DayType.Friday
-            // ExFor: Aspose.Tasks.DayType.Monday
-            // ExFor: Aspose.Tasks.DayType.Saturday
-            // ExFor: Aspose.Tasks.DayType.Sunday
-            // ExFor: Aspose.Tasks.DayType.Thursday
-            // ExFor: Aspose.Tasks.DayType.Tuesday
-            // ExFor: Aspose.Tasks.DayType.Wednesday
             // ExSummary: Shows how to define a new calendar, add week days to it and define working times for days.
             var project = new Project();
 

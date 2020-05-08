@@ -25,6 +25,7 @@
             // ExFor: BarStyle.TextStyle
             // ExFor: BarStyle.BarTextConverter
             // ExFor: BarStyle.TaskToBarTextConverter
+            // ExFor: BarShape
             // ExSummary: Shows how to use custom bar styles.
             var project = new Project(DataDir + "Project2.mpp");
             SaveOptions options = new PdfSaveOptions

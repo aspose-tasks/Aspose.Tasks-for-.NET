@@ -11,10 +11,6 @@
         {
             // ExStart:AddWbsSequence
             // ExFor: WBSSequence
-            // ExFor: WBSSequence.OrderedNumbers
-            // ExFor: WBSSequence.OrderedUppercaseLetters
-            // ExFor: WBSSequence.OrderedLowercaseLetters
-            // ExFor: WBSSequence.UnorderedCharacters
             // ExSummary: Shows how to set WBS sequences.
             var project = new Project();
 

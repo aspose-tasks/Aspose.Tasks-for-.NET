@@ -87,6 +87,7 @@
         {
             // ExStart
             // ExFor: PdfSaveOptions.Compliance
+            // ExFor: PdfCompliance
             // ExSummary: Shows how to set a desired compliance level for generated PDF document.
             var project = new Project(DataDir + "EstimatedMilestoneTasks.mpp");
 
@@ -168,6 +169,7 @@
         {
             // ExStart
             // ExFor: PdfSaveOptions.TextCompression
+            // ExFor: PdfTextCompression
             // ExSummary: Shows how to set a compression type to be used for all content streams except images.
             var project = new Project(DataDir + "EstimatedMilestoneTasks.mpp");
 

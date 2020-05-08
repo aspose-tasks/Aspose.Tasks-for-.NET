@@ -13,7 +13,6 @@
             // ExStart
             // ExFor: Key`2
             // ExFor: Prj.ActualsInSync
-            // ExFor: PrjKey.ActualsInSync
             // ExSummary: Shows how to read/write Prj.ActualsInSync property.
             var project = new Project();
 
@@ -29,7 +28,6 @@
         {
             // ExStart
             // ExFor: Prj.AdminProject
-            // ExFor: PrjKey.AdminProject
             // ExSummary: Shows how to read/write Prj.AdminProject property.
             var project = new Project();
 
@@ -45,7 +43,6 @@
         {
             // ExStart
             // ExFor: Prj.AreEditableActualCosts
-            // ExFor: PrjKey.AreEditableActualCosts
             // ExSummary: Shows how to read/write Prj.AreEditableActualCosts property.
             var project = new Project();
 
@@ -61,7 +58,6 @@
         {
             // ExStart
             // ExFor: Prj.AutoAddNewResourcesAndTasks
-            // ExFor: PrjKey.AutoAddNewResourcesAndTasks
             // ExSummary: Shows how to read/write Prj.AutoAddNewResourcesAndTasks property.
             var project = new Project();
 
@@ -77,7 +73,6 @@
         {
             // ExStart
             // ExFor: Prj.Autolink
-            // ExFor: PrjKey.Autolink
             // ExSummary: Shows how to read/write Prj.Autolink property.
             var project = new Project();
 
@@ -93,7 +88,6 @@
         {
             // ExStart
             // ExFor: Prj.BaselineForEarnedValue
-            // ExFor: PrjKey.BaselineForEarnedValue
             // ExSummary: Shows how to read/write Prj.BaselineForEarnedValue property.
             var project = new Project();
 
@@ -109,7 +103,6 @@
         {
             // ExStart
             // ExFor: Prj.Calendar
-            // ExFor: PrjKey.Calendar
             // ExSummary: Shows how to read/write Prj.Calendar property.
             var project = new Project();
             var calendar = project.Calendars.Add("Standard");
@@ -132,7 +125,6 @@
         {
             // ExStart
             // ExFor: Prj.Category
-            // ExFor: PrjKey.Category
             // ExSummary: Shows how to read/write Prj.Category property.
             var project = new Project();
 
@@ -148,7 +140,6 @@
         {
             // ExStart
             // ExFor: Prj.Company
-            // ExFor: PrjKey.Company
             // ExSummary: Shows how to read/write Prj.Company property.
             var project = new Project();
 
@@ -164,7 +155,6 @@
         {
             // ExStart
             // ExFor: Prj.CreationDate
-            // ExFor: PrjKey.CreationDate
             // ExSummary: Shows how to read/write Prj.CreationDate property.
             var project = new Project();
 
@@ -180,7 +170,6 @@
         {
             // ExStart
             // ExFor: Prj.CriticalSlackLimit
-            // ExFor: PrjKey.CriticalSlackLimit
             // ExSummary: Shows how to read/write Prj.CriticalSlackLimit property.
             var project = new Project();
 
@@ -196,7 +185,6 @@
         {
             // ExStart
             // ExFor: Prj.CurrentDate
-            // ExFor: PrjKey.CurrentDate
             // ExSummary: Shows how to read/write Prj.CurrentDate property.
             var project = new Project();
 
@@ -212,7 +200,6 @@
         {
             // ExStart
             // ExFor: Prj.CustomDateFormat
-            // ExFor: PrjKey.CustomDateFormat
             // ExSummary: Shows how to read/write Prj.CustomDateFormat property.
             var project = new Project();
 
@@ -228,7 +215,6 @@
         {
             // ExStart
             // ExFor: Prj.DateFormat
-            // ExFor: PrjKey.DateFormat
             // ExSummary: Shows how to read/write Prj.DateFormat property.
             var project = new Project();
 
@@ -244,7 +230,6 @@
         {
             // ExStart
             // ExFor: Prj.DefaultFinishTime
-            // ExFor: PrjKey.DefaultFinishTime
             // ExSummary: Shows how to read/write Prj.DefaultFinishTime property.
             var project = new Project();
 
@@ -260,7 +245,6 @@
         {
             // ExStart
             // ExFor: Prj.DurationFormat
-            // ExFor: PrjKey.DurationFormat
             // ExSummary: Shows how to read/write Prj.DurationFormat property.
             var project = new Project();
 
@@ -276,7 +260,6 @@
         {
             // ExStart
             // ExFor: Prj.EarnedValueMethod
-            // ExFor: PrjKey.EarnedValueMethod
             // ExSummary: Shows how to read/write Prj.EarnedValueMethod property.
             var project = new Project();
 
@@ -292,7 +275,6 @@
         {
             // ExStart
             // ExFor: Prj.ExtendedCreationDate
-            // ExFor: PrjKey.ExtendedCreationDate
             // ExSummary: Shows how to read/write Prj.ExtendedCreationDate property.
             var project = new Project();
 
@@ -308,7 +290,6 @@
         {
             // ExStart
             // ExFor: Prj.Guid
-            // ExFor: PrjKey.Guid
             // ExSummary: Shows how to read/write Prj.Guid property.
             var project = new Project();
 
@@ -324,7 +305,6 @@
         {
             // ExStart
             // ExFor: Prj.HonorConstraints
-            // ExFor: PrjKey.HonorConstraints
             // ExSummary: Shows how to read/write Prj.HonorConstraints property.
             var project = new Project();
 
@@ -340,7 +320,6 @@
         {
             // ExStart
             // ExFor: Prj.HyperlinkBase
-            // ExFor: PrjKey.HyperlinkBase
             // ExSummary: Shows how to read/write Prj.HyperlinkBase property.
             var project = new Project();
 
@@ -356,7 +335,6 @@
         {
             // ExStart
             // ExFor: Prj.InsertedProjectsLikeSummary
-            // ExFor: PrjKey.InsertedProjectsLikeSummary
             // ExSummary: Shows how to read/write Prj.InsertedProjectsLikeSummary property.
             var project = new Project();
 
@@ -372,7 +350,6 @@
         {
             // ExStart
             // ExFor: Prj.KeepTaskOnNearestWorkingTimeWhenMadeAutoScheduled
-            // ExFor: PrjKey.KeepTaskOnNearestWorkingTimeWhenMadeAutoScheduled
             // ExSummary: Shows how to read/write Prj.KeepTaskOnNearestWorkingTimeWhenMadeAutoScheduled property.
             var project = new Project();
 
@@ -388,7 +365,6 @@
         {
             // ExStart
             // ExFor: Prj.LastPrinted
-            // ExFor: PrjKey.LastPrinted
             // ExSummary: Shows how to read/write Prj.LastPrinted property.
             var project = new Project();
 
@@ -404,7 +380,6 @@
         {
             // ExStart
             // ExFor: Prj.Manager
-            // ExFor: PrjKey.Manager
             // ExSummary: Shows how to read/write Prj.Manager property.
             var project = new Project();
 
@@ -420,7 +395,6 @@
         {
             // ExStart
             // ExFor: Prj.MicrosoftProjectServerURL
-            // ExFor: PrjKey.MicrosoftProjectServerURL
             // ExSummary: Shows how to read/write Prj.MicrosoftProjectServerURL property.
             var project = new Project();
 
@@ -436,7 +410,6 @@
         {
             // ExStart
             // ExFor: Prj.MoveCompletedEndsBack
-            // ExFor: PrjKey.MoveCompletedEndsBack
             // ExSummary: Shows how to read/write Prj.MoveCompletedEndsBack property.
             var project = new Project();
 
@@ -452,7 +425,6 @@
         {
             // ExStart
             // ExFor: Prj.MoveCompletedEndsForward
-            // ExFor: PrjKey.MoveCompletedEndsForward
             // ExSummary: Shows how to read/write Prj.MoveCompletedEndsForward property.
             var project = new Project();
 
@@ -468,7 +440,6 @@
         {
             // ExStart
             // ExFor: Prj.MoveRemainingStartsBack
-            // ExFor: PrjKey.MoveRemainingStartsBack
             // ExSummary: Shows how to read/write Prj.MoveRemainingStartsBack property.
             var project = new Project();
 
@@ -484,7 +455,6 @@
         {
             // ExStart
             // ExFor: Prj.MoveRemainingStartsForward
-            // ExFor: PrjKey.MoveRemainingStartsForward
             // ExSummary: Shows how to read/write Prj.MoveRemainingStartsForward property.
             var project = new Project();
 
@@ -500,7 +470,6 @@
         {
             // ExStart
             // ExFor: Prj.MultipleCriticalPaths
-            // ExFor: PrjKey.MultipleCriticalPaths
             // ExSummary: Shows how to read/write Prj.MultipleCriticalPaths property.
             var project = new Project();
 
@@ -516,7 +485,6 @@
         {
             // ExStart
             // ExFor: Prj.NewTasksAreManual
-            // ExFor: PrjKey.NewTasksAreManual
             // ExSummary: Shows how to read/write Prj.NewTasksAreManual property.
             var project = new Project();
 
@@ -532,7 +500,6 @@
         {
             // ExStart
             // ExFor: Prj.NewTasksEffortDriven
-            // ExFor: PrjKey.NewTasksEffortDriven
             // ExSummary: Shows how to read/write Prj.NewTasksEffortDriven property.
             var project = new Project();
 
@@ -548,7 +515,6 @@
         {
             // ExStart
             // ExFor: Prj.NewTasksEstimated
-            // ExFor: PrjKey.NewTasksEstimated
             // ExSummary: Shows how to read/write Prj.NewTasksEstimated property.
             var project = new Project();
 
@@ -564,7 +530,6 @@
         {
             // ExStart
             // ExFor: Prj.ProjectExternallyEdited
-            // ExFor: PrjKey.ProjectExternallyEdited
             // ExSummary: Shows how to read/write Prj.ProjectExternallyEdited property.
             var project = new Project();
 
@@ -580,7 +545,6 @@
         {
             // ExStart
             // ExFor: Prj.RemoveFileProperties
-            // ExFor: PrjKey.RemoveFileProperties
             // ExSummary: Shows how to read/write Prj.RemoveFileProperties property.
             var project = new Project();
 
@@ -596,7 +560,6 @@
         {
             // ExStart
             // ExFor: Prj.ShowProjectSummaryTask
-            // ExFor: PrjKey.ShowProjectSummaryTask
             // ExSummary: Shows how to read/write Prj.ShowProjectSummaryTask property.
             var project = new Project();
 
@@ -612,7 +575,6 @@
         {
             // ExStart
             // ExFor: Prj.SplitsInProgressTasks
-            // ExFor: PrjKey.SplitsInProgressTasks
             // ExSummary: Shows how to read/write Prj.SplitsInProgressTasks property.
             var project = new Project();
 
@@ -628,7 +590,6 @@
         {
             // ExStart
             // ExFor: Prj.SpreadActualCost
-            // ExFor: PrjKey.SpreadActualCosts
             // ExSummary: Shows how to read/write Prj.SpreadActualCost property.
             var project = new Project();
 
@@ -644,7 +605,6 @@
         {
             // ExStart
             // ExFor: Prj.SpreadPercentComplete
-            // ExFor: PrjKey.SpreadPercentComplete
             // ExSummary: Shows how to read/write Prj.SpreadPercentComplete property.
             var project = new Project();
 
@@ -660,7 +620,6 @@
         {
             // ExStart
             // ExFor: Prj.StartDate
-            // ExFor: PrjKey.StartDate
             // ExSummary: Shows how to read/write Prj.StartDate property.
             var project = new Project();
 
@@ -676,7 +635,6 @@
         {
             // ExStart
             // ExFor: Prj.StatusDate
-            // ExFor: PrjKey.StatusDate
             // ExSummary: Shows how to read/write Prj.StatusDate property.
             var project = new Project();
 
@@ -692,7 +650,6 @@
         {
             // ExStart
             // ExFor: Prj.Subject
-            // ExFor: PrjKey.Subject
             // ExSummary: Shows how to read/write Prj.Subject property.
             var project = new Project();
 
@@ -708,7 +665,6 @@
         {
             // ExStart
             // ExFor: Prj.TaskUpdatesResource
-            // ExFor: PrjKey.TaskUpdatesResource
             // ExSummary: Shows how to read/write Prj.TaskUpdatesResource property.
             var project = new Project();
 
@@ -724,7 +680,6 @@
         {
             // ExStart
             // ExFor: Prj.Template
-            // ExFor: PrjKey.Template
             // ExSummary: Shows how to read/write Prj.Template property.
             var project = new Project();
 
@@ -740,7 +695,6 @@
         {
             // ExStart
             // ExFor: Prj.TimescaleFinish
-            // ExFor: PrjKey.TimescaleFinish
             // ExSummary: Shows how to read/write Prj.TimescaleFinish property.
             var project = new Project();
 
@@ -756,7 +710,6 @@
         {
             // ExStart
             // ExFor: Prj.Title
-            // ExFor: PrjKey.Title
             // ExSummary: Shows how to read/write Prj.Title property.
             var project = new Project();
 
@@ -772,7 +725,6 @@
         {
             // ExStart
             // ExFor: Prj.Uid
-            // ExFor: PrjKey.Uid
             // ExSummary: Shows how to read/write Prj.Uid property.
             var project = new Project();
 
@@ -788,7 +740,6 @@
         {
             // ExStart
             // ExFor: Prj.UpdateManuallyScheduledTasksWhenEditingLinks
-            // ExFor: PrjKey.UpdateManuallyScheduledTasksWhenEditingLinks
             // ExSummary: Shows how to read/write Prj.UpdateManuallyScheduledTasksWhenEditingLinks property.
             var project = new Project();
 
@@ -805,7 +756,6 @@
             // ExStart
             // ExFor: Prj
             // ExFor: Prj.Name
-            // ExFor: PrjKey.Name
             // ExSummary: Shows how to read/write project name.
             var project = new Project(DataDir + "Blank2010.mpp");
 
@@ -821,7 +771,6 @@
         {
             // ExStart
             // ExFor: Prj.WorkFormat
-            // ExFor: PrjKey.WorkFormat
             // ExSummary: Shows how to get a duration with default work format.
             var project = new Project(DataDir + "Blank2010.mpp");
 
@@ -840,7 +789,6 @@
         {
             // ExStart
             // ExFor: Prj.TimescaleStart
-            // ExFor: PrjKey.TimescaleStart
             // ExSummary: Shows how to set timescale start date to tune the date where the view should start.
             var project = new Project(DataDir + "Project2.mpp");
             project.Set(Prj.TimescaleStart, new DateTime(2012, 4, 30));
@@ -856,8 +804,6 @@
             // ExStart:RescheduleProjectFromFinishDate
             // ExFor: Prj.ScheduleFromStart
             // ExFor: Prj.FinishDate
-            // ExFor: PrjKey.ScheduleFromStart
-            // ExFor: PrjKey.FinishDate
             // ExSummary: Shows how to reschedule the project from finish date instead of the start one.
             var project = new Project(DataDir + "Project2.mpp");
             project.Set(Prj.ScheduleFromStart, false);
@@ -881,8 +827,6 @@
             // ExStart:DetermineProjectVersion
             // ExFor: Prj.LastSaved
             // ExFor: Prj.SaveVersion
-            // ExFor: PrjKey.LastSaved
-            // ExFor: PrjKey.SaveVersion
             // ExSummary: Shows how to check project's save version and save date.
             var project = new Project(DataDir + "DetermineProjectVersion.mpp");
 
@@ -901,10 +845,6 @@
             // ExFor: Prj.CurrencyDigits
             // ExFor: Prj.CurrencySymbol
             // ExFor: Prj.CurrencySymbolPosition
-            // ExFor: PrjKey.CurrencyCode
-            // ExFor: PrjKey.CurrencyDigits
-            // ExFor: PrjKey.CurrencySymbol
-            // ExFor: PrjKey.CurrencySymbolPosition
             // ExSummary: Shows how to write project's currency properties.
             var project = new Project(DataDir + "WriteCurrencyProperties.mpp");
 
@@ -934,11 +874,6 @@
             // ExFor: Prj.Revision
             // ExFor: Prj.Keywords
             // ExFor: Prj.Comments
-            // ExFor: PrjKey.Author
-            // ExFor: PrjKey.LastAuthor
-            // ExFor: PrjKey.Revision
-            // ExFor: PrjKey.Keywords
-            // ExFor: PrjKey.Comments
             // ExSummary: Shows how to set project meta information.
             var project = new Project(DataDir + "WriteProjectInfo.mpp");
 
@@ -966,10 +901,6 @@
             // ExFor: Prj.DaysPerMonth
             // ExFor: Prj.MinutesPerDay
             // ExFor: Prj.MinutesPerWeek
-            // ExFor: PrjKey.WeekStartDay
-            // ExFor: PrjKey.DaysPerMonth
-            // ExFor: PrjKey.MinutesPerDay
-            // ExFor: PrjKey.MinutesPerWeek
             // ExSummary: Shows how to read/write project's weekday properties.
             var project = new Project(DataDir + "WriteWeekdayProperties.mpp");
 
@@ -994,8 +925,6 @@
             // ExStart:ReadWriteFiscalYearProperties
             // ExFor: Prj.FyStartDate
             // ExFor: Prj.FiscalYearStart
-            // ExFor: PrjKey.FyStartDate
-            // ExFor: PrjKey.FiscalYearStart
             // ExSummary: Shows how to write fiscal year properties. 
             var project = new Project(DataDir + "WriteFiscalYearProperties.mpp");
 
@@ -1020,12 +949,7 @@
             // ExFor: Prj.DefaultOvertimeRate
             // ExFor: Prj.DefaultTaskEVMethod
             // ExFor: Prj.DefaultFixedCostAccrual
-            // ExFor: PrjKey.DefaultStartTime
-            // ExFor: PrjKey.DefaultTaskType
-            // ExFor: PrjKey.DefaultStandardRate
-            // ExFor: PrjKey.DefaultOvertimeRate
-            // ExFor: PrjKey.DefaultTaskEVMethod
-            // ExFor: PrjKey.DefaultFixedCostAccrual
+            // ExFor: TaskType
             // ExSummary: Shows how to read project's default properties.
             var project = new Project(DataDir + "DefaultProperties.mpp");
 
@@ -1056,7 +980,6 @@
             // ExStart:SetAttributesForNewTasks
             // ExFor: PrjKey
             // ExFor: Prj.NewTaskStartDate
-            // ExFor: PrjKey.NewTaskStartDate
             // ExSummary: Shows how to set attributes for new tasks.
             var project = new Project();
             project.Set(Prj.NewTaskStartDate, TaskStartDateType.CurrentDate);

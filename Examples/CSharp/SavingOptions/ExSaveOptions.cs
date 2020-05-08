@@ -116,6 +116,7 @@
         {
             // ExStart:CustomizeTextWithTaskBars
             // ExFor: SaveOptions.BarStyles
+            // ExFor: BarItemType
             // ExSummary: Shows how to customize task bars by using <see cref="Aspose.Tasks.Visualization.BarStyle" />s.
             var project = new Project();
 
@@ -164,6 +165,7 @@
             // ExFor: SaveOptions.DrawNonWorkingTime
             // ExFor: SaveOptions.PresentationFormat
             // ExFor: SaveOptions.ShowProjectSummaryTask
+            // ExFor: PageSize
             // ExSummary: Shows how to set a value indicating that subtasks on the summary task bar must be rolled up.
             var project = new Project(DataDir + "Project2.mpp");
 

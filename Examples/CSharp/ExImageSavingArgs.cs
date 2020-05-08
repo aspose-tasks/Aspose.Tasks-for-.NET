@@ -13,6 +13,8 @@
         // ExFor: ImageSavingArgs
         // ExFor: ImageSavingArgs.#ctor
         // ExFor: ImageSavingArgs.ImageType
+        // ExFor: ResourceExportType
+        // ExFor: HtmlImageType
         // ExSummary: Shows how to work with image saving arguments.
         [TestFixture] // ExSkip
         internal class ResourcePrefixForNestedResources : ApiExampleBase, ICssSavingCallback, IFontSavingCallback, IImageSavingCallback

@@ -23,6 +23,9 @@
             // ExFor: TimescaleTier.Label
             // ExFor: TimescaleTier.ShowTicks
             // ExFor: TimescaleTier.UsesFiscalYear
+            // ExFor: TimescaleUnit
+            // ExFor: DateLabel
+            // ExFor: DateTimeConverter
             // ExSummary: Shows how to customize timescale tier labels.
             var project = new Project(DataDir + "Project2.mpp");
 

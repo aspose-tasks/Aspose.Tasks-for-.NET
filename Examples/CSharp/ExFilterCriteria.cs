@@ -17,6 +17,8 @@
             // ExFor: FilterCriteria.CriteriaRows
             // ExFor: FilterCriteria.Operation
             // ExFor: FilterCriteria.ToString
+            // ExFor: FilterComparisonType
+            // ExFor: FilterOperation
             // ExSummary: Shows how to read task filter criteria.
             var project = new Project(DataDir + "Project2003.mpp");
 

@@ -13,18 +13,7 @@
         {
             // ExStart:GenerateResourceAssignmentTimephasedData
             // ExFor: Asn.WorkContour
-            // ExFor: AsnKey.WorkContour
             // ExFor: WorkContourType
-            // ExFor: WorkContourType.BackLoaded
-            // ExFor: WorkContourType.Bell
-            // ExFor: WorkContourType.Contoured
-            // ExFor: WorkContourType.DoublePeak
-            // ExFor: WorkContourType.EarlyPeak
-            // ExFor: WorkContourType.Flat
-            // ExFor: WorkContourType.FrontLoaded
-            // ExFor: WorkContourType.LatePeak
-            // ExFor: WorkContourType.Turtle
-            // ExFor: WorkContourType.Undefined
             // ExSummary: Shows how to set different timephased data contours for resource assignments.
             var project = new Project();
             project.Set(Prj.StartDate, new DateTime(2000, 1, 3, 8, 0, 0));
@@ -128,11 +117,6 @@
             // ExFor: Asn.BCWS
             // ExFor: Asn.CV
             // ExFor: Asn.SV
-            // ExFor: AsnKey.ACWP
-            // ExFor: AsnKey.BCWP
-            // ExFor: AsnKey.BCWS
-            // ExFor: AsnKey.CV
-            // ExFor: AsnKey.SV
             // ExSummary: Shows how to read assignment's cost values.
             var project = new Project(DataDir + "ResourceAssignmentCosts.mpp");
 
@@ -165,12 +149,6 @@
             // ExFor: Asn.RemainingCost
             // ExFor: Asn.RemainingOvertimeWork
             // ExFor: Asn.RemainingOvertimeCost
-            // ExFor: AsnKey.OvertimeWork
-            // ExFor: AsnKey.OvertimeCost
-            // ExFor: AsnKey.RemainingWork
-            // ExFor: AsnKey.RemainingCost
-            // ExFor: AsnKey.RemainingOvertimeWork
-            // ExFor: AsnKey.RemainingOvertimeCost
             // ExSummary: Shows how to read overtime/remaining works/costs of an assignment.
             var project = new Project(DataDir + "ResourceAssignmentOvertimes.mpp");
 
@@ -193,7 +171,6 @@
         {
             // ExStart:GetResourceAssignmentPercentWorkComplete
             // ExFor: Asn.PercentWorkComplete
-            // ExFor: AsnKey.PercentWorkComplete
             // ExSummary: Shows how to read percent work complete of an assignment.
             var project = new Project(DataDir + "ResourceAssignmentPercentWorkComplete.mpp");
 
@@ -212,8 +189,6 @@
             // ExStart:GetResourceAssignmentStopResumeDates
             // ExFor: Asn.Stop
             // ExFor: Asn.Resume
-            // ExFor: AsnKey.Stop
-            // ExFor: AsnKey.Resume
             // ExSummary: Shows how to read assignment's stop/resume dates. 
             var project = new Project(DataDir + "ResourceAssignmentStopResumeDates.mpp");
 
@@ -235,10 +210,6 @@
             // ExFor: Asn.CostVariance
             // ExFor: Asn.StartVariance
             // ExFor: Asn.FinishVariance
-            // ExFor: AsnKey.WorkVariance
-            // ExFor: AsnKey.CostVariance
-            // ExFor: AsnKey.StartVariance
-            // ExFor: AsnKey.FinishVariance
             // ExSummary: Shows how to read assignment's variances.
             var project = new Project(DataDir + "ResourceAssignmentVariance.mpp");
 
@@ -261,7 +232,7 @@
             {
                 // ExStart: ReadWriteRateScaleForResourceAssignment
                 // ExFor: Asn.RateScale
-                // ExFor: AsnKey.RateScale
+                // ExFor: RateScaleType
                 // ExSummary: Shows how to work with assignment's rate scale. 
                 var project = new Project(DataDir + "New project 2013.mpp");
 
@@ -304,8 +275,6 @@
             // ExStart:ReadBudgetWorkAndCost
             // ExFor: Asn.BudgetWork
             // ExFor: Asn.BudgetCost
-            // ExFor: AsnKey.BudgetWork
-            // ExFor: AsnKey.BudgetCost
             // ExSummary: Shows how to read budget work/cost values of a resource assignment.
             var project = new Project(DataDir + "BudgetWorkAndCost.mpp");
 
@@ -353,7 +322,6 @@
         {
             // ExStart
             // ExFor: Asn.Notes
-            // ExFor: AsnKey.Notes
             // ExSummary: Shows how to get/set resource assignment notes.
             var project = new Project(DataDir + "UpdateResourceAssignment.mpp");
             var task = project.RootTask.Children.GetById(1);
@@ -376,7 +344,6 @@
             // ExStart
             // ExFor: Asn
             // ExFor: Asn.Uid
-            // ExFor: AsnKey.Uid
             // ExSummary: Shows how to read/write Asn.Uid property.
             var project = new Project();
 
@@ -401,8 +368,6 @@
             // ExStart
             // ExFor: Asn.AssignmentOwner
             // ExFor: Asn.AssignmentOwnerGuid
-            // ExFor: AsnKey.AssignmentOwner
-            // ExFor: AsnKey.AssignmentOwnerGuid
             // ExSummary: Shows how to read/write Asn.AssignmentOwner and Asn.AssignmentOwnerGuid properties.
             var project = new Project();
 
@@ -427,12 +392,8 @@
         public void GetSetBookingType()
         {
             // ExStart
-            // ExFor: BookingType
-            // ExFor: BookingType.Committed
-            // ExFor: BookingType.Proposed
-            // ExFor: BookingType.Undefined
             // ExFor: Asn.BookingType
-            // ExFor: AsnKey.BookingType
+            // ExFor: BookingType
             // ExSummary: Shows how to read/write Asn.BookingType property.
             var project = new Project();
 
@@ -456,7 +417,6 @@
         {
             // ExStart
             // ExFor: Asn.Created
-            // ExFor: AsnKey.Created
             // ExSummary: Shows how to read/write Asn.Created property.
             var project = new Project();
 
@@ -484,11 +444,7 @@
             // ExFor: Asn.Work
             // ExFor: Asn.Units
             // ExFor: Asn.PeakUnits
-            // ExFor: AsnKey.Start
-            // ExFor: AsnKey.Finish
-            // ExFor: AsnKey.Work
-            // ExFor: AsnKey.Units
-            // ExFor: AsnKey.PeakUnits
+            // ExFor: AsnKey
             // ExSummary: Shows how to read/write common properties.
             var project = new Project();
             project.Set(Prj.WorkFormat, TimeUnitType.Day);
@@ -523,9 +479,6 @@
             // ExFor: Asn.Hyperlink
             // ExFor: Asn.HyperlinkAddress
             // ExFor: Asn.HyperlinkSubAddress
-            // ExFor: AsnKey.Hyperlink
-            // ExFor: AsnKey.HyperlinkAddress
-            // ExFor: AsnKey.HyperlinkSubAddress
             // ExSummary: Shows how to read/write hyperlink properties.
             var project = new Project();
 
@@ -558,14 +511,6 @@
             // ExFor: Asn.ActualOvertimeWork
             // ExFor: Asn.ActualOvertimeCost
             // ExFor: Asn.ActualOvertimeWorkProtected
-            // ExFor: AsnKey
-            // ExFor: AsnKey.ActualStart
-            // ExFor: AsnKey.ActualWork
-            // ExFor: AsnKey.ActualWorkProtected
-            // ExFor: AsnKey.ActualFinish
-            // ExFor: AsnKey.ActualOvertimeWork
-            // ExFor: AsnKey.ActualOvertimeCost
-            // ExFor: AsnKey.ActualOvertimeWorkProtected
             // ExSummary: Shows how to read/write actual properties.
             var project = new Project();
 
@@ -607,8 +552,6 @@
             // ExStart
             // ExFor: Asn.Cost
             // ExFor: Asn.ActualCost
-            // ExFor: AsnKey.Cost
-            // ExFor: AsnKey.ActualCost
             // ExSummary: Shows how to read/write actual cost properties.
             var project = new Project();
 
@@ -641,7 +584,6 @@
         {
             // ExStart
             // ExFor: Asn.Confirmed
-            // ExFor: AsnKey.Confirmed
             // ExSummary: Shows how to read/write Asn.Confirmed property.
             var project = new Project();
 
@@ -664,7 +606,6 @@
         {
             // ExStart
             // ExFor: Asn.ResponsePending
-            // ExFor: AsnKey.ResponsePending
             // ExSummary: Shows how to read/write Asn.ResponsePending property.
             var project = new Project();
 
@@ -687,7 +628,6 @@
         {
             // ExStart
             // ExFor: Asn.UpdateNeeded
-            // ExFor: AsnKey.UpdateNeeded
             // ExSummary: Shows how to read/write Asn.UpdateNeeded property.
             var project = new Project();
 
@@ -710,7 +650,6 @@
         {
             // ExStart
             // ExFor: Asn.HasFixedRateUnits
-            // ExFor: AsnKey.HasFixedRateUnits
             // ExSummary: Shows how to read/write Asn.HasFixedRateUnits property.
             var project = new Project();
 
@@ -733,7 +672,6 @@
         {
             // ExStart
             // ExFor: Asn.FixedMaterial
-            // ExFor: AsnKey.FixedMaterial
             // ExSummary: Shows how to read/write Asn.FixedMaterial property.
             var project = new Project();
 
@@ -757,10 +695,6 @@
             // ExStart
             // ExFor: Asn.Task
             // ExFor: Asn.Resource
-            // ExFor: AsnKey.Task
-            // ExFor: AsnKey.TaskUid
-            // ExFor: AsnKey.Resource
-            // ExFor: AsnKey.ResourceUid
             // ExSummary: Shows how to read Asn.Task and Asn.Resource properties.
             var project = new Project();
 
@@ -785,9 +719,6 @@
             // ExFor: Asn.Delay
             // ExFor: Asn.LevelingDelay
             // ExFor: Asn.LevelingDelayFormat
-            // ExFor: AsnKey.Delay
-            // ExFor: AsnKey.LevelingDelay
-            // ExFor: AsnKey.LevelingDelayFormat
             // ExSummary: Shows how to read/write Asn.Delay, Asn.LevelingDelay, and Asn.LevelingDelayFormat properties.
             var project = new Project();
 
@@ -812,7 +743,6 @@
         {
             // ExStart
             // ExFor: Asn.CostRateTableType
-            // ExFor: AsnKey.CostRateTableType
             // ExSummary: Shows how to read/write Asn.CostRateTableType property.
             var project = new Project();
 
@@ -835,7 +765,6 @@
         {
             // ExStart
             // ExFor: Asn.RegularWork
-            // ExFor: AsnKey.RegularWork
             // ExSummary: Shows how to read/write Asn.RegularWork property.
             var project = new Project();
 
@@ -858,7 +787,6 @@
         {
             // ExStart
             // ExFor: Asn.LinkedFields
-            // ExFor: AsnKey.LinkedFields
             // ExSummary: Shows how to read Asn.LinkedFields property.
             var project = new Project();
 
@@ -880,7 +808,6 @@
         {
             // ExStart
             // ExFor: Asn.Milestone
-            // ExFor: AsnKey.Milestone
             // ExSummary: Shows how to read Asn.Milestone property.
             var project = new Project();
 
@@ -902,7 +829,6 @@
         {
             // ExStart
             // ExFor: Asn.Overallocated
-            // ExFor: AsnKey.Overallocated
             // ExSummary: Shows how to read Asn.Overallocated property.
             var project = new Project();
 
@@ -925,7 +851,6 @@
         {
             // ExStart
             // ExFor: Asn.Summary
-            // ExFor: AsnKey.Summary
             // ExSummary: Shows how to read Asn.Summary property.
             var project = new Project();
 
@@ -948,7 +873,6 @@
         {
             // ExStart
             // ExFor: Asn.VAC
-            // ExFor: AsnKey.VAC
             // ExSummary: Shows how to read Asn.VAC property.
             var project = new Project();
 

@@ -14,6 +14,7 @@
             // ExFor: SvgOptions
             // ExFor: SvgOptions.#ctor
             // ExFor: SvgOptions.UseGradientBrush
+            // ExFor: Timescale
             // ExSummary: Shows how to save project as SVG file.
             var project = new Project(DataDir + "EstimatedMilestoneTasks.mpp");
             SaveOptions options = new SvgOptions

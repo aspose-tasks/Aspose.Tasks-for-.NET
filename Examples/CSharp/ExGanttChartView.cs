@@ -14,6 +14,10 @@
     {
         // ExStart:ImplementCustomBarStyleWriting
         // ExFor: GanttChartView.CustomBarStyles
+        // ExFor: GanttBarEndShape
+        // ExFor: GanttBarFillPattern
+        // ExFor: GanttBarMiddleShape
+        // ExFor: GanttBarStyle.ShowFor
         // ExSummary: Shows how to set custom bar styles of Gantt Chart project view.
         [Test] // ExSkip
         public void ImplementCustomBarStyle()
@@ -164,6 +168,7 @@
             // ExFor: GanttChartView.NonWorkingTimeColor
             // ExFor: GanttChartView.TimescaleSizePercentage
             // ExFor: GanttChartView.HideRollupBarsWhenSummaryExpanded
+            // ExFor: GanttBarSize
             // ExSummary: Shows how to set some useful properties of Gantt chart view.
             var project = new Project(DataDir + "Project2.mpp");
             project.Set(Prj.StatusDate, project.Get(Prj.StartDate));

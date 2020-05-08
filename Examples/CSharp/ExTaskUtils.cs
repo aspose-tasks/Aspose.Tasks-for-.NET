@@ -50,8 +50,8 @@
                 Console.WriteLine("Name: " + collTask.Get(Tsk.Name) + "Duration: " + collTask.Get(Tsk.Duration).TimeSpan);
             }
         }
-        
-        public class FilterByDuration : ICondition<Task>
+
+        private class FilterByDuration : ICondition<Task>
         {
             private readonly int days;
 
@@ -95,8 +95,8 @@
                 Console.WriteLine("Name: " + collTask.Get(Tsk.Name) + "Duration: " + collTask.Get(Tsk.Duration).TimeSpan);
             }
         }
-        
-        public class FindByName : ICondition<Task>
+
+        private class FindByName : ICondition<Task>
         {
             private readonly string name;
 

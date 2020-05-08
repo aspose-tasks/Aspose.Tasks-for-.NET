@@ -32,14 +32,7 @@
                 // ExFor: WeeklyRepetitionBase.#ctor
                 // ExFor: WeeklyRepetitionBase.RepetitionInterval
                 // ExFor: WeekdayType
-                // ExFor: WeekdayType.None
-                // ExFor: WeekdayType.Sunday
-                // ExFor: WeekdayType.Monday
-                // ExFor: WeekdayType.Tuesday
-                // ExFor: WeekdayType.Wednesday
-                // ExFor: WeekdayType.Thursday
-                // ExFor: WeekdayType.Friday
-                // ExFor: WeekdayType.Saturday
+                // ExFor: RecurrencePattern
                 // ExSummary: Shows how to create a recurring task.
                 var project = new Project(DataDir + "Blank2010.mpp");
                 var parameters = new RecurringTaskParameters

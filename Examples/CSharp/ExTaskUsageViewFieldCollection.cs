@@ -14,6 +14,7 @@
             // ExFor: TaskUsageViewFieldCollection
             // ExFor: TaskUsageViewFieldCollection.GetEnumerator
             // ExFor: TaskUsageViewFieldCollection.ToList
+            // ExFor: TaskUsageViewField
             // ExSummary: Shows how to work field collection of a TaskUsageView instance.
             var project = new Project(DataDir + "TaskUsageView.mpp");
 

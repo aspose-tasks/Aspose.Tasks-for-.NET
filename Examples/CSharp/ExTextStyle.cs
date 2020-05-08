@@ -22,6 +22,7 @@
             // ExFor: TextStyle.BackgroundPattern
             // ExFor: TextStyle.FontFamily
             // ExFor: TextStyle.SizeInPoints
+            // ExFor: BackgroundPattern
             // ExSummary: Shows how to customize text styles which are used to style different text items in a project.
             var project = new Project(DataDir + "CreateProject2.mpp");
             SaveOptions options = new PdfSaveOptions

@@ -387,6 +387,7 @@
             // ExFor: ExtendedAttributeDefinition.CreateLookupResourceDefinition(CustomFieldType,ExtendedAttributeResource,String)
             // ExFor: ExtendedAttributeDefinition.CreateLookupTaskDefinition(CustomFieldType,ExtendedAttributeTask,String)
             // ExFor: ExtendedAttributeDefinition.RemoveLookupValue(Value)
+            // ExFor: ExtendedAttributeTask
             // ExSummary: Shows how to add extended attributes with lookups for assignments.
             var project = new Project(DataDir + "Blank2010.mpp");
 
@@ -538,6 +539,7 @@
                 // ExStart:WriteUpdatedExtendedAttributeDefinitions
                 // ExFor: ExtendedAttributeDefinition.CreateLookupTaskDefinition(ExtendedAttributeTask,String)
                 // ExFor: ExtendedAttributeDefinition.CreateLookupResourceDefinition(ExtendedAttributeResource,String)
+                // ExFor: ElementType
                 // ExSummary: Shows how to write updated extended attribute definitions.
                 var project = new Project(DataDir + "WriteUpdatedExtendedAttributeDefinitions.mpp");
 
@@ -880,6 +882,7 @@
             // ExFor: ExtendedAttributeDefinition.RollupType
             // ExFor: ExtendedAttributeDefinition.ParentProject
             // ExFor: ExtendedAttributeDefinition.ValueList
+            // ExFor: RollupType
             // ExSummary: Shows how to read extended attribute definition common information.
             var project = new Project(DataDir + "MultipleOutlineValues2016.mpp");
 
@@ -1019,6 +1022,7 @@
             // ExStart
             // ExFor: ExtendedAttributeDefinition.CreateExtendedAttribute(Boolean)
             // ExFor: ExtendedAttributeDefinition.CreateResourceDefinition(ExtendedAttributeResource,String)
+            // ExFor: ExtendedAttributeResource
             // ExSummary: Shows how to create extended attribute definition and set a value of a flag while its constructing.
             var project = new Project(DataDir + "Project2.mpp");
 

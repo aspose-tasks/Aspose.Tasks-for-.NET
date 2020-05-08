@@ -17,6 +17,7 @@
             // ExFor: TableTextStyle.Field
             // ExFor: TableTextStyle.ItemType
             // ExFor: TableTextStyle.RowUid
+            // ExFor: Field
             // ExSummary: Shows how to customize table text styles which are used to style different text items in a project.
             var project = new Project(DataDir + "Project2.mpp");
             project.Set(Prj.NewTasksAreManual, false);

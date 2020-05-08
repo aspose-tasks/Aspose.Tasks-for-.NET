@@ -35,6 +35,7 @@
         {
             // ExStart
             // ExFor: ResourceUsageView.FieldCollection
+            // ExFor: ResourceUsageViewField
             // ExSummary: Shows how to read resource usage view fields.
             var project = new Project(DataDir + "ResourceUsageView.mpp");
 

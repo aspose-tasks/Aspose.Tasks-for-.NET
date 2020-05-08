@@ -23,6 +23,7 @@
             // ExFor: RateCollection.ToList
             // ExFor: RateCollection.ToList(RateType)
             // ExFor: RateByDateCollection
+            // ExFor: RateType
             // ExSummary: Shows how to work with rate collections.
             var project = new Project(DataDir + "Project1.mpp");
 

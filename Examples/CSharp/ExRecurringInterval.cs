@@ -22,6 +22,8 @@
             // ExFor: RecurringInterval.MonthlyFirstLastMonthNumber
             // ExFor: RecurringInterval.WeeklyDays
             // ExFor: RecurringInterval.WeeklyWeekNumber
+            // ExFor: Interval
+            // ExFor: RecurringInterval.DayType
             // ExSummary: Shows how to work with recurring interval of progress lines.
             var project = new Project(DataDir + "Project2007.mpp");
             project.Set(Prj.StatusDate, project.Get(Prj.StartDate));

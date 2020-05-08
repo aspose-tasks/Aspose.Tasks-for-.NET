@@ -2,7 +2,6 @@
 {
     using System;
     using System.Collections.Generic;
-    using System.Drawing;
     using NUnit.Framework;
     using Saving;
     using Visualization;
@@ -19,6 +18,7 @@
             // ExFor: Gridline.Color
             // ExFor: Gridline.GridlineType
             // ExFor: Gridline.Pattern
+            // ExFor: GridlineType
             // ExSummary: Shows how to work with gridlines while save in visual formats. 
             var project = new Project(DataDir + "CreateProject2.mpp");
             var options = new ImageSaveOptions(SaveFileFormat.PNG);

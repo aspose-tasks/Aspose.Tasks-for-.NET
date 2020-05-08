@@ -3,7 +3,6 @@
     using System;
     using System.Collections.Generic;
     using NUnit.Framework;
-    using Saving;
 
     [TestFixture]
     public class ExWeekDay : ApiExampleBase
@@ -166,7 +165,7 @@
             var workingTimes = new List<WorkingTime> { workingTime, workingTime2 };
             
             // there is a way to convert <see cref="DayOfWeek" /> to <see cref="Aspose.Tasks.DayType" />.
-            DayType dayType = WeekDay.CastToDayType(DayOfWeek.Friday);
+            var dayType = WeekDay.CastToDayType(DayOfWeek.Friday);
             
             var weekDay = new WeekDay(dayType, workingTimes);
             weekDay.DayWorking = true;
@@ -201,26 +200,26 @@
             calendar.WeekDays.Clear();
 
             // Add working days monday through thursday with default timings
-            WeekDay monday = new WeekDay(DayType.Monday);
+            var monday = new WeekDay(DayType.Monday);
             WeekDay.SetDefaultWorkingTime(monday);
             calendar.WeekDays.Add(monday);
-            WeekDay tuesday = new WeekDay(DayType.Tuesday);
+            var tuesday = new WeekDay(DayType.Tuesday);
             WeekDay.SetDefaultWorkingTime(tuesday);
             calendar.WeekDays.Add(tuesday);
-            WeekDay wednesday = new WeekDay(DayType.Wednesday);
+            var wednesday = new WeekDay(DayType.Wednesday);
             WeekDay.SetDefaultWorkingTime(wednesday);
             calendar.WeekDays.Add(wednesday);
-            WeekDay thursday = new WeekDay(DayType.Thursday);
+            var thursday = new WeekDay(DayType.Thursday);
             WeekDay.SetDefaultWorkingTime(thursday);
             calendar.WeekDays.Add(thursday);
-            WeekDay friday = new WeekDay(DayType.Friday);
+            var friday = new WeekDay(DayType.Friday);
             WeekDay.SetDefaultWorkingTime(friday);
             calendar.WeekDays.Add(friday);
             
-            WeekDay saturday = new WeekDay(DayType.Saturday);
+            var saturday = new WeekDay(DayType.Saturday);
             saturday.DayWorking = false;
             calendar.WeekDays.Add(saturday);
-            WeekDay sunday = new WeekDay(DayType.Sunday);
+            var sunday = new WeekDay(DayType.Sunday);
             sunday.DayWorking = false;
             calendar.WeekDays.Add(sunday);
 

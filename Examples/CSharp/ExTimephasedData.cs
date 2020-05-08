@@ -24,6 +24,7 @@
             // ExFor: TimephasedData.ValueToCost
             // ExFor: TimephasedData.ValueToDuration
             // ExFor: TimephasedData.ValueToUnits
+            // ExFor: TimephasedDataType
             // ExSummary: Shows how to work with custom timephased data.
             var project = new Project(DataDir + "Project1.mpp") { CalculationMode = CalculationMode.None };
 

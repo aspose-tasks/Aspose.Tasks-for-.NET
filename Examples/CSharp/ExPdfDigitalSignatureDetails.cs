@@ -19,6 +19,7 @@
             // ExFor: PdfDigitalSignatureDetails.Location
             // ExFor: PdfDigitalSignatureDetails.Reason
             // ExFor: PdfDigitalSignatureDetails.SignatureDate
+            // ExFor: PdfDigitalSignatureHashAlgorithm
             // ExSummary: Shows how to work with PDF digital signature details.
             var project = new Project(DataDir + "CreateProject2.mpp");
             

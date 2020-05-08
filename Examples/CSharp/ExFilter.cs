@@ -27,6 +27,7 @@ namespace Aspose.Tasks.Examples.CSharp
             // ExFor: Filter.FilterType
             // ExFor: Filter.ShowInMenu
             // ExFor: Filter.ShowRelatedSummaryRows
+            // ExFor: ItemType
             // ExSummary: Shows how to work with filters.
             var project = new Project(DataDir + "ReadFilterDefinitionData.mpp");
             List<Filter> filters = project.TaskFilters.ToList();

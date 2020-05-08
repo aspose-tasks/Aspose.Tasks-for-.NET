@@ -13,7 +13,6 @@
         {
             // ExStart
             // ExFor: Rsc.AccrueAt
-            // ExFor: RscKey.AccrueAt
             // ExSummary: Shows how to read/write Rsc.AccrueAt property.
             var project = new Project();
 
@@ -31,7 +30,6 @@
         {
             // ExStart
             // ExFor: Rsc.ActiveDirectoryGuid
-            // ExFor: RscKey.ActiveDirectoryGuid
             // ExSummary: Shows how to read/write Rsc.ActiveDirectoryGuid property.
             var project = new Project();
 
@@ -49,7 +47,6 @@
         {
             // ExStart
             // ExFor: Rsc.ActualCost
-            // ExFor: RscKey.ActualCost
             // ExSummary: Shows how to read/write Rsc.ActualCost property.
             var project = new Project();
 
@@ -67,7 +64,6 @@
         {
             // ExStart
             // ExFor: Rsc.ActualOvertimeCost
-            // ExFor: RscKey.ActualOvertimeCost
             // ExSummary: Shows how to read/write Rsc.ActualOvertimeCost property.
             var project = new Project();
 
@@ -85,7 +81,6 @@
         {
             // ExStart
             // ExFor: Rsc.ActualOvertimeWork
-            // ExFor: RscKey.ActualOvertimeWork
             // ExSummary: Shows how to read/write Rsc.ActualOvertimeWork property.
             var project = new Project();
             project.Set(Prj.WorkFormat, TimeUnitType.Day);
@@ -104,7 +99,6 @@
         {
             // ExStart
             // ExFor: Rsc.ActualOvertimeWorkProtected
-            // ExFor: RscKey.ActualOvertimeWorkProtected
             // ExSummary: Shows how to read/write Rsc.ActualOvertimeWorkProtected property.
             var project = new Project();
             project.Set(Prj.WorkFormat, TimeUnitType.Day);
@@ -123,7 +117,6 @@
         {
             // ExStart
             // ExFor: Rsc.ActualWork
-            // ExFor: RscKey.ActualWork
             // ExSummary: Shows how to read/write Rsc.ActualWork property.
             var project = new Project();
             project.Set(Prj.WorkFormat, TimeUnitType.Day);
@@ -142,7 +135,6 @@
         {
             // ExStart
             // ExFor: Rsc.ActualWorkProtected
-            // ExFor: RscKey.ActualWorkProtected
             // ExSummary: Shows how to read/write Rsc.ActualWorkProtected property.
             var project = new Project();
             project.Set(Prj.WorkFormat, TimeUnitType.Day);
@@ -161,7 +153,6 @@
         {
             // ExStart
             // ExFor: Rsc.AssignmentOwner
-            // ExFor: RscKey.AssignmentOwner
             // ExSummary: Shows how to read/write Rsc.AssignmentOwner property.
             var project = new Project();
 
@@ -179,7 +170,6 @@
         {
             // ExStart
             // ExFor: Rsc.AssignmentOwnerGuid
-            // ExFor: RscKey.AssignmentOwnerGuid
             // ExSummary: Shows how to read/write Rsc.AssignmentOwnerGuid property.
             var project = new Project();
 
@@ -197,7 +187,6 @@
         {
             // ExStart
             // ExFor: Rsc.AvailableFrom
-            // ExFor: RscKey.AvailableFrom
             // ExSummary: Shows how to read/write Rsc.AvailableFrom property.
             var project = new Project();
 
@@ -215,7 +204,6 @@
         {
             // ExStart
             // ExFor: Rsc.AvailableTo
-            // ExFor: RscKey.AvailableTo
             // ExSummary: Shows how to read/write Rsc.AvailableTo property.
             var project = new Project();
 
@@ -233,7 +221,6 @@
         {
             // ExStart
             // ExFor: Rsc.BookingType
-            // ExFor: RscKey.BookingType
             // ExSummary: Shows how to read/write Rsc.BookingType property.
             var project = new Project();
 
@@ -251,7 +238,6 @@
         {
             // ExStart
             // ExFor: Rsc.CanLevel
-            // ExFor: RscKey.CanLevel
             // ExSummary: Shows how to read/write Rsc.CanLevel property.
             var project = new Project();
 
@@ -269,7 +255,6 @@
         {
             // ExStart
             // ExFor: Rsc.Code
-            // ExFor: RscKey.Code
             // ExSummary: Shows how to read/write Rsc.Code property.
             var project = new Project();
 
@@ -287,7 +272,6 @@
         {
             // ExStart
             // ExFor: Rsc.CostCenter
-            // ExFor: RscKey.CostCenter
             // ExSummary: Shows how to read/write Rsc.CostCenter property.
             var project = new Project();
 
@@ -305,7 +289,6 @@
         {
             // ExStart
             // ExFor: Rsc.CostPerUse
-            // ExFor: RscKey.CostPerUse
             // ExSummary: Shows how to read/write Rsc.CostPerUse property.
             var project = new Project();
 
@@ -323,7 +306,6 @@
         {
             // ExStart
             // ExFor: Rsc.CostVariance
-            // ExFor: RscKey.CostVariance
             // ExSummary: Shows how to read/write Rsc.CostVariance property.
             var project = new Project();
 
@@ -341,7 +323,6 @@
         {
             // ExStart
             // ExFor: Rsc.Created
-            // ExFor: RscKey.Created
             // ExSummary: Shows how to read/write Rsc.Created property.
             var project = new Project();
 
@@ -359,7 +340,6 @@
         {
             // ExStart
             // ExFor: Rsc.Finish
-            // ExFor: RscKey.Finish
             // ExSummary: Shows how to read/write Rsc.Finish property.
             var project = new Project();
 
@@ -377,7 +357,6 @@
         {
             // ExStart
             // ExFor: Rsc.Guid
-            // ExFor: RscKey.Guid
             // ExSummary: Shows how to read/write Rsc.Guid property.
             var project = new Project();
 
@@ -397,9 +376,6 @@
             // ExFor: Rsc.Hyperlink
             // ExFor: Rsc.HyperlinkAddress
             // ExFor: Rsc.HyperlinkSubAddress
-            // ExFor: RscKey.Hyperlink
-            // ExFor: RscKey.HyperlinkAddress
-            // ExFor: RscKey.HyperlinkSubAddress
             // ExSummary: Shows how to read/write resources hyperlink properties.
             var project = new Project();
 
@@ -421,7 +397,6 @@
         {
             // ExStart
             // ExFor: Rsc.Id
-            // ExFor: RscKey.Id
             // ExSummary: Shows how to read/write Rsc.Id property.
             var project = new Project();
 
@@ -439,7 +414,6 @@
         {
             // ExStart
             // ExFor: Rsc.Inactive
-            // ExFor: RscKey.Inactive
             // ExSummary: Shows how to read/write Rsc.Inactive property.
             var project = new Project();
 
@@ -457,7 +431,6 @@
         {
             // ExStart
             // ExFor: Rsc.Initials
-            // ExFor: RscKey.Initials
             // ExSummary: Shows how to read/write Rsc.Initials property.
             var project = new Project();
 
@@ -475,7 +448,6 @@
         {
             // ExStart
             // ExFor: Rsc.IsBudget
-            // ExFor: RscKey.IsBudget
             // ExSummary: Shows how to read/write Rsc.IsBudget property.
             var project = new Project();
 
@@ -493,7 +465,6 @@
         {
             // ExStart
             // ExFor: Rsc.IsCostResource
-            // ExFor: RscKey.IsCostResource
             // ExSummary: Shows how to read/write Rsc.IsCostResource property.
             var project = new Project();
 
@@ -511,7 +482,6 @@
         {
             // ExStart
             // ExFor: Rsc.IsEnterprise
-            // ExFor: RscKey.IsEnterprise
             // ExSummary: Shows how to read/write Rsc.IsEnterprise property.
             var project = new Project();
 
@@ -529,7 +499,6 @@
         {
             // ExStart
             // ExFor: Rsc.IsGeneric
-            // ExFor: RscKey.IsGeneric
             // ExSummary: Shows how to read/write Rsc.IsGeneric property.
             var project = new Project();
 
@@ -547,7 +516,6 @@
         {
             // ExStart
             // ExFor: Rsc.IsNull
-            // ExFor: RscKey.IsNull
             // ExSummary: Shows how to read/write Rsc.IsNull property.
             var project = new Project();
 
@@ -565,7 +533,6 @@
         {
             // ExStart
             // ExFor: Rsc.IsTeamAssignmentPool
-            // ExFor: RscKey.IsTeamAssignmentPool
             // ExSummary: Shows how to read/write Rsc.IsTeamAssignmentPool property.
             var project = new Project();
 
@@ -583,7 +550,6 @@
         {
             // ExStart
             // ExFor: Rsc.MaterialLabel
-            // ExFor: RscKey.MaterialLabel
             // ExSummary: Shows how to read/write Rsc.MaterialLabel property.
             var project = new Project();
 
@@ -601,7 +567,6 @@
         {
             // ExStart
             // ExFor: Rsc.MaxUnits
-            // ExFor: RscKey.MaxUnits
             // ExSummary: Shows how to read/write Rsc.MaxUnits property.
             var project = new Project();
 
@@ -621,7 +586,6 @@
             // ExFor: Rsc
             // ExFor: Rsc.Name
             // ExFor: RscKey
-            // ExFor: RscKey.Name
             // ExSummary: Shows how to read/write Rsc.Name property.
             var project = new Project();
 
@@ -639,7 +603,6 @@
         {
             // ExStart
             // ExFor: Rsc.Notes
-            // ExFor: RscKey.Notes
             // ExSummary: Shows how to read/write Rsc.Notes property.
             var project = new Project();
 
@@ -657,7 +620,6 @@
         {
             // ExStart
             // ExFor: Rsc.NotesRTF
-            // ExFor: RscKey.NotesRTF
             // ExSummary: Shows how to read/write Rsc.NotesRTF property.
             var project = new Project();
 
@@ -680,7 +642,6 @@
         {
             // ExStart
             // ExFor: Rsc.NotesText
-            // ExFor: RscKey.NotesText
             // ExSummary: Shows how to read/write Rsc.NotesText property.
             var project = new Project();
 
@@ -698,7 +659,6 @@
         {
             // ExStart
             // ExFor: Rsc.Overallocated
-            // ExFor: RscKey.Overallocated
             // ExSummary: Shows how to read/write Rsc.Overallocated property.
             var project = new Project();
 
@@ -716,7 +676,6 @@
         {
             // ExStart
             // ExFor: Rsc.PeakUnits
-            // ExFor: RscKey.PeakUnits
             // ExSummary: Shows how to read/write Rsc.PeakUnits property.
             var project = new Project();
 
@@ -734,7 +693,6 @@
         {
             // ExStart
             // ExFor: Rsc.Phonetics
-            // ExFor: RscKey.Phonetics
             // ExSummary: Shows how to read/write Rsc.Phonetics property.
             var project = new Project();
 
@@ -752,7 +710,6 @@
         {
             // ExStart
             // ExFor: Rsc.RegularWork
-            // ExFor: RscKey.RegularWork
             // ExSummary: Shows how to read/write Rsc.RegularWork property.
             var project = new Project();
             project.Set(Prj.WorkFormat, TimeUnitType.Day);
@@ -771,7 +728,6 @@
         {
             // ExStart
             // ExFor: Rsc.RemainingCost
-            // ExFor: RscKey.RemainingCost
             // ExSummary: Shows how to read/write Rsc.RemainingCost property.
             var project = new Project();
 
@@ -789,7 +745,6 @@
         {
             // ExStart
             // ExFor: Rsc.RemainingOvertimeCost
-            // ExFor: RscKey.RemainingOvertimeCost
             // ExSummary: Shows how to read/write Rsc.RemainingOvertimeCost property.
             var project = new Project();
 
@@ -807,7 +762,6 @@
         {
             // ExStart
             // ExFor: Rsc.RemainingOvertimeWork
-            // ExFor: RscKey.RemainingOvertimeWork
             // ExSummary: Shows how to read/write Rsc.RemainingOvertimeWork property.
             var project = new Project();
             project.Set(Prj.WorkFormat, TimeUnitType.Day);
@@ -826,7 +780,6 @@
         {
             // ExStart
             // ExFor: Rsc.RemainingWork
-            // ExFor: RscKey.RemainingWork
             // ExSummary: Shows how to read/write Rsc.RemainingWork property.
             var project = new Project();
             project.Set(Prj.WorkFormat, TimeUnitType.Day);
@@ -845,7 +798,7 @@
         {
             // ExStart
             // ExFor: Rsc.StandardRateFormat
-            // ExFor: RscKey.StandardRateFormat
+            // ExFor: RateFormatType
             // ExSummary: Shows how to read/write Rsc.StandardRateFormat property.
             var project = new Project();
 
@@ -863,7 +816,6 @@
         {
             // ExStart
             // ExFor: Rsc.Start
-            // ExFor: RscKey.Start
             // ExSummary: Shows how to read/write Rsc.Start property.
             var project = new Project();
 
@@ -881,7 +833,6 @@
         {
             // ExStart
             // ExFor: Rsc.Type
-            // ExFor: RscKey.Type
             // ExSummary: Shows how to read/write Rsc.Type property.
             var project = new Project();
 
@@ -899,7 +850,6 @@
         {
             // ExStart
             // ExFor: Rsc.Uid
-            // ExFor: RscKey.Uid
             // ExSummary: Shows how to read/write Rsc.Uid property.
             var project = new Project();
 
@@ -917,7 +867,6 @@
         {
             // ExStart
             // ExFor: Rsc.Work
-            // ExFor: RscKey.Work
             // ExSummary: Shows how to read/write Rsc.Work property.
             var project = new Project();
             project.Set(Prj.WorkFormat, TimeUnitType.Day);
@@ -936,7 +885,6 @@
         {
             // ExStart
             // ExFor: Rsc.Workgroup
-            // ExFor: RscKey.Workgroup
             // ExSummary: Shows how to read/write Rsc.Workgroup property.
             var project = new Project();
 
@@ -959,12 +907,6 @@
             // ExFor: Rsc.BCWP
             // ExFor: Rsc.CV
             // ExFor: Rsc.SV
-            // ExFor: RscKey.Cost
-            // ExFor: RscKey.ACWP
-            // ExFor: RscKey.BCWS
-            // ExFor: RscKey.BCWP
-            // ExFor: RscKey.CV
-            // ExFor: RscKey.SV
             // ExSummary: Shows how to read resource costs.
             var project = new Project(DataDir + "ResourceCosts.mpp");
 
@@ -998,9 +940,6 @@
             // ExFor: Rsc.OvertimeCost
             // ExFor: Rsc.OvertimeWork
             // ExFor: Rsc.OvertimeRateFormat
-            // ExFor: RscKey.OvertimeCost
-            // ExFor: RscKey.OvertimeWork
-            // ExFor: RscKey.OvertimeRateFormat
             // ExSummary: Shows how to read resource overtime values.
             var project = new Project(DataDir + "ResourceOvertime.mpp");
 
@@ -1025,7 +964,6 @@
         {
             // ExStart:GetResourcePercentWorkComplete
             // ExFor: Rsc.PercentWorkComplete
-            // ExFor: RscKey.PercentWorkComplete
             // ExSummary: Shows how to read resource percent work complete.
             var project = new Project(DataDir + "ResourcePercentWorkComplete.mpp");
 
@@ -1046,7 +984,6 @@
         {
             // ExStart:GetResourceWorkVariance
             // ExFor: Rsc.WorkVariance
-            // ExFor: RscKey.WorkVariance
             // ExSummary: Shows how to read resource work variance.
             var project = new Project(DataDir + "WorkVariance.mpp");
 
@@ -1067,7 +1004,6 @@
         {
             // ExStart:GetSetResourceCalendar
             // ExFor: Rsc.Calendar
-            // ExFor: RscKey.Calendar
             // ExSummary: Shows how to get/set a resource calendar.
             var project = new Project(DataDir + "ResourceCalendar.mpp");
             var res = project.Resources.Add("Resource1");
@@ -1096,8 +1032,6 @@
                 // ExStart:SetResourceMetaProperties
                 // ExFor: Rsc.EMailAddress
                 // ExFor: Rsc.WindowsUserAccount
-                // ExFor: RscKey.EMailAddress
-                // ExFor: RscKey.WindowsUserAccount
                 // ExSummary: Shows how to set resource's meta properties.
                 var project = new Project(DataDir + "Project.mpp");
 
@@ -1122,10 +1056,7 @@
                 // ExStart:ReadWriteGeneralResourceProperties
                 // ExFor: Rsc.StandardRate
                 // ExFor: Rsc.OvertimeRate
-                // ExFor: RscKey.StandardRate
-                // ExFor: RscKey.OvertimeRate
                 // ExFor: Rsc.Group
-                // ExFor: RscKey.Group
                 // ExSummary: Shows how to work resources rates and groups.
                 var project = new Project(DataDir + "UpdateResourceData.mpp");
 
@@ -1157,8 +1088,6 @@
             // ExStart:ReadBudgetWorkAndCost
             // ExFor: Rsc.BudgetWork
             // ExFor: Rsc.BudgetCost
-            // ExFor: RscKey.BudgetWork
-            // ExFor: RscKey.BudgetCost
             // ExSummary: Shows how to read budget work/cost values of a resource.
             var project = new Project(DataDir + "BudgetWorkAndCost.mpp");
 

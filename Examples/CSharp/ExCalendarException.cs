@@ -157,6 +157,8 @@
             // ExFor: CalendarException.MonthItem
             // ExFor: CalendarException.MonthPosition
             // ExFor: CalendarException.Period
+            // ExFor: MonthItemType
+            // ExFor: MonthPosition
             // ExSummary: Shows how to define calendar exception by month day.
             var project = new Project(DataDir + "project_test.mpp");
 
@@ -189,15 +191,6 @@
         {
             // ExStart:HandleExceptionOccurrences
             // ExFor: CalendarExceptionType
-            // ExFor: CalendarExceptionType.ByDayCount
-            // ExFor: CalendarExceptionType.ByWeekDayCount
-            // ExFor: CalendarExceptionType.Daily
-            // ExFor: CalendarExceptionType.MonthlyByDay
-            // ExFor: CalendarExceptionType.MonthlyByPosition
-            // ExFor: CalendarExceptionType.NoExceptionType
-            // ExFor: CalendarExceptionType.Weekly
-            // ExFor: CalendarExceptionType.YearlyByDay
-            // ExFor: CalendarExceptionType.YearlyByPosition
             // ExFor: CalendarException.EnteredByOccurrences
             // ExFor: CalendarException.Occurrences
             // ExSummary: Shows how to define a calendar exception by occurrences.

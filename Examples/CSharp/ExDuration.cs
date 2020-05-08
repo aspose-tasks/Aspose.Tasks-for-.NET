@@ -221,6 +221,7 @@
             // ExStart:CalculateTaskDurations
             // ExFor: Duration.ToDouble
             // ExFor: Duration.Convert(TimeUnitType)
+            // ExFor: TimeUnitType
             // ExSummary: Shows how to convert a duration into different time unit types.
             var project = new Project(DataDir + "TaskDurations.mpp");
 

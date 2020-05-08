@@ -24,6 +24,7 @@
             // ExFor: View.Table
             // ExFor: View.Type
             // ExFor: View.Uid
+            // ExFor: ViewScreen
             // ExSummary: Shows how to work with MS Project views.
             
             // create an empty project without views 

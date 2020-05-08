@@ -90,6 +90,7 @@
             // ExFor: PageInfo.Margins
             // ExFor: PageInfo.PageSettings
             // ExFor: PageInfo.PageViewSettings
+            // ExFor: PrinterPaperSize
             // ExSummary: Shows how to work with page info of MS Project view.
             var project = new Project(DataDir + "Project2.mpp");
             

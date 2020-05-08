@@ -11,10 +11,6 @@
         {
             // ExStart
             // ExFor: CalculationType
-            // ExFor: CalculationType.Calculation
-            // ExFor: CalculationType.Lookup
-            // ExFor: CalculationType.None
-            // ExFor: CalculationType.Rollup
             // ExSummary: Shows how to work with calculation type of an extended attribute definition.
             var project = new Project();
 

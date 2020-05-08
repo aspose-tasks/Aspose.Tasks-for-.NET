@@ -20,6 +20,7 @@
                 // ExFor: PageMargins.Left
                 // ExFor: PageMargins.Right
                 // ExFor: PageMargins.Top
+                // ExFor: Border
                 // ExSummary: Shows how to work with page margins.
                 var project = new Project(DataDir + "Project2.mpp");
 

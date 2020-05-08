@@ -41,7 +41,7 @@
             // ExFor: ResourceToColumnTextConverter
             // ExSummary: Shows how to add resource view columns to be exported.
             var project = new Project(DataDir + "Project2.mpp");
-            Resource resource = project.Resources.GetById(1);
+            var resource = project.Resources.GetById(1);
 
             var options = new PdfSaveOptions();
             var columns = new List<ViewColumn>

@@ -3,7 +3,6 @@
     using System;
     using NUnit.Framework;
     using Saving;
-    using Visualization;
 
     [TestFixture]
     public class ExPageLegend : ApiExampleBase
@@ -23,6 +22,7 @@
                 // ExFor: PageLegend.CenteredText
                 // ExFor: PageLegend.RightImage
                 // ExFor: PageLegend.RightText
+                // ExFor: Legend
                 // ExSummary: Shows how to work with page legend information.
                 var project = new Project(DataDir + "Blank2010.mpp");
             

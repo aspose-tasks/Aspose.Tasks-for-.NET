@@ -23,6 +23,7 @@
             // ExFor: OutlineMaskCollection.Item(Int32)
             // ExFor: OutlineMaskCollection.Remove(OutlineMask)
             // ExFor: OutlineMaskCollection.RemoveAt(Int32)
+            // ExFor: MaskType
             // ExSummary: Shows how to work with outline mask collections.
             var project = new Project(DataDir + "OutlineValues2010.mpp");
 

@@ -10,9 +10,6 @@
         {
             // ExStart:WorkWithResourceType
             // ExFor: ResourceType
-            // ExFor: ResourceType.Cost
-            // ExFor: ResourceType.Material
-            // ExFor: ResourceType.Work
             // ExSummary: Shows how to work with resource types.
             var project = new Project();
 

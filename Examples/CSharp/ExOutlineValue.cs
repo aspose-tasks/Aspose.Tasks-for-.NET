@@ -19,6 +19,7 @@
             // ExFor: OutlineValue.DurationValue
             // ExFor: OutlineValue.IsCollapsed
             // ExFor: OutlineValue.ParentValueId
+            // ExFor: OutlineValueType
             // ExSummary: Shows how to work with outline values.
             var project = new Project(DataDir + "OutlineValues2010.mpp");
 
