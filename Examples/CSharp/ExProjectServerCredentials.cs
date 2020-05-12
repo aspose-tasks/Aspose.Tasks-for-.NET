@@ -83,7 +83,7 @@
             }
         }
         
-        [Test]
+        [Test, Category("ExternalDependencies")]
         public void CreateProjectInProjectServer2()
         {
             // ExStart

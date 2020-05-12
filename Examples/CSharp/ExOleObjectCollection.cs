@@ -34,7 +34,7 @@
             // or enumeration one can iterate over OLE objects
             foreach (var oleObject in project.OleObjects)
             {
-                if (string.IsNullOrEmpty(oleObject.FileFormat))
+                if (string.IsNullOrEmpty(oleObject.FileFormat) || !extensions.ContainsKey(oleObject.FileFormat))
                 {
                     continue;
                 }

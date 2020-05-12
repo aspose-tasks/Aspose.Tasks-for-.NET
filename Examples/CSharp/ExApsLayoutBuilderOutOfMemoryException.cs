@@ -8,7 +8,7 @@
     [TestFixture]
     public class ExApsLayoutBuilderOutOfMemoryException : ApiExampleBase
     {
-        [Test]
+        [Test, Ignore("No need to run this test.")]
         public void WorkWithApsLayoutBuilderOutOfMemoryException()
         {
             // ExStart

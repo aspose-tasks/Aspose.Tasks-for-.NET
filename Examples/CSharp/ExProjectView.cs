@@ -24,7 +24,7 @@
                     View = ProjectView.GetDefaultAssignmentView()
                 };
 
-                project.Save(DataDir + "WorkWithProjectView_AssignmentView_out.pdf", options);
+                project.Save(OutDir + "WorkWithProjectView_AssignmentView_out.pdf", options);
                 // ExEnd
             }
             
@@ -39,7 +39,7 @@
                     View = ProjectView.GetDefaultGanttChartView()
                 };
 
-                project.Save(DataDir + "WorkWithProjectView_GanttChartView_out.pdf", options);
+                project.Save(OutDir + "WorkWithProjectView_GanttChartView_out.pdf", options);
                 // ExEnd
             }
             
@@ -54,7 +54,7 @@
                     View = ProjectView.GetDefaultResourceSheetView()
                 };
 
-                project.Save(DataDir + "WorkWithProjectView_ResourceSheetView_out.pdf", options);
+                project.Save(OutDir + "WorkWithProjectView_ResourceSheetView_out.pdf", options);
                 // ExEnd
             }
             
@@ -69,7 +69,7 @@
                     View = ProjectView.GetDefaultResourceUsageView()
                 };
 
-                project.Save(DataDir + "WorkWithProjectView_ResourceUsageView_out.pdf", options);
+                project.Save(OutDir + "WorkWithProjectView_ResourceUsageView_out.pdf", options);
                 // ExEnd
             }
             
@@ -84,7 +84,7 @@
                     View = ProjectView.GetDefaultTaskSheetView()
                 };
 
-                project.Save(DataDir + "WorkWithProjectView_TaskSheetView_out.pdf", options);
+                project.Save(OutDir + "WorkWithProjectView_TaskSheetView_out.pdf", options);
                 // ExEnd
             }
 

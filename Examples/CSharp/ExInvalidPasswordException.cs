@@ -15,7 +15,7 @@
             // ExSummary: Shows how to handle <see cref="InvalidPasswordException"/> while reading a password protected project files.
             try
             {
-                var project = new Project("PasswordProtected.mpp");
+                var project = new Project(DataDir + "PasswordProtected.mpp");
 
                 // working with project ...
                 Console.WriteLine("Project Name: " + project.Get(Prj.Name));

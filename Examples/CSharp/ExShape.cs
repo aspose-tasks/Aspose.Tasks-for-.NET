@@ -8,7 +8,7 @@
     [TestFixture]
     public class ExShape : ApiExampleBase
     {
-        [Test]
+        [Test, Category("ExternalDependencies")]
         public void RetrieveTaskEmbeddedDocuments()
         {
             // ExStart:RetrieveTaskEmbeddedDocuments

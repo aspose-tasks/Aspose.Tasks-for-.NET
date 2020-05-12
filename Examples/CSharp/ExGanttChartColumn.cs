@@ -136,7 +136,7 @@
             info.Legend = legend;
             info.Footer = footer;
             
-            project.Save(OutDir + "WorkWithPageInfo_out.mpp", SaveFileFormat.MPP);
+            // work with project...
             // ExEnd:WorkWithPageInfo 
         }
     }
