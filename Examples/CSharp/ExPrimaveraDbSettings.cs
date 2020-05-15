@@ -8,7 +8,7 @@
     [TestFixture]
     public class ExPrimaveraDbSettings : ApiExampleBase
     {
-        [Test]
+        [Test, Category("Database")]
         public void ImportProjectFromPrimaveraDB()
         {
             try

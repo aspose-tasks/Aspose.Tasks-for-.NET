@@ -10,7 +10,7 @@ namespace Aspose.Tasks.Examples.CSharp
     [TestFixture]
     public class ExProjectOnlineReader : ApiExampleBase
     {
-        [Test]
+        [Test, Category("Deprecated")]
         [SuppressMessage("ReSharper", "UnusedVariable", Justification = "Reviewed. Suppression is OK here.")]
         public void WorkWithProjectOnlineReader()
         {

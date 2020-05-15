@@ -272,7 +272,7 @@
             }
         }
 
-        [Test, Explicit]
+        [Test, Explicit, Category("Printing")]
         public void PrintLargeFiles()
         {
             // ExStart:PrintLargeFiles
@@ -292,7 +292,7 @@
             // ExEnd:PrintLargeFiles
         }
 
-        [Test, Explicit]
+        [Test, Explicit, Category("Printing")]
         public void PrintPrinterSettings()
         {
             // ExStart:PrintPrinterSettings
@@ -313,7 +313,7 @@
             // ExEnd:PrintPrinterSettings
         }
 
-        [Test, Explicit]
+        [Test, Explicit, Category("Printing")]
         public void PrintPrinterSettingsAndDocumentName()
         {
             // ExStart:PrintPrinterSettingsAndDocumentName
@@ -334,7 +334,7 @@
             // ExEnd:PrintPrinterSettingsAndDocumentName
         }
 
-        [Test, Explicit]
+        [Test, Explicit, Category("Printing")]
         public void PrintPrintOptionsAndPrinterSettings()
         {
             // ExStart:PrintPrintOptionsAndPrinterSettings
@@ -360,7 +360,7 @@
             // ExEnd:PrintPrintOptionsAndPrinterSettings
         }
 
-        [Test, Explicit]
+        [Test, Explicit, Category("Printing")]
         public void PrintProjectUsingCustomPrinter()
         {
             // ExStart:PrintProjectUsingCustomPrinter
@@ -382,7 +382,7 @@
             // ExEnd:PrintProjectUsingCustomPrinter
         }
 
-        [Test, Explicit]
+        [Test, Explicit, Category("Printing")]
         public void PrintTheProject()
         {
             // ExStart:PrintTheProject
@@ -1535,7 +1535,7 @@
             // ExEnd:ImportDataFromXMLFileFormats
         }
 
-        [Test]
+        [Test, Category("Database")]
         public void ImportProjectFromPrimaveraDB()
         {
             try

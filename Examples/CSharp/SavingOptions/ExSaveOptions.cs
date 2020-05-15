@@ -344,7 +344,7 @@
         /// Example of custom task filter that can be used while saving MS Project file (for instance) in PDF file.
         /// </summary>
         /// <inheritdoc />
-        internal class CustomTasksFilter : ICondition<Task>
+        private class CustomTasksFilter : ICondition<Task>
         {
             public bool Check(Task el)
             {
@@ -357,71 +357,67 @@
         // ExStart:SortTasksByColumnInGanttChart
         // ExFor: SaveOptions.TasksComparer
         // ExSummary: Shows how to set a comparer to sort tasks on Gantt chart and/or Task Sheet chart.
-        [TestFixture] // ExSkip
-        internal class SortTasksByColumnInGanttChart
+
+        [Test] // ExSkip
+        public void SortTasksByColumnInGanttChartExample()
         {
-            [Test] // ExSkip
-            public void SortTasksByColumnInGanttChartExample()
+            var project = new Project(DataDir + "Project2.mpp");
+            SaveOptions options = new PdfSaveOptions
             {
-                var project = new Project(DataDir + "Project2.mpp");
-                SaveOptions options = new PdfSaveOptions
-                {
-                    Timescale = Timescale.Months,
-                    TasksComparer = new TasksNameComparer()
-                };
-                project.Save(OutDir + "SortedByNames_out.pdf", options);
+                Timescale = Timescale.Months,
+                TasksComparer = new TasksNameComparer()
+            };
+            project.Save(OutDir + "SortedByNames_out.pdf", options);
 
-                options.TasksComparer = new TasksDurationComparer();
-                project.Save(OutDir + "SortedByDurations_out.pdf", options);
-            }
+            options.TasksComparer = new TasksDurationComparer();
+            project.Save(OutDir + "SortedByDurations_out.pdf", options);
+        }
 
-            private class TasksNameComparer : IComparer<Task>
+        private class TasksNameComparer : IComparer<Task>
+        {
+            public int Compare(Task x, Task y)
             {
-                public int Compare(Task x, Task y)
+                // ReSharper disable once ConvertIfStatementToSwitchStatement
+                // ReSharper disable once ConvertIfStatementToSwitchExpression
+                if (x == null && y == null)
                 {
-                    // ReSharper disable once ConvertIfStatementToSwitchStatement
-                    // ReSharper disable once ConvertIfStatementToSwitchExpression
-                    if (x == null && y == null)
-                    {
-                        return 0;
-                    }
-
-                    if (x == null)
-                    {
-                        return -1;
-                    }
-
-                    return y == null ? 1 : string.Compare(x.Get(Tsk.Name), y.Get(Tsk.Name), StringComparison.Ordinal);
+                    return 0;
                 }
-            }
 
-            private class TasksDurationComparer : IComparer<Task>
-            {
-                public int Compare(Task x, Task y)
+                if (x == null)
                 {
-                    // ReSharper disable once ConvertIfStatementToSwitchStatement
-                    if (x == null && y == null)
-                    {
-                        return 0;
-                    }
-
-                    if (x == null)
-                    {
-                        return -1;
-                    }
-
-                    if (y == null)
-                    {
-                        return 1;
-                    }
-
-                    var durX = x.Get(Tsk.Duration);
-                    var durY = y.Get(Tsk.Duration);
-                    return durX.TimeSpan.CompareTo(durY.TimeSpan);
+                    return -1;
                 }
+
+                return y == null ? 1 : string.Compare(x.Get(Tsk.Name), y.Get(Tsk.Name), StringComparison.Ordinal);
             }
         }
 
+        private class TasksDurationComparer : IComparer<Task>
+        {
+            public int Compare(Task x, Task y)
+            {
+                // ReSharper disable once ConvertIfStatementToSwitchStatement
+                if (x == null && y == null)
+                {
+                    return 0;
+                }
+
+                if (x == null)
+                {
+                    return -1;
+                }
+
+                if (y == null)
+                {
+                    return 1;
+                }
+
+                var durX = x.Get(Tsk.Duration);
+                var durY = y.Get(Tsk.Duration);
+                return durX.TimeSpan.CompareTo(durY.TimeSpan);
+            }
+        }
         // ExEnd:SortTasksByColumnInGanttChart
     }
 }

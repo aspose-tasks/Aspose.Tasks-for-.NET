@@ -14,17 +14,17 @@
         // ExFor: IImageSavingCallback.ImageSaving(ImageSavingArgs)
         // ExFor: HtmlSaveOptions.ImageSavingCallback
         // ExSummary: Shows how to work with image saving callbacks.
-        [TestFixture] // ExSkip
-        internal class ResourcePrefixForNestedResources : ApiExampleBase, ICssSavingCallback, IFontSavingCallback, IImageSavingCallback
+        // ExSkip
+        [Test] 
+        public void ResourcePrefixForNestedResourcesExample()
         {
-            [Test] // ExSkip
-            public void ResourcePrefixForNestedResourcesExample()
-            {
-                var project = new Project(DataDir + "Project1.mpp");
-                var options = GetSaveOptions(1);
-                project.Save(OutDir + "document_out.html", options);
-            }
+            var project = new Project(DataDir + "Project1.mpp");
+            var options = ResourcePrefixForNestedResources.GetSaveOptions(1);
+            project.Save(OutDir + "document_out.html", options);
+        }
 
+        private class ResourcePrefixForNestedResources : ICssSavingCallback, IFontSavingCallback, IImageSavingCallback
+        {
             public void CssSaving(CssSavingArgs args)
             {
                 if (!Directory.Exists(OutDir + "css/"))
@@ -81,7 +81,7 @@
                 }
             }
 
-            private static HtmlSaveOptions GetSaveOptions(int pageNumber)
+            public static HtmlSaveOptions GetSaveOptions(int pageNumber)
             {
                 var options = new HtmlSaveOptions
                                   {

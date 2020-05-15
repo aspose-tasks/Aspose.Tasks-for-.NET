@@ -9,7 +9,7 @@
     [TestFixture]
     public class ExMspDbSettings : ApiExampleBase
     {
-        [Test]
+        [Test, Category("Database")]
         public void ImportProjectDataFromDatabase()
         {
             // ExStart:ImportProjectDataFromDatabase

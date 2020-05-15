@@ -1679,8 +1679,8 @@
             // Parse through all the collected tasks
             foreach (var task in collector.Tasks)
             {
-                var effortDriven = task.Get(Tsk.IsEffortDriven) ? "EffortDriven" : "Non-EffortDriven";
-                var nonCritical = task.Get(Tsk.IsCritical) ? "Critical" : "Non-Critical";
+                var effortDriven = task.Get(Tsk.IsEffortDriven).Value ? "EffortDriven" : "Non-EffortDriven";
+                var nonCritical = task.Get(Tsk.IsCritical).Value ? "Critical" : "Non-Critical";
                 Console.WriteLine(task.Get(Tsk.Name) + " : " + effortDriven);
                 Console.WriteLine(task.Get(Tsk.Name) + " : " + nonCritical);
             }
@@ -1703,8 +1703,8 @@
             // Iterate over the collected tasks
             foreach (var task in collector.Tasks)
             {
-                var estimated = task.Get(Tsk.IsEstimated) ? "Estimated" : "Non-Estimated";
-                var milestone = task.Get(Tsk.IsMilestone) ? "Milestone" : "Non-Milestone";
+                var estimated = task.Get(Tsk.IsEstimated).Value ? "Estimated" : "Non-Estimated";
+                var milestone = task.Get(Tsk.IsMilestone).Value ? "Milestone" : "Non-Milestone";
                 Console.WriteLine(task.Get(Tsk.Name) + " : " + estimated);
                 Console.WriteLine(task.Get(Tsk.Name) + " : " + milestone);
             }

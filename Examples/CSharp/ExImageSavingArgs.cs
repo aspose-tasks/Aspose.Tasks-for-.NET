@@ -16,17 +16,17 @@
         // ExFor: ResourceExportType
         // ExFor: HtmlImageType
         // ExSummary: Shows how to work with image saving arguments.
-        [TestFixture] // ExSkip
-        internal class ResourcePrefixForNestedResources : ApiExampleBase, ICssSavingCallback, IFontSavingCallback, IImageSavingCallback
-        {
-            [Test] // ExSkip
-            public void ResourcePrefixForNestedResourcesExample()
-            {
-                var project = new Project(DataDir + "Project1.mpp");
-                var options = GetSaveOptions(1);
-                project.Save(OutDir + "document_out.html", options);
-            }
 
+        [Test] // ExSkip
+        public void ResourcePrefixForNestedResourcesExample()
+        {
+            var project = new Project(DataDir + "Project1.mpp");
+            var options = ResourcePrefixForNestedResources.GetSaveOptions(1);
+            project.Save(OutDir + "document_out.html", options);
+        }
+
+        private class ResourcePrefixForNestedResources : ICssSavingCallback, IFontSavingCallback, IImageSavingCallback
+        {
             public void CssSaving(CssSavingArgs args)
             {
                 if (!Directory.Exists(OutDir + "css/"))
@@ -83,7 +83,7 @@
                 }
             }
 
-            private static HtmlSaveOptions GetSaveOptions(int pageNumber)
+            public static HtmlSaveOptions GetSaveOptions(int pageNumber)
             {
                 var options = new HtmlSaveOptions
                                   {
