@@ -11,7 +11,6 @@
         {
             // ExStart
             // ExFor: Rate
-            // ExFor: Rate.#ctor
             // ExFor: Rate.CostPerUse
             // ExFor: Rate.OvertimeRate
             // ExFor: Rate.OvertimeRateFormat
