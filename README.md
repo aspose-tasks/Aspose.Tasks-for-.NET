@@ -2,7 +2,7 @@
 
 [Aspose.Tasks for .NET](https://products.aspose.com/tasks/net) offers Project management APIs that enable .NET applications to not only read and manipulate Microsoft Project® documents but also write Microsoft Project® documents in both MPP and XML formats - all without using Microsoft Project®. As with all Aspose file format APIs - Aspose.Tasks for .NET works well with both WinForms and Web Form applications.
 
-This repository contains [Examples](Examples), [Plugins](Plugins) and Showcase projects for [Aspose.Tasks for .NET](https://www.aspose.com/products/tasks/net) to help you learn and write your own applications.
+This repository contains [Demos](Demos), [Examples](Examples), [Plugins](Plugins) and Showcase projects for [Aspose.Tasks for .NET](https://www.aspose.com/products/tasks/net) to help you learn and write your own applications.
 
 <p align="center">
 
@@ -13,6 +13,7 @@ This repository contains [Examples](Examples), [Plugins](Plugins) and Showcase p
 
 Directory | Description
 --------- | -----------
+[Demos](Demos)  | Aspose.Tasks for .NET Live Demos Source Code
 [Examples](Examples)  | A collection of .NET examples that help you learn the product features
 [Plugins](Plugins)  | Plugins that will demonstrate one or more features of Aspose.Tasks for .NET
 
