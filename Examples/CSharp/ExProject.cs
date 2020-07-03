@@ -27,7 +27,7 @@
             // ExStart:SaveProjectOverviewReport
             // ExFor: Project.SaveReport(String)
             // ExSummary: Shows how to save the project overview report to PDF file into a stream.
-            var project = new Project(DataDir + "Cyclic stucture.mpp");
+            var project = new Project(DataDir + "Cyclic structure.mpp");
 
             // one can save the overview report to PDF file to the specified path
             project.SaveReport(OutDir + "SaveProjectOverviewReport_out.pdf");
@@ -41,7 +41,7 @@
             // ExStart:SaveProjectOverviewReportStream
             // ExFor: Project.SaveReport(Stream)
             // ExSummary: Shows how to save the project overview report to PDF file.
-            var project = new Project(DataDir + "Cyclic stucture.mpp");
+            var project = new Project(DataDir + "Cyclic structure.mpp");
 
             // save the overview report to PDF file to the specified stream.
             using (var stream = new FileStream(OutDir + "SaveProjectOverviewReport_out.pdf", FileMode.Create))
@@ -58,7 +58,7 @@
             // ExStart:SaveProjectOverviewReportStream
             // ExFor: Project.SaveReport(Stream,ReportType)
             // ExSummary: Shows how to save the project report to PDF file for specific report type.
-            var project = new Project(DataDir + "Cyclic stucture.mpp");
+            var project = new Project(DataDir + "Cyclic structure.mpp");
 
             // save the overview report to PDF file to the specified stream.
             using (var stream = new FileStream(OutDir + "SaveProjectOverviewReport_out.pdf", FileMode.Create))
