@@ -52,7 +52,7 @@
         {
             var style = new GanttBarStyle
             {
-                ShowFor = "1",
+                ShowForTaskUid = 1,
                 MiddleShape = GanttBarMiddleShape.RectangleBottom,
                 MiddleFillPattern = GanttBarFillPattern.MediumFill,
                 MiddleShapeColor = Color.Blue,

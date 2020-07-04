@@ -262,7 +262,7 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Aspose.Tasks" Version="20.7.0" />
-    <PackageReference Include="Aspose.Words" Version="20.6.0" />
+    <PackageReference Include="Aspose.Words" Version="20.7.0" />
     <PackageReference Include="Microsoft.SharePointOnline.CSOM" Version="16.1.20211.12000" />
     <PackageReference Include="NUnit" Version="3.12.0" />
   </ItemGroup>
