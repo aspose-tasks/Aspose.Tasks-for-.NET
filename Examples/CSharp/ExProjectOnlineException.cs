@@ -18,7 +18,7 @@
             // ExSummary: Shows how to catch exception while reading a project from MS Project Online.
             try
             {
-                const string URL = "https://contoso.sharepoint.com";
+                const string URL = "https://project_server.local/sites/pwa";
                 const string Domain = "CONTOSO.COM";
                 const string UserName = "Administrator";
                 const string Password = "MyPassword";

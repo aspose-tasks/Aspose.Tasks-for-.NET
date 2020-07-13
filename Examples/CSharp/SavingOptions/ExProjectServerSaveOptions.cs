@@ -19,10 +19,10 @@
             // ExFor: ProjectServerSaveOptions.ProjectGuid
             // ExFor: ProjectServerSaveOptions.ProjectName
             // ExFor: ProjectServerSaveOptions.PollingInterval
-            // ExSummary: Shows how to use <see cref="Aspose.Tasks.ProjectServerSaveOptions" /> options to create a new project in Microsoft Project Online.
+            // ExSummary: Shows how to use <see cref="Aspose.Tasks.ProjectServerSaveOptions" /> options to create a new project in on-premise instance of Project Server.
             try
             {
-                const string URL = "https://contoso.sharepoint.com";
+                const string URL = "https://project_server.local/sites/pwa";
                 const string Domain = "CONTOSO.COM";
                 const string UserName = "Administrator";
                 const string Password = "MyPassword";
@@ -62,7 +62,7 @@
             // ExStart:UpdateProjectOnlineWithOptions
             // ExFor: ProjectServerSaveOptions.Timeout
             // ExSummary: Shows how to update project on Microsoft Project Online and control save timeout value.
-            const string SharepointDomainAddress = "https://contoso.sharepoint.com";
+            const string SharepointDomainAddress = "https://contoso.sharepoint.com/sites/pwa";
             const string UserName = "admin@contoso.onmicrosoft.com";
             const string Password = "MyPassword";
 

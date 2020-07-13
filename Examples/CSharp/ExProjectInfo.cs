@@ -20,8 +20,8 @@
             // ExFor: ProjectInfo.IsCheckedOut
             // ExFor: ProjectInfo.LastPublishedDate
             // ExFor: ProjectInfo.LastSavedDate
-            // ExSummary: Shows how to read information about projects were read from Project Online.
-            const string SharepointDomainAddress = "https://contoso.sharepoint.com";
+            // ExSummary: Shows how to read information about projects from Project Online.
+            const string SharepointDomainAddress = "https://contoso.sharepoint.com/sites/pwa";
             const string UserName = "admin@contoso.onmicrosoft.com";
             const string Password = "MyPassword";
 

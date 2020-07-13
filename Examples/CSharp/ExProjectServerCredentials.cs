@@ -18,10 +18,10 @@
             // ExStart:CreateProjectOnline
             // ExFor: ProjectServerCredentials
             // ExFor: ProjectServerCredentials.#ctor(String,String,String)
-            // ExSummary: Shows how to use project server credentials to log on MS Project Online.
+            // ExSummary: Shows how to use project server credentials to retrieve list of project from Microsoft Project Online.
             try
             {
-                const string SharepointDomainAddress = "https://contoso.sharepoint.com";
+                const string SharepointDomainAddress = "https://contoso.sharepoint.com/sites/pwa";
                 const string UserName = "admin@contoso.onmicrosoft.com";
                 const string Password = "MyPassword";
 
@@ -54,10 +54,10 @@
         {
             // ExStart:CreateProjectInProjectServer
             // ExFor: ProjectServerCredentials.#ctor(String,NetworkCredential)
-            // ExSummary: Shows how to use Project Server credentials with network credentials while reading a project from Microsoft Project Online.
+            // ExSummary: Shows how to use Project Server credentials with network credentials to read a project from on-premise instance of Project Server.
             try
             {
-                const string URL = "https://contoso.sharepoint.com";
+                const string URL = "https://project_server.local/sites/pwa";
                 const string Domain = "CONTOSO.COM";
                 const string UserName = "Administrator";
                 const string Password = "MyPassword";
@@ -91,12 +91,12 @@
             // ExFor: ProjectServerCredentials.AuthToken
             // ExFor: ProjectServerCredentials.SiteUrl
             // ExFor: ProjectServerCredentials.UserName
-            // ExSummary: Shows how to use Project Server credentials with SharePointOnlineCredentials while reading a project from Microsoft Project Online.
+            // ExSummary: Shows how to use Project Server credentials with SharePointOnlineCredentials to create project in Microsoft Project Online.
             try
             {
-                const string Username = "your.login@nstincorporated.onmicrosoft.com";
+                const string Username = "admin@contoso.onmicrosoft.com";
                 const string SecuredPassword = "MyPassword";
-                var url = new Uri("https://contoso.sharepoint.com");
+                var url = new Uri("https://contoso.sharepoint.com/sites/pwa");
                 var project = new Project(DataDir + "Project1.mpp");
                 var password = new SecureString();
                 foreach (var c in SecuredPassword)

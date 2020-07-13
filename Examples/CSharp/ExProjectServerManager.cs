@@ -17,10 +17,10 @@
             // ExStart:CreateProjectOnline
             // ExFor: ProjectServerManager
             // ExFor: ProjectServerManager.CreateNewProject(Project,ProjectServerSaveOptions)
-            // ExSummary: Shows how to use Project Server manager.
+            // ExSummary: Shows how to use Project Server manager to create a new project on Microsoft Project Online.
             try
             {
-                const string SharepointDomainAddress = "https://contoso.sharepoint.com";
+                const string SharepointDomainAddress = "https://contoso.sharepoint.com/sites/pwa";
                 const string UserName = "admin@contoso.onmicrosoft.com";
                 const string Password = "MyPassword";
 
@@ -51,7 +51,7 @@
             // ExSummary: Shows how to use Project Server manager to create a new project on Microsoft Project Online.
             try
             {
-                const string SharepointDomainAddress = "https://contoso.sharepoint.com";
+                const string SharepointDomainAddress = "https://contoso.sharepoint.com/sites/pwa";
                 const string UserName = "admin@contoso.onmicrosoft.com";
                 const string Password = "MyPassword";
 
@@ -81,8 +81,8 @@
                 // ExFor: ProjectServerManager.GetProjectList
                 // ExFor: ProjectServerManager.GetProject(Guid)
                 // ExFor: ProjectServerManager.GetProjectRawData(Guid)
-                // ExSummary: Shows how to read a project from MS Project Online.
-                const string SharepointDomainAddress = "https://contoso.sharepoint.com";
+                // ExSummary: Shows how to read a project from Microsoft Project Online.
+                const string SharepointDomainAddress = "https://contoso.sharepoint.com/sites/pwa";
                 const string UserName = "admin@contoso.onmicrosoft.com";
                 const string Password = "MyPassword";
 
@@ -116,7 +116,7 @@
             // ExStart:UpdateProjectServer
             // ExFor: ProjectServerManager.UpdateProject(Project)
             // ExSummary: Shows how to update project on Microsoft Project Online.
-            const string URL = "https://contoso.sharepoint.com";
+            const string URL = "https://contoso.sharepoint.com/sites/pwa";
             const string Domain = "CONTOSO.COM";
             const string UserName = "Administrator";
             const string Password = "MyPassword";
@@ -163,7 +163,7 @@
             // ExStart:UpdateProjectOnlineWithOptions
             // ExFor: ProjectServerManager.UpdateProject(Project,ProjectServerSaveOptions)
             // ExSummary: Shows how to update project on Microsoft Project Online with an usage of Project Server save options.
-            const string SharepointDomainAddress = "https://contoso.sharepoint.com";
+            const string SharepointDomainAddress = "https://contoso.sharepoint.com/sites/pwa";
             const string UserName = "admin@contoso.onmicrosoft.com";
             const string Password = "MyPassword";
 

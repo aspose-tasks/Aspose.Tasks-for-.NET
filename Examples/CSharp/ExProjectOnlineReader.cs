@@ -23,7 +23,7 @@ namespace Aspose.Tasks.Examples.CSharp
             // ExSummary: Shows how to use <see cref="Aspose.Tasks.ProjectOnlineReader" /> to read work with Microsoft Project Online.
             try
             {
-                const string SharepointDomainAddress = "https://contoso.sharepoint.com";
+                const string SharepointDomainAddress = "https://contoso.sharepoint.com/sites/pwa";
                 const string UserName = "admin@contoso.onmicrosoft.com";
                 const string Password = "MyPassword";
 
