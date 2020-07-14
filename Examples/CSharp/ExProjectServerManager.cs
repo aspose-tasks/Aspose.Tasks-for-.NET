@@ -17,7 +17,7 @@
             // ExStart:CreateProjectOnline
             // ExFor: ProjectServerManager
             // ExFor: ProjectServerManager.CreateNewProject(Project,ProjectServerSaveOptions)
-            // ExSummary: Shows how to use Project Server manager to create a new project on Microsoft Project Online.
+            // ExSummary: Shows how to use Project Server manager to create a new project with predefined save options on Microsoft Project Online.
             try
             {
                 const string SharepointDomainAddress = "https://contoso.sharepoint.com/sites/pwa";
