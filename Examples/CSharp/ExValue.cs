@@ -20,7 +20,6 @@
             // ExFor: Value.Phonetic
             // ExFor: Value.Duration
             // ExFor: Value.DateTimeValue
-            // ExFor: Value.NumberValue
             // ExFor: Value.NumericValue
             // ExSummary: Shows how to read work with lookup values.
             var project = new Project(DataDir + "ReadTaskExtendedAttributes.mpp");
