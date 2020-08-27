@@ -1345,6 +1345,18 @@
         }
 
         [Test]
+        public void CheckIfProjectIsPasswordProtected()
+        {
+            // ExStart:CheckIfProjectIsPasswordProtected
+            // ExFor: Project.#ctor(Stream,String)
+            // ExSummary: Shows how to check if MPP is password protected.
+            var info = Project.GetProjectFileInfo(DataDir + "PasswordProtected.mpp");
+            Console.WriteLine("Is file password protected?:" + info.IsPasswordProtected);
+
+            // ExEnd:CheckIfProjectIsPasswordProtected
+        }
+
+        [Test]
         public void RenderTaskUsageViewWithDetails()
         {
             // ExStart:RenderTaskUsageViewWithDetails
