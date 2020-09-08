@@ -148,7 +148,6 @@
     <Compile Include="ExProjectFileInfo.cs" />
     <Compile Include="ExProjectInfo.cs" />
     <Compile Include="ExProjectOnlineException.cs" />
-    <Compile Include="ExProjectOnlineReader.cs" />
     <Compile Include="ExProjectServerCredentials.cs" />
     <Compile Include="ExProjectServerManager.cs" />
     <Compile Include="ExProjectView.cs" />
@@ -261,9 +260,9 @@
     <None Include="app.config" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Aspose.Tasks" Version="20.8.0" />
-    <PackageReference Include="Aspose.Words" Version="20.8.0" />
-    <PackageReference Include="Microsoft.SharePointOnline.CSOM" Version="16.1.20324.12000" />
+    <PackageReference Include="Aspose.Tasks" Version="20.9.0" />
+    <PackageReference Include="Aspose.Words" Version="20.9.0" />
+    <PackageReference Include="Microsoft.SharePointOnline.CSOM" Version="16.1.20412.12000" />
     <PackageReference Include="NUnit" Version="3.12.0" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
