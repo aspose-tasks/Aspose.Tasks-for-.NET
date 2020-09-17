@@ -8,7 +8,6 @@
     using System.Drawing;
     using System.Drawing.Printing;
     using System.IO;
-    using System.Linq;
     using System.Text;
     using System.Text.RegularExpressions;
     using Connectivity;
@@ -519,7 +518,7 @@
             // ExSummary: Shows how to renumber selected tasks' WBS codes.
             var project = new Project(DataDir + "RenumberExample.mpp");
 
-            List<Task> tasks = project.RootTask.SelectAllChildTasks().ToList();
+            var tasks = new List<Task>(project.RootTask.SelectAllChildTasks());
 
             Console.WriteLine("WBS codes before: ");
 
@@ -550,7 +549,7 @@
             // ExSummary: Shows how to renumber tasks' WBS codes.
             var project = new Project(DataDir + "RenumberExample.mpp");
 
-            List<Task> tasks = project.RootTask.SelectAllChildTasks().ToList();
+            IEnumerable<Task> tasks = new List<Task>(project.RootTask.SelectAllChildTasks());
 
             Console.WriteLine("WBS codes before: ");
 

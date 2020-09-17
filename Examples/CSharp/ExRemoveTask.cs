@@ -3,7 +3,6 @@
     using System;
     using System.Collections.Generic;
     using System.Diagnostics.CodeAnalysis;
-    using System.Linq;
     using NUnit.Framework;
     using Util;
 
@@ -27,7 +26,7 @@
             var task3 = project.RootTask.Children.Add("3");
             var task4 = project.RootTask.Children.Add("4");
 
-            List<Task> tasks = project.RootTask.SelectAllChildTasks().ToList();
+            List<Task> tasks = new List<Task>(project.RootTask.SelectAllChildTasks());
             Console.WriteLine("Number of tasks before using the algorithm: " + tasks.Count);
             foreach (var task in project.RootTask.SelectAllChildTasks())
             {
@@ -43,7 +42,7 @@
             TaskUtils.Apply(project.RootTask, algorithm, 0);
 
             // check the results
-            tasks = project.RootTask.SelectAllChildTasks().ToList();
+            tasks = new List<Task>(project.RootTask.SelectAllChildTasks());
             Console.WriteLine("Number of tasks after using the algorithm: " + tasks.Count);
             foreach (var task in project.RootTask.SelectAllChildTasks())
             {

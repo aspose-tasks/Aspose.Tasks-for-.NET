@@ -2,7 +2,6 @@
 {
     using System;
     using System.Diagnostics.CodeAnalysis;
-    using System.Linq;
     using System.Net;
     using NUnit.Framework;
 
@@ -71,7 +70,15 @@
             {
                 var manager = new ProjectServerManager(credentials);
 
-                var projectInfo = manager.GetProjectList().FirstOrDefault(p => p.Name == "My project");
+                ProjectInfo projectInfo = null;
+                foreach (var info in manager.GetProjectList())
+                {
+                    if (info.Name == "My project")
+                    {
+                        projectInfo = info;
+                    }
+                }
+
                 if (projectInfo == null)
                 {
                     Console.WriteLine("Project 'My project' not found in working store of Project Online account.");
