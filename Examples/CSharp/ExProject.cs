@@ -51,7 +51,7 @@
             // ExEnd:SaveProjectOverviewReportStream
         }
 
-        [Test, Explicit("Too long time running.")]
+        [Test, Ignore("Too long time running.")]
         public void SaveProjectOverviewReport3()
         {
             // ExStart:SaveProjectOverviewReportStream
@@ -271,7 +271,7 @@
             }
         }
 
-        [Test, Explicit, Category("Printing")]
+        [Test, Ignore("Should be run explicitly."), Category("Printing")]
         public void PrintLargeFiles()
         {
             // ExStart:PrintLargeFiles
@@ -291,7 +291,7 @@
             // ExEnd:PrintLargeFiles
         }
 
-        [Test, Explicit, Category("Printing")]
+        [Test, Ignore("Should be run explicitly."), Category("Printing")]
         public void PrintPrinterSettings()
         {
             // ExStart:PrintPrinterSettings
@@ -312,7 +312,7 @@
             // ExEnd:PrintPrinterSettings
         }
 
-        [Test, Explicit, Category("Printing")]
+        [Test, Ignore("Should be run explicitly."), Category("Printing")]
         public void PrintPrinterSettingsAndDocumentName()
         {
             // ExStart:PrintPrinterSettingsAndDocumentName
@@ -333,7 +333,7 @@
             // ExEnd:PrintPrinterSettingsAndDocumentName
         }
 
-        [Test, Explicit, Category("Printing")]
+        [Test, Ignore("Should be run explicitly."), Category("Printing")]
         public void PrintPrintOptionsAndPrinterSettings()
         {
             // ExStart:PrintPrintOptionsAndPrinterSettings
@@ -359,7 +359,7 @@
             // ExEnd:PrintPrintOptionsAndPrinterSettings
         }
 
-        [Test, Explicit, Category("Printing")]
+        [Test, Ignore("Should be run explicitly."), Category("Printing")]
         public void PrintProjectUsingCustomPrinter()
         {
             // ExStart:PrintProjectUsingCustomPrinter
@@ -381,7 +381,7 @@
             // ExEnd:PrintProjectUsingCustomPrinter
         }
 
-        [Test, Explicit, Category("Printing")]
+        [Test, Ignore("Should be run explicitly."), Category("Printing")]
         public void PrintTheProject()
         {
             // ExStart:PrintTheProject

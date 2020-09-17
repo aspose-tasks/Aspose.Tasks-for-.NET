@@ -7,7 +7,7 @@
     [TestFixture]
     public class ExProjectInfo : ApiExampleBase
     {
-        [Test, Explicit]
+        [Test, Ignore("Should be run explicitly.")]
         public void WorkWithProjectInfo()
         {
             // ExStart

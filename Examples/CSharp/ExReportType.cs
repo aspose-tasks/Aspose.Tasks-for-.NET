@@ -7,7 +7,7 @@
     [TestFixture]
     public class ExReportType : ApiExampleBase
     {
-        [Test, Explicit]
+        [Test, Ignore("Should be run explicitly.")]
         public void SaveBurnDownReport()
         {
             // ExStart:SaveBurnDownReport

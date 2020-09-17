@@ -10,7 +10,7 @@
     [SuppressMessage("ReSharper", "StyleCop.SA1108", Justification = "Reviewed. Suppression is OK here.")]
     public class ExProjectServerManager : ApiExampleBase
     {
-        [Test, Explicit]
+        [Test, Ignore("Should be run explicitly.")]
         public void ProjectServerManager()
         {
             // ExStart:CreateProjectOnline
@@ -42,7 +42,7 @@
             // ExEnd:CreateProjectOnline
         }
 
-        [Test, Explicit]
+        [Test, Ignore("Should be run explicitly.")]
         public void ProjectServerManagerCreateNewProject()
         {
             // ExStart:ProjectServerManagerCreateNewProject
@@ -70,7 +70,7 @@
         }
 
         [SuppressMessage("ReSharper", "UnusedVariable", Justification = "Reviewed. Suppression is OK here.")]
-        [Test, Explicit]
+        [Test, Ignore("Should be run explicitly.")]
         public void ReadingProjectOnline()
         {
             try

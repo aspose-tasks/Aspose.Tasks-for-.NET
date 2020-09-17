@@ -11,7 +11,7 @@
     [SuppressMessage("ReSharper", "StyleCop.SA1108", Justification = "Reviewed. Suppression is OK here.")]
     public class ExPrintOptions : ApiExampleBase
     {
-        [Test, Explicit, Category("Printing")]
+        [Test, Ignore("Should be run explicitly."), Category("Printing")]
         public void PrintLargeFiles()
         {
             // ExStart:PrintLargeFiles
