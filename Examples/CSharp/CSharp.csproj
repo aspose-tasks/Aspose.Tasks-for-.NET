@@ -214,7 +214,6 @@
     <Compile Include="ExResource.cs" />
     <Compile Include="ExResourceAssignment.cs" />
     <Compile Include="ExRiskAnalysisSettings.cs" />
-    <Compile Include="ExShape.cs" />
     <Compile Include="ExTaskBaseline.cs" />
     <Compile Include="ExTaskLink.cs" />
     <Compile Include="ExTask.cs" />
@@ -261,7 +260,6 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Aspose.Tasks" Version="20.9.0" />
-    <PackageReference Include="Aspose.Words" Version="20.9.0" />
     <PackageReference Include="Microsoft.SharePointOnline.CSOM" Version="16.1.20412.12000" />
     <PackageReference Include="NUnit" Version="3.12.0" />
   </ItemGroup>
