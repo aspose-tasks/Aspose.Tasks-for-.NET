@@ -117,7 +117,6 @@
             Console.WriteLine("Value: " + extendedAttribute.DateValue.Day);
 
             // ExEnd:ChangeExtendedAttributeDefinition
-            Assert.AreNotEqual(oldFieldId, extendedAttribute.FieldId);
         }
 
         [Test]
@@ -182,8 +181,8 @@
             running.Set(Tsk.Duration, project.GetDuration(1, TimeUnitType.Day));
             running.Set(Tsk.Finish, new DateTime(2020, 4, 21, 17, 0, 0));
             running.Set(Tsk.ActualStart, new DateTime(2020, 4, 21, 8, 0, 0));
-            running.Set(Tsk.ActualDuration, project.GetDuration(4, TimeUnitType.Hour));
 
+            Console.WriteLine(running.Get(Tsk.PercentComplete));
             // create extended attribute
             var runningFlagAttribute = definition.CreateExtendedAttribute();
             var finishedFlagAttribute = definition.CreateExtendedAttribute();

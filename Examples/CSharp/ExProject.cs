@@ -816,7 +816,7 @@
             // ExStart:CalculateCriticalPath
             // ExFor: Project.CriticalPath
             // ExSummary: Shows how to calculate a critical path of the project.
-            var project = new Project(DataDir + "CalculateCriticalPath.mpp")
+            var project = new Project()
             {
                 CalculationMode = CalculationMode.Automatic
             };

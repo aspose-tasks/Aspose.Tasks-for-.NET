@@ -13,7 +13,7 @@
             // ExStart:SaveBurnDownReport
             // ExFor: ReportType
             // ExSummary: Shows how to save the project burndown report in PDF format to the specified stream.
-            var project = new Project(DataDir + "Homemoveplan.mpp");
+            var project = new Project(DataDir + @"Homemoveplan.mpp");
             using (var stream = new FileStream(OutDir + "Burndown_out.pdf", FileMode.Create))
             {
                 project.SaveReport(stream, ReportType.Burndown);

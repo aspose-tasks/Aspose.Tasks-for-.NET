@@ -20,7 +20,7 @@
                 // working with project ...
                 Console.WriteLine("Project Name: " + project.Get(Prj.Name));
             }
-            catch (InvalidPasswordException e)
+            catch (TasksReadingException e)
             {
                 // the message is "The project is password protected. The password is not provided or incorrect."
                 Console.WriteLine(e.Message);

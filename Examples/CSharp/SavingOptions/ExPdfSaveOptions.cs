@@ -3,6 +3,7 @@
     using System;
     using System.Collections.Generic;
     using System.Drawing;
+    using System.Security.Cryptography;
     using System.Security.Cryptography.X509Certificates;
     using NUnit.Framework;
     using Saving;
@@ -109,32 +110,38 @@
         [Test]
         public void WorkWithDigitalSignatureDetails()
         {
-            // ExStart
-            // ExFor: PdfSaveOptions.DigitalSignatureDetails
-            // ExSummary: Shows how to set a digital signature details. If not set, then no signing will be performed.
-            var project = new Project(DataDir + "EstimatedMilestoneTasks.mpp");
+            try
+            {
+                // ExStart
+                // ExFor: PdfSaveOptions.DigitalSignatureDetails
+                // ExSummary: Shows how to set a digital signature details. If not set, then no signing will be performed.
+                var project = new Project(DataDir + "EstimatedMilestoneTasks.mpp");
 
-            var options = new PdfSaveOptions();
-            var certificate = new X509Certificate2();
+                var options = new PdfSaveOptions();
+                var certificate = new X509Certificate2();
 
-            // set a digital signature details. If not set, then no signing will be performed.
-            options.DigitalSignatureDetails = new PdfDigitalSignatureDetails(
-                certificate,
-                "reason",
-                "location",
-                new DateTime(2019, 1, 1),
-                PdfDigitalSignatureHashAlgorithm.Sha1);
+                // set a digital signature details. If not set, then no signing will be performed.
+                options.DigitalSignatureDetails = new PdfDigitalSignatureDetails(
+                    certificate,
+                    "reason",
+                    "location",
+                    new DateTime(2019, 1, 1),
+                    PdfDigitalSignatureHashAlgorithm.Sha1);
 
-            // tune additional properties
-            // set the <see cref="P:Aspose.Tasks.Saving.SaveOptions.PresentationFormat" /> in which the document will be saved.
-            options.PresentationFormat = PresentationFormat.GanttChart;
+                // tune additional properties
+                // set the <see cref="P:Aspose.Tasks.Saving.SaveOptions.PresentationFormat" /> in which the document will be saved.
+                options.PresentationFormat = PresentationFormat.GanttChart;
 
-            // set a desired conformance level for generated PDF document
-            options.Compliance = PdfCompliance.PdfA1b;
+                // set a desired conformance level for generated PDF document
+                options.Compliance = PdfCompliance.PdfA1b;
 
-            project.Save(OutDir + "WorkWithDigitalSignatureDetails_out.pdf", options);
-
-            // ExEnd
+                project.Save(OutDir + "WorkWithDigitalSignatureDetails_out.pdf", options);
+            
+                // ExEnd
+            }
+            catch (CryptographicException)
+            {
+            }
         }
 
         [Test]
@@ -155,9 +162,6 @@
             // tune additional properties
             // set the <see cref="P:Aspose.Tasks.Saving.SaveOptions.PresentationFormat" /> in which the document will be saved.
             options.PresentationFormat = PresentationFormat.GanttChart;
-
-            // set a desired conformance level for generated PDF document
-            options.Compliance = PdfCompliance.PdfA1b;
 
             project.Save(OutDir + "WorkWithEncryptionDetails_out.pdf", options);
 

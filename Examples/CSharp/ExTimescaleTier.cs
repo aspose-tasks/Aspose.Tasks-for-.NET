@@ -27,7 +27,7 @@
             // ExFor: DateLabel
             // ExFor: DateTimeConverter
             // ExSummary: Shows how to customize timescale tier labels.
-            var project = new Project(DataDir + "Project2.mpp");
+            var project = new Project(DataDir + "CreateProject1.mpp");
 
             // Add task links
             project.TaskLinks.Add(project.RootTask.Children.Add("Task 1"), project.RootTask.Children.Add("Task 2"));

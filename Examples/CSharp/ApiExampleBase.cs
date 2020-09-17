@@ -10,7 +10,16 @@
         {
             CodeBaseDir = GetCodeBaseDir(Assembly.GetExecutingAssembly());
             DataDir = new Uri(new Uri(CodeBaseDir), @"Data/").LocalPath;
+            if (!Directory.Exists(DataDir))
+            {
+                Directory.CreateDirectory(DataDir);
+            }
+
             OutDir = new Uri(new Uri(CodeBaseDir), @"Data/Out/").LocalPath;
+            if (!Directory.Exists(OutDir))
+            {
+                Directory.CreateDirectory(OutDir);
+            }
         }
 
         /// <summary>

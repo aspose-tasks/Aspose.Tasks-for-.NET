@@ -87,8 +87,7 @@
                                   PresentationFormat = PresentationFormat.GanttChart,
                                   FitContent = true,
                                   UseProjectDefaultFont = false,
-                                  DefaultFontName = "Segoe UI Black",
-                                  UseGradientBrush = false
+                                  DefaultFontName = "Segoe UI Black"
                               };
             project.Save(OutDir + "AddDefaultFontDuringSavingAsHtml_out.html", options);
 

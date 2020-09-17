@@ -805,7 +805,7 @@
             // ExFor: Prj.ScheduleFromStart
             // ExFor: Prj.FinishDate
             // ExSummary: Shows how to reschedule the project from finish date instead of the start one.
-            var project = new Project(DataDir + "Project2.mpp");
+            var project = new Project();
             project.Set(Prj.ScheduleFromStart, false);
             project.Set(Prj.FinishDate, new DateTime(2020, 1, 1));
 
