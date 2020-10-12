@@ -19,7 +19,6 @@
         // ExFor: AvailabilityPeriodCollection.Insert(Int32,AvailabilityPeriod)
         // ExFor: AvailabilityPeriodCollection.IsReadOnly
         // ExFor: AvailabilityPeriodCollection.Item(Int32)
-        // ExFor: AvailabilityPeriodCollection.ParentResource
         // ExFor: AvailabilityPeriodCollection.Remove(AvailabilityPeriod)
         // ExFor: AvailabilityPeriodCollection.RemoveAt(Int32)
         // ExSummary: Shows how to work with availability period collection of resource.

@@ -177,7 +177,6 @@
         {
             // ExStart:DefineWeekdaysForCalendar
             // ExFor: Calendar
-            // ExFor: Calendar.#ctor(String)
             // ExFor: Calendar.WeekDays
             // ExFor: Aspose.Tasks.DayType
             // ExSummary: Shows how to define a new calendar, add week days to it and define working times for days.

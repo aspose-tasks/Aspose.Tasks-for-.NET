@@ -15,15 +15,6 @@
         {
         }
     }
-    
-    [TestFixture]
-    public class ExTaskXMLParsingFinished : ApiExampleBase
-    {
-        [Test]
-        public void WorkWithTaskXMLParsingFinished()
-        {
-        }
-    }
 
     [TestFixture]
     public class ExResourceViewColumn : ApiExampleBase

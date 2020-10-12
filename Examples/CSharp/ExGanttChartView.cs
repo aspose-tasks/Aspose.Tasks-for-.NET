@@ -17,7 +17,6 @@
         // ExFor: GanttBarEndShape
         // ExFor: GanttBarFillPattern
         // ExFor: GanttBarMiddleShape
-        // ExFor: GanttBarStyle.ShowFor
         // ExSummary: Shows how to set custom bar styles of Gantt Chart project view.
         [Test] // ExSkip
         public void ImplementCustomBarStyle()

@@ -12,7 +12,6 @@
         // ExFor: AvailabilityPeriod.AvailableFrom
         // ExFor: AvailabilityPeriod.AvailableTo
         // ExFor: AvailabilityPeriod.AvailableUnits
-        // ExFor: AvailabilityPeriod.ParentResource
         // ExSummary: Shows how to create availability periods for a resource.
         [Test] // ExSkip
         public void WorkWithAvailabilityPeriod()
