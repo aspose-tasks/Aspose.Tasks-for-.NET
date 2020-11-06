@@ -31,7 +31,6 @@
                 Console.WriteLine("Available From: " + period.AvailableFrom);
                 Console.WriteLine("Available To: " + period.AvailableTo);
                 Console.WriteLine("Available Units: " + period.AvailableUnits);
-                Console.WriteLine("Parent resource name: " + period.ParentResource.Get(Rsc.Name));
                 Console.WriteLine();
             }
         }
