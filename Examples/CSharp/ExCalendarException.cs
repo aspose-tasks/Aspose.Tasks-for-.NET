@@ -204,6 +204,8 @@
             exception.EnteredByOccurrences = true;
             exception.Occurrences = 5;
             exception.Type = CalendarExceptionType.YearlyByDay;
+            exception.MonthDay = 22;
+            exception.Month = Month.April;
 
             // Add exception to calendar
             calendar.Exceptions.Add(exception);

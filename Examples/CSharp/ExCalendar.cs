@@ -627,7 +627,9 @@
             // ExStart
             // ExFor: Calendar.Make24HourCalendar
             // ExSummary: Shows how to create a 24 hours calendar.
-            var calendar = Calendar.Make24HourCalendar();
+            Project project = new Project();
+            var calendar = project.Calendars.Add("New calendar");
+            Calendar.Make24HourCalendar(calendar);
 
             var workingHours = calendar.GetWorkingHours(new DateTime(2020, 4, 8, 8, 0, 0));
 
@@ -662,7 +664,9 @@
             // ExStart
             // ExFor: Calendar.MakeNightShiftCalendar
             // ExSummary: Shows how to create a night shift calendar.
-            var calendar = Calendar.MakeNightShiftCalendar();
+            Project project = new Project();
+            var calendar = project.Calendars.Add("New calendar");
+            Calendar.MakeNightShiftCalendar(calendar);
 
             var workingHours = calendar.GetWorkingTimes(new DateTime(2020, 4, 8));
 
@@ -705,7 +709,9 @@
             // ExStart
             // ExFor: Calendar.MakeStandardCalendar
             // ExSummary: Shows how to create a standard calendar.
-            var calendar = Calendar.MakeStandardCalendar();
+            Project project = new Project();
+            var calendar = project.Calendars.Add("New calendar");
+            Calendar.MakeStandardCalendar(calendar);
 
             var workingHours = calendar.GetWorkingTimes(new DateTime(2020, 4, 8));
 

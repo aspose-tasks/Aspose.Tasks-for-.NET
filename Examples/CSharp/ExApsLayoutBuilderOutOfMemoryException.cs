@@ -8,7 +8,7 @@
     [TestFixture]
     public class ExApsLayoutBuilderOutOfMemoryException : ApiExampleBase
     {
-        [Test, Ignore("No need to run this test.")]
+        [Test]
         public void WorkWithApsLayoutBuilderOutOfMemoryException()
         {
             // ExStart
@@ -19,7 +19,15 @@
             {
                 var project = new Project(DataDir + "Blank2010.mpp");
 
-                var options = new ImageSaveOptions(SaveFileFormat.PNG) { TimescaleTier = new TimescaleTier(TimescaleUnit.Minutes, 1) };
+                var ganttChart = (GanttChartView)project.Views.ToList()[0];
+
+                ganttChart.MiddleTimescaleTier.Unit = TimescaleUnit.Hours;
+                ganttChart.BottomTimescaleTier.Unit = TimescaleUnit.Minutes;
+                ganttChart.BottomTimescaleTier.Count = 1;
+                
+                var options = new ImageSaveOptions(SaveFileFormat.PNG);
+                options.Timescale = Timescale.DefinedInView;
+                
                 project.Save(OutDir + "SaveToStreamWithOptionsAndCatchException_out.mpp", options);
             }
             catch (ApsLayoutBuilderOutOfMemoryException ex)
