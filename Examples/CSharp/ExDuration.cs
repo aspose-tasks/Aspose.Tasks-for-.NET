@@ -125,6 +125,7 @@
         }
 
         [Test]
+        [SetCulture("en-US")]
         public void TestDurationParse()
         {
             // ExStart:TestDurationParse

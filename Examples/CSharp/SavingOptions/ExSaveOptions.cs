@@ -168,10 +168,12 @@
             // ExSummary: Shows how to set a value indicating that subtasks on the summary task bar must be rolled up.
             var project = new Project(DataDir + "Project2.mpp");
 
+            project.DisplayOptions.ShowProjectSummaryTask = true;
+            project.Set(Prj.ShowProjectSummaryTask, true);
+
             var options = new PdfSaveOptions
             {
                 PresentationFormat = PresentationFormat.GanttChart,
-                ShowProjectSummaryTask = true,
                 FitContent = true,
                 RollUpGanttBars = true,
                 
