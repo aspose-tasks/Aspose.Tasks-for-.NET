@@ -15,7 +15,6 @@
             // ExFor: View.PageInfo
             // ExFor: View.Filter
             // ExFor: View.Group 
-            // ExFor: View.Index
             // ExFor: View.Name
             // ExFor: View.ParentProject
             // ExFor: View.Screen

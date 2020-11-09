@@ -285,7 +285,9 @@
         public void WorkWithTimescaleTier()
         {
             // ExStart
-            // ExFor: SaveOptions.TimescaleTier
+            // ExFor: SaveOptions.Timescale
+            // ExFor: GanttChartView.MiddleTimescaleTier
+            // ExFor: GanttChartView.BottomTimescaleTier
             // ExSummary: Shows how to work with timescale tiers through save options. 
             var project = new Project(DataDir + "CreateProject2.mpp");
 
