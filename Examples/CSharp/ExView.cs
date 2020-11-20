@@ -15,7 +15,6 @@
             // ExFor: View.PageInfo
             // ExFor: View.Filter
             // ExFor: View.Group 
-            // ExFor: View.Index
             // ExFor: View.Name
             // ExFor: View.ParentProject
             // ExFor: View.Screen
@@ -61,10 +60,6 @@
             Console.WriteLine("View Uid: " + view.Uid);
             // print the screen type for the single view
             Console.WriteLine("View Screen: " + view.Screen);
-#pragma warning disable 618
-            // print the index of a View object in the Views containing object.
-            Console.WriteLine("View Index: " + view.Index);
-#pragma warning restore 618
             Console.WriteLine("View Type: " + view.Type);
             Console.WriteLine("Parent Project of the view: " + view.ParentProject.Get(Prj.Name));
             // ExEnd:WorkWithView

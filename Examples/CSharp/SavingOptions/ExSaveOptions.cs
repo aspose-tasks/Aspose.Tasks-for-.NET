@@ -170,7 +170,7 @@
 
             project.DisplayOptions.ShowProjectSummaryTask = true;
             project.Set(Prj.ShowProjectSummaryTask, true);
-
+            
             var options = new PdfSaveOptions
             {
                 PresentationFormat = PresentationFormat.GanttChart,
@@ -285,16 +285,27 @@
         public void WorkWithTimescaleTier()
         {
             // ExStart
-            // ExFor: SaveOptions.TimescaleTier
+            // ExFor: SaveOptions.Timescale
+            // ExFor: GanttChartView.MiddleTimescaleTier
+            // ExFor: GanttChartView.BottomTimescaleTier
             // ExSummary: Shows how to work with timescale tiers through save options. 
             var project = new Project(DataDir + "CreateProject2.mpp");
 
+            GanttChartView ganttChartView = (GanttChartView) project.Views.ToList()[0];
+
+            // set the timescale tiers of the Gantt Chart view
+            ganttChartView.MiddleTimescaleTier.Unit = TimescaleUnit.Months;
+            ganttChartView.MiddleTimescaleTier.Count = 1;
+            ganttChartView.MiddleTimescaleTier.Label = DateLabel.MonthMmmm;
+
+            ganttChartView.BottomTimescaleTier.Unit = TimescaleUnit.Days;
+            ganttChartView.BottomTimescaleTier.Count = 1;
+            ganttChartView.BottomTimescaleTier.Label = DateLabel.DayDddDd;
+            
             // ...
             var options = new ImageSaveOptions(SaveFileFormat.PNG)
             {
-                // set the timescale tier of the Gantt Chart view which is used
-                // to control a scale of output image
-                TimescaleTier = new TimescaleTier(TimescaleUnit.Months, 1)
+                Timescale = Timescale.DefinedInView
             };
 
             // ...

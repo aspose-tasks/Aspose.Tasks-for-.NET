@@ -98,8 +98,6 @@
             Console.WriteLine("Field Id: " + extendedAttribute.FieldId);
             Console.WriteLine("Value: " + extendedAttribute.NumericValue);
 
-            var oldFieldId = extendedAttribute.FieldId; // ExSkip
-
             // create a new date extended attribute definition
             var newDefinition = ExtendedAttributeDefinition.CreateTaskDefinition(CustomFieldType.Date, ExtendedAttributeTask.Date1, string.Empty);
 
@@ -108,7 +106,7 @@
             newDefinition.Formula = "[Deadline] - [Finish]";
             project.ExtendedAttributes.Add(newDefinition);
 
-            extendedAttribute.AttributeDefinition = newDefinition;
+            extendedAttribute = newDefinition.CreateExtendedAttribute();
 
             Console.WriteLine();
             Console.WriteLine("After change:");

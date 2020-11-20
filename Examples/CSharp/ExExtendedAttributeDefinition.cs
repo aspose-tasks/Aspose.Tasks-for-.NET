@@ -382,7 +382,6 @@
         public void AddExtendedAttributesToRAWithLookUp()
         {
             // ExStart:AddExtendedAttributesToRAWithLookUp
-            // ExFor: ExtendedAttributeDefinition.CreateLookupDefinition
             // ExFor: ExtendedAttributeDefinition.AddLookupValue(Value)
             // ExFor: ExtendedAttributeDefinition.CreateLookupResourceDefinition(CustomFieldType,ExtendedAttributeResource,String)
             // ExFor: ExtendedAttributeDefinition.CreateLookupTaskDefinition(CustomFieldType,ExtendedAttributeTask,String)
