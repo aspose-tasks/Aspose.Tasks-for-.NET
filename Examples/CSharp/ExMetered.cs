@@ -1,4 +1,6 @@
-﻿namespace Aspose.Tasks.Examples.CSharp
+﻿using System.Net;
+
+namespace Aspose.Tasks.Examples.CSharp
 {
     using System;
     using System.Diagnostics.CodeAnalysis;
@@ -16,6 +18,8 @@
             // ExFor: Metered
             // ExFor: Metered.ResetMeteredKey
             // ExFor: Metered.SetMeteredKey(String,String)
+            // ExFor: Metered.GetConsumptionCredit
+            // ExFor: Metered.GetConsumptionQuantity
             // ExSummary: Shows how to use <see cref="Aspose.Tasks.Metered" /> license type with Aspose.Tasks.
 
             // Let's use metered license (see https://purchase.aspose.com/faqs/licensing/metered)
@@ -29,6 +33,18 @@
             // ...
             // work with project...
             // ...
+
+            // We can get current credits and bytes consumption.
+
+            try
+            {
+                Console.WriteLine("Credits spent: {0}", Metered.GetConsumptionCredit());
+                Console.WriteLine("Bytes consumed: {0}", Metered.GetConsumptionQuantity());
+            }
+            catch (WebException)
+            {
+                // log exception
+            }
 
             // lately the user can reset a metered and stop counting of bytes
             metered.ResetMeteredKey();

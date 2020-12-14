@@ -212,5 +212,23 @@
 
             // ExEnd:HandleExceptionOccurrences
         }
+        
+        [Test]
+        public void GetExceptionDates()
+        {
+            // ExStart:GetExceptionDates
+            // ExFor: CalendarException.GetExceptionDates
+            // ExSummary: Shows how to get dates for which a specific calendar exception is effective.
+            Project project = new Project(DataDir + "CalendarExceptions.mpp");
+            Calendar calendar = project.Calendars.GetByUid(1);
+            CalendarException calendarException = calendar.Exceptions[0];
+
+            foreach (var date in calendarException.GetExceptionDates())
+            {
+                Console.WriteLine(date);
+            }
+
+            // ExEnd:GetExceptionDates
+        }
     }
 }

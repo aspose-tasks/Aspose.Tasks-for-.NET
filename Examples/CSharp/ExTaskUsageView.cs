@@ -9,19 +9,19 @@
     public class ExTaskUsageView : ApiExampleBase
     {
         [Test]
-        public void RenderTaskUsageView()
+        public void RenderTaskUsageViewWithPredefinedTimescales()
         {
             // ExStart:RenderTaskUsageView
             // ExFor: TaskUsageView
-            // ExSummary: Shows how to work with  task usage view.
+            // ExSummary: Shows how to render task usage view with predefined timescale settings.
             var project = new Project(DataDir + "TaskUsageView.mpp");
 
-            // Define the SaveOptions with required TimeScale settings as Days
+            // Define the SaveOptions and specify predefined TimeScale settings 'Days'.
             SaveOptions options = new PdfSaveOptions
             {
                 Timescale = Timescale.Days,
 
-                // Set the Presentation format to ResourceUsage
+                // Set the Presentation format to TaskUsage
                 PresentationFormat = PresentationFormat.TaskUsage
             };
 
@@ -41,6 +41,43 @@
             project.Save(OutDir + outputProject, options);
 
             // ExEnd:RenderTaskUsageView
+        }
+        
+        [Test]
+        public void RenderTaskUsageViewWithTimescaleDefinedInView()
+        {
+            // ExStart:RenderTaskUsageViewCustomTimescale
+            // ExFor: TaskUsageView
+            // ExFor: TaskUsageView.TopTimescaleTier
+            // ExFor: TaskUsageView.MiddleTimescaleTier
+            // ExFor: TaskUsageView.BottomTimescaleTier
+            // ExFor: SaveOptions.PresentationFormat
+            // ExFor: SaveOptions.Timescale
+            // ExSummary: Shows how to render task usage view with timescale settings defined in view settings.
+            var project = new Project(DataDir + "TaskUsageView.mpp");
+
+            var view = project.Views.ToList()[2] as TaskUsageView;
+
+            view.TopTimescaleTier.Unit = TimescaleUnit.None;
+            
+            view.MiddleTimescaleTier.Unit = TimescaleUnit.Weeks;
+            view.MiddleTimescaleTier.Label = DateLabel.WeekDddMDd;
+            view.MiddleTimescaleTier.Count = 1;
+            
+            view.BottomTimescaleTier.Unit = TimescaleUnit.Days;
+            view.BottomTimescaleTier.Label = DateLabel.DayMmDd;
+            view.BottomTimescaleTier.Count = 1;
+
+            // Define the SaveOptions and specify that TaskUsageView timescale settings should be used.
+            SaveOptions options = new PdfSaveOptions
+            {
+                Timescale = Timescale.DefinedInView,
+                PresentationFormat = PresentationFormat.TaskUsage
+            };
+
+            project.Save(OutDir + "TaskUsageView_CustomTimescale_out.pdf", options);
+
+            // ExEnd:RenderTaskUsageViewCustomTimescale
         }
 
         [Test]

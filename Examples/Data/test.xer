@@ -1,0 +1,75 @@
+ERMHDR	5.0	2016-06-10	Project	admin	Primavera Admin	dbxDatabaseNoName	Project Management	USD
+%T	CURRTYPE
+%F	curr_id	decimal_digit_cnt	curr_symbol	decimal_symbol	digit_group_symbol	pos_curr_fmt_type	neg_curr_fmt_type	curr_type	curr_short_name	group_digit_cnt	base_exch_rate
+%R	1	2	$	.	,	#1.1	(#1.1)	Dollar	USD	3	1
+%R	10	2	$	.	,	#1.1	(#1.1)	Argentine Peso	ARS	3	3.077
+%R	11	2	A$	.	,	#1.1	(#1.1)	Australian Dollar	AUST	3	1.208
+%R	13	2	R$	.	,	#1.1	(#1.1)	Brazilian Real	BRL	3	2.014
+%R	14	2	£	.	,	#1.1	(#1.1)	British Pound	U.K.	3	0.501762
+%R	15	2	CA$	.	,	#1.1	(#1.1)	Canadian Dollar	CAD	3	1.10573
+%R	16	2	Y	.	,	#1.1	(#1.1)	Chinese Yuan	CNY	3	7.694
+%R	17	2	€	.	,	#1.1	(#1.1)	EURO	EUR	3	0.739088
+%R	20	2	HK$	.	,	#1.1	(#1.1)	Hong Kong Dollar	HKD	3	7.81967
+%R	21	2	Rs	.	,	#1.1	(#1.1)	Indian Rupee	INR	3	40.67
+%R	23	2	¥	.	,	#1.1	(#1.1)	Japanese Yen	JPY	3	120.167
+%R	24	2	K	.	,	#1.1	(#1.1)	Korean Won	KRW	3	924.743
+%R	25	2	N$	.	,	#1.1	(#1.1)	Mexican Peso	MXN	3	10.7938
+%R	26	2	R	.	,	#1.1	(#1.1)	Russian Rouble	RUB	3	25.8085
+%R	28	2	Sk	.	,	#1.1	(#1.1)	Swedish Krona	SEK	3	6.80579
+%R	29	2	kr	.	,	#1.1	(#1.1)	Swiss Franc	CHF	3	1.21864
+%R	30	2	NIS	.	,	#1.1	(#1.1)	Israel Shekel	ILS	3	3.96384
+%T	OBS
+%F	obs_id	parent_obs_id	guid	seq_num	obs_name	obs_descr
+%R	565			0	Enterprise	?<HTML><BODY></BODY></HT
+%T	ROLES
+%F	role_id	parent_role_id	seq_num	role_name	role_short_name	pobs_id	def_cost_qty_link_flag	cost_qty_type	role_descr	last_checksum
+%R	332		100	Role 1	Role1		Y	QT_Hour	?<!DOCTYPE HTML PUBLIC ""-//W3C//DTD HTML 4.0 Transitional//EN""><HTML><HEAD><META content=""text/html; charset=unicode"" http-equiv=Content-Type><META name=GENERATOR content=""MSHTML 11.00.9600.18315""></HEAD><BODY>responsibility 1</BODY></HTML>	
+
+%R	333		200	Role 2	Role2		Y	QT_Hour	?<!DOCTYPE HTML PUBLIC ""-//W3C//DTD HTML 4.0 Transitional//EN""><HTML><HEAD><META content=""text/html; charset=unicode"" http-equiv=Content-Type><META name=GENERATOR content=""MSHTML 11.00.9600.18315""></HEAD><BODY>responsibility 2</BODY></HTML>	
+%R	334		300	Role 3	Role3		Y	QT_Hour	ï»¿	
+%T	PROJECT
+%F	proj_id	fy_start_month_num	rsrc_self_add_flag	allow_complete_flag	rsrc_multi_assign_flag	checkout_flag	project_flag	step_complete_flag	cost_qty_recalc_flag	batch_sum_flag	name_sep_char	def_complete_pct_type	proj_short_name	acct_id	orig_proj_id	source_proj_id	base_type_id	clndr_id	sum_base_proj_id	task_code_base	task_code_step	priority_num	wbs_max_sum_level	strgy_priority_num	last_checksum	critical_drtn_hr_cnt	def_cost_per_qty	last_recalc_date	plan_start_date	plan_end_date	scd_end_date	add_date	last_tasksum_date	fcst_start_date	def_duration_type	task_code_prefix	guid	def_qty_type	add_by_name	web_local_root_path	proj_url	def_rate_type	add_act_remain_flag	act_this_per_link_flag	def_task_type	act_pct_link_flag	critical_path_type	task_code_prefix_flag	def_rollup_dates_flag	use_project_baseline_flag	rem_target_link_flag	reset_planned_flag	allow_neg_act_flag	sum_assign_level	last_fin_dates_id	last_baseline_update_date	cr_external_key	apply_actuals_date	location_id	loaded_scope_level	export_flag	new_fin_dates_id	baselines_to_export	baseline_names_to_export	next_data_date	close_period_flag	sum_refresh_date	trsrcsum_loaded
+%R	368	1	Y	Y	Y	N	Y	N	N	Y	.	CP_Drtn	NEWPROJ					592		1000	10	10	2	500		0	0.0000	2016-06-09 00:00	2016-06-01 00:00			2016-06-09 00:00			DT_FixedDUR2	A	SgFDugwhiUiOP6Um+5ElFw	QT_Hour	admin			COST_PER_QTY	N	Y	TT_Task	Y	CT_TotFloat	Y	Y	Y	Y	N	N	SL_Taskrsrc						7	Y							
+%T	ROLERATE
+%F	role_rate_id	role_id	cost_per_qty	cost_per_qty2	cost_per_qty3	cost_per_qty4	cost_per_qty5
+%R	100	333	201.0000	202.0000			
+%R	101	332	101.0000				
+%R	102	334	301.0000	302.0000	303.0000	304.0000	305.0000
+%T	CALENDAR
+%F	clndr_id	default_flag	clndr_name	proj_id	base_clndr_id	last_chng_date	clndr_type	day_hr_cnt	week_hr_cnt	month_hr_cnt	year_hr_cnt	rsrc_private	clndr_data
+%R	592	N	7-Day Workweek			2009-04-27 00:00	CA_Base	8	56	172	2000	N	(0||CalendarData()((0||DaysOfWeek()((0||1()((0||0(s|08:00|f|16:00)())))(0||2()((0||0(s|08:00|f|16:00)())))(0||3()((0||0(s|08:00|f|16:00)())))(0||4()((0||0(s|08:00|f|16:00)())))(0||5()((0||0(s|08:00|f|16:00)())))(0||6()((0||0(s|08:00|f|16:00)())))(0||7()((0||0(s|08:00|f|16:00)())))))(0||VIEW(ShowTotal|Y)())(0||Exceptions()())))
+%T	PROJWBS
+%F	wbs_id	proj_id	obs_id	seq_num	est_wt	proj_node_flag	sum_data_flag	status_code	wbs_short_name	wbs_name	phase_id	parent_wbs_id	ev_user_pct	ev_etc_user_value	orig_cost	indep_remain_total_cost	ann_dscnt_rate_pct	dscnt_period_type	indep_remain_work_qty	anticip_start_date	anticip_end_date	ev_compute_type	ev_etc_compute_type	guid	tmpl_guid	plan_open_state
+%R	3680	368	565	200	1	Y	N	WS_Open	NEWPROJ	New Project		3667	6	0.88	0.0000	0.0000						EC_Cmp_pct	EE_Rem_hr	DAPmkD6brUycdRJjspx7Hw		
+%T	RSRC
+%F	rsrc_id	parent_rsrc_id	clndr_id	role_id	shift_id	user_id	pobs_id	guid	rsrc_seq_num	email_addr	employee_code	office_phone	other_phone	rsrc_name	rsrc_short_name	rsrc_title_name	def_qty_per_hr	cost_qty_type	ot_factor	active_flag	auto_compute_act_flag	def_cost_qty_link_flag	ot_flag	curr_id	unit_id	rsrc_type	location_id	rsrc_notes	load_tasks_flag	level_flag	last_checksum
+%R	1319		592	332				tvEinYyHcUOwNJAu6hzjeA	102					Labor 1	R1		1	QT_Hour		Y	Y	Y	N	1		RT_Labor		ï»¿			
+%R	1320		592	333				zPePxEXf7Uml1mzOwF1nkw	101					Labor 2	R2		1	QT_Hour		Y	Y	Y	N	1		RT_Labor		ï»¿			
+%R	1321		592	332				uVw+CH3GQUOhIRzx9uO33g	100					Labor 3	R3		1	QT_Hour		Y	Y	Y	N	1		RT_Labor		ï»¿			
+%R	1322		592	332				kUzbNlkZpkSDzC8BHYvXJA	103					Labor 4	R4		1	QT_Hour		Y	Y	Y	N	1		RT_Labor		ï»¿			
+%T	RSRCRATE
+%F	rsrc_rate_id	rsrc_id	max_qty_per_hr	cost_per_qty	start_date	shift_period_id	cost_per_qty2	cost_per_qty3	cost_per_qty4	cost_per_qty5
+%R	1764	1319	1	50.0000	2016-01-01 00:00					
+%R	1765	1320	1	0.0000	2016-01-01 00:00					
+%R	1767	1321	1	0.0000	2016-01-01 00:00					
+%R	1768	1322	1	0.0000	2016-01-01 00:00					
+%T	RSRCROLE
+%F	rsrc_id	role_id	skill_level	role_short_name	role_name	rsrc_short_name	rsrc_name	rsrc_type	rsrc_role_id
+%R	1319	332	3	Role1	Role 1	R1	Labor 1	RT_Labor	332
+%R	1320	333	3	Role2	Role 2	R2	Labor 2	RT_Labor	333
+%R	1321	332	3	Role1	Role 1	R3	Labor 3	RT_Labor	332
+%R	1322	332	3	Role1	Role 1	R4	Labor 4	RT_Labor	332
+%T	TASK
+%F	task_id	proj_id	wbs_id	clndr_id	phys_complete_pct	rev_fdbk_flag	est_wt	lock_plan_flag	auto_compute_act_flag	complete_pct_type	task_type	duration_type	status_code	task_code	task_name	rsrc_id	total_float_hr_cnt	free_float_hr_cnt	remain_drtn_hr_cnt	act_work_qty	remain_work_qty	target_work_qty	target_drtn_hr_cnt	target_equip_qty	act_equip_qty	remain_equip_qty	cstr_date	act_start_date	act_end_date	late_start_date	late_end_date	expect_end_date	early_start_date	early_end_date	restart_date	reend_date	target_start_date	target_end_date	rem_late_start_date	rem_late_end_date	cstr_type	priority_type	suspend_date	resume_date	float_path	float_path_order	guid	tmpl_guid	cstr_date2	cstr_type2	driving_path_flag	act_this_per_work_qty	act_this_per_equip_qty	external_early_start_date	external_late_end_date	create_date	update_date	create_user	update_user	location_id
+%R	35848	368	3680	592	0	N	1	N	N	CP_Drtn	TT_Task	DT_FixedDUR2	TK_NotStart	A1010	New Activity 1				40	0	80	80	40	0	0	0									2016-06-14 08:00	2016-06-18 16:00	2016-06-14 08:00	2016-06-18 16:00				PT_Normal					MLHf6C2lyEikr/X8YVsh+g				N	0	0			2016-06-09 13:18	2016-06-09 15:17	admin	admin	
+%R	35849	368	3680	592	0	N	1	N	N	CP_Drtn	TT_Task	DT_FixedDUR2	TK_NotStart	A1020	New Activity 2	1319			40	0	200	200	40	0	0	0									2016-06-15 08:00	2016-06-19 16:00	2016-06-15 08:00	2016-06-19 16:00				PT_Normal					fX7p5kcZIkewR247Egfnow				N	0	0			2016-06-09 13:26	2016-06-09 15:18	admin	admin	
+%T	TASKRSRC
+%F	taskrsrc_id	task_id	proj_id	cost_qty_link_flag	role_id	acct_id	rsrc_id	pobs_id	skill_level	remain_qty	target_qty	remain_qty_per_hr	target_lag_drtn_hr_cnt	target_qty_per_hr	act_ot_qty	act_reg_qty	relag_drtn_hr_cnt	ot_factor	cost_per_qty	target_cost	act_reg_cost	act_ot_cost	remain_cost	act_start_date	act_end_date	restart_date	reend_date	target_start_date	target_end_date	rem_late_start_date	rem_late_end_date	rollup_dates_flag	target_crv	remain_crv	actual_crv	ts_pend_act_end_flag	guid	rate_type	act_this_per_cost	act_this_per_qty	curv_id	rsrc_type	cost_per_qty_source_type	create_user	create_date	has_rsrchours	taskrsrc_sum_id
+%R	6641	35848	368	Y	334				3	40	40	1	0	1	0	0	0		301.0000	12040.0000	0.0000	0.0000	12040.0000			2016-06-14 08:00	2016-06-18 16:00	2016-06-14 08:00	2016-06-18 16:00			Y				N	dJmoZR5o8UuoZiKvRnM4Ag	COST_PER_QTY	0.0000	0		RT_Labor	ST_Role	admin	2016-06-09 13:25		
+%R	6642	35848	368	Y	334				3	40	40	1	0	1	0	0	0		301.0000	12040.0000	0.0000	0.0000	12040.0000			2016-06-14 08:00	2016-06-18 16:00	2016-06-14 08:00	2016-06-18 16:00			Y				N	ZNHHl8pknUa//LNdFDlaJQ	COST_PER_QTY	0.0000	0		RT_Labor	ST_Role	admin	2016-06-09 13:26		
+%R	6651	35849	368	Y	332		1319		3	40	40	1	0	1	0	0	0		101.0000	4040.0000	0.0000	0.0000	4040.0000			2016-06-15 08:00	2016-06-19 16:00	2016-06-15 08:00	2016-06-19 16:00			Y				N	gWnl1UIlc0iPmFFACt1REQ	COST_PER_QTY	0.0000	0		RT_Labor	ST_Role	admin	2016-06-09 13:33		
+%R	6652	35849	368	Y	332		1320		3	40	40	1	0	1	0	0	0		101.0000	4040.0000	0.0000	0.0000	4040.0000			2016-06-15 08:00	2016-06-19 16:00	2016-06-15 08:00	2016-06-19 16:00			Y				N	Q1BR+tv48Ea8+Aa4CqImmg	COST_PER_QTY	0.0000	0		RT_Labor	ST_Role	admin	2016-06-09 13:33		
+%R	6653	35849	368	Y	332		1321		3	40	40	1	0	1	0	0	0		0.0000	0.0000	0.0000	0.0000	0.0000			2016-06-15 08:00	2016-06-19 16:00	2016-06-15 08:00	2016-06-19 16:00			Y				N	RtMxJZJTVU6l4YUuJussPA	COST_PER_QTY	0.0000	0		RT_Labor	ST_Rsrc	admin	2016-06-09 13:33		
+%R	6654	35849	368	Y	332		1322		3	40	40	1	0	1	0	0	0		0.0000	0.0000	0.0000	0.0000	0.0000			2016-06-15 08:00	2016-06-19 16:00	2016-06-15 08:00	2016-06-19 16:00			Y				N	wdTb2S33p02KOuwZfIHK5g	COST_PER_QTY	0.0000	0		RT_Labor	ST_Rsrc	admin	2016-06-09 13:33		
+%R	6655	35849	368	Y	332				3	40	40	1	0	1	0	0	0		101.0000	4040.0000	0.0000	0.0000	4040.0000			2016-06-15 08:00	2016-06-19 16:00	2016-06-15 08:00	2016-06-19 16:00			Y				N	aF81MNg0EkSnRzt6+s+ytw	COST_PER_QTY	0.0000	0		RT_Labor	ST_Role	admin	2016-06-09 13:35		
+%E

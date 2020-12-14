@@ -1,5 +1,6 @@
 ﻿namespace Aspose.Tasks.Examples.CSharp.SavingOptions
 {
+    using System;
     using NUnit.Framework;
     using Saving;
 
@@ -34,6 +35,31 @@
             project.Save(OutDir + "WorkWithPrimaveraSaveOptions_out.xer", options);
 
             // ExEnd:PrimaveraSaveOptions
+        }
+        
+        [Test]
+        public void WorkWithPrimaveraActivityId()
+        {
+            // ExStart:PrimaveraActivityId
+            // ExFor: Tsk.ActivityId
+            // ExSummary: Shows how to work with ActivityId field specific to Primavera projects
+            var project = new Project(DataDir + "test.xer");
+
+            var task = project.RootTask.Children.GetById(1);
+            
+            Console.WriteLine("Task activity_id: {0}", task.Get(Tsk.ActivityId));
+            
+            task.Set(Tsk.ActivityId, "CUSTOM_ACTIVITY_ID");
+
+            // create Primavera save options and specify that ActivityIds should not be overwritten during saving.
+            var options = new PrimaveraSaveOptions
+            {
+                RenumberActivityIds = false
+            };
+
+            project.Save(OutDir + "WorkWithPrimaveraActivityId_out.xer", options);
+
+            // ExEnd:PrimaveraActivityId
         }
     }
 }

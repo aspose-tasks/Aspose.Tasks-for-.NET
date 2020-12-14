@@ -1342,6 +1342,33 @@
 
             // ExEnd:ReadingPasswordProtectedProjectStream2
         }
+        
+        [Test]
+        public void WritingPasswordProtectedProjectFile()
+        {
+            // ExStart:WritingPasswordProtectedProjectFile
+            // ExFor: MPPSaveOptions.ProtectionPassword
+            // ExSummary: Shows how to save a project to password protected MPP file.
+
+            try
+            {
+
+                var project = new Project(DataDir + "Project1.mpp");
+
+                var options = new MPPSaveOptions
+                {
+                    ProtectionPassword = "password!234"
+                };
+
+                project.Save(OutDir + "PasswordProtected.mpp", options);
+            }
+            catch (NotSupportedException ex)
+            {
+                Console.WriteLine(ex.Message + "\nThis example will only work if you apply a valid Aspose License. You can purchase full license or get 30 day temporary license from http://www.aspose.com/purchase/default.aspx.");
+            }
+
+            // ExEnd:WritingPasswordProtectedProjectFile
+        }
 
         [Test]
         public void CheckIfProjectIsPasswordProtected()

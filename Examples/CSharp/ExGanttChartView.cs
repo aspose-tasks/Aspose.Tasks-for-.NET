@@ -99,6 +99,7 @@
             // ExFor: GanttChartView.TopTimescaleTier
             // ExFor: GanttChartView.MiddleTimescaleTier
             // ExFor: GanttChartView.BottomTimescaleTier
+            // ExFor: SaveOptions.Timescale
             // ExSummary: Shows how to modify timescale tiers.
             var project = new Project();
 
@@ -112,9 +113,17 @@
 
             // set Time Scale count
             view.TopTimescaleTier.Count = 2;
+            view.TopTimescaleTier.Unit = TimescaleUnit.Quarters;
+            view.TopTimescaleTier.Label = DateLabel.QuarterQQyy;
             view.TopTimescaleTier.ShowTicks = false;
+            
             view.MiddleTimescaleTier.Count = 2;
+            view.MiddleTimescaleTier.Unit = TimescaleUnit.Weeks;
+            view.MiddleTimescaleTier.Label = DateLabel.WeekDddDd;
             view.MiddleTimescaleTier.ShowTicks = false;
+
+            view.BottomTimescaleTier.Unit = TimescaleUnit.Days;
+            view.BottomTimescaleTier.Label = DateLabel.DayDdd;
             view.BottomTimescaleTier.Count = 2;
             view.BottomTimescaleTier.ShowTicks = false;
 
@@ -126,7 +135,16 @@
             var task2 = project.RootTask.Children.Add("Task 2");
             task1.Set(Tsk.Duration, task1.ParentProject.GetDuration(24, TimeUnitType.Hour));
             task2.Set(Tsk.Duration, task1.ParentProject.GetDuration(40, TimeUnitType.Hour));
-            project.Save(OutDir + "SetTimeScaleCount_out.pdf", SaveFileFormat.PDF);
+            
+            // Use 'Timescale.DefinedInView' option to render timescales using timescale settings which we have set (view.TopTimescaleTier, view.MiddleTimescaleTier, view.BottomTimescaleTier). 
+            var pdfSaveOptions = new PdfSaveOptions
+            {
+                Timescale = Timescale.DefinedInView,
+                StartDate = DateTime.Now.AddDays(-30),
+                EndDate = DateTime.Now.AddDays(30)
+            };
+            
+            project.Save(OutDir + "WorkWithTimescaleTier_out.pdf", pdfSaveOptions);
 
             // ExEnd:WorkWithTimescaleTier
         }
