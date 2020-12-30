@@ -76,5 +76,11 @@ Task subtask = task.Children.Add("Subtask1");
 
 project.Save(dir + "output.xml", SaveFileFormat.XML);
 ```
-
+------------
+##### [Demos](https://products.aspose.app/tasks/family):
+- [Conversion](https://products.aspose.app/tasks/conversion)
+- [Viewer](https://products.aspose.app/tasks/viewer)
+- [Metadata](https://products.aspose.app/tasks/metadata)
+- [Downloader](https://products.aspose.app/tasks/downloader)
+------------
 [Home](https://www.aspose.com/) | [Product Page](https://products.aspose.com/tasks/net) | [Docs](https://docs.aspose.com/tasks/net/) | [Demos](https://products.aspose.app/tasks/family) | [API Reference](https://apireference.aspose.com/tasks/net) | [Examples](https://github.com/aspose-tasks/Aspose.Tasks-for-.NET) | [Blog](https://blog.aspose.com/category/tasks/) | [Free Support](https://forum.aspose.com/c/tasks) |  [Temporary License](https://purchase.aspose.com/temporary-license)
