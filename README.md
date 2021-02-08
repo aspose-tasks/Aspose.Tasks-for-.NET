@@ -1,3 +1,5 @@
+![Nuget](https://img.shields.io/nuget/v/Aspose.Tasks) ![Nuget](https://img.shields.io/nuget/dt/Aspose.Tasks) ![GitHub](https://img.shields.io/github/license/aspose-tasks/Aspose.Tasks-for-.NET)
+
 # .NET API to Manipulate Project Files
 
 [Aspose.Tasks for .NET](https://products.aspose.com/tasks/net) is a C# library that assists developers in generating, editing, rendering & conversion of Project files without needing Microsoft Project®.
