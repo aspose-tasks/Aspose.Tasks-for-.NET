@@ -5,6 +5,7 @@
     using System.Drawing;
     using System.Security.Cryptography;
     using System.Security.Cryptography.X509Certificates;
+    using System.Linq;
     using NUnit.Framework;
     using Saving;
     using Visualization;
@@ -191,6 +192,64 @@
 
             project.Save(OutDir + "WorkWithTextCompression_out.pdf", options);
 
+            // ExEnd
+        }
+
+        [Test]
+        public void WorkWithCustomPageSize()
+        {
+            // ExStart
+            // ExFor: SaveOptions.CustomPageSize
+            // ExSummary: Shows how to set custom page size when project is saved to PDF.
+            var project = new Project(DataDir + "EstimatedMilestoneTasks.mpp");
+
+            var options = new PdfSaveOptions();
+            options.PresentationFormat = PresentationFormat.GanttChart;
+            options.CustomPageSize = new SizeF(5.8F * 72, 8.3F * 72);
+
+            project.Save(OutDir + "WorkWithCustomPageSize_out.pdf", options);
+            // ExEnd
+        }
+
+        [Test]
+        public void WorkWithRenderToSinglePage()
+        {
+            // ExStart
+            // ExFor: SaveOptions.RenderToSinglePage
+            // ExSummary: Shows how to use RenderToSinglePage property to specify that project should be saved to 1-page PDF.
+            var project = new Project(DataDir + "EstimatedMilestoneTasks.mpp");
+
+            var options = new PdfSaveOptions();
+            options.PresentationFormat = PresentationFormat.TaskUsage;
+            options.Timescale = Timescale.DefinedInView;
+            options.RenderToSinglePage = true;
+            options.StartDate = new DateTime(2012, 12, 22);
+            options.EndDate = new DateTime(2013, 05, 10);
+
+            project.Save(OutDir + "WorkWithRenderToSinglePage_out.pdf", options);
+            // ExEnd
+        }
+
+        [Test]
+        public void WorkWithPageSizeDefinedInView()
+        {
+            // ExStart
+            // ExFor: Aspose.Tasks.Visualization.PageSize.DefinedInView
+            // ExSummary: Shows how to use 'PageSize.DefinedInView' to specify that PageSize should be taked from view's PageSettings.
+            var project = new Project(DataDir + "EstimatedMilestoneTasks.mpp");
+
+            var view = project.Views.First(v => v.Screen == ViewScreen.Gantt);
+            Console.WriteLine("Page size specified in view settings: " + view.PageInfo.PageSettings.PaperSize);
+            Console.WriteLine("Page orientation: {0}", view.PageInfo.PageSettings.IsPortrait ? "Portrait" : "Landscape");
+
+            PdfSaveOptions saveOptions = new PdfSaveOptions();
+            saveOptions.PageSize = PageSize.DefinedInView;
+            saveOptions.Timescale = Timescale.DefinedInView;
+            saveOptions.StartDate = new DateTime(2012, 12, 22);
+            saveOptions.EndDate = new DateTime(2013, 05, 10);
+            saveOptions.PresentationFormat = PresentationFormat.GanttChart;
+
+            project.Save(OutDir + "WorkWithPageSizeDefinedInView_out.pdf", saveOptions);
             // ExEnd
         }
     }

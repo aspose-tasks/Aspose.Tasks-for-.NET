@@ -48,9 +48,9 @@
         {
             // ExStart:RenderTaskUsageViewCustomTimescale
             // ExFor: TaskUsageView
-            // ExFor: TaskUsageView.TopTimescaleTier
-            // ExFor: TaskUsageView.MiddleTimescaleTier
-            // ExFor: TaskUsageView.BottomTimescaleTier
+            // ExFor: UsageView.TopTimescaleTier
+            // ExFor: UsageView.MiddleTimescaleTier
+            // ExFor: UsageView.BottomTimescaleTier
             // ExFor: SaveOptions.PresentationFormat
             // ExFor: SaveOptions.Timescale
             // ExSummary: Shows how to render task usage view with timescale settings defined in view settings.
