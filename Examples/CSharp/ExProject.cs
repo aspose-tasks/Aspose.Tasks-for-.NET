@@ -360,6 +360,32 @@
         }
 
         [Test, Ignore("Should be run explicitly."), Category("Printing")]
+        public void PrintPrintOptionsPrinterSettingsAndDocumentName()
+        {
+            // ExStart:PrintPrintOptionsPrinterSettingsAndDocumentName
+            // ExFor: Project.Print(PrinterSettings,PrintOptions,string)
+            // ExSummary: Shows how to use printer options, printer settings and document name to print the project.
+            var project = new Project(DataDir + "Project2.mpp");
+
+            var options = new PrintOptions
+            {
+                Timescale = Timescale.Months
+            };
+
+            // Print first two pages
+            var settings = new PrinterSettings
+            {
+                PrintRange = PrintRange.SomePages,
+                FromPage = 1,
+                ToPage = 2
+            };
+
+            project.Print(settings, options, "My project name");
+
+            // ExEnd:PrintPrintOptionsPrinterSettingsAndDocumentName
+        }
+
+        [Test, Ignore("Should be run explicitly."), Category("Printing")]
         public void PrintProjectUsingCustomPrinter()
         {
             // ExStart:PrintProjectUsingCustomPrinter
