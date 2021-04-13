@@ -320,14 +320,22 @@
         // ExStart
         // ExFor: SaveOptions.SaveFormat
         // ExFor: SaveOptions.TasksFilter
-        // ExSummary: Shows how to work task's filter while save MS Project file. 
+        // ExSummary: Shows how to use custom tasks filter while saving MS Project file. 
         [Test] // ExSkip
         public void WorkWithTasksFilter()
         {
             var project = new Project(DataDir + "CreateProject2.mpp");
 
-            // ...
-            var options = this.GetSaveOptions(PresentationFormat.GanttChart);
+            var options = new PdfSaveOptions
+            {
+                PresentationFormat = PresentationFormat.GanttChart,
+                PageSize = PageSize.A3,
+                StartDate = new DateTime(2010, 7, 1),
+                EndDate = new DateTime(2010, 9, 1),
+
+                // set a task filter to skip task 'Task5' and 'Task3'
+                TasksFilter = new CustomTasksFilter()
+            };
 
             // lets check the save format
             Console.WriteLine("The save format: " + options.SaveFormat);
@@ -335,26 +343,11 @@
             // ...
 
             // save the project as an image
-            project.Save(OutDir + "WorkWithTimescaleTier_out.png", options);
-        }
-
-        private SaveOptions GetSaveOptions(PresentationFormat format)
-        {
-            var options = new PdfSaveOptions
-                              {
-                                  PresentationFormat = format,
-                                  PageSize = PageSize.A3,
-                                  StartDate = new DateTime(2010, 7, 1),
-                                  EndDate = new DateTime(2010, 9, 1),
-
-                                  // set a task filter to skip task 'Task5' and 'Task3'
-                                  TasksFilter = new CustomTasksFilter()
-                              };
-            return options;
+            project.Save(OutDir + "WorkWithTasksFilter_out.png", options);
         }
 
         /// <summary>
-        /// Example of custom task filter that can be used while saving MS Project file (for instance) in PDF file.
+        /// Example of custom task filter that can be used while saving MS Project file (for instance) in PDF format.
         /// </summary>
         /// <inheritdoc />
         private class CustomTasksFilter : ICondition<Task>

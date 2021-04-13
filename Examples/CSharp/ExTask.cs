@@ -87,9 +87,7 @@
         public void ReadWriteTaskProperties()
         {
             // ExStart:ReadWriteTaskProperties
-            // ExFor: Task.Get(Aspose.Tasks.Key{System.String,Aspose.Tasks.TaskKey})
             // ExFor: Task.Get``1(Aspose.Tasks.Key{``0,Aspose.Tasks.TaskKey})
-            // ExFor: Task.Set(Aspose.Tasks.Key{System.DateTime,Aspose.Tasks.TaskKey},System.DateTime)
             // ExFor: Task.Set``1(Aspose.Tasks.Key{``0,Aspose.Tasks.TaskKey},``0)
             // ExSummary: Shows how to get/set task properties.
             var project = new Project();

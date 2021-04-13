@@ -1,9 +1,8 @@
-﻿using System.Net;
-
-namespace Aspose.Tasks.Examples.CSharp
+﻿namespace Aspose.Tasks.Examples.CSharp
 {
     using System;
     using System.Diagnostics.CodeAnalysis;
+    using System.Net;
 
     using NUnit.Framework;
 

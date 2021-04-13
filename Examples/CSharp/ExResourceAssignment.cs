@@ -146,7 +146,6 @@
             // ExStart:CreateAndGetSetResourceAssignmentCommonProperties
             // ExFor: ResourceAssignment
             // ExFor: ResourceAssignment.Get``1(Aspose.Tasks.Key{``0,Aspose.Tasks.AsnKey})
-            // ExFor: ResourceAssignment.Set(Aspose.Tasks.Key{System.DateTime,Aspose.Tasks.AsnKey},System.DateTime)
             // ExFor: ResourceAssignment.Set``1(Aspose.Tasks.Key{``0,Aspose.Tasks.AsnKey},``0)
             // ExSummary: Shows how to create an assignment and get/set common assignment properties.
             var project = new Project(DataDir + "BudgetWorkAndCost.mpp");
