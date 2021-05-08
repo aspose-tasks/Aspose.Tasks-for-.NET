@@ -4,6 +4,7 @@
     using System.Collections.Generic;
     using System.Diagnostics.CodeAnalysis;
     using System.Drawing;
+    using System.Linq;
     using NUnit.Framework;
     using Saving;
     using Util;
@@ -317,6 +318,29 @@
             // ExEnd
         }
 
+        [Test]
+        public void SaveToPdfUsingSpecificView()
+        {
+            // ExStart
+            // ExFor: SaveOptions.ViewSettings
+            // ExSummary: Shows how to use 'SaveOptions.ViewSettings' to specify view that should be rendered to PDf.
+            var project = new Project(DataDir + "EstimatedMilestoneTasks.mpp");
+
+            var view = project.Views.First(v => v.Screen == ViewScreen.Gantt);
+            Console.WriteLine("Page size specified in view settings: " + view.PageInfo.PageSettings.PaperSize);
+            Console.WriteLine("Page orientation: {0}", view.PageInfo.PageSettings.IsPortrait ? "Portrait" : "Landscape");
+
+            PdfSaveOptions saveOptions = new PdfSaveOptions();
+            saveOptions.PageSize = PageSize.DefinedInView;
+            saveOptions.Timescale = Timescale.DefinedInView;
+            saveOptions.StartDate = new DateTime(2012, 12, 22);
+            saveOptions.EndDate = new DateTime(2013, 05, 10);
+            saveOptions.ViewSettings = view;
+
+            project.Save(OutDir + "SaveToPdfUsingSpecificView_out.pdf", saveOptions);
+            // ExEnd
+        }
+
         // ExStart
         // ExFor: SaveOptions.SaveFormat
         // ExFor: SaveOptions.TasksFilter
@@ -363,7 +387,6 @@
         // ExStart:SortTasksByColumnInGanttChart
         // ExFor: SaveOptions.TasksComparer
         // ExSummary: Shows how to set a comparer to sort tasks on Gantt chart and/or Task Sheet chart.
-
         [Test] // ExSkip
         public void SortTasksByColumnInGanttChartExample()
         {

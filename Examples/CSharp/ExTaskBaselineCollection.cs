@@ -26,7 +26,6 @@
 
             // print task baselines
             Console.WriteLine("Count of task baselines: " + task.Baselines.Count);
-            Console.WriteLine("Parent task: " + task.Baselines.ParentTask);
             foreach (var baseline in task.Baselines)
             {
                 Console.WriteLine("Baseline duration: {0}", baseline.Duration);

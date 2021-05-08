@@ -24,7 +24,7 @@ namespace Aspose.Tasks.Examples.CSharp
             
             var callback = new CustomPageSavingCallback();
             imageSaveOptions.PageSavingCallback = callback;
-            imageSaveOptions.SaveToSeparateFiles = true;
+            imageSaveOptions.RenderToSinglePage = false;
             project.Save(Stream.Null, imageSaveOptions);
 
             foreach (var streams in callback.PageStreams)

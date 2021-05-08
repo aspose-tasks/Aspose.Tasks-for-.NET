@@ -68,13 +68,16 @@
         {
             // ExStart:SaveSelectedPagesImageSaveOptions
             // ExFor: ImageSaveOptions.Pages
-            // ExFor: ImageSaveOptions.SaveToSeparateFiles
+            // ExFor: SaveOptions.RenderToSinglePage
             // ExSummary: Shows how to save selected pages in as an image.
             var project = new Project(DataDir + "EstimatedMilestoneTasks.mpp");
 
             var options = new ImageSaveOptions(SaveFileFormat.JPEG)
                               {
-                                  SaveToSeparateFiles = true, StartDate = project.Get(Prj.StartDate), EndDate = project.Get(Prj.FinishDate), PageSize = PageSize.Letter
+                                  RenderToSinglePage = false,
+                                  StartDate = project.Get(Prj.StartDate),
+                                  EndDate = project.Get(Prj.FinishDate),
+                                  PageSize = PageSize.Letter
                               };
             options.Pages.Add(2);
 
@@ -131,7 +134,7 @@
             // ExFor: ImageSaveOptions.DefaultFontName
             // ExFor: ImageSaveOptions.UseProjectDefaultFont
             // ExSummary: Shows how to save layout to separate files. 
-            var project = new Project(DataDir + "CreateProject2.mpp");
+            var project = new Project(DataDir + "Homemoveplan.mpp");
             var options = new ImageSaveOptions(SaveFileFormat.PNG);
             options.StartDate = project.Get(Prj.StartDate).AddDays(-3);
             options.EndDate = project.Get(Prj.FinishDate);
@@ -139,6 +142,7 @@
             options.LegendOnEachPage = false;
             options.DefaultFontName = "Segoe UI Black";
             options.UseProjectDefaultFont = false;
+            options.PageSize = PageSize.Letter;
 
             options.Gridlines = new List<Gridline>();
 
@@ -148,7 +152,8 @@
             project.Save(OutDir + "PrintProjectPagesToSeparateFiles1_out.png", options);
 
             // Save project layout to separate files
-            options.SaveToSeparateFiles = true;
+            options.RenderToSinglePage = false;
+            // options.SaveToSeparateFiles = true;
             project.Save(OutDir + "PrintProjectPagesToSeparateFiles2_out.png", options);
 
             // ExEnd:PrintProjectPagesToSeparateFiles

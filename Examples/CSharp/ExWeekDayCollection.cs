@@ -51,7 +51,7 @@
                 calendar.WeekDays.Insert(4, friday);
             }
 
-            Console.WriteLine("Calendar: " + calendar.WeekDays.ParentCalendar.Name);
+            Console.WriteLine("Calendar: " + calendar.Name);
             Console.WriteLine("Week days count: " + calendar.WeekDays.Count);
             foreach (var day in calendar.WeekDays)
             {

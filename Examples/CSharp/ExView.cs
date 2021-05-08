@@ -55,6 +55,12 @@
 
             // add the view to the our project
             project.Views.Add(view);
+
+            // WriteViewData flag should be used to persist modifications of project.Views.
+            project.Save(OutDir + "WorkWithView_output.mpp", new Saving.MPPSaveOptions
+            {
+                WriteViewData = true
+            });
             // lets check some properties of the newly added view
             // print the unique identifier of a view
             Console.WriteLine("View Uid: " + view.Uid);

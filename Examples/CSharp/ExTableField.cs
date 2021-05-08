@@ -15,7 +15,6 @@
             // ExFor: TableField.AlignData
             // ExFor: TableField.AlignTitle
             // ExFor: TableField.Field
-            // ExFor: TableField.ParentTable
             // ExFor: TableField.Title
             // ExFor: TableField.Width
             // ExFor: TableField.WrapHeader
@@ -36,7 +35,6 @@
                 Console.WriteLine("  Title: " + field.Title);
                 Console.WriteLine("  Title Alignment: " + field.AlignTitle);
                 Console.WriteLine("  Data Alignment: " + field.AlignData);
-                Console.WriteLine("  Parent Table Name: " + field.ParentTable.Name);
                 Console.WriteLine("  Wrap Header: " + field.WrapHeader);
                 Console.WriteLine("  Wrap Text: " + field.WrapText);
                 Console.WriteLine();

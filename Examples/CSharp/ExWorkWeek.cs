@@ -41,7 +41,7 @@
             {
                 // Display work week name, parent calendar name, from, and to dates
                 Console.WriteLine("Name: " + workWeek.Name);
-                Console.WriteLine("Parent calendar name: " + workWeek.ParentCalendar.Name);
+                Console.WriteLine("Parent calendar name: " + calendar.Name);
                 Console.WriteLine("From Date: " + workWeek.FromDate);
                 Console.WriteLine("To Date: " + workWeek.ToDate);
                 Console.WriteLine();
