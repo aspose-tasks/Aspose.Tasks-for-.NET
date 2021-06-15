@@ -3,6 +3,7 @@
     using System;
     using System.Collections.Generic;
     using System.Diagnostics.CodeAnalysis;
+    using System.Linq;
 
     using NUnit.Framework;
     using Saving;
@@ -74,6 +75,37 @@
                 project.Save(OutDir + "MoveTaskUnderSameParent_out.mpp", SaveFileFormat.MPP);
 
                 // ExEnd:MoveTaskUnderSameParent
+            }
+            catch (NotSupportedException ex)
+            {
+                Console.WriteLine(
+                    ex.Message
+                    + "\nThis example will only work if you apply a valid Aspose.Tasks License. You can purchase full license or get 30 day temporary license from http://www.aspose.com/purchase/default.aspx.");
+            }
+        }
+
+        [Test]
+        public static void MoveTaskUnderSameParent2()
+        {
+            try
+            {
+                // ExStart:MoveTaskUnderSameParent2
+                // ExFor: Task.MoveToSibling(Task)
+                // ExSummary: Shows how to move the task under the same parent.
+                var project = new Project(DataDir + "MoveTask.mpp");
+
+                // Move tasks with id 5 before task with id 3
+                var task = project.RootTask.Children.GetById(5);
+
+                var targetTask = project.RootTask.Children.First(t => t.Get(Tsk.Name) == "Task4");
+                task.MoveToSibling(targetTask);
+
+                // OR
+                // Move task to the end of the collection
+                // task.MoveToSibling(null);
+                project.Save(OutDir + "MoveTaskUnderSameParent_out.mpp", SaveFileFormat.MPP);
+
+                // ExEnd:MoveTaskUnderSameParent2
             }
             catch (NotSupportedException ex)
             {

@@ -3,6 +3,7 @@
     using System;
     using System.Collections.Generic;
     using System.Diagnostics.CodeAnalysis;
+    using System.IO;
     using System.Net;
     using NUnit.Framework;
 
@@ -19,11 +20,11 @@
             // ExSummary: Shows how to use Project Server manager to create a new project with predefined save options on Microsoft Project Online.
             try
             {
-                const string SharepointDomainAddress = "https://contoso.sharepoint.com/sites/pwa";
+                const string sharepointDomainAddress = "https://contoso.sharepoint.com/sites/pwa";
                 const string UserName = "admin@contoso.onmicrosoft.com";
                 const string Password = "MyPassword";
 
-                var credentials = new ProjectServerCredentials(SharepointDomainAddress, UserName, Password);
+                var credentials = new ProjectServerCredentials(sharepointDomainAddress, UserName, Password);
 
                 var project = new Project(DataDir + @"Project1.mpp");
 
@@ -43,11 +44,43 @@
         }
 
         [Test, Ignore("Should be run explicitly.")]
+        public void ProjectServerManagerExecutingWebRequestEvent()
+        {
+            // ExStart:ExecutingWebRequestEvent
+            // ExFor: ProjectServerManager.ExecutingWebRequest
+            // ExSummary: Shows how to use ProjectServerManager.ExecutingWebRequest event to customize web requests issued to Project Server.
+            try
+            {
+                const string SiteUrl = "https://myprojectserver/sites/pwa";
+                const string UserName = "test_user";
+                const string Password = "MyPassword";
+
+                var credentials = new ProjectServerCredentials(SiteUrl, new NetworkCredential(UserName, Password));
+
+                var project = new Project(DataDir + @"Project1.mpp");
+
+                var manager = new ProjectServerManager(credentials);
+                manager.ExecutingWebRequest += delegate (object sender, WebRequestEventArgs e)
+                {
+                    e.WebRequest.Headers.Add("XMyCustomHeader", "testvalue");
+                };
+
+                var list = manager.GetProjectList();
+            }
+            catch (ProjectOnlineException ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+
+            // ExEnd:ExecutingWebRequestEvent
+        }
+
+        [Test, Ignore("Should be run explicitly.")]
         public void ProjectServerManagerCreateNewProject()
         {
             // ExStart:ProjectServerManagerCreateNewProject
             // ExFor: ProjectServerManager.CreateNewProject(Project)
-            // ExSummary: Shows how to use Project Server manager to create a new project on Microsoft Project Online.
+            // ExSummary: Shows how to use ProjectServerManager to create a new project on Microsoft Project Online.
             try
             {
                 const string SharepointDomainAddress = "https://contoso.sharepoint.com/sites/pwa";
@@ -79,7 +112,6 @@
                 // ExFor: ProjectServerManager.#ctor(ProjectServerCredentials)
                 // ExFor: ProjectServerManager.GetProjectList
                 // ExFor: ProjectServerManager.GetProject(Guid)
-                // ExFor: ProjectServerManager.GetProjectRawData(Guid)
                 // ExSummary: Shows how to read a project from Microsoft Project Online.
                 const string SharepointDomainAddress = "https://contoso.sharepoint.com/sites/pwa";
                 const string UserName = "admin@contoso.onmicrosoft.com";
@@ -94,11 +126,6 @@
                     var project = manager.GetProject(info.Id);
                     Console.WriteLine("{0} - {1} - {2}", info.Name, info.CreatedDate, info.LastSavedDate);
                     Console.WriteLine("Resources count: {0}", project.Resources.Count);
-
-                    // an user can read the project as raw data stream
-                    var stream = manager.GetProjectRawData(info.Id);
-
-                    // work with raw project data
                 }
 
                 // ExEnd:ReadingProjectOnline
@@ -108,7 +135,50 @@
                 Console.WriteLine(ex.Message);
             }
         }
-        
+
+        [SuppressMessage("ReSharper", "UnusedVariable", Justification = "Reviewed. Suppression is OK here.")]
+        [Test, Ignore("Should be run explicitly.")]
+        public void ReadingRawProjectData()
+        {
+            try
+            {
+                // ExStart:GetProjectRawData
+                // ExFor: ProjectServerManager.GetProjectRawData(Guid)
+                // ExSummary: Shows how to retrieve project's raw data from Microsoft Project Online for troubleshooting purposes.
+                const string SharepointDomainAddress = "https://contoso.sharepoint.com/sites/pwa";
+                const string UserName = "admin@contoso.onmicrosoft.com";
+                const string Password = "MyPassword";
+
+                var credentials = new ProjectServerCredentials(SharepointDomainAddress, UserName, Password);
+                var manager = new ProjectServerManager(credentials);
+                IEnumerable<ProjectInfo> list = manager.GetProjectList();
+
+                foreach (var info in list)
+                {
+                    var project = manager.GetProject(info.Id);
+                    Console.WriteLine("{0} - {1} - {2}", info.Name, info.CreatedDate, info.LastSavedDate);
+                    Console.WriteLine("Resources count: {0}", project.Resources.Count);
+
+                    // The user can read the project as raw data stream for troubleshooting purposes.
+                    using (FileStream fs = File.Create(OutDir + "projectRawData.zip"))
+                    {
+                        using (var stream = manager.GetProjectRawData(info.Id))
+                        {
+                            stream.CopyTo(fs);
+                        }
+                    }
+
+                    // you can pass the resulting file to support.
+                }
+
+                // ExEnd:GetProjectRawData
+            }
+            catch (ProjectOnlineException ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+        }
+
         [Test]
         public void UpdateProjectServer()
         {

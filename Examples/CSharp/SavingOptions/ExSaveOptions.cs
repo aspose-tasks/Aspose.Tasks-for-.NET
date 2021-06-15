@@ -146,7 +146,10 @@
             var style = new BarStyle
                             {
                                 ItemType = BarItemType.CriticalTask,
-                                BarTextConverter = delegate(Task t) { return string.Format("This task (ID = {0}) is on critical path", t.Get(Tsk.Id)); }
+                                LeftBarTextConverter = delegate(Task t)
+                                {
+                                    return string.Format("This task (ID = {0}) is on critical path", t.Get(Tsk.Id));
+                                }
                             };
 
             var style2 = new BarStyle { BarColor = Color.DarkOrchid, ItemType = BarItemType.Task };
@@ -276,7 +279,7 @@
             project.Save(OutDir + "PrintProjectPagesToSeparateFiles1_out.png", options);
 
             // Save project layout to separate files
-            options.SaveToSeparateFiles = true;
+            options.RenderToSinglePage = false;
             project.Save(OutDir + "PrintProjectPagesToSeparateFiles2_out.png", options);
 
             // ExEnd:PrintProjectPagesToSeparateFiles

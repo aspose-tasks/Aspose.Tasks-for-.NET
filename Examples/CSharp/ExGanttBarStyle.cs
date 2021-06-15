@@ -89,15 +89,16 @@
             // ExEnd:ReadCustomBarStyle
         }
         
-        // ExStart
-        // ExFor: GanttBarShowFor
-        // ExFor: GanttBarStyle.Name
-        // ExFor: GanttBarStyle.ShowForCategories
-        // ExFor: GanttBarStyle.ShowForTaskUid
-        // ExSummary: Shows how to use ShowFor categories.
         [Test]
         public void TestCanAddCommonBarStyle2010()
         {
+            // ExStart
+            // ExFor: GanttBarShowFor
+            // ExFor: GanttBarStyle.Name
+            // ExFor: GanttBarStyle.ShowForCategories
+            // ExFor: GanttBarStyle.ShowForTaskUid
+            // ExSummary: Shows how to use ShowFor categories.
+
             var project = new Project(DataDir + "Project2.mpp");
             var view = (GanttChartView)project.DefaultView;
 
@@ -115,8 +116,10 @@
             barStyle.ShowForCategories = new List<GanttBarShowFor>(showForCategories);
             barStyle.Name = "My common style";
             view.BarStyles.Add(barStyle);
-            
+
             // work with project...
+
+            // ExEnd
         }
 
         [Test]
@@ -210,6 +213,5 @@
             };
             return style;
         }
-        // ExEnd
     }
 }

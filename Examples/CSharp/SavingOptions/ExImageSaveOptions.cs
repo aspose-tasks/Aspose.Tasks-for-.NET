@@ -117,7 +117,10 @@
             // Use ReduceFooterGap property to reduce the gap between list of tasks and Footer
             var imageSaveOptions = new ImageSaveOptions(SaveFileFormat.PNG)
                                        {
-                                           ReduceFooterGap = true, /* set to true */ SaveToSeparateFiles = true, PageSize = PageSize.A0, Timescale = Timescale.Days
+                                           ReduceFooterGap = true, /* set to true */ 
+                                           RenderToSinglePage = false,
+                                           PageSize = PageSize.A0,
+                                           Timescale = Timescale.Days
                                        };
             project.Save(OutDir + "ReducingGapBetweenTasksListAndFooter_out.png", imageSaveOptions);
 

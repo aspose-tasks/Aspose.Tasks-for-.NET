@@ -56,7 +56,7 @@
             
             // there is exists a feature that allow to convert a text of the bar
             // lets set converter to get text for the bar to render.
-            style.BarTextConverter = task =>
+            style.LeftBarTextConverter = task =>
             {
                 if (!task.Get(Tsk.Name).StartsWith("T"))
                 {
