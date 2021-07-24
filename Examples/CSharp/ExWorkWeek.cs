@@ -14,7 +14,6 @@
             // ExFor: WorkWeek
             // ExFor: WorkWeek.#ctor
             // ExFor: WorkWeek.Name
-            // ExFor: WorkWeek.ParentCalendar
             // ExFor: WorkWeek.FromDate
             // ExFor: WorkWeek.ToDate
             // ExFor: WorkWeek.WeekDays

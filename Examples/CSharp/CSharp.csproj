@@ -260,7 +260,7 @@
     <None Include="app.config" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Aspose.Tasks" Version="21.6.0" />
+    <PackageReference Include="Aspose.Tasks" Version="21.7.0" />
     <PackageReference Include="Microsoft.SharePointOnline.CSOM" Version="16.1.21312.12000" />
     <PackageReference Include="NUnit" Version="3.13.2" />
   </ItemGroup>

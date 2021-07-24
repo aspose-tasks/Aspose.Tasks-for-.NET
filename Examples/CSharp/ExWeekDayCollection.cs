@@ -19,7 +19,6 @@
             // ExFor: WeekDayCollection.Item(Int32)
             // ExFor: WeekDayCollection.Count
             // ExFor: WeekDayCollection.GetEnumerator
-            // ExFor: WeekDayCollection.ParentCalendar
             // ExFor: WeekDayCollection.Remove(WeekDay)
             // ExFor: WeekDayCollection.RemoveAt(Int32)
             // ExFor: WeekDayCollection.ToList

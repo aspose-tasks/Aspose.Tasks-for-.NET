@@ -61,7 +61,7 @@
             {
                 // ExStart:MoveTaskUnderSameParent
                 // ExFor: Task.MoveToSibling(Int32)
-                // ExSummary: Shows how to move the task under the same parent.
+                // ExSummary: Shows how to move the task under the same parent using task's Id.
                 var project = new Project(DataDir + "MoveTask.mpp");
 
                 // Move tasks with id 5 before task with id 3

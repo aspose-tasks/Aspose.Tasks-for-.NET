@@ -14,7 +14,6 @@
             // ExFor: TaskBaselineCollection
             // ExFor: TaskBaselineCollection.Count
             // ExFor: TaskBaselineCollection.GetEnumerator
-            // ExFor: TaskBaselineCollection.ParentTask
             // ExFor: TaskBaselineCollection.Remove(TaskBaseline)
             // ExFor: TaskBaselineCollection.ToList
             // ExSummary: Shows how to work with task baseline collections.

@@ -15,7 +15,6 @@
             // ExFor: WorkWeekCollection.Add(WorkWeek)
             // ExFor: WorkWeekCollection.Count
             // ExFor: WorkWeekCollection.GetEnumerator
-            // ExFor: WorkWeekCollection.ParentCalendar
             // ExFor: WorkWeekCollection.ToList()
             // ExSummary: Shows how to create a custom work week for a calendar.
             var project = new Project();
