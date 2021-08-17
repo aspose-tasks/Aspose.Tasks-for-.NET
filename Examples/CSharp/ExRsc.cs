@@ -655,23 +655,6 @@
         }
 
         [Test]
-        public void GetSetOverallocated()
-        {
-            // ExStart
-            // ExFor: Rsc.Overallocated
-            // ExSummary: Shows how to read/write Rsc.Overallocated property.
-            var project = new Project();
-
-            var resource = project.Resources.Add("Resource");
-
-            resource.Set(Rsc.Overallocated, true);
-
-            Console.WriteLine("Overallocated: " + resource.Get(Rsc.Overallocated));
-
-            // ExEnd
-        }
-
-        [Test]
         public void GetSetPeakUnits()
         {
             // ExStart

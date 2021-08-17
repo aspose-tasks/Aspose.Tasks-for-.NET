@@ -48,7 +48,7 @@
             var collection = task.SplitParts;
             foreach (var splitPart in collection)
             {
-                Console.WriteLine("Index: " + splitPart.Index + "\nStart: " + splitPart.Start + "\nFinish: " + splitPart.Finish + "\n");
+                Console.WriteLine("Start: " + splitPart.Start + "\nFinish: " + splitPart.Finish + "\n");
             }
 
             // ExEnd:ViewSplitTasks

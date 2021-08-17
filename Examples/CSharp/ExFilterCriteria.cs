@@ -1,6 +1,7 @@
 ﻿namespace Aspose.Tasks.Examples.CSharp
 {
     using System;
+    using System.Linq;
     using NUnit.Framework;
 
     [TestFixture]
@@ -29,6 +30,14 @@
                 Console.WriteLine("Field: " + row.Field);
                 Console.WriteLine("Operation: " + row.Operation);
                 Console.WriteLine("Test: " + row.Test);
+
+                var values = row.Values.Where(c => c != null).ToArray();
+                if (values.Length == 0)
+                {
+                    continue;
+                }
+
+                Console.WriteLine("Value{0}: {1}", values.Length == 1 ? "" : "s", string.Join(", ", values));
             }
 
             // print filter criteria as a string 

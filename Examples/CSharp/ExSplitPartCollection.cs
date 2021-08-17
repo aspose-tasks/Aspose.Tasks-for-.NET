@@ -28,23 +28,13 @@
             Console.WriteLine("Split parts count:" + task.SplitParts.Count);
             foreach (var splitPart in task.SplitParts)
             {
-                Console.WriteLine("Index: " + splitPart.Index);
                 Console.WriteLine("Start: " + splitPart.Start);
                 Console.WriteLine("Finish: " + splitPart.Finish);
             }
 
-            // convert split collection into an array
-            SplitPart[] splitParts = task.SplitParts.ToArray();
-            foreach (var part in splitParts)
-            {
-                Console.WriteLine("Index: " + part.Index);
-                
-                // make some work with parts
-            }
-
             // get the part by index
             var split = task.SplitParts[0];
-            Console.WriteLine("Split index: " + split.Index);
+            Console.WriteLine("Split start: " + split.Start);
 
             // make some work with the first split part of the task
 

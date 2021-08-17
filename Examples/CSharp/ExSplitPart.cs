@@ -39,7 +39,6 @@
             Console.WriteLine("Number of split parts: " + task.SplitParts.Count);
             foreach (var splitPart in task.SplitParts)
             {
-                Console.WriteLine("  Split Part Index: " + splitPart.Index);
                 Console.WriteLine("  Split Part Start: " + splitPart.Start);
                 Console.WriteLine("  Split Part Finish: " + splitPart.Finish);
                 Console.WriteLine();
@@ -78,8 +77,8 @@
             // the equality of split parts is checked against to start, finish, and index of split parts.
             var part1 = task.SplitParts[0];
             var part2 = task.SplitParts[1];
-            Console.WriteLine("Split Part 1 Index {0} Start {1} Finish {2}", part1.Index, part1.Start, part1.Finish);
-            Console.WriteLine("Split Part 2 Index {0} Start {1} Finish {2}", part2.Index, part2.Start, part2.Finish);
+            Console.WriteLine("Split Part 1 Start {0} Finish {1}", part1.Start, part1.Finish);
+            Console.WriteLine("Split Part 2 Start {0} Finish {1}", part2.Start, part2.Finish);
             Console.WriteLine("Are split parts equal: " + part1.Equals(part2));
 
             // ExEnd
@@ -116,8 +115,8 @@
             var part2 = task.SplitParts[1];
 
             // the hash code of a split part based on start, finish, and index of a split part. 
-            Console.WriteLine("Split Part 1 Index {0} Start {1} Finish {2} HashCode {3}", part1.Index, part1.Start, part1.Finish, part1.GetHashCode());
-            Console.WriteLine("Split Part 2 Index {0} Start {1} Finish {2} HashCode {3}", part2.Index, part2.Start, part2.Finish, part2.GetHashCode());
+            Console.WriteLine("Split Part 1 Start {0} Finish {1} HashCode {2}", part1.Start, part1.Finish, part1.GetHashCode());
+            Console.WriteLine("Split Part 2 Start {0} Finish {1} HashCode {2}", part2.Start, part2.Finish, part2.GetHashCode());
 
             // ExEnd
         }

@@ -22,7 +22,7 @@
             var calendar = project.Calendars.Add("Standard");
             Calendar.MakeStandardCalendar(calendar);
 
-            var item = new WorkWeek(calendar);
+            var item = new WorkWeek();
             item.Name = "My Work Week";
             item.FromDate = new DateTime(2020, 4, 13, 8, 0, 0);
             item.ToDate = new DateTime(2020, 4, 17, 17, 0, 0);
