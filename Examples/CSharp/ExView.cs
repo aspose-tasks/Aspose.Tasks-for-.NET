@@ -70,57 +70,5 @@
             Console.WriteLine("Parent Project of the view: " + view.ParentProject.Get(Prj.Name));
             // ExEnd:WorkWithView
         }
-
-        [Test]
-        public void EqualsView()
-        {
-            // ExStart:EqualsView
-            // ExFor: View.CompareTo(View)
-            // ExFor: View.Equals(Object)
-            // ExFor: View.op_Equality(View,View)
-            // ExFor: View.op_GreaterThan(View,View)
-            // ExFor: View.op_GreaterThanOrEqual(View,View)
-            // ExFor: View.op_Inequality(View,View)
-            // ExFor: View.op_LessThan(View,View)
-            // ExFor: View.op_LessThanOrEqual(View,View)
-            // ExSummary: Shows how to check equality of MS Project views.
-            // create an empty project without views 
-            var project = new Project(DataDir + "Project2003.mpp");
-
-            var view1 = project.Views.ToList()[0];
-            var view2 = project.Views.ToList()[1];
-            
-            // the equality of views is checked against to view's UID.
-            Console.WriteLine("View 1 UID: " + view1.Uid);
-            Console.WriteLine("View 2 UID: " + view2.Uid);
-            Console.WriteLine("Are views equal: " + view1.Equals(view2));
-
-            // ExEnd:EqualsView
-        }
-        
-        [Test]
-        public void GetHashCodeView()
-        {
-            // ExStart:GetHashCodeView
-            // ExFor: View.GetHashCode
-            // ExSummary: Shows how to get a hash code of an MS Project view.
-            
-            // create an empty project without views 
-            var project = new Project(DataDir + "Project2003.mpp");
-
-            var view1 = project.Views.ToList()[0];
-            var view2 = project.Views.ToList()[1];
-            
-            // the equality of views is checked against to view's UID.
-            Console.WriteLine("View 1 UID: " + view1.Uid);
-            Console.WriteLine("View 2 UID: " + view2.Uid);
-            Console.WriteLine("Are views equal: " + view1.Equals(view2));
-            
-            // the hash code of a view is equal to view UID 
-            Console.WriteLine("View UID: {0} Hash Code: {1}", view1.Uid, view2.GetHashCode());
-            Console.WriteLine("View UID: {0} Hash Code: {1}", view1.Uid, view2.GetHashCode());
-  
-            // ExEnd:GetHashCodeView
-        }
     }
 }
