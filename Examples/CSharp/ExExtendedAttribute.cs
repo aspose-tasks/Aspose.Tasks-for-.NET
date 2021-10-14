@@ -37,14 +37,15 @@
             // ExFor: ExtendedAttribute
             // ExFor: ExtendedAttribute.ValueReadOnly
             // ExFor: ExtendedAttribute.NumericValue
-            // ExSummary: Shows how to add read-only custom field values by using formulas.
+            // ExFor: ExtendedAttribute.IsErrorValue
+            // ExSummary: Shows how to add custom field which value is calculated using formula specified by the user.
             var project = new Project();
 
             // create new task extended attribute definition
-            var attribute = ExtendedAttributeDefinition.CreateTaskDefinition(CustomFieldType.Cost, ExtendedAttributeTask.Cost1, string.Empty);
+            var attribute = ExtendedAttributeDefinition.CreateTaskDefinition(CustomFieldType.Cost, ExtendedAttributeTask.Cost1, "Cost ratio");
 
             // Add a formula to the attribute.
-            attribute.Formula = "[Cost]-[Actual Cost]";
+            attribute.Formula = "[Cost] / [Actual Cost]";
 
             project.ExtendedAttributes.Add(attribute);
 
@@ -54,10 +55,25 @@
             var extendedAttribute = attribute.CreateExtendedAttribute();
             task.ExtendedAttributes.Add(extendedAttribute);
 
-            // Display if extended attributes are read only or not
-            Console.WriteLine(extendedAttribute.ValueReadOnly ? "Value is Read only" : "Value is not read only");
+            // We set the Formula for the extended attribute, so it is read only (the value is calculated using formula).
+            // Output is "Value is read only"
+            Console.WriteLine(extendedAttribute.ValueReadOnly ? "Value is read only" : "Value is not read only");
+
+            // You can try to set value of read only field, but it will not have effect.
             extendedAttribute.NumericValue = -1000000M;
-            Console.WriteLine(extendedAttribute.NumericValue != -1000000M ? "Formula values are read-only" : "Values are not read-only");
+
+            Console.WriteLine("Cost is {0}, Actual Cost is {1}, Custom attribute's value is {2}",
+                task.Get(Tsk.Cost),
+                task.Get(Tsk.ActualCost),
+                extendedAttribute.IsErrorValue ? "#Error" : extendedAttribute.NumericValue.ToString());
+
+            task.Set(Tsk.Cost, 100m);
+            task.Set(Tsk.ActualCost, 120m);
+
+            Console.WriteLine("Cost is {0}, Actual Cost is {1}, Custom attribute's value is {2}",
+                task.Get(Tsk.Cost), 
+                task.Get(Tsk.ActualCost),
+                extendedAttribute.IsErrorValue ? "#Error" : extendedAttribute.NumericValue.ToString());
 
             // ExEnd:AccessReadOnlyCustomFieldValuesUsingFormulas
         }

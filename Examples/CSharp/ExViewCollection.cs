@@ -80,5 +80,21 @@
 
             // ExEnd
         }
+
+        [Test]
+        public void ViewCollectionGetByViewScreen()
+        {
+            // ExStart
+            // ExFor: ViewCollection.GetByViewScreen(ViewScreen)
+            // ExFor: ViewCollection.GetByName(string)
+            // ExSummary: Shows how get a view by view screen or by name.
+            var project = new Project(DataDir + "Project1.mpp");
+
+            // View can be found by name
+            var ganttChartView = project.Views.GetByName("&Gantt Chart");
+
+            // View can be found by the value of Screen property.
+            var ganttChartView2 = project.Views.GetByViewScreen(ViewScreen.Gantt);
+        }
     }
 }
