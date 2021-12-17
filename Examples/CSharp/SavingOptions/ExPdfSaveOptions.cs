@@ -19,13 +19,13 @@
             // ExStart
             // ExFor: PdfSaveOptions
             // ExFor: PdfSaveOptions.#ctor
-            // ExFor: PdfSaveOptions.SaveToSeparateFiles
+            // ExFor: SaveOptions.RenderToSinglePage
             // ExFor: PdfSaveOptions.Pages
             // ExFor: SaveOptions.PageCount
             // ExSummary: Shows how to save selected pages of a project into PDF file. 
             var project = new Project(DataDir + "Software Development Plan.mpp");
             var options = new PdfSaveOptions();
-            options.SaveToSeparateFiles = true;
+            options.RenderToSinglePage = false;
             options.Pages = new List<int>();
 
             // lets check the number of pages can be exported

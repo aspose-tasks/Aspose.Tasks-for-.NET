@@ -23,8 +23,7 @@
             // ExFor: BarStyle.EndShape
             // ExFor: BarStyle.EndShapeColor
             // ExFor: BarStyle.TextStyle
-            // ExFor: BarStyle.BarTextConverter
-            // ExFor: BarStyle.TaskToBarTextConverter
+            // ExFor: BarStyle.LeftBarTextConverter
             // ExFor: BarShape
             // ExFor: Shape
             // ExSummary: Shows how to use custom bar styles.

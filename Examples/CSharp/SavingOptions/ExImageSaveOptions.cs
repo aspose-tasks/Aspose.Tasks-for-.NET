@@ -134,6 +134,7 @@
             // ExFor: SaveOptions.Gridlines
             // ExFor: SaveOptions.StartDate
             // ExFor: SaveOptions.EndDate
+            // ExFor: SaveOptions.RenderToSinglePage
             // ExFor: ImageSaveOptions.DefaultFontName
             // ExFor: ImageSaveOptions.UseProjectDefaultFont
             // ExSummary: Shows how to save layout to separate files. 
@@ -156,7 +157,6 @@
 
             // Save project layout to separate files
             options.RenderToSinglePage = false;
-            // options.SaveToSeparateFiles = true;
             project.Save(OutDir + "PrintProjectPagesToSeparateFiles2_out.png", options);
 
             // ExEnd:PrintProjectPagesToSeparateFiles
