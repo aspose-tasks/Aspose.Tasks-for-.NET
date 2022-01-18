@@ -38,7 +38,7 @@
             // set a value indicating whether to print a specified number of first columns on all pages
             project.DefaultView.PageInfo.PageViewSettings.PrintFirstColumnsCountOnAllPages = true;
             
-            project.Save(OutDir + "ProjectWithComments_out.pdf", SaveFileFormat.PDF);
+            project.Save(OutDir + "ProjectWithComments_out.pdf", SaveFileFormat.Pdf);
 
             // ExEnd:RenderCommentsWhenConverting
         }

@@ -26,7 +26,7 @@
                 var project = new Project(DataDir + "PrintTaskWritingException.mpp");
 
                 // export the project as an MPP file
-                project.Save(OutDir + "PrintTaskWritingException_out.MPP", SaveFileFormat.MPP);
+                project.Save(OutDir + "PrintTaskWritingException_out.MPP", SaveFileFormat.Mpp);
             }
             catch (TasksWritingException ex)
             {

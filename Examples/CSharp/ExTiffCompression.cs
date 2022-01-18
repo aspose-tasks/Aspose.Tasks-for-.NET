@@ -7,14 +7,14 @@
     public class ExTiffCompression : ApiExampleBase
     {
         [Test]
-        public void RenderMultipageTIFF()
+        public void RenderMultipageTiff()
         {
             // ExStart:RenderMultipageTIFF
             // ExFor: TiffCompression
             // ExSummary: Shows how to render in TIFF format by using RLE compression mode.
             var project = new Project(DataDir + "Project2.mpp");
 
-            var options = new ImageSaveOptions(SaveFileFormat.TIFF);
+            var options = new ImageSaveOptions(SaveFileFormat.Tiff);
 
             // Save the project with Rle compression
             options.TiffCompression = TiffCompression.Rle;

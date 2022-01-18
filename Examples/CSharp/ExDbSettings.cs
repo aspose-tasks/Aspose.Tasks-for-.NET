@@ -29,7 +29,7 @@
                 Console.WriteLine("Provider Name: " + settings.ProviderInvariantName);
 
                 var project = new Project(settings);
-                project.Save(OutDir + "SupportForSQLiteDatabase_out.mpp", SaveFileFormat.MPP);
+                project.Save(OutDir + "SupportForSQLiteDatabase_out.mpp", SaveFileFormat.Mpp);
 
                 // ExEnd:ImportProjectFromPrimaveraDBSQLite
             }

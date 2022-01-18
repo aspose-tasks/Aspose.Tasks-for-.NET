@@ -250,7 +250,7 @@
                 var nonMaterialResourceAssignment = project.ResourceAssignments.Add(task, nonMaterialResource);
                 nonMaterialResourceAssignment.Set(Asn.RateScale, RateScaleType.Week);
 
-                project.Save(OutDir + "ReadWriteRateScaleForResourceAssignment_out.mpp", SaveFileFormat.MPP);
+                project.Save(OutDir + "ReadWriteRateScaleForResourceAssignment_out.mpp", SaveFileFormat.Mpp);
 
                 var resavedProject = new Project(OutDir + "ReadWriteRateScaleForResourceAssignment_out.mpp");
 

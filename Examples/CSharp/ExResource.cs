@@ -19,7 +19,7 @@
             // Add resources
             project.Resources.Add("Resource");
 
-            project.Save(OutDir + "CreateResources_out.xml", SaveFileFormat.XML);
+            project.Save(OutDir + "CreateResources_out.xml", SaveFileFormat.Xml);
 
             // ExEnd:CreateResources
         }
@@ -79,7 +79,7 @@
                 Console.WriteLine("Resource Overtime Rate: " + resource.Get(Rsc.OvertimeRate));
                 Console.WriteLine("Resource Group: " + resource.Get(Rsc.Group));
 
-                project.Save(OutDir + "UpdateResourceData_out.mpp", SaveFileFormat.MPP);
+                project.Save(OutDir + "UpdateResourceData_out.mpp", SaveFileFormat.Mpp);
 
                 // ExEnd:ReadWriteGeneralResourceProperties
             }
@@ -115,7 +115,7 @@
                 var resource = project.Resources.Add("R1");
                 resource.ExtendedAttributes.Add(attribute);
 
-                project.Save(OutDir + "ResourceExtendedAttributes_out.mpp", SaveFileFormat.MPP);
+                project.Save(OutDir + "ResourceExtendedAttributes_out.mpp", SaveFileFormat.Mpp);
 
                 // ExEnd:SetResourceExtendedAttributes
             }

@@ -20,7 +20,7 @@ namespace Aspose.Tasks.Examples.CSharp
         {
             var project = new Project(DataDir + "Homemoveplan.mpp");
             
-            var imageSaveOptions = new ImageSaveOptions(SaveFileFormat.PNG);
+            var imageSaveOptions = new ImageSaveOptions(SaveFileFormat.Png);
             
             var callback = new CustomPageSavingCallback();
             imageSaveOptions.PageSavingCallback = callback;

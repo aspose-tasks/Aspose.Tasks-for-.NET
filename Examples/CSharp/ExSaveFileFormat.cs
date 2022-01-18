@@ -7,13 +7,13 @@
     public class ExSaveFileFormat : ApiExampleBase
     {
         [Test]
-        public void SaveProjectAsCSV()
+        public void SaveProjectAsCsv()
         {
             // ExStart:SaveProjectAsCSV
             // ExFor: SaveFileFormat
             // ExSummary: Shows how to save a project in CSV format.
             var project = new Project(DataDir + "CreateProject1.mpp");
-            project.Save(OutDir + "SaveProjectAsCSV_out.csv", SaveFileFormat.CSV);
+            project.Save(OutDir + "SaveProjectAsCSV_out.csv", SaveFileFormat.Csv);
 
             // ExEnd:SaveProjectAsCSV
         }

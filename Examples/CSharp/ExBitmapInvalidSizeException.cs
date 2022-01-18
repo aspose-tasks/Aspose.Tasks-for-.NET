@@ -20,7 +20,7 @@
                 var project = new Project(DataDir + "Blank2010.mpp");
 
                 GanttChartView view = (GanttChartView) project.Views.ToList()[0];
-                var options = new ImageSaveOptions(SaveFileFormat.PNG)
+                var options = new ImageSaveOptions(SaveFileFormat.Png)
                 {
                     Timescale = Timescale.DefinedInView
                 };

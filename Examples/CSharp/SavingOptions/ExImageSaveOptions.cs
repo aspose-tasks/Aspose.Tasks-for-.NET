@@ -12,7 +12,7 @@
     public class ExImageSaveOptions : ApiExampleBase
     {
         [Test]
-        public void RenderProjectDataToFormat24bppRgb()
+        public void RenderProjectDataToFormat24BppRgb()
         {
             // ExStart:RenderProjectDataToFormat24bppRgb
             // ExFor: ImageSaveOptions.PixelFormat
@@ -20,7 +20,7 @@
             // ExFor: ImageSaveOptions.HorizontalResolution
             // ExSummary: Shows how to set pixel format which is used during conversion into image formats. 
             var project = new Project(DataDir + "Project1.mpp");
-            var options = new ImageSaveOptions(SaveFileFormat.TIFF);
+            var options = new ImageSaveOptions(SaveFileFormat.Tiff);
             options.HorizontalResolution = 72;
             options.VerticalResolution = 72;
             options.PixelFormat = PixelFormat.Format24bppRgb;
@@ -39,7 +39,10 @@
 
             // in order to manipulate JPEG quality one can use ImageSaveOptions.JpegQuality property.
             // The allowed value range is 0..100.
-            var options = new ImageSaveOptions(SaveFileFormat.JPEG) { JpegQuality = 50 };
+            var options = new ImageSaveOptions(SaveFileFormat.Jpeg)
+            {
+                JpegQuality = 50
+            };
 
             project.Save(OutDir + "SaveProjectAsJPEG_out.jpeg", options);
 
@@ -55,8 +58,10 @@
             var project = new Project(DataDir + "EstimatedMilestoneTasks.mpp");
 
             // in order to manipulate TIFF compression we can use ImageSaveOptions.TiffCompression property.
-            // The allowed value range is 0..100.
-            var options = new ImageSaveOptions(SaveFileFormat.TIFF) { TiffCompression = TiffCompression.Lzw };
+            var options = new ImageSaveOptions(SaveFileFormat.Tiff)
+            {
+                TiffCompression = TiffCompression.Lzw
+            };
 
             project.Save(OutDir + "SaveProjectAsTiff_out.tif", options);
 
@@ -72,7 +77,7 @@
             // ExSummary: Shows how to save selected pages in as an image.
             var project = new Project(DataDir + "EstimatedMilestoneTasks.mpp");
 
-            var options = new ImageSaveOptions(SaveFileFormat.JPEG)
+            var options = new ImageSaveOptions(SaveFileFormat.Jpeg)
                               {
                                   RenderToSinglePage = false,
                                   StartDate = project.Get(Prj.StartDate),
@@ -97,7 +102,7 @@
 
             using (var stream = new FileStream(OutDir + "EmptyProjectSaveStream_out.xml", FileMode.Create, FileAccess.Write))
             {
-                var options = new ImageSaveOptions(SaveFileFormat.PNG);
+                var options = new ImageSaveOptions(SaveFileFormat.Png);
 
                 // by using of ImageSaveOptions we save the project into image format
                 project.Save(stream, options);
@@ -115,7 +120,7 @@
             var project = new Project(DataDir + "CreateProject2.mpp");
 
             // Use ReduceFooterGap property to reduce the gap between list of tasks and Footer
-            var imageSaveOptions = new ImageSaveOptions(SaveFileFormat.PNG)
+            var imageSaveOptions = new ImageSaveOptions(SaveFileFormat.Png)
                                        {
                                            ReduceFooterGap = true, /* set to true */ 
                                            RenderToSinglePage = false,
@@ -139,7 +144,7 @@
             // ExFor: ImageSaveOptions.UseProjectDefaultFont
             // ExSummary: Shows how to save layout to separate files. 
             var project = new Project(DataDir + "Homemoveplan.mpp");
-            var options = new ImageSaveOptions(SaveFileFormat.PNG);
+            var options = new ImageSaveOptions(SaveFileFormat.Png);
             options.StartDate = project.Get(Prj.StartDate).AddDays(-3);
             options.EndDate = project.Get(Prj.FinishDate);
             options.MarkCriticalTasks = true;

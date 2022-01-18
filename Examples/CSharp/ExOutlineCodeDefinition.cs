@@ -141,7 +141,7 @@
                 // Add outline code to project
                 project.OutlineCodes.Add(code2);
 
-                project.Save(OutDir + "Updated_project_out.mpp", SaveFileFormat.MPP);
+                project.Save(OutDir + "Updated_project_out.mpp", SaveFileFormat.Mpp);
 
                 // ExEnd:UpdateOutlineCodes
             }

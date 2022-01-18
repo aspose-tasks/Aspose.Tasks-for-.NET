@@ -39,7 +39,7 @@
             assignment.SplitTask(new DateTime(2000, 3, 18, 8, 0, 0), new DateTime(2000, 3, 18, 17, 0, 0), calendar);
             assignment.Set(Asn.WorkContour, WorkContourType.Contoured);
 
-            project.Save(OutDir + "CreateSplitTasks_out.xml", SaveFileFormat.XML);
+            project.Save(OutDir + "CreateSplitTasks_out.xml", SaveFileFormat.Xml);
 
             // ExEnd:CreateSplittedTasks
         }

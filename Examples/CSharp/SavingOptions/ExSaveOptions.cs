@@ -43,10 +43,10 @@
             var project = new Project(DataDir + "Project2.mpp");
 
             // Save to one page image (Timescale.days by default)
-            project.Save(OutDir + "NewProductDevDays_out.jpeg", new ImageSaveOptions(SaveFileFormat.JPEG));
+            project.Save(OutDir + "NewProductDevDays_out.jpeg", new ImageSaveOptions(SaveFileFormat.Jpeg));
 
             // Save to one page image (Timescale.ThirdsOfMonths)
-            var options = new ImageSaveOptions(SaveFileFormat.JPEG)
+            var options = new ImageSaveOptions(SaveFileFormat.Jpeg)
             {
                 Timescale = Timescale.ThirdsOfMonths
             };
@@ -200,18 +200,18 @@
             // ExSummary: Shows how to set page size (can be one of the values of the <see cref="P:Aspose.Tasks.Visualization.TiffCompression" /> enumeration).
             var project = new Project(DataDir + "Project2.mpp");
 
-            const PresentationFormat Format = PresentationFormat.GanttChart;
+            const PresentationFormat format = PresentationFormat.GanttChart;
 
             // Render the project to all Pre-Defined page sizes
             foreach (var pageSize in (PageSize[])Enum.GetValues(typeof(PageSize)))
             {
                 var options = new PdfSaveOptions
                 {
-                    PresentationFormat = Format,
+                    PresentationFormat = format,
                     FitContent = true,
                     PageSize = pageSize
                 };
-                project.Save(OutDir + "PredefinedPageSizes_" + Format + "_" + pageSize + "_out.pdf", options);
+                project.Save(OutDir + "PredefinedPageSizes_" + format + "_" + pageSize + "_out.pdf", options);
             }
 
             // ExEnd:RenderProjectToPredefinedPageSizes
@@ -264,7 +264,7 @@
             // ExFor: SaveOptions.MarkCriticalTasks
             // ExSummary: Shows how to print critical tasks while save in image file formats. 
             var project = new Project(DataDir + "CreateProject2.mpp");
-            var options = new ImageSaveOptions(SaveFileFormat.PNG)
+            var options = new ImageSaveOptions(SaveFileFormat.Png)
             {
                 StartDate = project.Get(Prj.StartDate).AddDays(-3),
                 EndDate = project.Get(Prj.FinishDate),
@@ -308,7 +308,7 @@
             ganttChartView.BottomTimescaleTier.Label = DateLabel.DayDddDd;
             
             // ...
-            var options = new ImageSaveOptions(SaveFileFormat.PNG)
+            var options = new ImageSaveOptions(SaveFileFormat.Png)
             {
                 Timescale = Timescale.DefinedInView
             };

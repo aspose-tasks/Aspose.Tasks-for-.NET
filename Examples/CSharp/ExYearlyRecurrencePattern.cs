@@ -34,7 +34,7 @@
                                      };
                 project.RootTask.Children.Add(parameters);
 
-                project.Save(OutDir + "WorkWithYearlyRecurrencePattern_out.mpp", SaveFileFormat.MPP);
+                project.Save(OutDir + "WorkWithYearlyRecurrencePattern_out.mpp", SaveFileFormat.Mpp);
 
                 // ExEnd
             }

@@ -14,7 +14,7 @@
             // ExSummary: Shows how to set task's default start date as 'CurrentDate'.
             var project = new Project();
             project.Set(Prj.NewTaskStartDate, TaskStartDateType.CurrentDate);
-            project.Save(OutDir + "SetAttributesForNewTasks_out.xml", SaveFileFormat.XML);
+            project.Save(OutDir + "SetAttributesForNewTasks_out.xml", SaveFileFormat.Xml);
 
             // ExEnd:SetAttributesForNewTasks
         }

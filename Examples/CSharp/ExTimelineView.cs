@@ -53,7 +53,7 @@
             task2.Set(Tsk.Start, new DateTime(2020, 4, 29, 8, 0, 0));
             task2.Set(Tsk.Duration, task1.ParentProject.GetDuration(40, TimeUnitType.Hour));
             
-            project.Save(OutDir + "SetTimeScaleCount_out.pdf", SaveFileFormat.PDF);
+            project.Save(OutDir + "SetTimeScaleCount_out.pdf", SaveFileFormat.Pdf);
             // ExEnd
         }
     }

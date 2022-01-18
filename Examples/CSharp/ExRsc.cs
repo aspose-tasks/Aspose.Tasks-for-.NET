@@ -1055,7 +1055,7 @@
                 Console.WriteLine("Resource Overtime Rate: " + resource.Get(Rsc.OvertimeRate));
                 Console.WriteLine("Resource Group: " + resource.Get(Rsc.Group));
 
-                project.Save(OutDir + "UpdateResourceData_out.mpp", SaveFileFormat.MPP);
+                project.Save(OutDir + "UpdateResourceData_out.mpp", SaveFileFormat.Mpp);
 
                 // ExEnd:ReadWriteGeneralResourceProperties
             }

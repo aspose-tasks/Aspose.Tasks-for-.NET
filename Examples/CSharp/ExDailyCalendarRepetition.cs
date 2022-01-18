@@ -39,7 +39,7 @@
                 project.RootTask.Children.Add(parameters);
 
                 // work with the project further...
-                project.Save(OutDir + "CanAddRecurringTask_Days_CalendarDays_24h_Test_out.mpp", SaveFileFormat.MPP);
+                project.Save(OutDir + "CanAddRecurringTask_Days_CalendarDays_24h_Test_out.mpp", SaveFileFormat.Mpp);
 
                 // ExEnd
             }

@@ -41,7 +41,7 @@
                 // also modification of a legend is supported
                 legend.LeftText = "New Left Text";
             
-                project.Save(OutDir + "WorkWithPageLegend_out.mpp", SaveFileFormat.MPP);
+                project.Save(OutDir + "WorkWithPageLegend_out.mpp", SaveFileFormat.Mpp);
                 // ExEnd:WorkWithPageLegend
             }
             catch (NotSupportedException ex)

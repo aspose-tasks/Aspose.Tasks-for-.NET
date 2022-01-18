@@ -59,7 +59,7 @@
                 table.ShowInMenu = true;
 
                 // lets save the updated table
-                project.Save(OutDir + "WorkWithTable_out.mpp", SaveFileFormat.MPP);
+                project.Save(OutDir + "WorkWithTable_out.mpp", SaveFileFormat.Mpp);
 
                 // ExEnd:WorkWithTableFields
             }

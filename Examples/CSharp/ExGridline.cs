@@ -21,7 +21,7 @@
             // ExFor: GridlineType
             // ExSummary: Shows how to work with gridlines while save in visual formats. 
             var project = new Project(DataDir + "CreateProject2.mpp");
-            var options = new ImageSaveOptions(SaveFileFormat.PNG);
+            var options = new ImageSaveOptions(SaveFileFormat.Png);
 
             var gridline = new Gridline
             {

@@ -63,7 +63,7 @@
                 // set a value indicating whether to underline hyperlinks.
                 project.DisplayOptions.UnderlineHyperlinks = true;
 
-                project.Save(OutDir + "WorkWithProjectDisplayOptions.mpp", SaveFileFormat.MPP);
+                project.Save(OutDir + "WorkWithProjectDisplayOptions.mpp", SaveFileFormat.Mpp);
 
                 // ExEnd:ProjectDisplayOptionsUsage
             }

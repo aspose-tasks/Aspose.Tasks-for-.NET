@@ -11,7 +11,6 @@
         {
             // ExStart
             // ExFor: SplitPart
-            // ExFor: SplitPart.Index
             // ExFor: SplitPart.Start
             // ExFor: SplitPart.Finish
             // ExSummary: Shows how to work with split parts of a splitted task.

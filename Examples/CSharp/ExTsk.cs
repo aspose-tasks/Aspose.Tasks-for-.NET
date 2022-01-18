@@ -341,16 +341,13 @@
         public void GetSetFinishSlack()
         {
             // ExStart
-            // ExFor: Tsk.FinishSlack
-            // ExSummary: Shows how to read/write Tsk.FinishSlack property.
+            // ExFor: Tsk.FinishSlackTimeSpan
+            // ExSummary: Shows how to read Tsk.FinishSlackTimeSpan property. The property is calculated, so usually there is no need to set it explicitly.
             var project = new Project();
 
             var task = project.RootTask.Children.Add("Task");
 
-            task.Set(Tsk.FinishSlack, 2);
-
-            Console.WriteLine("Finish Slack: " + task.Get(Tsk.FinishSlack));
-
+            Console.WriteLine("Finish Slack: " + task.Get(Tsk.FinishSlackTimeSpan));
             // ExEnd
         }
 
@@ -409,15 +406,13 @@
         public void GetSetFreeSlack()
         {
             // ExStart
-            // ExFor: Tsk.FreeSlack
-            // ExSummary: Shows how to read/write Tsk.FreeSlack property.
+            // ExFor: Tsk.FreeSlackTimeSpan
+            // ExSummary: Shows how to read Tsk.FreeSlackTimeSpan property. The property is calculated, so usually there is no need to set it explicitly.
             var project = new Project();
 
             var task = project.RootTask.Children.Add("Task");
 
-            task.Set(Tsk.FreeSlack, 2);
-
-            Console.WriteLine("Free Slack: " + task.Get(Tsk.FreeSlack));
+            Console.WriteLine("Free Slack: " + task.Get(Tsk.FreeSlackTimeSpan));
 
             // ExEnd
         }
@@ -1136,15 +1131,13 @@
         public void GetSetStartSlack()
         {
             // ExStart
-            // ExFor: Tsk.StartSlack
-            // ExSummary: Shows how to read/write Tsk.StartSlack property.
+            // ExFor: Tsk.StartSlackTimeSpan
+            // ExSummary: Shows how to read Tsk.StartSlackTimeSpan property. The property is calculated, so usually there is no need to set it explicitly.
             var project = new Project();
 
             var task = project.RootTask.Children.Add("Task");
 
-            task.Set(Tsk.StartSlack, 2);
-
-            Console.WriteLine("Start Slack: " + task.Get(Tsk.StartSlack));
+            Console.WriteLine("Start Slack: " + task.Get(Tsk.StartSlackTimeSpan));
 
             // ExEnd
         }
@@ -1204,16 +1197,13 @@
         public void GetSetTotalSlack()
         {
             // ExStart
-            // ExFor: Tsk.TotalSlack
-            // ExSummary: Shows how to read/write Tsk.TotalSlack property.
+            // ExFor: Tsk.TotalSlackTimeSpan
+            // ExSummary: Shows how to read Tsk.TotalSlackTimeSpan property. The property is calculated, so usually there is no need to set it explicitly.
             var project = new Project();
 
             var task = project.RootTask.Children.Add("Task");
 
-            task.Set(Tsk.TotalSlack, 2);
-
-            Console.WriteLine("Total Slack: " + task.Get(Tsk.TotalSlack));
-
+            Console.WriteLine("Total Slack: " + task.Get(Tsk.TotalSlackTimeSpan));
             // ExEnd
         }
 
@@ -1287,7 +1277,7 @@
             task2.Set(Tsk.ActualStart, new DateTime(2000, 2, 10, 8, 0, 0));
             task2.Set(Tsk.ActualFinish, new DateTime(2000, 2, 10, 17, 0, 0));
 
-            project.Save(OutDir + "EvaluationDateTimeLimitations_out.xml", SaveFileFormat.XML);
+            project.Save(OutDir + "EvaluationDateTimeLimitations_out.xml", SaveFileFormat.Xml);
 
             // ExEnd:DateTimeLimitations
         }
@@ -1461,7 +1451,7 @@
                 // Setting new subproject link
                 task.Set(Tsk.SubprojectName, DataDir + "subProject.mpp");
 
-                project.Save(OutDir + "CreateSubProjectTask_out.mpp", SaveFileFormat.MPP);
+                project.Save(OutDir + "CreateSubProjectTask_out.mpp", SaveFileFormat.Mpp);
 
                 // ExEnd:CreateSubProjectTask
             }
@@ -1623,7 +1613,7 @@
             task.Set(Tsk.Duration, project.GetDuration(24, TimeUnitType.Hour));
             task.Set(Tsk.ActualStart, new DateTime(2012, 8, 23, 8, 0, 0));
 
-            project.Save(OutDir + "AddTaskDuration_out.xml", SaveFileFormat.XML);
+            project.Save(OutDir + "AddTaskDuration_out.xml", SaveFileFormat.Xml);
 
             // ExEnd:AddTaskDuration        
         }

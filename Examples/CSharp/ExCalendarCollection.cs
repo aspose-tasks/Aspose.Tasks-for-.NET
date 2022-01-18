@@ -49,7 +49,7 @@
 
                 // add new calendar
                 project.Calendars.Add("New Calendar");
-                project.Save(OutDir + "ReplaceCalendarWithNewCalendar_out.mpp", SaveFileFormat.MPP);
+                project.Save(OutDir + "ReplaceCalendarWithNewCalendar_out.mpp", SaveFileFormat.Mpp);
 
                 // ExEnd:ReplaceCalendarWithNewCalendar
             }
@@ -125,7 +125,7 @@
             var calendar = project.Calendars.Add("New Standard Calendar");
             Calendar.MakeStandardCalendar(calendar);
 
-            project.Save(OutDir + "MakeAStandardCalendar_out.xml", SaveFileFormat.XML);
+            project.Save(OutDir + "MakeAStandardCalendar_out.xml", SaveFileFormat.Xml);
 
             // ExEnd:MakeAStandardCalendar
         }

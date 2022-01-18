@@ -39,7 +39,7 @@
 
                 var project = new Project(settings);
 
-                project.Save(OutDir + "ImportProjectDataFromDatabase_out.mpp", SaveFileFormat.MPP);
+                project.Save(OutDir + "ImportProjectDataFromDatabase_out.mpp", SaveFileFormat.Mpp);
             }
             catch (Exception ex)
             {

@@ -41,7 +41,7 @@
 
             project.Recalculate();
 
-            project.Save(OutDir + @"AddWBSCodes_out.xml", SaveFileFormat.XML);
+            project.Save(OutDir + @"AddWBSCodes_out.xml", SaveFileFormat.Xml);
 
             // ExEnd:AddWbsCodeDefinition
         }

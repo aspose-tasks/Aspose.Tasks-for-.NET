@@ -860,7 +860,7 @@
             Console.WriteLine("Currency Symbol: " + project.Get(Prj.CurrencySymbol));
             Console.WriteLine("Currency Symbol Position: " + project.Get(Prj.CurrencySymbolPosition));
 
-            project.Save(OutDir + "WriteCurrencyProperties_out.xml", SaveFileFormat.XML);
+            project.Save(OutDir + "WriteCurrencyProperties_out.xml", SaveFileFormat.Xml);
 
             // ExEnd:ReadWriteCurrencyProperties
         }

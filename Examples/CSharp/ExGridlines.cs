@@ -43,7 +43,7 @@
                 // set the gridline type
                 gridlines.Type = GridlineType.GanttRow;
             
-                project.Save(OutDir + "WorkWithGridlines_out.mpp", SaveFileFormat.MPP);
+                project.Save(OutDir + "WorkWithGridlines_out.mpp", SaveFileFormat.Mpp);
                 // ExEnd
             }
             catch (NotSupportedException ex)

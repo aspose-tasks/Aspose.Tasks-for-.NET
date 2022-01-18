@@ -195,7 +195,7 @@
 
             // save project in the one of available formats
             // here we are saving it in Microsoft Project XML file format.
-            project.Save(OutDir + "ProjectCreation_out.xml", SaveFileFormat.XML);
+            project.Save(OutDir + "ProjectCreation_out.xml", SaveFileFormat.Xml);
 
             // ExEnd:ProjectCreation
         }
@@ -218,7 +218,7 @@
                 project.ResourceAssignments.Add(task, resource);
 
                 // ExEnd:CreateResourceAssignments
-                project.Save(OutDir + "CreateResourceAssignments_out.pdf", SaveFileFormat.PDF);
+                project.Save(OutDir + "CreateResourceAssignments_out.pdf", SaveFileFormat.Pdf);
             }
             catch (NotSupportedException ex)
             {
@@ -446,7 +446,7 @@
                 var task = project.RootTask.Children.Add("Task 1");
                 task.ExtendedAttributes.Add(attribute);
 
-                project.Save(OutDir + "CreateExtendedAttributes_out.mpp", SaveFileFormat.MPP);
+                project.Save(OutDir + "CreateExtendedAttributes_out.mpp", SaveFileFormat.Mpp);
 
                 // ExEnd:CreateExtendedAttributes
             }
@@ -700,7 +700,7 @@
         }
 
         [Test]
-        public void CreateEmptyProjectSaveMPP()
+        public void CreateEmptyProjectSaveMpp()
         {
             try
             {
@@ -711,7 +711,7 @@
                 var project = new Project();
 
                 // The project will be saved into MPP by using internal MPP template.
-                project.Save(OutDir + "CreateEmptyProjectSaveMPP_out.mpp", SaveFileFormat.MPP);
+                project.Save(OutDir + "CreateEmptyProjectSaveMPP_out.mpp", SaveFileFormat.Mpp);
 
                 // ExEnd:CreateEmptyProjectSaveMPP
             }
@@ -734,7 +734,7 @@
                 using (Stream stream = new FileStream(DataDir + "Project.xml", FileMode.Open))
                 {
                     var project = new Project(stream);
-                    project.Save(OutDir + "ReadProjectFileFromStream_out.xml", SaveFileFormat.XML);
+                    project.Save(OutDir + "ReadProjectFileFromStream_out.xml", SaveFileFormat.Xml);
                 }
 
                 // ExEnd:ReadProjectFileFromStream
@@ -754,7 +754,7 @@
             // ExFor: Project.#ctor(String)
             // ExSummary: Shows how to read a MPP file.
             var project = new Project(DataDir + "ReadProjectFiles.mpp");
-            project.Save(OutDir + "ReadProjectFiles_out.mpp", SaveFileFormat.XML);
+            project.Save(OutDir + "ReadProjectFiles_out.mpp", SaveFileFormat.Xml);
 
             // ExEnd:ReadProjectFiles
         }
@@ -769,7 +769,7 @@
             {
                 var project = new Project(streamReader);
                 Console.WriteLine(project.RootTask.Children.ToList()[0].Get(Tsk.Name));
-                project.Save(OutDir + "WorkingWithEncodings_out.mpx", SaveFileFormat.MPX);
+                project.Save(OutDir + "WorkingWithEncodings_out.mpx", SaveFileFormat.Mpx);
             }
 
             // ExEnd:WorkingWithEncodings
@@ -785,7 +785,7 @@
 
             using (var stream = new FileStream(OutDir + "EmptyProjectSaveStream_out.xml", FileMode.Create, FileAccess.Write))
             {
-                var options = new ImageSaveOptions(SaveFileFormat.PNG);
+                var options = new ImageSaveOptions(SaveFileFormat.Png);
 
                 // by using of ImageSaveOptions we save the project into image format
                 project.Save(stream, options);
@@ -1246,23 +1246,23 @@
             task10.Set(Tsk.IsManual, true);
 
             // Save project before and after updating work as completed 
-            project.Save(OutDir + "RescheduleUncompletedWork_not updated_out.xml", SaveFileFormat.XML);
+            project.Save(OutDir + "RescheduleUncompletedWork_not updated_out.xml", SaveFileFormat.Xml);
 
             // Save project after updating project work as complete only for specified tasks
             project.UpdateProjectWorkAsComplete(new DateTime(2014, 1, 28, 17, 0, 0), false, new List<Task> { task10 });
-            project.Save(OutDir + "RescheduleUncompletedWork_specific_updated_out.xml", SaveFileFormat.XML);
+            project.Save(OutDir + "RescheduleUncompletedWork_specific_updated_out.xml", SaveFileFormat.Xml);
 
             // Save project after updating all project work as complete
             project.UpdateProjectWorkAsComplete(new DateTime(2014, 1, 28, 17, 0, 0), false);
-            project.Save(OutDir + "RescheduleUncompletedWork_updated_out.xml", SaveFileFormat.XML);
+            project.Save(OutDir + "RescheduleUncompletedWork_updated_out.xml", SaveFileFormat.Xml);
 
             // Save project after rescheduling uncompleted work only for specified tasks
             project.RescheduleUncompletedWorkToStartAfter(new DateTime(2014, 2, 8, 8, 0, 0), new List<Task> { task10 });
-            project.Save(OutDir + "RescheduleUncompletedWork_specific_rescheduled_out.xml", SaveFileFormat.XML);
+            project.Save(OutDir + "RescheduleUncompletedWork_specific_rescheduled_out.xml", SaveFileFormat.Xml);
 
             // Save project after rescheduling uncompleted work
             project.RescheduleUncompletedWorkToStartAfter(new DateTime(2014, 2, 7, 8, 0, 0));
-            project.Save(OutDir + "RescheduleUncompletedWork_rescheduled_out.xml", SaveFileFormat.XML);
+            project.Save(OutDir + "RescheduleUncompletedWork_rescheduled_out.xml", SaveFileFormat.Xml);
 
             // ExEnd:UpdateProjectAndRescheduleUncompletedWork
         }
@@ -1322,7 +1322,7 @@
 
             project.Recalculate();
 
-            project.Save(OutDir + @"AddWBSCodes_out.xml", SaveFileFormat.XML);
+            project.Save(OutDir + @"AddWBSCodes_out.xml", SaveFileFormat.Xml);
 
             // ExEnd:AddWBSCodes
         }
@@ -1423,7 +1423,7 @@
             view.DisplayDetailsHeaderColumn = false;
             view.RepeatDetailsHeaderOnAllRows = false;
             view.AlignDetailsData = StringAlignment.Near;
-            project.Save(OutDir + "task usage1_out.pdf", SaveFileFormat.PDF);
+            project.Save(OutDir + "task usage1_out.pdf", SaveFileFormat.Pdf);
 
             // Display details header column
             view.DisplayDetailsHeaderColumn = true;
@@ -1431,7 +1431,7 @@
             // Repeat details header on all assignments rows
             view.RepeatDetailsHeaderOnAllRows = true;
             view.AlignDetailsData = StringAlignment.Far;
-            project.Save(OutDir + "task usage2_out.pdf", SaveFileFormat.PDF);
+            project.Save(OutDir + "task usage2_out.pdf", SaveFileFormat.Pdf);
 
             // ExEnd:RenderTaskUsageViewWithDetails
         }
@@ -1506,7 +1506,7 @@
             // ExSummary: Shows how to set task's attributes.
             var project = new Project();
             project.Set(Prj.NewTaskStartDate, TaskStartDateType.CurrentDate);
-            project.Save(OutDir + "SetAttributesForNewTasks_out.xml", SaveFileFormat.XML);
+            project.Save(OutDir + "SetAttributesForNewTasks_out.xml", SaveFileFormat.Xml);
 
             // ExEnd:SetAttributesForNewTasks
         }
@@ -1965,7 +1965,7 @@
             using (var stream = new FileStream(OutDir + "EmptyProjectSaveStream_out.xml", FileMode.Create, FileAccess.Write))
             {
                 // Write the stream into XML format
-                project.Save(stream, SaveFileFormat.XML);
+                project.Save(stream, SaveFileFormat.Xml);
             }
 
             // ExEnd:CreateEmptyProjectToSaveToStream
@@ -2021,7 +2021,7 @@
             task.Set(Tsk.Duration, project.GetDuration(24, TimeUnitType.Hour));
             task.Set(Tsk.ActualStart, new DateTime(2012, 8, 23, 8, 0, 0));
 
-            project.Save(OutDir + "AddNewTask_out.xml", SaveFileFormat.XML);
+            project.Save(OutDir + "AddNewTask_out.xml", SaveFileFormat.Xml);
 
             // ExEnd:AddNewTask        
         }
@@ -2095,7 +2095,7 @@
                 Console.WriteLine(rsc);
             }
 
-            project.Save(OutDir + "CreateResources_out.xml", SaveFileFormat.XML);
+            project.Save(OutDir + "CreateResources_out.xml", SaveFileFormat.Xml);
         }
 
         private class RscNameComparer : IComparer<Resource>

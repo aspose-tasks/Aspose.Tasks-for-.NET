@@ -25,7 +25,7 @@
                 ganttChart.BottomTimescaleTier.Unit = TimescaleUnit.Minutes;
                 ganttChart.BottomTimescaleTier.Count = 1;
                 
-                var options = new ImageSaveOptions(SaveFileFormat.PNG);
+                var options = new ImageSaveOptions(SaveFileFormat.Png);
                 options.Timescale = Timescale.DefinedInView;
                 
                 project.Save(OutDir + "SaveToStreamWithOptionsAndCatchException_out.mpp", options);

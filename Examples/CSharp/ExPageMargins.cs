@@ -34,7 +34,7 @@
                 margins.Bottom = 10d;
                 margins.Borders = Border.OutsidePages;
 
-                project.Save(OutDir + "WorkWithPageMargins_out.mpp", SaveFileFormat.MPP);
+                project.Save(OutDir + "WorkWithPageMargins_out.mpp", SaveFileFormat.Mpp);
                 // ExEnd:WorkWithPageMargins
             }
             catch (NotSupportedException ex)

@@ -256,7 +256,7 @@
 
                 project.Set(Prj.Calendar, calendar);
 
-                project.Save(OutDir + "WriteUpdatedCalendarDataToMPP_out.mpp", SaveFileFormat.MPP);
+                project.Save(OutDir + "WriteUpdatedCalendarDataToMPP_out.mpp", SaveFileFormat.Mpp);
 
                 // ExEnd:WriteUpdatedCalendarDataToMPP
             }

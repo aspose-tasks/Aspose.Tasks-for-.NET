@@ -49,7 +49,7 @@
                 Console.WriteLine("WBS Mask #{0}: Level->{1}", ++i, cm.Level);
             }
 
-            project.Save(OutDir + @"AddWBSCodes_out.xml", SaveFileFormat.XML);
+            project.Save(OutDir + @"AddWBSCodes_out.xml", SaveFileFormat.Xml);
 
             // ExEnd:CreateWbsCodeMask
         }

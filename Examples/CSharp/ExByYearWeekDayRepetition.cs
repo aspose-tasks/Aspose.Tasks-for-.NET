@@ -39,7 +39,7 @@
                                      };
                 project.RootTask.Children.Add(parameters);
 
-                project.Save(OutDir + "CanAddRecurringTask_Years_YearWeekDay_EndByRecurrenceRange_Test.mpp", SaveFileFormat.MPP);
+                project.Save(OutDir + "CanAddRecurringTask_Years_YearWeekDay_EndByRecurrenceRange_Test.mpp", SaveFileFormat.Mpp);
 
                 // ExEnd
             }

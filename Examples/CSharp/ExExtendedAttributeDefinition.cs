@@ -313,7 +313,7 @@
 
                 // Set Task Deadline and save project
                 task.Set(Tsk.Deadline, new DateTime(2015, 3, 20, 17, 0, 0));
-                project.Save(OutDir + "UsingTasksAndResourceFields_out.mpp", SaveFileFormat.MPP);
+                project.Save(OutDir + "UsingTasksAndResourceFields_out.mpp", SaveFileFormat.Mpp);
             }
             catch (NotSupportedException ex)
             {
@@ -366,7 +366,7 @@
                 // Set task cost            
                 task.Set(Tsk.Cost, 100);
 
-                project.Save(OutDir + "WriteFormulasInExtendedAttributesToMPP_out.mpp", SaveFileFormat.MPP);
+                project.Save(OutDir + "WriteFormulasInExtendedAttributesToMPP_out.mpp", SaveFileFormat.Mpp);
 
                 // ExEnd:WriteFormulasInExtendedAttributesToMpp
             }
@@ -479,7 +479,7 @@
                     assignment.ExtendedAttributes.Add(value);
                 }
 
-                project.Save(OutDir + "AddExtendedAttributesToResourceAssignment_out.mpp", SaveFileFormat.MPP);
+                project.Save(OutDir + "AddExtendedAttributesToResourceAssignment_out.mpp", SaveFileFormat.Mpp);
 
                 // ExEnd:AddExtendedAttributesToResourceAssignment
             }
@@ -518,7 +518,7 @@
                 var task = project.RootTask.Children.Add("Task 1");
                 task.ExtendedAttributes.Add(attribute);
 
-                project.Save(OutDir + "CreateExtendedAttributes_out.mpp", SaveFileFormat.MPP);
+                project.Save(OutDir + "CreateExtendedAttributes_out.mpp", SaveFileFormat.Mpp);
 
                 // ExEnd:CreateExtendedAttributes
             }
@@ -705,7 +705,7 @@
                 // Add the Extended Attribute to task
                 task.ExtendedAttributes.Add(taskExtendedAttributeText1);
 
-                project.Save(OutDir + "PlainTextExtendedAttribute_out.mpp", SaveFileFormat.MPP);
+                project.Save(OutDir + "PlainTextExtendedAttribute_out.mpp", SaveFileFormat.Mpp);
 
                 var project4 = new Project(DataDir + "Blank2010.mpp");
 
@@ -731,7 +731,7 @@
                 // Add the Extended Attribute to task
                 task2.ExtendedAttributes.Add(taskExtendedAttributeText2);
 
-                project4.Save(OutDir + "TextExtendedAttributeWithLookup_out.mpp", SaveFileFormat.MPP);
+                project4.Save(OutDir + "TextExtendedAttributeWithLookup_out.mpp", SaveFileFormat.Mpp);
 
                 var project2 = new Project(DataDir + "Blank2010.mpp");
 
@@ -764,7 +764,7 @@
                 // Add the Extended Attribute to task
                 task3.ExtendedAttributes.Add(taskExtendedAttributeDuration2);
 
-                project2.Save(OutDir + "DurationExtendedAttributeWithLookup_out.mpp", SaveFileFormat.MPP);
+                project2.Save(OutDir + "DurationExtendedAttributeWithLookup_out.mpp", SaveFileFormat.Mpp);
 
                 var project3 = new Project(DataDir + "Blank2010.mpp");
 
@@ -795,7 +795,7 @@
                 // Add the Extended Attribute to task
                 task4.ExtendedAttributes.Add(taskExtendedAttributeFinish2);
 
-                project3.Save(OutDir + "FinishExtendedAttributeWithLookup_out.mpp", SaveFileFormat.MPP);
+                project3.Save(OutDir + "FinishExtendedAttributeWithLookup_out.mpp", SaveFileFormat.Mpp);
 
                 // ExEnd:AddTaskExtendedAttributes
             }

@@ -58,7 +58,7 @@
             
             view.ProgressLines.RecurringInterval = newInterval;
             
-            project.Save(OutDir + "WorkWithRecurringInterval_out.pdf", SaveFileFormat.PDF);
+            project.Save(OutDir + "WorkWithRecurringInterval_out.pdf", SaveFileFormat.Pdf);
             // ExEnd
         }
         

@@ -28,7 +28,7 @@
             task.Set(Tsk.Duration, project.GetDuration(24, TimeUnitType.Hour));
             task.Set(Tsk.ActualStart, new DateTime(2012, 8, 23, 8, 0, 0));
 
-            project.Save(OutDir + "CreateNewTask_out.xml", SaveFileFormat.XML);
+            project.Save(OutDir + "CreateNewTask_out.xml", SaveFileFormat.Xml);
 
             // ExEnd:CreateNewTask        
         }
@@ -72,7 +72,7 @@
                 // OR
                 // Move task to the end of the collection
                 // task.MoveToSibling(-1);
-                project.Save(OutDir + "MoveTaskUnderSameParent_out.mpp", SaveFileFormat.MPP);
+                project.Save(OutDir + "MoveTaskUnderSameParent_out.mpp", SaveFileFormat.Mpp);
 
                 // ExEnd:MoveTaskUnderSameParent
             }
@@ -103,7 +103,7 @@
                 // OR
                 // Move task to the end of the collection
                 // task.MoveToSibling(null);
-                project.Save(OutDir + "MoveTaskUnderSameParent_out.mpp", SaveFileFormat.MPP);
+                project.Save(OutDir + "MoveTaskUnderSameParent_out.mpp", SaveFileFormat.Mpp);
 
                 // ExEnd:MoveTaskUnderSameParent2
             }
@@ -303,7 +303,7 @@
                     }
                 }
 
-                project.Save(OutDir + "ReadWriteTaskExtendedAttributes_out.mpp", SaveFileFormat.MPP);
+                project.Save(OutDir + "ReadWriteTaskExtendedAttributes_out.mpp", SaveFileFormat.Mpp);
 
                 // ExEnd:ReadWriteTaskExtendedAttributes
             }
@@ -695,7 +695,7 @@
                 // Add task, sub task and save project
                 var task = project.RootTask.Children.Add("Summary1");
                 task.Children.Add("Subtask1");
-                project.Save(OutDir + "CreateTasks_out.xml", SaveFileFormat.XML);
+                project.Save(OutDir + "CreateTasks_out.xml", SaveFileFormat.Xml);
 
                 // ExEnd:CreateTasks
             }

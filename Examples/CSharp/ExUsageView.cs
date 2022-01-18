@@ -28,7 +28,7 @@
             view.RepeatDetailsHeaderOnAllRows = false;
             view.DisplayShortDetailHeaderNames = false;
             view.AlignDetailsData = StringAlignment.Near;
-            project.Save(OutDir + "task usage1_out.pdf", SaveFileFormat.PDF);
+            project.Save(OutDir + "task usage1_out.pdf", SaveFileFormat.Pdf);
 
             // display details header column
             view.DisplayDetailsHeaderColumn = true;
@@ -36,7 +36,7 @@
             // repeat details header on all assignments rows
             view.RepeatDetailsHeaderOnAllRows = true;
             view.AlignDetailsData = StringAlignment.Far;
-            project.Save(OutDir + "task usage2_out.pdf", SaveFileFormat.PDF);
+            project.Save(OutDir + "task usage2_out.pdf", SaveFileFormat.Pdf);
 
             // ExEnd:RenderTaskUsageViewWithDetails
         }

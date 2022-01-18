@@ -115,7 +115,7 @@
                 Console.WriteLine("Show Date: " + progressLines.ShowDate);
                 Console.WriteLine();
                 
-                project.Save(OutDir + "WorkWithProgressLines_out.mpp", SaveFileFormat.MPP);
+                project.Save(OutDir + "WorkWithProgressLines_out.mpp", SaveFileFormat.Mpp);
                 // ExEnd
             }
             catch (NotSupportedException ex)

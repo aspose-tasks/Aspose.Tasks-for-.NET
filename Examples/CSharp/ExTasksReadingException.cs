@@ -20,7 +20,7 @@
             try
             {
                 var project = new Project(DataDir + "project.mpp");
-                project.Save(OutDir + "HandleExceptions_out.mpp", SaveFileFormat.MPP);
+                project.Save(OutDir + "HandleExceptions_out.mpp", SaveFileFormat.Mpp);
             }
             catch (TasksReadingException ex)
             {

@@ -213,7 +213,7 @@
             // set a percentage to reduce or enlarge the spacing between units on the timescale tier
             view.TimescaleSizePercentage = 10;
 
-            project.Save(OutDir + "WorkWithGanttChartViews_out.pdf", SaveFileFormat.PDF);
+            project.Save(OutDir + "WorkWithGanttChartViews_out.pdf", SaveFileFormat.Pdf);
 
             // ExEnd
         }
