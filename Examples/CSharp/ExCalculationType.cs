@@ -18,9 +18,9 @@
             task.Set(Tsk.Start, new DateTime(2020, 4, 16, 8, 0, 0));
             task.Set(Tsk.Duration, project.GetDuration(1, TimeUnitType.Day));
 
-            // create attribute definition with 'Calculation' type 
+            // create attribute definition with 'Formula' calculation type 
             var calculation = ExtendedAttributeDefinition.CreateTaskDefinition(ExtendedAttributeTask.Date5, null);
-            calculation.CalculationType = CalculationType.Calculation;
+            calculation.CalculationType = CalculationType.Formula;
             calculation.Formula = "[stARt]";
             project.ExtendedAttributes.Add(calculation);
 
