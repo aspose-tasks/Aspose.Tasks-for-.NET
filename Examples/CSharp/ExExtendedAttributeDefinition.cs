@@ -868,7 +868,6 @@
             // ExFor: ExtendedAttributeDefinition.FieldId
             // ExFor: ExtendedAttributeDefinition.AppendNewValues
             // ExFor: ExtendedAttributeDefinition.AutoRollDown
-            // ExFor: ExtendedAttributeDefinition.CalculationType
             // ExFor: ExtendedAttributeDefinition.DefaultGuid
             // ExFor: ExtendedAttributeDefinition.ElementType
             // ExFor: ExtendedAttributeDefinition.FieldName
@@ -878,10 +877,8 @@
             // ExFor: ExtendedAttributeDefinition.ValuelistSortOrder
             // ExFor: ExtendedAttributeDefinition.UserDef
             // ExFor: ExtendedAttributeDefinition.Default
-            // ExFor: ExtendedAttributeDefinition.RollupType
             // ExFor: ExtendedAttributeDefinition.ParentProject
             // ExFor: ExtendedAttributeDefinition.ValueList
-            // ExFor: RollupType
             // ExSummary: Shows how to read extended attribute definition common information.
             var project = new Project(DataDir + "MultipleOutlineValues2016.mpp");
 

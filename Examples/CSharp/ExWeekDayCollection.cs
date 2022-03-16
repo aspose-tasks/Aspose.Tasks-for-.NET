@@ -57,8 +57,8 @@
                 Console.WriteLine(day.DayType);
                 foreach (var workingTime in day.WorkingTimes)
                 {
-                    Console.WriteLine("From: " + workingTime.FromTime);
-                    Console.WriteLine("To: " + workingTime.ToTime);
+                    Console.WriteLine("From: " + workingTime.From);
+                    Console.WriteLine("To: " + workingTime.To);
                     Console.WriteLine();
                 }
             }
@@ -79,8 +79,8 @@
                 Console.WriteLine(day.DayType);
                 foreach (var workingTime in day.WorkingTimes)
                 {
-                    Console.WriteLine("From: " + workingTime.FromTime);
-                    Console.WriteLine("To: " + workingTime.ToTime);
+                    Console.WriteLine("From: " + workingTime.From);
+                    Console.WriteLine("To: " + workingTime.To);
                     Console.WriteLine();
                 }
             }

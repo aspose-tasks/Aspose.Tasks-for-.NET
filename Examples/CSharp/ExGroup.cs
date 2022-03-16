@@ -47,7 +47,7 @@
                     Console.WriteLine("Parent Group is equal to task Group.");
                 }
 
-                Console.WriteLine("Font Name: " + criterion.Font.Name);
+                Console.WriteLine("Font Name: " + criterion.Font.FontFamily);
                 Console.WriteLine("Font Size: " + criterion.Font.Size);
                 Console.WriteLine("Font Style: " + criterion.Font.Style);
                 Console.WriteLine("Ascending/Descending: " + criterion.Ascending);

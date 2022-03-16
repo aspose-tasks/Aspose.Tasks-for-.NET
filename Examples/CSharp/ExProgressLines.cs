@@ -62,7 +62,7 @@
                 // set a value indicating whether to display progress lines for baseline plan or actual.
                 progressLines.IsBaselinePlan = false;
                 // set the font used for progress line label.
-                progressLines.Font = new Font(new FontFamily("Arial"), 10);
+                progressLines.Font = new FontDescriptor("Arial", 10);
                 // set the line color for current progress line.
                 progressLines.LineColor = Color.Aquamarine;
                 // set the line pattern of current progress line.

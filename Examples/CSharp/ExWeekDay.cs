@@ -155,14 +155,8 @@
 
             // Set friday as short working day
 
-            // Sets working time. Only time part of DateTime is important
-            var workingTime = new WorkingTime();
-            workingTime.FromTime = new DateTime(1, 1, 1, 9, 0, 0, 0);
-            workingTime.ToTime = new DateTime(1, 1, 1, 12, 0, 0, 0);
-            var workingTime2 = new WorkingTime();
-            workingTime2.FromTime = new DateTime(1, 1, 1, 13, 0, 0, 0);
-            workingTime2.ToTime = new DateTime(1, 1, 1, 16, 0, 0, 0);
-            var workingTimes = new List<WorkingTime> { workingTime, workingTime2 };
+            // Sets working time. 
+            var workingTimes = new List<WorkingTime> { new WorkingTime(9, 12), new WorkingTime(13, 16) };
             
             // there is a way to convert <see cref="DayOfWeek" /> to <see cref="Aspose.Tasks.DayType" />.
             var dayType = WeekDay.CastToDayType(DayOfWeek.Friday);

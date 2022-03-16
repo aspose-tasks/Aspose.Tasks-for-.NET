@@ -21,12 +21,11 @@
                 PresentationFormat = PresentationFormat.ResourceSheet
             };
 
-            var style = new TextStyle
+            var style = new TextStyle(FontStyles.Italic | FontStyles.Bold)
             {
-                Color = Color.OrangeRed,
-                FontStyle = FontStyle.Bold
+                Color = Color.OrangeRed
             };
-            style.FontStyle |= FontStyle.Italic;
+
             style.ItemType = TextItemType.OverallocatedResources;
 
             options.TextStyles = new List<TextStyle>

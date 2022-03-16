@@ -56,8 +56,8 @@
                     // You can further traverse through working times and display these
                     foreach (var workingTime in day.WorkingTimes)
                     {
-                        Console.WriteLine(workingTime.FromTime);
-                        Console.WriteLine(workingTime.ToTime);
+                        Console.WriteLine(workingTime.From);
+                        Console.WriteLine(workingTime.To);
                     }
                 }
             }
@@ -197,12 +197,8 @@
             var weekDay = new WeekDay(DayType.Friday);
 
             // Sets working time. Only time part of DateTime is important
-            var workingTime = new WorkingTime();
-            workingTime.FromTime = new DateTime(1, 1, 1, 9, 0, 0, 0);
-            workingTime.ToTime = new DateTime(1, 1, 1, 12, 0, 0, 0);
-            var workingTime2 = new WorkingTime();
-            workingTime2.FromTime = new DateTime(1, 1, 1, 13, 0, 0, 0);
-            workingTime2.ToTime = new DateTime(1, 1, 1, 16, 0, 0, 0);
+            var workingTime = new WorkingTime(9, 12);
+            var workingTime2 = new WorkingTime(13, 16);
             weekDay.WorkingTimes.Add(workingTime);
             weekDay.WorkingTimes.Add(workingTime2);
             weekDay.DayWorking = true;
@@ -213,7 +209,7 @@
         }
 
         [Test]
-        public void WriteUpdatedCalendarDataToMPP()
+        public void WriteUpdatedCalendarDataToMpp()
         {
             try
             {
@@ -231,21 +227,9 @@
                 exception.ToDate = DateTime.Now.AddDays(2);
                 exception.DayWorking = true;
 
-                var wt1 = new WorkingTime();
-                wt1.FromTime = new DateTime(10, 1, 1, 9, 0, 0);
-                wt1.ToTime = new DateTime(10, 1, 1, 13, 0, 0);
-
-                var wt2 = new WorkingTime();
-                wt2.FromTime = new DateTime(10, 1, 1, 14, 0, 0);
-                wt2.ToTime = new DateTime(10, 1, 1, 19, 0, 0);
-
-                var wt3 = new WorkingTime();
-                wt3.FromTime = new DateTime(10, 1, 1, 20, 0, 0);
-                wt3.ToTime = new DateTime(10, 1, 1, 21, 0, 0);
-
-                exception.WorkingTimes.Add(wt1);
-                exception.WorkingTimes.Add(wt2);
-                exception.WorkingTimes.Add(wt3);
+                exception.WorkingTimes.Add(new WorkingTime(9, 13));
+                exception.WorkingTimes.Add(new WorkingTime(14, 19));
+                exception.WorkingTimes.Add(new WorkingTime(20, 21));
                 calendar.Exceptions.Add(exception);
 
                 var exception2 = new CalendarException();
@@ -598,8 +582,8 @@
             // 16 hours will be printed
             foreach (var workingTime in workingTimes)
             {
-                Console.WriteLine("From: " + workingTime.FromTime);
-                Console.WriteLine("To: " + workingTime.ToTime);
+                Console.WriteLine("From: " + workingTime.From);
+                Console.WriteLine("To: " + workingTime.To);
             }
 
             // ExEnd
@@ -673,8 +657,8 @@
             // show working hours
             foreach (var wh in workingHours)
             {
-                Console.WriteLine("From: " + wh.FromTime);
-                Console.WriteLine("To: " + wh.ToTime);
+                Console.WriteLine("From: " + wh.From);
+                Console.WriteLine("To: " + wh.To);
             }
 
             // ExEnd
@@ -696,8 +680,8 @@
             // show working hours
             foreach (var wh in workingHours)
             {
-                Console.WriteLine("From: " + wh.FromTime);
-                Console.WriteLine("To: " + wh.ToTime);
+                Console.WriteLine("From: " + wh.From);
+                Console.WriteLine("To: " + wh.To);
             }
 
             // ExEnd
@@ -718,8 +702,8 @@
             // show working hours
             foreach (var wh in workingHours)
             {
-                Console.WriteLine("From: " + wh.FromTime);
-                Console.WriteLine("To: " + wh.ToTime);
+                Console.WriteLine("From: " + wh.From);
+                Console.WriteLine("To: " + wh.To);
             }
 
             // ExEnd

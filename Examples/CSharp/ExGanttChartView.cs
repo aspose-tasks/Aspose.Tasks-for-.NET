@@ -86,7 +86,10 @@
             view.TableTextStyles.Clear();
             view.TableTextStyles.Add(new TableTextStyle(1) { Color = Color.Red, Field = Field.TaskName });
             view.TableTextStyles.Add(new TableTextStyle(1) { Color = Color.Gray, Field = Field.TaskDurationText });
-            view.TableTextStyles.Add(new TableTextStyle(2) { Color = Color.Blue, FontStyle = FontStyle.Bold | FontStyle.Italic | FontStyle.Underline });
+            view.TableTextStyles.Add(new TableTextStyle(2, FontStyles.Bold | FontStyles.Italic | FontStyles.Underline)
+            {
+                Color = Color.Blue
+            });
 
             // ExEnd:SupportForTextStyle
         }
@@ -233,7 +236,7 @@
             foreach (var style in view.TextStyles)
             {
                 Console.WriteLine("Style Item Type: " + style.ItemType);
-                Console.WriteLine("Style Item Type: " + style.FontFamily);
+                Console.WriteLine("Style Font name: " + style.Font.FontFamily);
                 Console.WriteLine();
             }
 

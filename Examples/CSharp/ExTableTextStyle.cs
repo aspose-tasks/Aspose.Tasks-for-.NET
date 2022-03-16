@@ -1,7 +1,6 @@
 ﻿namespace Aspose.Tasks.Examples.CSharp
 {
     using System;
-    using System.Drawing;
     using NUnit.Framework;
     using Saving;
     using Visualization;
@@ -31,19 +30,14 @@
                 var style1 = new TableTextStyle(1);
                 // set a field the style is to be applied to.
                 style1.Field = Field.TaskName;
-                // set <see cref="P:Aspose.Tasks.Visualization.TextStyle.FontStyle" /> of the text style font.
-                style1.FontStyle = FontStyle.Bold | FontStyle.Italic;
-                // set <see cref="P:Aspose.Tasks.Visualization.TextStyle.FontFamily" /> of the text style.
-                style1.FontFamily = new FontFamily("Impact");
+                // set <see cref="P:Aspose.Tasks.Visualization.TextStyle.Font" /> of the text style.
+                style1.Font = new FontDescriptor("Impact", 12F, FontStyles.Bold | FontStyles.Italic);
                 // set size in points of the text style font.
-                style1.SizeInPoints = 12;
 
                 // set second task duration text style
                 var style2 = new TableTextStyle(2);
                 style2.Field = Field.TaskDurationText;
-                style2.FontStyle = FontStyle.Underline;
-                style2.FontFamily = new FontFamily("Impact");
-                style2.SizeInPoints = 16;
+                style2.Font = new FontDescriptor("Impact", 16F, FontStyles.Underline);
             
                 view.TableTextStyles.Add(style1);
                 view.TableTextStyles.Add(style2);

@@ -1456,7 +1456,7 @@
             Console.WriteLine("Resource Criterion Pattern: " + resCriterion.Pattern);
 
             Console.WriteLine("\n*********** Retrieving Resource Criterion's Font Information ***********");
-            Console.WriteLine("Resource Font Name: " + resCriterion.Font.Name);
+            Console.WriteLine("Resource Font Name: " + resCriterion.Font.FontFamily);
             Console.WriteLine("Resource Font Size: " + resCriterion.Font.Size);
             Console.WriteLine("Resource Font Style: " + resCriterion.Font.Style);
             Console.WriteLine("Resource Ascending/Descending: " + resCriterion.Ascending);
@@ -1489,7 +1489,7 @@
             }
 
             Console.WriteLine("\n*********** Retrieving Criterion's Font Information ***********");
-            Console.WriteLine("Font Name: " + taskCriterion.Font.Name);
+            Console.WriteLine("Font Name: " + taskCriterion.Font.FontFamily);
             Console.WriteLine("Font Size: " + taskCriterion.Font.Size);
             Console.WriteLine("Font Style: " + taskCriterion.Font.Style);
             Console.WriteLine("Ascending/Descending: " + taskCriterion.Ascending);

@@ -33,13 +33,8 @@
             exception.DayWorking = true;
             exception.Name = "Exception 1";
 
-            var wt1 = new WorkingTime();
-            wt1.FromTime = new DateTime(10, 1, 1, 9, 0, 0);
-            wt1.ToTime = new DateTime(10, 1, 1, 13, 0, 0);
-
-            var wt2 = new WorkingTime();
-            wt2.FromTime = new DateTime(10, 1, 1, 14, 0, 0);
-            wt2.ToTime = new DateTime(10, 1, 1, 19, 0, 0);
+            var wt1 = new WorkingTime(9, 13);
+            var wt2 = new WorkingTime(14, 19);
 
             exception.WorkingTimes.Add(wt1);
             exception.WorkingTimes.Add(wt2);

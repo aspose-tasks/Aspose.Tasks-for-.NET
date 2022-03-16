@@ -53,8 +53,8 @@
                     // You can further traverse through working times and display these
                     foreach (var workingTime in day.WorkingTimes)
                     {
-                        Console.WriteLine(workingTime.FromTime);
-                        Console.WriteLine(workingTime.ToTime);
+                        Console.WriteLine(workingTime.From);
+                        Console.WriteLine(workingTime.To);
                     }
                 }
 

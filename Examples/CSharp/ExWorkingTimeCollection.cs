@@ -29,8 +29,8 @@
 
             var saturdayWorkingTimes = new List<WorkingTime>
             {
-                new WorkingTime(new DateTime(2020, 4, 13, 8, 0, 0), new DateTime(2020, 4, 13, 12, 0, 0)),
-                new WorkingTime(new DateTime(2020, 4, 13, 13, 0, 0), new DateTime(2020, 4, 13, 15, 0, 0))
+                new WorkingTime(8, 12),
+                new WorkingTime(13, 15)
             };
             var saturday = new WeekDay(DayType.Saturday);
             foreach (var time in saturdayWorkingTimes)
@@ -42,15 +42,15 @@
             Console.WriteLine("Saturday working period number: " + saturday.WorkingTimes.Count);
             foreach (var time in saturday.WorkingTimes)
             {
-                Console.WriteLine("From Time: " + time.FromTime);
-                Console.WriteLine("To Time: " + time.ToTime);
+                Console.WriteLine("From Time: " + time.From);
+                Console.WriteLine("To Time: " + time.To);
             }
 
             Console.WriteLine();
 
             var sundayWorkingTimes = new List<WorkingTime>
             {
-                new WorkingTime(new DateTime(2020, 4, 13, 10, 0, 0), new DateTime(2020, 4, 13, 15, 0, 0))
+                new WorkingTime(10, 15)
             };
             var sunday = new WeekDay(DayType.Sunday, sundayWorkingTimes);
             
@@ -60,8 +60,8 @@
             for (var index = 0; index < workingTimes.Count; index++)
             {
                 var time = workingTimes[index];
-                Console.WriteLine("From Time: " + time.FromTime);
-                Console.WriteLine("To Time: " + time.ToTime);
+                Console.WriteLine("From Time: " + time.From);
+                Console.WriteLine("To Time: " + time.To);
             }
 
             Console.WriteLine();
@@ -76,8 +76,8 @@
                 // You can further traverse through working times and display these
                 foreach (var workingTime in day.WorkingTimes)
                 {
-                    Console.WriteLine(workingTime.FromTime);
-                    Console.WriteLine(workingTime.ToTime);
+                    Console.WriteLine(workingTime.From);
+                    Console.WriteLine(workingTime.To);
                 }
 
                 Console.WriteLine();

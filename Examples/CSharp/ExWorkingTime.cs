@@ -15,8 +15,8 @@
         // ExFor: WorkingTime
         // ExFor: WorkingTime.#ctor
         // ExFor: WorkingTime.#ctor(System.DateTime,System.DateTime)
-        // ExFor: WorkingTime.FromTime
-        // ExFor: WorkingTime.ToTime
+        // ExFor: WorkingTime.From
+        // ExFor: WorkingTime.To
         // ExSummary: Shows how to work with working time information.
         [Test] // ExSkip
         public void WorkWithWorkingTime()
@@ -36,8 +36,8 @@
                 // You can further traverse through working times and display these
                 foreach (var workingTime in day.WorkingTimes)
                 {
-                    Console.WriteLine(workingTime.FromTime);
-                    Console.WriteLine(workingTime.ToTime);
+                    Console.WriteLine(workingTime.From);
+                    Console.WriteLine(workingTime.To);
                 }
             }
         }
@@ -68,42 +68,18 @@
         {
             // ExStart
             // ExFor: WorkingTime.Equals(Object)
+            // ExFor: WorkingTime.#ctor(Int32,Int32)
             // ExSummary: Shows how to check working time equality.
-            var workingTime1 = new WorkingTime(new DateTime(1, 1, 1, 9, 0, 0), new DateTime(1, 1, 1, 12, 0, 0));
-            var workingTime2 = new WorkingTime(new DateTime(1, 1, 1, 13, 0, 0), new DateTime(1, 1, 1, 17, 0, 0));
+            var workingTime1 = new WorkingTime(9, 12);
+            var workingTime2 = new WorkingTime(13, 17);
 
             // the equality of calendars is checked against to working time's from and to dates.
-            Console.WriteLine("Working Time 1 (From): " + workingTime1.FromTime);
-            Console.WriteLine("Working Time 1 (To): " + workingTime1.ToTime);
+            Console.WriteLine("Working Time 1 (From): " + workingTime1.From);
+            Console.WriteLine("Working Time 1 (To): " + workingTime1.To);
 
-            Console.WriteLine("Working Time 2 (From): " + workingTime2.FromTime);
-            Console.WriteLine("Working Time 2 (To): " + workingTime2.ToTime);
+            Console.WriteLine("Working Time 2 (From): " + workingTime2.From);
+            Console.WriteLine("Working Time 2 (To): " + workingTime2.To);
             Console.WriteLine("Are working times equal: " + workingTime1.Equals(workingTime2));
-
-            // ExEnd
-        }
-
-        [Test]
-        public void GetWorkingTimeHashCode()
-        {
-            // ExStart
-            // ExFor: WorkingTime.GetHashCode
-            // ExSummary: Shows how to get a hash code of a working time.
-            var workingTime1 = new WorkingTime(new DateTime(1, 1, 1, 9, 0, 0), new DateTime(1, 1, 1, 12, 0, 0));
-            var workingTime2 = new WorkingTime(new DateTime(1, 1, 1, 13, 0, 0), new DateTime(1, 1, 1, 17, 0, 0));
-
-            // the hash code of a working time is based on from and to dates
-            Console.WriteLine("Working Time 1 (From): " + workingTime1.FromTime);
-            Console.WriteLine("Working Time 1 (To): " + workingTime1.ToTime);
-
-            Console.WriteLine("Working Time 2 (From): " + workingTime2.FromTime);
-            Console.WriteLine("Working Time 2 (To): " + workingTime2.ToTime);
-
-            Console.WriteLine();
-
-            // the hash code of a calendar is equal to calendar UID 
-            Console.WriteLine("Hash Code of working time 1: {0}", workingTime1.GetHashCode());
-            Console.WriteLine("Hash Code of working time 2: {0}", workingTime2.GetHashCode());
 
             // ExEnd
         }

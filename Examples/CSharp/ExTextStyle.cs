@@ -16,12 +16,10 @@
             // ExFor: TextStyle
             // ExFor: TextStyle.#ctor
             // ExFor: TextStyle.Color
-            // ExFor: TextStyle.FontStyle
+            // ExFor: TextStyle.Font
             // ExFor: TextStyle.ItemType
             // ExFor: TextStyle.BackgroundColor
             // ExFor: TextStyle.BackgroundPattern
-            // ExFor: TextStyle.FontFamily
-            // ExFor: TextStyle.SizeInPoints
             // ExFor: BackgroundPattern
             // ExSummary: Shows how to customize text styles which are used to style different text items in a project.
             var project = new Project(DataDir + "CreateProject2.mpp");
@@ -32,13 +30,10 @@
 
             var style = new TextStyle();
             style.Color = Color.OrangeRed;
-            style.FontStyle = FontStyle.Bold;
-            style.FontStyle |= FontStyle.Italic;
+            style.Font = new FontDescriptor(FontFamily.GenericMonospace.Name, 10F, FontStyles.Bold | FontStyles.Italic);
             style.ItemType = TextItemType.OverallocatedResources;
             style.BackgroundColor = Color.Aqua;
             style.BackgroundPattern = BackgroundPattern.DarkDither;
-            style.FontFamily = FontFamily.GenericMonospace;
-            style.SizeInPoints = 10;
 
             options.TextStyles = new List<TextStyle>
             {

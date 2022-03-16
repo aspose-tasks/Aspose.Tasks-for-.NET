@@ -72,18 +72,18 @@
                 PresentationFormat = PresentationFormat.ResourceSheet
             };
 
-            var style = new TextStyle
+            var style = new TextStyle(FontStyles.Bold | FontStyles.Italic)
             {
-                Color = Color.OrangeRed,
-                FontStyle = FontStyle.Bold
+                Color = Color.OrangeRed
             };
-            style.FontStyle |= FontStyle.Italic;
+
             style.ItemType = TextItemType.OverallocatedResources;
 
             options.TextStyles = new List<TextStyle>
             {
                 style
             };
+
             project.Save(OutDir + "CustomizeTextStyle_out.pdf", options);
 
             // ExEnd

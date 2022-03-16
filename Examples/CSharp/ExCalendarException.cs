@@ -49,8 +49,8 @@
 
             foreach (var time in exception.WorkingTimes)
             {
-                Console.WriteLine("Working Time Start: " + time.FromTime);
-                Console.WriteLine("Working Time Finish: " + time.ToTime);
+                Console.WriteLine("Working Time Start: " + time.From);
+                Console.WriteLine("Working Time Finish: " + time.To);
             }
 
             // ExEnd
