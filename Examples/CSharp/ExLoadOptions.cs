@@ -36,17 +36,19 @@ namespace Aspose.Tasks.Examples.CSharp
         public void WorkWithLoadOptionsAndPrimaveraOptions()
         {
             // ExStart
-            // ExFor: LoadOptions.PrimaveraOptions
-            // ExSummary: Shows how to load Primavera project using <see cref="LoadOptions" />.
+            // ExFor: LoadOptions.PrimaveraReadOptions
+            // ExFor: PrimaveraReadOptions.UndefinedConstraintHandlingBehavior
+            // ExSummary: Shows how to load Primavera project with the specified Id using <see cref="LoadOptions" />.
             var loadOptions = new LoadOptions();
 
-            var primaveraOptions = new PrimaveraXmlReadingOptions
+            var primaveraOptions = new PrimaveraReadOptions()
             {
-                ProjectUid = 3882
+                ProjectUid = 3882,
+                UndefinedConstraintHandlingBehavior = UndefinedConstraintHandlingBehavior.None
             };
 
-            // set primavera reading options
-            loadOptions.PrimaveraOptions = primaveraOptions;
+            // set Primavera reading options
+            loadOptions.PrimaveraReadOptions = primaveraOptions;
 
             var project = new Project(DataDir + "PrimaveraProject.xml", loadOptions);
             Console.WriteLine("Project Name: " + project.Get(Prj.Name));
@@ -81,13 +83,13 @@ namespace Aspose.Tasks.Examples.CSharp
         {
             var loadOptions = new LoadOptions();
 
-            var primaveraOptions = new PrimaveraXmlReadingOptions
+            var primaveraOptions = new PrimaveraReadOptions
             {
                 ProjectUid = 3882
             };
 
             // set primavera reading options
-            loadOptions.PrimaveraOptions = primaveraOptions;
+            loadOptions.PrimaveraReadOptions = primaveraOptions;
             loadOptions.ErrorHandler = CustomDurationHandlerForFile;
 
             var project = new Project(DataDir + "PrimaveraProject.xml", loadOptions);

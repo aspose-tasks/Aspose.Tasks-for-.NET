@@ -1689,9 +1689,9 @@
         public void ReadXMLFileWithMultipleProjects1()
         {
             // ExStart:ReadXMLFileWithMultipleProjects
-            // ExFor: Project.#ctor(String,PrimaveraXmlReadingOptions)
-            // ExSummary: Shows how to read a project from a Primavera XML file with multiple projects by using Primavera XML reading options.
-            var options = new PrimaveraXmlReadingOptions
+            // ExFor: Project.#ctor(String,PrimaveraReadOptions)
+            // ExSummary: Shows how to read a project from a Primavera XML or Primavera XER file containing multiple projects by using Primavera reading options.
+            var options = new PrimaveraReadOptions()
             {
                 ProjectUid = 4557
             };
@@ -1699,7 +1699,6 @@
             // Returns project with special Uid
             var project = new Project(DataDir + "Project.xml", options);
             Console.WriteLine(project.Get(Prj.Name));
-
             // ExEnd:ReadXMLFileWithMultipleProjects
         }
 
@@ -1707,9 +1706,9 @@
         public void ReadXMLFileWithMultipleProjects2()
         {
             // ExStart:ReadXMLStreamWithMultipleProjects
-            // ExFor: Project.#ctor(Stream,PrimaveraXmlReadingOptions)
-            // ExSummary: Shows how to read a project from a stream with Primavera XML file with multiple projects.
-            var options = new PrimaveraXmlReadingOptions
+            // ExFor: Project.#ctor(Stream,PrimaveraReadOptions)
+            // ExSummary: Shows how to read a project from a stream with Primavera XML or Primavera XER file containing multiple projects.
+            var options = new PrimaveraReadOptions
             {
                 ProjectUid = 4557
             };
@@ -1724,43 +1723,28 @@
         }
 
         [Test]
-        public void ReadXMLFileWithMultipleProjects3()
-        {
-            byte[] brokenXmlFileBytes = Encoding.UTF8.GetBytes(GetModifiedXml2(DataDir));
-
-            // ExStart:ReadBrokenPrimaveraXmlStreamWithMultipleProjects
-            // ExFor: Project.#ctor(Stream,ParseErrorCallback,PrimaveraXmlReadingOptions)
-            // ExSummary: Shows how to read a project from a stream with Primavera XML file with error parsing.
-            var options = new PrimaveraXmlReadingOptions
-            {
-                ProjectUid = 4557
-            };
-            using (var stream = new MemoryStream(brokenXmlFileBytes))
-            {
-                // Returns project with special Uid
-                var project = new Project(stream, CustomDurationHandlerForStream, options);
-                Console.WriteLine(project.Get(Prj.Name));
-            }
-
-            // ExEnd:ReadBrokenPrimaveraXmlStreamWithMultipleProjects
-        }
-
-        [Test]
         public void ReadXMLFileWithMultipleProjects4()
         {
             var xml = GetModifiedXml2(DataDir);
             File.WriteAllText(OutDir + "IgnoreInvalidCharacters_out.xml", xml);
 
             // ExStart:ReadBrokenPrimaveraXmlFileWithMultipleProjects
-            // ExFor: Project.#ctor(String,ParseErrorCallback,PrimaveraXmlReadingOptions)
+            // ExFor: Project.#ctor(String,LoadOptions)
+            // ExFor: LoadOptions.ErrorHandler
             // ExSummary: Shows how to read a project from a Primavera XML file with error parsing.
-            var options = new PrimaveraXmlReadingOptions
+            var options = new PrimaveraReadOptions
             {
                 ProjectUid = 4557
             };
 
+            var loadOptions = new LoadOptions()
+            {
+                PrimaveraReadOptions = options,
+                ErrorHandler = CustomDurationHandlerForFile
+            };
+
             // Returns project with special Uid
-            var project = new Project(OutDir + "IgnoreInvalidCharacters_out.xml", CustomDurationHandlerForFile, options);
+            var project = new Project(OutDir + "IgnoreInvalidCharacters_out.xml", loadOptions);
             Console.WriteLine(project.Get(Prj.Name));
 
             // ExEnd:ReadXMLFileWithMultipleProjects
