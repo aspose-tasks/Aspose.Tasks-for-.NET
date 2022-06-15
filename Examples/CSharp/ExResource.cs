@@ -386,5 +386,26 @@
 
             // ExEnd
         }
+
+        [Test]
+        public void IterateOverNonRootResources()
+        {
+            // ExStart:IterateOverNonRootResources
+            // ExFor: Resource.IsRoot
+            // ExSummary: Shows how to use IsRoot property to skip root resource.
+            var project = new Project(DataDir + "ResourceCosts.mpp");
+
+            foreach (var resource in project.Resources)
+            {
+                if (resource.IsRoot)
+                {
+                    continue;
+                }
+
+                Console.WriteLine(resource.Get(Rsc.Name));
+            }
+
+            // ExEnd
+        }
     }
 }
