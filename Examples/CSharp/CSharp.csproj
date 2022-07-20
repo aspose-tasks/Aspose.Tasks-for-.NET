@@ -100,6 +100,7 @@
     <Compile Include="ExGroupCollection.cs" />
     <Compile Include="ExGroupCriterion.cs" />
     <Compile Include="ExGroupCriterionCollection.cs" />
+    <Compile Include="ExFieldHelper.cs" />
     <Compile Include="ExHeaderFooterInfo.cs" />
     <Compile Include="ExICssSavingCallback.cs" />
     <Compile Include="ExIFontSavingCallback.cs" />
@@ -260,7 +261,7 @@
     <None Include="app.config" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Aspose.Tasks" Version="22.6.0" />
+    <PackageReference Include="Aspose.Tasks" Version="22.7.0" />
     <PackageReference Include="Microsoft.SharePointOnline.CSOM" Version="16.1.21312.12000" />
     <PackageReference Include="NUnit" Version="3.13.2" />
   </ItemGroup>
