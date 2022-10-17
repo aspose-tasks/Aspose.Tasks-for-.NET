@@ -80,21 +80,6 @@
         }
 
         [Test]
-        public void GetParentProjectName()
-        {
-            // ExStart
-            // ExFor: CalendarCollection.ParentProject
-            // ExSummary: Shows how to read calendar parent project properties. 
-            var project = new Project(DataDir + "Project5.mpp");
-
-            var calendarByName = project.Calendars.GetByName("TestCalendar");
-
-            Console.WriteLine("Calendar Name: " + calendarByName.ParentProject.Get(Prj.Name));
-
-            // ExEnd
-        }
-
-        [Test]
         public void IterateOverCalendars()
         {
             // ExStart

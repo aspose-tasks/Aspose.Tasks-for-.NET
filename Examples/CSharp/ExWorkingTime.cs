@@ -13,7 +13,6 @@
     {
         // ExStart
         // ExFor: WorkingTime
-        // ExFor: WorkingTime.#ctor
         // ExFor: WorkingTime.#ctor(System.DateTime,System.DateTime)
         // ExFor: WorkingTime.From
         // ExFor: WorkingTime.To

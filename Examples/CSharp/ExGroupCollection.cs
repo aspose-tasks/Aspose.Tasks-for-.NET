@@ -26,7 +26,7 @@
             var project = new Project(DataDir + "ReadGroupDefinitionData.mpp");
 
             // iterate over task groups
-            Console.WriteLine("Print task groups of {0} project: ", project.TaskGroups.ParentProject.Get(Prj.Name));
+            Console.WriteLine("Print task groups of {0} project: ", project.Get(Prj.Name));
             Console.WriteLine("Task Group Count: " + project.TaskGroups.Count);
             foreach (var group in project.TaskGroups)
             {

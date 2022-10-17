@@ -28,7 +28,7 @@
             Console.WriteLine("Is collection of tables read-only?: " + project.Tables.IsReadOnly);
 
             // iterate over tables
-            Console.WriteLine("Print tables of " + project.Tables.ParentProject.Get(Prj.Name) + " project.");
+            Console.WriteLine("Print tables of " + project.Get(Prj.Name) + " project.");
             Console.WriteLine("Table count: " + project.Tables.Count);
             foreach (var tbl in project.Tables)
             {

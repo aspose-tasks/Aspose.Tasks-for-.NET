@@ -33,7 +33,7 @@
                 Console.WriteLine("Is collection of table fields read-only?: " + tbl.TableFields.IsReadOnly);
 
                 // iterate over table fields
-                Console.WriteLine("Print table fields of " + tbl.TableFields.ParentProject.Get(Prj.Name) + " project.");
+                Console.WriteLine("Print table fields of " + project.Get(Prj.Name) + " project.");
                 Console.WriteLine("Table count: " + tbl.TableFields.Count);
                 foreach (var fld in tbl.TableFields)
                 {
