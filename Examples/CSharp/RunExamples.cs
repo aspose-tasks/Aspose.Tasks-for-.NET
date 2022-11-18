@@ -430,8 +430,8 @@
             // exPrimaveraXmlReader.ReadProjectUIDsFromStream();
             // exPrimaveraXmlReader.ReadProjectUIDsFromXMLFile();
             //
-            // var exPrimaveraXmlReadingOptions = new ExPrimaveraXmlReadingOptions();
-            // exPrimaveraXmlReadingOptions.ReadXMLFileWithMultipleProjects1();
+            // var exPrimaveraReadOptions = new ExPrimaveraRead();
+            // exPrimaveraRead.ReadXMLFileWithMultipleProjects1();
             //
             // var exPrintOptions = new ExPrintOptions();
             // exPrintOptions.PrintLargeFiles();
@@ -1074,6 +1074,6 @@
             //
             // var exYearlyRecurrencePattern = new ExYearlyRecurrencePattern();
             // exYearlyRecurrencePattern.WorkWithYearlyRecurrencePattern();
-        }        
+        }
     }
 }

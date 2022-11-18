@@ -37,6 +37,7 @@ namespace Aspose.Tasks.Examples.CSharp
         {
             // ExStart
             // ExFor: LoadOptions.PrimaveraReadOptions
+            // ExFor: PrimaveraReadOptions.PreserveUids
             // ExFor: PrimaveraReadOptions.UndefinedConstraintHandlingBehavior
             // ExSummary: Shows how to load Primavera project with the specified Id using <see cref="LoadOptions" />.
             var loadOptions = new LoadOptions();
@@ -44,7 +45,8 @@ namespace Aspose.Tasks.Examples.CSharp
             var primaveraOptions = new PrimaveraReadOptions()
             {
                 ProjectUid = 3882,
-                UndefinedConstraintHandlingBehavior = UndefinedConstraintHandlingBehavior.None
+                UndefinedConstraintHandlingBehavior = UndefinedConstraintHandlingBehavior.None,
+                PreserveUids = true
             };
 
             // set Primavera reading options

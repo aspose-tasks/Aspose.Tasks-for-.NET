@@ -140,7 +140,7 @@
     <Compile Include="ExOutlineValue.cs" />
     <Compile Include="ExOutlineValueCollection.cs" />
     <Compile Include="ExPageViewSettings.cs" />
-    <Compile Include="ExPrimaveraXmlReadingOptions.cs" />
+    <Compile Include="ExPrimaveraRead.cs" />
     <Compile Include="ExPrintOptions.cs" />
     <Compile Include="ExPrj.cs" />
     <Compile Include="ExProgressLines.cs" />
@@ -261,7 +261,7 @@
     <None Include="app.config" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Aspose.Tasks" Version="22.10.0" />
+    <PackageReference Include="Aspose.Tasks" Version="22.11.0" />
     <PackageReference Include="Microsoft.SharePointOnline.CSOM" Version="16.1.21312.12000" />
     <PackageReference Include="NUnit" Version="3.13.2" />
   </ItemGroup>
