@@ -217,7 +217,6 @@
     <Compile Include="ExResourceAssignment.cs" />
     <Compile Include="ExRiskAnalysisSettings.cs" />
     <Compile Include="ExTaskBaseline.cs" />
-    <Compile Include="ExTaskLink.cs" />
     <Compile Include="ExTask.cs" />
     <Compile Include="ExTiffCompression.cs" />
     <Compile Include="ExTimescaleTier.cs" />
@@ -261,7 +260,7 @@
     <None Include="app.config" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Aspose.Tasks" Version="22.11.0" />
+    <PackageReference Include="Aspose.Tasks" Version="22.12.0" />
     <PackageReference Include="Microsoft.SharePointOnline.CSOM" Version="16.1.21312.12000" />
     <PackageReference Include="NUnit" Version="3.13.2" />
   </ItemGroup>

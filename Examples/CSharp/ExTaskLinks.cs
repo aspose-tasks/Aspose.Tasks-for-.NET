@@ -41,7 +41,6 @@
             // ExStart:GetCrossProjectTaskLinks
             // ExFor: TaskLink.CrossProjectName
             // ExFor: TaskLink.IsCrossProject
-            // ExFor: TaskLink.ToString
             // ExSummary: Shows how to find cross project task links. 
             var project = new Project(DataDir + "GetCrossProjectTaskLinks.mpp");
 
@@ -56,6 +55,40 @@
             }
 
             // ExEnd:GetCrossProjectTaskLinks
+        }
+
+        [Test]
+        public void CreateCrossProjectTaskLink()
+        {
+            // ExStart:CreateCrossProjectTaskLink
+            // ExFor: TaskLink.CrossProjectName
+            // ExFor: TaskLink.IsCrossProject
+            // ExFor: Tsk.IsExternalTask
+            // ExFor: Tsk.ExternalUid
+            // ExFor: Tsk.ExternalId
+            // ExFor: Task.ExternalUid
+            // ExFor: Task.ExternalId
+            // ExSummary: Shows how to create cross project task link - link to task in another (external) project.
+            Project project = new Project();
+            var summary = project.RootTask.Children.Add("Summary Task");
+
+            // In order to create a link to a task from another project we should create
+            // its duplicate (or "external") task in the current project.
+
+            Task t2 = summary.Children.Add("External Task");
+            t2.Set(Tsk.ExternalTaskProject, "ExternalProject.mpp"); // here we set path to external project's MPP file.
+            t2.Set(Tsk.ExternalId, 1); // Set External task's Id.
+            t2.Set(Tsk.ExternalUid, 2); // External task's Unique Id should be set.
+            t2.Set(Tsk.IsExternalTask, true);
+            t2.Set(Tsk.IsManual, new NullableBool(false));
+            t2.Set(Tsk.IsSummary, false);
+
+            Task t = summary.Children.Add("Task");
+            TaskLink link = project.TaskLinks.Add(t2, t);
+            link.IsCrossProject = true;
+            link.LinkType = TaskLinkType.FinishToStart;
+            link.CrossProjectName = "ExternalProject.mpp\\\\1"; // <- here external task's Id is used.
+            // ExEnd:CreateCrossProjectTaskLink
         }
 
         [Test]
@@ -101,32 +134,6 @@
             Console.Write("Link 2 Pred: " + link2.PredTask.ToString());
             Console.Write("Link 2 Succ: " + link2.SuccTask.ToString());
             Console.Write("Are task links equal: " + link1.Equals(link2));
-
-            // ExEnd
-        }
-
-        [Test]
-        public static void GetHashCodeTaskLink()
-        {
-            // ExStart
-            // ExFor: TaskLink.GetHashCode
-            // ExSummary: Shows how to get a hash code of a task link.
-            var project = new Project(DataDir + "GetPredecessorSuccessorTasks.mpp");
-
-            var link1 = project.TaskLinks[0];
-            var link2 = project.TaskLinks[1];
-
-            // the hash code of a task link is based on hashes of predecessor and successor task 
-            Console.WriteLine(
-                "Task Link 1 Pred Hash Code: {0} Succ Hash Code: {1} Hash Code: {2}",
-                link1.PredTask.GetHashCode(),
-                link1.SuccTask.GetHashCode(),
-                link1.GetHashCode());
-            Console.WriteLine(
-                "Task Link 2 Pred Hash Code: {0} Succ Hash Code: {1} Hash Code: {2}",
-                link2.PredTask.GetHashCode(),
-                link2.SuccTask.GetHashCode(),
-                link2.GetHashCode());
 
             // ExEnd
         }

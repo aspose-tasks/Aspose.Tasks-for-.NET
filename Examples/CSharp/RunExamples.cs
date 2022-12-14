@@ -841,6 +841,7 @@
             // var exTaskLinks = new ExTaskLinks();
             // exTaskLinks.GetCrossProjectTaskLinks();
             // exTaskLinks.GetSetTaskLinkType();
+            // exTaskLinks.CreateCrossProjectTaskLink();
             //
             // var exTasksLoggedException = new ExTasksLoggedException();
             // exTasksLoggedException.PrintTaskWritingException();
@@ -916,7 +917,6 @@
             // exTsk.GetSetEarlyFinish();
             // exTsk.GetSetEarlyStart();
             // exTsk.GetSetEarnedValueMethod();
-            // exTsk.GetSetExternalTaskProject();
             // exTsk.GetSetFinishSlack();
             // exTsk.GetSetFinishText();
             // exTsk.GetSetFinishVariance();

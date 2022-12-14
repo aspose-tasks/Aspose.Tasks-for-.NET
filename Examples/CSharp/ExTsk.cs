@@ -321,23 +321,6 @@
         }
 
         [Test]
-        public void GetSetExternalTaskProject()
-        {
-            // ExStart
-            // ExFor: Tsk.ExternalTaskProject
-            // ExSummary: Shows how to read/write Tsk.ExternalTaskProject property.
-            var project = new Project();
-
-            var task = project.RootTask.Children.Add("Task");
-
-            task.Set(Tsk.ExternalTaskProject, "External Task");
-
-            Console.WriteLine("External Task Project: " + task.Get(Tsk.ExternalTaskProject));
-
-            // ExEnd
-        }
-
-        [Test]
         public void GetSetFinishSlack()
         {
             // ExStart
