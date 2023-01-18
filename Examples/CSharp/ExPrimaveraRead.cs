@@ -48,8 +48,22 @@
                     Console.WriteLine("Task ActivityId: {0}", task.PrimaveraProperties.ActivityId);
                 }
 
+                Console.WriteLine("Original Duration: {0:N2}", task.Duration.TimeSpan.TotalHours);
+                Console.WriteLine("At Complete Duration: {0:N2}", task.ActualDuration.TimeSpan.TotalHours + task.RemainingDuration.TimeSpan.TotalHours);
+                Console.WriteLine("Duration % Complete: {0}", task.PrimaveraProperties.DurationPercentComplete);
+                Console.WriteLine("Physical % Complete: {0}", task.PrimaveraProperties.PhysicalPercentComplete);
+
                 Console.WriteLine("Task RemainingEarlyStart: {0}", task.PrimaveraProperties.RemainingEarlyStart);
                 Console.WriteLine("Task RemainingEarlyFinish: {0}", task.PrimaveraProperties.RemainingEarlyFinish);
+
+                Console.WriteLine("Labor Units:");
+                Console.WriteLine("{0}, {1}, {2}, {3}", 
+                    task.PrimaveraProperties.ActualLaborUnits,
+                    task.PrimaveraProperties.ActualNonLaborUnits,
+                    task.PrimaveraProperties.RemainingLaborUnits,
+                    task.PrimaveraProperties.RemainingNonLaborUnits);
+
+                Console.WriteLine("Units % Complete: {0}", task.PrimaveraProperties.UnitsPercentComplete);
             }
 
             // ExEnd:ReadPrimaveraXmlFileAndAccessPrimaveraSpecificProperties

@@ -260,9 +260,9 @@
     <None Include="app.config" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Aspose.Tasks" Version="22.12.0" />
+    <PackageReference Include="Aspose.Tasks" Version="23.1.0" />
     <PackageReference Include="Microsoft.SharePointOnline.CSOM" Version="16.1.21312.12000" />
-    <PackageReference Include="NUnit" Version="3.13.2" />
+    <PackageReference Include="NUnit" Version="3.13.3" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
