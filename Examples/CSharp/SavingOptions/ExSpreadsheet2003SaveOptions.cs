@@ -25,7 +25,7 @@
             var resourceViewColumn = new ResourceViewColumn("Cost center", 100, delegate(Resource resource) { return resource.Get(Rsc.CostCenter); });
             options.ResourceView.Columns.Add(resourceViewColumn);
 
-            var assignmentViewColumn = new AssignmentViewColumn("Notes", 200, delegate(ResourceAssignment assignment) { return assignment.Get(Asn.Notes); });
+            var assignmentViewColumn = new AssignmentViewColumn("Notes", 200, delegate(ResourceAssignment assignment) { return assignment.Get(Asn.NotesText); });
             options.AssignmentView.Columns.Add(assignmentViewColumn);
 
             project.Save(OutDir + "UsingSpreadsheet2003SaveOptions_out.xml", options);

@@ -946,7 +946,6 @@
             // exTsk.GetSetLevelAssignments();
             // exTsk.GetSetLevelingCanSplit();
             // exTsk.GetSetLevelingDelay();
-            // exTsk.GetSetLevelingDelayFormat();
             // exTsk.GetSetManualDuration();
             // exTsk.GetSetManualFinish();
             // exTsk.GetSetManualStart();

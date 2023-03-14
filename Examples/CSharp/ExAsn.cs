@@ -321,7 +321,8 @@
         public void GetSetResourceAssignmentNotes()
         {
             // ExStart
-            // ExFor: Asn.Notes
+            // ExFor: Asn.NotesText
+            // ExFor: Asn.NotesRTF
             // ExSummary: Shows how to get/set resource assignment notes.
             var project = new Project(DataDir + "UpdateResourceAssignment.mpp");
             var task = project.RootTask.Children.GetById(1);
@@ -331,9 +332,10 @@
             var assn = project.ResourceAssignments.Add(task, rsc);
 
             // set resource assignment notes 
-            assn.Set(Asn.Notes, "Newly added assignment");
+            assn.Set(Asn.NotesText, "Newly added assignment");
 
-            Console.WriteLine("Notes: " + assn.Get(Asn.Notes));
+            Console.WriteLine("Notes text: " + assn.Get(Asn.NotesText));
+            Console.WriteLine("Notes RTF: " + assn.Get(Asn.NotesRTF));
 
             // ExEnd
         }
@@ -489,8 +491,8 @@
             var resource = project.Resources.Add("Resource 1");
 
             var assignment = project.ResourceAssignments.Add(task, resource);
-            assignment.Set(Asn.Hyperlink, "aspose.com");
-            assignment.Set(Asn.HyperlinkAddress, "products.aspose.com");
+            assignment.Set(Asn.Hyperlink, "Click to visit our site");
+            assignment.Set(Asn.HyperlinkAddress, "https://products.aspose.com");
             assignment.Set(Asn.HyperlinkSubAddress, "/total/net");
 
             Console.WriteLine("Hyperlink: " + assignment.Get(Asn.Hyperlink));
@@ -718,8 +720,7 @@
             // ExStart
             // ExFor: Asn.Delay
             // ExFor: Asn.LevelingDelay
-            // ExFor: Asn.LevelingDelayFormat
-            // ExSummary: Shows how to read/write Asn.Delay, Asn.LevelingDelay, and Asn.LevelingDelayFormat properties.
+            // ExSummary: Shows how to read/write Asn.Delay and Asn.LevelingDelay properties.
             var project = new Project();
 
             var task = project.RootTask.Children.Add("Task 1");
@@ -733,7 +734,6 @@
 
             Console.WriteLine("Delay: " + assignment.Get(Asn.Delay));
             Console.WriteLine("Leveling Delay: " + assignment.Get(Asn.LevelingDelay));
-            Console.WriteLine("Leveling Delay Format: " + assignment.Get(Asn.LevelingDelayFormat));
 
             // ExEnd
         }
@@ -847,7 +847,7 @@
         }
 
         [Test]
-        public void GetSetVACProperty()
+        public void GetSetVacProperty()
         {
             // ExStart
             // ExFor: Asn.VAC

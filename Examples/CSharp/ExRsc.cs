@@ -381,8 +381,8 @@
 
             var resource = project.Resources.Add("Resource");
 
-            resource.Set(Rsc.Hyperlink, "aspose.com");
-            resource.Set(Rsc.HyperlinkAddress, "products.aspose.com");
+            resource.Set(Rsc.Hyperlink, "Click to visit our site");
+            resource.Set(Rsc.HyperlinkAddress, "https://products.aspose.com");
             resource.Set(Rsc.HyperlinkSubAddress, "/total/net");
 
             Console.WriteLine("Hyperlink: " + resource.Get(Rsc.Hyperlink));
@@ -603,14 +603,16 @@
         {
             // ExStart
             // ExFor: Rsc.Notes
+            // ExFor: Rsc.NotesRTF
             // ExSummary: Shows how to read/write Rsc.Notes property.
             var project = new Project();
 
             var resource = project.Resources.Add("Resource");
 
-            resource.Set(Rsc.Notes, "Resource Notes");
+            resource.Set(Rsc.NotesText, "Resource Notes");
 
-            Console.WriteLine("Notes: " + resource.Get(Rsc.Notes));
+            Console.WriteLine("Notes text: " + resource.Get(Rsc.NotesText));
+            Console.WriteLine("Notes RTF: " + resource.Get(Rsc.NotesRTF));
 
             // ExEnd
         }

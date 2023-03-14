@@ -22,7 +22,7 @@
 
             var options = new Spreadsheet2003SaveOptions();
 
-            var column = new AssignmentViewColumn("Notes", 200, delegate(ResourceAssignment assignment) { return assignment.Get(Asn.Notes); });
+            var column = new AssignmentViewColumn("Notes", 200, delegate(ResourceAssignment assignment) { return assignment.Get(Asn.NotesText); });
             options.AssignmentView.Columns.Add(column);
 
             foreach (var assignment in project.ResourceAssignments)

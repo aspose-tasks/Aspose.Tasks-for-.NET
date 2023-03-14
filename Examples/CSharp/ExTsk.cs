@@ -446,8 +446,8 @@
 
             var task = project.RootTask.Children.Add("Task");
 
-            task.Set(Tsk.Hyperlink, "aspose.com");
-            task.Set(Tsk.HyperlinkAddress, "products.aspose.com");
+            task.Set(Tsk.Hyperlink, "Click here to visit our site");
+            task.Set(Tsk.HyperlinkAddress, "https://products.aspose.com");
             task.Set(Tsk.HyperlinkSubAddress, "/total/net");
 
             Console.WriteLine("Hyperlink: " + task.Get(Tsk.Hyperlink));
@@ -848,23 +848,6 @@
         }
 
         [Test]
-        public void GetSetLevelingDelayFormat()
-        {
-            // ExStart
-            // ExFor: Tsk.LevelingDelayFormat
-            // ExSummary: Shows how to read/write Tsk.LevelingDelayFormat property.
-            var project = new Project();
-
-            var task = project.RootTask.Children.Add("Task");
-
-            task.Set(Tsk.LevelingDelayFormat, TimeUnitType.Hour);
-
-            Console.WriteLine("Leveling Delay Format: " + task.Get(Tsk.LevelingDelayFormat));
-
-            // ExEnd
-        }
-
-        [Test]
         public void GetSetManualDuration()
         {
             // ExStart
@@ -916,7 +899,7 @@
         }
 
         [Test]
-        public void GetSetNotesRTF()
+        public void GetSetNotesRtf()
         {
             // ExStart
             // ExFor: Tsk.NotesRTF
@@ -925,14 +908,14 @@
 
             var task = project.RootTask.Children.Add("Task");
 
-            const string RTF = @"{\rtf1\ansi\ansicpg1252\deff0\deflang1033{\fonttbl{\f0\fnil\fcharset134 SimSun;}{\f1\fnil\fcharset0 Calibri;}}
+            const string rtf = @"{\rtf1\ansi\ansicpg1252\deff0\deflang1033{\fonttbl{\f0\fnil\fcharset134 SimSun;}{\f1\fnil\fcharset0 Calibri;}}
 {\*\generator Msftedit 5.41.21.2510;}\viewkind4\uc1\pard\sa200\sl276\slmult1\lang9\f0\fs22\'d4\'e7\'c9\'cf\'ba\'c3\f1\par
 }
  "; // 早上好
 
-            task.Set(Tsk.NotesRTF, RTF);
+            task.Set(Tsk.NotesRTF, rtf);
 
-            Console.WriteLine("Notes R T F: " + task.Get(Tsk.NotesRTF));
+            Console.WriteLine("Notes RTF: " + task.Get(Tsk.NotesRTF));
 
             // ExEnd
         }
@@ -1615,7 +1598,7 @@
         }
 
         [Test]
-        public void ReadTaskWBS()
+        public void ReadTaskWbs()
         {
             // ExStart:ReadTaskWBS
             // ExFor: Tsk.WBS

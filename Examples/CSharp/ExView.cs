@@ -1,11 +1,54 @@
 ﻿namespace Aspose.Tasks.Examples.CSharp
 {
     using System;
+    using System.Drawing;
     using NUnit.Framework;
 
     [TestFixture]
     public class ExView : ApiExampleBase
     {
+        [Test]
+        public void ModifyViewAddColumn()
+        {
+            // ExStart:ModifyView
+            // ExFor: View
+            // ExFor: View.#ctor
+            // ExFor: View.Screen
+            // ExFor: View.Table
+            // ExFor: View.Type
+            // ExFor: View.Uid
+            // ExFor: ViewScreen
+            // ExFor: TableField
+            // ExFor: Project.DefaultView
+            // ExSummary: Shows how to work with Project's view and add column to the default view (which is shown when MPP file is opened in MS Project).
+
+            // create an empty project without views 
+            var project = new Project();
+            project.Set(Prj.Name, "Test View Project");
+
+            // Modify the default view (it's a Gantt chart view).
+            // Or you can select view by name or by View Screen using project.View collection.
+            var view = (GanttChartView) project.DefaultView;
+
+            TableField newColumn = new TableField()
+            {
+                AlignData = StringAlignment.Center,
+                Title = "My new column",
+                Width = 30,
+                Field = Field.TaskActualDuration
+            };
+
+            view.Table.TableFields.Add(newColumn);
+
+            // WriteViewData flag should be used to persist modifications of view's properties.
+            project.Save(OutDir + "ModifyView_output.mpp", new Saving.MPPSaveOptions
+            {
+                WriteViewData = true
+            });
+
+            // ExEnd:ModifyView
+        }
+
         [Test]
         public void WorkWithView()
         {
@@ -25,7 +68,7 @@
             // ExFor: View.Uid
             // ExFor: ViewScreen
             // ExSummary: Shows how to work with MS Project views.
-            
+
             // create an empty project without views 
             var project = new Project();
             project.Set(Prj.Name, "Test View Project");

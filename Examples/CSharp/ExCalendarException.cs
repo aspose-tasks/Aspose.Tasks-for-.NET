@@ -7,7 +7,7 @@
     public class ExCalendarException : ApiExampleBase
     {
         [Test]
-        public void ExceptionDelete()
+        public void CalendarExceptionDelete()
         {
             // ExStart
             // ExFor: CalendarException.Delete
@@ -20,7 +20,7 @@
             Console.WriteLine("Calendar Exception Count: " + calendar.Exceptions.Count);
 
             // remove the exception
-            calendar.Exceptions.ToList()[0].Delete();
+            calendar.Exceptions[0].Delete();
 
             Console.WriteLine("Calendar Exception Count: " + calendar.Exceptions.Count);
 
@@ -28,7 +28,7 @@
         }
 
         [Test]
-        public void ExceptionGetWorkingTime()
+        public void CalendarExceptionGetWorkingTime()
         {
             // ExStart
             // ExFor: CalendarException.GetWorkingTime
@@ -37,7 +37,7 @@
             var project = new Project(DataDir + "CalendarExceptions.mpp");
 
             var calendar = project.Calendars.ToList()[0];
-            var exception = calendar.Exceptions.ToList()[0];
+            var exception = calendar.Exceptions[0];
 
             Console.WriteLine("Calendar Name: " + calendar.Name);
             Console.WriteLine("Calendar Exception Count: " + calendar.Exceptions.Count);
@@ -95,7 +95,7 @@
             var cal = project.Calendars.ToList()[0];
             if (cal.Exceptions.Count > 1)
             {
-                var excToRemove = cal.Exceptions.ToList()[0];
+                var excToRemove = cal.Exceptions[0];
                 cal.Exceptions.Remove(excToRemove);
             }
 
@@ -111,18 +111,16 @@
                 Console.WriteLine("Name: " + exc.Name);
                 Console.WriteLine("From: " + exc.FromDate.ToShortDateString());
                 Console.WriteLine("To: " + exc.ToDate.ToShortDateString());
-                Console.WriteLine("Parent Calendar Name: " + exc.ParentCalendar.Name);
             }
 
             // ExEnd:DefineCalendarExceptions
         }
 
         [Test]
-        public void ExceptionByDayType()
+        public void AddCalendarExceptionByDayType()
         {
             // ExStart
             // ExFor: CalendarException.DaysOfWeek
-            // ExFor: CalendarException.ParentCalendar
             // ExSummary: Shows how to define calendar exception by week day.
             var project = new Project(DataDir + "project_test.mpp");
 
@@ -136,20 +134,18 @@
             exception.ToDate = new DateTime(2020, 4, 12);
             exception.DaysOfWeek.Add(DayType.Friday);
 
-            // check that aa friday is exceptional
+            // check that friday is exceptional
             Console.WriteLine("Is date an exception date: " + exception.CheckException(new DateTime(2020, 4, 10)));
 
             // add the exception to the calendar
             calendar.Exceptions.Add(exception);
-
-            Console.WriteLine("Parent calendar name: " + exception.ParentCalendar.Name);
 
             // ExEnd
             Assert.IsTrue(exception.CheckException(new DateTime(2020, 4, 10)));
         }
 
         [Test]
-        public void ExceptionByMonth()
+        public void AddCalendarExceptionExceptionByMonth()
         {
             // ExStart
             // ExFor: CalendarException.Month
@@ -187,9 +183,9 @@
         }
 
         [Test]
-        public void HandleExceptionOccurrences()
+        public void AddCalendarExceptionByOccurrences()
         {
-            // ExStart:HandleExceptionOccurrences
+            // ExStart:AddCalendarExceptionByOccurrences
             // ExFor: CalendarExceptionType
             // ExFor: CalendarException.EnteredByOccurrences
             // ExFor: CalendarException.Occurrences
@@ -210,9 +206,9 @@
             // Add exception to calendar
             calendar.Exceptions.Add(exception);
 
-            // ExEnd:HandleExceptionOccurrences
+            // ExEnd:AddCalendarExceptionByOccurrences
         }
-        
+
         [Test]
         public void GetExceptionDates()
         {

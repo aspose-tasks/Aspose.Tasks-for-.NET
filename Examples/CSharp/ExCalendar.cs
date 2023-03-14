@@ -217,12 +217,13 @@
                 // ExFor: Calendar.MakeStandardCalendar(Calendar)
                 // ExSummary: Shows how to create a calendar with exception days.
                 var project = new Project(DataDir + "project_update_test.mpp");
-                var calendar = project.Calendars.GetByUid(3);
+                var calendar = project.Calendars.GetByName("Standard");
 
                 // Update the calendar information
                 Calendar.MakeStandardCalendar(calendar);
                 calendar.Name = "Test calendar";
                 var exception = new CalendarException();
+                exception.Name = "Exception 1";
                 exception.FromDate = DateTime.Now;
                 exception.ToDate = DateTime.Now.AddDays(2);
                 exception.DayWorking = true;
@@ -233,6 +234,7 @@
                 calendar.Exceptions.Add(exception);
 
                 var exception2 = new CalendarException();
+                exception.Name = "Exception 2";
                 exception2.FromDate = DateTime.Now.AddDays(7);
                 exception2.ToDate = exception2.FromDate;
                 exception2.DayWorking = false;
@@ -411,43 +413,6 @@
             Console.WriteLine("Task finish date: " + finish);
 
             // ExEnd:GetFinishDateByStartAndWork
-        }
-
-        [Test]
-        public void CalendarEquals()
-        {
-            // ExStart
-            // ExFor: Calendar.Equals(Object)
-            // ExSummary: Shows how to check calendar equality.
-            var project = new Project(DataDir + "Project2.mpp");
-
-            var calendar1 = project.Calendars.GetByUid(1);
-            var calendar2 = project.Calendars.GetByUid(3);
-
-            // the equality of calendars is checked against to calendar's UID.
-            Console.WriteLine("Calendar 1 UID: " + calendar1.Uid);
-            Console.WriteLine("Calendar 2 UID: " + calendar2.Uid);
-            Console.WriteLine("Are calendars equal: " + calendar1.Equals(calendar2));
-
-            // ExEnd
-        }
-
-        [Test]
-        public void GetCalendarHashCode()
-        {
-            // ExStart
-            // ExFor: Calendar.GetHashCode
-            // ExSummary: Shows how to get a hash code of a calendar.
-            var project = new Project(DataDir + "Project2.mpp");
-
-            var calendar1 = project.Calendars.GetByUid(1);
-            var calendar2 = project.Calendars.GetByUid(3);
-
-            // the hash code of a calendar is equal to calendar UID 
-            Console.WriteLine("Calendar UID: {0} Hash Code: {1}", calendar1.Uid, calendar1.GetHashCode());
-            Console.WriteLine("Calendar UID: {0} Hash Code: {1}", calendar2.Uid, calendar2.GetHashCode());
-
-            // ExEnd
         }
 
         [Test]
