@@ -19,7 +19,6 @@
             // ExFor: GroupCollection.Count
             // ExFor: GroupCollection.GetEnumerator
             // ExFor: GroupCollection.IsReadOnly
-            // ExFor: GroupCollection.ParentProject
             // ExFor: GroupCollection.Remove(Group)
             // ExFor: GroupCollection.ToList
             // ExSummary: Shows how to work with collection of groups.

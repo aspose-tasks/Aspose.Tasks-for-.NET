@@ -1,7 +1,8 @@
-﻿namespace Aspose.Tasks.Examples.CSharp
+﻿using Aspose.Tasks.Visualization;
+
+namespace Aspose.Tasks.Examples.CSharp
 {
     using System;
-    using System.Drawing;
     using NUnit.Framework;
 
     [TestFixture]
@@ -32,7 +33,7 @@
 
             TableField newColumn = new TableField()
             {
-                AlignData = StringAlignment.Center,
+                AlignData = HorizontalStringAlignment.Center,
                 Title = "My new column",
                 Width = 30,
                 Field = Field.TaskActualDuration

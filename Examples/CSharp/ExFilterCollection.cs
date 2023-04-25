@@ -19,7 +19,6 @@
             // ExFor: FilterCollection.Count
             // ExFor: FilterCollection.GetEnumerator
             // ExFor: FilterCollection.IsReadOnly
-            // ExFor: FilterCollection.ParentProject
             // ExFor: FilterCollection.Remove(Filter)
             // ExFor: FilterCollection.ToList
             // ExSummary: Shows how to work with filter collections.

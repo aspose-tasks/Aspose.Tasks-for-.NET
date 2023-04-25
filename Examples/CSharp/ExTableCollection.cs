@@ -19,7 +19,6 @@
             // ExFor: TableCollection.Count
             // ExFor: TableCollection.GetEnumerator
             // ExFor: TableCollection.IsReadOnly
-            // ExFor: TableCollection.ParentProject
             // ExFor: TableCollection.Remove(Table)
             // ExFor: TableCollection.ToList
             // ExSummary: Shows how to work with table collections.

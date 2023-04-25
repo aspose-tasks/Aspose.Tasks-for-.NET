@@ -1,8 +1,9 @@
-﻿namespace Aspose.Tasks.Examples.CSharp
+﻿using Aspose.Tasks.Visualization;
+
+namespace Aspose.Tasks.Examples.CSharp
 {
     using System;
     using System.Collections.Generic;
-    using System.Drawing;
     using NUnit.Framework;
     using Saving;
 
@@ -23,7 +24,6 @@
                 // ExFor: Table.AdjustHeaderRowHeight
                 // ExFor: Table.DateFormat
                 // ExFor: Table.LockFirstColumn
-                // ExFor: Table.ParentProject
                 // ExFor: Table.RowHeight
                 // ExFor: Table.ShowAddNewColumn
                 // ExFor: Table.ShowInMenu
@@ -133,8 +133,8 @@
                 field.Field = Field.TaskText1;
                 field.Width = 20;
                 field.Title = "Custom attribute";
-                field.AlignTitle = StringAlignment.Center;
-                field.AlignData = StringAlignment.Center;
+                field.AlignTitle = HorizontalStringAlignment.Center;
+                field.AlignData = HorizontalStringAlignment.Center;
 
                 var table = project.Tables.ToList()[0];
                 table.TableFields.Insert(3, field);

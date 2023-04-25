@@ -30,7 +30,7 @@
         public void ReadLoadPrimaveraXmlProject()
         {
             // ExStart:ReadLoadPrimaveraXmlProject
-            // ExFor: PrimaveraXmlReader.LoadProject(int)
+            // ExFor: PrimaveraBaseReader.LoadProject(int)
             // ExSummary: Shows how to load a project from a Primavera XML file when project uid is known.
             var reader = new PrimaveraXmlReader(DataDir + "PrimaveraProject.xml");
             var project = reader.LoadProject(3882);

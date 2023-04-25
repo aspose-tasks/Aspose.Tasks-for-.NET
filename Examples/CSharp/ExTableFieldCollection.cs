@@ -21,7 +21,6 @@
             // ExFor: TableFieldCollection.Insert(Int32,TableField)
             // ExFor: TableFieldCollection.IsReadOnly
             // ExFor: TableFieldCollection.Item(Int32)
-            // ExFor: TableFieldCollection.ParentProject
             // ExFor: TableFieldCollection.Remove(TableField)
             // ExFor: TableFieldCollection.RemoveAt(Int32)
             // ExSummary: Shows how to work with table field collections.

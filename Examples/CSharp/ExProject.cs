@@ -5,7 +5,6 @@
     using System.Data.SqlClient;
     using System.Diagnostics;
     using System.Diagnostics.CodeAnalysis;
-    using System.Drawing;
     using System.Drawing.Printing;
     using System.IO;
     using System.Text;
@@ -482,8 +481,8 @@
                     Field = Field.TaskText1,
                     Width = 20,
                     Title = "Custom attribute",
-                    AlignTitle = StringAlignment.Center,
-                    AlignData = StringAlignment.Center
+                    AlignTitle = HorizontalStringAlignment.Center,
+                    AlignData = HorizontalStringAlignment.Center
                 };
 
                 var table = project.Tables.ToList()[0];
@@ -1422,7 +1421,7 @@
             // Details header column will not be displayed
             view.DisplayDetailsHeaderColumn = false;
             view.RepeatDetailsHeaderOnAllRows = false;
-            view.AlignDetailsData = StringAlignment.Near;
+            view.AlignDetailsData = HorizontalStringAlignment.Near;
             project.Save(OutDir + "task usage1_out.pdf", SaveFileFormat.Pdf);
 
             // Display details header column
@@ -1430,7 +1429,7 @@
 
             // Repeat details header on all assignments rows
             view.RepeatDetailsHeaderOnAllRows = true;
-            view.AlignDetailsData = StringAlignment.Far;
+            view.AlignDetailsData = HorizontalStringAlignment.Far;
             project.Save(OutDir + "task usage2_out.pdf", SaveFileFormat.Pdf);
 
             // ExEnd:RenderTaskUsageViewWithDetails

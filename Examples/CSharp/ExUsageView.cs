@@ -1,6 +1,7 @@
-﻿namespace Aspose.Tasks.Examples.CSharp
+﻿using Aspose.Tasks.Visualization;
+
+namespace Aspose.Tasks.Examples.CSharp
 {
-    using System.Drawing;
     using NUnit.Framework;
     using Saving;
 
@@ -27,7 +28,7 @@
             view.DisplayDetailsHeaderColumn = false;
             view.RepeatDetailsHeaderOnAllRows = false;
             view.DisplayShortDetailHeaderNames = false;
-            view.AlignDetailsData = StringAlignment.Near;
+            view.AlignDetailsData = HorizontalStringAlignment.Near;
             project.Save(OutDir + "task usage1_out.pdf", SaveFileFormat.Pdf);
 
             // display details header column
@@ -35,7 +36,7 @@
 
             // repeat details header on all assignments rows
             view.RepeatDetailsHeaderOnAllRows = true;
-            view.AlignDetailsData = StringAlignment.Far;
+            view.AlignDetailsData = HorizontalStringAlignment.Far;
             project.Save(OutDir + "task usage2_out.pdf", SaveFileFormat.Pdf);
 
             // ExEnd:RenderTaskUsageViewWithDetails

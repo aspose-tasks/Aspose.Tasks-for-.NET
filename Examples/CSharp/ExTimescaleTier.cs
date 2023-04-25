@@ -1,7 +1,6 @@
 ﻿namespace Aspose.Tasks.Examples.CSharp
 {
     using System;
-    using System.Drawing;
     using NUnit.Framework;
     using Saving;
     using Visualization;
@@ -49,7 +48,7 @@
             // set date label <see cref="T:Aspose.Tasks.Visualization.DateLabel" /> for the timescale tier.
             view.MiddleTimescaleTier.Label = DateLabel.WeekDddDd;
             // set how to align labels within each time period of the tier (<see cref="T:System.Drawing.StringAlignment" />).
-            view.MiddleTimescaleTier.Alignment = StringAlignment.Center;
+            view.MiddleTimescaleTier.Alignment = HorizontalStringAlignment.Center;
             // set a value indicating whether whether to show tick marks that separate time periods in the tier.
             view.MiddleTimescaleTier.ShowTicks = true;
             // set a value indicating whether to base the tier labels on the fiscal year.

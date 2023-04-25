@@ -23,7 +23,6 @@ namespace Aspose.Tasks.Examples.CSharp
             // ExFor: Filter.Uid
             // ExFor: Filter.Index
             // ExFor: Filter.Name
-            // ExFor: Filter.ParentProject
             // ExFor: Filter.FilterType
             // ExFor: Filter.ShowInMenu
             // ExFor: Filter.ShowRelatedSummaryRows

@@ -17,7 +17,6 @@
             // ExFor: Group.Index
             // ExFor: Group.GroupCriteria
             // ExFor: Group.MaintainHierarchy
-            // ExFor: Group.ParentProject
             // ExFor: Group.ShowSummary
             // ExFor: Group.ShowInMenu
             // ExSummary: Shows how to work with groups.
