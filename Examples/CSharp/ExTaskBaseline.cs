@@ -30,7 +30,7 @@
             var baseline = task.Baselines.ToList()[0];
             Console.WriteLine("Baseline Start: {0}", baseline.Start);
             Console.WriteLine("Baseline duration: {0}", baseline.Duration);
-            Console.WriteLine("Baseline duration format: {0}", baseline.DurationFormat);
+            Console.WriteLine("Baseline duration format: {0}", baseline.Duration.TimeUnit);
             Console.WriteLine("Is it estimated duration?: {0}", baseline.EstimatedDuration);
             Console.WriteLine("Baseline Finish: {0}", baseline.Finish);
 
