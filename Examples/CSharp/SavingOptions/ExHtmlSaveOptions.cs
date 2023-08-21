@@ -76,8 +76,6 @@
         public void SetDefaultFontDuringSavingAsHtml()
         {
             // ExStart:SetDefaultFontDuringSavingAsHtml
-            // ExFor: HtmlSaveOptions.DefaultFontName
-            // ExFor: HtmlSaveOptions.UseProjectDefaultFont
             // ExFor: HtmlSaveOptions.UseGradientBrush
             // ExSummary: Shows how to set custom font that will be used to export the project in HTML file.
             var project = new Project(DataDir + "EstimatedMilestoneTasks.mpp");
@@ -85,10 +83,11 @@
             var options = new HtmlSaveOptions
                               {
                                   PresentationFormat = PresentationFormat.GanttChart,
-                                  FitContent = true,
-                                  UseProjectDefaultFont = false,
-                                  DefaultFontName = "Segoe UI Black"
+                                  FitContent = true
                               };
+
+            options.FontSettings.UseProjectDefaultFont = false;
+            options.FontSettings.DefaultFontName = "Segoe UI Black";
             project.Save(OutDir + "AddDefaultFontDuringSavingAsHtml_out.html", options);
 
             // ExEnd:SetDefaultFontDuringSavingAsHtml

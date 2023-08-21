@@ -140,8 +140,6 @@
             // ExFor: SaveOptions.StartDate
             // ExFor: SaveOptions.EndDate
             // ExFor: SaveOptions.RenderToSinglePage
-            // ExFor: ImageSaveOptions.DefaultFontName
-            // ExFor: ImageSaveOptions.UseProjectDefaultFont
             // ExSummary: Shows how to save layout to separate files. 
             var project = new Project(DataDir + "Homemoveplan.mpp");
             var options = new ImageSaveOptions(SaveFileFormat.Png);
@@ -149,8 +147,8 @@
             options.EndDate = project.Get(Prj.FinishDate);
             options.MarkCriticalTasks = true;
             options.LegendOnEachPage = false;
-            options.DefaultFontName = "Segoe UI Black";
-            options.UseProjectDefaultFont = false;
+            options.FontSettings.DefaultFontName = "Segoe UI Black";
+            options.FontSettings.UseProjectDefaultFont = false;
             options.PageSize = PageSize.Letter;
 
             options.Gridlines = new List<Gridline>();

@@ -42,15 +42,18 @@
         public void AddDefaultFontDuringSavingAsPdf()
         {
             // ExStart: AddDefaultFontDuringSavingAsPdf
-            // ExFor: PdfSaveOptions.DefaultFontName
-            // ExFor: PdfSaveOptions.UseProjectDefaultFont
+            // ExFor: FontSettings.DefaultFontName
+            // ExFor: FontSettings.UseProjectDefaultFont
             // ExSummary: Shows how to set custom font that will be used for print of output pdf.
             var project = new Project(DataDir + "EstimatedMilestoneTasks.mpp");
 
             var options = new PdfSaveOptions
                               {
-                                  PresentationFormat = PresentationFormat.GanttChart, FitContent = true, UseProjectDefaultFont = false, DefaultFontName = "Segoe UI Black"
+                                  PresentationFormat = PresentationFormat.GanttChart, FitContent = true
                               };
+
+            options.FontSettings.UseProjectDefaultFont = false;
+            options.FontSettings.DefaultFontName = "Segoe UI Black";
             project.Save(OutDir + "CreateProject2_out.pdf", options);
 
             // ExEnd:AddDefaultFontDuringSavingAsPdf
@@ -60,34 +63,53 @@
         public void UseFontResolveCallback()
         {
             // ExStart: UseFontResolveCallback
-            // ExFor: PdfSaveOptions.FontResolveCallback
-            // ExFor: HtmlSaveOptions.FontResolveCallback
-            // ExFor: ImageSaveOptions.FontResolveCallback
+            // ExFor: FontSettings.FontResolveCallback
             // ExSummary: Shows how to set custom font resolve callback to execute user-defined code to set fallback font or to substitute the specific font.
             var project = new Project(DataDir + "EstimatedMilestoneTasks.mpp");
 
             var options = new PdfSaveOptions
             {
                 PresentationFormat = PresentationFormat.GanttChart,
-                FontResolveCallback = delegate(FontResolveEventArgs args)
-                {
-                    if (args.RequestedFontName != args.ResolvedFontName)
-                    {
-                        // Looks like the exact font cannot be found and fallback font was set.
-                        // We can override the fallback font.
-                        args.ResolvedFontName = "Arial";
-                    }
+            };
 
-                    // Or simply substitute the specific font:
-                    if (args.RequestedFontName == "Comic Sans MS")
-                    {
-                        args.ResolvedFontName = "Arial";
-                    }
+            options.FontSettings.FontResolveCallback = delegate(FontResolveEventArgs args)
+            {
+                if (args.RequestedFontName != args.ResolvedFontName)
+                {
+                    // Looks like the exact font cannot be found and fallback font was set.
+                    // We can override the fallback font.
+                    args.ResolvedFontName = "Arial";
+                }
+
+                // Or simply substitute the specific font:
+                if (args.RequestedFontName == "Comic Sans MS")
+                {
+                    args.ResolvedFontName = "Arial";
                 }
             };
 
             project.Save(OutDir + "EstimatedMilestoneTasks_out3.pdf", options);
             // ExEnd:UseFontResolveCallback
+        }
+
+        [Test]
+        public void UseCustomFontFolders()
+        {
+            // ExStart: UseCustomFontFolders
+            // ExFor: FontSettings.SetFontFolders(string[], bool)
+            // ExSummary: Shows how to set custom font folder.
+            var project = new Project(DataDir + "EstimatedMilestoneTasks.mpp");
+
+            var options = new PdfSaveOptions
+            {
+                PresentationFormat = PresentationFormat.GanttChart,
+            };
+
+            // TrueType font files for all fonts used in the opened project should be located in MyFonts folder.
+            options.FontSettings.SetFontFolders(new string[] { "c:\\MyFonts"}, true);
+
+            project.Save(OutDir + "EstimatedMilestoneTasks_out4.pdf", options);
+            // ExEnd:UseCustomFontFolders
         }
 
         [Test]
