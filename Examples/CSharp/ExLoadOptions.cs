@@ -1,4 +1,5 @@
-﻿using System.Threading;
+﻿using System.Text;
+using System.Threading;
 
 namespace Aspose.Tasks.Examples.CSharp
 {
@@ -74,6 +75,31 @@ namespace Aspose.Tasks.Examples.CSharp
             // cts.Cancel();
             var project = new Project(DataDir + "PrimaveraProject.xml", loadOptions);
             // ExEnd
+
+            foreach (var t in project.EnumerateAllChildTasks())
+            {
+                Console.WriteLine(t.Name);
+            }
+        }
+
+        [Test]
+        public void SpecifyFileEncoding()
+        {
+            // ExStart
+            // ExFor: LoadOptions.Encoding
+            // ExSummary: Shows how to specify encoding when opening a project from Primavera XER file.
+
+            LoadOptions lo = new LoadOptions();
+            lo.Encoding = Encoding.GetEncoding(1251);
+            lo.PrimaveraReadOptions = new PrimaveraReadOptions();
+            var project = new Project("encoding1251.xer", lo);
+
+            // ExEnd
+
+            foreach (var t in project.EnumerateAllChildTasks())
+            {
+                Console.WriteLine(t.Name);
+            }
         }
 
         // ExStart

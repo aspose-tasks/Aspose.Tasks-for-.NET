@@ -345,8 +345,8 @@
         }
 
         // ExStart
-        // ExFor: SaveOptions.SaveFormat
-        // ExFor: SaveOptions.TasksFilter
+        // ExFor: SimpleSaveOptions.SaveFormat
+        // ExFor: SimpleSaveOptions.TasksFilter
         // ExSummary: Shows how to use custom tasks filter while saving MS Project file. 
         [Test] // ExSkip
         public void WorkWithTasksFilter()
@@ -388,7 +388,7 @@
         // ExEnd
 
         // ExStart:SortTasksByColumnInGanttChart
-        // ExFor: SaveOptions.TasksComparer
+        // ExFor: SimpleSaveOptions.TasksComparer
         // ExSummary: Shows how to set a comparer to sort tasks on Gantt chart and/or Task Sheet chart.
         [Test] // ExSkip
         public void SortTasksByColumnInGanttChartExample()

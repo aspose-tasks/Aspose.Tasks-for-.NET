@@ -1,0 +1,3115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<APIBusinessObjects xmlns="http://xmlns.oracle.com/Primavera/P6Professional/V20.12/API/BusinessObjects" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.oracle.com/Primavera/P6Professional/V20.12/API/BusinessObjects http://xmlns.oracle.com/Primavera/P6Professional/V20.12/API/p6apibo.xsd">
+  <DisplayCurrency>
+    <Currency>
+      <DecimalPlaces>2</DecimalPlaces>
+      <DecimalSymbol>Period</DecimalSymbol>
+      <DigitGroupingSymbol>Comma</DigitGroupingSymbol>
+      <ExchangeRate>1</ExchangeRate>
+      <Id>USD</Id>
+      <Name>sdfDollar</Name>
+      <NegativeSymbol>(#1.1)</NegativeSymbol>
+      <ObjectId>1</ObjectId>
+      <PositiveSymbol>#1.1</PositiveSymbol>
+      <Symbol>$</Symbol>
+    </Currency>
+  </DisplayCurrency>
+  <UnitOfMeasure>
+    <Abbreviation>CY</Abbreviation>
+    <Name>Cubic Yards</Name>
+    <ObjectId>106</ObjectId>
+    <SequenceNumber>300</SequenceNumber>
+  </UnitOfMeasure>
+  <Currency>
+    <DecimalPlaces>2</DecimalPlaces>
+    <DecimalSymbol>Period</DecimalSymbol>
+    <DigitGroupingSymbol>Comma</DigitGroupingSymbol>
+    <ExchangeRate>1</ExchangeRate>
+    <Id>USD</Id>
+    <Name>sdfDollar</Name>
+    <NegativeSymbol>(#1.1)</NegativeSymbol>
+    <ObjectId>1</ObjectId>
+    <PositiveSymbol>#1.1</PositiveSymbol>
+    <Symbol>$</Symbol>
+  </Currency>
+  <Currency>
+    <DecimalPlaces>2</DecimalPlaces>
+    <DecimalSymbol>Period</DecimalSymbol>
+    <DigitGroupingSymbol>Comma</DigitGroupingSymbol>
+    <ExchangeRate>3.75</ExchangeRate>
+    <Id>SAR</Id>
+    <Name>SANITISED</Name>
+    <NegativeSymbol>(#1.1)</NegativeSymbol>
+    <ObjectId>30</ObjectId>
+    <PositiveSymbol>#1.1</PositiveSymbol>
+    <Symbol>SAR</Symbol>
+  </Currency>
+  <ExpenseCategory>
+    <Name>Facilities</Name>
+    <ObjectId>10</ObjectId>
+    <SequenceNumber>30000</SequenceNumber>
+  </ExpenseCategory>
+  <OBS>
+    <Description>&lt;html&gt;
+  &lt;head&gt;
+    
+  &lt;/head&gt;
+
+  &lt;body bgcolor="#ffffff"&gt;
+    Enterprise
+  &lt;/body&gt;
+
+&lt;/html&gt;</Description>
+    <GUID xsi:nil="true" />
+    <Name>Enterprise</Name>
+    <ObjectId>540</ObjectId>
+    <ParentObjectId xsi:nil="true" />
+    <SequenceNumber>0</SequenceNumber>
+  </OBS>
+  <Calendar>
+    <BaseCalendarObjectId xsi:nil="true" />
+    <HoursPerDay>8</HoursPerDay>
+    <HoursPerMonth>172</HoursPerMonth>
+    <HoursPerWeek>40</HoursPerWeek>
+    <HoursPerYear>2000</HoursPerYear>
+    <IsDefault>0</IsDefault>
+    <IsPersonal>0</IsPersonal>
+    <Name>Trades -  5 Day Workweek</Name>
+    <ObjectId>5829</ObjectId>
+    <ProjectObjectId xsi:nil="true" />
+    <Type>Global</Type>
+    <StandardWorkWeek>
+      <StandardWorkHours>
+        <DayOfWeek>Sunday</DayOfWeek>
+        <WorkTime xsi:nil="true" />
+      </StandardWorkHours>
+      <StandardWorkHours>
+        <DayOfWeek>Monday</DayOfWeek>
+        <WorkTime>
+          <Start>08:00:00</Start>
+          <Finish>11:59:00</Finish>
+        </WorkTime>
+        <WorkTime>
+          <Start>13:00:00</Start>
+          <Finish>16:59:00</Finish>
+        </WorkTime>
+      </StandardWorkHours>
+      <StandardWorkHours>
+        <DayOfWeek>Tuesday</DayOfWeek>
+        <WorkTime>
+          <Start>08:00:00</Start>
+          <Finish>11:59:00</Finish>
+        </WorkTime>
+        <WorkTime>
+          <Start>13:00:00</Start>
+          <Finish>16:59:00</Finish>
+        </WorkTime>
+      </StandardWorkHours>
+      <StandardWorkHours>
+        <DayOfWeek>Wednesday</DayOfWeek>
+        <WorkTime>
+          <Start>08:00:00</Start>
+          <Finish>11:59:00</Finish>
+        </WorkTime>
+        <WorkTime>
+          <Start>13:00:00</Start>
+          <Finish>16:59:00</Finish>
+        </WorkTime>
+      </StandardWorkHours>
+      <StandardWorkHours>
+        <DayOfWeek>Thursday</DayOfWeek>
+        <WorkTime>
+          <Start>08:00:00</Start>
+          <Finish>11:59:00</Finish>
+        </WorkTime>
+        <WorkTime>
+          <Start>13:00:00</Start>
+          <Finish>16:59:00</Finish>
+        </WorkTime>
+      </StandardWorkHours>
+      <StandardWorkHours>
+        <DayOfWeek>Friday</DayOfWeek>
+        <WorkTime>
+          <Start>08:00:00</Start>
+          <Finish>11:59:00</Finish>
+        </WorkTime>
+        <WorkTime>
+          <Start>13:00:00</Start>
+          <Finish>16:59:00</Finish>
+        </WorkTime>
+      </StandardWorkHours>
+      <StandardWorkHours>
+        <DayOfWeek>Saturday</DayOfWeek>
+        <WorkTime xsi:nil="true" />
+      </StandardWorkHours>
+    </StandardWorkWeek>
+    <HolidayOrExceptions>
+      <HolidayOrException>
+        <Date>2013-01-01T00:00:00</Date>
+        <WorkTime xsi:nil="true" />
+      </HolidayOrException>
+      <HolidayOrException>
+        <Date>2013-11-28T00:00:00</Date>
+        <WorkTime xsi:nil="true" />
+      </HolidayOrException>
+      <HolidayOrException>
+        <Date>2010-05-31T00:00:00</Date>
+        <WorkTime xsi:nil="true" />
+      </HolidayOrException>
+      <HolidayOrException>
+        <Date>2013-09-02T00:00:00</Date>
+        <WorkTime xsi:nil="true" />
+      </HolidayOrException>
+      <HolidayOrException>
+        <Date>2012-01-02T00:00:00</Date>
+        <WorkTime xsi:nil="true" />
+      </HolidayOrException>
+      <HolidayOrException>
+        <Date>2012-09-03T00:00:00</Date>
+        <WorkTime xsi:nil="true" />
+      </HolidayOrException>
+      <HolidayOrException>
+        <Date>2013-12-25T00:00:00</Date>
+        <WorkTime xsi:nil="true" />
+      </HolidayOrException>
+      <HolidayOrException>
+        <Date>2010-07-05T00:00:00</Date>
+        <WorkTime xsi:nil="true" />
+      </HolidayOrException>
+      <HolidayOrException>
+        <Date>2012-07-04T00:00:00</Date>
+        <WorkTime xsi:nil="true" />
+      </HolidayOrException>
+      <HolidayOrException>
+        <Date>2013-07-04T00:00:00</Date>
+        <WorkTime xsi:nil="true" />
+      </HolidayOrException>
+      <HolidayOrException>
+        <Date>2010-09-06T00:00:00</Date>
+        <WorkTime xsi:nil="true" />
+      </HolidayOrException>
+      <HolidayOrException>
+        <Date>2010-12-24T00:00:00</Date>
+        <WorkTime xsi:nil="true" />
+      </HolidayOrException>
+      <HolidayOrException>
+        <Date>2012-11-22T00:00:00</Date>
+        <WorkTime xsi:nil="true" />
+      </HolidayOrException>
+      <HolidayOrException>
+        <Date>2011-11-24T00:00:00</Date>
+        <WorkTime xsi:nil="true" />
+      </HolidayOrException>
+      <HolidayOrException>
+        <Date>2010-01-01T00:00:00</Date>
+        <WorkTime xsi:nil="true" />
+      </HolidayOrException>
+      <HolidayOrException>
+        <Date>2011-12-26T00:00:00</Date>
+        <WorkTime xsi:nil="true" />
+      </HolidayOrException>
+      <HolidayOrException>
+        <Date>2010-11-25T00:00:00</Date>
+        <WorkTime xsi:nil="true" />
+      </HolidayOrException>
+      <HolidayOrException>
+        <Date>2012-05-28T00:00:00</Date>
+        <WorkTime xsi:nil="true" />
+      </HolidayOrException>
+      <HolidayOrException>
+        <Date>2011-05-30T00:00:00</Date>
+        <WorkTime xsi:nil="true" />
+      </HolidayOrException>
+      <HolidayOrException>
+        <Date>2010-12-31T00:00:00</Date>
+        <WorkTime xsi:nil="true" />
+      </HolidayOrException>
+      <HolidayOrException>
+        <Date>2012-12-25T00:00:00</Date>
+        <WorkTime xsi:nil="true" />
+      </HolidayOrException>
+      <HolidayOrException>
+        <Date>2011-09-05T00:00:00</Date>
+        <WorkTime xsi:nil="true" />
+      </HolidayOrException>
+      <HolidayOrException>
+        <Date>2013-05-27T00:00:00</Date>
+        <WorkTime xsi:nil="true" />
+      </HolidayOrException>
+      <HolidayOrException>
+        <Date>2011-07-04T00:00:00</Date>
+        <WorkTime xsi:nil="true" />
+      </HolidayOrException>
+    </HolidayOrExceptions>
+  </Calendar>
+  <Calendar>
+    <BaseCalendarObjectId xsi:nil="true" />
+    <HoursPerDay>22</HoursPerDay>
+    <HoursPerMonth>660</HoursPerMonth>
+    <HoursPerWeek>154</HoursPerWeek>
+    <HoursPerYear>8030</HoursPerYear>
+    <IsDefault>0</IsDefault>
+    <IsPersonal>0</IsPersonal>
+    <Name>7x24</Name>
+    <ObjectId>6205</ObjectId>
+    <ProjectObjectId xsi:nil="true" />
+    <Type>Global</Type>
+    <StandardWorkWeek>
+      <StandardWorkHours>
+        <DayOfWeek>Sunday</DayOfWeek>
+        <WorkTime>
+          <Start>01:00:00</Start>
+          <Finish>11:59:00</Finish>
+        </WorkTime>
+        <WorkTime>
+          <Start>13:00:00</Start>
+          <Finish>23:59:00</Finish>
+        </WorkTime>
+      </StandardWorkHours>
+      <StandardWorkHours>
+        <DayOfWeek>Monday</DayOfWeek>
+        <WorkTime>
+          <Start>01:00:00</Start>
+          <Finish>11:59:00</Finish>
+        </WorkTime>
+        <WorkTime>
+          <Start>13:00:00</Start>
+          <Finish>23:59:00</Finish>
+        </WorkTime>
+      </StandardWorkHours>
+      <StandardWorkHours>
+        <DayOfWeek>Tuesday</DayOfWeek>
+        <WorkTime>
+          <Start>01:00:00</Start>
+          <Finish>11:59:00</Finish>
+        </WorkTime>
+        <WorkTime>
+          <Start>13:00:00</Start>
+          <Finish>23:59:00</Finish>
+        </WorkTime>
+      </StandardWorkHours>
+      <StandardWorkHours>
+        <DayOfWeek>Wednesday</DayOfWeek>
+        <WorkTime>
+          <Start>01:00:00</Start>
+          <Finish>11:59:00</Finish>
+        </WorkTime>
+        <WorkTime>
+          <Start>13:00:00</Start>
+          <Finish>23:59:00</Finish>
+        </WorkTime>
+      </StandardWorkHours>
+      <StandardWorkHours>
+        <DayOfWeek>Thursday</DayOfWeek>
+        <WorkTime>
+          <Start>01:00:00</Start>
+          <Finish>11:59:00</Finish>
+        </WorkTime>
+        <WorkTime>
+          <Start>13:00:00</Start>
+          <Finish>23:59:00</Finish>
+        </WorkTime>
+      </StandardWorkHours>
+      <StandardWorkHours>
+        <DayOfWeek>Friday</DayOfWeek>
+        <WorkTime>
+          <Start>01:00:00</Start>
+          <Finish>11:59:00</Finish>
+        </WorkTime>
+        <WorkTime>
+          <Start>13:00:00</Start>
+          <Finish>23:59:00</Finish>
+        </WorkTime>
+      </StandardWorkHours>
+      <StandardWorkHours>
+        <DayOfWeek>Saturday</DayOfWeek>
+        <WorkTime>
+          <Start>01:00:00</Start>
+          <Finish>11:59:00</Finish>
+        </WorkTime>
+        <WorkTime>
+          <Start>13:00:00</Start>
+          <Finish>23:59:00</Finish>
+        </WorkTime>
+      </StandardWorkHours>
+    </StandardWorkWeek>
+    <HolidayOrExceptions>
+      <HolidayOrException>
+        <Date>2012-09-03T00:00:00</Date>
+        <WorkTime xsi:nil="true" />
+      </HolidayOrException>
+      <HolidayOrException>
+        <Date>2012-01-02T00:00:00</Date>
+        <WorkTime xsi:nil="true" />
+      </HolidayOrException>
+      <HolidayOrException>
+        <Date>2010-09-06T00:00:00</Date>
+        <WorkTime xsi:nil="true" />
+      </HolidayOrException>
+      <HolidayOrException>
+        <Date>2010-12-24T00:00:00</Date>
+        <WorkTime xsi:nil="true" />
+      </HolidayOrException>
+      <HolidayOrException>
+        <Date>2010-01-01T00:00:00</Date>
+        <WorkTime xsi:nil="true" />
+      </HolidayOrException>
+      <HolidayOrException>
+        <Date>2011-12-26T00:00:00</Date>
+        <WorkTime xsi:nil="true" />
+      </HolidayOrException>
+      <HolidayOrException>
+        <Date>2010-12-31T00:00:00</Date>
+        <WorkTime xsi:nil="true" />
+      </HolidayOrException>
+      <HolidayOrException>
+        <Date>2011-09-05T00:00:00</Date>
+        <WorkTime xsi:nil="true" />
+      </HolidayOrException>
+      <HolidayOrException>
+        <Date>2013-05-27T00:00:00</Date>
+        <WorkTime xsi:nil="true" />
+      </HolidayOrException>
+      <HolidayOrException>
+        <Date>2001-04-11T00:00:00</Date>
+        <WorkTime>
+          <Start>08:00:00</Start>
+          <Finish>11:59:00</Finish>
+        </WorkTime>
+        <WorkTime>
+          <Start>13:00:00</Start>
+          <Finish>16:59:00</Finish>
+        </WorkTime>
+      </HolidayOrException>
+      <HolidayOrException>
+        <Date>2001-04-12T00:00:00</Date>
+        <WorkTime>
+          <Start>08:00:00</Start>
+          <Finish>11:59:00</Finish>
+        </WorkTime>
+        <WorkTime>
+          <Start>13:00:00</Start>
+          <Finish>16:59:00</Finish>
+        </WorkTime>
+      </HolidayOrException>
+      <HolidayOrException>
+        <Date>2001-04-13T00:00:00</Date>
+        <WorkTime>
+          <Start>08:00:00</Start>
+          <Finish>11:59:00</Finish>
+        </WorkTime>
+        <WorkTime>
+          <Start>13:00:00</Start>
+          <Finish>16:59:00</Finish>
+        </WorkTime>
+      </HolidayOrException>
+      <HolidayOrException>
+        <Date>2001-04-14T00:00:00</Date>
+        <WorkTime>
+          <Start>08:00:00</Start>
+          <Finish>11:59:00</Finish>
+        </WorkTime>
+        <WorkTime>
+          <Start>13:00:00</Start>
+          <Finish>16:59:00</Finish>
+        </WorkTime>
+      </HolidayOrException>
+      <HolidayOrException>
+        <Date>2001-04-15T00:00:00</Date>
+        <WorkTime>
+          <Start>08:00:00</Start>
+          <Finish>11:59:00</Finish>
+        </WorkTime>
+        <WorkTime>
+          <Start>13:00:00</Start>
+          <Finish>16:59:00</Finish>
+        </WorkTime>
+      </HolidayOrException>
+      <HolidayOrException>
+        <Date>2013-07-04T00:00:00</Date>
+        <WorkTime xsi:nil="true" />
+      </HolidayOrException>
+      <HolidayOrException>
+        <Date>2001-04-16T00:00:00</Date>
+        <WorkTime>
+          <Start>08:00:00</Start>
+          <Finish>11:59:00</Finish>
+        </WorkTime>
+        <WorkTime>
+          <Start>13:00:00</Start>
+          <Finish>16:59:00</Finish>
+        </WorkTime>
+      </HolidayOrException>
+      <HolidayOrException>
+        <Date>2001-04-17T00:00:00</Date>
+        <WorkTime>
+          <Start>08:00:00</Start>
+          <Finish>11:59:00</Finish>
+        </WorkTime>
+        <WorkTime>
+          <Start>13:00:00</Start>
+          <Finish>16:59:00</Finish>
+        </WorkTime>
+      </HolidayOrException>
+      <HolidayOrException>
+        <Date>2001-04-18T00:00:00</Date>
+        <WorkTime>
+          <Start>08:00:00</Start>
+          <Finish>11:59:00</Finish>
+        </WorkTime>
+        <WorkTime>
+          <Start>13:00:00</Start>
+          <Finish>16:59:00</Finish>
+        </WorkTime>
+      </HolidayOrException>
+      <HolidayOrException>
+        <Date>2001-04-19T00:00:00</Date>
+        <WorkTime>
+          <Start>08:00:00</Start>
+          <Finish>11:59:00</Finish>
+        </WorkTime>
+        <WorkTime>
+          <Start>13:00:00</Start>
+          <Finish>16:59:00</Finish>
+        </WorkTime>
+      </HolidayOrException>
+      <HolidayOrException>
+        <Date>2001-04-20T00:00:00</Date>
+        <WorkTime>
+          <Start>08:00:00</Start>
+          <Finish>11:59:00</Finish>
+        </WorkTime>
+        <WorkTime>
+          <Start>13:00:00</Start>
+          <Finish>16:59:00</Finish>
+        </WorkTime>
+      </HolidayOrException>
+      <HolidayOrException>
+        <Date>2001-04-21T00:00:00</Date>
+        <WorkTime>
+          <Start>08:00:00</Start>
+          <Finish>11:59:00</Finish>
+        </WorkTime>
+        <WorkTime>
+          <Start>13:00:00</Start>
+          <Finish>16:59:00</Finish>
+        </WorkTime>
+      </HolidayOrException>
+      <HolidayOrException>
+        <Date>2001-04-22T00:00:00</Date>
+        <WorkTime>
+          <Start>08:00:00</Start>
+          <Finish>11:59:00</Finish>
+        </WorkTime>
+        <WorkTime>
+          <Start>13:00:00</Start>
+          <Finish>16:59:00</Finish>
+        </WorkTime>
+      </HolidayOrException>
+      <HolidayOrException>
+        <Date>2001-04-23T00:00:00</Date>
+        <WorkTime>
+          <Start>08:00:00</Start>
+          <Finish>11:59:00</Finish>
+        </WorkTime>
+        <WorkTime>
+          <Start>13:00:00</Start>
+          <Finish>16:59:00</Finish>
+        </WorkTime>
+      </HolidayOrException>
+      <HolidayOrException>
+        <Date>2001-04-24T00:00:00</Date>
+        <WorkTime>
+          <Start>08:00:00</Start>
+          <Finish>11:59:00</Finish>
+        </WorkTime>
+        <WorkTime>
+          <Start>13:00:00</Start>
+          <Finish>16:59:00</Finish>
+        </WorkTime>
+      </HolidayOrException>
+      <HolidayOrException>
+        <Date>2012-05-28T00:00:00</Date>
+        <WorkTime xsi:nil="true" />
+      </HolidayOrException>
+      <HolidayOrException>
+        <Date>2001-04-25T00:00:00</Date>
+        <WorkTime>
+          <Start>08:00:00</Start>
+          <Finish>11:59:00</Finish>
+        </WorkTime>
+        <WorkTime>
+          <Start>13:00:00</Start>
+          <Finish>16:59:00</Finish>
+        </WorkTime>
+      </HolidayOrException>
+      <HolidayOrException>
+        <Date>2011-05-30T00:00:00</Date>
+        <WorkTime xsi:nil="true" />
+      </HolidayOrException>
+      <HolidayOrException>
+        <Date>2001-04-26T00:00:00</Date>
+        <WorkTime>
+          <Start>08:00:00</Start>
+          <Finish>11:59:00</Finish>
+        </WorkTime>
+        <WorkTime>
+          <Start>13:00:00</Start>
+          <Finish>16:59:00</Finish>
+        </WorkTime>
+      </HolidayOrException>
+      <HolidayOrException>
+        <Date>2001-04-28T00:00:00</Date>
+        <WorkTime>
+          <Start>08:00:00</Start>
+          <Finish>11:59:00</Finish>
+        </WorkTime>
+        <WorkTime>
+          <Start>13:00:00</Start>
+          <Finish>16:59:00</Finish>
+        </WorkTime>
+      </HolidayOrException>
+      <HolidayOrException>
+        <Date>2001-04-27T00:00:00</Date>
+        <WorkTime>
+          <Start>08:00:00</Start>
+          <Finish>11:59:00</Finish>
+        </WorkTime>
+        <WorkTime>
+          <Start>13:00:00</Start>
+          <Finish>16:59:00</Finish>
+        </WorkTime>
+      </HolidayOrException>
+      <HolidayOrException>
+        <Date>2001-04-30T00:00:00</Date>
+        <WorkTime>
+          <Start>08:00:00</Start>
+          <Finish>11:59:00</Finish>
+        </WorkTime>
+        <WorkTime>
+          <Start>13:00:00</Start>
+          <Finish>16:59:00</Finish>
+        </WorkTime>
+      </HolidayOrException>
+      <HolidayOrException>
+        <Date>2001-04-29T00:00:00</Date>
+        <WorkTime>
+          <Start>08:00:00</Start>
+          <Finish>11:59:00</Finish>
+        </WorkTime>
+        <WorkTime>
+          <Start>13:00:00</Start>
+          <Finish>16:59:00</Finish>
+        </WorkTime>
+      </HolidayOrException>
+      <HolidayOrException>
+        <Date>2013-09-02T00:00:00</Date>
+        <WorkTime xsi:nil="true" />
+      </HolidayOrException>
+      <HolidayOrException>
+        <Date>2013-12-25T00:00:00</Date>
+        <WorkTime xsi:nil="true" />
+      </HolidayOrException>
+      <HolidayOrException>
+        <Date>2010-07-05T00:00:00</Date>
+        <WorkTime xsi:nil="true" />
+      </HolidayOrException>
+      <HolidayOrException>
+        <Date>2012-07-04T00:00:00</Date>
+        <WorkTime xsi:nil="true" />
+      </HolidayOrException>
+      <HolidayOrException>
+        <Date>2012-11-22T00:00:00</Date>
+        <WorkTime xsi:nil="true" />
+      </HolidayOrException>
+      <HolidayOrException>
+        <Date>2001-04-09T00:00:00</Date>
+        <WorkTime>
+          <Start>08:00:00</Start>
+          <Finish>11:59:00</Finish>
+        </WorkTime>
+        <WorkTime>
+          <Start>13:00:00</Start>
+          <Finish>16:59:00</Finish>
+        </WorkTime>
+      </HolidayOrException>
+      <HolidayOrException>
+        <Date>2001-04-10T00:00:00</Date>
+        <WorkTime>
+          <Start>08:00:00</Start>
+          <Finish>11:59:00</Finish>
+        </WorkTime>
+        <WorkTime>
+          <Start>13:00:00</Start>
+          <Finish>16:59:00</Finish>
+        </WorkTime>
+      </HolidayOrException>
+      <HolidayOrException>
+        <Date>2001-04-07T00:00:00</Date>
+        <WorkTime>
+          <Start>08:00:00</Start>
+          <Finish>11:59:00</Finish>
+        </WorkTime>
+        <WorkTime>
+          <Start>13:00:00</Start>
+          <Finish>16:59:00</Finish>
+        </WorkTime>
+      </HolidayOrException>
+      <HolidayOrException>
+        <Date>2001-04-08T00:00:00</Date>
+        <WorkTime>
+          <Start>08:00:00</Start>
+          <Finish>11:59:00</Finish>
+        </WorkTime>
+        <WorkTime>
+          <Start>13:00:00</Start>
+          <Finish>16:59:00</Finish>
+        </WorkTime>
+      </HolidayOrException>
+      <HolidayOrException>
+        <Date>2001-04-05T00:00:00</Date>
+        <WorkTime>
+          <Start>08:00:00</Start>
+          <Finish>11:59:00</Finish>
+        </WorkTime>
+        <WorkTime>
+          <Start>13:00:00</Start>
+          <Finish>16:59:00</Finish>
+        </WorkTime>
+      </HolidayOrException>
+      <HolidayOrException>
+        <Date>2001-04-06T00:00:00</Date>
+        <WorkTime>
+          <Start>08:00:00</Start>
+          <Finish>11:59:00</Finish>
+        </WorkTime>
+        <WorkTime>
+          <Start>13:00:00</Start>
+          <Finish>16:59:00</Finish>
+        </WorkTime>
+      </HolidayOrException>
+      <HolidayOrException>
+        <Date>2001-04-03T00:00:00</Date>
+        <WorkTime>
+          <Start>08:00:00</Start>
+          <Finish>11:59:00</Finish>
+        </WorkTime>
+        <WorkTime>
+          <Start>13:00:00</Start>
+          <Finish>16:59:00</Finish>
+        </WorkTime>
+      </HolidayOrException>
+      <HolidayOrException>
+        <Date>2001-04-04T00:00:00</Date>
+        <WorkTime>
+          <Start>08:00:00</Start>
+          <Finish>11:59:00</Finish>
+        </WorkTime>
+        <WorkTime>
+          <Start>13:00:00</Start>
+          <Finish>16:59:00</Finish>
+        </WorkTime>
+      </HolidayOrException>
+      <HolidayOrException>
+        <Date>2001-04-01T00:00:00</Date>
+        <WorkTime>
+          <Start>08:00:00</Start>
+          <Finish>11:59:00</Finish>
+        </WorkTime>
+        <WorkTime>
+          <Start>13:00:00</Start>
+          <Finish>16:59:00</Finish>
+        </WorkTime>
+      </HolidayOrException>
+      <HolidayOrException>
+        <Date>2001-04-02T00:00:00</Date>
+        <WorkTime>
+          <Start>08:00:00</Start>
+          <Finish>11:59:00</Finish>
+        </WorkTime>
+        <WorkTime>
+          <Start>13:00:00</Start>
+          <Finish>16:59:00</Finish>
+        </WorkTime>
+      </HolidayOrException>
+      <HolidayOrException>
+        <Date>2011-07-04T00:00:00</Date>
+        <WorkTime xsi:nil="true" />
+      </HolidayOrException>
+      <HolidayOrException>
+        <Date>2013-01-01T00:00:00</Date>
+        <WorkTime xsi:nil="true" />
+      </HolidayOrException>
+      <HolidayOrException>
+        <Date>2013-11-28T00:00:00</Date>
+        <WorkTime xsi:nil="true" />
+      </HolidayOrException>
+      <HolidayOrException>
+        <Date>2010-05-31T00:00:00</Date>
+        <WorkTime xsi:nil="true" />
+      </HolidayOrException>
+      <HolidayOrException>
+        <Date>2011-11-24T00:00:00</Date>
+        <WorkTime xsi:nil="true" />
+      </HolidayOrException>
+      <HolidayOrException>
+        <Date>2010-11-25T00:00:00</Date>
+        <WorkTime xsi:nil="true" />
+      </HolidayOrException>
+      <HolidayOrException>
+        <Date>2012-12-25T00:00:00</Date>
+        <WorkTime xsi:nil="true" />
+      </HolidayOrException>
+    </HolidayOrExceptions>
+  </Calendar>
+  <Calendar>
+    <BaseCalendarObjectId xsi:nil="true" />
+    <HoursPerDay>10</HoursPerDay>
+    <HoursPerMonth>260</HoursPerMonth>
+    <HoursPerWeek>60</HoursPerWeek>
+    <HoursPerYear>3120</HoursPerYear>
+    <IsDefault>0</IsDefault>
+    <IsPersonal>0</IsPersonal>
+    <Name>SANITISED</Name>
+    <ObjectId>6590</ObjectId>
+    <ProjectObjectId xsi:nil="true" />
+    <Type>Global</Type>
+    <StandardWorkWeek>
+      <StandardWorkHours>
+        <DayOfWeek>Sunday</DayOfWeek>
+        <WorkTime>
+          <Start>07:00:00</Start>
+          <Finish>16:59:00</Finish>
+        </WorkTime>
+      </StandardWorkHours>
+      <StandardWorkHours>
+        <DayOfWeek>Monday</DayOfWeek>
+        <WorkTime>
+          <Start>07:00:00</Start>
+          <Finish>16:59:00</Finish>
+        </WorkTime>
+      </StandardWorkHours>
+      <StandardWorkHours>
+        <DayOfWeek>Tuesday</DayOfWeek>
+        <WorkTime>
+          <Start>07:00:00</Start>
+          <Finish>16:59:00</Finish>
+        </WorkTime>
+      </StandardWorkHours>
+      <StandardWorkHours>
+        <DayOfWeek>Wednesday</DayOfWeek>
+        <WorkTime>
+          <Start>07:00:00</Start>
+          <Finish>16:59:00</Finish>
+        </WorkTime>
+      </StandardWorkHours>
+      <StandardWorkHours>
+        <DayOfWeek>Thursday</DayOfWeek>
+        <WorkTime>
+          <Start>07:00:00</Start>
+          <Finish>16:59:00</Finish>
+        </WorkTime>
+      </StandardWorkHours>
+      <StandardWorkHours>
+        <DayOfWeek>Friday</DayOfWeek>
+        <WorkTime>
+          <Start>07:00:00</Start>
+          <Finish>16:59:00</Finish>
+        </WorkTime>
+      </StandardWorkHours>
+      <StandardWorkHours>
+        <DayOfWeek>Saturday</DayOfWeek>
+        <WorkTime>
+          <Start>07:00:00</Start>
+          <Finish>16:59:00</Finish>
+        </WorkTime>
+      </StandardWorkHours>
+    </StandardWorkWeek>
+    <HolidayOrExceptions>
+      <HolidayOrException>
+        <Date>2014-07-28T00:00:00</Date>
+        <WorkTime xsi:nil="true" />
+      </HolidayOrException>
+      <HolidayOrException>
+        <Date>2014-07-29T00:00:00</Date>
+        <WorkTime xsi:nil="true" />
+      </HolidayOrException>
+      <HolidayOrException>
+        <Date>2014-07-30T00:00:00</Date>
+        <WorkTime xsi:nil="true" />
+      </HolidayOrException>
+      <HolidayOrException>
+        <Date>2014-07-31T00:00:00</Date>
+        <WorkTime xsi:nil="true" />
+      </HolidayOrException>
+      <HolidayOrException>
+        <Date>2016-07-07T00:00:00</Date>
+        <WorkTime xsi:nil="true" />
+      </HolidayOrException>
+      <HolidayOrException>
+        <Date>2016-07-09T00:00:00</Date>
+        <WorkTime xsi:nil="true" />
+      </HolidayOrException>
+      <HolidayOrException>
+        <Date>2016-09-13T00:00:00</Date>
+        <WorkTime xsi:nil="true" />
+      </HolidayOrException>
+      <HolidayOrException>
+        <Date>2016-09-14T00:00:00</Date>
+        <WorkTime xsi:nil="true" />
+      </HolidayOrException>
+      <HolidayOrException>
+        <Date>2016-09-15T00:00:00</Date>
+        <WorkTime xsi:nil="true" />
+      </HolidayOrException>
+      <HolidayOrException>
+        <Date>2017-02-19T00:00:00</Date>
+        <WorkTime>
+          <Start>07:00:00</Start>
+          <Finish>16:59:00</Finish>
+        </WorkTime>
+      </HolidayOrException>
+      <HolidayOrException>
+        <Date>2017-06-26T00:00:00</Date>
+        <WorkTime xsi:nil="true" />
+      </HolidayOrException>
+      <HolidayOrException>
+        <Date>2017-06-27T00:00:00</Date>
+        <WorkTime xsi:nil="true" />
+      </HolidayOrException>
+      <HolidayOrException>
+        <Date>2017-06-28T00:00:00</Date>
+        <WorkTime xsi:nil="true" />
+      </HolidayOrException>
+      <HolidayOrException>
+        <Date>2017-09-02T00:00:00</Date>
+        <WorkTime xsi:nil="true" />
+      </HolidayOrException>
+      <HolidayOrException>
+        <Date>2017-09-03T00:00:00</Date>
+        <WorkTime xsi:nil="true" />
+      </HolidayOrException>
+      <HolidayOrException>
+        <Date>2017-09-04T00:00:00</Date>
+        <WorkTime xsi:nil="true" />
+      </HolidayOrException>
+      <HolidayOrException>
+        <Date>2017-09-23T00:00:00</Date>
+        <WorkTime xsi:nil="true" />
+      </HolidayOrException>
+      <HolidayOrException>
+        <Date>2018-08-19T00:00:00</Date>
+        <WorkTime xsi:nil="true" />
+      </HolidayOrException>
+      <HolidayOrException>
+        <Date>2018-08-20T00:00:00</Date>
+        <WorkTime xsi:nil="true" />
+      </HolidayOrException>
+      <HolidayOrException>
+        <Date>2018-08-21T00:00:00</Date>
+        <WorkTime xsi:nil="true" />
+      </HolidayOrException>
+      <HolidayOrException>
+        <Date>2018-08-22T00:00:00</Date>
+        <WorkTime xsi:nil="true" />
+      </HolidayOrException>
+    </HolidayOrExceptions>
+  </Calendar>
+  <Calendar>
+    <BaseCalendarObjectId xsi:nil="true" />
+    <HoursPerDay>8</HoursPerDay>
+    <HoursPerMonth>172</HoursPerMonth>
+    <HoursPerWeek>40</HoursPerWeek>
+    <HoursPerYear>2000</HoursPerYear>
+    <IsDefault>1</IsDefault>
+    <IsPersonal>0</IsPersonal>
+    <Name>Corporate - Standard Full Time</Name>
+    <ObjectId>178</ObjectId>
+    <ProjectObjectId xsi:nil="true" />
+    <Type>Global</Type>
+    <StandardWorkWeek>
+      <StandardWorkHours>
+        <DayOfWeek>Sunday</DayOfWeek>
+        <WorkTime xsi:nil="true" />
+      </StandardWorkHours>
+      <StandardWorkHours>
+        <DayOfWeek>Monday</DayOfWeek>
+        <WorkTime>
+          <Start>08:00:00</Start>
+          <Finish>15:59:00</Finish>
+        </WorkTime>
+      </StandardWorkHours>
+      <StandardWorkHours>
+        <DayOfWeek>Tuesday</DayOfWeek>
+        <WorkTime>
+          <Start>08:00:00</Start>
+          <Finish>15:59:00</Finish>
+        </WorkTime>
+      </StandardWorkHours>
+      <StandardWorkHours>
+        <DayOfWeek>Wednesday</DayOfWeek>
+        <WorkTime>
+          <Start>08:00:00</Start>
+          <Finish>15:59:00</Finish>
+        </WorkTime>
+      </StandardWorkHours>
+      <StandardWorkHours>
+        <DayOfWeek>Thursday</DayOfWeek>
+        <WorkTime>
+          <Start>08:00:00</Start>
+          <Finish>15:59:00</Finish>
+        </WorkTime>
+      </StandardWorkHours>
+      <StandardWorkHours>
+        <DayOfWeek>Friday</DayOfWeek>
+        <WorkTime>
+          <Start>08:00:00</Start>
+          <Finish>15:59:00</Finish>
+        </WorkTime>
+      </StandardWorkHours>
+      <StandardWorkHours>
+        <DayOfWeek>Saturday</DayOfWeek>
+        <WorkTime xsi:nil="true" />
+      </StandardWorkHours>
+    </StandardWorkWeek>
+    <HolidayOrExceptions>
+      <HolidayOrException>
+        <Date>2013-09-02T00:00:00</Date>
+        <WorkTime xsi:nil="true" />
+      </HolidayOrException>
+      <HolidayOrException>
+        <Date>2012-09-03T00:00:00</Date>
+        <WorkTime xsi:nil="true" />
+      </HolidayOrException>
+      <HolidayOrException>
+        <Date>2010-07-05T00:00:00</Date>
+        <WorkTime xsi:nil="true" />
+      </HolidayOrException>
+      <HolidayOrException>
+        <Date>2012-01-02T00:00:00</Date>
+        <WorkTime xsi:nil="true" />
+      </HolidayOrException>
+      <HolidayOrException>
+        <Date>2013-12-25T00:00:00</Date>
+        <WorkTime xsi:nil="true" />
+      </HolidayOrException>
+      <HolidayOrException>
+        <Date>2012-07-04T00:00:00</Date>
+        <WorkTime xsi:nil="true" />
+      </HolidayOrException>
+      <HolidayOrException>
+        <Date>2010-09-06T00:00:00</Date>
+        <WorkTime xsi:nil="true" />
+      </HolidayOrException>
+      <HolidayOrException>
+        <Date>2010-12-24T00:00:00</Date>
+        <WorkTime xsi:nil="true" />
+      </HolidayOrException>
+      <HolidayOrException>
+        <Date>2012-11-22T00:00:00</Date>
+        <WorkTime xsi:nil="true" />
+      </HolidayOrException>
+      <HolidayOrException>
+        <Date>2010-01-01T00:00:00</Date>
+        <WorkTime xsi:nil="true" />
+      </HolidayOrException>
+      <HolidayOrException>
+        <Date>2011-12-26T00:00:00</Date>
+        <WorkTime xsi:nil="true" />
+      </HolidayOrException>
+      <HolidayOrException>
+        <Date>2010-12-31T00:00:00</Date>
+        <WorkTime xsi:nil="true" />
+      </HolidayOrException>
+      <HolidayOrException>
+        <Date>2011-09-05T00:00:00</Date>
+        <WorkTime xsi:nil="true" />
+      </HolidayOrException>
+      <HolidayOrException>
+        <Date>2013-05-27T00:00:00</Date>
+        <WorkTime xsi:nil="true" />
+      </HolidayOrException>
+      <HolidayOrException>
+        <Date>2011-07-04T00:00:00</Date>
+        <WorkTime xsi:nil="true" />
+      </HolidayOrException>
+      <HolidayOrException>
+        <Date>2013-01-01T00:00:00</Date>
+        <WorkTime xsi:nil="true" />
+      </HolidayOrException>
+      <HolidayOrException>
+        <Date>2013-11-28T00:00:00</Date>
+        <WorkTime xsi:nil="true" />
+      </HolidayOrException>
+      <HolidayOrException>
+        <Date>2010-05-31T00:00:00</Date>
+        <WorkTime xsi:nil="true" />
+      </HolidayOrException>
+      <HolidayOrException>
+        <Date>2013-07-04T00:00:00</Date>
+        <WorkTime xsi:nil="true" />
+      </HolidayOrException>
+      <HolidayOrException>
+        <Date>2011-11-24T00:00:00</Date>
+        <WorkTime xsi:nil="true" />
+      </HolidayOrException>
+      <HolidayOrException>
+        <Date>2010-11-25T00:00:00</Date>
+        <WorkTime xsi:nil="true" />
+      </HolidayOrException>
+      <HolidayOrException>
+        <Date>2012-05-28T00:00:00</Date>
+        <WorkTime xsi:nil="true" />
+      </HolidayOrException>
+      <HolidayOrException>
+        <Date>2011-05-30T00:00:00</Date>
+        <WorkTime xsi:nil="true" />
+      </HolidayOrException>
+      <HolidayOrException>
+        <Date>2012-12-25T00:00:00</Date>
+        <WorkTime xsi:nil="true" />
+      </HolidayOrException>
+    </HolidayOrExceptions>
+  </Calendar>
+  <Calendar>
+    <BaseCalendarObjectId xsi:nil="true" />
+    <HoursPerDay>8</HoursPerDay>
+    <HoursPerMonth>208</HoursPerMonth>
+    <HoursPerWeek>48</HoursPerWeek>
+    <HoursPerYear>2503</HoursPerYear>
+    <IsDefault>0</IsDefault>
+    <IsPersonal>0</IsPersonal>
+    <Name>CP10B05 ANA 6 DAY</Name>
+    <ObjectId>7377</ObjectId>
+    <ProjectObjectId xsi:nil="true" />
+    <Type>Global</Type>
+    <StandardWorkWeek>
+      <StandardWorkHours>
+        <DayOfWeek>Sunday</DayOfWeek>
+        <WorkTime>
+          <Start>08:00:00</Start>
+          <Finish>11:59:00</Finish>
+        </WorkTime>
+        <WorkTime>
+          <Start>13:00:00</Start>
+          <Finish>16:59:00</Finish>
+        </WorkTime>
+      </StandardWorkHours>
+      <StandardWorkHours>
+        <DayOfWeek>Monday</DayOfWeek>
+        <WorkTime>
+          <Start>08:00:00</Start>
+          <Finish>11:59:00</Finish>
+        </WorkTime>
+        <WorkTime>
+          <Start>13:00:00</Start>
+          <Finish>16:59:00</Finish>
+        </WorkTime>
+      </StandardWorkHours>
+      <StandardWorkHours>
+        <DayOfWeek>Tuesday</DayOfWeek>
+        <WorkTime>
+          <Start>08:00:00</Start>
+          <Finish>11:59:00</Finish>
+        </WorkTime>
+        <WorkTime>
+          <Start>13:00:00</Start>
+          <Finish>16:59:00</Finish>
+        </WorkTime>
+      </StandardWorkHours>
+      <StandardWorkHours>
+        <DayOfWeek>Wednesday</DayOfWeek>
+        <WorkTime>
+          <Start>08:00:00</Start>
+          <Finish>11:59:00</Finish>
+        </WorkTime>
+        <WorkTime>
+          <Start>13:00:00</Start>
+          <Finish>16:59:00</Finish>
+        </WorkTime>
+      </StandardWorkHours>
+      <StandardWorkHours>
+        <DayOfWeek>Thursday</DayOfWeek>
+        <WorkTime>
+          <Start>08:00:00</Start>
+          <Finish>11:59:00</Finish>
+        </WorkTime>
+        <WorkTime>
+          <Start>13:00:00</Start>
+          <Finish>16:59:00</Finish>
+        </WorkTime>
+      </StandardWorkHours>
+      <StandardWorkHours>
+        <DayOfWeek>Friday</DayOfWeek>
+        <WorkTime xsi:nil="true" />
+      </StandardWorkHours>
+      <StandardWorkHours>
+        <DayOfWeek>Saturday</DayOfWeek>
+        <WorkTime>
+          <Start>08:00:00</Start>
+          <Finish>11:59:00</Finish>
+        </WorkTime>
+        <WorkTime>
+          <Start>13:00:00</Start>
+          <Finish>16:59:00</Finish>
+        </WorkTime>
+      </StandardWorkHours>
+    </StandardWorkWeek>
+    <HolidayOrExceptions>
+      <HolidayOrException>
+        <Date>2012-01-02T00:00:00</Date>
+        <WorkTime xsi:nil="true" />
+      </HolidayOrException>
+      <HolidayOrException>
+        <Date>2012-08-20T00:00:00</Date>
+        <WorkTime xsi:nil="true" />
+      </HolidayOrException>
+      <HolidayOrException>
+        <Date>2012-08-21T00:00:00</Date>
+        <WorkTime xsi:nil="true" />
+      </HolidayOrException>
+      <HolidayOrException>
+        <Date>2012-10-26T00:00:00</Date>
+        <WorkTime xsi:nil="true" />
+      </HolidayOrException>
+      <HolidayOrException>
+        <Date>2012-10-29T00:00:00</Date>
+        <WorkTime xsi:nil="true" />
+      </HolidayOrException>
+      <HolidayOrException>
+        <Date>2012-12-18T00:00:00</Date>
+        <WorkTime xsi:nil="true" />
+      </HolidayOrException>
+      <HolidayOrException>
+        <Date>2013-01-01T00:00:00</Date>
+        <WorkTime xsi:nil="true" />
+      </HolidayOrException>
+      <HolidayOrException>
+        <Date>2013-08-08T00:00:00</Date>
+        <WorkTime xsi:nil="true" />
+      </HolidayOrException>
+      <HolidayOrException>
+        <Date>2013-08-09T00:00:00</Date>
+        <WorkTime xsi:nil="true" />
+      </HolidayOrException>
+      <HolidayOrException>
+        <Date>2013-10-14T00:00:00</Date>
+        <WorkTime>
+          <Start>08:00:00</Start>
+          <Finish>15:59:00</Finish>
+        </WorkTime>
+      </HolidayOrException>
+      <HolidayOrException>
+        <Date>2013-10-15T00:00:00</Date>
+        <WorkTime xsi:nil="true" />
+      </HolidayOrException>
+      <HolidayOrException>
+        <Date>2013-10-16T00:00:00</Date>
+        <WorkTime xsi:nil="true" />
+      </HolidayOrException>
+      <HolidayOrException>
+        <Date>2013-10-17T00:00:00</Date>
+        <WorkTime xsi:nil="true" />
+      </HolidayOrException>
+      <HolidayOrException>
+        <Date>2013-12-18T00:00:00</Date>
+        <WorkTime xsi:nil="true" />
+      </HolidayOrException>
+      <HolidayOrException>
+        <Date>2014-01-01T00:00:00</Date>
+        <WorkTime>
+          <Start>08:00:00</Start>
+          <Finish>15:59:00</Finish>
+        </WorkTime>
+      </HolidayOrException>
+      <HolidayOrException>
+        <Date>2014-07-28T00:00:00</Date>
+        <WorkTime xsi:nil="true" />
+      </HolidayOrException>
+      <HolidayOrException>
+        <Date>2014-07-29T00:00:00</Date>
+        <WorkTime xsi:nil="true" />
+      </HolidayOrException>
+      <HolidayOrException>
+        <Date>2014-07-30T00:00:00</Date>
+        <WorkTime xsi:nil="true" />
+      </HolidayOrException>
+      <HolidayOrException>
+        <Date>2014-09-20T00:00:00</Date>
+        <WorkTime>
+          <Start>08:00:00</Start>
+          <Finish>15:59:00</Finish>
+        </WorkTime>
+      </HolidayOrException>
+      <HolidayOrException>
+        <Date>2014-10-03T00:00:00</Date>
+        <WorkTime xsi:nil="true" />
+      </HolidayOrException>
+      <HolidayOrException>
+        <Date>2014-10-04T00:00:00</Date>
+        <WorkTime xsi:nil="true" />
+      </HolidayOrException>
+      <HolidayOrException>
+        <Date>2014-10-05T00:00:00</Date>
+        <WorkTime xsi:nil="true" />
+      </HolidayOrException>
+      <HolidayOrException>
+        <Date>2014-10-06T00:00:00</Date>
+        <WorkTime xsi:nil="true" />
+      </HolidayOrException>
+      <HolidayOrException>
+        <Date>2014-12-18T00:00:00</Date>
+        <WorkTime xsi:nil="true" />
+      </HolidayOrException>
+      <HolidayOrException>
+        <Date>2015-07-17T00:00:00</Date>
+        <WorkTime xsi:nil="true" />
+      </HolidayOrException>
+      <HolidayOrException>
+        <Date>2015-07-18T00:00:00</Date>
+        <WorkTime xsi:nil="true" />
+      </HolidayOrException>
+      <HolidayOrException>
+        <Date>2015-07-19T00:00:00</Date>
+        <WorkTime xsi:nil="true" />
+      </HolidayOrException>
+      <HolidayOrException>
+        <Date>2015-07-20T00:00:00</Date>
+        <WorkTime xsi:nil="true" />
+      </HolidayOrException>
+      <HolidayOrException>
+        <Date>2015-09-23T00:00:00</Date>
+        <WorkTime xsi:nil="true" />
+      </HolidayOrException>
+      <HolidayOrException>
+        <Date>2015-09-24T00:00:00</Date>
+        <WorkTime xsi:nil="true" />
+      </HolidayOrException>
+      <HolidayOrException>
+        <Date>2015-09-25T00:00:00</Date>
+        <WorkTime xsi:nil="true" />
+      </HolidayOrException>
+      <HolidayOrException>
+        <Date>2015-12-18T00:00:00</Date>
+        <WorkTime xsi:nil="true" />
+      </HolidayOrException>
+      <HolidayOrException>
+        <Date>2016-01-01T00:00:00</Date>
+        <WorkTime xsi:nil="true" />
+      </HolidayOrException>
+      <HolidayOrException>
+        <Date>2016-12-19T00:00:00</Date>
+        <WorkTime xsi:nil="true" />
+      </HolidayOrException>
+      <HolidayOrException>
+        <Date>2017-01-02T00:00:00</Date>
+        <WorkTime xsi:nil="true" />
+      </HolidayOrException>
+      <HolidayOrException>
+        <Date>2017-12-18T00:00:00</Date>
+        <WorkTime xsi:nil="true" />
+      </HolidayOrException>
+      <HolidayOrException>
+        <Date>2018-01-01T00:00:00</Date>
+        <WorkTime xsi:nil="true" />
+      </HolidayOrException>
+      <HolidayOrException>
+        <Date>2018-12-18T00:00:00</Date>
+        <WorkTime xsi:nil="true" />
+      </HolidayOrException>
+      <HolidayOrException>
+        <Date>2019-01-01T00:00:00</Date>
+        <WorkTime xsi:nil="true" />
+      </HolidayOrException>
+      <HolidayOrException>
+        <Date>2019-12-18T00:00:00</Date>
+        <WorkTime xsi:nil="true" />
+      </HolidayOrException>
+      <HolidayOrException>
+        <Date>2020-01-01T00:00:00</Date>
+        <WorkTime xsi:nil="true" />
+      </HolidayOrException>
+      <HolidayOrException>
+        <Date>2020-12-18T00:00:00</Date>
+        <WorkTime xsi:nil="true" />
+      </HolidayOrException>
+      <HolidayOrException>
+        <Date>2021-01-01T00:00:00</Date>
+        <WorkTime xsi:nil="true" />
+      </HolidayOrException>
+      <HolidayOrException>
+        <Date>2021-12-17T00:00:00</Date>
+        <WorkTime xsi:nil="true" />
+      </HolidayOrException>
+      <HolidayOrException>
+        <Date>2021-12-31T00:00:00</Date>
+        <WorkTime xsi:nil="true" />
+      </HolidayOrException>
+      <HolidayOrException>
+        <Date>2022-12-19T00:00:00</Date>
+        <WorkTime xsi:nil="true" />
+      </HolidayOrException>
+    </HolidayOrExceptions>
+  </Calendar>
+  <Resource>
+    <AutoComputeActuals>1</AutoComputeActuals>
+    <CalculateCostFromUnits>1</CalculateCostFromUnits>
+    <CalendarObjectId>5829</CalendarObjectId>
+    <CurrencyObjectId>1</CurrencyObjectId>
+    <DefaultUnitsPerTime>1</DefaultUnitsPerTime>
+    <EmailAddress />
+    <EmployeeId />
+    <GUID>{95F4CB4C-FC94-44DD-8A3D-A50DD00FCD1D}</GUID>
+    <Id>R-3</Id>
+    <IsActive>1</IsActive>
+    <IsOverTimeAllowed>0</IsOverTimeAllowed>
+    <Name>Electrician</Name>
+    <ObjectId>8277</ObjectId>
+    <OfficePhone />
+    <OtherPhone />
+    <OvertimeFactor>0</OvertimeFactor>
+    <ParentObjectId>8276</ParentObjectId>
+    <PrimaryRoleObjectId xsi:nil="true" />
+    <ResourceNotes />
+    <ResourceType>Labor</ResourceType>
+    <SequenceNumber>0</SequenceNumber>
+    <ShiftObjectId xsi:nil="true" />
+    <TimesheetApprovalManagerObjectId xsi:nil="true" />
+    <Title />
+    <UnitOfMeasureObjectId xsi:nil="true" />
+    <UseTimesheets>0</UseTimesheets>
+    <UserObjectId xsi:nil="true" />
+  </Resource>
+  <Resource>
+    <AutoComputeActuals>1</AutoComputeActuals>
+    <CalculateCostFromUnits>1</CalculateCostFromUnits>
+    <CalendarObjectId>5829</CalendarObjectId>
+    <CurrencyObjectId>1</CurrencyObjectId>
+    <DefaultUnitsPerTime>1</DefaultUnitsPerTime>
+    <EmailAddress />
+    <EmployeeId />
+    <GUID>{A119FBB1-42E2-4C0E-9D18-8F473CF96E68}</GUID>
+    <Id>R-4</Id>
+    <IsActive>1</IsActive>
+    <IsOverTimeAllowed>0</IsOverTimeAllowed>
+    <Name>Painter</Name>
+    <ObjectId>8278</ObjectId>
+    <OfficePhone />
+    <OtherPhone />
+    <OvertimeFactor>0</OvertimeFactor>
+    <ParentObjectId>8277</ParentObjectId>
+    <PrimaryRoleObjectId xsi:nil="true" />
+    <ResourceNotes />
+    <ResourceType>Labor</ResourceType>
+    <SequenceNumber>0</SequenceNumber>
+    <ShiftObjectId xsi:nil="true" />
+    <TimesheetApprovalManagerObjectId xsi:nil="true" />
+    <Title />
+    <UnitOfMeasureObjectId xsi:nil="true" />
+    <UseTimesheets>0</UseTimesheets>
+    <UserObjectId xsi:nil="true" />
+  </Resource>
+  <Resource>
+    <AutoComputeActuals>1</AutoComputeActuals>
+    <CalculateCostFromUnits>1</CalculateCostFromUnits>
+    <CalendarObjectId>7377</CalendarObjectId>
+    <CurrencyObjectId>1</CurrencyObjectId>
+    <DefaultUnitsPerTime>1</DefaultUnitsPerTime>
+    <EmailAddress />
+    <EmployeeId />
+    <GUID>{2744898B-3924-4428-A190-F6A255E2DFC4}</GUID>
+    <Id>NLB1</Id>
+    <IsActive>1</IsActive>
+    <IsOverTimeAllowed>0</IsOverTimeAllowed>
+    <Name>Nakheel Landscapes</Name>
+    <ObjectId>8224</ObjectId>
+    <OfficePhone />
+    <OtherPhone />
+    <OvertimeFactor>0</OvertimeFactor>
+    <ParentObjectId xsi:nil="true" />
+    <PrimaryRoleObjectId xsi:nil="true" />
+    <ResourceNotes />
+    <ResourceType>Labor</ResourceType>
+    <SequenceNumber>0</SequenceNumber>
+    <ShiftObjectId xsi:nil="true" />
+    <TimesheetApprovalManagerObjectId xsi:nil="true" />
+    <Title />
+    <UnitOfMeasureObjectId xsi:nil="true" />
+    <UseTimesheets>0</UseTimesheets>
+    <UserObjectId xsi:nil="true" />
+  </Resource>
+  <Resource>
+    <AutoComputeActuals>1</AutoComputeActuals>
+    <CalculateCostFromUnits>1</CalculateCostFromUnits>
+    <CalendarObjectId>7377</CalendarObjectId>
+    <CurrencyObjectId>1</CurrencyObjectId>
+    <DefaultUnitsPerTime>1</DefaultUnitsPerTime>
+    <EmailAddress />
+    <EmployeeId />
+    <GUID>{FB1EBC4D-6056-4D3B-8E46-EB474975944B}</GUID>
+    <Id>EQ-B1</Id>
+    <IsActive>1</IsActive>
+    <IsOverTimeAllowed>0</IsOverTimeAllowed>
+    <Name>Equipment</Name>
+    <ObjectId>8225</ObjectId>
+    <OfficePhone />
+    <OtherPhone />
+    <OvertimeFactor>0</OvertimeFactor>
+    <ParentObjectId>8224</ParentObjectId>
+    <PrimaryRoleObjectId xsi:nil="true" />
+    <ResourceNotes />
+    <ResourceType>Nonlabor</ResourceType>
+    <SequenceNumber>4</SequenceNumber>
+    <ShiftObjectId xsi:nil="true" />
+    <TimesheetApprovalManagerObjectId xsi:nil="true" />
+    <Title />
+    <UnitOfMeasureObjectId xsi:nil="true" />
+    <UseTimesheets>0</UseTimesheets>
+    <UserObjectId xsi:nil="true" />
+  </Resource>
+  <Resource>
+    <AutoComputeActuals>1</AutoComputeActuals>
+    <CalculateCostFromUnits>1</CalculateCostFromUnits>
+    <CalendarObjectId>7377</CalendarObjectId>
+    <CurrencyObjectId>1</CurrencyObjectId>
+    <DefaultUnitsPerTime>1</DefaultUnitsPerTime>
+    <EmailAddress />
+    <EmployeeId />
+    <GUID>{9EDA6D51-F709-43F5-B5AB-96438187D8EB}</GUID>
+    <Id>EQTRM-B1</Id>
+    <IsActive>1</IsActive>
+    <IsOverTimeAllowed>0</IsOverTimeAllowed>
+    <Name>Truck Medium/ Pickup (3 ton)</Name>
+    <ObjectId>8226</ObjectId>
+    <OfficePhone />
+    <OtherPhone />
+    <OvertimeFactor>0</OvertimeFactor>
+    <ParentObjectId>8225</ParentObjectId>
+    <PrimaryRoleObjectId xsi:nil="true" />
+    <ResourceNotes />
+    <ResourceType>Nonlabor</ResourceType>
+    <SequenceNumber>501</SequenceNumber>
+    <ShiftObjectId xsi:nil="true" />
+    <TimesheetApprovalManagerObjectId xsi:nil="true" />
+    <Title />
+    <UnitOfMeasureObjectId xsi:nil="true" />
+    <UseTimesheets>0</UseTimesheets>
+    <UserObjectId xsi:nil="true" />
+  </Resource>
+  <Resource>
+    <AutoComputeActuals>1</AutoComputeActuals>
+    <CalculateCostFromUnits>1</CalculateCostFromUnits>
+    <CalendarObjectId>7377</CalendarObjectId>
+    <CurrencyObjectId>1</CurrencyObjectId>
+    <DefaultUnitsPerTime>1</DefaultUnitsPerTime>
+    <EmailAddress />
+    <EmployeeId />
+    <GUID>{E67B490E-2F62-4B27-8824-F2130E84281E}</GUID>
+    <Id>R-6</Id>
+    <IsActive>1</IsActive>
+    <IsOverTimeAllowed>0</IsOverTimeAllowed>
+    <Name>Manhrs</Name>
+    <ObjectId>8227</ObjectId>
+    <OfficePhone />
+    <OtherPhone />
+    <OvertimeFactor>0</OvertimeFactor>
+    <ParentObjectId>8226</ParentObjectId>
+    <PrimaryRoleObjectId xsi:nil="true" />
+    <ResourceNotes />
+    <ResourceType>Labor</ResourceType>
+    <SequenceNumber>0</SequenceNumber>
+    <ShiftObjectId xsi:nil="true" />
+    <TimesheetApprovalManagerObjectId xsi:nil="true" />
+    <Title />
+    <UnitOfMeasureObjectId xsi:nil="true" />
+    <UseTimesheets>0</UseTimesheets>
+    <UserObjectId xsi:nil="true" />
+  </Resource>
+  <Resource>
+    <AutoComputeActuals>1</AutoComputeActuals>
+    <CalculateCostFromUnits>1</CalculateCostFromUnits>
+    <CalendarObjectId>7377</CalendarObjectId>
+    <CurrencyObjectId>1</CurrencyObjectId>
+    <DefaultUnitsPerTime>1</DefaultUnitsPerTime>
+    <EmailAddress />
+    <EmployeeId />
+    <GUID>{781E9E6D-67DB-45BA-ADFB-F1E27A34DA84}</GUID>
+    <Id>R-7</Id>
+    <IsActive>1</IsActive>
+    <IsOverTimeAllowed>0</IsOverTimeAllowed>
+    <Name>material resource</Name>
+    <ObjectId>8228</ObjectId>
+    <OfficePhone />
+    <OtherPhone />
+    <OvertimeFactor>0</OvertimeFactor>
+    <ParentObjectId>8227</ParentObjectId>
+    <PrimaryRoleObjectId xsi:nil="true" />
+    <ResourceNotes />
+    <ResourceType>Material</ResourceType>
+    <SequenceNumber>0</SequenceNumber>
+    <ShiftObjectId xsi:nil="true" />
+    <TimesheetApprovalManagerObjectId xsi:nil="true" />
+    <Title />
+    <UnitOfMeasureObjectId xsi:nil="true" />
+    <UseTimesheets>0</UseTimesheets>
+    <UserObjectId xsi:nil="true" />
+  </Resource>
+  <Resource>
+    <AutoComputeActuals>1</AutoComputeActuals>
+    <CalculateCostFromUnits>1</CalculateCostFromUnits>
+    <CalendarObjectId>6590</CalendarObjectId>
+    <CurrencyObjectId>30</CurrencyObjectId>
+    <DefaultUnitsPerTime>1.8</DefaultUnitsPerTime>
+    <EmailAddress />
+    <EmployeeId />
+    <GUID>{BBA7E94F-7705-4CDF-B696-4445F510D0C7}</GUID>
+    <Id>W0006-3</Id>
+    <IsActive>1</IsActive>
+    <IsOverTimeAllowed>0</IsOverTimeAllowed>
+    <Name>SANITISED</Name>
+    <ObjectId>8274</ObjectId>
+    <OfficePhone />
+    <OtherPhone />
+    <OvertimeFactor>0</OvertimeFactor>
+    <ParentObjectId xsi:nil="true" />
+    <PrimaryRoleObjectId xsi:nil="true" />
+    <ResourceNotes />
+    <ResourceType>Nonlabor</ResourceType>
+    <SequenceNumber>1</SequenceNumber>
+    <ShiftObjectId xsi:nil="true" />
+    <TimesheetApprovalManagerObjectId xsi:nil="true" />
+    <Title />
+    <UnitOfMeasureObjectId xsi:nil="true" />
+    <UseTimesheets>0</UseTimesheets>
+    <UserObjectId xsi:nil="true" />
+  </Resource>
+  <Resource>
+    <AutoComputeActuals>0</AutoComputeActuals>
+    <CalculateCostFromUnits>1</CalculateCostFromUnits>
+    <CalendarObjectId>6205</CalendarObjectId>
+    <CurrencyObjectId>1</CurrencyObjectId>
+    <DefaultUnitsPerTime>1</DefaultUnitsPerTime>
+    <EmailAddress />
+    <EmployeeId />
+    <GUID>{F3435B88-1FA5-4D5A-0284-BA6B0A8CA3E5}</GUID>
+    <Id>Material</Id>
+    <IsActive>1</IsActive>
+    <IsOverTimeAllowed>0</IsOverTimeAllowed>
+    <Name>Material Resources</Name>
+    <ObjectId>8275</ObjectId>
+    <OfficePhone />
+    <OtherPhone />
+    <OvertimeFactor>0</OvertimeFactor>
+    <ParentObjectId xsi:nil="true" />
+    <PrimaryRoleObjectId xsi:nil="true" />
+    <ResourceNotes />
+    <ResourceType>Material</ResourceType>
+    <SequenceNumber>20</SequenceNumber>
+    <ShiftObjectId xsi:nil="true" />
+    <TimesheetApprovalManagerObjectId xsi:nil="true" />
+    <Title />
+    <UnitOfMeasureObjectId>106</UnitOfMeasureObjectId>
+    <UseTimesheets>0</UseTimesheets>
+    <UserObjectId xsi:nil="true" />
+  </Resource>
+  <Resource>
+    <AutoComputeActuals>0</AutoComputeActuals>
+    <CalculateCostFromUnits>1</CalculateCostFromUnits>
+    <CalendarObjectId>5829</CalendarObjectId>
+    <CurrencyObjectId>1</CurrencyObjectId>
+    <DefaultUnitsPerTime>1</DefaultUnitsPerTime>
+    <EmailAddress />
+    <EmployeeId />
+    <GUID>{06A85C25-1E16-49BE-A255-9EB70B43BB33}</GUID>
+    <Id>E&amp;C Resources</Id>
+    <IsActive>1</IsActive>
+    <IsOverTimeAllowed>0</IsOverTimeAllowed>
+    <Name>E&amp;C Resources</Name>
+    <ObjectId>8276</ObjectId>
+    <OfficePhone />
+    <OtherPhone />
+    <OvertimeFactor>0</OvertimeFactor>
+    <ParentObjectId xsi:nil="true" />
+    <PrimaryRoleObjectId xsi:nil="true" />
+    <ResourceNotes />
+    <ResourceType>Labor</ResourceType>
+    <SequenceNumber>1</SequenceNumber>
+    <ShiftObjectId xsi:nil="true" />
+    <TimesheetApprovalManagerObjectId xsi:nil="true" />
+    <Title />
+    <UnitOfMeasureObjectId xsi:nil="true" />
+    <UseTimesheets>0</UseTimesheets>
+    <UserObjectId xsi:nil="true" />
+  </Resource>
+  <ResourceRate>
+    <EffectiveDate>2022-01-01T00:00:00</EffectiveDate>
+    <MaxUnitsPerTime>1</MaxUnitsPerTime>
+    <ObjectId>7564</ObjectId>
+    <PricePerUnit>25</PricePerUnit>
+    <PricePerUnit2>0</PricePerUnit2>
+    <PricePerUnit3>0</PricePerUnit3>
+    <PricePerUnit4>0</PricePerUnit4>
+    <PricePerUnit5>0</PricePerUnit5>
+    <ResourceObjectId>8278</ResourceObjectId>
+    <ShiftPeriodObjectId xsi:nil="true" />
+  </ResourceRate>
+  <ResourceRate>
+    <EffectiveDate>2010-01-01T00:00:00</EffectiveDate>
+    <MaxUnitsPerTime>1</MaxUnitsPerTime>
+    <ObjectId>7565</ObjectId>
+    <PricePerUnit xsi:nil="true" />
+    <PricePerUnit2 xsi:nil="true" />
+    <PricePerUnit3 xsi:nil="true" />
+    <PricePerUnit4 xsi:nil="true" />
+    <PricePerUnit5 xsi:nil="true" />
+    <ResourceObjectId>8275</ResourceObjectId>
+    <ShiftPeriodObjectId xsi:nil="true" />
+  </ResourceRate>
+  <ResourceRate>
+    <EffectiveDate>2014-01-01T00:00:00</EffectiveDate>
+    <MaxUnitsPerTime>1</MaxUnitsPerTime>
+    <ObjectId>7511</ObjectId>
+    <PricePerUnit>0</PricePerUnit>
+    <PricePerUnit2 xsi:nil="true" />
+    <PricePerUnit3 xsi:nil="true" />
+    <PricePerUnit4 xsi:nil="true" />
+    <PricePerUnit5 xsi:nil="true" />
+    <ResourceObjectId>8226</ResourceObjectId>
+    <ShiftPeriodObjectId xsi:nil="true" />
+  </ResourceRate>
+  <ResourceRate>
+    <EffectiveDate>2022-01-01T00:00:00</EffectiveDate>
+    <MaxUnitsPerTime>1</MaxUnitsPerTime>
+    <ObjectId>7512</ObjectId>
+    <PricePerUnit>10</PricePerUnit>
+    <PricePerUnit2>0</PricePerUnit2>
+    <PricePerUnit3>0</PricePerUnit3>
+    <PricePerUnit4>0</PricePerUnit4>
+    <PricePerUnit5>0</PricePerUnit5>
+    <ResourceObjectId>8227</ResourceObjectId>
+    <ShiftPeriodObjectId xsi:nil="true" />
+  </ResourceRate>
+  <ResourceRate>
+    <EffectiveDate>2022-01-01T00:00:00</EffectiveDate>
+    <MaxUnitsPerTime>1</MaxUnitsPerTime>
+    <ObjectId>7513</ObjectId>
+    <PricePerUnit>0</PricePerUnit>
+    <PricePerUnit2>0</PricePerUnit2>
+    <PricePerUnit3>0</PricePerUnit3>
+    <PricePerUnit4>0</PricePerUnit4>
+    <PricePerUnit5>0</PricePerUnit5>
+    <ResourceObjectId>8228</ResourceObjectId>
+    <ShiftPeriodObjectId xsi:nil="true" />
+  </ResourceRate>
+  <ResourceRate>
+    <EffectiveDate>2010-01-01T00:00:00</EffectiveDate>
+    <MaxUnitsPerTime>1</MaxUnitsPerTime>
+    <ObjectId>7561</ObjectId>
+    <PricePerUnit>0</PricePerUnit>
+    <PricePerUnit2>0</PricePerUnit2>
+    <PricePerUnit3>0</PricePerUnit3>
+    <PricePerUnit4>0</PricePerUnit4>
+    <PricePerUnit5>0</PricePerUnit5>
+    <ResourceObjectId>8276</ResourceObjectId>
+    <ShiftPeriodObjectId xsi:nil="true" />
+  </ResourceRate>
+  <ResourceRate>
+    <EffectiveDate>2021-01-01T00:00:00</EffectiveDate>
+    <MaxUnitsPerTime>1</MaxUnitsPerTime>
+    <ObjectId>7562</ObjectId>
+    <PricePerUnit>0</PricePerUnit>
+    <PricePerUnit2>0</PricePerUnit2>
+    <PricePerUnit3>0</PricePerUnit3>
+    <PricePerUnit4>0</PricePerUnit4>
+    <PricePerUnit5>0</PricePerUnit5>
+    <ResourceObjectId>8274</ResourceObjectId>
+    <ShiftPeriodObjectId xsi:nil="true" />
+  </ResourceRate>
+  <ResourceRate>
+    <EffectiveDate>2022-01-01T00:00:00</EffectiveDate>
+    <MaxUnitsPerTime>1</MaxUnitsPerTime>
+    <ObjectId>7563</ObjectId>
+    <PricePerUnit>40</PricePerUnit>
+    <PricePerUnit2>0</PricePerUnit2>
+    <PricePerUnit3>0</PricePerUnit3>
+    <PricePerUnit4>0</PricePerUnit4>
+    <PricePerUnit5>0</PricePerUnit5>
+    <ResourceObjectId>8277</ResourceObjectId>
+    <ShiftPeriodObjectId xsi:nil="true" />
+  </ResourceRate>
+  <FinancialPeriodTemplate>
+    <FinancialPeriodTemplateName>Calendar</FinancialPeriodTemplateName>
+    <ObjectId>1</ObjectId>
+  </FinancialPeriodTemplate>
+  <Project>
+    <ActivityDefaultActivityType>Task Dependent</ActivityDefaultActivityType>
+    <ActivityDefaultCalendarObjectId>178</ActivityDefaultCalendarObjectId>
+    <ActivityDefaultCostAccountObjectId xsi:nil="true" />
+    <ActivityDefaultDurationType>Fixed Duration and Units</ActivityDefaultDurationType>
+    <ActivityDefaultPercentCompleteType>Duration</ActivityDefaultPercentCompleteType>
+    <ActivityDefaultPricePerUnit>0</ActivityDefaultPricePerUnit>
+    <ActivityIdBasedOnSelectedActivity>1</ActivityIdBasedOnSelectedActivity>
+    <ActivityIdIncrement>10</ActivityIdIncrement>
+    <ActivityIdPrefix>A</ActivityIdPrefix>
+    <ActivityIdSuffix>1000</ActivityIdSuffix>
+    <ActivityPercentCompleteBasedOnActivitySteps>0</ActivityPercentCompleteBasedOnActivitySteps>
+    <AddActualToRemaining>0</AddActualToRemaining>
+    <AddedBy>ADMIN</AddedBy>
+    <AllowNegativeActualUnitsFlag>0</AllowNegativeActualUnitsFlag>
+    <AllowStatusReview>0</AllowStatusReview>
+    <AnnualDiscountRate xsi:nil="true" />
+    <AnticipatedFinishDate xsi:nil="true" />
+    <AnticipatedStartDate xsi:nil="true" />
+    <AssignmentDefaultDrivingFlag>1</AssignmentDefaultDrivingFlag>
+    <AssignmentDefaultRateType>Price / Unit</AssignmentDefaultRateType>
+    <CheckOutStatus>0</CheckOutStatus>
+    <CostQuantityRecalculateFlag>0</CostQuantityRecalculateFlag>
+    <CriticalActivityFloatLimit>0</CriticalActivityFloatLimit>
+    <CriticalActivityPathType>Critical Float</CriticalActivityPathType>
+    <CurrentBaselineProjectObjectId>5493</CurrentBaselineProjectObjectId>
+    <DataDate>2023-10-06T00:00:00</DataDate>
+    <DateAdded>2023-03-06T00:00:00</DateAdded>
+    <DefaultPriceTimeUnits>Hour</DefaultPriceTimeUnits>
+    <DiscountApplicationPeriod xsi:nil="true" />
+    <EarnedValueComputeType>Activity Percent Complete</EarnedValueComputeType>
+    <EarnedValueETCComputeType>ETC = Remaining Cost for Activity</EarnedValueETCComputeType>
+    <EarnedValueETCUserValue>0.88</EarnedValueETCUserValue>
+    <EarnedValueUserPercent>0.06</EarnedValueUserPercent>
+    <EnableSummarization>1</EnableSummarization>
+    <FinancialPeriodTemplateId>1</FinancialPeriodTemplateId>
+    <FiscalYearStartMonth>1</FiscalYearStartMonth>
+    <GUID>{93B1000B-156A-40AC-82DF-6C6AA0225613}</GUID>
+    <Id><![CDATA[BaselineCosts]]></Id>
+    <IndependentETCLaborUnits>0</IndependentETCLaborUnits>
+    <IndependentETCTotalCost>0</IndependentETCTotalCost>
+    <LastFinancialPeriodObjectId xsi:nil="true" />
+    <LevelingPriority>10</LevelingPriority>
+    <LinkActualToActualThisPeriod>1</LinkActualToActualThisPeriod>
+    <LinkPercentCompleteWithActual>1</LinkPercentCompleteWithActual>
+    <LinkPlannedAndAtCompletionFlag>1</LinkPlannedAndAtCompletionFlag>
+    <MustFinishByDate xsi:nil="true" />
+    <Name><![CDATA[(New Project)]]></Name>
+    <OBSObjectId>540</OBSObjectId>
+    <ObjectId>5442</ObjectId>
+    <OriginalBudget>0</OriginalBudget>
+    <ParentEPSObjectId>31156</ParentEPSObjectId>
+    <PlannedStartDate>2023-03-06T00:00:00</PlannedStartDate>
+    <PrimaryResourcesCanMarkActivitiesAsCompleted>1</PrimaryResourcesCanMarkActivitiesAsCompleted>
+    <ProjectForecastStartDate xsi:nil="true" />
+    <ResetPlannedToRemainingFlag>0</ResetPlannedToRemainingFlag>
+    <ResourceCanBeAssignedToSameActivityMoreThanOnce>1</ResourceCanBeAssignedToSameActivityMoreThanOnce>
+    <ResourcesCanAssignThemselvesToActivities>1</ResourcesCanAssignThemselvesToActivities>
+    <ScheduledFinishDate>2023-10-18T10:00:00</ScheduledFinishDate>
+    <Status>Active</Status>
+    <StrategicPriority>500</StrategicPriority>
+    <SummarizeToWBSLevel>2</SummarizeToWBSLevel>
+    <SummaryLevel>Assignment Level</SummaryLevel>
+    <UseProjectBaselineForEarnedValue>1</UseProjectBaselineForEarnedValue>
+    <WBSCodeSeparator>.</WBSCodeSeparator>
+    <WBSObjectId>36801</WBSObjectId>
+    <WebSiteRootDirectory />
+    <WebSiteURL />
+    <Activity>
+      <ActualDuration>1216</ActualDuration>
+      <ActualFinishDate xsi:nil="true" />
+      <ActualLaborCost>500</ActualLaborCost>
+      <ActualLaborUnits>0</ActualLaborUnits>
+      <ActualNonLaborCost>21</ActualNonLaborCost>
+      <ActualNonLaborUnits>345</ActualNonLaborUnits>
+      <ActualStartDate>2023-03-08T08:00:00</ActualStartDate>
+      <ActualThisPeriodLaborCost>500</ActualThisPeriodLaborCost>
+      <ActualThisPeriodLaborUnits>0</ActualThisPeriodLaborUnits>
+      <ActualThisPeriodNonLaborCost>21</ActualThisPeriodNonLaborCost>
+      <ActualThisPeriodNonLaborUnits>345</ActualThisPeriodNonLaborUnits>
+      <AtCompletionDuration>1282</AtCompletionDuration>
+      <AtCompletionExpenseCost>257</AtCompletionExpenseCost>
+      <AtCompletionLaborCost>5209</AtCompletionLaborCost>
+      <AtCompletionLaborUnits>40</AtCompletionLaborUnits>
+      <AtCompletionNonLaborCost>158</AtCompletionNonLaborCost>
+      <AtCompletionNonLaborUnits>345</AtCompletionNonLaborUnits>
+      <AutoComputeActuals>0</AutoComputeActuals>
+      <CalendarObjectId>178</CalendarObjectId>
+      <DurationPercentComplete>0</DurationPercentComplete>
+      <DurationType>Fixed Duration and Units</DurationType>
+      <EstimatedWeight>1</EstimatedWeight>
+      <ExpectedFinishDate xsi:nil="true" />
+      <ExternalEarlyStartDate xsi:nil="true" />
+      <ExternalLateFinishDate xsi:nil="true" />
+      <Feedback />
+      <FinishDate>2023-10-18T10:00:00</FinishDate>
+      <GUID>{F22A64C1-76D2-4645-8BD5-7277F669A7E8}</GUID>
+      <Id>A1000</Id>
+      <IsNewFeedback>0</IsNewFeedback>
+      <LevelingPriority>Normal</LevelingPriority>
+      <Name>Задача 1</Name>
+      <NonLaborUnitsPercentComplete>1</NonLaborUnitsPercentComplete>
+      <NotesToResources />
+      <ObjectId>133031</ObjectId>
+      <PercentComplete>0</PercentComplete>
+      <PercentCompleteType>Duration</PercentCompleteType>
+      <PhysicalPercentComplete>0</PhysicalPercentComplete>
+      <PlannedDuration>64</PlannedDuration>
+      <PlannedFinishDate>2023-03-17T16:00:00</PlannedFinishDate>
+      <PlannedLaborCost>6000</PlannedLaborCost>
+      <PlannedLaborUnits>40</PlannedLaborUnits>
+      <PlannedNonLaborCost>778</PlannedNonLaborCost>
+      <PlannedNonLaborUnits>72</PlannedNonLaborUnits>
+      <PlannedStartDate>2023-03-08T08:00:00</PlannedStartDate>
+      <PrimaryConstraintDate xsi:nil="true" />
+      <PrimaryConstraintType />
+      <PrimaryResourceObjectId>8278</PrimaryResourceObjectId>
+      <ProjectObjectId>5442</ProjectObjectId>
+      <RemainingDuration>66</RemainingDuration>
+      <RemainingEarlyFinishDate>2023-10-18T10:00:00</RemainingEarlyFinishDate>
+      <RemainingEarlyStartDate>2023-10-06T08:00:00</RemainingEarlyStartDate>
+      <RemainingLaborCost>4709</RemainingLaborCost>
+      <RemainingLaborUnits>40</RemainingLaborUnits>
+      <RemainingLateFinishDate>2023-10-18T10:00:00</RemainingLateFinishDate>
+      <RemainingLateStartDate>2023-10-06T08:00:00</RemainingLateStartDate>
+      <RemainingNonLaborCost>137</RemainingNonLaborCost>
+      <RemainingNonLaborUnits>0</RemainingNonLaborUnits>
+      <ResumeDate xsi:nil="true" />
+      <ReviewRequired>0</ReviewRequired>
+      <ScopePercentComplete>0</ScopePercentComplete>
+      <SecondaryConstraintDate xsi:nil="true" />
+      <SecondaryConstraintType />
+      <StartDate>2023-03-08T08:00:00</StartDate>
+      <Status>In Progress</Status>
+      <SuspendDate xsi:nil="true" />
+      <Type>Task Dependent</Type>
+      <UnitsPercentComplete>0.896103896103896</UnitsPercentComplete>
+      <WBSObjectId xsi:nil="true" />
+    </Activity>
+    <Activity>
+      <ActualDuration>40</ActualDuration>
+      <ActualFinishDate>2023-03-11T17:00:00</ActualFinishDate>
+      <ActualLaborCost>0</ActualLaborCost>
+      <ActualLaborUnits>40</ActualLaborUnits>
+      <ActualNonLaborCost>0</ActualNonLaborCost>
+      <ActualNonLaborUnits>0</ActualNonLaborUnits>
+      <ActualStartDate>2023-03-06T08:00:00</ActualStartDate>
+      <ActualThisPeriodLaborCost>0</ActualThisPeriodLaborCost>
+      <ActualThisPeriodLaborUnits>40</ActualThisPeriodLaborUnits>
+      <ActualThisPeriodNonLaborCost>0</ActualThisPeriodNonLaborCost>
+      <ActualThisPeriodNonLaborUnits>0</ActualThisPeriodNonLaborUnits>
+      <AtCompletionDuration>40</AtCompletionDuration>
+      <AtCompletionExpenseCost>0</AtCompletionExpenseCost>
+      <AtCompletionLaborCost>0</AtCompletionLaborCost>
+      <AtCompletionLaborUnits>40</AtCompletionLaborUnits>
+      <AtCompletionNonLaborCost>0</AtCompletionNonLaborCost>
+      <AtCompletionNonLaborUnits>0</AtCompletionNonLaborUnits>
+      <AutoComputeActuals>0</AutoComputeActuals>
+      <CalendarObjectId>178</CalendarObjectId>
+      <DurationPercentComplete>1</DurationPercentComplete>
+      <DurationType>Fixed Duration and Units/Time</DurationType>
+      <EstimatedWeight>1</EstimatedWeight>
+      <ExpectedFinishDate xsi:nil="true" />
+      <ExternalEarlyStartDate xsi:nil="true" />
+      <ExternalLateFinishDate xsi:nil="true" />
+      <Feedback />
+      <FinishDate>2023-03-11T17:00:00</FinishDate>
+      <GUID>{D6D44C6E-791F-4C38-899E-84DC7A0285C9}</GUID>
+      <Id>A1010</Id>
+      <IsNewFeedback>0</IsNewFeedback>
+      <LevelingPriority>Normal</LevelingPriority>
+      <Name>Тест2</Name>
+      <NonLaborUnitsPercentComplete>0</NonLaborUnitsPercentComplete>
+      <NotesToResources />
+      <ObjectId>133032</ObjectId>
+      <PercentComplete>1</PercentComplete>
+      <PercentCompleteType>Physical</PercentCompleteType>
+      <PhysicalPercentComplete>1</PhysicalPercentComplete>
+      <PlannedDuration>40</PlannedDuration>
+      <PlannedFinishDate>2023-03-11T17:00:00</PlannedFinishDate>
+      <PlannedLaborCost>0</PlannedLaborCost>
+      <PlannedLaborUnits>40</PlannedLaborUnits>
+      <PlannedNonLaborCost>0</PlannedNonLaborCost>
+      <PlannedNonLaborUnits>0</PlannedNonLaborUnits>
+      <PlannedStartDate>2023-03-06T08:00:00</PlannedStartDate>
+      <PrimaryConstraintDate xsi:nil="true" />
+      <PrimaryConstraintType />
+      <PrimaryResourceObjectId>8228</PrimaryResourceObjectId>
+      <ProjectObjectId>5442</ProjectObjectId>
+      <RemainingDuration>0</RemainingDuration>
+      <RemainingEarlyFinishDate xsi:nil="true" />
+      <RemainingEarlyStartDate xsi:nil="true" />
+      <RemainingLaborCost>0</RemainingLaborCost>
+      <RemainingLaborUnits>0</RemainingLaborUnits>
+      <RemainingLateFinishDate xsi:nil="true" />
+      <RemainingLateStartDate xsi:nil="true" />
+      <RemainingNonLaborCost>0</RemainingNonLaborCost>
+      <RemainingNonLaborUnits>0</RemainingNonLaborUnits>
+      <ResumeDate xsi:nil="true" />
+      <ReviewRequired>0</ReviewRequired>
+      <ScopePercentComplete>0</ScopePercentComplete>
+      <SecondaryConstraintDate xsi:nil="true" />
+      <SecondaryConstraintType />
+      <StartDate>2023-03-06T08:00:00</StartDate>
+      <Status>Completed</Status>
+      <SuspendDate xsi:nil="true" />
+      <Type>Resource Dependent</Type>
+      <UnitsPercentComplete>1</UnitsPercentComplete>
+      <WBSObjectId xsi:nil="true" />
+    </Activity>
+    <ResourceAssignment>
+      <ActivityObjectId>133031</ActivityObjectId>
+      <ActualCost>500</ActualCost>
+      <ActualCurve />
+      <ActualFinishDate xsi:nil="true" />
+      <ActualOvertimeCost>0</ActualOvertimeCost>
+      <ActualOvertimeUnits>0</ActualOvertimeUnits>
+      <ActualRegularCost>500</ActualRegularCost>
+      <ActualRegularUnits>0</ActualRegularUnits>
+      <ActualStartDate>2023-03-08T08:00:00</ActualStartDate>
+      <ActualThisPeriodCost>500</ActualThisPeriodCost>
+      <ActualThisPeriodUnits>0</ActualThisPeriodUnits>
+      <ActualUnits>0</ActualUnits>
+      <AtCompletionCost>5209</AtCompletionCost>
+      <AtCompletionUnits>40</AtCompletionUnits>
+      <CostAccountObjectId xsi:nil="true" />
+      <DrivingActivityDatesFlag>1</DrivingActivityDatesFlag>
+      <FinishDate>2023-10-18T10:00:00</FinishDate>
+      <GUID>{12D902E8-1888-4FF0-A899-8794CE1A587A}</GUID>
+      <IsCostUnitsLinked>1</IsCostUnitsLinked>
+      <IsPrimaryResource>1</IsPrimaryResource>
+      <ObjectId>121316</ObjectId>
+      <OvertimeFactor>0</OvertimeFactor>
+      <PlannedCost>6000</PlannedCost>
+      <PlannedCurve />
+      <PlannedFinishDate>2023-03-17T16:00:00</PlannedFinishDate>
+      <PlannedLag>0</PlannedLag>
+      <PlannedStartDate>2023-03-08T08:00:00</PlannedStartDate>
+      <PlannedUnits>40</PlannedUnits>
+      <PlannedUnitsPerTime>0.625</PlannedUnitsPerTime>
+      <Proficiency>3 - Skilled</Proficiency>
+      <ProjectObjectId>5442</ProjectObjectId>
+      <RateSource>Resource</RateSource>
+      <RateType>Price / Unit</RateType>
+      <RemainingCost>4709</RemainingCost>
+      <RemainingCurve />
+      <RemainingDuration>66.0000000000000066</RemainingDuration>
+      <RemainingFinishDate>2023-10-18T10:00:00</RemainingFinishDate>
+      <RemainingLag>0</RemainingLag>
+      <RemainingStartDate>2023-10-06T08:00:00</RemainingStartDate>
+      <RemainingUnits>40</RemainingUnits>
+      <RemainingUnitsPerTime>0.606060606060606</RemainingUnitsPerTime>
+      <ResourceCurveObjectId xsi:nil="true" />
+      <ResourceObjectId>8278</ResourceObjectId>
+      <ResourceType>Labor</ResourceType>
+      <RoleObjectId xsi:nil="true" />
+      <StartDate>2023-03-08T08:00:00</StartDate>
+      <UnitsPercentComplete>0</UnitsPercentComplete>
+      <WBSObjectId>36801</WBSObjectId>
+    </ResourceAssignment>
+    <ResourceAssignment>
+      <ActivityObjectId>133032</ActivityObjectId>
+      <ActualCost>0</ActualCost>
+      <ActualCurve />
+      <ActualFinishDate>2023-03-11T17:00:00</ActualFinishDate>
+      <ActualOvertimeCost>0</ActualOvertimeCost>
+      <ActualOvertimeUnits>0</ActualOvertimeUnits>
+      <ActualRegularCost>0</ActualRegularCost>
+      <ActualRegularUnits>40</ActualRegularUnits>
+      <ActualStartDate>2023-03-06T08:00:00</ActualStartDate>
+      <ActualThisPeriodCost>0</ActualThisPeriodCost>
+      <ActualThisPeriodUnits>40</ActualThisPeriodUnits>
+      <ActualUnits>40</ActualUnits>
+      <AtCompletionCost>0</AtCompletionCost>
+      <AtCompletionUnits>40</AtCompletionUnits>
+      <CostAccountObjectId xsi:nil="true" />
+      <DrivingActivityDatesFlag>1</DrivingActivityDatesFlag>
+      <FinishDate>2023-03-11T17:00:00</FinishDate>
+      <GUID>{663F4919-8566-480D-8D43-15D3DF86354E}</GUID>
+      <IsCostUnitsLinked>1</IsCostUnitsLinked>
+      <IsPrimaryResource>1</IsPrimaryResource>
+      <ObjectId>121317</ObjectId>
+      <OvertimeFactor>0</OvertimeFactor>
+      <PlannedCost>0</PlannedCost>
+      <PlannedCurve />
+      <PlannedFinishDate>2023-03-11T17:00:00</PlannedFinishDate>
+      <PlannedLag>0</PlannedLag>
+      <PlannedStartDate>2023-03-06T08:00:00</PlannedStartDate>
+      <PlannedUnits>40</PlannedUnits>
+      <PlannedUnitsPerTime>1</PlannedUnitsPerTime>
+      <Proficiency>3 - Skilled</Proficiency>
+      <ProjectObjectId>5442</ProjectObjectId>
+      <RateSource>Resource</RateSource>
+      <RateType>Price / Unit</RateType>
+      <RemainingCost>0</RemainingCost>
+      <RemainingCurve />
+      <RemainingDuration>0</RemainingDuration>
+      <RemainingFinishDate xsi:nil="true" />
+      <RemainingLag>0</RemainingLag>
+      <RemainingStartDate xsi:nil="true" />
+      <RemainingUnits>0</RemainingUnits>
+      <RemainingUnitsPerTime>0.89</RemainingUnitsPerTime>
+      <ResourceCurveObjectId xsi:nil="true" />
+      <ResourceObjectId>8228</ResourceObjectId>
+      <ResourceType>Labor</ResourceType>
+      <RoleObjectId xsi:nil="true" />
+      <StartDate>2023-03-06T08:00:00</StartDate>
+      <UnitsPercentComplete>1</UnitsPercentComplete>
+      <WBSObjectId>36801</WBSObjectId>
+    </ResourceAssignment>
+    <ResourceAssignment>
+      <ActivityObjectId>133031</ActivityObjectId>
+      <ActualCost>23</ActualCost>
+      <ActualCurve />
+      <ActualFinishDate xsi:nil="true" />
+      <ActualOvertimeCost>0</ActualOvertimeCost>
+      <ActualOvertimeUnits>0</ActualOvertimeUnits>
+      <ActualRegularCost>23</ActualRegularCost>
+      <ActualRegularUnits>0</ActualRegularUnits>
+      <ActualStartDate>2023-03-08T08:00:00</ActualStartDate>
+      <ActualThisPeriodCost>23</ActualThisPeriodCost>
+      <ActualThisPeriodUnits>0</ActualThisPeriodUnits>
+      <ActualUnits>0</ActualUnits>
+      <AtCompletionCost>2583</AtCompletionCost>
+      <AtCompletionUnits>40</AtCompletionUnits>
+      <CostAccountObjectId xsi:nil="true" />
+      <DrivingActivityDatesFlag>1</DrivingActivityDatesFlag>
+      <FinishDate>2023-10-12T15:00:00</FinishDate>
+      <GUID>{950E0155-2985-477D-B8D1-3E64B3DF70A0}</GUID>
+      <IsCostUnitsLinked>1</IsCostUnitsLinked>
+      <IsPrimaryResource>0</IsPrimaryResource>
+      <ObjectId>121318</ObjectId>
+      <OvertimeFactor>0</OvertimeFactor>
+      <PlannedCost>13333</PlannedCost>
+      <PlannedCurve />
+      <PlannedFinishDate>2023-03-17T16:00:00</PlannedFinishDate>
+      <PlannedLag>0</PlannedLag>
+      <PlannedStartDate>2023-03-08T08:00:00</PlannedStartDate>
+      <PlannedUnits>40</PlannedUnits>
+      <PlannedUnitsPerTime>0.625</PlannedUnitsPerTime>
+      <Proficiency>3 - Skilled</Proficiency>
+      <ProjectObjectId>5442</ProjectObjectId>
+      <RateSource>Resource</RateSource>
+      <RateType>Price / Unit</RateType>
+      <RemainingCost>2560</RemainingCost>
+      <RemainingCurve />
+      <RemainingDuration>38.999999999999834250000000001</RemainingDuration>
+      <RemainingFinishDate>2023-10-12T15:00:00</RemainingFinishDate>
+      <RemainingLag>0</RemainingLag>
+      <RemainingStartDate>2023-10-06T08:00:00</RemainingStartDate>
+      <RemainingUnits>40</RemainingUnits>
+      <RemainingUnitsPerTime>1.02564102564103</RemainingUnitsPerTime>
+      <ResourceCurveObjectId xsi:nil="true" />
+      <ResourceObjectId>8275</ResourceObjectId>
+      <ResourceType>Material</ResourceType>
+      <RoleObjectId xsi:nil="true" />
+      <StartDate>2023-03-08T08:00:00</StartDate>
+      <UnitsPercentComplete>0</UnitsPercentComplete>
+      <WBSObjectId>36801</WBSObjectId>
+    </ResourceAssignment>
+    <ResourceAssignment>
+      <ActivityObjectId>133031</ActivityObjectId>
+      <ActualCost>21</ActualCost>
+      <ActualCurve />
+      <ActualFinishDate xsi:nil="true" />
+      <ActualOvertimeCost>0</ActualOvertimeCost>
+      <ActualOvertimeUnits>0</ActualOvertimeUnits>
+      <ActualRegularCost>21</ActualRegularCost>
+      <ActualRegularUnits>345</ActualRegularUnits>
+      <ActualStartDate>2023-03-08T08:00:00</ActualStartDate>
+      <ActualThisPeriodCost>21</ActualThisPeriodCost>
+      <ActualThisPeriodUnits>345</ActualThisPeriodUnits>
+      <ActualUnits>345</ActualUnits>
+      <AtCompletionCost>158</AtCompletionCost>
+      <AtCompletionUnits>345</AtCompletionUnits>
+      <CostAccountObjectId xsi:nil="true" />
+      <DrivingActivityDatesFlag>1</DrivingActivityDatesFlag>
+      <FinishDate>2023-10-13T08:07:00</FinishDate>
+      <GUID>{580C1DDB-CB4A-4D87-9364-0229C2628885}</GUID>
+      <IsCostUnitsLinked>1</IsCostUnitsLinked>
+      <IsPrimaryResource>0</IsPrimaryResource>
+      <ObjectId>121319</ObjectId>
+      <OvertimeFactor>0</OvertimeFactor>
+      <PlannedCost>778</PlannedCost>
+      <PlannedCurve />
+      <PlannedFinishDate>2023-03-17T16:00:00</PlannedFinishDate>
+      <PlannedLag>0</PlannedLag>
+      <PlannedStartDate>2023-03-08T08:00:00</PlannedStartDate>
+      <PlannedUnits>72</PlannedUnits>
+      <PlannedUnitsPerTime>1.125</PlannedUnitsPerTime>
+      <Proficiency>3 - Skilled</Proficiency>
+      <ProjectObjectId>5442</ProjectObjectId>
+      <RateSource>Resource</RateSource>
+      <RateType>Price / Unit</RateType>
+      <RemainingCost>137</RemainingCost>
+      <RemainingCurve />
+      <RemainingDuration>40.1166666666667</RemainingDuration>
+      <RemainingFinishDate>2023-10-13T08:07:00</RemainingFinishDate>
+      <RemainingLag>0</RemainingLag>
+      <RemainingStartDate>2023-10-06T08:00:00</RemainingStartDate>
+      <RemainingUnits>0</RemainingUnits>
+      <RemainingUnitsPerTime>0</RemainingUnitsPerTime>
+      <ResourceCurveObjectId xsi:nil="true" />
+      <ResourceObjectId>8274</ResourceObjectId>
+      <ResourceType>Nonlabor</ResourceType>
+      <RoleObjectId xsi:nil="true" />
+      <StartDate>2023-03-08T08:00:00</StartDate>
+      <UnitsPercentComplete>1</UnitsPercentComplete>
+      <WBSObjectId>36801</WBSObjectId>
+    </ResourceAssignment>
+    <ActivityExpense>
+      <AccrualType>Uniform Over Activity</AccrualType>
+      <ActivityObjectId>133031</ActivityObjectId>
+      <ActualCost>100</ActualCost>
+      <ActualUnits>10</ActualUnits>
+      <AutoComputeActuals>0</AutoComputeActuals>
+      <CostAccountObjectId xsi:nil="true" />
+      <DocumentNumber />
+      <ExpenseCategoryObjectId xsi:nil="true" />
+      <ExpenseDescription />
+      <ExpenseItem>(New Expense Item)</ExpenseItem>
+      <ExpensePercentComplete>0.492610837438424</ExpensePercentComplete>
+      <ObjectId>19906</ObjectId>
+      <PlannedCost>3230</PlannedCost>
+      <PlannedUnits>323</PlannedUnits>
+      <PricePerUnit>10</PricePerUnit>
+      <ProjectObjectId>5442</ProjectObjectId>
+      <RemainingCost>103</RemainingCost>
+      <RemainingUnits>10.3</RemainingUnits>
+      <UnitOfMeasure />
+      <Vendor />
+      <WBSObjectId>36801</WBSObjectId>
+    </ActivityExpense>
+    <ActivityExpense>
+      <AccrualType>Uniform Over Activity</AccrualType>
+      <ActivityObjectId>133031</ActivityObjectId>
+      <ActualCost>54</ActualCost>
+      <ActualUnits>18</ActualUnits>
+      <AutoComputeActuals>0</AutoComputeActuals>
+      <CostAccountObjectId xsi:nil="true" />
+      <DocumentNumber />
+      <ExpenseCategoryObjectId>10</ExpenseCategoryObjectId>
+      <ExpenseDescription />
+      <ExpenseItem>(New Expense Item)1</ExpenseItem>
+      <ExpensePercentComplete>1</ExpensePercentComplete>
+      <ObjectId>19907</ObjectId>
+      <PlannedCost>111</PlannedCost>
+      <PlannedUnits>37</PlannedUnits>
+      <PricePerUnit>3</PricePerUnit>
+      <ProjectObjectId>5442</ProjectObjectId>
+      <RemainingCost>0</RemainingCost>
+      <RemainingUnits>0</RemainingUnits>
+      <UnitOfMeasure />
+      <Vendor />
+      <WBSObjectId>36801</WBSObjectId>
+    </ActivityExpense>
+  </Project>
+  <BaselineProject>
+    <ActivityDefaultActivityType>Task Dependent</ActivityDefaultActivityType>
+    <ActivityDefaultCalendarObjectId>178</ActivityDefaultCalendarObjectId>
+    <ActivityDefaultCostAccountObjectId xsi:nil="true" />
+    <ActivityDefaultDurationType>Fixed Duration and Units</ActivityDefaultDurationType>
+    <ActivityDefaultPercentCompleteType>Duration</ActivityDefaultPercentCompleteType>
+    <ActivityDefaultPricePerUnit>0</ActivityDefaultPricePerUnit>
+    <ActivityIdBasedOnSelectedActivity>1</ActivityIdBasedOnSelectedActivity>
+    <ActivityIdIncrement>10</ActivityIdIncrement>
+    <ActivityIdPrefix>A</ActivityIdPrefix>
+    <ActivityIdSuffix>1000</ActivityIdSuffix>
+    <ActivityPercentCompleteBasedOnActivitySteps>0</ActivityPercentCompleteBasedOnActivitySteps>
+    <AddActualToRemaining>0</AddActualToRemaining>
+    <AddedBy>ADMIN</AddedBy>
+    <AllowStatusReview>0</AllowStatusReview>
+    <AnnualDiscountRate xsi:nil="true" />
+    <AnticipatedFinishDate xsi:nil="true" />
+    <AnticipatedStartDate xsi:nil="true" />
+    <AssignmentDefaultDrivingFlag>1</AssignmentDefaultDrivingFlag>
+    <AssignmentDefaultRateType>Price / Unit</AssignmentDefaultRateType>
+    <BaselineTypeName />
+    <BaselineTypeObjectId xsi:nil="true" />
+    <CheckOutDate xsi:nil="true" />
+    <CheckOutStatus>0</CheckOutStatus>
+    <CheckOutUserObjectId xsi:nil="true" />
+    <CostQuantityRecalculateFlag>0</CostQuantityRecalculateFlag>
+    <CriticalActivityFloatLimit>0</CriticalActivityFloatLimit>
+    <CriticalActivityPathType>Critical Float</CriticalActivityPathType>
+    <DataDate>2023-10-06T00:00:00</DataDate>
+    <DateAdded>2023-03-06T00:00:00</DateAdded>
+    <DefaultPriceTimeUnits>Hour</DefaultPriceTimeUnits>
+    <DiscountApplicationPeriod xsi:nil="true" />
+    <EnableSummarization>1</EnableSummarization>
+    <FinancialPeriodTemplateId>1</FinancialPeriodTemplateId>
+    <FiscalYearStartMonth>1</FiscalYearStartMonth>
+    <GUID>{93B1000B-156A-40AC-82DF-6C6AA0225613}</GUID>
+    <Id><![CDATA[BaselineCosts - B1]]></Id>
+    <IndependentETCLaborUnits>0</IndependentETCLaborUnits>
+    <IndependentETCTotalCost>0</IndependentETCTotalCost>
+    <LastBaselineUpdateDate>2023-10-06T03:25:43</LastBaselineUpdateDate>
+    <LastFinancialPeriodObjectId xsi:nil="true" />
+    <LastSummarizedDate xsi:nil="true" />
+    <LevelingPriority>10</LevelingPriority>
+    <LinkActualToActualThisPeriod>1</LinkActualToActualThisPeriod>
+    <LinkPercentCompleteWithActual>1</LinkPercentCompleteWithActual>
+    <LinkPlannedAndAtCompletionFlag>1</LinkPlannedAndAtCompletionFlag>
+    <LocationObjectId xsi:nil="true" />
+    <MustFinishByDate xsi:nil="true" />
+    <Name><![CDATA[(New Project) - B1]]></Name>
+    <OBSObjectId>540</OBSObjectId>
+    <ObjectId>5492</ObjectId>
+    <OriginalBudget>0</OriginalBudget>
+    <OriginalProjectObjectId>5442</OriginalProjectObjectId>
+    <ParentEPSObjectId>31156</ParentEPSObjectId>
+    <PlannedStartDate>2023-03-06T00:00:00</PlannedStartDate>
+    <PrimaryResourcesCanMarkActivitiesAsCompleted>1</PrimaryResourcesCanMarkActivitiesAsCompleted>
+    <ProjectForecastStartDate xsi:nil="true" />
+    <ResetPlannedToRemainingFlag>0</ResetPlannedToRemainingFlag>
+    <ResourceCanBeAssignedToSameActivityMoreThanOnce>1</ResourceCanBeAssignedToSameActivityMoreThanOnce>
+    <ResourcesCanAssignThemselvesToActivities>1</ResourcesCanAssignThemselvesToActivities>
+    <ScheduledFinishDate>2023-10-18T10:00:00</ScheduledFinishDate>
+    <Status>Active</Status>
+    <StrategicPriority>500</StrategicPriority>
+    <SummarizeToWBSLevel>2</SummarizeToWBSLevel>
+    <WBSCodeSeparator>.</WBSCodeSeparator>
+    <WBSObjectId>36851</WBSObjectId>
+    <WebSiteRootDirectory xsi:nil="true" />
+    <WebSiteURL xsi:nil="true" />
+    <Activity>
+      <ActualDuration>1232</ActualDuration>
+      <ActualFinishDate xsi:nil="true" />
+      <ActualLaborCost>230</ActualLaborCost>
+      <ActualLaborUnits>9.2</ActualLaborUnits>
+      <ActualNonLaborCost>0</ActualNonLaborCost>
+      <ActualNonLaborUnits>2</ActualNonLaborUnits>
+      <ActualStartDate>2023-03-06T08:00:00</ActualStartDate>
+      <ActualThisPeriodLaborCost>230</ActualThisPeriodLaborCost>
+      <ActualThisPeriodLaborUnits>9.2</ActualThisPeriodLaborUnits>
+      <ActualThisPeriodNonLaborCost>0</ActualThisPeriodNonLaborCost>
+      <ActualThisPeriodNonLaborUnits>2</ActualThisPeriodNonLaborUnits>
+      <AtCompletionDuration>40</AtCompletionDuration>
+      <AtCompletionExpenseCost>257</AtCompletionExpenseCost>
+      <AtCompletionLaborCost>1000</AtCompletionLaborCost>
+      <AtCompletionLaborUnits>40.0</AtCompletionLaborUnits>
+      <AtCompletionNonLaborCost>0</AtCompletionNonLaborCost>
+      <AtCompletionNonLaborUnits>72</AtCompletionNonLaborUnits>
+      <AutoComputeActuals>0</AutoComputeActuals>
+      <CalendarObjectId>178</CalendarObjectId>
+      <DurationPercentComplete>0</DurationPercentComplete>
+      <DurationType>Fixed Duration and Units</DurationType>
+      <EstimatedWeight>1</EstimatedWeight>
+      <ExpectedFinishDate xsi:nil="true" />
+      <ExternalEarlyStartDate xsi:nil="true" />
+      <ExternalLateFinishDate xsi:nil="true" />
+      <Feedback />
+      <FinishDate>2023-03-10T16:00:00</FinishDate>
+      <GUID>{F22A64C1-76D2-4645-8BD5-7277F669A7E8}</GUID>
+      <Id>A1000</Id>
+      <IsNewFeedback>0</IsNewFeedback>
+      <LevelingPriority>Normal</LevelingPriority>
+      <Name>Задача 1</Name>
+      <NonLaborUnitsPercentComplete>0.0277777777777778</NonLaborUnitsPercentComplete>
+      <NotesToResources />
+      <ObjectId>133081</ObjectId>
+      <PercentComplete>0</PercentComplete>
+      <PercentCompleteType>Duration</PercentCompleteType>
+      <PhysicalPercentComplete>0</PhysicalPercentComplete>
+      <PlannedDuration>40</PlannedDuration>
+      <PlannedFinishDate>2023-03-10T16:00:00</PlannedFinishDate>
+      <PlannedLaborCost>1000</PlannedLaborCost>
+      <PlannedLaborUnits>40</PlannedLaborUnits>
+      <PlannedNonLaborCost>0</PlannedNonLaborCost>
+      <PlannedNonLaborUnits>72</PlannedNonLaborUnits>
+      <PlannedStartDate>2023-03-06T08:00:00</PlannedStartDate>
+      <PrimaryConstraintDate xsi:nil="true" />
+      <PrimaryConstraintType xsi:nil="true" />
+      <PrimaryResourceObjectId>8278</PrimaryResourceObjectId>
+      <ProjectObjectId>5492</ProjectObjectId>
+      <RemainingDuration>40</RemainingDuration>
+      <RemainingEarlyFinishDate>2023-03-10T16:00:00</RemainingEarlyFinishDate>
+      <RemainingEarlyStartDate>2023-03-06T08:00:00</RemainingEarlyStartDate>
+      <RemainingLaborCost>770</RemainingLaborCost>
+      <RemainingLaborUnits>30.8</RemainingLaborUnits>
+      <RemainingLateFinishDate>2023-03-10T16:00:00</RemainingLateFinishDate>
+      <RemainingLateStartDate>2023-03-06T08:00:00</RemainingLateStartDate>
+      <RemainingNonLaborCost>0</RemainingNonLaborCost>
+      <RemainingNonLaborUnits>70</RemainingNonLaborUnits>
+      <ResumeDate xsi:nil="true" />
+      <ReviewRequired>0</ReviewRequired>
+      <ScopePercentComplete>0</ScopePercentComplete>
+      <SecondaryConstraintDate xsi:nil="true" />
+      <SecondaryConstraintType xsi:nil="true" />
+      <StartDate>2023-03-06T08:00:00</StartDate>
+      <Status>In Progress</Status>
+      <SuspendDate xsi:nil="true" />
+      <Type>Task Dependent</Type>
+      <UnitsPercentComplete>0.1</UnitsPercentComplete>
+      <WBSObjectId xsi:nil="true" />
+    </Activity>
+    <Activity>
+      <ActualDuration>1232</ActualDuration>
+      <ActualFinishDate xsi:nil="true" />
+      <ActualLaborCost>0</ActualLaborCost>
+      <ActualLaborUnits>4.4</ActualLaborUnits>
+      <ActualNonLaborCost>0</ActualNonLaborCost>
+      <ActualNonLaborUnits>0</ActualNonLaborUnits>
+      <ActualStartDate>2023-03-06T08:00:00</ActualStartDate>
+      <ActualThisPeriodLaborCost>0</ActualThisPeriodLaborCost>
+      <ActualThisPeriodLaborUnits>4.4</ActualThisPeriodLaborUnits>
+      <ActualThisPeriodNonLaborCost>0</ActualThisPeriodNonLaborCost>
+      <ActualThisPeriodNonLaborUnits>0</ActualThisPeriodNonLaborUnits>
+      <AtCompletionDuration>40</AtCompletionDuration>
+      <AtCompletionExpenseCost>0</AtCompletionExpenseCost>
+      <AtCompletionLaborCost>0</AtCompletionLaborCost>
+      <AtCompletionLaborUnits>40.0</AtCompletionLaborUnits>
+      <AtCompletionNonLaborCost>0</AtCompletionNonLaborCost>
+      <AtCompletionNonLaborUnits>0</AtCompletionNonLaborUnits>
+      <AutoComputeActuals>0</AutoComputeActuals>
+      <CalendarObjectId>178</CalendarObjectId>
+      <DurationPercentComplete>0</DurationPercentComplete>
+      <DurationType>Fixed Duration and Units/Time</DurationType>
+      <EstimatedWeight>1</EstimatedWeight>
+      <ExpectedFinishDate xsi:nil="true" />
+      <ExternalEarlyStartDate xsi:nil="true" />
+      <ExternalLateFinishDate xsi:nil="true" />
+      <Feedback />
+      <FinishDate>2023-03-11T17:00:00</FinishDate>
+      <GUID>{D6D44C6E-791F-4C38-899E-84DC7A0285C9}</GUID>
+      <Id>A1010</Id>
+      <IsNewFeedback>0</IsNewFeedback>
+      <LevelingPriority>Normal</LevelingPriority>
+      <Name>Тест2</Name>
+      <NonLaborUnitsPercentComplete>0</NonLaborUnitsPercentComplete>
+      <NotesToResources />
+      <ObjectId>133082</ObjectId>
+      <PercentComplete>0</PercentComplete>
+      <PercentCompleteType>Physical</PercentCompleteType>
+      <PhysicalPercentComplete>0</PhysicalPercentComplete>
+      <PlannedDuration>40</PlannedDuration>
+      <PlannedFinishDate>2023-03-10T16:00:00</PlannedFinishDate>
+      <PlannedLaborCost>0</PlannedLaborCost>
+      <PlannedLaborUnits>40</PlannedLaborUnits>
+      <PlannedNonLaborCost>0</PlannedNonLaborCost>
+      <PlannedNonLaborUnits>0</PlannedNonLaborUnits>
+      <PlannedStartDate>2023-03-06T08:00:00</PlannedStartDate>
+      <PrimaryConstraintDate xsi:nil="true" />
+      <PrimaryConstraintType xsi:nil="true" />
+      <PrimaryResourceObjectId>8228</PrimaryResourceObjectId>
+      <ProjectObjectId>5492</ProjectObjectId>
+      <RemainingDuration>40</RemainingDuration>
+      <RemainingEarlyFinishDate>2023-03-11T17:00:00</RemainingEarlyFinishDate>
+      <RemainingEarlyStartDate>2023-03-06T08:00:00</RemainingEarlyStartDate>
+      <RemainingLaborCost>0</RemainingLaborCost>
+      <RemainingLaborUnits>35.6</RemainingLaborUnits>
+      <RemainingLateFinishDate>2023-03-09T17:00:00</RemainingLateFinishDate>
+      <RemainingLateStartDate>2023-03-05T08:00:00</RemainingLateStartDate>
+      <RemainingNonLaborCost>0</RemainingNonLaborCost>
+      <RemainingNonLaborUnits>0</RemainingNonLaborUnits>
+      <ResumeDate xsi:nil="true" />
+      <ReviewRequired>0</ReviewRequired>
+      <ScopePercentComplete>0</ScopePercentComplete>
+      <SecondaryConstraintDate xsi:nil="true" />
+      <SecondaryConstraintType xsi:nil="true" />
+      <StartDate>2023-03-06T08:00:00</StartDate>
+      <Status>In Progress</Status>
+      <SuspendDate xsi:nil="true" />
+      <Type>Resource Dependent</Type>
+      <UnitsPercentComplete>0.11</UnitsPercentComplete>
+      <WBSObjectId xsi:nil="true" />
+    </Activity>
+    <ResourceAssignment>
+      <ActivityObjectId>133081</ActivityObjectId>
+      <ActualCost>230</ActualCost>
+      <ActualCurve xsi:nil="true" />
+      <ActualFinishDate xsi:nil="true" />
+      <ActualOvertimeCost>0</ActualOvertimeCost>
+      <ActualOvertimeUnits>0</ActualOvertimeUnits>
+      <ActualRegularCost>230</ActualRegularCost>
+      <ActualRegularUnits>9.2</ActualRegularUnits>
+      <ActualStartDate>2023-03-06T08:00:00</ActualStartDate>
+      <ActualThisPeriodCost>230</ActualThisPeriodCost>
+      <ActualThisPeriodUnits>9.2</ActualThisPeriodUnits>
+      <ActualUnits>9.2</ActualUnits>
+      <AtCompletionCost>1000</AtCompletionCost>
+      <AtCompletionUnits>40.0</AtCompletionUnits>
+      <CostAccountObjectId xsi:nil="true" />
+      <DrivingActivityDatesFlag>1</DrivingActivityDatesFlag>
+      <FinishDate>2023-03-10T16:00:00</FinishDate>
+      <GUID>{12D902E8-1888-4FF0-A899-8794CE1A587A}</GUID>
+      <IsCostUnitsLinked>1</IsCostUnitsLinked>
+      <IsPrimaryResource>1</IsPrimaryResource>
+      <ObjectId>121366</ObjectId>
+      <OvertimeFactor>0</OvertimeFactor>
+      <PlannedCost>1000</PlannedCost>
+      <PlannedCurve xsi:nil="true" />
+      <PlannedFinishDate>2023-03-10T16:00:00</PlannedFinishDate>
+      <PlannedLag>0</PlannedLag>
+      <PlannedStartDate>2023-03-06T08:00:00</PlannedStartDate>
+      <PlannedUnits>40</PlannedUnits>
+      <PlannedUnitsPerTime>1</PlannedUnitsPerTime>
+      <Proficiency>3 - Skilled</Proficiency>
+      <ProjectObjectId>5492</ProjectObjectId>
+      <RateSource>Resource</RateSource>
+      <RateType>Price / Unit</RateType>
+      <RemainingCost>770</RemainingCost>
+      <RemainingCurve xsi:nil="true" />
+      <RemainingDuration>40</RemainingDuration>
+      <RemainingFinishDate>2023-03-10T16:00:00</RemainingFinishDate>
+      <RemainingLag>0</RemainingLag>
+      <RemainingStartDate>2023-03-06T08:00:00</RemainingStartDate>
+      <RemainingUnits>30.8</RemainingUnits>
+      <RemainingUnitsPerTime>0.77</RemainingUnitsPerTime>
+      <ResourceCurveObjectId xsi:nil="true" />
+      <ResourceObjectId>8278</ResourceObjectId>
+      <ResourceType>Labor</ResourceType>
+      <RoleObjectId xsi:nil="true" />
+      <StartDate>2023-03-06T08:00:00</StartDate>
+      <UnitsPercentComplete>0.23</UnitsPercentComplete>
+      <WBSObjectId>36851</WBSObjectId>
+    </ResourceAssignment>
+    <ResourceAssignment>
+      <ActivityObjectId>133082</ActivityObjectId>
+      <ActualCost>0</ActualCost>
+      <ActualCurve xsi:nil="true" />
+      <ActualFinishDate xsi:nil="true" />
+      <ActualOvertimeCost>0</ActualOvertimeCost>
+      <ActualOvertimeUnits>0</ActualOvertimeUnits>
+      <ActualRegularCost>0</ActualRegularCost>
+      <ActualRegularUnits>4.4</ActualRegularUnits>
+      <ActualStartDate>2023-03-06T08:00:00</ActualStartDate>
+      <ActualThisPeriodCost>0</ActualThisPeriodCost>
+      <ActualThisPeriodUnits>4.4</ActualThisPeriodUnits>
+      <ActualUnits>4.4</ActualUnits>
+      <AtCompletionCost>0</AtCompletionCost>
+      <AtCompletionUnits>40.0</AtCompletionUnits>
+      <CostAccountObjectId xsi:nil="true" />
+      <DrivingActivityDatesFlag>1</DrivingActivityDatesFlag>
+      <FinishDate>2023-03-11T17:00:00</FinishDate>
+      <GUID>{663F4919-8566-480D-8D43-15D3DF86354E}</GUID>
+      <IsCostUnitsLinked>1</IsCostUnitsLinked>
+      <IsPrimaryResource>1</IsPrimaryResource>
+      <ObjectId>121367</ObjectId>
+      <OvertimeFactor>0</OvertimeFactor>
+      <PlannedCost>0</PlannedCost>
+      <PlannedCurve xsi:nil="true" />
+      <PlannedFinishDate>2023-03-10T16:00:00</PlannedFinishDate>
+      <PlannedLag>0</PlannedLag>
+      <PlannedStartDate>2023-03-06T08:00:00</PlannedStartDate>
+      <PlannedUnits>40</PlannedUnits>
+      <PlannedUnitsPerTime>1</PlannedUnitsPerTime>
+      <Proficiency>3 - Skilled</Proficiency>
+      <ProjectObjectId>5492</ProjectObjectId>
+      <RateSource>Resource</RateSource>
+      <RateType>Price / Unit</RateType>
+      <RemainingCost>0</RemainingCost>
+      <RemainingCurve xsi:nil="true" />
+      <RemainingDuration>40</RemainingDuration>
+      <RemainingFinishDate>2023-03-11T17:00:00</RemainingFinishDate>
+      <RemainingLag>0</RemainingLag>
+      <RemainingStartDate>2023-03-06T08:00:00</RemainingStartDate>
+      <RemainingUnits>35.6</RemainingUnits>
+      <RemainingUnitsPerTime>0.89</RemainingUnitsPerTime>
+      <ResourceCurveObjectId xsi:nil="true" />
+      <ResourceObjectId>8228</ResourceObjectId>
+      <ResourceType>Labor</ResourceType>
+      <RoleObjectId xsi:nil="true" />
+      <StartDate>2023-03-06T08:00:00</StartDate>
+      <UnitsPercentComplete>0.11</UnitsPercentComplete>
+      <WBSObjectId>36851</WBSObjectId>
+    </ResourceAssignment>
+    <ResourceAssignment>
+      <ActivityObjectId>133081</ActivityObjectId>
+      <ActualCost>0</ActualCost>
+      <ActualCurve xsi:nil="true" />
+      <ActualFinishDate xsi:nil="true" />
+      <ActualOvertimeCost>0</ActualOvertimeCost>
+      <ActualOvertimeUnits>0</ActualOvertimeUnits>
+      <ActualRegularCost>0</ActualRegularCost>
+      <ActualRegularUnits>2</ActualRegularUnits>
+      <ActualStartDate>2023-03-06T08:00:00</ActualStartDate>
+      <ActualThisPeriodCost>0</ActualThisPeriodCost>
+      <ActualThisPeriodUnits>2</ActualThisPeriodUnits>
+      <ActualUnits>2</ActualUnits>
+      <AtCompletionCost>0</AtCompletionCost>
+      <AtCompletionUnits>40</AtCompletionUnits>
+      <CostAccountObjectId xsi:nil="true" />
+      <DrivingActivityDatesFlag>1</DrivingActivityDatesFlag>
+      <FinishDate>2023-03-10T16:00:00</FinishDate>
+      <GUID>{950E0155-2985-477D-B8D1-3E64B3DF70A0}</GUID>
+      <IsCostUnitsLinked>1</IsCostUnitsLinked>
+      <IsPrimaryResource>0</IsPrimaryResource>
+      <ObjectId>121368</ObjectId>
+      <OvertimeFactor>0</OvertimeFactor>
+      <PlannedCost>0</PlannedCost>
+      <PlannedCurve xsi:nil="true" />
+      <PlannedFinishDate>2023-03-10T16:00:00</PlannedFinishDate>
+      <PlannedLag>0</PlannedLag>
+      <PlannedStartDate>2023-03-06T08:00:00</PlannedStartDate>
+      <PlannedUnits>40</PlannedUnits>
+      <PlannedUnitsPerTime>1</PlannedUnitsPerTime>
+      <Proficiency>3 - Skilled</Proficiency>
+      <ProjectObjectId>5492</ProjectObjectId>
+      <RateSource>Resource</RateSource>
+      <RateType>Price / Unit</RateType>
+      <RemainingCost>0</RemainingCost>
+      <RemainingCurve xsi:nil="true" />
+      <RemainingDuration>40</RemainingDuration>
+      <RemainingFinishDate>2023-03-10T16:00:00</RemainingFinishDate>
+      <RemainingLag>0</RemainingLag>
+      <RemainingStartDate>2023-03-06T08:00:00</RemainingStartDate>
+      <RemainingUnits>38</RemainingUnits>
+      <RemainingUnitsPerTime>0.95</RemainingUnitsPerTime>
+      <ResourceCurveObjectId xsi:nil="true" />
+      <ResourceObjectId>8275</ResourceObjectId>
+      <ResourceType>Material</ResourceType>
+      <RoleObjectId xsi:nil="true" />
+      <StartDate>2023-03-06T08:00:00</StartDate>
+      <UnitsPercentComplete>0.05</UnitsPercentComplete>
+      <WBSObjectId>36851</WBSObjectId>
+    </ResourceAssignment>
+    <ResourceAssignment>
+      <ActivityObjectId>133081</ActivityObjectId>
+      <ActualCost>0</ActualCost>
+      <ActualCurve xsi:nil="true" />
+      <ActualFinishDate xsi:nil="true" />
+      <ActualOvertimeCost>0</ActualOvertimeCost>
+      <ActualOvertimeUnits>0</ActualOvertimeUnits>
+      <ActualRegularCost>0</ActualRegularCost>
+      <ActualRegularUnits>2</ActualRegularUnits>
+      <ActualStartDate>2023-03-06T08:00:00</ActualStartDate>
+      <ActualThisPeriodCost>0</ActualThisPeriodCost>
+      <ActualThisPeriodUnits>2</ActualThisPeriodUnits>
+      <ActualUnits>2</ActualUnits>
+      <AtCompletionCost>0</AtCompletionCost>
+      <AtCompletionUnits>72</AtCompletionUnits>
+      <CostAccountObjectId xsi:nil="true" />
+      <DrivingActivityDatesFlag>1</DrivingActivityDatesFlag>
+      <FinishDate>2023-03-10T16:00:00</FinishDate>
+      <GUID>{580C1DDB-CB4A-4D87-9364-0229C2628885}</GUID>
+      <IsCostUnitsLinked>1</IsCostUnitsLinked>
+      <IsPrimaryResource>0</IsPrimaryResource>
+      <ObjectId>121369</ObjectId>
+      <OvertimeFactor>0</OvertimeFactor>
+      <PlannedCost>0</PlannedCost>
+      <PlannedCurve xsi:nil="true" />
+      <PlannedFinishDate>2023-03-10T16:00:00</PlannedFinishDate>
+      <PlannedLag>0</PlannedLag>
+      <PlannedStartDate>2023-03-06T08:00:00</PlannedStartDate>
+      <PlannedUnits>72</PlannedUnits>
+      <PlannedUnitsPerTime>1.8</PlannedUnitsPerTime>
+      <Proficiency>3 - Skilled</Proficiency>
+      <ProjectObjectId>5492</ProjectObjectId>
+      <RateSource>Resource</RateSource>
+      <RateType>Price / Unit</RateType>
+      <RemainingCost>0</RemainingCost>
+      <RemainingCurve xsi:nil="true" />
+      <RemainingDuration>40</RemainingDuration>
+      <RemainingFinishDate>2023-03-10T16:00:00</RemainingFinishDate>
+      <RemainingLag>0</RemainingLag>
+      <RemainingStartDate>2023-03-06T08:00:00</RemainingStartDate>
+      <RemainingUnits>70</RemainingUnits>
+      <RemainingUnitsPerTime>1.75</RemainingUnitsPerTime>
+      <ResourceCurveObjectId xsi:nil="true" />
+      <ResourceObjectId>8274</ResourceObjectId>
+      <ResourceType>Nonlabor</ResourceType>
+      <RoleObjectId xsi:nil="true" />
+      <StartDate>2023-03-06T08:00:00</StartDate>
+      <UnitsPercentComplete>0.0277777777777778</UnitsPercentComplete>
+      <WBSObjectId>36851</WBSObjectId>
+    </ResourceAssignment>
+    <ActivityExpense>
+      <AccrualType>Uniform Over Activity</AccrualType>
+      <ActivityObjectId>133081</ActivityObjectId>
+      <ActualCost>100</ActualCost>
+      <ActualUnits>10</ActualUnits>
+      <AutoComputeActuals>0</AutoComputeActuals>
+      <CostAccountObjectId xsi:nil="true" />
+      <DocumentNumber xsi:nil="true" />
+      <ExpenseCategoryObjectId xsi:nil="true" />
+      <ExpenseDescription xsi:nil="true" />
+      <ExpenseItem>(New Expense Item)</ExpenseItem>
+      <ExpensePercentComplete>0.492610837438424</ExpensePercentComplete>
+      <ObjectId>19956</ObjectId>
+      <PlannedCost>3230</PlannedCost>
+      <PlannedUnits>323</PlannedUnits>
+      <PricePerUnit>10</PricePerUnit>
+      <ProjectObjectId>5492</ProjectObjectId>
+      <RemainingCost>103</RemainingCost>
+      <RemainingUnits>10.3</RemainingUnits>
+      <UnitOfMeasure xsi:nil="true" />
+      <Vendor xsi:nil="true" />
+      <WBSObjectId>36851</WBSObjectId>
+    </ActivityExpense>
+    <ActivityExpense>
+      <AccrualType>Uniform Over Activity</AccrualType>
+      <ActivityObjectId>133081</ActivityObjectId>
+      <ActualCost>54</ActualCost>
+      <ActualUnits>18</ActualUnits>
+      <AutoComputeActuals>0</AutoComputeActuals>
+      <CostAccountObjectId xsi:nil="true" />
+      <DocumentNumber xsi:nil="true" />
+      <ExpenseCategoryObjectId>10</ExpenseCategoryObjectId>
+      <ExpenseDescription xsi:nil="true" />
+      <ExpenseItem>(New Expense Item)1</ExpenseItem>
+      <ExpensePercentComplete>1</ExpensePercentComplete>
+      <ObjectId>19957</ObjectId>
+      <PlannedCost>111</PlannedCost>
+      <PlannedUnits>37</PlannedUnits>
+      <PricePerUnit>3</PricePerUnit>
+      <ProjectObjectId>5492</ProjectObjectId>
+      <RemainingCost>0</RemainingCost>
+      <RemainingUnits>0</RemainingUnits>
+      <UnitOfMeasure xsi:nil="true" />
+      <Vendor xsi:nil="true" />
+      <WBSObjectId>36851</WBSObjectId>
+    </ActivityExpense>
+  </BaselineProject>
+  <BaselineProject>
+    <ActivityDefaultActivityType>Task Dependent</ActivityDefaultActivityType>
+    <ActivityDefaultCalendarObjectId>178</ActivityDefaultCalendarObjectId>
+    <ActivityDefaultCostAccountObjectId xsi:nil="true" />
+    <ActivityDefaultDurationType>Fixed Duration and Units</ActivityDefaultDurationType>
+    <ActivityDefaultPercentCompleteType>Duration</ActivityDefaultPercentCompleteType>
+    <ActivityDefaultPricePerUnit>0</ActivityDefaultPricePerUnit>
+    <ActivityIdBasedOnSelectedActivity>1</ActivityIdBasedOnSelectedActivity>
+    <ActivityIdIncrement>10</ActivityIdIncrement>
+    <ActivityIdPrefix>A</ActivityIdPrefix>
+    <ActivityIdSuffix>1000</ActivityIdSuffix>
+    <ActivityPercentCompleteBasedOnActivitySteps>0</ActivityPercentCompleteBasedOnActivitySteps>
+    <AddActualToRemaining>0</AddActualToRemaining>
+    <AddedBy>ADMIN</AddedBy>
+    <AllowStatusReview>0</AllowStatusReview>
+    <AnnualDiscountRate xsi:nil="true" />
+    <AnticipatedFinishDate xsi:nil="true" />
+    <AnticipatedStartDate xsi:nil="true" />
+    <AssignmentDefaultDrivingFlag>1</AssignmentDefaultDrivingFlag>
+    <AssignmentDefaultRateType>Price / Unit</AssignmentDefaultRateType>
+    <BaselineTypeName />
+    <BaselineTypeObjectId xsi:nil="true" />
+    <CheckOutDate xsi:nil="true" />
+    <CheckOutStatus>0</CheckOutStatus>
+    <CheckOutUserObjectId xsi:nil="true" />
+    <CostQuantityRecalculateFlag>0</CostQuantityRecalculateFlag>
+    <CriticalActivityFloatLimit>0</CriticalActivityFloatLimit>
+    <CriticalActivityPathType>Critical Float</CriticalActivityPathType>
+    <DataDate>2023-10-06T00:00:00</DataDate>
+    <DateAdded>2023-03-06T00:00:00</DateAdded>
+    <DefaultPriceTimeUnits>Hour</DefaultPriceTimeUnits>
+    <DiscountApplicationPeriod xsi:nil="true" />
+    <EnableSummarization>1</EnableSummarization>
+    <FinancialPeriodTemplateId>1</FinancialPeriodTemplateId>
+    <FiscalYearStartMonth>1</FiscalYearStartMonth>
+    <GUID>{93B1000B-156A-40AC-82DF-6C6AA0225613}</GUID>
+    <Id><![CDATA[BaselineCosts - B2]]></Id>
+    <IndependentETCLaborUnits>0</IndependentETCLaborUnits>
+    <IndependentETCTotalCost>0</IndependentETCTotalCost>
+    <LastBaselineUpdateDate>2023-10-06T03:31:23</LastBaselineUpdateDate>
+    <LastFinancialPeriodObjectId xsi:nil="true" />
+    <LastSummarizedDate xsi:nil="true" />
+    <LevelingPriority>10</LevelingPriority>
+    <LinkActualToActualThisPeriod>1</LinkActualToActualThisPeriod>
+    <LinkPercentCompleteWithActual>1</LinkPercentCompleteWithActual>
+    <LinkPlannedAndAtCompletionFlag>1</LinkPlannedAndAtCompletionFlag>
+    <LocationObjectId xsi:nil="true" />
+    <MustFinishByDate xsi:nil="true" />
+    <Name><![CDATA[(New Project) - B2]]></Name>
+    <OBSObjectId>540</OBSObjectId>
+    <ObjectId>5493</ObjectId>
+    <OriginalBudget>0</OriginalBudget>
+    <OriginalProjectObjectId>5442</OriginalProjectObjectId>
+    <ParentEPSObjectId>31156</ParentEPSObjectId>
+    <PlannedStartDate>2023-03-06T00:00:00</PlannedStartDate>
+    <PrimaryResourcesCanMarkActivitiesAsCompleted>1</PrimaryResourcesCanMarkActivitiesAsCompleted>
+    <ProjectForecastStartDate xsi:nil="true" />
+    <ResetPlannedToRemainingFlag>0</ResetPlannedToRemainingFlag>
+    <ResourceCanBeAssignedToSameActivityMoreThanOnce>1</ResourceCanBeAssignedToSameActivityMoreThanOnce>
+    <ResourcesCanAssignThemselvesToActivities>1</ResourcesCanAssignThemselvesToActivities>
+    <ScheduledFinishDate>2023-10-18T10:00:00</ScheduledFinishDate>
+    <Status>Active</Status>
+    <StrategicPriority>500</StrategicPriority>
+    <SummarizeToWBSLevel>2</SummarizeToWBSLevel>
+    <WBSCodeSeparator>.</WBSCodeSeparator>
+    <WBSObjectId>36852</WBSObjectId>
+    <WebSiteRootDirectory xsi:nil="true" />
+    <WebSiteURL xsi:nil="true" />
+    <Activity>
+      <ActualDuration>1216</ActualDuration>
+      <ActualFinishDate xsi:nil="true" />
+      <ActualLaborCost>777</ActualLaborCost>
+      <ActualLaborUnits>0</ActualLaborUnits>
+      <ActualNonLaborCost>24</ActualNonLaborCost>
+      <ActualNonLaborUnits>345</ActualNonLaborUnits>
+      <ActualStartDate>2023-03-08T08:00:00</ActualStartDate>
+      <ActualThisPeriodLaborCost>777</ActualThisPeriodLaborCost>
+      <ActualThisPeriodLaborUnits>0</ActualThisPeriodLaborUnits>
+      <ActualThisPeriodNonLaborCost>24</ActualThisPeriodNonLaborCost>
+      <ActualThisPeriodNonLaborUnits>345</ActualThisPeriodNonLaborUnits>
+      <AtCompletionDuration>1282</AtCompletionDuration>
+      <AtCompletionExpenseCost>257</AtCompletionExpenseCost>
+      <AtCompletionLaborCost>811</AtCompletionLaborCost>
+      <AtCompletionLaborUnits>40</AtCompletionLaborUnits>
+      <AtCompletionNonLaborCost>444</AtCompletionNonLaborCost>
+      <AtCompletionNonLaborUnits>345</AtCompletionNonLaborUnits>
+      <AutoComputeActuals>0</AutoComputeActuals>
+      <CalendarObjectId>178</CalendarObjectId>
+      <DurationPercentComplete>0</DurationPercentComplete>
+      <DurationType>Fixed Duration and Units</DurationType>
+      <EstimatedWeight>1</EstimatedWeight>
+      <ExpectedFinishDate xsi:nil="true" />
+      <ExternalEarlyStartDate xsi:nil="true" />
+      <ExternalLateFinishDate xsi:nil="true" />
+      <Feedback />
+      <FinishDate>2023-10-18T10:00:00</FinishDate>
+      <GUID>{F22A64C1-76D2-4645-8BD5-7277F669A7E8}</GUID>
+      <Id>A1000</Id>
+      <IsNewFeedback>0</IsNewFeedback>
+      <LevelingPriority>Normal</LevelingPriority>
+      <Name>Задача 1</Name>
+      <NonLaborUnitsPercentComplete>1</NonLaborUnitsPercentComplete>
+      <NotesToResources />
+      <ObjectId>133083</ObjectId>
+      <PercentComplete>0</PercentComplete>
+      <PercentCompleteType>Duration</PercentCompleteType>
+      <PhysicalPercentComplete>0</PhysicalPercentComplete>
+      <PlannedDuration>64</PlannedDuration>
+      <PlannedFinishDate>2023-03-17T16:00:00</PlannedFinishDate>
+      <PlannedLaborCost>1050</PlannedLaborCost>
+      <PlannedLaborUnits>40</PlannedLaborUnits>
+      <PlannedNonLaborCost>890</PlannedNonLaborCost>
+      <PlannedNonLaborUnits>72</PlannedNonLaborUnits>
+      <PlannedStartDate>2023-03-08T08:00:00</PlannedStartDate>
+      <PrimaryConstraintDate xsi:nil="true" />
+      <PrimaryConstraintType xsi:nil="true" />
+      <PrimaryResourceObjectId>8278</PrimaryResourceObjectId>
+      <ProjectObjectId>5493</ProjectObjectId>
+      <RemainingDuration>66</RemainingDuration>
+      <RemainingEarlyFinishDate>2023-10-18T10:00:00</RemainingEarlyFinishDate>
+      <RemainingEarlyStartDate>2023-10-06T08:00:00</RemainingEarlyStartDate>
+      <RemainingLaborCost>34</RemainingLaborCost>
+      <RemainingLaborUnits>40</RemainingLaborUnits>
+      <RemainingLateFinishDate>2023-10-18T10:00:00</RemainingLateFinishDate>
+      <RemainingLateStartDate>2023-10-06T08:00:00</RemainingLateStartDate>
+      <RemainingNonLaborCost>420</RemainingNonLaborCost>
+      <RemainingNonLaborUnits>0</RemainingNonLaborUnits>
+      <ResumeDate xsi:nil="true" />
+      <ReviewRequired>0</ReviewRequired>
+      <ScopePercentComplete>0</ScopePercentComplete>
+      <SecondaryConstraintDate xsi:nil="true" />
+      <SecondaryConstraintType xsi:nil="true" />
+      <StartDate>2023-03-08T08:00:00</StartDate>
+      <Status>In Progress</Status>
+      <SuspendDate xsi:nil="true" />
+      <Type>Task Dependent</Type>
+      <UnitsPercentComplete>0.896103896103896</UnitsPercentComplete>
+      <WBSObjectId xsi:nil="true" />
+    </Activity>
+    <Activity>
+      <ActualDuration>40</ActualDuration>
+      <ActualFinishDate>2023-03-11T17:00:00</ActualFinishDate>
+      <ActualLaborCost>0</ActualLaborCost>
+      <ActualLaborUnits>40</ActualLaborUnits>
+      <ActualNonLaborCost>0</ActualNonLaborCost>
+      <ActualNonLaborUnits>0</ActualNonLaborUnits>
+      <ActualStartDate>2023-03-06T08:00:00</ActualStartDate>
+      <ActualThisPeriodLaborCost>0</ActualThisPeriodLaborCost>
+      <ActualThisPeriodLaborUnits>40</ActualThisPeriodLaborUnits>
+      <ActualThisPeriodNonLaborCost>0</ActualThisPeriodNonLaborCost>
+      <ActualThisPeriodNonLaborUnits>0</ActualThisPeriodNonLaborUnits>
+      <AtCompletionDuration>40</AtCompletionDuration>
+      <AtCompletionExpenseCost>0</AtCompletionExpenseCost>
+      <AtCompletionLaborCost>0</AtCompletionLaborCost>
+      <AtCompletionLaborUnits>40</AtCompletionLaborUnits>
+      <AtCompletionNonLaborCost>0</AtCompletionNonLaborCost>
+      <AtCompletionNonLaborUnits>0</AtCompletionNonLaborUnits>
+      <AutoComputeActuals>0</AutoComputeActuals>
+      <CalendarObjectId>178</CalendarObjectId>
+      <DurationPercentComplete>1</DurationPercentComplete>
+      <DurationType>Fixed Duration and Units/Time</DurationType>
+      <EstimatedWeight>1</EstimatedWeight>
+      <ExpectedFinishDate xsi:nil="true" />
+      <ExternalEarlyStartDate xsi:nil="true" />
+      <ExternalLateFinishDate xsi:nil="true" />
+      <Feedback />
+      <FinishDate>2023-03-11T17:00:00</FinishDate>
+      <GUID>{D6D44C6E-791F-4C38-899E-84DC7A0285C9}</GUID>
+      <Id>A1010</Id>
+      <IsNewFeedback>0</IsNewFeedback>
+      <LevelingPriority>Normal</LevelingPriority>
+      <Name>Тест2</Name>
+      <NonLaborUnitsPercentComplete>0</NonLaborUnitsPercentComplete>
+      <NotesToResources />
+      <ObjectId>133084</ObjectId>
+      <PercentComplete>1</PercentComplete>
+      <PercentCompleteType>Physical</PercentCompleteType>
+      <PhysicalPercentComplete>1</PhysicalPercentComplete>
+      <PlannedDuration>40</PlannedDuration>
+      <PlannedFinishDate>2023-03-11T17:00:00</PlannedFinishDate>
+      <PlannedLaborCost>0</PlannedLaborCost>
+      <PlannedLaborUnits>40</PlannedLaborUnits>
+      <PlannedNonLaborCost>0</PlannedNonLaborCost>
+      <PlannedNonLaborUnits>0</PlannedNonLaborUnits>
+      <PlannedStartDate>2023-03-06T08:00:00</PlannedStartDate>
+      <PrimaryConstraintDate xsi:nil="true" />
+      <PrimaryConstraintType xsi:nil="true" />
+      <PrimaryResourceObjectId>8228</PrimaryResourceObjectId>
+      <ProjectObjectId>5493</ProjectObjectId>
+      <RemainingDuration>0</RemainingDuration>
+      <RemainingEarlyFinishDate xsi:nil="true" />
+      <RemainingEarlyStartDate xsi:nil="true" />
+      <RemainingLaborCost>0</RemainingLaborCost>
+      <RemainingLaborUnits>0</RemainingLaborUnits>
+      <RemainingLateFinishDate xsi:nil="true" />
+      <RemainingLateStartDate xsi:nil="true" />
+      <RemainingNonLaborCost>0</RemainingNonLaborCost>
+      <RemainingNonLaborUnits>0</RemainingNonLaborUnits>
+      <ResumeDate xsi:nil="true" />
+      <ReviewRequired>0</ReviewRequired>
+      <ScopePercentComplete>0</ScopePercentComplete>
+      <SecondaryConstraintDate xsi:nil="true" />
+      <SecondaryConstraintType xsi:nil="true" />
+      <StartDate>2023-03-06T08:00:00</StartDate>
+      <Status>Completed</Status>
+      <SuspendDate xsi:nil="true" />
+      <Type>Resource Dependent</Type>
+      <UnitsPercentComplete>1</UnitsPercentComplete>
+      <WBSObjectId xsi:nil="true" />
+    </Activity>
+    <ResourceAssignment>
+      <ActivityObjectId>133083</ActivityObjectId>
+      <ActualCost>777</ActualCost>
+      <ActualCurve xsi:nil="true" />
+      <ActualFinishDate xsi:nil="true" />
+      <ActualOvertimeCost>0</ActualOvertimeCost>
+      <ActualOvertimeUnits>0</ActualOvertimeUnits>
+      <ActualRegularCost>777</ActualRegularCost>
+      <ActualRegularUnits>0</ActualRegularUnits>
+      <ActualStartDate>2023-03-08T08:00:00</ActualStartDate>
+      <ActualThisPeriodCost>777</ActualThisPeriodCost>
+      <ActualThisPeriodUnits>0</ActualThisPeriodUnits>
+      <ActualUnits>0</ActualUnits>
+      <AtCompletionCost>811</AtCompletionCost>
+      <AtCompletionUnits>40</AtCompletionUnits>
+      <CostAccountObjectId xsi:nil="true" />
+      <DrivingActivityDatesFlag>1</DrivingActivityDatesFlag>
+      <FinishDate>2023-10-18T10:00:00</FinishDate>
+      <GUID>{12D902E8-1888-4FF0-A899-8794CE1A587A}</GUID>
+      <IsCostUnitsLinked>1</IsCostUnitsLinked>
+      <IsPrimaryResource>1</IsPrimaryResource>
+      <ObjectId>121370</ObjectId>
+      <OvertimeFactor>0</OvertimeFactor>
+      <PlannedCost>1050</PlannedCost>
+      <PlannedCurve xsi:nil="true" />
+      <PlannedFinishDate>2023-03-17T16:00:00</PlannedFinishDate>
+      <PlannedLag>0</PlannedLag>
+      <PlannedStartDate>2023-03-08T08:00:00</PlannedStartDate>
+      <PlannedUnits>40</PlannedUnits>
+      <PlannedUnitsPerTime>0.625</PlannedUnitsPerTime>
+      <Proficiency>3 - Skilled</Proficiency>
+      <ProjectObjectId>5493</ProjectObjectId>
+      <RateSource>Resource</RateSource>
+      <RateType>Price / Unit</RateType>
+      <RemainingCost>34</RemainingCost>
+      <RemainingCurve xsi:nil="true" />
+      <RemainingDuration>66.0000000000000066</RemainingDuration>
+      <RemainingFinishDate>2023-10-18T10:00:00</RemainingFinishDate>
+      <RemainingLag>0</RemainingLag>
+      <RemainingStartDate>2023-10-06T08:00:00</RemainingStartDate>
+      <RemainingUnits>40</RemainingUnits>
+      <RemainingUnitsPerTime>0.606060606060606</RemainingUnitsPerTime>
+      <ResourceCurveObjectId xsi:nil="true" />
+      <ResourceObjectId>8278</ResourceObjectId>
+      <ResourceType>Labor</ResourceType>
+      <RoleObjectId xsi:nil="true" />
+      <StartDate>2023-03-08T08:00:00</StartDate>
+      <UnitsPercentComplete>0</UnitsPercentComplete>
+      <WBSObjectId>36852</WBSObjectId>
+    </ResourceAssignment>
+    <ResourceAssignment>
+      <ActivityObjectId>133084</ActivityObjectId>
+      <ActualCost>0</ActualCost>
+      <ActualCurve xsi:nil="true" />
+      <ActualFinishDate>2023-03-11T17:00:00</ActualFinishDate>
+      <ActualOvertimeCost>0</ActualOvertimeCost>
+      <ActualOvertimeUnits>0</ActualOvertimeUnits>
+      <ActualRegularCost>0</ActualRegularCost>
+      <ActualRegularUnits>40</ActualRegularUnits>
+      <ActualStartDate>2023-03-06T08:00:00</ActualStartDate>
+      <ActualThisPeriodCost>0</ActualThisPeriodCost>
+      <ActualThisPeriodUnits>40</ActualThisPeriodUnits>
+      <ActualUnits>40</ActualUnits>
+      <AtCompletionCost>0</AtCompletionCost>
+      <AtCompletionUnits>40</AtCompletionUnits>
+      <CostAccountObjectId xsi:nil="true" />
+      <DrivingActivityDatesFlag>1</DrivingActivityDatesFlag>
+      <FinishDate>2023-03-11T17:00:00</FinishDate>
+      <GUID>{663F4919-8566-480D-8D43-15D3DF86354E}</GUID>
+      <IsCostUnitsLinked>1</IsCostUnitsLinked>
+      <IsPrimaryResource>1</IsPrimaryResource>
+      <ObjectId>121371</ObjectId>
+      <OvertimeFactor>0</OvertimeFactor>
+      <PlannedCost>0</PlannedCost>
+      <PlannedCurve xsi:nil="true" />
+      <PlannedFinishDate>2023-03-11T17:00:00</PlannedFinishDate>
+      <PlannedLag>0</PlannedLag>
+      <PlannedStartDate>2023-03-06T08:00:00</PlannedStartDate>
+      <PlannedUnits>40</PlannedUnits>
+      <PlannedUnitsPerTime>1</PlannedUnitsPerTime>
+      <Proficiency>3 - Skilled</Proficiency>
+      <ProjectObjectId>5493</ProjectObjectId>
+      <RateSource>Resource</RateSource>
+      <RateType>Price / Unit</RateType>
+      <RemainingCost>0</RemainingCost>
+      <RemainingCurve xsi:nil="true" />
+      <RemainingDuration>0</RemainingDuration>
+      <RemainingFinishDate xsi:nil="true" />
+      <RemainingLag>0</RemainingLag>
+      <RemainingStartDate xsi:nil="true" />
+      <RemainingUnits>0</RemainingUnits>
+      <RemainingUnitsPerTime>0.89</RemainingUnitsPerTime>
+      <ResourceCurveObjectId xsi:nil="true" />
+      <ResourceObjectId>8228</ResourceObjectId>
+      <ResourceType>Labor</ResourceType>
+      <RoleObjectId xsi:nil="true" />
+      <StartDate>2023-03-06T08:00:00</StartDate>
+      <UnitsPercentComplete>1</UnitsPercentComplete>
+      <WBSObjectId>36852</WBSObjectId>
+    </ResourceAssignment>
+    <ResourceAssignment>
+      <ActivityObjectId>133083</ActivityObjectId>
+      <ActualCost>3434</ActualCost>
+      <ActualCurve xsi:nil="true" />
+      <ActualFinishDate xsi:nil="true" />
+      <ActualOvertimeCost>0</ActualOvertimeCost>
+      <ActualOvertimeUnits>0</ActualOvertimeUnits>
+      <ActualRegularCost>3434</ActualRegularCost>
+      <ActualRegularUnits>0</ActualRegularUnits>
+      <ActualStartDate>2023-03-08T08:00:00</ActualStartDate>
+      <ActualThisPeriodCost>3434</ActualThisPeriodCost>
+      <ActualThisPeriodUnits>0</ActualThisPeriodUnits>
+      <ActualUnits>0</ActualUnits>
+      <AtCompletionCost>3776</AtCompletionCost>
+      <AtCompletionUnits>40</AtCompletionUnits>
+      <CostAccountObjectId xsi:nil="true" />
+      <DrivingActivityDatesFlag>1</DrivingActivityDatesFlag>
+      <FinishDate>2023-10-12T15:00:00</FinishDate>
+      <GUID>{950E0155-2985-477D-B8D1-3E64B3DF70A0}</GUID>
+      <IsCostUnitsLinked>1</IsCostUnitsLinked>
+      <IsPrimaryResource>0</IsPrimaryResource>
+      <ObjectId>121372</ObjectId>
+      <OvertimeFactor>0</OvertimeFactor>
+      <PlannedCost>2222</PlannedCost>
+      <PlannedCurve xsi:nil="true" />
+      <PlannedFinishDate>2023-03-17T16:00:00</PlannedFinishDate>
+      <PlannedLag>0</PlannedLag>
+      <PlannedStartDate>2023-03-08T08:00:00</PlannedStartDate>
+      <PlannedUnits>40</PlannedUnits>
+      <PlannedUnitsPerTime>0.625</PlannedUnitsPerTime>
+      <Proficiency>3 - Skilled</Proficiency>
+      <ProjectObjectId>5493</ProjectObjectId>
+      <RateSource>Resource</RateSource>
+      <RateType>Price / Unit</RateType>
+      <RemainingCost>342</RemainingCost>
+      <RemainingCurve xsi:nil="true" />
+      <RemainingDuration>38.999999999999834250000000001</RemainingDuration>
+      <RemainingFinishDate>2023-10-12T15:00:00</RemainingFinishDate>
+      <RemainingLag>0</RemainingLag>
+      <RemainingStartDate>2023-10-06T08:00:00</RemainingStartDate>
+      <RemainingUnits>40</RemainingUnits>
+      <RemainingUnitsPerTime>1.02564102564103</RemainingUnitsPerTime>
+      <ResourceCurveObjectId xsi:nil="true" />
+      <ResourceObjectId>8275</ResourceObjectId>
+      <ResourceType>Material</ResourceType>
+      <RoleObjectId xsi:nil="true" />
+      <StartDate>2023-03-08T08:00:00</StartDate>
+      <UnitsPercentComplete>0</UnitsPercentComplete>
+      <WBSObjectId>36852</WBSObjectId>
+    </ResourceAssignment>
+    <ResourceAssignment>
+      <ActivityObjectId>133083</ActivityObjectId>
+      <ActualCost>24</ActualCost>
+      <ActualCurve xsi:nil="true" />
+      <ActualFinishDate xsi:nil="true" />
+      <ActualOvertimeCost>0</ActualOvertimeCost>
+      <ActualOvertimeUnits>0</ActualOvertimeUnits>
+      <ActualRegularCost>24</ActualRegularCost>
+      <ActualRegularUnits>345</ActualRegularUnits>
+      <ActualStartDate>2023-03-08T08:00:00</ActualStartDate>
+      <ActualThisPeriodCost>24</ActualThisPeriodCost>
+      <ActualThisPeriodUnits>345</ActualThisPeriodUnits>
+      <ActualUnits>345</ActualUnits>
+      <AtCompletionCost>444</AtCompletionCost>
+      <AtCompletionUnits>345</AtCompletionUnits>
+      <CostAccountObjectId xsi:nil="true" />
+      <DrivingActivityDatesFlag>1</DrivingActivityDatesFlag>
+      <FinishDate>2023-10-13T08:07:00</FinishDate>
+      <GUID>{580C1DDB-CB4A-4D87-9364-0229C2628885}</GUID>
+      <IsCostUnitsLinked>1</IsCostUnitsLinked>
+      <IsPrimaryResource>0</IsPrimaryResource>
+      <ObjectId>121373</ObjectId>
+      <OvertimeFactor>0</OvertimeFactor>
+      <PlannedCost>890</PlannedCost>
+      <PlannedCurve xsi:nil="true" />
+      <PlannedFinishDate>2023-03-17T16:00:00</PlannedFinishDate>
+      <PlannedLag>0</PlannedLag>
+      <PlannedStartDate>2023-03-08T08:00:00</PlannedStartDate>
+      <PlannedUnits>72</PlannedUnits>
+      <PlannedUnitsPerTime>1.125</PlannedUnitsPerTime>
+      <Proficiency>3 - Skilled</Proficiency>
+      <ProjectObjectId>5493</ProjectObjectId>
+      <RateSource>Resource</RateSource>
+      <RateType>Price / Unit</RateType>
+      <RemainingCost>420</RemainingCost>
+      <RemainingCurve xsi:nil="true" />
+      <RemainingDuration>40.1166666666667</RemainingDuration>
+      <RemainingFinishDate>2023-10-13T08:07:00</RemainingFinishDate>
+      <RemainingLag>0</RemainingLag>
+      <RemainingStartDate>2023-10-06T08:00:00</RemainingStartDate>
+      <RemainingUnits>0</RemainingUnits>
+      <RemainingUnitsPerTime>0</RemainingUnitsPerTime>
+      <ResourceCurveObjectId xsi:nil="true" />
+      <ResourceObjectId>8274</ResourceObjectId>
+      <ResourceType>Nonlabor</ResourceType>
+      <RoleObjectId xsi:nil="true" />
+      <StartDate>2023-03-08T08:00:00</StartDate>
+      <UnitsPercentComplete>1</UnitsPercentComplete>
+      <WBSObjectId>36852</WBSObjectId>
+    </ResourceAssignment>
+    <ActivityExpense>
+      <AccrualType>Uniform Over Activity</AccrualType>
+      <ActivityObjectId>133083</ActivityObjectId>
+      <ActualCost>100</ActualCost>
+      <ActualUnits>10</ActualUnits>
+      <AutoComputeActuals>0</AutoComputeActuals>
+      <CostAccountObjectId xsi:nil="true" />
+      <DocumentNumber xsi:nil="true" />
+      <ExpenseCategoryObjectId xsi:nil="true" />
+      <ExpenseDescription xsi:nil="true" />
+      <ExpenseItem>(New Expense Item)</ExpenseItem>
+      <ExpensePercentComplete>0.492610837438424</ExpensePercentComplete>
+      <ObjectId>19958</ObjectId>
+      <PlannedCost>3230</PlannedCost>
+      <PlannedUnits>323</PlannedUnits>
+      <PricePerUnit>10</PricePerUnit>
+      <ProjectObjectId>5493</ProjectObjectId>
+      <RemainingCost>103</RemainingCost>
+      <RemainingUnits>10.3</RemainingUnits>
+      <UnitOfMeasure xsi:nil="true" />
+      <Vendor xsi:nil="true" />
+      <WBSObjectId>36852</WBSObjectId>
+    </ActivityExpense>
+    <ActivityExpense>
+      <AccrualType>Uniform Over Activity</AccrualType>
+      <ActivityObjectId>133083</ActivityObjectId>
+      <ActualCost>54</ActualCost>
+      <ActualUnits>18</ActualUnits>
+      <AutoComputeActuals>0</AutoComputeActuals>
+      <CostAccountObjectId xsi:nil="true" />
+      <DocumentNumber xsi:nil="true" />
+      <ExpenseCategoryObjectId>10</ExpenseCategoryObjectId>
+      <ExpenseDescription xsi:nil="true" />
+      <ExpenseItem>(New Expense Item)1</ExpenseItem>
+      <ExpensePercentComplete>1</ExpensePercentComplete>
+      <ObjectId>19959</ObjectId>
+      <PlannedCost>111</PlannedCost>
+      <PlannedUnits>37</PlannedUnits>
+      <PricePerUnit>3</PricePerUnit>
+      <ProjectObjectId>5493</ProjectObjectId>
+      <RemainingCost>0</RemainingCost>
+      <RemainingUnits>0</RemainingUnits>
+      <UnitOfMeasure xsi:nil="true" />
+      <Vendor xsi:nil="true" />
+      <WBSObjectId>36852</WBSObjectId>
+    </ActivityExpense>
+  </BaselineProject>
+</APIBusinessObjects>

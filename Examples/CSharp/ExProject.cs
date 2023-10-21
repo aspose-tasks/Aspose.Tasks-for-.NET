@@ -778,7 +778,7 @@
         public void SaveToStreamWithOptions()
         {
             // ExStart:CreateEmptyProjectToSaveToStreamWithImageOptions
-            // ExFor: Project.Save(Stream, SaveOptions)
+            // ExFor: Project.Save(Stream, SimpleSaveOptions)
             // ExSummary: Shows how to save project into a stream as an image and to control image options.
             var project = new Project();
 
@@ -1755,7 +1755,7 @@
             try
             {
                 // ExStart:CreateEmptyProjectToSaveToStreamWithMPPSaveOptions
-                // ExFor: Project.Save(Stream, MPPSaveOptions)
+                // ExFor: Project.Save(Stream, SimpleSaveOptions)
                 // ExSummary: Shows how to save project into a stream as an MPP file by using MPP save options.
                 using (var stream = new FileStream(OutDir + "EmptyProjectSaveStream_out.xml", FileMode.Create, FileAccess.Write))
                 {
@@ -1782,8 +1782,7 @@
             try
             {
                 // ExStart:CreateEmptyProjectToSaveToStreamWithMPPSaveOptions
-                // ExFor: Project.Save(String,SaveOptions)
-                // ExFor: Project.Save(String,MPPSaveOptions)
+                // ExFor: Project.Save(String,SimpleSaveOptions)
                 // ExSummary: Shows how to save project as an MPP file.
                 var project = new Project();
                 var options = new MPPSaveOptions();

@@ -602,9 +602,8 @@
         public void GetSetNotes()
         {
             // ExStart
-            // ExFor: Rsc.Notes
-            // ExFor: Rsc.NotesRTF
-            // ExSummary: Shows how to read/write Rsc.Notes property.
+            // ExFor: Rsc.NotesText
+            // ExSummary: Shows how to read/write Rsc.NotesText property.
             var project = new Project();
 
             var resource = project.Resources.Add("Resource");
@@ -634,24 +633,8 @@
 
             resource.Set(Rsc.NotesRTF, RTF);
 
-            Console.WriteLine("Notes R T F: " + resource.Get(Rsc.NotesRTF));
-
-            // ExEnd
-        }
-
-        [Test]
-        public void GetSetNotesText()
-        {
-            // ExStart
-            // ExFor: Rsc.NotesText
-            // ExSummary: Shows how to read/write Rsc.NotesText property.
-            var project = new Project();
-
-            var resource = project.Resources.Add("Resource");
-
-            resource.Set(Rsc.NotesText, "Notes");
-
-            Console.WriteLine("Notes Text: " + resource.Get(Rsc.NotesText));
+            Console.WriteLine("Notes RTF: " + resource.Get(Rsc.NotesRTF));
+            Console.WriteLine("Notes text: " + resource.Get(Rsc.NotesText));
 
             // ExEnd
         }
