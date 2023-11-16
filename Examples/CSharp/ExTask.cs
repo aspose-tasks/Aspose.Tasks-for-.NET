@@ -683,6 +683,24 @@
         }
 
         [Test]
+        public void GetTaskStatus()
+        {
+            // ExStart
+            // ExFor: Task.Status
+            // ExSummary: Shows how to get task's status.
+            var project = new Project(DataDir + "TaskPercentageCompletion.mpp");
+
+            // Project's status date should be set because status calculation uses status date.
+            project.StatusDate = new DateTime(2010, 7, 9, 15, 0, 0);
+            foreach (var task in project.EnumerateAllChildTasks())
+            {
+                Console.WriteLine("{0} - {1}", task.Name, task.Status);
+            }
+
+            // ExEnd
+        }
+
+        [Test]
         public void CreateTasks()
         {
             try
