@@ -6,6 +6,8 @@ install it and then add its reference to this project. For any issues, questions
 please feel free to contact us using https://forum.aspose.com/c/tasks
 */
 
+using Aspose.Tasks.Saving;
+
 namespace Aspose.Tasks.Examples.CSharp
 {
     using System;
@@ -115,20 +117,34 @@ namespace Aspose.Tasks.Examples.CSharp
         }
 
         [Test]
-        public void GetHashCodeFilter()
+        public void AddFilterToProject()
         {
             // ExStart
-            // ExFor: Filter.GetHashCode
-            // ExSummary: Shows how to get a hash code of a filter.
-            var project = new Project(DataDir + "ReadFilterDefinitionData.mpp");
-            List<Filter> filters = project.TaskFilters.ToList();
+            // ExFor: MPPSaveOptions.WriteFilters
+            // ExSummary: Shows how to add and save new task filter to MPP project.
+            Project project = new Project();
 
-            var filter1 = filters[0];
-            var filter2 = filters[1];
+            project.TaskFilters.Clear();
+            project.ResourceFilters.Clear();
 
-            // the hash code of a filter is equal to filter's UID 
-            Console.WriteLine("Filter UID: {0} Hash Code: {1}", filter1.Uid, filter1.GetHashCode());
-            Console.WriteLine("Filter UID: {0} Hash Code: {1}", filter2.Uid, filter2.GetHashCode());
+            var filter = new Filter();
+            filter.Name = "New Task Filter";
+            filter.FilterType = ItemType.TaskItem;
+            filter.ShowInMenu = true;
+            filter.ShowRelatedSummaryRows = true;
+
+            filter.Criteria = new FilterCriteria();
+
+            var criteria1 = new FilterCriteria();
+            criteria1.Field = Field.TaskNumber13;
+            criteria1.Test = FilterComparisonType.IsLessThan;
+            criteria1.Values[0] = 34.3D;
+
+            filter.Criteria.CriteriaRows.Add(criteria1);
+            project.TaskFilters.Add(filter);
+
+            SimpleSaveOptions options = new MPPSaveOptions() { WriteFilters = true };
+            project.Save(OutDir + "output_new_filter.mpp", options);
 
             // ExEnd
         }

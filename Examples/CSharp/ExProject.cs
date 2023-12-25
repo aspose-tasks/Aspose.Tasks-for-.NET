@@ -1380,7 +1380,7 @@
 
                 var project = new Project(DataDir + "Project1.mpp");
 
-                var options = new MPPSaveOptions
+                SimpleSaveOptions options = new MPPSaveOptions
                 {
                     ProtectionPassword = "password!234"
                 };
@@ -1760,7 +1760,7 @@
                 using (var stream = new FileStream(OutDir + "EmptyProjectSaveStream_out.xml", FileMode.Create, FileAccess.Write))
                 {
                     var project = new Project();
-                    var options = new MPPSaveOptions();
+                    SimpleSaveOptions options = new MPPSaveOptions();
 
                     // by using of MPPSaveOptions we save it in MPP format
                     project.Save(stream, options);
@@ -1785,7 +1785,7 @@
                 // ExFor: Project.Save(String,SimpleSaveOptions)
                 // ExSummary: Shows how to save project as an MPP file.
                 var project = new Project();
-                var options = new MPPSaveOptions();
+                SimpleSaveOptions options = new MPPSaveOptions();
                 project.Save(OutDir + "EmptyProjectSaveStream_out.xml", options);
 
                 // ExEnd:CreateEmptyProjectToSaveToStreamWithMPPSaveOptions
@@ -1998,7 +1998,6 @@
             var project = new Project();
 
             var task = project.RootTask.Children.Add("Task1");
-            task.Set(Tsk.DurationFormat, TimeUnitType.Day);
             task.Set(Tsk.Start, new DateTime(2012, 8, 23, 8, 0, 0));
             task.Set(Tsk.Duration, project.GetDuration(24, TimeUnitType.Hour));
             task.Set(Tsk.ActualStart, new DateTime(2012, 8, 23, 8, 0, 0));

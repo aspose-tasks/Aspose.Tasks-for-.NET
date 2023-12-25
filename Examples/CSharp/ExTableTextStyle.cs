@@ -42,7 +42,7 @@
                 view.TableTextStyles.Add(style1);
                 view.TableTextStyles.Add(style2);
 
-                var options = new MPPSaveOptions
+                SimpleSaveOptions options = new MPPSaveOptions
                 {
                     // set a flag indicating that view data must be written
                     WriteViewData = true

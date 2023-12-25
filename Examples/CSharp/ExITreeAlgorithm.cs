@@ -24,7 +24,6 @@
             var task = summary.Children.Add("Acquire staff");
             task.Set(Tsk.Start, new DateTime(1999, 5, 3, 9, 0, 0));
             task.Set(Tsk.Duration, project.GetDuration(8 * 14, TimeUnitType.Hour));
-            task.Set(Tsk.DurationFormat, TimeUnitType.Day);
             task.Set(Tsk.Finish, project.Get(Prj.Calendar).GetFinishDateByStartAndWork(task.Get(Tsk.Start), task.Get(Tsk.Duration)));
 
             var resource = project.Resources.Add("Project Manager");

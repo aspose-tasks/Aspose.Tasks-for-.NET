@@ -39,8 +39,8 @@ namespace Aspose.Tasks.Examples.CSharp
                 settings.PaperSize = PrinterPaperSize.PaperB4;
                 // set a first page number for printing.
                 settings.FirstPageNumber = 3;
-            
-                var options = new MPPSaveOptions
+
+                SimpleSaveOptions options = new MPPSaveOptions
                 {
                     WriteViewData = true
                 };

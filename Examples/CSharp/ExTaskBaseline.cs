@@ -13,7 +13,6 @@
             // ExFor: TaskBaseline
             // ExFor: TaskBaseline.Start
             // ExFor: TaskBaseline.Duration
-            // ExFor: TaskBaseline.DurationFormat
             // ExFor: TaskBaseline.EstimatedDuration
             // ExFor: TaskBaseline.Finish
             // ExFor: TaskBaseline.FixedCost
