@@ -8,39 +8,6 @@
     public class ExWeekDay : ApiExampleBase
     {
         [Test]
-        public void WeekDayEquals()
-        {
-            // ExStart
-            // ExFor: WeekDay.Equals(Object)
-            // ExSummary: Shows how to check week day equality.
-            var project = new Project(DataDir + "Project2.mpp");
-
-            var calendar = project.Calendars.GetByUid(1);
-            var weekDay1 = calendar.WeekDays[0];
-            var weekDay2 = calendar.WeekDays[1];
-
-            // the equality of calendars is checked against to weekday's properties:
-            // weekday.DayType
-            // weekday.DayWorking
-            // weekday.FromDate
-            // weekday.ToDate
-            // weekday.WorkingTimes
-            Console.WriteLine("WeekDay 1 Day Type: " + weekDay1.DayType);
-            Console.WriteLine("WeekDay 1 Day Working: " + weekDay1.DayWorking);
-            Console.WriteLine("WeekDay 1 From Date: " + weekDay1.FromDate);
-            Console.WriteLine("WeekDay 1 From Date: " + weekDay1.ToDate);
-            Console.WriteLine("WeekDay 1 WorkingTimes: " + weekDay1.WorkingTimes);
-            Console.WriteLine("WeekDay 2 Day Type: " + weekDay2.DayType);
-            Console.WriteLine("WeekDay 2 Day Working: " + weekDay2.DayWorking);
-            Console.WriteLine("WeekDay 2 From Date: " + weekDay2.FromDate);
-            Console.WriteLine("WeekDay 2 From Date: " + weekDay2.ToDate);
-            Console.WriteLine("WeekDay 2 WorkingTimes: " + weekDay2.WorkingTimes);
-            Console.WriteLine("Are weekdays equal: " + weekDay1.Equals(weekDay2));
-
-            // ExEnd
-        }
-
-        [Test]
         public void WeekDayClone()
         {
             // ExStart
@@ -77,41 +44,6 @@
         }
 
         [Test]
-        public void GetWeekDayHashCode()
-        {
-            // ExStart
-            // ExFor: WeekDay.GetHashCode
-            // ExSummary: Shows how to get a hash code of a week day.
-            var project = new Project(DataDir + "Project2.mpp");
-
-            var calendar = project.Calendars.GetByUid(1);
-            var weekDay1 = calendar.WeekDays[1];
-            var weekDay2 = calendar.WeekDays[2];
-
-            // the hash code of a calendar is based on:
-            // weekday.DayType
-            // weekday.FromDate
-            // weekday.ToDate
-            // weekday.WorkingTimes
-            Console.WriteLine("WeekDay 1 Day Type: " + weekDay1.DayType);
-            Console.WriteLine("WeekDay 1 Day Working: " + weekDay1.DayWorking);
-            Console.WriteLine("WeekDay 1 From Date: " + weekDay1.FromDate);
-            Console.WriteLine("WeekDay 1 From Date: " + weekDay1.ToDate);
-            Console.WriteLine("WeekDay 1 WorkingTimes: " + weekDay1.WorkingTimes);
-            Console.WriteLine();
-            Console.WriteLine("WeekDay 2 Day Type: " + weekDay2.DayType);
-            Console.WriteLine("WeekDay 2 Day Working: " + weekDay2.DayWorking);
-            Console.WriteLine("WeekDay 2 From Date: " + weekDay2.FromDate);
-            Console.WriteLine("WeekDay 2 From Date: " + weekDay2.ToDate);
-            Console.WriteLine("WeekDay 2 WorkingTimes: " + weekDay2.WorkingTimes);
-            Console.WriteLine();
-            Console.WriteLine("Week Day 1 Hash Code: {0}", weekDay1.GetHashCode());
-            Console.WriteLine("Week Day 2 Hash Code: {0}", weekDay2.GetHashCode());
-
-            // ExEnd
-        }
-        
-        [Test]
         public void WorkWithWeekDay()
         {
             // ExStart
@@ -135,7 +67,7 @@
 
             // Add working days monday through thursday with default timings
             calendar.WeekDays.Add(WeekDay.CreateDefaultWorkingDay(DayType.Monday));
-            calendar.WeekDays.Add(WeekDay.CreateDefaultWorkingDay(DayType.Tuesday));
+            calendar.WeekDays.Add(new WeekDay(DayType.Tuesday, new WorkingTime(9, 11), new WorkingTime(12, 18)));
             calendar.WeekDays.Add(WeekDay.CreateDefaultWorkingDay(DayType.Wednesday));
             calendar.WeekDays.Add(WeekDay.CreateDefaultWorkingDay(DayType.Thursday));
 
