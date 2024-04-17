@@ -269,7 +269,7 @@
                 // ExStart: ReadWriteRateScaleForResourceAssignment
                 // ExFor: Asn.RateScale
                 // ExFor: RateScaleType
-                // ExSummary: Shows how to work with assignment's rate scale. 
+                // ExSummary: Shows how to work with assignment's rate scale when we want to set variable material consumption (e.g. '10/day' or '1/week') for an assignment of a material resource.
                 var project = new Project(DataDir + "New project 2013.mpp");
 
                 var task = project.RootTask.Children.Add("t1");
@@ -281,7 +281,14 @@
                 nonMaterialResource.Set(Rsc.Type, ResourceType.Work);
 
                 var materialResourceAssignment = project.ResourceAssignments.Add(task, materialResource);
+
+                // Suppose we want to set '1/week' material consumption.
+                // We should set hourly rate to Units property, so we divide 1D by hours per week.
+                materialResourceAssignment.Set(Asn.Units, 1D / 40);
                 materialResourceAssignment.Set(Asn.RateScale, RateScaleType.Week);
+
+                // Please note that starting with 24.4. this can be done by calling 1 method:
+                // materialResourceAssignment.SetMaterialResourceUnits(1D, RateScaleType.Week);
 
                 var nonMaterialResourceAssignment = project.ResourceAssignments.Add(task, nonMaterialResource);
                 nonMaterialResourceAssignment.Set(Asn.RateScale, RateScaleType.Week);
@@ -304,7 +311,36 @@
                 Console.WriteLine(ex.Message + "\nThis example will only work if you apply a valid Aspose License. You can purchase full license or get 30 day temporary license from http://www.aspose.com/purchase/default.aspx.");
             }
         }
-        
+
+        [Test]
+        public void SetMaterialResourceUnits()
+        {
+            try
+            {
+                // ExStart: SetMaterialResourceUnits
+                // ExFor: ResourceAssignment.SetMaterialResourceUnits
+                // ExFor: RateScaleType
+                // ExSummary: Shows how to set variable material consumption (e.g. '10/day' or '1/week') for an assignment of a material resource.
+                var project = new Project(DataDir + "New project 2013.mpp");
+
+                var task = project.RootTask.Children.Add("t1");
+
+                var materialResource = project.Resources.Add("materialResource");
+                materialResource.Set(Rsc.Type, ResourceType.Material);
+
+                var materialResourceAssignment = project.ResourceAssignments.Add(task, materialResource);
+
+                // Suppose we want to set '1/week' material consumption.
+                materialResourceAssignment.SetMaterialResourceUnits(1D, RateScaleType.Week);
+
+                // ExEnd:SetMaterialResourceUnits
+            }
+            catch (NotSupportedException ex)
+            {
+                Console.WriteLine(ex.Message + "\nThis example will only work if you apply a valid Aspose License. You can purchase full license or get 30 day temporary license from http://www.aspose.com/purchase/default.aspx.");
+            }
+        }
+
         [Test]
         public void ReadBudgetWorkAndCost()
         {
