@@ -1,0 +1,66 @@
+ERMHDR	20.12	2024-06-12	Project	ADMIN	user	dbxDatabaseNoName	Project Management	USD
+%T	COSTTYPE
+%F	cost_type_id	seq_num	cost_type
+%R	10	30000	Facilities
+%T	CURRTYPE
+%F	curr_id	decimal_digit_cnt	curr_symbol	decimal_symbol	digit_group_symbol	pos_curr_fmt_type	neg_curr_fmt_type	curr_type	curr_short_name	group_digit_cnt	base_exch_rate
+%R	1	2	$	.	,	#1.1	(#1.1)	sdfDollar	USD	3	1
+%R	13	2	?	.	,	#1.1	(#1.1)	Pound Sterling	GBP	3	0.618603
+%R	14	2	?	.	,	#1.1	(#1.1)	Japanese Yen	JPY	3	1
+%R	15	2	€	.	,	#1.1	(#1.1)	Euro	EUR	3	0.689711
+%R	16	2	?	.	,	#1.1	(#1.1)	Chinese Yuan Renminbi	CNY	3	6.82502
+%R	17	2	$	.	,	#1.1	(#1.1)	Canadian Dollar	CAD	3	1
+%R	18	2	RUB	.	,	#1.1	(#1.1)	Russian Ruble	RUB	3	0.033948
+%R	19	2	$	.	,	#1.1	(#1.1)	Argentine Peso	ARS	3	3.79109
+%R	20	2	$b	.	,	#1.1	(#1.1)	Bolivian Boliviano	BOB	3	7.5708
+%R	21	2	R$	.	,	#1.1	(#1.1)	Brazilian Real	BRL	3	1.7665
+%R	22	2	$	.	,	#1.1	(#1.1)	Chilean Peso	CLP	3	507.58
+%R	23	2	$	.	,	#1.1	(#1.1)	Columbian Peso	COP	3	1957.74
+%R	24	2	$	.	,	#1.1	(#1.1)	Guyanese Dollar	GYD	3	202.95
+%R	25	2	Gs	.	,	#1.1	(#1.1)	Paraguayan Guarani	PYG	3	4640
+%R	26	2	S/.	.	,	#1.1	(#1.1)	Peruvian Nuevo Sol	PEN	3	2.7244
+%R	27	2	$	.	,	#1.1	(#1.1)	Surinamese Dollar	SRD	3	2.8
+%R	28	2	Bs	.	,	#1.1	(#1.1)	Venezuelan Bolivar Fuerto	VEF	3	2.1446
+%R	29	2	$U	.	,	#1.1	(#1.1)	Uruguayan Peso	UYU	3	21.247
+%R	30	2	SAR	.	,	#1.1	(#1.1)	SANITISED	SAR	3	3.75
+%R	80	2	$	.	,	#1.1	(#1.1)	US Dollar T	USDT	3	1
+%R	130	2	?	.	,	#1.1	(#1.1)	Indian Rupee	?	3	1
+%T	FINTMPL
+%F	fintmpl_id	fintmpl_name	default_flag
+%R	1	Calendar	Y
+%T	OBS
+%F	obs_id	parent_obs_id	guid	seq_num	obs_name	obs_descr
+%R	540			0	Enterprise	<html>  <head>      </head>  <body bgcolor=""#ffffff"">    Enterprise  </body></html>
+%T	PROJECT
+%F	proj_id	fy_start_month_num	rsrc_self_add_flag	allow_complete_flag	rsrc_multi_assign_flag	checkout_flag	project_flag	step_complete_flag	cost_qty_recalc_flag	batch_sum_flag	name_sep_char	def_complete_pct_type	proj_short_name	acct_id	orig_proj_id	source_proj_id	base_type_id	clndr_id	sum_base_proj_id	task_code_base	task_code_step	priority_num	wbs_max_sum_level	strgy_priority_num	last_checksum	critical_drtn_hr_cnt	def_cost_per_qty	last_recalc_date	plan_start_date	plan_end_date	scd_end_date	add_date	last_tasksum_date	fcst_start_date	def_duration_type	task_code_prefix	guid	def_qty_type	add_by_name	web_local_root_path	proj_url	def_rate_type	add_act_remain_flag	act_this_per_link_flag	def_task_type	act_pct_link_flag	critical_path_type	task_code_prefix_flag	def_rollup_dates_flag	use_project_baseline_flag	rem_target_link_flag	reset_planned_flag	allow_neg_act_flag	sum_assign_level	last_fin_dates_id	fintmpl_id	last_baseline_update_date	cr_external_key	apply_actuals_date	location_id	loaded_scope_level	export_flag	new_fin_dates_id	baselines_to_export	baseline_names_to_export	next_data_date	close_period_flag	sum_refresh_date	trsrcsum_loaded	sumtask_loaded
+%R	5442	1	Y	Y	Y	N	Y	N	N	Y	.	CP_Drtn	TestProject					178	5493	1000	10	10	2	500		0	0.0000	2023-10-06 00:00	2023-03-06 00:00		2023-10-18 10:00	2023-03-06 00:00			DT_FixedDUR2	A		QT_Hour	ADMIN			COST_PER_QTY	N	Y	TT_Task	Y	CT_TotFloat	Y	Y	Y	Y	N	N	SL_Taskrsrc		1			2023-10-06 14:30		1	N								
+%R	5494	1	Y	Y	Y	N	Y	N	N	Y	.	CP_Drtn	TestProject2					178		1000	10	10	2	500		0	0.0000	2024-05-28 00:00	2024-05-28 00:00		2024-06-03 16:00	2024-05-28 00:00			DT_FixedDUR2	A	fbri0+E8bEalRDr9OhpWgA	QT_Hour	ADMIN			COST_PER_QTY	N	Y	TT_Task	Y	CT_TotFloat	Y	Y	Y	Y	N	N	SL_Taskrsrc		1					7	Y								
+%T	CALENDAR
+%F	clndr_id	default_flag	clndr_name	proj_id	base_clndr_id	last_chng_date	clndr_type	day_hr_cnt	week_hr_cnt	month_hr_cnt	year_hr_cnt	rsrc_private	clndr_data
+%R	178	Y	Corporate - Standard Full Time			2000-05-23 16:14	CA_Base	8	40	172	2000	N	(0||CalendarData()((0||DaysOfWeek()((0||1()())(0||2()((0||0(f|16:00|s|08:00)())))(0||3()((0||0(f|16:00|s|08:00)())))(0||4()((0||0(f|16:00|s|08:00)())))(0||5()((0||0(f|16:00|s|08:00)())))(0||6()((0||0(f|16:00|s|08:00)())))(0||7()())))(0||Exceptions()((0||0(d|41519)())(0||1(d|41155)())(0||2(d|40364)())(0||3(d|40910)())(0||4(d|41633)())(0||5(d|41094)())(0||6(d|40427)())(0||7(d|40536)())(0||8(d|41235)())(0||9(d|40179)())(0||10(d|40903)())(0||11(d|40543)())(0||12(d|40791)())(0||13(d|41421)())(0||14(d|40728)())(0||15(d|41275)())(0||16(d|41606)())(0||17(d|40329)())(0||18(d|41459)())(0||19(d|40871)())(0||20(d|40507)())(0||21(d|41057)())(0||22(d|40693)())(0||23(d|41268)())))))
+%R	5829	N	Trades -  5 Day Workweek			2000-04-26 14:11	CA_Base	8	40	172	2000	N	(0||CalendarData()((0||DaysOfWeek()((0||1()())(0||2()((0||0(f|12:00|s|08:00)())(0||1(f|17:00|s|13:00)())))(0||3()((0||0(f|12:00|s|08:00)())(0||1(f|17:00|s|13:00)())))(0||4()((0||0(f|12:00|s|08:00)())(0||1(f|17:00|s|13:00)())))(0||5()((0||0(f|12:00|s|08:00)())(0||1(f|17:00|s|13:00)())))(0||6()((0||0(f|12:00|s|08:00)())(0||1(f|17:00|s|13:00)())))(0||7()())))(0||Exceptions()((0||0(d|41275)())(0||1(d|41606)())(0||2(d|40329)())(0||3(d|41519)())(0||4(d|40910)())(0||5(d|41155)())(0||6(d|41633)())(0||7(d|40364)())(0||8(d|41094)())(0||9(d|41459)())(0||10(d|40427)())(0||11(d|40536)())(0||12(d|41235)())(0||13(d|40871)())(0||14(d|40179)())(0||15(d|40903)())(0||16(d|40507)())(0||17(d|41057)())(0||18(d|40693)())(0||19(d|40543)())(0||20(d|41268)())(0||21(d|40791)())(0||22(d|41421)())(0||23(d|40728)())))))
+%T	PROJWBS
+%F	wbs_id	proj_id	obs_id	seq_num	est_wt	proj_node_flag	sum_data_flag	status_code	wbs_short_name	wbs_name	phase_id	parent_wbs_id	ev_user_pct	ev_etc_user_value	orig_cost	indep_remain_total_cost	ann_dscnt_rate_pct	dscnt_period_type	indep_remain_work_qty	anticip_start_date	anticip_end_date	ev_compute_type	ev_etc_compute_type	guid	tmpl_guid	plan_open_state
+%R	36801	5442	540	1	1	Y	N	WS_Open	TestProject	(New Project)		31156	6	0.88	0.0000	0.0000			0			EC_Cmp_pct	EE_Rem_hr	CwCxk2oVrECC32xqoCJWEw		
+%R	36853	5494	540	2	1	Y	N	WS_Open	TestProject2	(New Project2)		31156	6	0.88	0.0000	0.0000						EC_Cmp_pct	EE_Rem_hr	jx0cYhfjmUiTdFIduCUYsg		
+%T	RSRC
+%F	rsrc_id	parent_rsrc_id	clndr_id	role_id	shift_id	user_id	pobs_id	guid	rsrc_seq_num	email_addr	employee_code	office_phone	other_phone	rsrc_name	rsrc_short_name	rsrc_title_name	def_qty_per_hr	cost_qty_type	ot_factor	active_flag	auto_compute_act_flag	def_cost_qty_link_flag	ot_flag	curr_id	unit_id	rsrc_type	location_id	rsrc_notes	load_tasks_flag	level_flag	last_checksum
+%R	8276		5829					JVyoBhYevkmiVZ63C0O7Mw	1					E&C Resources	E&C Resources		1	QT_Hour	0	Y	N	Y	N	1		RT_Labor					
+%R	8277	8276	5829					TMv0lZT83USKPaUN0A/NHQ	0					Electrician	R-3		1	QT_Hour	0	Y	Y	Y	N	1		RT_Labor					
+%R	8278	8277	5829					sfsZoeJCDkydGI9HPPluaA	0					Painter	R-4		1	QT_Hour	0	Y	Y	Y	N	1		RT_Labor				N	
+%T	RSRCRATE
+%F	rsrc_rate_id	rsrc_id	max_qty_per_hr	cost_per_qty	start_date	shift_period_id	cost_per_qty2	cost_per_qty3	cost_per_qty4	cost_per_qty5
+%R	7564	8278	1	25.0000	2022-01-01 00:00		0.0000	0.0000	0.0000	0.0000
+%T	TASK
+%F	task_id	proj_id	wbs_id	clndr_id	phys_complete_pct	rev_fdbk_flag	est_wt	lock_plan_flag	auto_compute_act_flag	complete_pct_type	task_type	duration_type	status_code	task_code	task_name	rsrc_id	total_float_hr_cnt	free_float_hr_cnt	remain_drtn_hr_cnt	act_work_qty	remain_work_qty	target_work_qty	target_drtn_hr_cnt	target_equip_qty	act_equip_qty	remain_equip_qty	cstr_date	act_start_date	act_end_date	late_start_date	late_end_date	expect_end_date	early_start_date	early_end_date	restart_date	reend_date	target_start_date	target_end_date	rem_late_start_date	rem_late_end_date	cstr_type	priority_type	suspend_date	resume_date	float_path	float_path_order	guid	tmpl_guid	cstr_date2	cstr_type2	driving_path_flag	act_this_per_work_qty	act_this_per_equip_qty	external_early_start_date	external_late_end_date	create_date	update_date	create_user	update_user	location_id
+%R	133031	5442	36801	178	0	N	1	N	N	CP_Drtn	TT_Task	DT_FixedDUR2	TK_Active	A1000	Задача 1	8278	0	1270	66	0	40	40	64	72	345	0		2023-03-08 08:00		2023-10-06 08:00	2023-10-18 10:00		2023-10-06 08:00	2023-10-18 10:00	2023-10-06 08:00	2023-10-18 10:00	2023-03-08 08:00	2023-03-17 16:00	2023-10-06 08:00	2023-10-18 10:00		PT_Normal					wWQq8tJ2RUaL1XJ39mmn6A				Y	0	345			2023-08-25 03:25	2023-10-06 15:29	NotPrmUser	NotPrmUser	
+%R	133085	5494	36853	178	0	N	1	N	N	CP_Drtn	TT_Task	DT_FixedDUR2	TK_NotStart	A1000	Activity2 - 1		0	0	40	0	0	0	40	0	0	0				2024-05-28 08:00	2024-06-03 16:00		2024-05-28 08:00	2024-06-03 16:00	2024-05-28 08:00	2024-06-03 16:00	2024-05-28 08:00	2024-06-03 16:00	2024-05-28 08:00	2024-06-03 16:00		PT_Normal					vCujy98P2UyyAQdceYUzJQ				Y	0	0			2024-06-12 16:06	2024-06-12 16:06	NotPrmUser	NotPrmUser	
+%R	133086	5494	36853	178	0	N	1	N	N	CP_Drtn	TT_Task	DT_FixedDUR2	TK_NotStart	A1010	Activity 2 - 2		0	0	40	0	0	0	40	0	0	0				2024-05-28 08:00	2024-06-03 16:00		2024-05-28 08:00	2024-06-03 16:00	2024-05-28 08:00	2024-06-03 16:00	2024-05-28 08:00	2024-06-03 16:00	2024-05-28 08:00	2024-06-03 16:00		PT_Normal					05p65nsR102KIPGdrKRqAA				Y	0	0			2024-06-12 16:06	2024-06-12 16:06	NotPrmUser	NotPrmUser	
+%T	PROJCOST
+%F	cost_item_id	acct_id	pobs_id	cost_type_id	proj_id	task_id	cost_name	po_number	vendor_name	act_cost	cost_per_qty	remain_cost	target_cost	cost_load_type	auto_compute_act_flag	target_qty	qty_name	cost_descr	contract_manager_import
+%R	19906				5442	133031	(New Expense Item)			100.0000	10.0000	103.0000	3230.0000	CL_Uniform	N	323			
+%R	19907			10	5442	133031	(New Expense Item)1			54.0000	3.0000	0.0000	111.0000	CL_Uniform	N	37			
+%T	TASKPRED
+%F	task_pred_id	task_id	pred_task_id	proj_id	pred_proj_id	pred_type	lag_hr_cnt	comments	float_path	aref	arls
+%R	83845	133086	133031	5494	5442	PR_FS	0			2023-10-18 10:00	2024-05-28 08:00
+%E

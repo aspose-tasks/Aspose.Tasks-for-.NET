@@ -130,6 +130,7 @@
     <Compile Include="ExPdfDigitalSignatureDetails.cs" />
     <Compile Include="ExPdfEncryptionDetails.cs" />
     <Compile Include="ExPrimaveraDbSettings.cs" />
+    <Compile Include="ExPrimaveraXerReader.cs" />
     <Compile Include="ExPrimaveraXmlReader.cs" />
     <Compile Include="ExCalculationMode.cs" />
     <Compile Include="ExChildTasksCollector.cs" />
@@ -159,6 +160,7 @@
     <Compile Include="ExRecurringInterval.cs" />
     <Compile Include="ExRecurringTaskInfo.cs" />
     <Compile Include="ExRemoveTask.cs" />
+    <Compile Include="ExResourceLeveling.cs" />
     <Compile Include="ExResourceType.cs" />
     <Compile Include="ExResourceUsageView.cs" />
     <Compile Include="ExResourceUsageViewFieldCollection.cs" />
@@ -263,7 +265,7 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.3" PrivateAssets="All" />
-    <PackageReference Include="Aspose.Tasks" Version="24.4.0" />
+    <PackageReference Include="Aspose.Tasks" Version="24.7.0" />
     <PackageReference Include="Microsoft.SharePointOnline.CSOM" Version="16.1.21312.12000" />
     <PackageReference Include="NUnit" Version="3.13.3" />
   </ItemGroup>
