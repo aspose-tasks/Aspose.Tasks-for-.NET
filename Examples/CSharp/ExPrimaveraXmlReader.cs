@@ -9,11 +9,27 @@
     public class ExPrimaveraXmlReader : ApiExampleBase
     {
         [Test]
+        public void ReadProjectInfosFromXmlFile()
+        {
+            // ExStart: ReadProjectInfosFromXmlFile
+            // ExFor: PrimaveraXmlReader
+            // ExFor: PrimaveraXmlReader.#ctor(String)
+            // ExFor: PrimaveraBaseReader.GetProjectInfos
+            // ExSummary: Shows how to examine short projects' info from a Primavera XML file.
+            var reader = new PrimaveraXmlReader(DataDir + "MultiprojectWithExternal.xml");
+            var projectInfos = reader.GetProjectInfos();
+            foreach (var info in projectInfos)
+            {
+                Console.WriteLine("{0} - '{1}' - {2}", info.Uid, info.Name, info.ExportFlag);
+            }
+
+            // ExEnd
+        }
+
+        [Test]
         public void ReadProjectUidsFromXmlFile()
         {
             // ExStart:ReadProjectUIDsFromXMLFile
-            // ExFor: PrimaveraXmlReader
-            // ExFor: PrimaveraXmlReader.#ctor(String)
             // ExFor: PrimaveraBaseReader.GetProjectUids
             // ExSummary: Shows how to import a project from a Primavera XML file.
             var reader = new PrimaveraXmlReader(DataDir + "primavera.xml");
