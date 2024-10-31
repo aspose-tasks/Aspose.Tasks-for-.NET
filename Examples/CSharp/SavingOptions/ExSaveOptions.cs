@@ -243,18 +243,62 @@
         public void HideLegendsDuringSave()
         {
             // ExStart:HideLegendsDuringSave
-            // ExFor: SaveOptions.LegendOnEachPage
+            // ExFor: SaveOptions.LegendDrawingOptions
             // ExSummary: Shows how to hide page legends.
             var project = new Project(DataDir + "CreateProject2.mpp");
             SaveOptions options = new PdfSaveOptions
             {
-                // Set the LegendOnEachPage property to false to hide legends
-                LegendOnEachPage = false
+                // Specify LegendDrawingOptions.NoLegend to hide legends
+                LegendDrawingOptions = LegendDrawingOptions.NoLegend
             };
 
             project.Save(OutDir + "HideLegendsDuringSave_out.pdf", options);
 
             // ExEnd:HideLegendsDuringSave
+        }
+
+        [Test]
+        public void PrintLegendOnSeparatePage()
+        {
+            // ExStart
+            // ExFor: SaveOptions.LegendDrawingOptions
+            // ExFor: LegendDrawingOptions.AfterLastPage
+            // ExSummary: Shows how to print legend on last page
+            var project = new Project(DataDir + "CreateProject2.mpp");
+            SaveOptions options = new PdfSaveOptions
+            {
+                // Take legend drawing options from view
+                LegendDrawingOptions = LegendDrawingOptions.AfterLastPage
+            };
+
+            project.Save(OutDir + "LegendOnSeparatePage_out.pdf", options);
+
+            // ExEnd
+        }
+
+        [Test]
+        public void PrintLegendUsingLegendOnSetting()
+        {
+            // ExStart
+            // ExFor: SaveOptions.LegendDrawingOptions
+            // ExFor: LegendDrawingOptions.AfterLastPage
+            // ExSummary: Shows how to use LegendDrawingOptions.DefinedInView option.
+            var project = new Project(DataDir + "CreateProject2.mpp");
+
+            var view = project.Views.GetByName("&Gantt Chart");
+
+            Console.WriteLine("LegendOn option defined in view '{0}': {1}", view.Name, view.PageInfo.Legend.LegendOn);
+
+            SaveOptions options = new PdfSaveOptions
+            {
+                // Take legend drawing options from the view
+                LegendDrawingOptions = LegendDrawingOptions.DefinedInView,
+                ViewSettings = view
+            };
+
+            project.Save(OutDir + "Legend_DefinedInView.pdf", options);
+
+            // ExEnd
         }
 
         [Test]
@@ -269,7 +313,7 @@
                 StartDate = project.Get(Prj.StartDate).AddDays(-3),
                 EndDate = project.Get(Prj.FinishDate),
                 MarkCriticalTasks = true,
-                LegendOnEachPage = false,
+                LegendDrawingOptions = LegendDrawingOptions.NoLegend,
                 Gridlines = new List<Gridline>()
             };
 
