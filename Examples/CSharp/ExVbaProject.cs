@@ -1,4 +1,6 @@
-﻿namespace Aspose.Tasks.Examples.CSharp
+﻿using Aspose.Tasks.Saving;
+
+namespace Aspose.Tasks.Examples.CSharp
 {
     using System;
     using NUnit.Framework;
@@ -64,6 +66,18 @@
             }
 
             // ExEnd:ReadReferencesInformation
+        }
+
+        [Test]
+        public void ClearVbaInformation()
+        {
+            // ExStart:ClearVbaInformation
+            // ExFor: MPPSaveOptions.ClearVba
+            // ExFor: Project.VbaProject
+            // ExSummary: Shows how to remove VBA macros from MPP file.
+            var project = new Project(DataDir + "VbaProject.mpp");
+            project.Save(OutDir + "Vba.cleared.mpp", new MPPSaveOptions() { ClearVba = true });
+            // ExEnd:ClearVbaInformation
         }
     }
 }

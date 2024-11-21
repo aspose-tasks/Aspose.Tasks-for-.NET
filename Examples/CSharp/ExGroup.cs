@@ -1,6 +1,9 @@
 ﻿namespace Aspose.Tasks.Examples.CSharp
 {
     using System;
+    using Aspose.Tasks.Saving;
+    using Aspose.Tasks.Visualization;
+    using System.Drawing;
     using NUnit.Framework;
 
     [TestFixture]
@@ -19,6 +22,7 @@
             // ExFor: Group.MaintainHierarchy
             // ExFor: Group.ShowSummary
             // ExFor: Group.ShowInMenu
+            // ExFor: Group.GroupAssignments
             // ExSummary: Shows how to work with groups.
             var project = new Project(DataDir + "ReadGroupDefinitionData.mpp");
 
@@ -30,6 +34,7 @@
             Console.WriteLine("Is Task Group Maintain Hierarchy?: " + group.MaintainHierarchy);
             Console.WriteLine("Is Task Group Show In Menu?: " + group.ShowInMenu);
             Console.WriteLine("Is Task Group Show Summary?: " + group.ShowSummary);
+            Console.WriteLine("Is Task Group should groups Assignments instead of Tasks?: " + group.GroupAssignments);
             Console.WriteLine("Task Group Criteria count: " + group.GroupCriteria.Count);
             Console.WriteLine("\n************* Retrieving Task Group's Criterion information *************");
 
@@ -52,6 +57,85 @@
             }
 
             // ExEnd:WorkWithGroup
+        }
+
+        [Test]
+        public void CreateGroups()
+        {
+            // ExStart:CreateGroups
+            // ExFor: Group
+            // ExFor: Group.#ctor
+            // ExFor: Group.GroupCriteria
+            // ExFor: Project.TaskGroups
+            // ExFor: Project.ResourceGroups
+            // ExFor: MPPSaveOptions.WriteGroups
+            // ExFor: GroupCriterion
+            // ExFor: GroupCriterion.GroupOn
+            // ExFor: GroupCriterion.StartAt
+            // ExFor: GroupCriterion.GroupInterval
+            // ExFor: GroupCriterion.Font
+            // ExFor: GroupCriterion.Field
+            // ExSummary: Shows how to add groups to a project.
+            var p = new Project();
+
+            {
+                var group = new Group();
+                group.Name = "My new task group";
+                group.MaintainHierarchy = true;
+                group.ShowSummary = true;
+
+                var criterion = new GroupCriterion();
+                criterion.Field = Field.TaskDuration1;
+                criterion.Font = new FontDescriptor("Comic Sans MS", 13F, FontStyles.Italic);
+                criterion.GroupOn = GroupOn.DurationMinutes;
+                criterion.StartAt = 5;
+                criterion.GroupInterval = 3D;
+                criterion.Pattern = BackgroundPattern.DarkDiagonalLeft;
+                group.GroupCriteria.Add(criterion);
+
+                var criterion2 = new GroupCriterion();
+                criterion2.Field = Field.TaskPercentComplete;
+                criterion2.Font = new FontDescriptor("Bodoni MT", 17, FontStyles.Italic | FontStyles.Bold);
+                criterion2.GroupOn = GroupOn.Pct199;
+                criterion2.Pattern = BackgroundPattern.LightDither;
+                criterion2.CellColor = Color.Green;
+                criterion2.FontColor = Color.Red;
+                group.GroupCriteria.Add(criterion2);
+                group.GroupAssignments = true;
+                p.TaskGroups.Add(group);
+            }
+
+            {
+                var group = new Group();
+                group.Name = "My new resource group";
+                group.MaintainHierarchy = true;
+                group.ShowSummary = true;
+
+                var criterion = new GroupCriterion();
+                criterion.Field = Field.ResourceDuration1;
+                criterion.Font = new FontDescriptor("Comic Sans MS", 11F, FontStyles.Bold);
+                criterion.GroupOn = GroupOn.DurationHours;
+                criterion.StartAt = 1;
+                criterion.GroupInterval = 2D;
+                criterion.Pattern = BackgroundPattern.DarkDiagonalLeft;
+                group.GroupCriteria.Add(criterion);
+
+                var criterion2 = new GroupCriterion();
+                criterion2.Field = Field.ResourceCost;
+                criterion2.Font = new FontDescriptor("Bodoni MT", 12, FontStyles.Italic | FontStyles.Bold);
+                criterion2.GroupOn = GroupOn.Interval;
+                criterion2.StartAt = 1D;
+                criterion2.GroupInterval = 10D;
+                criterion2.Pattern = BackgroundPattern.LightDither;
+                criterion2.CellColor = Color.Magenta;
+                criterion2.FontColor = Color.Red;
+                group.GroupCriteria.Add(criterion2);
+                group.GroupAssignments = true;
+                p.ResourceGroups.Add(group);
+            }
+
+            p.Save(OutDir + "output_CreateGroup.mpp", new MPPSaveOptions() { WriteGroups = true });
+            // ExEnd:CreateGroups
         }
     }
 }

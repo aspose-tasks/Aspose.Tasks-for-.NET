@@ -1,6 +1,4 @@
-﻿using System.Runtime.CompilerServices;
-
-namespace Aspose.Tasks.Examples.CSharp
+﻿namespace Aspose.Tasks.Examples.CSharp
 {
     using System;
     using NUnit.Framework;
@@ -20,7 +18,7 @@ namespace Aspose.Tasks.Examples.CSharp
             // ExFor: GraphicalIndicatorCriteria.Value1
             // ExFor: GraphicalIndicatorCriteria.Value2
             // ExFor: GraphicalIndicatorCriteriaValue
-            // ExSummary: Shows how to retrieve calendar info.
+            // ExSummary: Shows how to retrieve graphical indicators info.
 
             Project project = new Project(DataDir + "graphical_indicators.mpp");
 
@@ -66,7 +64,7 @@ namespace Aspose.Tasks.Examples.CSharp
             // ExFor: GraphicalIndicatorCriteria
             // ExFor: GraphicalIndicatorCriteriaValue
             // ExFor: GraphicalIndicatorsInfo
-            // ExSummary: Shows how to retrieve calendar info.
+            // ExSummary: Shows how to set up graphical indicator for an extended attribute.
 
             Project project = new Project();
 

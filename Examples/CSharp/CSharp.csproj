@@ -266,7 +266,7 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.3" PrivateAssets="All" />
-    <PackageReference Include="Aspose.Tasks" Version="24.10.0" />
+    <PackageReference Include="Aspose.Tasks" Version="24.11.0" />
     <PackageReference Include="Microsoft.SharePointOnline.CSOM" Version="16.1.21312.12000" />
     <PackageReference Include="NUnit" Version="3.13.3" />
   </ItemGroup>

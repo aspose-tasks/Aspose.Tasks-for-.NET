@@ -24,7 +24,7 @@
             // ExFor: GroupCriterion.Pattern
             // ExFor: GroupCriterion.StartAt
             // ExFor: GroupOn
-            // ExSummary: Shows how to work with a group criterion.
+            // ExSummary: Shows how to read properties of a group criterion.
             var project = new Project(DataDir + "ReadGroupDefinitionData.mpp");
 
             Console.WriteLine("Task Groups Count: " + project.TaskGroups.Count);
@@ -57,47 +57,6 @@
             Console.WriteLine("Ascending/Descending: " + criterion.Ascending);
 
             // ExEnd:WorkWithGroupCriterion
-        }
-
-        [Test]
-        public void GroupCriterionHashCode()
-        {
-            // ExStart
-            // ExFor: GroupCriterion.GetHashCode
-            // ExSummary: Shows how to use hash code of a group criterion.
-            var project = new Project(DataDir + "ReadGroupDefinitionData.mpp");
-            var group = project.TaskGroups.ToList()[1];
-            
-            // get the first group criteria
-            var criterion = group.GroupCriteria.ToList()[0];
-            
-            // each GroupCriterion has internal GUID which hash code is based on
-            Console.WriteLine("Task Criterion HashCode: " + criterion.GetHashCode());
-
-            // work with group criteria...
-            // ExEnd
-        }
-        
-        [Test]
-        public void GroupCriterionEquals()
-        {
-            // ExStart
-            // ExFor: GroupCriterion.Equals(Object)
-            // ExSummary: Shows how to check equality of group criteria.
-            var project = new Project(DataDir + "ReadGroupDefinitionData.mpp");
-            var group = project.TaskGroups.ToList()[1];
-
-            // get the first group criteria
-            List<GroupCriterion> groupCriteria = group.GroupCriteria.ToList();
-            var criterion1 = groupCriteria[0];
-            var criterion2 = groupCriteria[0];
-
-            // group criteria equality is based on public member 'Field'  
-            Console.WriteLine("Task Criterion 1 Field: " + criterion1.Field);
-            Console.WriteLine("Task Criterion 2 Field: " + criterion2.Field);
-            Console.WriteLine("Are the criteria equal: " + criterion1.Equals(criterion2));
-
-            // ExEnd
         }
     }
 }
