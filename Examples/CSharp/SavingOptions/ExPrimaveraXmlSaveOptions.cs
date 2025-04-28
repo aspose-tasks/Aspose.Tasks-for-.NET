@@ -22,5 +22,30 @@
 
             // ExEnd:ExportProjectDataToPrimaveraXML
         }
+
+        [Test]
+        public void UseSkipSummaryAssignments()
+        {
+            // ExStart:ExportProjectDataToPrimaveraXML_SkipSummaryAssignments
+            // ExFor: PrimaveraXmlSaveOptions.SkipSummaryAssignments
+            // ExFor: PrimaveraSaveOptions.SkipSummaryAssignments
+            // ExSummary: Shows how to use SkipSummaryAssignments flag.
+            var project = new Project(DataDir + "Blank2010.mpp");
+
+            var resource = project.Resources.Add("Resource");
+
+            var summaryTask = project.RootTask.Children.Add("Summary");
+            summaryTask.Children.Add("Task");
+
+            // Primavera doesn't support assignments of resources to summary tasks.
+            // So exporting such assignments to Primavera format may result in files that cannot be imported to Primavera.
+            var assignment = project.ResourceAssignments.Add(summaryTask, resource);
+
+            var options = new PrimaveraXmlSaveOptions();
+            options.SkipSummaryAssignments = true;
+            project.Save(OutDir + "UseSkipSummaryAssignments_out.xml", options);
+
+            // ExEnd:ExportProjectDataToPrimaveraXML
+        }
     }
 }

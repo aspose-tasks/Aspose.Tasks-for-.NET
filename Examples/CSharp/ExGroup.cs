@@ -17,7 +17,6 @@
             // ExFor: Group.#ctor
             // ExFor: Group.Uid
             // ExFor: Group.Name
-            // ExFor: Group.Index
             // ExFor: Group.GroupCriteria
             // ExFor: Group.MaintainHierarchy
             // ExFor: Group.ShowSummary
@@ -29,7 +28,6 @@
             Console.WriteLine("Task Groups Count: " + project.TaskGroups.Count);
             var group = project.TaskGroups.ToList()[1];
             Console.WriteLine("Task Group Uid: " + group.Uid);
-            Console.WriteLine("Task Group Index: " + group.Index);
             Console.WriteLine("Task Group Name: " + group.Name);
             Console.WriteLine("Is Task Group Maintain Hierarchy?: " + group.MaintainHierarchy);
             Console.WriteLine("Is Task Group Show In Menu?: " + group.ShowInMenu);
@@ -44,11 +42,6 @@
                 Console.WriteLine("Task Criterion GroupOn: " + criterion.GroupOn);
                 Console.WriteLine("Task Criterion Cell Color: " + criterion.CellColor);
                 Console.WriteLine("Task Criterion Pattern: " + criterion.Pattern);
-
-                if (group == criterion.ParentGroup)
-                {
-                    Console.WriteLine("Parent Group is equal to task Group.");
-                }
 
                 Console.WriteLine("Font Name: " + criterion.Font.FontFamily);
                 Console.WriteLine("Font Size: " + criterion.Font.Size);

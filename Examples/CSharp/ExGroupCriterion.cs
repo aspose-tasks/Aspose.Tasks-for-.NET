@@ -12,7 +12,6 @@
         {
             // ExStart:WorkWithGroupCriterion
             // ExFor: GroupCriterion
-            // ExFor: GroupCriterion.Index
             // ExFor: GroupCriterion.Font
             // ExFor: GroupCriterion.Ascending
             // ExFor: GroupCriterion.CellColor
@@ -20,7 +19,6 @@
             // ExFor: GroupCriterion.FontColor
             // ExFor: GroupCriterion.GroupInterval
             // ExFor: GroupCriterion.GroupOn
-            // ExFor: GroupCriterion.ParentGroup
             // ExFor: GroupCriterion.Pattern
             // ExFor: GroupCriterion.StartAt
             // ExFor: GroupOn
@@ -34,7 +32,6 @@
 
             Console.WriteLine("\n************* Retrieving Task Group's Criterion information *************");
             var criterion = group.GroupCriteria.ToList()[0];
-            Console.WriteLine("Task Criterion Index: " + criterion.Index);
             Console.WriteLine("Task Criterion Field: " + criterion.Field);
             Console.WriteLine("Task Criterion GroupOn: " + criterion.GroupOn);
             Console.WriteLine("Task Criterion Cell Color: " + criterion.CellColor);
@@ -44,11 +41,6 @@
 
             // read the background pattern of the criterion  
             Console.WriteLine("Task Criterion Pattern: " + criterion.Pattern);
-
-            if (group == criterion.ParentGroup)
-            {
-                Console.WriteLine("Parent Group is equal to task Group.");
-            }
 
             Console.WriteLine("\n*********** Retrieving Criterion's Font Information ***********");
             Console.WriteLine("Font Name: " + criterion.Font.FontFamily);

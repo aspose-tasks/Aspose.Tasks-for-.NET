@@ -344,5 +344,27 @@
 
             // ExEnd
         }
+
+        [Test]
+        public void WorkWithTimescaleFitBehavior()
+        {
+            // ExStart
+            // ExFor: SaveOptions.TimescaleFitBehavior
+            // ExFor: TimescaleFitBehavior
+            // ExSummary: Shows how to use TimescaleFitBehavior make Gantt chart's timescale fit to the end of the last page.
+            var project = new Project(DataDir + "EstimatedMilestoneTasks.mpp");
+
+            var view = project.DefaultView as GanttChartView;
+
+            PdfSaveOptions saveOptions = new PdfSaveOptions();
+            saveOptions.PageSize = PageSize.A4;
+            saveOptions.StartDate = project.StartDate;
+            saveOptions.EndDate = project.FinishDate;
+            saveOptions.ViewSettings = view;
+            saveOptions.TimescaleFitBehavior = TimescaleFitBehavior.ScaleToEndOfPage;
+
+            project.Save(OutDir + "WorkWithPageSizeDefinedInView_out.pdf", saveOptions);
+            // ExEnd
+        }
     }
 }

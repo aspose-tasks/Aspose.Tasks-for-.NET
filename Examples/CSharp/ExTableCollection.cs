@@ -31,8 +31,14 @@
             Console.WriteLine("Table count: " + project.Tables.Count);
             foreach (var tbl in project.Tables)
             {
-                Console.WriteLine("Index: " + tbl.Index);
                 Console.WriteLine("Name: " + tbl.Name);
+
+                Console.WriteLine("Fields:");
+
+                foreach (var field in tbl.TableFields)
+                {
+                    Console.WriteLine("    {0} - '{1}' - {2}", field.Field, field.Title, field.Width);
+                }
             }
 
             // add a new table
@@ -66,7 +72,6 @@
             List<Table> list = project.Tables.ToList();
             foreach (var table in list)
             {
-                Console.WriteLine("Index: " + table.Index);
                 Console.WriteLine("Name: " + table.Name);
             }
 

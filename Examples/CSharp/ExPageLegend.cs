@@ -1,4 +1,6 @@
-﻿namespace Aspose.Tasks.Examples.CSharp
+﻿using Aspose.Tasks.Visualization;
+
+namespace Aspose.Tasks.Examples.CSharp
 {
     using System;
     using NUnit.Framework;
@@ -43,6 +45,45 @@
             
                 project.Save(OutDir + "WorkWithPageLegend_out.mpp", SaveFileFormat.Mpp);
                 // ExEnd:WorkWithPageLegend
+            }
+            catch (NotSupportedException ex)
+            {
+                Console.WriteLine(
+                    ex.Message
+                    + "\nThis example will only work if you apply a valid Aspose License. You can purchase full license or get 30 day temporary license from http://www.aspose.com/purchase/default.aspx.");
+            }
+        }
+
+        [Test]
+        public void CustomizePageLegendItems()
+        {
+            try
+            {
+                // ExStart:CustomizePageLegendItems
+                // ExFor: PdfSaveOptions.LegendDrawingOptions
+                // ExFor: SaveOptions.LegendItems
+                // ExFor: PageLegendItem
+                // ExSummary: Shows how to customize task bars in page legend of Gantt chart.
+                var project = new Project(DataDir + "Blank2010.mpp");
+
+                var pdfSaveOptions = new PdfSaveOptions();
+                pdfSaveOptions.StartDate = project.StartDate;
+                pdfSaveOptions.EndDate = project.FinishDate;
+                pdfSaveOptions.PageSize = PageSize.A4;
+                pdfSaveOptions.LegendDrawingOptions = LegendDrawingOptions.OnEveryPage;
+                pdfSaveOptions.ViewSettings = project.Views.GetByName("&Gantt Chart");
+
+                pdfSaveOptions.LegendItems = new PageLegendItem[]
+                {
+                    new PageLegendItem(BarItemType.Task, "Task"),
+                    new PageLegendItem(BarItemType.ExternalMilestone, "External Milestone"),
+                    new PageLegendItem(BarItemType.SummaryRollup, "Summary Rollup"),
+                    new PageLegendItem(BarItemType.InactiveTask, "Inactive Task"),
+                    new PageLegendItem(BarItemType.ManualSummary, "Manual Summary")
+                };
+
+                project.Save(OutDir + "CustomizePageLegendItems_out.pdf", pdfSaveOptions);
+                // ExEnd:CustomizePageLegendItems
             }
             catch (NotSupportedException ex)
             {

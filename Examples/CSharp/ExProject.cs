@@ -1482,11 +1482,6 @@
             Console.WriteLine("Task Criterion Cell Color: " + taskCriterion.CellColor);
             Console.WriteLine("Task Criterion Pattern: " + taskCriterion.Pattern);
 
-            if (taskGroup == taskCriterion.ParentGroup)
-            {
-                Console.WriteLine("Parent Group is equal to task Group.");
-            }
-
             Console.WriteLine("\n*********** Retrieving Criterion's Font Information ***********");
             Console.WriteLine("Font Name: " + taskCriterion.Font.FontFamily);
             Console.WriteLine("Font Size: " + taskCriterion.Font.Size);

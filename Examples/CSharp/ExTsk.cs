@@ -1569,7 +1569,6 @@
         {
             // ExStart:AddTaskDuration
             // ExFor: Tsk.Duration
-            // ExFor: Tsk.DurationFormat
             // ExSummary: Shows how to set duration of the task. 
             var project = new Project();
 
