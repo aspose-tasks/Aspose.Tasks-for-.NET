@@ -18,13 +18,7 @@ namespace Aspose.Tasks.Examples.CSharp
                 // ExFor: PageLegend
                 // ExFor: PageLegend.Width
                 // ExFor: PageLegend.LegendOn
-                // ExFor: PageLegend.LeftImage
-                // ExFor: PageLegend.LeftText
-                // ExFor: PageLegend.CenteredImage
-                // ExFor: PageLegend.CenteredText
-                // ExFor: PageLegend.RightImage
-                // ExFor: PageLegend.RightText
-                // ExFor: Legend
+                // ExFor: PageInfo.Legend
                 // ExSummary: Shows how to work with page legend information.
                 var project = new Project(DataDir + "Blank2010.mpp");
             
@@ -60,7 +54,7 @@ namespace Aspose.Tasks.Examples.CSharp
             try
             {
                 // ExStart:CustomizePageLegendItems
-                // ExFor: PdfSaveOptions.LegendDrawingOptions
+                // ExFor: SaveOptions.LegendDrawingOptions
                 // ExFor: SaveOptions.LegendItems
                 // ExFor: PageLegendItem
                 // ExSummary: Shows how to customize task bars in page legend of Gantt chart.
