@@ -1,6 +1,7 @@
 ﻿namespace Aspose.Tasks.Examples.CSharp
 {
     using System;
+    using Aspose.Tasks;
     using System.Collections.Generic;
     using NUnit.Framework;
 
@@ -12,7 +13,6 @@
         {
             // ExStart:ReadModulesInformation
             // ExFor: VbaModuleCollection
-            // ExFor: VbaModuleCollection
             // ExFor: VbaModuleCollection.Count
             // ExFor: VbaModuleCollection.GetEnumerator
             // ExFor: VbaModuleCollection.ToList
@@ -21,9 +21,10 @@
             var vbaProject = project.VbaProject;
 
             Console.WriteLine("Total Modules Count: " + vbaProject.Modules.Count);
-            foreach (var module in vbaProject.Modules)
+            foreach (VbaModule module in vbaProject.Modules)
             {
                 Console.WriteLine("Module Name: " + module.Name);
+                Console.WriteLine("Module Type: " + module.Type);
                 Console.WriteLine("Source Code: " + module.SourceCode);
                 Console.WriteLine();
             }

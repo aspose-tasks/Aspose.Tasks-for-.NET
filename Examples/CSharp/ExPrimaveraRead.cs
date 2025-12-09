@@ -74,6 +74,10 @@
                     task.PrimaveraProperties.ActualNonlaborCost,
                     task.PrimaveraProperties.ActualTotalCost);
 
+                Console.WriteLine("Constraints:");
+                Console.WriteLine("Primary: {0}, {1}", task.PrimaveraProperties.PrimaryConstraintType, task.PrimaveraProperties.PrimaryConstraintDate);
+                Console.WriteLine("Secondary: {0}, {1}", task.PrimaveraProperties.SecondaryConstraintType, task.PrimaveraProperties.SecondaryConstraintDate);
+
                 Console.WriteLine("Units % Complete: {0}", task.PrimaveraProperties.UnitsPercentComplete);
             }
 
@@ -101,9 +105,37 @@
                 Console.WriteLine("Make Open Ended Activities Critical: " + project.PrimaveraProperties.MakeOpenEndedActivitiesCritical);
                 Console.WriteLine("Ignore Other Project Relationships: " + project.PrimaveraProperties.IgnoreOtherProjectRelationships);
                 Console.WriteLine("Use Expected Finish Dates: " + project.PrimaveraProperties.UseExpectedFinishDates);
+
+                Console.WriteLine("How critical activities are defined: " +
+                                  project.PrimaveraProperties.CriticalActivitiesDefiningMethod);
+
+                if (project.PrimaveraProperties.CriticalActivitiesDefiningMethod == PrimaveraCriticalActivitiesDefiningMethod.TotalFloat)
+                {
+                    Console.WriteLine("Total Float threshold for critical activities: " + project.PrimaveraProperties.CriticalTotalFloatLimit);
+                }
             }
 
             // ExEnd:AccessPrimaveraSpecificProjectProperties
+        }
+
+        [Test]
+        public void AccessPrimaveraSpecificCalendarProperties()
+        {
+            // ExStart:AccessPrimaveraSpecificCalendarProperties
+            // ExFor: Calendar.PrimaveraProperties
+            // ExSummary: Shows how to read a project from a Primavera file and examine calendar's Primavera-specific properties.
+
+            var options = new PrimaveraReadOptions();
+            options.ProjectUid = 4861;
+
+            // Returns project with special Uid
+            var project = new Project(DataDir + "ScheduleOptions.xer", options);
+
+            var calendar = project.Calendars.GetByUid(178);
+
+            Console.WriteLine("Hours per day in '{0}' : {1}", calendar.Name, calendar.PrimaveraProperties.HoursPerDay);
+
+            // ExEnd:AccessPrimaveraSpecificCalendarProperties
         }
 
         [Test]

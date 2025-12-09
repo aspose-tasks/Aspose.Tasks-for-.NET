@@ -130,7 +130,7 @@
     <Compile Include="ExPageSettings.cs" />
     <Compile Include="ExPdfDigitalSignatureDetails.cs" />
     <Compile Include="ExPdfEncryptionDetails.cs" />
-    <Compile Include="ExPrimaveraDbSettings.cs" />
+    <Compile Include="ExPrimaveraDbRead.cs" />
     <Compile Include="ExPrimaveraXerReader.cs" />
     <Compile Include="ExPrimaveraXmlReader.cs" />
     <Compile Include="ExCalculationMode.cs" />
@@ -266,7 +266,7 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.3" PrivateAssets="All" />
-    <PackageReference Include="Aspose.Tasks" Version="25.6.0" />
+    <PackageReference Include="Aspose.Tasks" Version="25.11.0" />
     <PackageReference Include="Microsoft.SharePointOnline.CSOM" Version="16.1.21312.12000" />
     <PackageReference Include="NUnit" Version="3.13.3" />
   </ItemGroup>

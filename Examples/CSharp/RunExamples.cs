@@ -423,8 +423,8 @@
             // var exPresentationFormat = new ExPresentationFormat();
             // exPresentationFormat.RenderResourceSheetView();
             //
-            // var exPrimaveraDbSettings = new ExPrimaveraDbSettings();
-            // exPrimaveraDbSettings.ImportProjectFromPrimaveraDB();
+            // var exPrimaveraDbRead = new ExPrimaveraDbRead();
+            // exPrimaveraDbRead.ImportProjectFromPrimaveraDB();
             //
             // var exPrimaveraXmlReader = new ExPrimaveraXmlReader();
             // exPrimaveraXmlReader.ReadProjectUIDsFromStream();
