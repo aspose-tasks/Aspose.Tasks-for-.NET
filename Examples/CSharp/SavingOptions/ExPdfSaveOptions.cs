@@ -9,6 +9,7 @@
     using NUnit.Framework;
     using Saving;
     using Visualization;
+    using System.Drawing.Printing;
 
     [TestFixture]
     public class ExPdfSaveOptions : ApiExampleBase
@@ -364,6 +365,35 @@
             saveOptions.TimescaleFitBehavior = TimescaleFitBehavior.ScaleToEndOfPage;
 
             project.Save(OutDir + "WorkWithPageSizeDefinedInView_out.pdf", saveOptions);
+            // ExEnd
+        }
+
+
+        [Test]
+        public void WorkWithTaskLinkDrawingCallback()
+        {
+            // ExStart
+            // ExFor: SaveOptions.TaskLinkDrawingCallback
+            // ExFor: TaskLinkDrawingCallbackDelegate
+            // ExSummary: Shows how to use TaskLinkDrawingCallback to customize color of a task link when rendering Gantt chart view.
+            var project = new Project(DataDir + "schedule-conflict.mpp");
+
+            var view = project.DefaultView as GanttChartView;
+
+            PdfSaveOptions saveOptions = new PdfSaveOptions();
+            saveOptions.PageSize = PageSize.A3;
+            saveOptions.StartDate = project.StartDate.AddDays(-2);
+            saveOptions.EndDate = project.FinishDate.AddDays(2);
+            saveOptions.ViewSettings = view;
+            saveOptions.TaskLinkDrawingCallback += delegate(TaskLinkDrawingArgs args)
+            {
+                if (args.Link.LinkType == TaskLinkType.FinishToFinish)
+                {
+                    args.Color = Color.Red;
+                }
+            };
+
+            project.Save(OutDir + "WorkWithTaskLinkDrawingCallback_out.pdf", saveOptions);
             // ExEnd
         }
     }

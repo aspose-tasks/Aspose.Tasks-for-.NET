@@ -50,7 +50,7 @@
                 // ExStart:TestPrimaveraDbReader
                 // ExFor: PrimaveraDbSettings
                 // ExFor: PrimaveraDbReader
-                // ExFor: PrimaveraDbReader.GetProjectInfos
+                // ExFor: PrimaveraBaseReader.GetProjectInfos
                 // ExSummary: Shows how to get brief info of projects from a Primavera database.
 
                 var settings = new PrimaveraDbSettings(GetConnectionString(), 0);
