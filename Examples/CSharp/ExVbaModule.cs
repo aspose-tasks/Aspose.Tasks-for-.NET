@@ -13,9 +13,6 @@
             // ExFor: VbaModule
             // ExFor: VbaModule.Name
             // ExFor: VbaModule.SourceCode
-            // ExFor: IVbaModule
-            // ExFor: IVbaModule.Name
-            // ExFor: IVbaModule.SourceCode
             // ExSummary: Shows how to read modules of VBA project.
             var project = new Project(DataDir + "VbaProject.mpp");
 
@@ -35,7 +32,6 @@
         {
             // ExStart:ReadModuleAttributesInformation
             // ExFor: VbaModule.Attributes
-            // ExFor: IVbaModule.Attributes
             // ExSummary: Shows how to read VBA module's attributes.
             var project = new Project(DataDir + "VbaProject.mpp");
 

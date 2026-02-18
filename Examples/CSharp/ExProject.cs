@@ -2052,6 +2052,47 @@
             // ExEnd:WorkWithPredecessors
         }
 
+        [Test]
+        public static void WorkWithProjectGlobalizationSettings()
+        {
+            // ExStart:WorkWithProjectGlobalizationSettings
+            // ExFor: GlobalizationSettings
+            // ExFor: Project.GlobalizationSettings
+            // ExSummary: Shows how set project's language-specific settings.
+            var project = new Project();
+            
+            var attribute = ExtendedAttributeDefinition.CreateTaskDefinition(ExtendedAttributeTask.Number1, "Number");
+            attribute.Formula = "IIf(ProjDateValue('n.a.')=[Date1];100;200)";
+
+            project.ExtendedAttributes.Add(attribute);
+
+            var task = project.RootTask.Children.Add("Task");
+
+            // Create extended attribute
+            var extendedAttribute = attribute.CreateExtendedAttribute();
+            task.ExtendedAttributes.Add(extendedAttribute);
+
+            var attributeDate = ExtendedAttributeDefinition.CreateTaskDefinition(ExtendedAttributeTask.Date1, "Date");
+
+            task.ExtendedAttributes.Add(attributeDate.CreateExtendedAttribute(DateTime.MinValue));
+
+            Console.WriteLine(extendedAttribute.NumericValue);
+
+            project.GlobalizationSettings = new MyGlobalizationSettings();
+
+            Console.WriteLine(extendedAttribute.NumericValue);
+
+            // ExEnd:WorkWithProjectGlobalizationSettings
+        }
+
+        private sealed class MyGlobalizationSettings : GlobalizationSettings
+        {
+            public override string FormulaDateNA
+            {
+                get { return "n.a."; }
+            }
+        }
+
         // ExStart:CreateResources
         // ExFor: Project.Resources
         // ExSummary: Shows how to create project resources.
