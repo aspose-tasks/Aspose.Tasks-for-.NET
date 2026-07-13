@@ -1,4 +1,6 @@
-﻿namespace Aspose.Tasks.Examples.CSharp
+﻿using Microsoft.Data.Sqlite;
+
+namespace Aspose.Tasks.Examples.CSharp
 {
     using System;
     using System.Data.SqlClient;
@@ -17,10 +19,12 @@
                 // ExFor: PrimaveraDbSettings
                 // ExFor: PrimaveraDbSettings.#ctor(String,Int32)
                 // ExFor: PrimaveraDbSettings.ProjectId
+                // ExFor: DbSettings.ProviderFactory
                 // ExSummary: Shows how to import a project from a Primavera database.
 
                 // Initialize a new instance of the PrimaveraDbSettings class with connection string and project id
                 var settings = new PrimaveraDbSettings(GetConnectionString(), 4502);
+                settings.ProviderFactory = SqliteFactory.Instance;
 
                 Console.WriteLine("Project UID to read: " + settings.ProjectId);
 
