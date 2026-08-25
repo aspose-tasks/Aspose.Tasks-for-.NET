@@ -83,6 +83,38 @@ namespace Aspose.Tasks.Examples.CSharp
         }
 
         [Test]
+        public void WorkWithProjectLoadingCallback()
+        {
+            // ExStart:WorkWithProjectLoadingCallback
+            // ExFor: IProgressNotificationCallback
+            // ExFor: IProgressNotificationCallback.Notify(ProgressNotificationArgs)
+            // ExFor: ProgressNotificationArgs
+            // ExFor: LoadOptions.ProjectLoadingCallback
+            // ExSummary: Shows how to use progress notification callback when loading a project.
+
+            var loadOptions = new LoadOptions
+            {
+                // Set the callback to receive progress updates
+                ProjectLoadingCallback = new ProgressNotificationCallbackImplementation()
+            };
+
+            // Load the project with progress notification
+            var project = new Project(DataDir + "Project.mpp", loadOptions);
+
+            Console.WriteLine("Project loaded successfully.");
+            // ExEnd:WorkWithProjectLoadingCallback
+        }
+
+        // Example implementation of the IProgressNotificationCallback interface
+        private sealed class ProgressNotificationCallbackImplementation : IProgressNotificationCallback
+        {
+            public void Notify(ProgressNotificationArgs args)
+            {
+                Console.WriteLine($"Step: {args.CurrentStepName}, Step Progress: {args.CurrentStepProgress}%, Total Progress: {args.EstimatedTotalProgress}%");
+            }
+        }
+
+        [Test]
         public void SpecifyFileEncoding()
         {
             // ExStart
